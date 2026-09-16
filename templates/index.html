@@ -1,34 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Izbori 2026 — informisani glas</h1>
-<p class="note">Opći izbori u BiH: <b>nedjelja, 4. oktobra 2026, 07:00–19:00</b>. Na listićima je <b>{{ national.candidacies }}</b> kandidatura ({{ national.persons }} osoba) za <b>518 mandata</b>. Od svih njih: <b>{{ national.ever_won }}</b> je ikad osvojilo mandat, <b>{{ national.debut }}</b> su debitanti, a <b>{{ national.fillers3 }}</b> se kandiduje 3+ puta bez ijedne pobjede.</p>
+<h1>Izbori su u nedjelju, 4. oktobra.<br>Evo šta trebaš znati.</h1>
+<p class="lead">Dobit ćeš 3 ili 4 papira. Na svakom biraš druge ljude. Ova stranica ti prostim riječima pokaže ko su, šta su već radili i šta sad obećavaju. Tvoj glas je tajan.</p>
+<a class="btn sec" href="kako-glasati.html">Prvi put glasaš? Kako se popunjava listić →</a>
 
-<h2>Nađi svoju općinu</h2>
-<input type="search" id="q" placeholder="Kucaj naziv općine… (npr. Tuzla, Bihać, Trebinje)" oninput="filterOpcine()">
-<div id="opcine-list" style="margin-top:.8rem">
+<div class="card big">
+<h2>1. Gdje glasaš?</h2>
+<input type="search" id="q" placeholder="Ukucaj svoju općinu / opštinu, npr. Tuzla, Бањалука" oninput="filterOpcine()" autocomplete="off">
+<div id="opcine-list" class="list" style="display:none;margin-top:.6rem">
 {% for m in municipalities %}
-<div class="opcina-item" data-name="{{ m.name | lower }}"><a href="opcina-{{ m.slug }}.html">{{ m.name }}</a> <span class="mut">{{ m.group }}</span></div>
+<a class="item opcina-item" data-name="{{ m.folded }}" href="opcina-{{ m.slug }}.html">{{ m.name }} <span>{{ m.group }}</span></a>
 {% endfor %}
+</div>
+<p class="mut" style="margin-top:.6rem">Ili <a href="opcine.html">vidi sve općine</a>.</p>
+</div>
+
+
+<h2>2. Šta još možeš pogledati</h2>
+<div class="card"><h3><a href="predsjednistvo.html">Ko hoće u Predsjedništvo BiH</a></h3><p class="mut">10 ljudi. Ko su, šta su radili, šta obećavaju. Za RS i ko hoće biti predsjednik RS.</p></div>
+<div class="card"><h3><a href="stranke.html">Stranke: šta obećavaju i šta su radile</a></h3><p class="mut">Obećanja za 2026 pored zapisa: kako su njihovi poslanici glasali o budžetu, sudovima, porezima.</p></div>
+<div class="card"><h3><a href="desavanja.html">Šta se desilo od prošlih izbora</a></h3><p class="mut">Najvažnije odluke 2022–2026 u dvije rečenice. Ko je bio za, ko protiv.</p></div>
+<div class="card"><h3><a href="obecanja.html">Ko šta obećava, po temi</a></h3><p class="mut">Plate, zdravstvo, putevi, struja… obećanja svih stranaka jedno pored drugog.</p></div>
+<div class="card"><h3><a href="metoda.html">Ko radi ovaj sajt i odakle su brojke</a></h3><p class="mut">Da znaš čemu vjeruješ: izvori, kako smo birali odluke, kako računamo šansu.</p></div>
+
+<h2>3. Ko je na listićima, u brojkama</h2>
+<div class="card">
+<p class="mut" style="margin:0 0 .2rem">Od {{ national.candidacies | num }} kandidata:</p>
+{{ hbar('već bili izabrani', national.ever_won, national.candidacies, national.ever_won | num) }}
+{{ hbar('prvi put na listi', national.debut, national.candidacies, national.debut | num, 'c-blue2') }}
+{{ hbar('3+ puta, nikad izabrani', national.fillers3, national.candidacies, national.fillers3 | num, 'c-new') }}
+</div>
+<div class="card">
+<p><b>{{ national.fillers3 | num }}</b> ljudi se kandiduje treći ili više puta, a nikad nisu izabrani. Njihovo ime na listi uglavnom služi da lista bude puna.</p>
+<p><b>Tvoj glas je tajan.</b> Niko ne može vidjeti šta si zaokružio. Ni poslodavac, ni stranka, ni komšija.</p>
 </div>
 <script>
 function filterOpcine() {
-  const q = document.getElementById('q').value.toLowerCase();
-  document.querySelectorAll('.opcina-item').forEach(el => {
-    el.style.display = el.dataset.name.includes(q) ? '' : 'none';
+  var q = foldq(document.getElementById('q').value.trim());
+  var box = document.getElementById('opcine-list');
+  box.style.display = q.length ? '' : 'none';
+  var n = 0;
+  document.querySelectorAll('.opcina-item').forEach(function(el){
+    var ok = el.dataset.name.indexOf(q) >= 0 && n < 12;
+    el.style.display = ok ? '' : 'none'; if (ok) n++;
   });
 }
 </script>
-
-<h2>Trke</h2>
-{% for r in national.races %}
-<div class="card"><b>{{ r.title }}</b> <span class="mut">({{ r.scope }})</span><br>
-<span class="mut">{{ r.candidates }} kandidata · {{ r.units }} izbornih jedinica</span></div>
-{% endfor %}
-
-<h2>Šta ovdje imaš</h2>
-<div class="card">
-<b>Općine</b> — tvoja 3–4 listića, sve liste i svi kandidati sa zapisima.
-<b>Stranke</b> — nacionalno poredjenje: glasovi 2018/2022, kadrovski kvalitet listi 2026.
-<b>Poslanici</b> — kako su aktuelni državni poslanici stvarno glasali (poimenični zapis).
-</div>
 {% endblock %}

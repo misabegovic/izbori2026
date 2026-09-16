@@ -1,0 +1,313 @@
+[
+ {
+  "name": "SNSD",
+  "leader": "Milorad Dodik (predsjednik stranke); kandidati: Savo Minić za predsjednika RS, Željka Cvijanović za člana Predsjedništva BiH",
+  "founded": 1996,
+  "governing_now": "Vlast: vodeća stranka u Vladi RS i NSRS 2022-2026; dio državne koalicije u Vijeću ministara BiH (sa HDZ BiH i Trojkom, do raskida u januaru 2025).",
+  "promises": [
+   "Povećanje plata u javnom sektoru za 6-7% u septembru 2026, što sa ranijim povećanjima daje oko 11% kumulativno.",
+   "Novo povećanje penzija i jednokratna pomoć penzionerima.",
+   "Pokretanje investicionog ciklusa vrijednog 6,6 milijardi KM u infrastrukturu, energetiku i privredu.",
+   "Državni program stimulacije za povratak i ostanak ljudi u RS, uključujući kreditnu podršku za stambeno zbrinjavanje određenih kategorija.",
+   "Gradnja puteva, škola i bolnica te veće plate i penzije za prosvjetne i zdravstvene radnike (Minić).",
+   "Očuvanje nadležnosti i stabilnosti Republike Srpske i jačanje veza sa Srbijom."
+  ],
+  "themes": [
+   "Stabilnost i kontinuitet",
+   "Plate, penzije i socijalna davanja",
+   "Investicije i infrastruktura",
+   "Zaštita nadležnosti RS"
+  ],
+  "sources": [
+   "https://www.b92.net/biz/region/vesti/234030/komsijama-novo-povecanje-plata-i-penzija/vest",
+   "https://nova.rs/vesti/svet/pocela-izborna-trka-u-rs-dodik-van-liste-ali-u-centru-kampanje-stanivukovic-porucuje-da-ce-biti-sigurno-premijer",
+   "https://www.zvornikdanas.com/2026/09/snsd-poceo-kampanju-u-banjaluci-dodik-najavio-pobjedu-minica-i-cvijano/",
+   "https://www.argumenti.rs/snsd-na-izbore-pod-sloganom-uvijek-uz-narod-uvijek-uz-srpsku/",
+   "https://bigportal.ba/politicari-u-lovu-na-glasove-svi-ubijedjeni-u-pobjedu-i-sa-velikim-obecanjima/"
+  ],
+  "confidence": "medium",
+  "note": "Pisani izborni program 2026 nije pronađen; slogan kampanje 'Uvijek uz narod, uvijek uz Srpsku'. Obećanja su iz javnih izjava Dodika i Minića (maj-septembar 2026). Analitičari (nova.rs) navode da SNSD-ova obećanja uglavnom nemaju troškovnik i rokove.",
+  "power": "u vlasti (RS); država do 2025",
+  "power_history": "Vodi Republiku Srpsku bez prekida od 2006 (20 godina), ranije 1998–2001. Na državnom nivou u vlasti 2006–2014 i 2019–2025."
+ },
+ {
+  "name": "Pokret Sigurna Srpska (Draško Stanivuković; PSS, PDP, NPSP)",
+  "leader": "Draško Stanivuković (gradonačelnik Banjaluke, kandidat za premijera); partneri: Igor Radojičić (NPSP), dio PDP-a",
+  "founded": 2025,
+  "governing_now": "Opozicija na nivou RS i BiH; Stanivuković vodi Grad Banjaluku.",
+  "promises": [
+   "Uvođenje 13. penzije za sve penzionere iz budžeta RS.",
+   "Ukidanje PDV-a na lijekove i medicinska pomagala.",
+   "Uklanjanje kladionica i kockarnica iz blizine škola u prvih 100 dana.",
+   "Depolitizacija škola, zdravstvenih ustanova i javnih preduzeća te promjena načina izbora rukovodilaca.",
+   "Garantovan otkup i cijene za poljoprivrednike, veći podsticaji i fond osiguranja od elementarnih nepogoda.",
+   "Revizija spornih poslova i afera, neradna nedjelja i podrška domaćoj proizvodnji; završetak auto-puta Bijeljina-Rača."
+  ],
+  "themes": [
+   "'Ugovor sa narodom' i prvih 100 dana",
+   "Socijalna sigurnost (13. penzija, lijekovi)",
+   "Poljoprivreda",
+   "Borba protiv korupcije i depolitizacija"
+  ],
+  "sources": [
+   "https://www.glassrpske.com/lat/novosti/izbori/pokret-sigurna-srpska-jasno-i-sigurno-predstavio-gradjanima-svoj-program-i-u-doboju/651128",
+   "https://srpskainfo.com/politika/stanivukovic-u-bijeljini-otvorio-kampanju-pokreta-sigurna-srpska/",
+   "https://www.nezavisne.com/novosti/bih/Stanivukovic-u-Bijeljini-Sigurno-znaci-sigurnu-13-penziju-i-poljoprivredne-podsticaje/981029",
+   "https://nova.rs/vesti/svet/pocela-izborna-trka-u-rs-dodik-van-liste-ali-u-centru-kampanje-stanivukovic-porucuje-da-ce-biti-sigurno-premijer"
+  ],
+  "confidence": "high",
+  "note": "Program 2026 nazvan 'Ugovor sa narodom', slogan 'SIGURNO'; predstavljen na otvaranju kampanje u Bijeljini i Doboju (septembar 2026). Unutar koalicije bilo je tenzija sa NPSP (Radojičić) početkom 2026.",
+  "power": "opozicija; vlast u Banjaluci",
+  "power_history": "Nova koalicija (2025). Stanivuković vodi Banjaluku od 2020; PDP bio u državnoj vlasti 2014–2018."
+ },
+ {
+  "name": "Ujedinjena Srpska",
+  "leader": "Nenad Stevandić (predsjednik NSRS)",
+  "founded": 2017,
+  "governing_now": "Vlast: koalicioni partner SNSD-a u Vladi RS i NSRS 2022-2026 (Stevandić je predsjednik Narodne skupštine RS).",
+  "promises": [
+   "Program 'Pametna Srpska' za razvoj malih opština i opština sa velikim energetskim potencijalom.",
+   "Rješavanje transfera Termoelektrane i Elektroprivrede u Ugljeviku u korist lokalne zajednice.",
+   "Projekti za rješavanje otpadnih voda i uređenje gradskih centara, s posebnim konceptom za prigradske mjesne zajednice.",
+   "Prijedlog zabrane asfaltiranja puteva u izbornoj godini kako bi se spriječile manipulacije.",
+   "Sistem viših plata i boljih radnih mjesta, uz odgovorno upravljanje javnim preduzećima."
+  ],
+  "themes": [
+   "Nacionalna politika i zaštita RS",
+   "Energetika i lokalni razvoj",
+   "'Pametna Srpska'",
+   "Banjaluka kao druga srpska prestonica"
+  ],
+  "sources": [
+   "https://www.nezavisne.com/novosti/bih/Ujedinjena-Srpska-u-Derventi-Superioran-i-nacionalni-i-ekonomski-program/982625",
+   "https://aloonline.ba/izbori2026/101312388/ovo-je-godina-ujedinjene-srpske-podrska-u-potkozarju-najava-najboljeg-rezultata-u-banjaluci.html",
+   "https://srpskainfo.com/politika/video-foto-mnogo-toga-mozemo-i-zelimo-da-popravimo-nenad-stevandic-porucio-da-ugljevik-ima-buducnost/",
+   "https://www.glassrpske.com/lat/novosti/izbori/ujedinjena-srpska-na-otvaranju-kampanje-otkrila-zasto-njeni-ljudi-treba-da-vode-drzavu/651003"
+  ],
+  "confidence": "medium",
+  "note": "Cjelovit dokument programa 2026 nije pronađen online; obećanja su iz izjava Stevandića na predizbornim skupovima (septembar 2026).",
+  "power": "u vlasti (RS, sa SNSD)",
+  "power_history": "Osnovana 2017. U vlasti RS sa SNSD-om od 2018."
+ },
+ {
+  "name": "DNS-NPS (Banjac-Nešić)",
+  "leader": "Nenad Nešić (DNS) i Darko Banjac (NPS)",
+  "founded": null,
+  "governing_now": "Vlast: obje stranke su partneri SNSD-a u vlasti RS 2022-2026 (Nešić bio ministar bezbjednosti BiH); podržavaju Minića i Cvijanović.",
+  "promises": [
+   "Ekonomski napredak i infrastrukturni razvoj u svim opštinama i gradovima RS.",
+   "Demografska obnova Republike Srpske kroz jaku privredu, gradnju bolnica, puteva i vrtića ('sačuvati ognjišta').",
+   "Rješavanje nezaposlenosti i razvoj lokalnih zajednica uz očuvanje nadležnosti RS.",
+   "Gradnja vrtića i škola u lokalnim zajednicama."
+  ],
+  "themes": [
+   "Demografija i ostanak mladih",
+   "Infrastruktura",
+   "Stabilnost RS i podrška SNSD-ovim kandidatima"
+  ],
+  "sources": [
+   "https://bosnainfo.ba/politika/dns-i-nps-dogovorili-zajednicki-nastup-na-izborima-u-bih/",
+   "https://www.glassrpske.com/lat/novosti/izbori/nesic-sacuvati-ognjista-i-republiku-srpsku/650906",
+   "https://www.argumenti.rs/nesic-podrska-bilo-kome-osim-cvijanovicevoj-i-minicu-bilo-bi-kockanje-sa-srpskom/",
+   "https://srpskainfo.com/politika/banjac-nesic-trninic-poznata-imena-nosilaca-lista-nps-i-dns-za-opste-izbore/"
+  ],
+  "confidence": "low",
+  "note": "Zvanični program koalicije 2026 nije pronađen; navedene su najavljene programske oblasti i izjave lidera (DNS osnovan 2000, NPS je nova stranka Darka Banjca).",
+  "power": "u vlasti (RS, sa SNSD)",
+  "power_history": "DNS u vlasti RS sa SNSD-om 2006–2020 i od 2022; NPS nova stranka."
+ },
+ {
+  "name": "Narodni front Jelena Trivić",
+  "leader": "Jelena Trivić",
+  "founded": 2023,
+  "governing_now": "Opozicija u RS.",
+  "promises": [
+   "Puna primjena Zakona o ispitivanju porijekla imovine u prvih 100 dana.",
+   "Kraj političkog zapošljavanja i depolitizacija javnih preduzeća, škola, bolnica i kulturnih ustanova.",
+   "Dječji dodatak za svako dijete u RS i revizija boračkih kategorija.",
+   "30.000 novih radnih mjesta u mandatu; prosječna plata 2.500 KM za dvije godine i 3.500 KM do kraja mandata.",
+   "Prosječna penzija 1.200 KM u prve dvije godine i 2.000 KM do kraja mandata.",
+   "Revizija spornih javnih nabavki i energetskih koncesija, digitalna uprava, manje poreza za preduzetnike i veći agrarni budžet."
+  ],
+  "themes": [
+   "Borba protiv korupcije",
+   "Ekonomija - 'Srpska koja radi'",
+   "Socijalna politika i demografija",
+   "Deset mjera za prvih 100 dana"
+  ],
+  "sources": [
+   "https://depo.ba/clanak/288689/narodni-front-ima-program-jelena-trivic-otvorila-kampanju-najavila-10-konkretnih-mjera",
+   "https://www.nezavisne.com/novosti/bih/Jelena-Trivic-najavila-deset-konkretnih-mjera/980777",
+   "https://srpskainfo.com/politika/video-foto-jedni-se-bave-kupovinom-glasova-drugi-performansom-treci-pljuvanjem-triviceva-porucila-da-samo-narodni-front-ima-program/",
+   "https://www.rtvbn.com/4096185/narodni-front-predstavio-kljucne-ciljeve-kampanje"
+  ],
+  "confidence": "high",
+  "note": "Program 2026 predstavljen na otvaranju kampanje kao 'Deset mjera za prvih 100 dana' plus ekonomski ciljevi za mandat; slogan 'Srpska koja radi, Srpska koja pobjeđuje'.",
+  "power": "opozicija",
+  "power_history": "Osnovan 2023. Nikad u vlasti."
+ },
+ {
+  "name": "Socijalistička partija Petar Đokić / DEMOS / NDP",
+  "leader": "Petar Đokić (SP), Nedeljko Čubrilović (DEMOS), Bojan Šapurić (NDP)",
+  "founded": 1993,
+  "governing_now": "Vlast: SP i DEMOS su koalicioni partneri SNSD-a u Vladi RS 2022-2026 (Đokić ministar energetike i rudarstva RS).",
+  "promises": [
+   "Program socijalne stanogradnje: RS i opštine da grade stanove po znatno nižim cijenama za mlade bračne parove i one koji ne mogu dobiti kredit.",
+   "Zaštita prava radnika, sigurnost penzionera i bolji položaj boračkih kategorija.",
+   "Nastavak ekonomskog razvoja kroz projekte u saobraćaju i energetici i jačanje institucija RS.",
+   "Više prostora mladima u politici i kampanja bez uvreda."
+  ],
+  "themes": [
+   "Stabilnost i institucije RS ('Složno za Srpsku')",
+   "Socijalna stanogradnja",
+   "Radnici, penzioneri i borci"
+  ],
+  "sources": [
+   "https://srpskainfo.com/politika/slozno-za-srpsku-socijalisticka-partija-demos-i-ndp-otvorili-predizbornu-kampanju-u-bijeljini-i-brckom/",
+   "https://www.nezavisne.com/novosti/bih/Djokic-najavio-veliki-projekat-socijalne-stanogradnje/982262",
+   "https://www.nezavisne.com/novosti/bih/Djokic-Zastupamo-program-socijalno-stambene-izgradnje/982619",
+   "https://mondo.ba/Info/Politika/a1418390/cubrilovic-i-djokic-potpisali-sporazum-za-izbore-2026.html"
+  ],
+  "confidence": "medium",
+  "note": "Zvanični pisani program koalicije nije pronađen; obećanja su iz izjava Đokića i partnera na otvaranju kampanje (septembar 2026). Godina osnivanja 1993 odnosi se na SP; DEMOS osnovan 2018.",
+  "power": "u vlasti (RS, sa SNSD)",
+  "power_history": "SP u vlasti RS bez prekida od 1998 (28 godina); DEMOS od 2018."
+ },
+ {
+  "name": "SPS Goran Selak Pokret Jedinstvena Srpska",
+  "leader": "Goran Selak (ministar pravde RS); partner Čedomir Stojanović (Pokret Jedinstvena Srpska)",
+  "founded": null,
+  "governing_now": "Vlast: SPS je partner SNSD-a u Vladi RS 2022-2026 (Selak ministar pravde); podržava Minića i Cvijanović.",
+  "promises": [
+   "Republika Srpska u kojoj ljudi mogu dostojanstveno živjeti od svog rada.",
+   "Podrška porodici kao temelju društva i razlozi mladima da ostanu.",
+   "Pravda i povjerenje u državu kroz jačanje institucija.",
+   "Akcija 'Moja ideja za Republiku Srpsku' - prikupljanje prijedloga građana za program."
+  ],
+  "themes": [
+   "Porodica",
+   "Pravda",
+   "Ponos / nacionalni interesi",
+   "Stabilnost i razvoj"
+  ],
+  "sources": [
+   "https://www.glassrpske.com/lat/novosti/politika/sps-sa-sloganom-porodica-pravda-ponos-i-snaznim-kandidatima-ulazi-u-izbornu-trku/641627",
+   "https://srpskainfo.com/politika/foto-porodica-pravda-ponos-selak-porucio-da-srpska-mora-biti-mjesto-u-kojem-se-cijene-porodica-rad-i-znanje/",
+   "https://www.rtvbn.com/4091207/selak-i-stojanovic-zajedno-izlaze-na-izbore-u-oktobru"
+  ],
+  "confidence": "low",
+  "note": "Konkretan program 2026 nije pronađen; kampanja je vrijednosna (slogan 'Porodica, pravda, ponos'), bez mjerljivih mjera.",
+  "power": "u vlasti (RS, sa SNSD)",
+  "power_history": "U vlasti RS sa SNSD-om od 2022; Selak ministar pravde."
+ },
+ {
+  "name": "Republička stranka Srpske RSS",
+  "leader": "Slavenko Ristić",
+  "founded": 2021,
+  "governing_now": "Nije u Vladi RS; prvi put samostalno na izborima 2026 (imala jednog poslanika u NSRS prelaskom, ne izbornim putem).",
+  "promises": [
+   "Ukidanje više od 50% 'izmišljenih' taksi, naknada i parafiskalnih nameta na nivou RS.",
+   "Hitno donošenje zakona o jedinstvenom registru nameta.",
+   "Reforma poreza na dohodak koja podstiče poslodavce da povećaju neto plate radnika.",
+   "Zaustavljanje odlaska radne snage, uz fokus na mlade i školovane ljude."
+  ],
+  "themes": [
+   "Manje nameta državi - veće plate radnicima",
+   "Rasterećenje privrede",
+   "Zadržavanje mladih"
+  ],
+  "sources": [
+   "https://www.glassrpske.com/lat/novosti/izbori/republicka-stranka-srpske-manje-nameta-drzavi-vece-plate-radnicima/651866",
+   "https://www.rssrpske.ba/novosti/",
+   "https://www.glassrpske.com/lat/novosti/izbori/miljan-micic-nosilac-liste-rss-u-izbornoj-jedinici-7-bicemo-najvece-iznenadjenje-ovih-izbora/652350"
+  ],
+  "confidence": "medium",
+  "note": "Tri ključne ekonomske mjere objavljene u kampanji (septembar 2026); slogan 'Budućnost. Sada i ovdje'. Cjelovit programski dokument nije pronađen.",
+  "power": "opozicija",
+  "power_history": "Osnovana 2021. Nikad u vlasti."
+ },
+ {
+  "name": "Za pravdu i red - Lista Nebojše Vukanovića / PDP RS Igor Crnadak",
+  "leader": "Nebojša Vukanović (ZPR) i Igor Crnadak (PDP)",
+  "founded": 2022,
+  "governing_now": "Opozicija u RS (ZPR imao 4 poslanika, PDP je bio opoziciona stranka; Crnadak vodi dio PDP-a nakon Stanivukovićevog odlaska).",
+  "promises": [
+   "Pravna država: zakon jednako za sve i javna funkcija kao odgovornost, a ne privilegija.",
+   "Odgovorne javne finansije umjesto neplanskog zaduživanja, jača domaća privreda i veće plate.",
+   "Zdravstvo uređeno oko potreba pacijenta i obrazovanje koje vrednuje znanje i nastavnike.",
+   "Socijalna sigurnost porodica i starijih bez obzira na političku pripadnost i ravnomjeran regionalni razvoj.",
+   "'Politika čistih ruku', gotovo svi nosioci lista novi ljudi i borba protiv izbornih manipulacija."
+  ],
+  "themes": [
+   "Vladavina prava i borba protiv korupcije",
+   "Javne finansije i plate",
+   "Zdravstvo i obrazovanje",
+   "Ukrupnjavanje opozicije"
+  ],
+  "sources": [
+   "https://zapravduired.org/",
+   "https://zapravduired.org/program",
+   "https://www.federalna.ba/vukanovic-i-crnadak-zajednicki-nastup-na-izborima-za-sustinske-promjene-u-rs-u-zjp8r",
+   "https://www.slobodna-bosna.ba/vijest/489360/vukanovic_i_crnadak_predali_zajednichku_listu_za_nsrs_doslo_je_vrijeme_da_se_ukrupni_zdravi_dio_opozicije.html"
+  ],
+  "confidence": "medium",
+  "note": "Zvanični program ZPR objavljen na zapravduired.org u sedam oblasti, ali javno dostupni tekst nema brojki i rokova. Godina 2022 odnosi se na ZPR; PDP osnovan 1999.",
+  "power": "opozicija",
+  "power_history": "Vukanović opozicija od 2014; PDP u državnoj vlasti 2014–2018, inače opozicija u RS."
+ },
+ {
+  "name": "Volja naroda Srpske dr Vlado Đajić",
+  "leader": "Vlado Đajić (bivši direktor UKC RS, isključen iz SNSD-a aprila 2026)",
+  "founded": 2026,
+  "governing_now": "Nova stranka, nije u vlasti; Đajić kaže 'nisam drugi SNSD' ali najavljuje da će poslije izbora biti dio vlasti.",
+  "promises": [
+   "Besplatni lijekovi za penzionere i penzije usklađene sa realnom potrošačkom korpom.",
+   "Jednokratni grant od 10.000 KM za borce i 20.000 KM za porodice poginulih boraca, uz veće invalidnine.",
+   "Mladi bračni parovi da kupe prvi stan po cijeni gradnje do 1.000 evra po kvadratu.",
+   "Mjesto u vrtiću za svako dijete, besplatni vrtići ili naknada od 500 KM za dnevnu njegu.",
+   "Veće otkupne cijene za domaću poljoprivredu i grantovi za samozapošljavanje sa jednogodišnjom podrškom.",
+   "Veći koeficijenti i plate za zdravstvene radnike, fond za mlade koji se vraćaju ili osnivaju porodicu."
+  ],
+  "themes": [
+   "Penzioneri i borci",
+   "Mladi i stanovanje",
+   "Zdravstvo",
+   "Poljoprivreda i samozapošljavanje"
+  ],
+  "sources": [
+   "https://srpskainfo.com/politika/konkretni-koraci-volja-naroda-srpske-i-dr-vlado-djajic-predstavili-10-politika-za-bolji-zivot-gradjana/",
+   "https://bigportal.ba/volja-naroda-srpske-i-dr-vlado-djajic-predstavili-10-politika-za-bolji-zivot-gradjana/",
+   "https://srpskacafe.com/2026/08/vlado-djajic-volja-naroda-srpske-vlast/",
+   "https://6yka.com/bih/vlado-djajic-predstavio-novu-partiju-volja-naroda-srpske/"
+  ],
+  "confidence": "high",
+  "note": "Program '10 politika za bolji život' zvanično predstavljen 2026; stranka registrovana aprila 2026 u Banjaluci.",
+  "power": "nova stranka (bivši SNSD)",
+  "power_history": "Osnovana 2026. Đajić bio dio SNSD-a (direktor UKC) do 2026."
+ },
+ {
+  "name": "Nezavisna lista Doboj Sevlid Hurtić",
+  "leader": "Sevlid Hurtić (ministar za ljudska prava i izbjeglice BiH)",
+  "founded": 2020,
+  "governing_now": "Na državnom nivou dio vlasti (Hurtić ministar u Vijeću ministara BiH 2023-2026); u RS opozicija, 1 poslanik u NSRS 2022-2026.",
+  "promises": [
+   "Politika koja u prvi plan stavlja čovjeka, sigurnost, ekonomsku perspektivu, zaštitu prirode, vladavinu prava i funkcionalnu BiH.",
+   "Jednako pravo na dostojanstven život, posao i sigurnost za svakog čovjeka bez obzira gdje živi u BiH.",
+   "Zaštita životne sredine, energetska efikasnost i ekonomski razvoj kao tri programska stuba stranke."
+  ],
+  "themes": [
+   "Zelena politika i zaštita prirode",
+   "Funkcionalna BiH i povratnici",
+   "Sigurnost i dostojanstven život"
+  ],
+  "sources": [
+   "https://www.klix.ba/vijesti/bih/sevlid-hurtic-i-bh-zeleni-otvorili-izbornu-kampanju-u-doboju-pod-sloganom-snazan-iskorak/260904229",
+   "https://www.klix.ba/vijesti/bih/nezavisna-lista-doboj-sevlid-hurtic-promijenila-ime-sada-su-bh-zeleni/220302094",
+   "https://federalna.ba/hurtic-dogovor-o-zajednickoj-listi-u-rs-u-je-gotovo-zavrsen-wzbtt"
+  ],
+  "confidence": "low",
+  "note": "Stranka je 2022. preimenovana u BH Zeleni; za NSRS 2026 Hurtić nastupa i unutar 'Koalicije za državu'. Pisani program 2026 nije pronađen; navedeni su opšti ciljevi sa otvaranja kampanje u Doboju (slogan 'Snažan iskorak', 4.9.2026).",
+  "power": "u vlasti (država, ministar); opozicija u RS",
+  "power_history": "Hurtić ministar u Vijeću ministara od 2023; u RS opozicija."
+ }
+]

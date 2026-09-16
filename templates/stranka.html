@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}{{ p.name | ptitle }} — Izbori 2026{% endblock %}
+{% block content %}
+<p class="mut"><a href="stranke.html">← sve stranke</a> · <a href="index.html">početna</a></p>
+<h1>{{ p.name | ptitle }}</h1>
+{% if p.program %}<p class="lead"><b>Sad su:</b> {{ p.program.power }}.</p><p><b>Kroz historiju:</b> {{ p.program.power_history }}</p><p class="mut">{{ p.program.governing_now }}</p>{% endif %}
+<div class="card">
+<p class="mut small" style="margin:0">{{ p.n }} kandidata 2026 na {{ p.units_in }} listića:</p>
+{{ stack([('već birani', p.won, 'c-blue'), ('prvi put', p.new, 'c-blue2'), ('ostali: ranije se kandidovali bez uspjeha, ili nemamo podataka', p.n - p.won - p.new, 'c-new')], p.n) }}
+{% if p.switch %}<p class="small" style="margin:.2rem 0 0"><i class="sw c-sw"></i>{{ p.switch }} mijenjalo stranke</p>{% endif %}
+{% if p.votes18 or p.votes22 %}
+<p class="mut small" style="margin:.8rem 0 0">Glasovi na svim listićima:</p>
+{{ hbar('2018', p.votes18 or 0, [p.votes18 or 0, p.votes22 or 0] | max, (p.votes18 | num) if p.votes18 else '—', 'c-blue2') }}
+{{ hbar('2022', p.votes22 or 0, [p.votes18 or 0, p.votes22 or 0] | max, (p.votes22 | num) if p.votes22 else '—') }}
+{% endif %}
+</div>
+<p><b>Prošli put (2022):</b> {% if p.votes22 %}{{ p.seats22 }} mandata.{% else %}nema zapisa pod ovim imenom (novo ime ili nova koalicija).{% endif %}</p>
+{% if p.funding %}<div class="card"><p style="margin:0 0 .2rem"><b>Novac iz budžeta {{ p.funding.year }}:</b> {{ p.funding.paid | round | int | num }} KM</p>
+{% set fmax = p.funding.rows | map(attribute='paid') | select | max | default(1) %}
+{% for f in p.funding.rows[:5] %}{{ hbar(f.payer, f.paid or 0, fmax, (f.paid | round | int | num) ~ ' KM') }}{% endfor %}
+<p class="small mut" style="margin:.3rem 0 0">Stranke dobijaju novac iz budžeta po broju mandata. Izvor: CIK izvještaji o finansiranju.</p></div>{% endif %}
+
+{% if p.program %}
+<h2>Šta obećavaju za 2026</h2>
+<div class="claim">
+<ul style="margin:.2rem 0 .4rem 1.1rem;padding:0">{% for pr in p.program.promises %}<li>{{ pr }}</li>{% endfor %}</ul>
+<p class="small" style="margin:.2rem 0">Ovo su tvrdnje stranke. {{ p.program.note }}</p>
+<p class="small mut">Odakle znamo šta obećavaju: {{ {'high':'objavljen program','medium':'govori i mediji','low':'samo pojedine izjave'}[p.program.confidence] }}. Ne ocjenjujemo da li će obećanje biti ispunjeno.</p>
+<p class="src">Izvori: {% for s in p.program.sources %}<a href="{{ s }}">{{ s | replace('https://','') | truncate(45) }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+</div>
+{% else %}
+<p class="mut">Za ovu listu nismo našli objavljen program ili obećanja za 2026.</p>
+{% endif %}
+
+{% if p.hist and p.hist.rows | length > 1 %}
+<h2 id="obrazac">Obrazac: obećanja kroz mandate</h2>
+{% if p.hist.pattern %}<p class="lead">U {{ p.hist.pattern.mandates }} mandata u vlasti: <b>{{ p.hist.pattern.pct_full }}%</b> obećanja ispunjeno u potpunosti, {{ p.hist.pattern.pct_part }}% djelimično ({{ p.hist.pattern.tracked | num }} praćenih obećanja {% if p.hist.pattern.gov_only %}vlada u kojima je stranka bila{% else %}same stranke{% endif %}, po Istinomjeru).</p>{% if p.hist.pattern_gov %}<ul class="small" style="margin:0 0 .5rem 1.1rem;padding:0"><li><b>Samo {{ p.name | ptitle }}:</b> od {{ p.hist.pattern.tracked | num }} obećanja ispunjeno {{ p.hist.pattern.pct_full }}%, pola {{ p.hist.pattern.pct_part }}%.</li><li><b>Cijele vlade u kojima je bila</b> (brojke nisu samo za ovu stranku): od {{ p.hist.pattern_gov.tracked | num }} ispunjeno {{ p.hist.pattern_gov.pct_full }}%, pola {{ p.hist.pattern_gov.pct_part }}%.</li></ul>{% endif %}{% endif %}
+<div class="d3 d3-mandates" data-d3='{{ p.hist.chart | safe }}'><span class="fb">{% for r in p.hist.rows %}{{ r.mandate }}: {% if r.tracked %}{{ r.fulfilled or 0 }} od {{ r.tracked }} ispunjeno{% else %}nema brojki{% endif %}; {% endfor %}</span></div>
+{% for r in p.hist.rows if r.mandate != '2022-2026' %}
+<details><summary>{{ r.mandate }} · {{ r.in_power }}{% if r.gov_wide %} (brojke za cijelu vladu){% endif %}</summary>
+<div class="card">
+{% if r.tracked %}<p class="small">{% if r.fulfilled is none and not r.partial and not r.broken %}Praćeno {{ r.tracked }} obećanja, ali nemamo razvrstane brojke za ovaj mandat.{% else %}Praćeno {{ r.tracked }} obećanja: {{ r.fulfilled or 0 }} ispunjeno, {{ r.partial or 0 }} djelimično, {{ r.broken or 0 }} nije.{% endif %}</p>{% endif %}
+{% for x in r.examples %}
+<div class="kd"><span class="vote {{ {'ispunjeno':'v-za','djelimično':'v-uz','nije':'v-protiv','ne može se ocijeniti':'v-odsutan'}[x.outcome] }}">{{ x.outcome }}</span> <span class="t">{{ x.promise }}</span><br><span class="small">{{ x.what_happened }}</span> <span class="src">{% for s in x.sources %}<a href="{{ s }}">izvor</a>{% if not loop.last %} · {% endif %}{% endfor %}</span></div>
+{% endfor %}
+{% if r.note %}<p class="small mut">{{ r.note }}</p>{% endif %}
+<p class="src">{% for s in r.sources %}<a href="{{ s }}">{{ s | replace('https://','') | truncate(45) }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+</div></details>
+{% endfor %}
+{% endif %}
+{% if p.p22 %}
+<h2 id="p22">Prošli put obećali, i šta se desilo</h2>
+<p class="mut small">Obećanja iz kampanje 2022 i ishod do septembra 2026, po Istinomjeru i medijima (izvor uz svako). {{ p.p22.in_power_2022_2026 }}</p>
+{{ stack(p.p22.stack, p.p22.promises_2022 | length) }}
+{% for x in p.p22.promises_2022 %}
+<div class="kd"><span class="vote {{ {'ispunjeno':'v-za','djelimično':'v-uz','nije':'v-protiv','ne može se ocijeniti':'v-odsutan'}[x.outcome] }}">{{ x.outcome }}</span> <span class="t">{{ x.promise }}</span><br><span class="small">{{ x.what_happened }}</span> <span class="src">{% for s in x.sources %}<a href="{{ s }}">izvor{{ loop.index if x.sources | length > 1 else '' }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</span></div>
+{% endfor %}
+{% if p.p22.note %}<p class="small mut">{{ p.p22.note }}</p>{% endif %}
+{% endif %}
+<h2>Kako su njihovi poslanici glasali 2022–2026</h2>
+{% if p.key_votes %}
+<p class="mut small">Kako su ljudi s ovih listi glasali kao poslanici 2022–2026 o najvažnijim odlukama. ZA/PROTIV = kako je većina njih glasala; „uzdržan” = ni za ni protiv. Filtriraj po temi:</p>
+<div class="viz-bar tagbar" data-for="kvlist"></div>
+<div id="kvlist">
+{% for kv in p.key_votes %}{% if loop.first or kv.d.chamber != loop.previtem.d.chamber %}<h3 class="chh" style="margin:.8rem 0 .2rem">{{ CHAMBER_NAME.get(kv.d.chamber, kv.d.chamber) }}</h3>{% endif %}
+<div class="kd" data-tags="{{ kv.d.tags | join(" ") }}"><span class="vote {{ kv.maj_cls }}">{{ kv.maj_word }}</span> <span class="t">{{ kv.d.title }}</span> <span class="d">{{ kv.d.date }}</span><br><span class="small mut">{{ kv.d.plain }}</span>{% set cats = [kv.za, kv.protiv, kv.uz, kv.odsutan] | select | list %}{% if kv.n > 1 and cats | length > 1 %}{{ stack([("za", kv.za, "c-za"), ("protiv", kv.protiv, "c-protiv"), ("uzdržan", kv.uz, "c-uz"), ("nije glasalo", kv.odsutan, "c-od")], None) }}{% elif kv.n > 1 %}<span class="small mut"> · {{ "oba glasala isto" if kv.n == 2 else ("svi glasali isto (" ~ kv.n ~ " poslanika)") }}</span>{% endif %}</div>
+{% endfor %}
+</div>
+{% else %}
+<p class="mut">Niko s njihovih listi nije sjedio u državnom parlamentu ni u NSRS 2022–2026, pa nema zapisa glasanja. Parlament Federacije i kantoni ne objavljuju ko je kako glasao.</p>
+{% endif %}
+{% if p.mps %}
+<h2>Njihovi poslanici koji se ponovo kandiduju</h2>
+<ul class="people">{% for c in p.mps %}<li class="person"><span class="pname"><a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a></span><span class="badges">{% for b in c.badges %}{{ badge(b) }}{% endfor %}</span></li>{% endfor %}</ul>
+{% endif %}
+<p class="mut small">Na listićima u {{ p.units_in }} izbornih jedinica.</p>
+{% endblock %}

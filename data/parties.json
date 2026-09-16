@@ -1,0 +1,1478 @@
+{
+ "00090": {
+  "name": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+  "slug": "sda-stranka-demokratske-akcije",
+  "stood": 12208,
+  "won": 3128,
+  "firstYear": 2006,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/00090/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 675631,
+    "planned": 675631
+   },
+   {
+    "year": 2024,
+    "payer": "Srednjobosanski kanton",
+    "paid": 312857,
+    "planned": 312857
+   },
+   {
+    "year": 2024,
+    "payer": "Tuzlanski kanton",
+    "paid": 161934,
+    "planned": 161934
+   },
+   {
+    "year": 2024,
+    "payer": "Kanton Sarajevo",
+    "paid": 134651.22,
+    "planned": null
+   },
+   {
+    "year": 2024,
+    "payer": "Unsko-sanski kanton",
+    "paid": 110302.32,
+    "planned": 110302.68
+   },
+   {
+    "year": 2024,
+    "payer": "Bosna i Hercegovina",
+    "paid": 110186.72,
+    "planned": 110357.14
+   },
+   {
+    "year": 2024,
+    "payer": "Zeničko-dobojski kanton",
+    "paid": 104146.55,
+    "planned": 104146.55
+   },
+   {
+    "year": 2024,
+    "payer": "Hercegovačko-neretvanski kanton",
+    "paid": 80362,
+    "planned": 80363
+   },
+   {
+    "year": 2024,
+    "payer": "Republika Srpska",
+    "paid": 66426.36,
+    "planned": 66426.36
+   },
+   {
+    "year": 2024,
+    "payer": "Bosansko-podrinjski kanton Goražde",
+    "paid": 20000,
+    "planned": 20000
+   },
+   {
+    "year": 2024,
+    "payer": "Posavski kanton",
+    "paid": 19285.72,
+    "planned": 19285.72
+   },
+   {
+    "year": 2024,
+    "payer": "Kanton 10",
+    "paid": 16000,
+    "planned": 16000
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 4000,
+    "planned": 4000
+   }
+  ]
+ },
+ "00515": {
+  "name": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
+  "slug": "savez-nezavisnih-socijaldemokrata-snsd",
+  "stood": 9677,
+  "won": 2566,
+  "firstYear": 2006,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/00515/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Republika Srpska",
+    "paid": 1489660.56,
+    "planned": 1489660.56
+   },
+   {
+    "year": 2024,
+    "payer": "Bosna i Hercegovina",
+    "paid": 95524.25,
+    "planned": 96190.47
+   },
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 91542,
+    "planned": 91542
+   },
+   {
+    "year": 2024,
+    "payer": "Kanton 10",
+    "paid": 16000,
+    "planned": 16000
+   }
+  ]
+ },
+ "00008": {
+  "name": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+  "slug": "sdp-socijaldemokratska-partija-bih",
+  "stood": 12058,
+  "won": 1499,
+  "firstYear": 2006,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/00008/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 491182,
+    "planned": 491182
+   },
+   {
+    "year": 2024,
+    "payer": "Srednjobosanski kanton",
+    "paid": 137143,
+    "planned": 137143
+   },
+   {
+    "year": 2024,
+    "payer": "Kanton Sarajevo",
+    "paid": 130822.58,
+    "planned": null
+   },
+   {
+    "year": 2024,
+    "payer": "Tuzlanski kanton",
+    "paid": 107068,
+    "planned": 107068
+   },
+   {
+    "year": 2024,
+    "payer": "Bosna i Hercegovina",
+    "paid": 86146.02,
+    "planned": 86190.47
+   },
+   {
+    "year": 2024,
+    "payer": "Republika Srpska",
+    "paid": 66426.36,
+    "planned": 66426.36
+   },
+   {
+    "year": 2024,
+    "payer": "Unsko-sanski kanton",
+    "paid": 51211.8,
+    "planned": 51212.16
+   },
+   {
+    "year": 2024,
+    "payer": "Zeničko-dobojski kanton",
+    "paid": 50695.93,
+    "planned": 50695.93
+   },
+   {
+    "year": 2024,
+    "payer": "Hercegovačko-neretvanski kanton",
+    "paid": 43775,
+    "planned": 43775
+   },
+   {
+    "year": 2024,
+    "payer": "Kanton 10",
+    "paid": 16000,
+    "planned": 16000
+   },
+   {
+    "year": 2024,
+    "payer": "Posavski kanton",
+    "paid": 10714.28,
+    "planned": 10714.28
+   },
+   {
+    "year": 2024,
+    "payer": "Bosansko-podrinjski kanton Goražde",
+    "paid": 7200,
+    "planned": 7200
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 4000,
+    "planned": 4000
+   }
+  ]
+ },
+ "00027": {
+  "name": "HDZ BIH - HRVATSKA DEMOKRATSKA ZAJEDNICA BIH",
+  "slug": "hdz-bih-hrvatska-demokratska-zajednica-bih",
+  "stood": 5395,
+  "won": 1392,
+  "firstYear": 2006,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/00027/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Zapadnohercegovački kanton",
+    "paid": 126000,
+    "planned": 126000
+   },
+   {
+    "year": 2024,
+    "payer": "Hercegovačko-neretvanski kanton",
+    "paid": 124416,
+    "planned": 124417
+   },
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 106912,
+    "planned": 106912
+   },
+   {
+    "year": 2024,
+    "payer": "Posavski kanton",
+    "paid": 72857.16,
+    "planned": 72857.16
+   },
+   {
+    "year": 2024,
+    "payer": "Bosna i Hercegovina",
+    "paid": 68180.17,
+    "planned": 68273.8
+   },
+   {
+    "year": 2024,
+    "payer": "Kanton 10",
+    "paid": 32000,
+    "planned": 32000
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 19548.39,
+    "planned": 19548.39
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 4000,
+    "planned": 4000
+   }
+  ]
+ },
+ "00018": {
+  "name": "SDS-SRPSKA DEMOKRATSKA STRANKA",
+  "slug": "sds-srpska-demokratska-stranka",
+  "stood": 6030,
+  "won": 1222,
+  "firstYear": 2006,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/00018/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Republika Srpska",
+    "paid": 717974.64,
+    "planned": 717974.64
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 4516.13,
+    "planned": 4516.13
+   }
+  ]
+ },
+ "00004": {
+  "name": "STRANKA ZA BOSNU I HERCEGOVINU",
+  "slug": "stranka-za-bosnu-i-hercegovinu",
+  "stood": 7860,
+  "won": 615,
+  "firstYear": 2006,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/00004/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 153025,
+    "planned": 153025
+   },
+   {
+    "year": 2024,
+    "payer": "Kanton Sarajevo",
+    "paid": 76751,
+    "planned": null
+   },
+   {
+    "year": 2024,
+    "payer": "Tuzlanski kanton",
+    "paid": 38885,
+    "planned": 38885
+   },
+   {
+    "year": 2024,
+    "payer": "Unsko-sanski kanton",
+    "paid": 26666.52,
+    "planned": 26666.88
+   },
+   {
+    "year": 2024,
+    "payer": "Bosansko-podrinjski kanton Goražde",
+    "paid": 7200,
+    "planned": 7200
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 4000,
+    "planned": 4000
+   }
+  ]
+ },
+ "00769": {
+  "name": "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990",
+  "slug": "hrvatska-demokratska-zajednica-1990",
+  "stood": 2641,
+  "won": 367,
+  "firstYear": 2008,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/00769/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 137654,
+    "planned": 137654
+   },
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 45771,
+    "planned": 45771
+   },
+   {
+    "year": 2024,
+    "payer": "Hercegovačko-neretvanski kanton",
+    "paid": 43776,
+    "planned": 43775
+   },
+   {
+    "year": 2024,
+    "payer": "Zapadnohercegovački kanton",
+    "paid": 36000,
+    "planned": 36000
+   },
+   {
+    "year": 2024,
+    "payer": "Kanton 10",
+    "paid": 24000,
+    "planned": 24000
+   },
+   {
+    "year": 2024,
+    "payer": "Posavski kanton",
+    "paid": 11607.14,
+    "planned": 11607.14
+   }
+  ]
+ },
+ "01182": {
+  "name": "SBB - FAHRUDIN RADONČIĆ",
+  "slug": "sbb-fahrudin-radoncic",
+  "stood": 5767,
+  "won": 367,
+  "firstYear": 2012,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/01182/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Zeničko-dobojski kanton",
+    "paid": 27047.63,
+    "planned": 27047.63
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 15032.26,
+    "planned": 15032.26
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 4000,
+    "planned": 4000
+   },
+   {
+    "year": 2024,
+    "payer": "Bosansko-podrinjski kanton Goražde",
+    "paid": 3600,
+    "planned": 3600
+   }
+  ]
+ },
+ "02317": {
+  "name": "NAROD I PRAVDA",
+  "slug": "narod-i-pravda",
+  "stood": 2486,
+  "won": 244,
+  "firstYear": 2018,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/02317/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 137654,
+    "planned": 137654
+   },
+   {
+    "year": 2024,
+    "payer": "Kanton Sarajevo",
+    "paid": 126437.2,
+    "planned": null
+   },
+   {
+    "year": 2024,
+    "payer": "Srednjobosanski kanton",
+    "paid": 97143,
+    "planned": 97143
+   },
+   {
+    "year": 2024,
+    "payer": "Bosna i Hercegovina",
+    "paid": 57563.06,
+    "planned": 58273.81
+   },
+   {
+    "year": 2024,
+    "payer": "Tuzlanski kanton",
+    "paid": 46031,
+    "planned": 43040
+   },
+   {
+    "year": 2024,
+    "payer": "Unsko-sanski kanton",
+    "paid": 41211.84,
+    "planned": 41212.2
+   },
+   {
+    "year": 2024,
+    "payer": "Zeničko-dobojski kanton",
+    "paid": 36981.7,
+    "planned": 36981.7
+   },
+   {
+    "year": 2024,
+    "payer": "Hercegovačko-neretvanski kanton",
+    "paid": 23614,
+    "planned": 23613.99
+   },
+   {
+    "year": 2024,
+    "payer": "Bosansko-podrinjski kanton Goražde",
+    "paid": 10800,
+    "planned": 10800
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 4000,
+    "planned": 4000
+   }
+  ]
+ },
+ "02734": {
+  "name": "OTADŽBINSKA STRANKA",
+  "slug": "otadzbinska-stranka",
+  "stood": 1594,
+  "won": 229,
+  "firstYear": 2020,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/02734/",
+  "funding": []
+ },
+ "01698": {
+  "name": "DEMOKRATSKA FRONTA",
+  "slug": "demokratska-fronta",
+  "stood": 3794,
+  "won": 202,
+  "firstYear": 2016,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/01698/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Republika Srpska",
+    "paid": 132852.72,
+    "planned": 132852.72
+   },
+   {
+    "year": 2024,
+    "payer": "Srednjobosanski kanton",
+    "paid": 97143,
+    "planned": 97143
+   },
+   {
+    "year": 2024,
+    "payer": "Kanton Sarajevo",
+    "paid": 94774.86,
+    "planned": null
+   },
+   {
+    "year": 2024,
+    "payer": "Tuzlanski kanton",
+    "paid": 65768,
+    "planned": 65768
+   },
+   {
+    "year": 2024,
+    "payer": "Bosna i Hercegovina",
+    "paid": 50299.02,
+    "planned": 50357.14
+   },
+   {
+    "year": 2024,
+    "payer": "Hercegovačko-neretvanski kanton",
+    "paid": 35556,
+    "planned": 35561
+   },
+   {
+    "year": 2024,
+    "payer": "Bosansko-podrinjski kanton Goražde",
+    "paid": 5600,
+    "planned": 5600
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 4000,
+    "planned": 4000
+   }
+  ]
+ },
+ "00877": {
+  "name": "NAŠA STRANKA",
+  "slug": "nasa-stranka",
+  "stood": 3428,
+  "won": 174,
+  "firstYear": 2008,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/00877/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 214508,
+    "planned": 214508
+   },
+   {
+    "year": 2024,
+    "payer": "Kanton Sarajevo",
+    "paid": 99506.6,
+    "planned": null
+   },
+   {
+    "year": 2024,
+    "payer": "Tuzlanski kanton",
+    "paid": 33766,
+    "planned": 33766
+   },
+   {
+    "year": 2024,
+    "payer": "Unsko-sanski kanton",
+    "paid": 26666.52,
+    "planned": 26666.88
+   },
+   {
+    "year": 2024,
+    "payer": "Zeničko-dobojski kanton",
+    "paid": 20190.47,
+    "planned": 20190.47
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 4000,
+    "planned": 4000
+   }
+  ]
+ },
+ "01972": {
+  "name": "UJEDINJENA SRPSKA",
+  "slug": "ujedinjena-srpska",
+  "stood": 2900,
+  "won": 155,
+  "firstYear": 2016,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/01972/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Republika Srpska",
+    "paid": 283901.4,
+    "planned": 283901.4
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 15032.26,
+    "planned": 15032.26
+   },
+   {
+    "year": 2024,
+    "payer": "Brčko distrikt BiH",
+    "paid": 4000,
+    "planned": 4000
+   }
+  ]
+ },
+ "02447": {
+  "name": "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"",
+  "slug": "sps-socijalisticka-partija-srpske-buducnost-srpske",
+  "stood": 1450,
+  "won": 73,
+  "firstYear": 2020,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/02447/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Republika Srpska",
+    "paid": 235671.12,
+    "planned": 235671.12
+   }
+  ]
+ },
+ "00028": {
+  "name": "DEMOKRATSKA  NARODNA ZAJEDNICA BIH - DNZ",
+  "slug": "demokratska-narodna-zajednica-bih-dnz",
+  "stood": 800,
+  "won": 65,
+  "firstYear": 2006,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/00028/",
+  "funding": []
+ },
+ "02711": {
+  "name": "SOCIJALDEMOKRATE  BOSNE I HERCEGOVINE SDBIH",
+  "slug": "socijaldemokrate-bosne-i-hercegovine-sdbih",
+  "stood": 705,
+  "won": 46,
+  "firstYear": 2020,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/02711/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Tuzlanski kanton",
+    "paid": 35894,
+    "planned": 38885
+   }
+  ]
+ },
+ "01701": {
+  "name": "LABURISTIČKA STRANKA BOSNE I HERCEGOVINE LABURISTI BIH",
+  "slug": "laburisticka-stranka-bosne-i-hercegovine-laburisti-bih",
+  "stood": 315,
+  "won": 43,
+  "firstYear": 2016,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/01701/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Unsko-sanski kanton",
+    "paid": 31211.88,
+    "planned": 31212.2
+   }
+  ]
+ },
+ "01705": {
+  "name": "HRS-HRVATSKA REPUBLIKANSKA STRANKA",
+  "slug": "hrs-hrvatska-republikanska-stranka",
+  "stood": 524,
+  "won": 38,
+  "firstYear": 2016,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/01705/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 76171,
+    "planned": 76171
+   },
+   {
+    "year": 2024,
+    "payer": "Hercegovačko-neretvanski kanton",
+    "paid": 35556,
+    "planned": 35561
+   },
+   {
+    "year": 2024,
+    "payer": "Zapadnohercegovački kanton",
+    "paid": 18000,
+    "planned": 18000
+   },
+   {
+    "year": 2024,
+    "payer": "Posavski kanton",
+    "paid": 10714.28,
+    "planned": 10714.28
+   }
+  ]
+ },
+ "02802": {
+  "name": "HRVATSKI NACIONALNI POMAK",
+  "slug": "hrvatski-nacionalni-pomak",
+  "stood": 176,
+  "won": 36,
+  "firstYear": 2020,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/02802/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 91542,
+    "planned": 91542
+   },
+   {
+    "year": 2024,
+    "payer": "Kanton 10",
+    "paid": 40000,
+    "planned": 40000
+   }
+  ]
+ },
+ "03068": {
+  "name": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+  "slug": "zeljko-komsic-za-gradjansku-drzavu-df-gs",
+  "stood": 793,
+  "won": 34,
+  "firstYear": 2022,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03068/",
+  "funding": []
+ },
+ "00036": {
+  "name": "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ",
+  "slug": "boss-bosanska-stranka-mirnes-ajanovic",
+  "stood": 1674,
+  "won": 31,
+  "firstYear": 2008,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/00036/",
+  "funding": []
+ },
+ "03122": {
+  "name": "NARODNI FRONT - JELENA TRIVIĆ",
+  "slug": "narodni-front-jelena-trivic",
+  "stood": 736,
+  "won": 26,
+  "firstYear": 2024,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03122/",
+  "funding": []
+ },
+ "02423": {
+  "name": "POKRET ZA MODERNU I AKTIVNU KRAJINU-POMAK",
+  "slug": "pokret-za-modernu-i-aktivnu-krajinu-pomak",
+  "stood": 181,
+  "won": 23,
+  "firstYear": 2020,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/02423/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 76171,
+    "planned": 76171
+   },
+   {
+    "year": 2024,
+    "payer": "Unsko-sanski kanton",
+    "paid": 51211.8,
+    "planned": 51212.16
+   }
+  ]
+ },
+ "02697": {
+  "name": "SNS FBIH-SAMO NAJBOLJI IDU NAPRIJED",
+  "slug": "sns-fbih-samo-najbolji-idu-naprijed",
+  "stood": 216,
+  "won": 21,
+  "firstYear": 2020,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/02697/",
+  "funding": []
+ },
+ "03191": {
+  "name": "SNAGA NARODA",
+  "slug": "snaga-naroda",
+  "stood": 641,
+  "won": 20,
+  "firstYear": 2024,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03191/",
+  "funding": []
+ },
+ "01702": {
+  "name": "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA",
+  "slug": "za-pravdu-i-red-lista-nebojse-vukanovica",
+  "stood": 378,
+  "won": 19,
+  "firstYear": 2020,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/01702/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Republika Srpska",
+    "paid": 283901.4,
+    "planned": 283901.4
+   }
+  ]
+ },
+ "01703": {
+  "name": "HRVATSKA NEZAVISNA LISTA",
+  "slug": "hrvatska-nezavisna-lista",
+  "stood": 224,
+  "won": 19,
+  "firstYear": 2016,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/01703/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Kanton 10",
+    "paid": 16000,
+    "planned": 16000
+   }
+  ]
+ },
+ "03212": {
+  "name": "NAPRIJED BIH!",
+  "slug": "naprijed-bih",
+  "stood": 547,
+  "won": 19,
+  "firstYear": 2024,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03212/",
+  "funding": []
+ },
+ "00017": {
+  "name": "HRVATSKA STRANKA PRAVA BIH",
+  "slug": "hrvatska-stranka-prava-bih",
+  "stood": 192,
+  "won": 14,
+  "firstYear": 2018,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/00017/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Zapadnohercegovački kanton",
+    "paid": 9000,
+    "planned": 9000
+   }
+  ]
+ },
+ "03044": {
+  "name": "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD",
+  "slug": "bosanskohercegovacka-inicijativa-kasumovic-fuad",
+  "stood": 268,
+  "won": 14,
+  "firstYear": 2022,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03044/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 76171,
+    "planned": 76171
+   },
+   {
+    "year": 2024,
+    "payer": "Zeničko-dobojski kanton",
+    "paid": 56849.77,
+    "planned": 56849.77
+   }
+  ]
+ },
+ "01290": {
+  "name": "HRVATSKA SELJAČKA STRANKA - HSS",
+  "slug": "hrvatska-seljacka-stranka-hss",
+  "stood": 202,
+  "won": 12,
+  "firstYear": 2012,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/01290/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 21451,
+    "planned": 21451
+   }
+  ]
+ },
+ "02495": {
+  "name": "NEZAVISNA LISTA DOBOJ-SEVLID HURTIĆ",
+  "slug": "nezavisna-lista-doboj-sevlid-hurtic",
+  "stood": 517,
+  "won": 12,
+  "firstYear": 2020,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/02495/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Republika Srpska",
+    "paid": 66426.36,
+    "planned": 66426.36
+   }
+  ]
+ },
+ "02798": {
+  "name": "BOSANSKOHERCEGOVAČKI DEMOKRATI - DŽEBRAIL BAJRAMOVIĆ",
+  "slug": "bosanskohercegovacki-demokrati-dzebrail-bajramovic",
+  "stood": 177,
+  "won": 9,
+  "firstYear": 2020,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/02798/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Bosansko-podrinjski kanton Goražde",
+    "paid": 3600,
+    "planned": 3600
+   }
+  ]
+ },
+ "03037": {
+  "name": "REPUBLIČKA STRANKA SRPSKE-RSS",
+  "slug": "republicka-stranka-srpske-rss",
+  "stood": 309,
+  "won": 9,
+  "firstYear": 2022,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03037/",
+  "funding": []
+ },
+ "03245": {
+  "name": "HDS - HRVATSKI DEMOKRATSKI SAVEZ",
+  "slug": "hds-hrvatski-demokratski-savez",
+  "stood": 65,
+  "won": 9,
+  "firstYear": 2024,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03245/",
+  "funding": []
+ },
+ "03066": {
+  "name": "\"NOVI POČETAK\"",
+  "slug": "novi-pocetak",
+  "stood": 85,
+  "won": 8,
+  "firstYear": 2022,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03066/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 76171,
+    "planned": 76171
+   },
+   {
+    "year": 2024,
+    "payer": "Bosansko-podrinjski kanton Goražde",
+    "paid": 12800,
+    "planned": 12800
+   }
+  ]
+ },
+ "03055": {
+  "name": "SRPSKI NACIONALNI POKRET FEDERACIJE BIH - SNP FBIH",
+  "slug": "srpski-nacionalni-pokret-federacije-bih-snp-fbih",
+  "stood": 65,
+  "won": 7,
+  "firstYear": 2024,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03055/",
+  "funding": []
+ },
+ "02319": {
+  "name": "BOSANSKA NARODNA STRANKA   BNS",
+  "slug": "bosanska-narodna-stranka-bns",
+  "stood": 148,
+  "won": 4,
+  "firstYear": 2020,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/02319/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Federacija BiH",
+    "paid": 76171,
+    "planned": 76171
+   },
+   {
+    "year": 2024,
+    "payer": "Bosansko-podrinjski kanton Goražde",
+    "paid": 5600,
+    "planned": 5600
+   }
+  ]
+ },
+ "02765": {
+  "name": "NEZAVISNI-NEOVISNI",
+  "slug": "nezavisni-neovisni",
+  "stood": 59,
+  "won": 3,
+  "firstYear": 2020,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/02765/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Posavski kanton",
+    "paid": 10714.28,
+    "planned": 10714.28
+   }
+  ]
+ },
+ "03050": {
+  "name": "NEZAVISNA GRAĐANSKA LISTA",
+  "slug": "nezavisna-gradjanska-lista",
+  "stood": 85,
+  "won": 3,
+  "firstYear": 2022,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03050/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Bosansko-podrinjski kanton Goražde",
+    "paid": 3600,
+    "planned": 3600
+   }
+  ]
+ },
+ "01239": {
+  "name": "ĆAMIL DURAKOVIĆ - NEZAVISNI KANDIDAT",
+  "slug": "camil-durakovic-nezavisni-kandidat",
+  "stood": 5,
+  "won": 2,
+  "firstYear": 2012,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/01239/",
+  "funding": []
+ },
+ "03048": {
+  "name": "NOVA POLITIČKA INICIJATIVA",
+  "slug": "nova-politicka-inicijativa",
+  "stood": 56,
+  "won": 2,
+  "firstYear": 2022,
+  "inFunding": true,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03048/",
+  "funding": [
+   {
+    "year": 2024,
+    "payer": "Bosansko-podrinjski kanton Goražde",
+    "paid": 7200,
+    "planned": 7200
+   }
+  ]
+ },
+ "02610": {
+  "name": "DODIK DARIO - NEZAVISNI KANDIDAT",
+  "slug": "dodik-dario-nezavisni-kandidat",
+  "stood": 2,
+  "won": 1,
+  "firstYear": 2020,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/02610/",
+  "funding": []
+ },
+ "03117": {
+  "name": "POKRET",
+  "slug": "pokret",
+  "stood": 76,
+  "won": 1,
+  "firstYear": 2024,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03117/",
+  "funding": []
+ },
+ "03045": {
+  "name": "STRANKA ŽIVOT",
+  "slug": "stranka-zivot",
+  "stood": 125,
+  "won": 0,
+  "firstYear": 2022,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03045/",
+  "funding": []
+ },
+ "03306": {
+  "name": "HOĆEMO EKO BUDUĆNOST",
+  "slug": "hocemo-eko-buducnost",
+  "stood": 23,
+  "won": 0,
+  "firstYear": 2024,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03306/",
+  "funding": []
+ },
+ "03506": {
+  "name": null,
+  "slug": "03506",
+  "stood": 59,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03506/",
+  "funding": []
+ },
+ "03508": {
+  "name": null,
+  "slug": "03508",
+  "stood": 85,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03508/",
+  "funding": []
+ },
+ "03510": {
+  "name": null,
+  "slug": "03510",
+  "stood": 92,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03510/",
+  "funding": []
+ },
+ "03512": {
+  "name": null,
+  "slug": "03512",
+  "stood": 1,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03512/",
+  "funding": []
+ },
+ "03514": {
+  "name": null,
+  "slug": "03514",
+  "stood": 1,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03514/",
+  "funding": []
+ },
+ "03515": {
+  "name": null,
+  "slug": "03515",
+  "stood": 24,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03515/",
+  "funding": []
+ },
+ "03516": {
+  "name": null,
+  "slug": "03516",
+  "stood": 16,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03516/",
+  "funding": []
+ },
+ "03517": {
+  "name": null,
+  "slug": "03517",
+  "stood": 30,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03517/",
+  "funding": []
+ },
+ "03518": {
+  "name": null,
+  "slug": "03518",
+  "stood": 27,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03518/",
+  "funding": []
+ },
+ "03521": {
+  "name": null,
+  "slug": "03521",
+  "stood": 1,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03521/",
+  "funding": []
+ },
+ "03529": {
+  "name": null,
+  "slug": "03529",
+  "stood": 156,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03529/",
+  "funding": []
+ },
+ "03531": {
+  "name": null,
+  "slug": "03531",
+  "stood": 81,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03531/",
+  "funding": []
+ },
+ "03532": {
+  "name": null,
+  "slug": "03532",
+  "stood": 213,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03532/",
+  "funding": []
+ },
+ "03533": {
+  "name": null,
+  "slug": "03533",
+  "stood": 1,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03533/",
+  "funding": []
+ },
+ "03534": {
+  "name": null,
+  "slug": "03534",
+  "stood": 112,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03534/",
+  "funding": []
+ },
+ "03535": {
+  "name": null,
+  "slug": "03535",
+  "stood": 192,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03535/",
+  "funding": []
+ },
+ "03542": {
+  "name": null,
+  "slug": "03542",
+  "stood": 67,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03542/",
+  "funding": []
+ },
+ "03544": {
+  "name": null,
+  "slug": "03544",
+  "stood": 96,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03544/",
+  "funding": []
+ },
+ "03546": {
+  "name": null,
+  "slug": "03546",
+  "stood": 118,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03546/",
+  "funding": []
+ },
+ "03548": {
+  "name": null,
+  "slug": "03548",
+  "stood": 90,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03548/",
+  "funding": []
+ },
+ "03550": {
+  "name": null,
+  "slug": "03550",
+  "stood": 111,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03550/",
+  "funding": []
+ },
+ "03552": {
+  "name": null,
+  "slug": "03552",
+  "stood": 55,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03552/",
+  "funding": []
+ },
+ "03553": {
+  "name": null,
+  "slug": "03553",
+  "stood": 128,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03553/",
+  "funding": []
+ },
+ "03554": {
+  "name": null,
+  "slug": "03554",
+  "stood": 34,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03554/",
+  "funding": []
+ },
+ "03555": {
+  "name": null,
+  "slug": "03555",
+  "stood": 39,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03555/",
+  "funding": []
+ },
+ "03556": {
+  "name": null,
+  "slug": "03556",
+  "stood": 120,
+  "won": 0,
+  "firstYear": 2026,
+  "inFunding": false,
+  "names": [],
+  "pageUrl": "https://gianniravioli.com/mashinerija/stranke/03556/",
+  "funding": []
+ }
+}

@@ -1,0 +1,1351 @@
+[
+ {
+  "id": "nsrs.2022-12-28.1#22",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2022-12-28",
+  "title": "Podrška nezaposlenom roditelju četvoro i više djece",
+  "plain": "Mjesečna naknada za nezaposlene roditelje sa četvoro i više djece.",
+  "tags": [
+   "porodica",
+   "novac"
+  ],
+  "official": "Приједлог закона о подршци незапосленом родитељу четворо и више дјеце у Републици Српској – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 61,
+   "absent": 0,
+   "seats": 0,
+   "for": 60,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2023-02-08.1#6",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2023-02-08",
+  "title": "Izmjene Zakona o energetici (2023)",
+  "plain": "Pravila za energetiku, koncesije i elektrane.",
+  "tags": [
+   "struja",
+   "priroda"
+  ],
+  "official": "Приједлог закона о измјенама и допунама Закона о енергетици",
+  "vote_on": null,
+  "published": {
+   "present": 69,
+   "absent": 0,
+   "seats": 0,
+   "for": 53,
+   "against": 13,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2023-06-27.1#2",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2023-06-27",
+  "title": "Odluke Ustavnog suda BiH ne važe u RS",
+  "plain": "Odluke Ustavnog suda BiH se ne primjenjuju u RS. Visoki predstavnik ga je poništio.",
+  "tags": [
+   "ustav",
+   "sudovi"
+  ],
+  "official": "Приједллог закона о непримјењивању одлука Уставног суда Босне и Херцеговине – по хитном поступку – приједлог предсједника Републике, народних посланика и Владе Републике Српсе",
+  "vote_on": null,
+  "published": {
+   "present": 65,
+   "absent": 0,
+   "seats": 0,
+   "for": 57,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2023-11-03.1#10",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2023-11-03",
+  "title": "Promjena budžeta RS usred 2023.",
+  "plain": "Promjena budžeta RS usred godine.",
+  "tags": [
+   "novac"
+  ],
+  "official": "Приједлог ребаланса Буџета Републике Српске за 2023. годину-по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 64,
+   "absent": 0,
+   "seats": 0,
+   "for": 46,
+   "against": 16,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2023-12-14.1#16",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2023-12-14",
+  "title": "Budžet RS za 2024.",
+  "plain": "Koliko RS troši i na šta u 2024.",
+  "tags": [
+   "novac"
+  ],
+  "official": "Приједлог буџета Републике Српске за 2024. годину – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 65,
+   "absent": 0,
+   "seats": 0,
+   "for": 46,
+   "against": 19,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2023-12-14.1#30",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2023-12-14",
+  "title": "Dječija zaštita: izmjene zakona",
+  "plain": "Promjene naknada i prava za djecu i porodice u RS.",
+  "tags": [
+   "porodica",
+   "novac"
+  ],
+  "official": "Приједлог закона о измјенама и допунама Закона о дјечијој заштити – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 65,
+   "absent": 0,
+   "seats": 0,
+   "for": 58,
+   "against": 2,
+   "abstainPublished": 4
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2023-12-22.1#14",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2023-12-22",
+  "title": "Poljoprivredne zadruge",
+  "plain": "Nova pravila za zadruge poljoprivrednika.",
+  "tags": [
+   "poljoprivreda"
+  ],
+  "official": "Приједлог закона о измјенама и допунама Закона о пољопривредним задругама",
+  "vote_on": null,
+  "published": {
+   "present": 51,
+   "absent": 0,
+   "seats": 0,
+   "for": 48,
+   "against": 1,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2024-04-19.1#3",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2024-04-19",
+  "title": "Izvještaj komisije o stradanju u srebreničkoj regiji",
+  "plain": "Usvajanje izvještaja međunarodne komisije koju je formirala Vlada RS.",
+  "tags": [
+   "historija"
+  ],
+  "official": "Закључни извјештај Независне међународне комисије за истраживање страдања свих народа у сребреничкој регији у периоду од 1992. до 1995. године",
+  "vote_on": null,
+  "published": {
+   "present": 73,
+   "absent": 0,
+   "seats": 0,
+   "for": 73,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2024-04-19.1#9",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2024-04-19",
+  "title": "Izborni zakon RS",
+  "plain": "RS donosi vlastiti izborni zakon, paralelno sa državnim. Kasnije povučen.",
+  "tags": [
+   "izbori",
+   "ustav"
+  ],
+  "official": "Приједлог изборног закона Републике Српске",
+  "vote_on": null,
+  "published": {
+   "present": 66,
+   "absent": 0,
+   "seats": 0,
+   "for": 51,
+   "against": 11,
+   "abstainPublished": 4
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2024-04-19.1#7",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2024-04-19",
+  "title": "Zakon o referendumu",
+  "plain": "Nova pravila kako se raspisuje referendum u RS.",
+  "tags": [
+   "ustav"
+  ],
+  "official": "Приједлог закона о референдуму и грађанској иницијативи Републике Српске",
+  "vote_on": null,
+  "published": {
+   "present": 66,
+   "absent": 0,
+   "seats": 0,
+   "for": 51,
+   "against": 4,
+   "abstainPublished": 11
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2024-11-05.1#29",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2024-11-05",
+  "title": "Zemljište za aerodrom Trebinje",
+  "plain": "Brži otkup zemlje od vlasnika (eksproprijacija) za aerodrom, obećavan od 2018. Gradnja do 2026 nije počela.",
+  "tags": [
+   "putevi",
+   "infrastruktura"
+  ],
+  "official": "Приједлог закона о измјени Закона о посебном поступку експропријације ради изградње аеродрома у Требињу – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 69,
+   "absent": 0,
+   "seats": 0,
+   "for": 61,
+   "against": 0,
+   "abstainPublished": 3
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2024-11-29.1#5",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2024-11-29",
+  "title": "Podsticaji u privredi",
+  "plain": "Novi zakon o tome kome i kako RS daje podsticaje firmama.",
+  "tags": [
+   "privreda",
+   "novac"
+  ],
+  "official": "Приједлог закона о подстицајима у привреди Републике Српске – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 61,
+   "absent": 0,
+   "seats": 0,
+   "for": 46,
+   "against": 13,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2024-12-12.1#15",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2024-12-12",
+  "title": "Budžet RS za 2025.",
+  "plain": "Koliko RS troši i na šta u 2025.",
+  "tags": [
+   "novac"
+  ],
+  "official": "Приједлог буџета Републике Српске за 2025. годину – по хитном поступку 2 Приједлог буџета Републике Српске за 2025. годину - по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 69,
+   "absent": 0,
+   "seats": 0,
+   "for": 47,
+   "against": 22,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2024-12-12.1#25",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2024-12-12",
+  "title": "Izmjene poreza na dohodak (2024)",
+  "plain": "Promjena poreza na plate i druge prihode.",
+  "tags": [
+   "porezi"
+  ],
+  "official": "Приједлог закона о измјенама и допунама Закона о порезу на доходак – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 59,
+   "absent": 0,
+   "seats": 0,
+   "for": 43,
+   "against": 12,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2024-12-24.1#15",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2024-12-24",
+  "title": "Informacija o „urušavanju pravnog sistema u BiH”",
+  "plain": "Zaključci NSRS nakon presude Dodiku u prvom stepenu.",
+  "tags": [
+   "ustav"
+  ],
+  "official": "Информација о урушавању правног система у БиХ кршењем Дејтонског мировног споразума 2.3",
+  "vote_on": null,
+  "published": {
+   "present": 64,
+   "absent": 0,
+   "seats": 0,
+   "for": 60,
+   "against": 4,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-02-28.1#9",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-02-28",
+  "title": "Zabrana rada državnog suda, tužilaštva i SIPA-e u RS",
+  "plain": "SIPA, Sud BiH, Tužilaštvo i VSTV se ne smiju primjenjivati u RS. Ustavni sud BiH poništio.",
+  "tags": [
+   "ustav",
+   "sudovi"
+  ],
+  "official": "Приједлог закона о непримјењивању закона и забрани дјеловања вануставних институција БиХ, по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 52,
+   "absent": 0,
+   "seats": 0,
+   "for": 49,
+   "against": 3,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-02-28.1#4",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-02-28",
+  "title": "Registar neprofitnih organizacija („strani agenti”)",
+  "plain": "Udruženja sa stranim novcem u poseban registar i pod nadzor.",
+  "tags": [
+   "ustav",
+   "transparentnost"
+  ],
+  "official": "Приједлог закона о Посебном регистру и јавности рада непрофитних организација, по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 52,
+   "absent": 0,
+   "seats": 0,
+   "for": 49,
+   "against": 3,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-02-28.1#11",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-02-28",
+  "title": "RS pravi svoje tijelo za izbor sudija (VSTS)",
+  "plain": "RS formira vlastito tijelo za izbor sudija i tužilaca. Poništeno.",
+  "tags": [
+   "sudovi",
+   "ustav"
+  ],
+  "official": "Приједлог закона о Високом судском и тужилачком савјету Републике Српске, по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 52,
+   "absent": 0,
+   "seats": 0,
+   "for": 49,
+   "against": 3,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-02-28.1#2",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-02-28",
+  "title": "Dopuna Krivičnog zakonika (februar 2025)",
+  "plain": "Nova krivična djela vezana za nepoštivanje zakona RS.",
+  "tags": [
+   "ustav"
+  ],
+  "official": "Приједлог закона о допуни Кривичног законика Републике Српске, по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 52,
+   "absent": 0,
+   "seats": 0,
+   "for": 49,
+   "against": 3,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-03-14.1#6",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-03-14",
+  "title": "Zaštita ustavnog uređenja RS",
+  "plain": "Kažnjava „napad na ustavni poredak RS”.",
+  "tags": [
+   "ustav",
+   "sigurnost"
+  ],
+  "official": "Приједлог закона о заштити уставног уређења Републике Српске – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 58,
+   "absent": 0,
+   "seats": 0,
+   "for": 50,
+   "against": 8,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-03-27.1#10",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-03-27",
+  "title": "Plate u javnim službama RS (2025)",
+  "plain": "Povećanje plata zaposlenih u javnim službama.",
+  "tags": [
+   "plate"
+  ],
+  "official": "Приједлог закона о платама запослених у јавним службама Републике Српске – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 62,
+   "absent": 0,
+   "seats": 0,
+   "for": 60,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-03-27.1#15",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-03-27",
+  "title": "Plate u zdravstvu RS (2025)",
+  "plain": "Povećanje plata zaposlenih u bolnicama i domovima zdravlja.",
+  "tags": [
+   "plate",
+   "zdravstvo"
+  ],
+  "official": "Приједлог закона о платама запослених лица у јавним установама у области здравства Републике Српске – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 62,
+   "absent": 0,
+   "seats": 0,
+   "for": 61,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-07-10.1#21",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-07-10",
+  "title": "Autoput Banjaluka–Mrkonjić Grad: plan parcelacije",
+  "plain": "Prvi korak (plan) za autoput obećan 2022; gradnja nije počela.",
+  "tags": [
+   "putevi"
+  ],
+  "official": "Приједлог одлуке о изради Плана парцелације за ауто-пут Бања Лука – Млиништа за дионицу Бања Лука југ – Мркоњић Град – по скраћеном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 58,
+   "absent": 0,
+   "seats": 0,
+   "for": 46,
+   "against": 3,
+   "abstainPublished": 8
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-07-10.1#22",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-07-10",
+  "title": "Moratorij na rudarske koncesije",
+  "plain": "Prijedlog da se privremeno zaustave nove koncesije za rudnike (npr. litijum). Nije prošao.",
+  "tags": [
+   "priroda",
+   "privreda"
+  ],
+  "official": "Приједлог одлуке о мораторијуму на додјелу концесија за геолошка истраживања и за експлоатацију минералних сировина, руда и других ресурса на подручју планине Мајевица до окончања поступка заштите",
+  "vote_on": null,
+  "published": {
+   "present": 58,
+   "absent": 0,
+   "seats": 0,
+   "for": 17,
+   "against": 0,
+   "abstainPublished": 25
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-08-22.1#8",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-08-22",
+  "title": "Referendum o presudi Dodiku",
+  "plain": "Raspisivanje referenduma nakon što je CIK oduzeo mandat Dodiku. Kasnije odustalo.",
+  "tags": [
+   "ustav"
+  ],
+  "official": "Разматрање и усвајање одлуке о расписивању референдума поводом одлука Суда БиХ изречене предсједнику Републике Српске и одлуци Централне изборне комисије Босне и Херцеговине о престанку",
+  "vote_on": null,
+  "published": {
+   "present": 65,
+   "absent": 0,
+   "seats": 0,
+   "for": 50,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-10-18.1#7",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-10-18",
+  "title": "Povlačenje zaključaka o „urušavanju pravnog poretka”",
+  "plain": "NSRS stavlja van snage ranije zaključke, dio dogovora sa SAD.",
+  "tags": [
+   "ustav"
+  ],
+  "official": "Приједлог закључака о стављању ван снаге Закључака у вези са Информацијом о урушавању правног поретка у БиХ кршењем Дејтонског мировног споразума, број: 02/1-021-1564/24 од 25 децембра 2024.",
+  "vote_on": null,
+  "published": {
+   "present": 54,
+   "absent": 0,
+   "seats": 0,
+   "for": 48,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-12-18.1#11",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-12-18",
+  "title": "Budžet RS za 2026.",
+  "plain": "Koliko RS troši i na šta u 2026.",
+  "tags": [
+   "novac"
+  ],
+  "official": "Приједлог буџета Републике Српске за 2026. годину - по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 63,
+   "absent": 0,
+   "seats": 0,
+   "for": 48,
+   "against": 6,
+   "abstainPublished": 8
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-12-18.1#22",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-12-18",
+  "title": "Izmjene Zakona o doprinosima",
+  "plain": "Promjena doprinosa za penzije i zdravstvo.",
+  "tags": [
+   "porezi",
+   "plate"
+  ],
+  "official": "Приједлог закона о измјени и допунама Закона о доприносима - по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 63,
+   "absent": 0,
+   "seats": 0,
+   "for": 48,
+   "against": 0,
+   "abstainPublished": 10
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-12-18.1#39",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-12-18",
+  "title": "Plate u školama RS (2026)",
+  "plain": "Povećanje plata nastavnika i osoblja u školama.",
+  "tags": [
+   "plate",
+   "obrazovanje"
+  ],
+  "official": "Приједлог закона о измјенама Закона о платама запослених у основним и средњим школама и ђачким домовима у Републици Српској - по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 63,
+   "absent": 0,
+   "seats": 0,
+   "for": 61,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-12-24.1#2",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-12-24",
+  "title": "Izmjene Zakona o inspekcijama",
+  "plain": "Kako rade inspekcije u RS.",
+  "tags": [
+   "privreda"
+  ],
+  "official": "Приједлог закона о измјенама и допунама Закона о инспекцијама Републике Српске - по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 57,
+   "absent": 0,
+   "seats": 0,
+   "for": 44,
+   "against": 12,
+   "abstainPublished": 1
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-12-24.1#15",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-12-24",
+  "title": "Zaštita od duvanskog dima",
+  "plain": "Zabrana pušenja u zatvorenim javnim prostorima u RS.",
+  "tags": [
+   "zdravstvo"
+  ],
+  "official": "Приједлог закона о заштити здравља становништва од дуванских и осталих производа за пушење",
+  "vote_on": null,
+  "published": {
+   "present": 58,
+   "absent": 0,
+   "seats": 0,
+   "for": 54,
+   "against": 1,
+   "abstainPublished": 2
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2026-03-17.2#4",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2026-03-17",
+  "title": "Rezolucija o osudi ustaške, nacističke i fašističke ideologije",
+  "plain": "Zabrana promovisanja simbola NDH i fašizma.",
+  "tags": [
+   "historija"
+  ],
+  "official": "Приједлог резолуције о осуди и забрани промовисања и величања идеологије и симбола Независне Државе Хрватске и усташке, нацистичке и фашистичке идеологије",
+  "vote_on": null,
+  "published": {
+   "present": 68,
+   "absent": 0,
+   "seats": 0,
+   "for": 68,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2026-05-20.1#17",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2026-05-20",
+  "title": "Izmjene Zakona o električnoj energiji",
+  "plain": "Pravila o struji i tržištu struje u RS.",
+  "tags": [
+   "struja"
+  ],
+  "official": "Приједлог закона о измјени и допунама Закона о електричној енергији – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 55,
+   "absent": 0,
+   "seats": 0,
+   "for": 44,
+   "against": 0,
+   "abstainPublished": 8
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2026-05-20.1#8",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2026-05-20",
+  "title": "Zemljište za gasovod i autoput (Šepak–Novi Grad)",
+  "plain": "Brži otkup zemlje od vlasnika (eksproprijacija) za gasovod i autoput.",
+  "tags": [
+   "putevi",
+   "struja"
+  ],
+  "official": "Приједлог закона о посебном поступку експропријације ради изградње магистралног гасовода Шепак – Нови Град и ауто – пута Гламочани – Бања Лука – Млиништа – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 55,
+   "absent": 0,
+   "seats": 0,
+   "for": 44,
+   "against": 0,
+   "abstainPublished": 10
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2026-05-26.1#8",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2026-05-26",
+  "title": "Zahtjev da se zatvori Ured visokog predstavnika (OHR)",
+  "plain": "NSRS traži zatvaranje Ureda visokog predstavnika (OHR): stranac kojeg su postavile velike sile poslije rata i koji može nametnuti ili poništiti zakon u BiH.",
+  "tags": [
+   "ustav"
+  ],
+  "official": "Приједлог Oдлуке о усвајању Декларације о затварању канцеларије високог представника у БиХ – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 60,
+   "absent": 0,
+   "seats": 0,
+   "for": 57,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2026-06-18.1#16",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2026-06-18",
+  "title": "Promjena budžeta RS usred 2026.",
+  "plain": "Promjena budžeta RS u izbornoj godini.",
+  "tags": [
+   "novac"
+  ],
+  "official": "Приједлог ребаланса Буџета Репубике Српске за 2026. годину – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 57,
+   "absent": 0,
+   "seats": 0,
+   "for": 45,
+   "against": 0,
+   "abstainPublished": 11
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2026-07-09.1#22",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2026-07-09",
+  "title": "Zemljište za autoput Banjaluka–Prijedor",
+  "plain": "Eksproprijacija za autoput obećan 2014, 2018 i 2022; radovi počeli tek 2024.",
+  "tags": [
+   "putevi"
+  ],
+  "official": "Приједлог закона о измјени Закона о посебном поступку експропријације ради изградње ауто-пута Бања Лука – Приједор",
+  "vote_on": null,
+  "published": {
+   "present": 58,
+   "absent": 0,
+   "seats": 0,
+   "for": 55,
+   "against": 0,
+   "abstainPublished": 2
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2026-07-09.1#25",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2026-07-09",
+  "title": "Zemljište za Koridor Vc kroz RS",
+  "plain": "Eksproprijacija za dio Koridora Vc (Vukosavlje–Brčko i dalje).",
+  "tags": [
+   "putevi"
+  ],
+  "official": "Приједлог закона о измјени Закона о посебном поступку експропријације ради изградње ауто-пута Коридор Vc кроз Републику Српску и изградње дионице ауто-пута „9. јануар“ Бања Лука – Добој",
+  "vote_on": null,
+  "published": {
+   "present": 58,
+   "absent": 0,
+   "seats": 0,
+   "for": 54,
+   "against": 0,
+   "abstainPublished": 2
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2416#5",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2023-03-29",
+  "title": "Budžet institucija BiH za 2023.",
+  "plain": "Koliko para dobijaju državne institucije i za šta. Usvojen tek u martu 2023.",
+  "tags": [
+   "novac"
+  ],
+  "official": "Prijedlog zakona o Budžetu institucija Bosne i Hercegovine i međunarodnih obaveza Bosne i Hercegovine za 2023. godinu, predlagač: Predsjedništvo BiH, sa zahtjevom da se Prijedlog zakona razmatra po hitnom postupku, u skladu s članom 133. Poslovnika, broj: 01,02-02-1-697/23 od 21. 3. 2023.",
+  "vote_on": null,
+  "published": {
+   "present": 39,
+   "absent": 3,
+   "seats": 42,
+   "for": 21,
+   "against": 16,
+   "abstainPublished": 2
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2460#9",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2023-07-05",
+  "title": "Pravo građana da traže podatke od institucija",
+  "plain": "Šta državne institucije moraju objaviti građanima kad ih pitaju. Jedan od uslova za EU.",
+  "tags": [
+   "EU",
+   "transparentnost"
+  ],
+  "official": "Prijedlog zakona o slobodi pristupa informacijama na nivou institucija Bosne i Hercegovine „P.Z.E.I.“, predlagač: Vijeće ministara BiH, broj: 01,02-02-1- 1031/23 od 30. 5. 2023, skraćeni postupak (prvo čitanje);",
+  "vote_on": null,
+  "published": {
+   "present": 36,
+   "absent": 6,
+   "seats": 42,
+   "for": 30,
+   "against": 4,
+   "abstainPublished": 2
+  },
+  "adopted": true
+ },
+ {
+  "id": "o.2487#5",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2023-08-22",
+  "title": "Provjera sudija i tužilaca (VSTV)",
+  "plain": "Sudije i tužioci moraju prijaviti imovinu i biti provjereni. Uslov za otvaranje EU pregovora.",
+  "tags": [
+   "EU",
+   "sudovi"
+  ],
+  "official": "Prijedlog zakona o izmjenama i dopunama Zakona o Visokom sudskom i tužilačkom vijeću Bosne i Hercegovine, P.Z.E.I, predlagač: Vijeće ministara BiH, broj: 01,02-02-1-1424/23 od 17. 7. 2023, skraćeni postupak drugo čitanje ;",
+  "vote_on": "Prijedlogu zakona o izmjenama i dopunama Zakona o Visokom sudskom i tužilačkom vijeću Bosne i Hercegovine, s dva amandmana iz Izvještaja Ustavnopravne komisije, koji su postali sastavni dio zakona",
+  "published": {
+   "present": 35,
+   "absent": 7,
+   "seats": 42,
+   "for": 24,
+   "against": 3,
+   "abstainPublished": 8
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2487#4",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2023-08-22",
+  "title": "Izmjene Zakona o PDV-u (2023)",
+  "plain": "Promjena pravila o porezu na dodatu vrijednost.",
+  "tags": [
+   "porezi"
+  ],
+  "official": "Prijedlog zakona o izmjenama Zakona o porezu na dodatu vrijednost, predlagač: poslanici Mladen Bosić i Darko Babalj, skraćeni postupak, broj: 01-02-1-1261/23 od 7. 6. 2023. drugo čitanje ;",
+  "vote_on": "Prijedlogu zakona o izmjenama Zakona o porezu na dodatu vrijednost, s dva amandmana iz Izvještaja komisije za finansije i budžet, koji su postali sastavni dio zakona",
+  "published": {
+   "present": 35,
+   "absent": 7,
+   "seats": 42,
+   "for": 35,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2515#11",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2023-11-20",
+  "title": "Ukidanje državnog suda",
+  "plain": "Prijedlog da se ukine državni sud. Nije prošao.",
+  "tags": [
+   "sudovi"
+  ],
+  "official": "Prijedlog zakona o prestanku važenja Zakona o Sudu Bosne i Hercegovine, predlagač: poslanik Milorad Kojić, sa zahtjevom za razmatranje po hitnom postupku, u skladu s članom 133. Poslovnika, broj: 01-02-1-2300/23 od 3. 11. 2023;",
+  "vote_on": null,
+  "published": {
+   "present": 34,
+   "absent": 8,
+   "seats": 42,
+   "for": 9,
+   "against": 21,
+   "abstainPublished": 4
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2543#3",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2023-12-21",
+  "title": "Sprječavanje pranja novca",
+  "plain": "Novi zakon protiv pranja novca i finansiranja terorizma. Međunarodna obaveza.",
+  "tags": [
+   "EU",
+   "novac"
+  ],
+  "official": "Prijedlog zakona o sprečavanju pranja novca i finansiranja terorističkih aktivnosti (P.Z.E.I.), predlagač: Vijeće ministara BiH, sa zahtjevom za razmatranje po hitnom postupku, u skladu s člankom 133. Poslovnika, broj: 01,02-02-1-2665/23 od 20.12. i 21.12.2023.",
+  "vote_on": "Prijedlogu zakona po hitnom postupku",
+  "published": {
+   "present": 36,
+   "absent": 6,
+   "seats": 42,
+   "for": 34,
+   "against": 0,
+   "abstainPublished": 2
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2578#2",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2024-03-08",
+  "title": "Zabrana miješanja privatnog i javnog (sukob interesa)",
+  "plain": "Ko u državnim institucijama ne smije imati privatni interes i kako se to provjerava. Uslov za EU.",
+  "tags": [
+   "EU",
+   "transparentnost"
+  ],
+  "official": "Prijedlog zakona o sprečavanju sukoba interesa u institucijama na nivou Bosne i Hercegovine P.Z.E.I. , predlagač: Vijeće ministara BiH, sa zahtjevom za razmatranje po hitnom postupku, u skladu s članom 133. Poslovnika, broj: 01,02-02-1-532/24 od 7. 3. 2024.",
+  "vote_on": "Prijedlogu zakona",
+  "published": {
+   "present": 30,
+   "absent": 12,
+   "seats": 42,
+   "for": 23,
+   "against": 1,
+   "abstainPublished": 6
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2630#11",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2024-07-16",
+  "title": "Budžet institucija BiH za 2024.",
+  "plain": "Državni budžet za 2024, usvojen tek u julu te godine.",
+  "tags": [
+   "novac"
+  ],
+  "official": "Prijedlog zakona o Budžetu institucija Bosne i Hercegovine i međunarodnih obaveza Bosne i Hercegovine za 2024. godinu, predlagač: Predsjedništvo BiH, sa zahtjevom za razmatranje po hitnom postupku, u skladu s članom 133. Poslovnika broj: 01,02-02-1-1348/24 od 11. 7. 2024.",
+  "vote_on": null,
+  "published": {
+   "present": 39,
+   "absent": 3,
+   "seats": 42,
+   "for": 23,
+   "against": 16,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2630#8",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2024-07-16",
+  "title": "Izmjene Zakona o javnim nabavkama (2024)",
+  "plain": "Pravila kako institucije kupuju robu i usluge javnim novcem.",
+  "tags": [
+   "novac",
+   "transparentnost"
+  ],
+  "official": "Prijedlog zakona o izmjenama i dopunama Zakona o javnim nabavkama, predlagač: poslanici Saša Magazinović, Predrag Kožul, Sabina Ćudić i Nihad Omerović, sa zahtjevom za razmatranje po hitnom postupku, u skladu s članom 133. Poslovnika, broj: 01-02-1-1365/24 od 15. 7. 2024.",
+  "vote_on": null,
+  "published": {
+   "present": 38,
+   "absent": 4,
+   "seats": 42,
+   "for": 33,
+   "against": 1,
+   "abstainPublished": 4
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2665#10",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2024-12-03",
+  "title": "Dopune Zakona o PDV-u (2024)",
+  "plain": "Izmjena poreza na dodatu vrijednost, drugo čitanje.",
+  "tags": [
+   "porezi"
+  ],
+  "official": "Prijedlog zakona o dopunama Zakona o porezu na dodatu vrijednost, predlagač: poslanici Sanja Vulić, Mia Karamehić-Abazović, Saša Magazinović, Sabina Ćudić i Čedomir Stojanović, broj: 01-02-1-1829/24 od 25. 9. i 26. 9. 2024. (drugo čitanje);",
+  "vote_on": "Prijedlogu zakona u drugom čitanju s amandmanima iz Izvještaja Komisije za finansije i budžet, koji su postali sastavni dio zakona;",
+  "published": {
+   "present": 37,
+   "absent": 5,
+   "seats": 42,
+   "for": 37,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2671#5",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2025-01-23",
+  "title": "Zaštita ličnih podataka",
+  "plain": "Kako se čuvaju podaci građana. Usklađivanje s EU pravilima.",
+  "tags": [
+   "EU"
+  ],
+  "official": "Prijedlog zakona o zaštiti ličnih podataka Bosne i Hercegovine, P.Z.E.I, predlagač: Vijeće ministara BiH, broj: MNIMOJMOJNJORQULOQ ɨɞ NTK 12. i 18. 12. OMOQ, skraćeni postupak prvo čitanje .",
+  "vote_on": "Prijedlogu zakona o zaštiti ličnih podataka , skraćeni postupak prvo čitanje",
+  "published": {
+   "present": 39,
+   "absent": 3,
+   "seats": 42,
+   "for": 30,
+   "against": 1,
+   "abstainPublished": 8
+  },
+  "adopted": true
+ },
+ {
+  "id": "o.2671#2",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2025-01-23",
+  "title": "Zakon o graničnoj kontroli",
+  "plain": "Ko i kako kontroliše granicu BiH. Usklađivanje s EU.",
+  "tags": [
+   "EU",
+   "sigurnost"
+  ],
+  "official": "Prijedlog zakona o graničnoj kontroli, P.Z.E.I., predlagač: Vijeće ministara BiH, sa zahtjevom za razmatranje po hitnom postupku, u skladu s članom 133. Poslovnika, broj: 01,02-02-1-2546/24 od 17. 12. 2024;",
+  "vote_on": "Prijedlogu zakona o graničnoj kontroli",
+  "published": {
+   "present": 39,
+   "absent": 3,
+   "seats": 42,
+   "for": 20,
+   "against": 10,
+   "abstainPublished": 9
+  },
+  "adopted": true
+ },
+ {
+  "id": "o.2699#32",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2025-06-12",
+  "title": "Novi zakon o državnom sudu (prijedlog 2025)",
+  "plain": "Prijedlog novog zakona o državnom sudu. Nije prošao.",
+  "tags": [
+   "sudovi"
+  ],
+  "official": "Prijedlog zakona o Sudu Bosne i Hercegovine, predlagač: poslanik Predrag Kojović, broj: 01-02-1-1196/25 od 10. 6. 2025, skraćeni postupak prvo čitanje ;",
+  "vote_on": null,
+  "published": {
+   "present": 37,
+   "absent": 5,
+   "seats": 42,
+   "for": 14,
+   "against": 18,
+   "abstainPublished": 5
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2699#24",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2025-06-12",
+  "title": "Izmjena Zakona o javnim nabavkama (2025)",
+  "plain": "Još jedna promjena pravila javnih nabavki.",
+  "tags": [
+   "novac",
+   "transparentnost"
+  ],
+  "official": "Prijedlog zakona o izmjeni Zakona o javnim nabavkama, predlagač: poslanici Saša Magazinović, predsjedavajući Kluba poslanika SDPBiH, Mira Pekić, predsjedavajuća Kluba poslanika SDS - PDP - ZA PRAVDU I RED, Nihad Omerović, predsjedavajući Kluba poslanika NIP, Sabina Ćudić, predsjedavajuća Kluba poslanika NS - BHI KF, i Jasmin Emrić, predsjedavajući Mješovitog kluba, broj: 01-02-1-1197/25 od 22. 5. 2025, skraćeni postupak drugo čitanje ;",
+  "vote_on": "Prijedlogu zakona u drugom čitanju s amandmanima iz izvještaja Komisije za finansije i budžet, koji su postali sastavni dio Prijedloga zakona;",
+  "published": {
+   "present": 37,
+   "absent": 5,
+   "seats": 42,
+   "for": 27,
+   "against": 5,
+   "abstainPublished": 5
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2723#17",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2025-11-17",
+  "title": "Budžet institucija BiH za 2025.",
+  "plain": "Državni budžet za 2025, usvojen tek u novembru 2025.",
+  "tags": [
+   "novac"
+  ],
+  "official": "Prijedlog zakona o Budžetu institucija Bosne i Hercegovine i međunarodnih obaveza Bosne i Hercegovine za 2025. godinu, predlagač: Predsjedništvo BiH, sa zahtjevom za razmatranje po hitnom postupku, u skladu s članom 133. Poslovnika, broj: 01,02-02-1-2435/25 od 11. 11. 2025.",
+  "vote_on": null,
+  "published": {
+   "present": 40,
+   "absent": 2,
+   "seats": 42,
+   "for": 21,
+   "against": 7,
+   "abstainPublished": 12
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2728#16",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2025-12-12",
+  "title": "Novi zakon o struji (tržište i regulator)",
+  "plain": "Novi zakon o regulatoru i tržištu struje. Ključni EU uslov.",
+  "tags": [
+   "EU",
+   "struja"
+  ],
+  "official": "Prijedlog zakona o regulatoru, prijenosu i tržištu električne energije u Bosni i Hercegovini P.Z.E.I , predlagač: Vijeće ministara BiH, broj: 01,02-02-1- 2006/25 od 12. 9. 2025, skraćeni postupak drugo čitanje ;",
+  "vote_on": "Prijedlogu zakona u drugom čitanju s amandmanima iz izvještaja Komisije za vanjsku trgovinu i carine;",
+  "published": {
+   "present": 38,
+   "absent": 4,
+   "seats": 42,
+   "for": 31,
+   "against": 2,
+   "abstainPublished": 5
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2728#12",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2025-12-12",
+  "title": "Izmjene Izbornog zakona (decembar 2025)",
+  "plain": "Promjene pravila izbora pred 2026.",
+  "tags": [
+   "izbori"
+  ],
+  "official": "Prijedlog zakona o izmjenama i dopunama Izbornog zakona Bosne i Hercegovine, predlagač: poslanici Šerif Špago, Edin Ramić, Safet Kešo, Amor Mašović, Nermin Mandra, Šemsudin Dedić, Denijal Tulumović i Midhat Čaušević, sa zahtjevom za razmatranje po hitnom postupku, u skladu s članom 133. Poslovnika, broj: 01-02-1-2636/25 od 9. 12. 2025;",
+  "vote_on": null,
+  "published": {
+   "present": 38,
+   "absent": 4,
+   "seats": 42,
+   "for": 29,
+   "against": 9,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2728#19",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2025-12-12",
+  "title": "Zakon o državnoj imovini",
+  "plain": "Ko je vlasnik državne imovine: država ili entiteti. Nije prošao.",
+  "tags": [
+   "imovina"
+  ],
+  "official": "Prijedlog zakona o državnoj imovini, predlagač: poslanici Jasmin Emrić, Šemsudin Mehmedović, Aida Baručija i Elvisa Hodžić, broj: 01-02-1- 2378/25 od 3. 11. 2025, s Mišljenjem Ustavnopravne komisije",
+  "vote_on": "Mišljenju Ustavnopravne komisije;",
+  "published": {
+   "present": 38,
+   "absent": 4,
+   "seats": 42,
+   "for": 15,
+   "against": 23,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2733#16",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2026-02-13",
+  "title": "Izmjene Zakona o finansiranju institucija BiH",
+  "plain": "Pravila kako se finansiraju državne institucije. Nije prošao.",
+  "tags": [
+   "novac"
+  ],
+  "official": "Prijedlog zakona o izmjenama Zakona o finansiranju institucija Bosne i Hercegovine, predlagač: poslanik Marinko Čavara, broj: 01-02-1-259/26 od 21. 1. 2026. prvo čitanje",
+  "vote_on": null,
+  "published": {
+   "present": 34,
+   "absent": 8,
+   "seats": 42,
+   "for": 14,
+   "against": 19,
+   "abstainPublished": 1
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2735#18",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2026-03-16",
+  "title": "Blokiranje imovine osumnjičenih za terorizam",
+  "plain": "Blokiranje imovine osumnjičenih za terorizam. Međunarodna obaveza.",
+  "tags": [
+   "sigurnost"
+  ],
+  "official": "Prijedlog zakona o ograničavanju raspolaganja imovinom s ciljem sprečavanja terorizma, finansiranja terorizma i finansiranja širenja oružja za masovno uništenje, predlagač: Vijeće ministara BiH, sa zahtjevom za razmatranje po hitnom postupku, u skladu s članom 133. Poslovnika, broj: 01,02-50-18-816/26 od 13. 3. 2026;",
+  "vote_on": null,
+  "published": {
+   "present": 38,
+   "absent": 4,
+   "seats": 42,
+   "for": 28,
+   "against": 1,
+   "abstainPublished": 9
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2735#15",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2026-03-16",
+  "title": "Dopuna Zakona o akcizama",
+  "plain": "Promjena posebnog poreza (akciza).",
+  "tags": [
+   "porezi"
+  ],
+  "official": "Prijedlog zakona o dopuni Zakona o akcizama u Bosni i Hercegovini, predlagač: poslanik Saša Magazinović, sa zahtjevom za razmatranje po hitnom postupku, u skladu s članom 133. Poslovnika, broj: 01-02-1-757/26 od 9. 3. 2026;",
+  "vote_on": null,
+  "published": {
+   "present": 38,
+   "absent": 4,
+   "seats": 42,
+   "for": 32,
+   "against": 6,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2742#17",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2026-04-29",
+  "title": "Dopuna Zakona o PDV-u (2026)",
+  "plain": "Izmjena PDV-a, predlagač R. Dervišević.",
+  "tags": [
+   "porezi"
+  ],
+  "official": "Prijedlog zakona o dopuni Zakona o porezu na dodatu vrijednost, predlagač: poslanica Rejhana Dervišević, sa zahtjevom za razmatranje po hitnom postupku, u skladu s članom 133. Poslovnika, broj: 01-02-1-1087/26 od 17. 4. 2026",
+  "vote_on": null,
+  "published": {
+   "present": 31,
+   "absent": 11,
+   "seats": 42,
+   "for": 24,
+   "against": 7,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2749#19",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2026-05-19",
+  "title": "Novi zakon o tijelu koje bira sudije (VSTV)",
+  "plain": "Novi zakon o tijelu koje bira sudije i tužioce. EU uslov. Nije dobio podršku.",
+  "tags": [
+   "EU",
+   "sudovi"
+  ],
+  "official": "Prijedlog zakona o Visokom sudskom i tužilačkom vijeću Bosne i Hercegovine, predlagač: poslanik Predrag Kojović, broj: 01-02-1-1196/26 od 28. 4. 2026, skraćeni postupak prvo čitanje ;",
+  "vote_on": null,
+  "published": {
+   "present": 33,
+   "absent": 9,
+   "seats": 42,
+   "for": 19,
+   "against": 11,
+   "abstainPublished": 3
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2755#12",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2026-07-22",
+  "title": "Novi zakon o državnom sudu i sudu za žalbe",
+  "plain": "Novi zakon o državnim sudovima, drugo čitanje. EU uslov.",
+  "tags": [
+   "EU",
+   "sudovi"
+  ],
+  "official": "Prijedlog zakona o Sudu Bosne i Hercegovine i Apelacionom sudu Bosne i Hercegovine, predlagač: poslanik Predrag Kojović, broj: 01-02-1-902/26 od 24. 3. 2026, skraćeni postupak drugo čitanje ;",
+  "vote_on": "Prijedlogu zakona u drugom čitanju sa četiri amandmana sadržana u Izvještaju Ustavnopravne komisije, koji su postali sastavni dio Prijedloga zakona;",
+  "published": {
+   "present": 33,
+   "absent": 9,
+   "seats": 42,
+   "for": 21,
+   "against": 11,
+   "abstainPublished": 1
+  },
+  "adopted": null
+ },
+ {
+  "id": "o.2757#4",
+  "chamber": "predstavnicki-dom-psbih",
+  "date": "2026-07-22",
+  "title": "Budžet institucija BiH za 2026.",
+  "plain": "Državni budžet za 2026, usvojen u julu 2026.",
+  "tags": [
+   "novac"
+  ],
+  "official": "Prijedlog zakona o Budžetu institucija Bosne i Hercegovine i međunarodnih obaveza Bosne i Hercegovine za 2026. godinu, predlagač: Predsjedništvo BiH, sa zahtjevom za razmatranje po hitnom postupku, u skladu s članom 133. Poslovnika, broj: 01,02-02-1-1734/26 od 14. 7. 2026.",
+  "vote_on": null,
+  "published": {
+   "present": 38,
+   "absent": 4,
+   "seats": 42,
+   "for": 29,
+   "against": 1,
+   "abstainPublished": 8
+  },
+  "adopted": null
+ }
+]

@@ -1,22 +1,14 @@
 {% extends "base.html" %}
-{% block title %}Općine — Izbori 2026{% endblock %}
+{% block title %}Sve općine — Izbori 2026{% endblock %}
 {% block content %}
-<h1>Općine</h1>
-<input type="search" id="q" placeholder="Kucaj naziv općine…" oninput="filterOpcine()">
-<div id="opcine-list">
+<h1>Sve općine</h1>
+<input type="search" id="q" placeholder="Ukucaj naziv općine" oninput="f()">
+<div class="list" id="L">
 {% for group, items in groups %}
-<h2>{{ group }}</h2>
-{% for m in items %}
-<div class="opcina-item" data-name="{{ m.name | lower }}"><a href="opcina-{{ m.slug }}.html">{{ m.name }}</a></div>
+<h2 class="g">{{ group }}</h2>
+{% for m in items %}<a class="item o" data-name="{{ m.folded }}" href="opcina-{{ m.slug }}.html">{{ m.name }}</a>
 {% endfor %}
 {% endfor %}
 </div>
-<script>
-function filterOpcine() {
-  const q = document.getElementById('q').value.toLowerCase();
-  document.querySelectorAll('.opcina-item').forEach(el => {
-    el.style.display = el.dataset.name.includes(q) ? '' : 'none';
-  });
-}
-</script>
+<script>function f(){var q=foldq(document.getElementById('q').value);document.querySelectorAll('.o').forEach(function(e){e.style.display=e.dataset.name.indexOf(q)>=0?'':'none'});document.querySelectorAll('.g').forEach(function(e){e.style.display=q?'none':''});}</script>
 {% endblock %}

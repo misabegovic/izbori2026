@@ -1,36 +1,41 @@
 {% extends "base.html" %}
-{% block title %}{{ m.name }} — Izbori 2026{% endblock %}
+{% block title %}{{ m.name }} — tvoji listići — Izbori 2026{% endblock %}
 {% block content %}
-<p><a href="opcine.html">← sve općine</a></p>
-<h1>{{ m.name }}</h1>
-<p class="mut">{{ m.group }} · Birači ovdje glasaju u {{ ballots | length }} trki/trke:</p>
+<p class="mut"><a href="index.html">← početna</a></p>
+<h1>{{ m.name }}: dobit ćeš {{ ballots | length }} listića</h1>
+<p class="lead">Svaki papir bira druge ljude za drugi posao. Otvori svaki i vidi ko je na njemu. Glas je tajan: niko ne može vidjeti šta si zaokružio.</p>
 {% for b in ballots %}
-<div class="card">
-{% if b.href %}<a href="{{ b.href }}">{{ b.name }}</a>{% else %}{{ b.name }}{% endif %}
+<div class="card big">
+<p class="mut" style="margin:0">Listić {{ loop.index }}</p>
+{% if b.multi %}
+<h2 style="margin:.1rem 0 .3rem">{{ b.r.short }}</h2>
+<p>{{ b.r.plain }} Na papiru su dvije kolone: bošnjački i hrvatski kandidati. Zaokružiš jednog, u bilo kojoj koloni.</p>
+{% for sb in b.subs %}<a class="btn{% if not loop.first %} sec{% endif %}" href="{{ sb.href }}">{{ sb.sub | capitalize }} ({{ sb.n_cands }} kandidata) →</a>{% endfor %}
+{% else %}
+<h2 style="margin:.1rem 0 .3rem"><a href="{{ b.href }}?o={{ m.name | urlencode }}">{{ b.r.short }}{% if b.sub %} — {{ b.sub }}{% endif %}</a></h2>
+<p>{{ b.r.plain }}</p>
+<p class="mut">{% if b.r.kind == 'one' %}{{ b.n_cands }} kandidata, biraš jednog.{% else %}{{ b.n_lists }} lista, ukupno {{ b.n_cands }} ljudi. Prvo zaokružiš jednu listu, pa do 3 čovjeka s nje.{% endif %}</p>
+{% if b.top22 and b.r.kind == 'list' %}<p class="mut small" style="margin:.2rem 0 0">Prošli put (2022) ovdje najviše glasova:</p>{% for h in b.top22 %}{{ hbar(h.party | ptitle, h.votes or 0, b.max22, h.votes | num) }}{% endfor %}{% endif %}
+<a class="btn" href="{{ b.href }}?o={{ m.name | urlencode }}">Otvori listić →</a>
+{% endif %}
 </div>
 {% endfor %}
+<p class="mut">{{ m.group }}. Ne znaš kako se popunjava? <a href="kako-glasati.html">Kako glasati</a>.</p>
 {% if ec %}
-<h2>Sjednice vijeća — posljednje objavljene (eCitizen)</h2>
-{% for s in ec.sessions %}
+<details><summary>Šta radi {{ "skupština tvoje opštine" if m.entity == "rs" else "tvoje općinsko vijeće" }} (posljednje sjednice)</summary>
+<p class="mut small">Ovo se ne bira sada (lokalni izbori su 2028). Pokazuje kako lokalna vlast glasa. Izvor: eCitizen.ba.</p>
+{% for s in ec.sessions[:3] %}
 <div class="card">
 <b>{{ s.name }}</b>{% if s.date %} <span class="mut">· {{ s.date }}</span>{% endif %}
 {% if s.agendas %}
-<table style="margin-top:.5rem">
-<tr><th>Tačka</th><th>za</th><th>protiv</th><th>suzdrž.</th><th>odsutni</th></tr>
-{% for a in s.agendas %}
-<tr><td>{{ a.name }}</td>
-<td>{{ a.for if a.for is not none else '—' }}</td>
-<td>{{ a.against if a.against is not none else '—' }}</td>
-<td>{{ a.abstained if a.abstained is not none else '—' }}</td>
-<td>{{ a.notPresent if a.notPresent is not none else '—' }}</td></tr>
-{% endfor %}
-</table>
-{% else %}
-<p class="mut">Tačke nisu objavljene.</p>
+<table style="margin-top:.4rem"><tr><th>Tačka</th><th>za</th><th>protiv</th><th>uzdrž.</th></tr>
+{% for a in s.agendas[:12] %}<tr><td>{{ a.name }}</td><td>{{ a.for if a.for is not none else '—' }}</td><td>{{ a.against if a.against is not none else '—' }}</td><td>{{ a.abstained if a.abstained is not none else '—' }}</td></tr>
+{% endfor %}</table>
 {% endif %}
 </div>
 {% endfor %}
-<p class="mut">Izvor: eCitizen.ba platforma (javni podaci ove općine/grada).</p>
+</details>
 {% endif %}
-<p class="note">Na svim proporcionalnim listićima: obavezno zaokruži <b>jedan subjekt</b>, uz to smiješ do <b>3 kandidata</b> s njegove liste. Na Predsjedništvu: tačno <b>jedan</b> kandidat.</p>
+<div class="card"><h3><a href="obecanja.html">Ko šta obećava, po temi →</a></h3><p class="mut small">Plate, zdravstvo, putevi, struja: obećanja svih stranaka jedno pored drugog, i kako su prošla ranija obećanja.</p></div>
+<p class="small mut"><a href="metoda.html">Ko radi ovaj sajt i odakle su brojke →</a></p>
 {% endblock %}
