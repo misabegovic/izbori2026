@@ -185,10 +185,10 @@ ol.proj-people li.cut{border-top:2px solid #1f5fa9;margin-top:.5rem;padding-top:
   /* the range column carries a bar and a "5–13" label; on a phone the label is the part
      that has to survive, so the bar goes and the numbers stay */
   table.proj td .rng{display:none}
-  /* Five columns do not fit a phone. .opt marks the one the page can do without: it is a
-     footnote to the column beside it, and the paragraph under the table says the same thing
-     in words. */
-  table.proj .opt{display:none}
+  /* Five columns do not fit a phone. .wideonly marks the one the page can do without — it is
+     a footnote to the column beside it — and the paragraph that explains that column goes
+     with it, so a phone is never left reading about a column it cannot see. */
+  .wideonly{display:none}
   /* A heading is what sets the floor for a column of three-character numbers, so on a phone
      the heading is what has to give. */
   table.proj th{font-size:.72rem}
