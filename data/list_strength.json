@@ -1,0 +1,4297 @@
+{
+ "oi2026-2-511": {
+  "year": 2022,
+  "voters": 109553,
+  "lists": 28,
+  "lists_with_seats": 3,
+  "wasted_voters": 49439,
+  "wasted_share": 45.1,
+  "by_party": {
+   "BPS-SEFER HALILOVIĆ": {
+    "voters": 158,
+    "seats": 0,
+    "share": 0.1
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 2623,
+    "seats": 0,
+    "share": 2.4
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 11724,
+    "seats": 1,
+    "share": 10.7
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 1274,
+    "seats": 0,
+    "share": 1.2
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 28286,
+    "seats": 1,
+    "share": 25.8
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 134,
+    "seats": 0,
+    "share": 0.1
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 188,
+    "seats": 0,
+    "share": 0.2
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 2268,
+    "seats": 0,
+    "share": 2.1
+   },
+   "NAŠA STRANKA": {
+    "voters": 2422,
+    "seats": 0,
+    "share": 2.2
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 1642,
+    "seats": 0,
+    "share": 1.5
+   },
+   "LABURISTIČKA STRANKA BOSNE I HERCEGOVINE LABURISTI BIH": {
+    "voters": 3727,
+    "seats": 0,
+    "share": 3.4
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 1072,
+    "seats": 0,
+    "share": 1.0
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 44,
+    "seats": 0,
+    "share": 0.0
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 63,
+    "seats": 0,
+    "share": 0.1
+   },
+   "NAROD I PRAVDA": {
+    "voters": 3222,
+    "seats": 0,
+    "share": 2.9
+   },
+   "POKRET DEMOKRATSKE AKCIJE PDA": {
+    "voters": 68,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SMS - SAVEZ MLADIH SNAGA": {
+    "voters": 47,
+    "seats": 0,
+    "share": 0.0
+   },
+   "LIJEVO KRILO": {
+    "voters": 45,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NEZAVISNA LISTA DOBOJ-SEVLID HURTIĆ": {
+    "voters": 162,
+    "seats": 0,
+    "share": 0.1
+   },
+   "RE-BALANS": {
+    "voters": 49,
+    "seats": 0,
+    "share": 0.0
+   },
+   "KRUG": {
+    "voters": 28,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SOCIJALDEMOKRATE  BOSNE I HERCEGOVINE SDBIH": {
+    "voters": 229,
+    "seats": 0,
+    "share": 0.2
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD": {
+    "voters": 77,
+    "seats": 0,
+    "share": 0.1
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 11412,
+    "seats": 0,
+    "share": 10.4
+   },
+   "NES-ZA NOVE GENERACIJE": {
+    "voters": 20104,
+    "seats": 1,
+    "share": 18.4
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PLATFORMA ZA PROGRES,NB": {
+    "voters": 2771,
+    "seats": 0,
+    "share": 2.5
+   },
+   "HDZ 1990 - HNP": {
+    "voters": 7565,
+    "seats": 0,
+    "share": 6.9
+   },
+   "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST": {
+    "voters": 8149,
+    "seats": 0,
+    "share": 7.4
+   }
+  }
+ },
+ "oi2026-2-512": {
+  "year": 2022,
+  "voters": 142652,
+  "lists": 23,
+  "lists_with_seats": 2,
+  "wasted_voters": 52469,
+  "wasted_share": 36.8,
+  "by_party": {
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 11860,
+    "seats": 0,
+    "share": 8.3
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 488,
+    "seats": 0,
+    "share": 0.3
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 19282,
+    "seats": 1,
+    "share": 13.5
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 68,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 760,
+    "seats": 0,
+    "share": 0.5
+   },
+   "NAŠA STRANKA": {
+    "voters": 1099,
+    "seats": 0,
+    "share": 0.8
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 1305,
+    "seats": 0,
+    "share": 0.9
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 8509,
+    "seats": 0,
+    "share": 6.0
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 36,
+    "seats": 0,
+    "share": 0.0
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 143,
+    "seats": 0,
+    "share": 0.1
+   },
+   "NAROD I PRAVDA": {
+    "voters": 2762,
+    "seats": 0,
+    "share": 1.9
+   },
+   "SMS - SAVEZ MLADIH SNAGA": {
+    "voters": 32,
+    "seats": 0,
+    "share": 0.0
+   },
+   "LIJEVO KRILO": {
+    "voters": 23,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NEZAVISNA LISTA DOBOJ-SEVLID HURTIĆ": {
+    "voters": 157,
+    "seats": 0,
+    "share": 0.1
+   },
+   "RE-BALANS": {
+    "voters": 22,
+    "seats": 0,
+    "share": 0.0
+   },
+   "KRUG": {
+    "voters": 11,
+    "seats": 0,
+    "share": 0.0
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD": {
+    "voters": 48,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 5983,
+    "seats": 0,
+    "share": 4.2
+   },
+   "NES-ZA NOVE GENERACIJE": {
+    "voters": 3835,
+    "seats": 0,
+    "share": 2.7
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PLATFORMA ZA PROGRES,NB": {
+    "voters": 1226,
+    "seats": 0,
+    "share": 0.9
+   },
+   "HDZ 1990 - HNP": {
+    "voters": 12297,
+    "seats": 0,
+    "share": 8.6
+   },
+   "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST": {
+    "voters": 70901,
+    "seats": 2,
+    "share": 49.7
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 1805,
+    "seats": 0,
+    "share": 1.3
+   }
+  }
+ },
+ "oi2026-2-513": {
+  "year": 2022,
+  "voters": 226497,
+  "lists": 24,
+  "lists_with_seats": 6,
+  "wasted_voters": 30148,
+  "wasted_share": 13.3,
+  "by_party": {
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 11419,
+    "seats": 0,
+    "share": 5.0
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 28049,
+    "seats": 1,
+    "share": 12.4
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 2097,
+    "seats": 0,
+    "share": 0.9
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 46865,
+    "seats": 2,
+    "share": 20.7
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 106,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 383,
+    "seats": 0,
+    "share": 0.2
+   },
+   "NAŠA STRANKA": {
+    "voters": 33453,
+    "seats": 2,
+    "share": 14.8
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 6048,
+    "seats": 0,
+    "share": 2.7
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 216,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 79,
+    "seats": 0,
+    "share": 0.0
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 168,
+    "seats": 0,
+    "share": 0.1
+   },
+   "NAROD I PRAVDA": {
+    "voters": 49184,
+    "seats": 2,
+    "share": 21.7
+   },
+   "SMS - SAVEZ MLADIH SNAGA": {
+    "voters": 18,
+    "seats": 0,
+    "share": 0.0
+   },
+   "LIJEVO KRILO": {
+    "voters": 10,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NEZAVISNA LISTA DOBOJ-SEVLID HURTIĆ": {
+    "voters": 252,
+    "seats": 0,
+    "share": 0.1
+   },
+   "RE-BALANS": {
+    "voters": 28,
+    "seats": 0,
+    "share": 0.0
+   },
+   "KRUG": {
+    "voters": 20,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SOCIJALDEMOKRATE  BOSNE I HERCEGOVINE SDBIH": {
+    "voters": 1238,
+    "seats": 0,
+    "share": 0.5
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD": {
+    "voters": 147,
+    "seats": 0,
+    "share": 0.1
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 24380,
+    "seats": 1,
+    "share": 10.8
+   },
+   "NES-ZA NOVE GENERACIJE": {
+    "voters": 14418,
+    "seats": 1,
+    "share": 6.4
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PLATFORMA ZA PROGRES,NB": {
+    "voters": 5891,
+    "seats": 0,
+    "share": 2.6
+   },
+   "HDZ 1990 - HNP": {
+    "voters": 199,
+    "seats": 0,
+    "share": 0.1
+   },
+   "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST": {
+    "voters": 1829,
+    "seats": 0,
+    "share": 0.8
+   }
+  }
+ },
+ "oi2026-2-514": {
+  "year": 2022,
+  "voters": 260981,
+  "lists": 24,
+  "lists_with_seats": 5,
+  "wasted_voters": 52108,
+  "wasted_share": 20.0,
+  "by_party": {
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 2819,
+    "seats": 0,
+    "share": 1.1
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 33524,
+    "seats": 1,
+    "share": 12.8
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 2476,
+    "seats": 0,
+    "share": 0.9
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 84780,
+    "seats": 2,
+    "share": 32.5
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 52,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 158,
+    "seats": 0,
+    "share": 0.1
+   },
+   "NAŠA STRANKA": {
+    "voters": 5394,
+    "seats": 0,
+    "share": 2.1
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 7984,
+    "seats": 0,
+    "share": 3.1
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 819,
+    "seats": 0,
+    "share": 0.3
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 131,
+    "seats": 0,
+    "share": 0.1
+   },
+   "NAROD I PRAVDA": {
+    "voters": 14700,
+    "seats": 0,
+    "share": 5.6
+   },
+   "POKRET DEMOKRATSKE AKCIJE PDA": {
+    "voters": 339,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SMS - SAVEZ MLADIH SNAGA": {
+    "voters": 87,
+    "seats": 0,
+    "share": 0.0
+   },
+   "LIJEVO KRILO": {
+    "voters": 56,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NEZAVISNA LISTA DOBOJ-SEVLID HURTIĆ": {
+    "voters": 324,
+    "seats": 0,
+    "share": 0.1
+   },
+   "RE-BALANS": {
+    "voters": 38,
+    "seats": 0,
+    "share": 0.0
+   },
+   "KRUG": {
+    "voters": 25,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SOCIJALDEMOKRATE  BOSNE I HERCEGOVINE SDBIH": {
+    "voters": 502,
+    "seats": 0,
+    "share": 0.2
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD": {
+    "voters": 18240,
+    "seats": 1,
+    "share": 7.0
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 30557,
+    "seats": 1,
+    "share": 11.7
+   },
+   "NES-ZA NOVE GENERACIJE": {
+    "voters": 7141,
+    "seats": 0,
+    "share": 2.7
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PLATFORMA ZA PROGRES,NB": {
+    "voters": 4877,
+    "seats": 0,
+    "share": 1.9
+   },
+   "HDZ 1990 - HNP": {
+    "voters": 4186,
+    "seats": 0,
+    "share": 1.6
+   },
+   "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST": {
+    "voters": 41772,
+    "seats": 1,
+    "share": 16.0
+   }
+  }
+ },
+ "oi2026-2-515": {
+  "year": 2022,
+  "voters": 227361,
+  "lists": 24,
+  "lists_with_seats": 5,
+  "wasted_voters": 65054,
+  "wasted_share": 28.6,
+  "by_party": {
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 7814,
+    "seats": 0,
+    "share": 3.4
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 44337,
+    "seats": 2,
+    "share": 19.5
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 11390,
+    "seats": 0,
+    "share": 5.0
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 64211,
+    "seats": 2,
+    "share": 28.2
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 106,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 437,
+    "seats": 0,
+    "share": 0.2
+   },
+   "NAŠA STRANKA": {
+    "voters": 7111,
+    "seats": 0,
+    "share": 3.1
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 6122,
+    "seats": 0,
+    "share": 2.7
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 616,
+    "seats": 0,
+    "share": 0.3
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 113,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NAROD I PRAVDA": {
+    "voters": 9694,
+    "seats": 1,
+    "share": 4.3
+   },
+   "POKRET DEMOKRATSKE AKCIJE PDA": {
+    "voters": 14484,
+    "seats": 0,
+    "share": 6.4
+   },
+   "SMS - SAVEZ MLADIH SNAGA": {
+    "voters": 40,
+    "seats": 0,
+    "share": 0.0
+   },
+   "LIJEVO KRILO": {
+    "voters": 37,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NEZAVISNA LISTA DOBOJ-SEVLID HURTIĆ": {
+    "voters": 870,
+    "seats": 0,
+    "share": 0.4
+   },
+   "RE-BALANS": {
+    "voters": 26,
+    "seats": 0,
+    "share": 0.0
+   },
+   "KRUG": {
+    "voters": 20,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SOCIJALDEMOKRATE  BOSNE I HERCEGOVINE SDBIH": {
+    "voters": 7961,
+    "seats": 0,
+    "share": 3.5
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD": {
+    "voters": 185,
+    "seats": 0,
+    "share": 0.1
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 29381,
+    "seats": 1,
+    "share": 12.9
+   },
+   "NES-ZA NOVE GENERACIJE": {
+    "voters": 1659,
+    "seats": 0,
+    "share": 0.7
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PLATFORMA ZA PROGRES,NB": {
+    "voters": 5061,
+    "seats": 0,
+    "share": 2.2
+   },
+   "HDZ 1990 - HNP": {
+    "voters": 1002,
+    "seats": 0,
+    "share": 0.4
+   },
+   "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST": {
+    "voters": 14684,
+    "seats": 1,
+    "share": 6.5
+   }
+  }
+ },
+ "oi2026-2-521": {
+  "year": 2022,
+  "voters": 275883,
+  "lists": 22,
+  "lists_with_seats": 3,
+  "wasted_voters": 94209,
+  "wasted_share": 34.1,
+  "by_party": {
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 35825,
+    "seats": 0,
+    "share": 13.0
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 9423,
+    "seats": 0,
+    "share": 3.4
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 52390,
+    "seats": 2,
+    "share": 19.0
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 7370,
+    "seats": 0,
+    "share": 2.7
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 117672,
+    "seats": 2,
+    "share": 42.7
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 854,
+    "seats": 0,
+    "share": 0.3
+   },
+   "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA": {
+    "voters": 15637,
+    "seats": 0,
+    "share": 5.7
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 151,
+    "seats": 0,
+    "share": 0.1
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 11612,
+    "seats": 1,
+    "share": 4.2
+   },
+   "SMS - SAVEZ MLADIH SNAGA": {
+    "voters": 179,
+    "seats": 0,
+    "share": 0.1
+   },
+   "LIJEVO KRILO": {
+    "voters": 228,
+    "seats": 0,
+    "share": 0.1
+   },
+   "DEMOKRATSKI SAVEZ -DEMOS": {
+    "voters": 7249,
+    "seats": 0,
+    "share": 2.6
+   },
+   "NEZAVISNA LISTA DOBOJ-SEVLID HURTIĆ": {
+    "voters": 671,
+    "seats": 0,
+    "share": 0.2
+   },
+   "RE-BALANS": {
+    "voters": 143,
+    "seats": 0,
+    "share": 0.1
+   },
+   "KRUG": {
+    "voters": 95,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SOCIJALDEMOKRATE  BOSNE I HERCEGOVINE SDBIH": {
+    "voters": 1228,
+    "seats": 0,
+    "share": 0.4
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD": {
+    "voters": 362,
+    "seats": 0,
+    "share": 0.1
+   },
+   "STRANKA ŽIVOT": {
+    "voters": 841,
+    "seats": 0,
+    "share": 0.3
+   },
+   "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-SNP": {
+    "voters": 8008,
+    "seats": 0,
+    "share": 2.9
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PLATFORMA ZA PROGRES,NB": {
+    "voters": 5184,
+    "seats": 0,
+    "share": 1.9
+   },
+   "HDZ 1990 - HNP": {
+    "voters": 173,
+    "seats": 0,
+    "share": 0.1
+   },
+   "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST": {
+    "voters": 588,
+    "seats": 0,
+    "share": 0.2
+   }
+  }
+ },
+ "oi2026-2-522": {
+  "year": 2022,
+  "voters": 179262,
+  "lists": 21,
+  "lists_with_seats": 3,
+  "wasted_voters": 54181,
+  "wasted_share": 30.2,
+  "by_party": {
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 42234,
+    "seats": 1,
+    "share": 23.6
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 9722,
+    "seats": 0,
+    "share": 5.4
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 14268,
+    "seats": 0,
+    "share": 8.0
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 3928,
+    "seats": 0,
+    "share": 2.2
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 67943,
+    "seats": 2,
+    "share": 37.9
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 629,
+    "seats": 0,
+    "share": 0.4
+   },
+   "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA": {
+    "voters": 6826,
+    "seats": 0,
+    "share": 3.8
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 97,
+    "seats": 0,
+    "share": 0.1
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 3918,
+    "seats": 0,
+    "share": 2.2
+   },
+   "SMS - SAVEZ MLADIH SNAGA": {
+    "voters": 77,
+    "seats": 0,
+    "share": 0.0
+   },
+   "LIJEVO KRILO": {
+    "voters": 95,
+    "seats": 0,
+    "share": 0.1
+   },
+   "DEMOKRATSKI SAVEZ -DEMOS": {
+    "voters": 14904,
+    "seats": 1,
+    "share": 8.3
+   },
+   "NEZAVISNA LISTA DOBOJ-SEVLID HURTIĆ": {
+    "voters": 555,
+    "seats": 0,
+    "share": 0.3
+   },
+   "RE-BALANS": {
+    "voters": 107,
+    "seats": 0,
+    "share": 0.1
+   },
+   "KRUG": {
+    "voters": 102,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SOCIJALDEMOKRATE  BOSNE I HERCEGOVINE SDBIH": {
+    "voters": 384,
+    "seats": 0,
+    "share": 0.2
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD": {
+    "voters": 990,
+    "seats": 0,
+    "share": 0.6
+   },
+   "STRANKA ŽIVOT": {
+    "voters": 758,
+    "seats": 0,
+    "share": 0.4
+   },
+   "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-SNP": {
+    "voters": 10398,
+    "seats": 0,
+    "share": 5.8
+   },
+   "HDZ 1990 - HNP": {
+    "voters": 237,
+    "seats": 0,
+    "share": 0.1
+   },
+   "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST": {
+    "voters": 1090,
+    "seats": 0,
+    "share": 0.6
+   }
+  }
+ },
+ "oi2026-2-523": {
+  "year": 2022,
+  "voters": 165814,
+  "lists": 20,
+  "lists_with_seats": 4,
+  "wasted_voters": 40225,
+  "wasted_share": 24.3,
+  "by_party": {
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 34181,
+    "seats": 1,
+    "share": 20.6
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 10990,
+    "seats": 1,
+    "share": 6.6
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 6358,
+    "seats": 0,
+    "share": 3.8
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 10345,
+    "seats": 0,
+    "share": 6.2
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 69897,
+    "seats": 2,
+    "share": 42.2
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 202,
+    "seats": 0,
+    "share": 0.1
+   },
+   "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA": {
+    "voters": 10521,
+    "seats": 1,
+    "share": 6.3
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 55,
+    "seats": 0,
+    "share": 0.0
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 8781,
+    "seats": 0,
+    "share": 5.3
+   },
+   "SMS - SAVEZ MLADIH SNAGA": {
+    "voters": 50,
+    "seats": 0,
+    "share": 0.0
+   },
+   "LIJEVO KRILO": {
+    "voters": 51,
+    "seats": 0,
+    "share": 0.0
+   },
+   "DEMOKRATSKI SAVEZ -DEMOS": {
+    "voters": 8438,
+    "seats": 0,
+    "share": 5.1
+   },
+   "NEZAVISNA LISTA DOBOJ-SEVLID HURTIĆ": {
+    "voters": 403,
+    "seats": 0,
+    "share": 0.2
+   },
+   "RE-BALANS": {
+    "voters": 90,
+    "seats": 0,
+    "share": 0.1
+   },
+   "KRUG": {
+    "voters": 62,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SOCIJALDEMOKRATE  BOSNE I HERCEGOVINE SDBIH": {
+    "voters": 291,
+    "seats": 0,
+    "share": 0.2
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD": {
+    "voters": 210,
+    "seats": 0,
+    "share": 0.1
+   },
+   "STRANKA ŽIVOT": {
+    "voters": 241,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-SNP": {
+    "voters": 4613,
+    "seats": 0,
+    "share": 2.8
+   },
+   "HDZ 1990 - HNP": {
+    "voters": 35,
+    "seats": 0,
+    "share": 0.0
+   }
+  }
+ },
+ "oi2026-4-401": {
+  "year": 2022,
+  "voters": 89615,
+  "lists": 18,
+  "lists_with_seats": 7,
+  "wasted_voters": 11313,
+  "wasted_share": 12.6,
+  "by_party": {
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 935,
+    "seats": 0,
+    "share": 1.0
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 10272,
+    "seats": 1,
+    "share": 11.5
+   },
+   "NES-ZA EVROPSKU BIH": {
+    "voters": 19908,
+    "seats": 3,
+    "share": 22.2
+   },
+   "KOALICIJA ZA ČOVJEKA ( DNZBIH - DNS )": {
+    "voters": 746,
+    "seats": 0,
+    "share": 0.8
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 1575,
+    "seats": 0,
+    "share": 1.8
+   },
+   "POVJERENJE! (NAROD I PRAVDA, SPU BIH)": {
+    "voters": 2578,
+    "seats": 1,
+    "share": 2.9
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL": {
+    "voters": 338,
+    "seats": 0,
+    "share": 0.4
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 1039,
+    "seats": 0,
+    "share": 1.2
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 27045,
+    "seats": 3,
+    "share": 30.2
+   },
+   "NARODNA STRANKA RADOM ZA BOLJITAK": {
+    "voters": 161,
+    "seats": 0,
+    "share": 0.2
+   },
+   "NAŠA STRANKA": {
+    "voters": 3265,
+    "seats": 1,
+    "share": 3.6
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 1939,
+    "seats": 0,
+    "share": 2.2
+   },
+   "LABURISTIČKA STRANKA BOSNE I HERCEGOVINE LABURISTI BIH": {
+    "voters": 3808,
+    "seats": 0,
+    "share": 4.2
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 193,
+    "seats": 0,
+    "share": 0.2
+   },
+   "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH": {
+    "voters": 146,
+    "seats": 0,
+    "share": 0.2
+   },
+   "POKRET ZA MODERNU I AKTIVNU KRAJINU-POMAK": {
+    "voters": 4465,
+    "seats": 1,
+    "share": 5.0
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 10769,
+    "seats": 1,
+    "share": 12.0
+   },
+   "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET": {
+    "voters": 433,
+    "seats": 0,
+    "share": 0.5
+   }
+  }
+ },
+ "oi2026-4-409": {
+  "year": 2022,
+  "voters": 102028,
+  "lists": 16,
+  "lists_with_seats": 8,
+  "wasted_voters": 7681,
+  "wasted_share": 7.5,
+  "by_party": {
+   "NES-ZA EVROPSKU BIH": {
+    "voters": 3941,
+    "seats": 0,
+    "share": 3.9
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 906,
+    "seats": 0,
+    "share": 0.9
+   },
+   "POVJERENJE! (NAROD I PRAVDA, SPU BIH)": {
+    "voters": 1963,
+    "seats": 1,
+    "share": 1.9
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL": {
+    "voters": 36048,
+    "seats": 3,
+    "share": 35.3
+   },
+   "BPS-SEFER HALILOVIĆ": {
+    "voters": 119,
+    "seats": 0,
+    "share": 0.1
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 2154,
+    "seats": 1,
+    "share": 2.1
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 12089,
+    "seats": 2,
+    "share": 11.8
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 455,
+    "seats": 0,
+    "share": 0.4
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 18629,
+    "seats": 2,
+    "share": 18.3
+   },
+   "NARODNA STRANKA RADOM ZA BOLJITAK": {
+    "voters": 150,
+    "seats": 0,
+    "share": 0.1
+   },
+   "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990": {
+    "voters": 8744,
+    "seats": 1,
+    "share": 8.6
+   },
+   "NAŠA STRANKA": {
+    "voters": 1045,
+    "seats": 0,
+    "share": 1.0
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 1006,
+    "seats": 0,
+    "share": 1.0
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 7337,
+    "seats": 1,
+    "share": 7.2
+   },
+   "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH": {
+    "voters": 59,
+    "seats": 0,
+    "share": 0.1
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 7383,
+    "seats": 1,
+    "share": 7.2
+   }
+  }
+ },
+ "oi2026-4-410": {
+  "year": 2022,
+  "voters": 40812,
+  "lists": 6,
+  "lists_with_seats": 2,
+  "wasted_voters": 7448,
+  "wasted_share": 18.2,
+  "by_party": {
+   "BPS-SEFER HALILOVIĆ": {
+    "voters": 32,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 452,
+    "seats": 1,
+    "share": 1.1
+   },
+   "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990": {
+    "voters": 5280,
+    "seats": 0,
+    "share": 12.9
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 2056,
+    "seats": 0,
+    "share": 5.0
+   },
+   "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH": {
+    "voters": 80,
+    "seats": 0,
+    "share": 0.2
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL": {
+    "voters": 32912,
+    "seats": 4,
+    "share": 80.6
+   }
+  }
+ },
+ "oi2026-4-411": {
+  "year": 2022,
+  "voters": 109598,
+  "lists": 18,
+  "lists_with_seats": 6,
+  "wasted_voters": 16149,
+  "wasted_share": 14.7,
+  "by_party": {
+   "BPS-SEFER HALILOVIĆ": {
+    "voters": 244,
+    "seats": 0,
+    "share": 0.2
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 3899,
+    "seats": 0,
+    "share": 3.6
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 14779,
+    "seats": 1,
+    "share": 13.5
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 1520,
+    "seats": 0,
+    "share": 1.4
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 20673,
+    "seats": 4,
+    "share": 18.9
+   },
+   "NARODNA STRANKA RADOM ZA BOLJITAK": {
+    "voters": 174,
+    "seats": 0,
+    "share": 0.2
+   },
+   "NAŠA STRANKA": {
+    "voters": 19230,
+    "seats": 2,
+    "share": 17.5
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 3301,
+    "seats": 0,
+    "share": 3.0
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 148,
+    "seats": 0,
+    "share": 0.1
+   },
+   "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH": {
+    "voters": 58,
+    "seats": 0,
+    "share": 0.1
+   },
+   "HRVATSKI NACIONALNI POMAK": {
+    "voters": 56,
+    "seats": 0,
+    "share": 0.1
+   },
+   "ZA NOVE GENERACIJE": {
+    "voters": 2587,
+    "seats": 0,
+    "share": 2.4
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 14028,
+    "seats": 3,
+    "share": 12.8
+   },
+   "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET": {
+    "voters": 586,
+    "seats": 0,
+    "share": 0.5
+   },
+   "NES-ZA EVROPSKU BIH": {
+    "voters": 3900,
+    "seats": 1,
+    "share": 3.6
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 2531,
+    "seats": 0,
+    "share": 2.3
+   },
+   "POVJERENJE! (NAROD I PRAVDA, SPU BIH)": {
+    "voters": 20839,
+    "seats": 2,
+    "share": 19.0
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL": {
+    "voters": 1045,
+    "seats": 0,
+    "share": 1.0
+   }
+  }
+ },
+ "oi2026-4-412": {
+  "year": 2022,
+  "voters": 23533,
+  "lists": 11,
+  "lists_with_seats": 3,
+  "wasted_voters": 7567,
+  "wasted_share": 32.2,
+  "by_party": {
+   "BPS-SEFER HALILOVIĆ": {
+    "voters": 49,
+    "seats": 0,
+    "share": 0.2
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 273,
+    "seats": 0,
+    "share": 1.2
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 1189,
+    "seats": 0,
+    "share": 5.1
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 94,
+    "seats": 0,
+    "share": 0.4
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 1820,
+    "seats": 0,
+    "share": 7.7
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 3010,
+    "seats": 0,
+    "share": 12.8
+   },
+   "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990": {
+    "voters": 4527,
+    "seats": 1,
+    "share": 19.2
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 1063,
+    "seats": 0,
+    "share": 4.5
+   },
+   "HRVATSKI NACIONALNI POMAK": {
+    "voters": 5156,
+    "seats": 1,
+    "share": 21.9
+   },
+   "NES-ZA EVROPSKU BIH": {
+    "voters": 69,
+    "seats": 0,
+    "share": 0.3
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL": {
+    "voters": 6283,
+    "seats": 1,
+    "share": 26.7
+   }
+  }
+ },
+ "oi2026-4-402": {
+  "year": 2022,
+  "voters": 71912,
+  "lists": 18,
+  "lists_with_seats": 6,
+  "wasted_voters": 13962,
+  "wasted_share": 19.4,
+  "by_party": {
+   "BPS-SEFER HALILOVIĆ": {
+    "voters": 232,
+    "seats": 0,
+    "share": 0.3
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 1956,
+    "seats": 0,
+    "share": 2.7
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 14988,
+    "seats": 1,
+    "share": 20.8
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 1307,
+    "seats": 0,
+    "share": 1.8
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 19013,
+    "seats": 2,
+    "share": 26.4
+   },
+   "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990": {
+    "voters": 1047,
+    "seats": 0,
+    "share": 1.5
+   },
+   "NAŠA STRANKA": {
+    "voters": 3059,
+    "seats": 1,
+    "share": 4.3
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 2840,
+    "seats": 0,
+    "share": 3.9
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 506,
+    "seats": 0,
+    "share": 0.7
+   },
+   "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH": {
+    "voters": 75,
+    "seats": 0,
+    "share": 0.1
+   },
+   "POKRET DEMOKRATSKE AKCIJE PDA": {
+    "voters": 3260,
+    "seats": 0,
+    "share": 4.5
+   },
+   "NEZAVISNA LISTA DOBOJ-SEVLID HURTIĆ": {
+    "voters": 597,
+    "seats": 0,
+    "share": 0.8
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 7015,
+    "seats": 1,
+    "share": 9.8
+   },
+   "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET": {
+    "voters": 1144,
+    "seats": 0,
+    "share": 1.6
+   },
+   "NES-ZA EVROPSKU BIH": {
+    "voters": 232,
+    "seats": 0,
+    "share": 0.3
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 766,
+    "seats": 0,
+    "share": 1.1
+   },
+   "POVJERENJE! (NAROD I PRAVDA, SPU BIH)": {
+    "voters": 2549,
+    "seats": 1,
+    "share": 3.5
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL": {
+    "voters": 11326,
+    "seats": 3,
+    "share": 15.7
+   }
+  }
+ },
+ "oi2026-4-403": {
+  "year": 2022,
+  "voters": 88362,
+  "lists": 18,
+  "lists_with_seats": 5,
+  "wasted_voters": 26260,
+  "wasted_share": 29.7,
+  "by_party": {
+   "BPS-SEFER HALILOVIĆ": {
+    "voters": 272,
+    "seats": 0,
+    "share": 0.3
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 5202,
+    "seats": 1,
+    "share": 5.9
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 19281,
+    "seats": 2,
+    "share": 21.8
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 3157,
+    "seats": 0,
+    "share": 3.6
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 17413,
+    "seats": 3,
+    "share": 19.7
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 103,
+    "seats": 0,
+    "share": 0.1
+   },
+   "NAŠA STRANKA": {
+    "voters": 4387,
+    "seats": 1,
+    "share": 5.0
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 2350,
+    "seats": 0,
+    "share": 2.7
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 143,
+    "seats": 0,
+    "share": 0.2
+   },
+   "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH": {
+    "voters": 73,
+    "seats": 0,
+    "share": 0.1
+   },
+   "POKRET DEMOKRATSKE AKCIJE PDA": {
+    "voters": 4961,
+    "seats": 0,
+    "share": 5.6
+   },
+   "HRVATSKI NACIONALNI POMAK": {
+    "voters": 23,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 15819,
+    "seats": 2,
+    "share": 17.9
+   },
+   "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET": {
+    "voters": 4887,
+    "seats": 0,
+    "share": 5.5
+   },
+   "NES-ZA EVROPSKU BIH": {
+    "voters": 1503,
+    "seats": 0,
+    "share": 1.7
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 2111,
+    "seats": 0,
+    "share": 2.4
+   },
+   "POVJERENJE! (NAROD I PRAVDA, SPU BIH)": {
+    "voters": 4209,
+    "seats": 0,
+    "share": 4.8
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL": {
+    "voters": 2468,
+    "seats": 0,
+    "share": 2.8
+   }
+  }
+ },
+ "oi2026-4-404": {
+  "year": 2022,
+  "voters": 68964,
+  "lists": 17,
+  "lists_with_seats": 3,
+  "wasted_voters": 25180,
+  "wasted_share": 36.5,
+  "by_party": {
+   "BPS-SEFER HALILOVIĆ": {
+    "voters": 533,
+    "seats": 0,
+    "share": 0.8
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 5783,
+    "seats": 0,
+    "share": 8.4
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 9789,
+    "seats": 1,
+    "share": 14.2
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 1699,
+    "seats": 0,
+    "share": 2.5
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 24412,
+    "seats": 2,
+    "share": 35.4
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 20,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NAŠA STRANKA": {
+    "voters": 345,
+    "seats": 0,
+    "share": 0.5
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 2483,
+    "seats": 0,
+    "share": 3.6
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 47,
+    "seats": 0,
+    "share": 0.1
+   },
+   "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH": {
+    "voters": 91,
+    "seats": 0,
+    "share": 0.1
+   },
+   "POKRET DEMOKRATSKE AKCIJE PDA": {
+    "voters": 9583,
+    "seats": 1,
+    "share": 13.9
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 7023,
+    "seats": 0,
+    "share": 10.2
+   },
+   "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET": {
+    "voters": 3184,
+    "seats": 0,
+    "share": 4.6
+   },
+   "NES-ZA EVROPSKU BIH": {
+    "voters": 605,
+    "seats": 0,
+    "share": 0.9
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 737,
+    "seats": 0,
+    "share": 1.1
+   },
+   "POVJERENJE! (NAROD I PRAVDA, SPU BIH)": {
+    "voters": 2196,
+    "seats": 0,
+    "share": 3.2
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL": {
+    "voters": 434,
+    "seats": 0,
+    "share": 0.6
+   }
+  }
+ },
+ "oi2026-4-405": {
+  "year": 2022,
+  "voters": 108286,
+  "lists": 17,
+  "lists_with_seats": 6,
+  "wasted_voters": 14665,
+  "wasted_share": 13.5,
+  "by_party": {
+   "BPS-SEFER HALILOVIĆ": {
+    "voters": 294,
+    "seats": 0,
+    "share": 0.3
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 1675,
+    "seats": 0,
+    "share": 1.5
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 16558,
+    "seats": 2,
+    "share": 15.3
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 1205,
+    "seats": 0,
+    "share": 1.1
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 31979,
+    "seats": 3,
+    "share": 29.5
+   },
+   "NARODNA STRANKA RADOM ZA BOLJITAK": {
+    "voters": 121,
+    "seats": 0,
+    "share": 0.1
+   },
+   "NAŠA STRANKA": {
+    "voters": 3102,
+    "seats": 0,
+    "share": 2.9
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 2355,
+    "seats": 0,
+    "share": 2.2
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 571,
+    "seats": 0,
+    "share": 0.5
+   },
+   "POKRET DEMOKRATSKE AKCIJE PDA": {
+    "voters": 320,
+    "seats": 0,
+    "share": 0.3
+   },
+   "HRVATSKI NACIONALNI POMAK": {
+    "voters": 38,
+    "seats": 0,
+    "share": 0.0
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD": {
+    "voters": 16340,
+    "seats": 1,
+    "share": 15.1
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 13525,
+    "seats": 1,
+    "share": 12.5
+   },
+   "NES-ZA EVROPSKU BIH": {
+    "voters": 5865,
+    "seats": 1,
+    "share": 5.4
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 1781,
+    "seats": 0,
+    "share": 1.6
+   },
+   "POVJERENJE! (NAROD I PRAVDA, SPU BIH)": {
+    "voters": 3203,
+    "seats": 0,
+    "share": 3.0
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL": {
+    "voters": 9354,
+    "seats": 1,
+    "share": 8.6
+   }
+  }
+ },
+ "oi2026-4-406": {
+  "year": 2022,
+  "voters": 48318,
+  "lists": 16,
+  "lists_with_seats": 3,
+  "wasted_voters": 18699,
+  "wasted_share": 38.7,
+  "by_party": {
+   "BPS-SEFER HALILOVIĆ": {
+    "voters": 131,
+    "seats": 0,
+    "share": 0.3
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 901,
+    "seats": 0,
+    "share": 1.9
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 6010,
+    "seats": 1,
+    "share": 12.4
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 630,
+    "seats": 0,
+    "share": 1.3
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 16753,
+    "seats": 2,
+    "share": 34.7
+   },
+   "NAŠA STRANKA": {
+    "voters": 2304,
+    "seats": 0,
+    "share": 4.8
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 3883,
+    "seats": 0,
+    "share": 8.0
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 117,
+    "seats": 0,
+    "share": 0.2
+   },
+   "POKRET DEMOKRATSKE AKCIJE PDA": {
+    "voters": 187,
+    "seats": 0,
+    "share": 0.4
+   },
+   "HRVATSKI NACIONALNI POMAK": {
+    "voters": 14,
+    "seats": 0,
+    "share": 0.0
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD": {
+    "voters": 1457,
+    "seats": 0,
+    "share": 3.0
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 6856,
+    "seats": 1,
+    "share": 14.2
+   },
+   "NES-ZA EVROPSKU BIH": {
+    "voters": 3175,
+    "seats": 0,
+    "share": 6.6
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 923,
+    "seats": 0,
+    "share": 1.9
+   },
+   "POVJERENJE! (NAROD I PRAVDA, SPU BIH)": {
+    "voters": 3640,
+    "seats": 0,
+    "share": 7.5
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL": {
+    "voters": 1337,
+    "seats": 0,
+    "share": 2.8
+   }
+  }
+ },
+ "oi2026-4-407": {
+  "year": 2022,
+  "voters": 117245,
+  "lists": 18,
+  "lists_with_seats": 6,
+  "wasted_voters": 16933,
+  "wasted_share": 14.4,
+  "by_party": {
+   "BPS-SEFER HALILOVIĆ": {
+    "voters": 386,
+    "seats": 0,
+    "share": 0.3
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 12072,
+    "seats": 2,
+    "share": 10.3
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 13679,
+    "seats": 1,
+    "share": 11.7
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 1405,
+    "seats": 0,
+    "share": 1.2
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 25089,
+    "seats": 2,
+    "share": 21.4
+   },
+   "NARODNA STRANKA RADOM ZA BOLJITAK": {
+    "voters": 244,
+    "seats": 0,
+    "share": 0.2
+   },
+   "NAŠA STRANKA": {
+    "voters": 11959,
+    "seats": 1,
+    "share": 10.2
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 4375,
+    "seats": 0,
+    "share": 3.7
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 128,
+    "seats": 0,
+    "share": 0.1
+   },
+   "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH": {
+    "voters": 219,
+    "seats": 0,
+    "share": 0.2
+   },
+   "HRVATSKI NACIONALNI POMAK": {
+    "voters": 64,
+    "seats": 0,
+    "share": 0.1
+   },
+   "ZA NOVE GENERACIJE": {
+    "voters": 2746,
+    "seats": 0,
+    "share": 2.3
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 16337,
+    "seats": 1,
+    "share": 13.9
+   },
+   "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET": {
+    "voters": 901,
+    "seats": 0,
+    "share": 0.8
+   },
+   "NES-ZA EVROPSKU BIH": {
+    "voters": 2650,
+    "seats": 0,
+    "share": 2.3
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 2712,
+    "seats": 0,
+    "share": 2.3
+   },
+   "POVJERENJE! (NAROD I PRAVDA, SPU BIH)": {
+    "voters": 21176,
+    "seats": 1,
+    "share": 18.1
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL": {
+    "voters": 1103,
+    "seats": 0,
+    "share": 0.9
+   }
+  }
+ },
+ "oi2026-4-408": {
+  "year": 2022,
+  "voters": 107279,
+  "lists": 16,
+  "lists_with_seats": 6,
+  "wasted_voters": 11094,
+  "wasted_share": 10.3,
+  "by_party": {
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 1615,
+    "seats": 0,
+    "share": 1.5
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 12243,
+    "seats": 2,
+    "share": 11.4
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 1065,
+    "seats": 0,
+    "share": 1.0
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 35281,
+    "seats": 3,
+    "share": 32.9
+   },
+   "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990": {
+    "voters": 6917,
+    "seats": 1,
+    "share": 6.4
+   },
+   "NAŠA STRANKA": {
+    "voters": 2124,
+    "seats": 0,
+    "share": 2.0
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 3068,
+    "seats": 0,
+    "share": 2.9
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 741,
+    "seats": 0,
+    "share": 0.7
+   },
+   "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH": {
+    "voters": 98,
+    "seats": 0,
+    "share": 0.1
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD": {
+    "voters": 354,
+    "seats": 0,
+    "share": 0.3
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 8981,
+    "seats": 1,
+    "share": 8.4
+   },
+   "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET": {
+    "voters": 506,
+    "seats": 0,
+    "share": 0.5
+   },
+   "NES-ZA EVROPSKU BIH": {
+    "voters": 476,
+    "seats": 0,
+    "share": 0.4
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 1047,
+    "seats": 0,
+    "share": 1.0
+   },
+   "POVJERENJE! (NAROD I PRAVDA, SPU BIH)": {
+    "voters": 4838,
+    "seats": 1,
+    "share": 4.5
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL": {
+    "voters": 27925,
+    "seats": 3,
+    "share": 26.0
+   }
+  }
+ },
+ "oi2026-6-301": {
+  "year": 2022,
+  "voters": 63790,
+  "lists": 26,
+  "lists_with_seats": 7,
+  "wasted_voters": 15417,
+  "wasted_share": 24.2,
+  "by_party": {
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 6063,
+    "seats": 1,
+    "share": 9.5
+   },
+   "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"": {
+    "voters": 2582,
+    "seats": 0,
+    "share": 4.0
+   },
+   "SLOBODNA STRANKA SRPSKE": {
+    "voters": 20,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SNS FBIH-SAMO NAJBOLJI IDU NAPRIJED": {
+    "voters": 25,
+    "seats": 0,
+    "share": 0.0
+   },
+   "DCRS-DEMOKRATSKI CENTAR REPUBLIKE SRPSKE": {
+    "voters": 13,
+    "seats": 0,
+    "share": 0.0
+   },
+   "OTADŽBINSKA STRANKA": {
+    "voters": 6,
+    "seats": 0,
+    "share": 0.0
+   },
+   "REPUBLIČKA STRANKA SRPSKE-RSS": {
+    "voters": 24,
+    "seats": 0,
+    "share": 0.0
+   },
+   "STRANKA ŽIVOT": {
+    "voters": 71,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PNP - POTKOZARSKI NARODNI POKRET": {
+    "voters": 2568,
+    "seats": 0,
+    "share": 4.0
+   },
+   "ZAVIČAJNI  SOCIJALDEMOKRATI - MILE MARČETA": {
+    "voters": 15,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NARODNA PARTIJA SRPSKE-DARKO BANJAC-PUS-PRVA SDS": {
+    "voters": 5764,
+    "seats": 2,
+    "share": 9.0
+   },
+   "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-NDP-SNP": {
+    "voters": 3325,
+    "seats": 0,
+    "share": 5.2
+   },
+   "ZA DRŽAVU BIH": {
+    "voters": 2047,
+    "seats": 0,
+    "share": 3.2
+   },
+   "SELJAČKA STRANKA": {
+    "voters": 53,
+    "seats": 0,
+    "share": 0.1
+   },
+   "POKRET ZA DRŽAVU": {
+    "voters": 7650,
+    "seats": 1,
+    "share": 12.0
+   },
+   "PARTIJA UJEDINJENIH PENZIONERA": {
+    "voters": 41,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 5610,
+    "seats": 2,
+    "share": 8.8
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 3652,
+    "seats": 1,
+    "share": 5.7
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 19031,
+    "seats": 3,
+    "share": 29.8
+   },
+   "SAVEZ ZA DEMOKRATSKU SRPSKU": {
+    "voters": 84,
+    "seats": 0,
+    "share": 0.1
+   },
+   "RADNIČKA PARTIJA": {
+    "voters": 15,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA": {
+    "voters": 1662,
+    "seats": 0,
+    "share": 2.6
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 11,
+    "seats": 0,
+    "share": 0.0
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 2779,
+    "seats": 0,
+    "share": 4.4
+   },
+   "NAŠA PRIČA REPUBLIKA SRPSKA": {
+    "voters": 76,
+    "seats": 0,
+    "share": 0.1
+   },
+   "DEMOKRATSKI SAVEZ -DEMOS": {
+    "voters": 603,
+    "seats": 1,
+    "share": 0.9
+   }
+  }
+ },
+ "oi2026-6-306": {
+  "year": 2022,
+  "voters": 93504,
+  "lists": 29,
+  "lists_with_seats": 6,
+  "wasted_voters": 18181,
+  "wasted_share": 19.4,
+  "by_party": {
+   "POKRET ZA DRŽAVU": {
+    "voters": 3516,
+    "seats": 0,
+    "share": 3.8
+   },
+   "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS ,HDU,HSP HB,HRAST,HNP": {
+    "voters": 309,
+    "seats": 0,
+    "share": 0.3
+   },
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 21775,
+    "seats": 2,
+    "share": 23.3
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 153,
+    "seats": 0,
+    "share": 0.2
+   },
+   "ZAVIČAJNI  SOCIJALDEMOKRATI - MILE MARČETA": {
+    "voters": 20,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SELJAČKA STRANKA": {
+    "voters": 42,
+    "seats": 0,
+    "share": 0.0
+   },
+   "PARTIJA UJEDINJENIH PENZIONERA": {
+    "voters": 35,
+    "seats": 0,
+    "share": 0.0
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 7078,
+    "seats": 1,
+    "share": 7.6
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 3960,
+    "seats": 0,
+    "share": 4.2
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 27465,
+    "seats": 3,
+    "share": 29.4
+   },
+   "EKOLOŠKA PARTIJA REPUBLIKE SRPSKE": {
+    "voters": 70,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SAVEZ ZA DEMOKRATSKU SRPSKU": {
+    "voters": 64,
+    "seats": 0,
+    "share": 0.1
+   },
+   "RADNIČKA PARTIJA": {
+    "voters": 31,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA": {
+    "voters": 3708,
+    "seats": 0,
+    "share": 4.0
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 124,
+    "seats": 0,
+    "share": 0.1
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 4733,
+    "seats": 1,
+    "share": 5.1
+   },
+   "NAŠA PRIČA REPUBLIKA SRPSKA": {
+    "voters": 85,
+    "seats": 0,
+    "share": 0.1
+   },
+   "DEMOKRATSKI SAVEZ -DEMOS": {
+    "voters": 7155,
+    "seats": 1,
+    "share": 7.7
+   },
+   "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"": {
+    "voters": 1083,
+    "seats": 0,
+    "share": 1.2
+   },
+   "SLOBODNA STRANKA SRPSKE": {
+    "voters": 20,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SNS FBIH-SAMO NAJBOLJI IDU NAPRIJED": {
+    "voters": 25,
+    "seats": 0,
+    "share": 0.0
+   },
+   "DCRS-DEMOKRATSKI CENTAR REPUBLIKE SRPSKE": {
+    "voters": 6,
+    "seats": 0,
+    "share": 0.0
+   },
+   "OTADŽBINSKA STRANKA": {
+    "voters": 10,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NOVO DOBA": {
+    "voters": 40,
+    "seats": 0,
+    "share": 0.0
+   },
+   "REPUBLIČKA STRANKA SRPSKE-RSS": {
+    "voters": 36,
+    "seats": 0,
+    "share": 0.0
+   },
+   "STRANKA ŽIVOT": {
+    "voters": 131,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PNP - POTKOZARSKI NARODNI POKRET": {
+    "voters": 40,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NARODNA PARTIJA SRPSKE-DARKO BANJAC-PUS-PRVA SDS": {
+    "voters": 4673,
+    "seats": 0,
+    "share": 5.0
+   },
+   "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-NDP-SNP": {
+    "voters": 7117,
+    "seats": 1,
+    "share": 7.6
+   }
+  }
+ },
+ "oi2026-6-307": {
+  "year": 2022,
+  "voters": 62145,
+  "lists": 29,
+  "lists_with_seats": 7,
+  "wasted_voters": 8933,
+  "wasted_share": 14.4,
+  "by_party": {
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 5849,
+    "seats": 1,
+    "share": 9.4
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 155,
+    "seats": 0,
+    "share": 0.2
+   },
+   "ZAVIČAJNI  SOCIJALDEMOKRATI - MILE MARČETA": {
+    "voters": 4,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SELJAČKA STRANKA": {
+    "voters": 12,
+    "seats": 0,
+    "share": 0.0
+   },
+   "PARTIJA UJEDINJENIH PENZIONERA": {
+    "voters": 22,
+    "seats": 0,
+    "share": 0.0
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 1237,
+    "seats": 0,
+    "share": 2.0
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 3413,
+    "seats": 0,
+    "share": 5.5
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 18125,
+    "seats": 2,
+    "share": 29.2
+   },
+   "EKOLOŠKA PARTIJA REPUBLIKE SRPSKE": {
+    "voters": 9,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SAVEZ ZA DEMOKRATSKU SRPSKU": {
+    "voters": 31,
+    "seats": 0,
+    "share": 0.0
+   },
+   "RADNIČKA PARTIJA": {
+    "voters": 6,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA": {
+    "voters": 2938,
+    "seats": 0,
+    "share": 4.7
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 12,
+    "seats": 0,
+    "share": 0.0
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 8262,
+    "seats": 1,
+    "share": 13.3
+   },
+   "NAŠA PRIČA REPUBLIKA SRPSKA": {
+    "voters": 18,
+    "seats": 0,
+    "share": 0.0
+   },
+   "DEMOKRATSKI SAVEZ -DEMOS": {
+    "voters": 5302,
+    "seats": 2,
+    "share": 8.5
+   },
+   "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"": {
+    "voters": 363,
+    "seats": 0,
+    "share": 0.6
+   },
+   "SLOBODNA STRANKA SRPSKE": {
+    "voters": 8,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SNS FBIH-SAMO NAJBOLJI IDU NAPRIJED": {
+    "voters": 32,
+    "seats": 0,
+    "share": 0.1
+   },
+   "DCRS-DEMOKRATSKI CENTAR REPUBLIKE SRPSKE": {
+    "voters": 6,
+    "seats": 0,
+    "share": 0.0
+   },
+   "OTADŽBINSKA STRANKA": {
+    "voters": 4,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NOVO DOBA": {
+    "voters": 9,
+    "seats": 0,
+    "share": 0.0
+   },
+   "REPUBLIČKA STRANKA SRPSKE-RSS": {
+    "voters": 7,
+    "seats": 0,
+    "share": 0.0
+   },
+   "STRANKA ŽIVOT": {
+    "voters": 26,
+    "seats": 0,
+    "share": 0.0
+   },
+   "PNP - POTKOZARSKI NARODNI POKRET": {
+    "voters": 14,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NARODNA PARTIJA SRPSKE-DARKO BANJAC-PUS-PRVA SDS": {
+    "voters": 2049,
+    "seats": 1,
+    "share": 3.3
+   },
+   "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-NDP-SNP": {
+    "voters": 5196,
+    "seats": 1,
+    "share": 8.4
+   },
+   "ZA DRŽAVU BIH": {
+    "voters": 607,
+    "seats": 0,
+    "share": 1.0
+   },
+   "POKRET ZA DRŽAVU": {
+    "voters": 8429,
+    "seats": 1,
+    "share": 13.6
+   }
+  }
+ },
+ "oi2026-6-308": {
+  "year": 2022,
+  "voters": 45279,
+  "lists": 26,
+  "lists_with_seats": 4,
+  "wasted_voters": 6196,
+  "wasted_share": 13.7,
+  "by_party": {
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 11063,
+    "seats": 1,
+    "share": 24.4
+   },
+   "ZAVIČAJNI  SOCIJALDEMOKRATI - MILE MARČETA": {
+    "voters": 8,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SELJAČKA STRANKA": {
+    "voters": 28,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PARTIJA UJEDINJENIH PENZIONERA": {
+    "voters": 28,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 1620,
+    "seats": 0,
+    "share": 3.6
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 3999,
+    "seats": 2,
+    "share": 8.8
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 16658,
+    "seats": 2,
+    "share": 36.8
+   },
+   "EKOLOŠKA PARTIJA REPUBLIKE SRPSKE": {
+    "voters": 49,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SAVEZ ZA DEMOKRATSKU SRPSKU": {
+    "voters": 28,
+    "seats": 0,
+    "share": 0.1
+   },
+   "RADNIČKA PARTIJA": {
+    "voters": 5,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA": {
+    "voters": 1120,
+    "seats": 0,
+    "share": 2.5
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 20,
+    "seats": 0,
+    "share": 0.0
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 1535,
+    "seats": 0,
+    "share": 3.4
+   },
+   "NAŠA PRIČA REPUBLIKA SRPSKA": {
+    "voters": 8,
+    "seats": 0,
+    "share": 0.0
+   },
+   "DEMOKRATSKI SAVEZ -DEMOS": {
+    "voters": 7363,
+    "seats": 1,
+    "share": 16.3
+   },
+   "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"": {
+    "voters": 498,
+    "seats": 0,
+    "share": 1.1
+   },
+   "SLOBODNA STRANKA SRPSKE": {
+    "voters": 9,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SNS FBIH-SAMO NAJBOLJI IDU NAPRIJED": {
+    "voters": 28,
+    "seats": 0,
+    "share": 0.1
+   },
+   "DCRS-DEMOKRATSKI CENTAR REPUBLIKE SRPSKE": {
+    "voters": 12,
+    "seats": 0,
+    "share": 0.0
+   },
+   "OTADŽBINSKA STRANKA": {
+    "voters": 2,
+    "seats": 0,
+    "share": 0.0
+   },
+   "STRANKA ŽIVOT": {
+    "voters": 47,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PNP - POTKOZARSKI NARODNI POKRET": {
+    "voters": 13,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NARODNA PARTIJA SRPSKE-DARKO BANJAC-PUS-PRVA SDS": {
+    "voters": 250,
+    "seats": 0,
+    "share": 0.6
+   },
+   "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-NDP-SNP": {
+    "voters": 696,
+    "seats": 0,
+    "share": 1.5
+   },
+   "ZA DRŽAVU BIH": {
+    "voters": 33,
+    "seats": 0,
+    "share": 0.1
+   },
+   "POKRET ZA DRŽAVU": {
+    "voters": 159,
+    "seats": 0,
+    "share": 0.4
+   }
+  }
+ },
+ "oi2026-6-309": {
+  "year": 2022,
+  "voters": 63316,
+  "lists": 24,
+  "lists_with_seats": 5,
+  "wasted_voters": 15214,
+  "wasted_share": 24.0,
+  "by_party": {
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 10792,
+    "seats": 2,
+    "share": 17.0
+   },
+   "SELJAČKA STRANKA": {
+    "voters": 15,
+    "seats": 0,
+    "share": 0.0
+   },
+   "PARTIJA UJEDINJENIH PENZIONERA": {
+    "voters": 31,
+    "seats": 0,
+    "share": 0.0
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 2849,
+    "seats": 0,
+    "share": 4.5
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 3382,
+    "seats": 0,
+    "share": 5.3
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 22885,
+    "seats": 3,
+    "share": 36.1
+   },
+   "SAVEZ ZA DEMOKRATSKU SRPSKU": {
+    "voters": 13,
+    "seats": 0,
+    "share": 0.0
+   },
+   "RADNIČKA PARTIJA": {
+    "voters": 10,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA": {
+    "voters": 7252,
+    "seats": 3,
+    "share": 11.5
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 39,
+    "seats": 0,
+    "share": 0.1
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 2001,
+    "seats": 0,
+    "share": 3.2
+   },
+   "NAŠA PRIČA REPUBLIKA SRPSKA": {
+    "voters": 15,
+    "seats": 0,
+    "share": 0.0
+   },
+   "DEMOKRATSKI SAVEZ -DEMOS": {
+    "voters": 2650,
+    "seats": 0,
+    "share": 4.2
+   },
+   "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"": {
+    "voters": 2579,
+    "seats": 1,
+    "share": 4.1
+   },
+   "SLOBODNA STRANKA SRPSKE": {
+    "voters": 6,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SNS FBIH-SAMO NAJBOLJI IDU NAPRIJED": {
+    "voters": 18,
+    "seats": 0,
+    "share": 0.0
+   },
+   "DCRS-DEMOKRATSKI CENTAR REPUBLIKE SRPSKE": {
+    "voters": 6,
+    "seats": 0,
+    "share": 0.0
+   },
+   "OTADŽBINSKA STRANKA": {
+    "voters": 8,
+    "seats": 0,
+    "share": 0.0
+   },
+   "REPUBLIČKA STRANKA SRPSKE-RSS": {
+    "voters": 5,
+    "seats": 0,
+    "share": 0.0
+   },
+   "STRANKA ŽIVOT": {
+    "voters": 76,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PNP - POTKOZARSKI NARODNI POKRET": {
+    "voters": 18,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NARODNA PARTIJA SRPSKE-DARKO BANJAC-PUS-PRVA SDS": {
+    "voters": 2514,
+    "seats": 0,
+    "share": 4.0
+   },
+   "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-NDP-SNP": {
+    "voters": 4594,
+    "seats": 1,
+    "share": 7.3
+   },
+   "POKRET ZA DRŽAVU": {
+    "voters": 1558,
+    "seats": 0,
+    "share": 2.5
+   }
+  }
+ },
+ "oi2026-6-302": {
+  "year": 2022,
+  "voters": 69295,
+  "lists": 28,
+  "lists_with_seats": 3,
+  "wasted_voters": 20974,
+  "wasted_share": 30.3,
+  "by_party": {
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 10850,
+    "seats": 2,
+    "share": 15.7
+   },
+   "ZAVIČAJNI  SOCIJALDEMOKRATI - MILE MARČETA": {
+    "voters": 14,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SELJAČKA STRANKA": {
+    "voters": 47,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PARTIJA UJEDINJENIH PENZIONERA": {
+    "voters": 37,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 6042,
+    "seats": 1,
+    "share": 8.7
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 2850,
+    "seats": 0,
+    "share": 4.1
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 31429,
+    "seats": 4,
+    "share": 45.4
+   },
+   "EKOLOŠKA PARTIJA REPUBLIKE SRPSKE": {
+    "voters": 44,
+    "seats": 0,
+    "share": 0.1
+   },
+   "A-SDA STRANKA DEMOKRATSKE AKTIVNOSTI": {
+    "voters": 40,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SAVEZ ZA DEMOKRATSKU SRPSKU": {
+    "voters": 57,
+    "seats": 0,
+    "share": 0.1
+   },
+   "RADNIČKA PARTIJA": {
+    "voters": 21,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA": {
+    "voters": 3327,
+    "seats": 0,
+    "share": 4.8
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 2428,
+    "seats": 0,
+    "share": 3.5
+   },
+   "NAŠA PRIČA REPUBLIKA SRPSKA": {
+    "voters": 96,
+    "seats": 0,
+    "share": 0.1
+   },
+   "DEMOKRATSKI SAVEZ -DEMOS": {
+    "voters": 2220,
+    "seats": 0,
+    "share": 3.2
+   },
+   "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"": {
+    "voters": 2561,
+    "seats": 0,
+    "share": 3.7
+   },
+   "SLOBODNA STRANKA SRPSKE": {
+    "voters": 8,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SNS FBIH-SAMO NAJBOLJI IDU NAPRIJED": {
+    "voters": 51,
+    "seats": 0,
+    "share": 0.1
+   },
+   "DCRS-DEMOKRATSKI CENTAR REPUBLIKE SRPSKE": {
+    "voters": 19,
+    "seats": 0,
+    "share": 0.0
+   },
+   "OTADŽBINSKA STRANKA": {
+    "voters": 16,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NOVO DOBA": {
+    "voters": 30,
+    "seats": 0,
+    "share": 0.0
+   },
+   "STRANKA ŽIVOT": {
+    "voters": 151,
+    "seats": 0,
+    "share": 0.2
+   },
+   "PNP - POTKOZARSKI NARODNI POKRET": {
+    "voters": 71,
+    "seats": 0,
+    "share": 0.1
+   },
+   "NARODNA PARTIJA SRPSKE-DARKO BANJAC-PUS-PRVA SDS": {
+    "voters": 1320,
+    "seats": 0,
+    "share": 1.9
+   },
+   "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-NDP-SNP": {
+    "voters": 2155,
+    "seats": 0,
+    "share": 3.1
+   },
+   "ZA DRŽAVU BIH": {
+    "voters": 489,
+    "seats": 0,
+    "share": 0.7
+   },
+   "POKRET ZA DRŽAVU": {
+    "voters": 2788,
+    "seats": 0,
+    "share": 4.0
+   },
+   "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS ,HDU,HSP HB,HRAST,HNP": {
+    "voters": 134,
+    "seats": 0,
+    "share": 0.2
+   }
+  }
+ },
+ "oi2026-6-303": {
+  "year": 2022,
+  "voters": 149777,
+  "lists": 27,
+  "lists_with_seats": 9,
+  "wasted_voters": 10425,
+  "wasted_share": 7.0,
+  "by_party": {
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 12531,
+    "seats": 1,
+    "share": 8.4
+   },
+   "ZAVIČAJNI  SOCIJALDEMOKRATI - MILE MARČETA": {
+    "voters": 78,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SELJAČKA STRANKA": {
+    "voters": 93,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PARTIJA UJEDINJENIH PENZIONERA": {
+    "voters": 94,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 36194,
+    "seats": 4,
+    "share": 24.2
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 4488,
+    "seats": 1,
+    "share": 3.0
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 54164,
+    "seats": 7,
+    "share": 36.2
+   },
+   "A-SDA STRANKA DEMOKRATSKE AKTIVNOSTI": {
+    "voters": 37,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SAVEZ ZA DEMOKRATSKU SRPSKU": {
+    "voters": 76,
+    "seats": 0,
+    "share": 0.1
+   },
+   "RADNIČKA PARTIJA": {
+    "voters": 47,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA": {
+    "voters": 9208,
+    "seats": 1,
+    "share": 6.1
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 32,
+    "seats": 0,
+    "share": 0.0
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 7260,
+    "seats": 2,
+    "share": 4.8
+   },
+   "NAŠA PRIČA REPUBLIKA SRPSKA": {
+    "voters": 302,
+    "seats": 0,
+    "share": 0.2
+   },
+   "DEMOKRATSKI SAVEZ -DEMOS": {
+    "voters": 5206,
+    "seats": 0,
+    "share": 3.5
+   },
+   "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"": {
+    "voters": 4717,
+    "seats": 2,
+    "share": 3.1
+   },
+   "SLOBODNA STRANKA SRPSKE": {
+    "voters": 63,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SNS FBIH-SAMO NAJBOLJI IDU NAPRIJED": {
+    "voters": 38,
+    "seats": 0,
+    "share": 0.0
+   },
+   "DCRS-DEMOKRATSKI CENTAR REPUBLIKE SRPSKE": {
+    "voters": 652,
+    "seats": 0,
+    "share": 0.4
+   },
+   "OTADŽBINSKA STRANKA": {
+    "voters": 28,
+    "seats": 0,
+    "share": 0.0
+   },
+   "STRANKA ŽIVOT": {
+    "voters": 323,
+    "seats": 0,
+    "share": 0.2
+   },
+   "PNP - POTKOZARSKI NARODNI POKRET": {
+    "voters": 66,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NARODNA PARTIJA SRPSKE-DARKO BANJAC-PUS-PRVA SDS": {
+    "voters": 1898,
+    "seats": 0,
+    "share": 1.3
+   },
+   "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-NDP-SNP": {
+    "voters": 7324,
+    "seats": 1,
+    "share": 4.9
+   },
+   "ZA DRŽAVU BIH": {
+    "voters": 1144,
+    "seats": 0,
+    "share": 0.8
+   },
+   "POKRET ZA DRŽAVU": {
+    "voters": 3466,
+    "seats": 2,
+    "share": 2.3
+   },
+   "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS ,HDU,HSP HB,HRAST,HNP": {
+    "voters": 248,
+    "seats": 0,
+    "share": 0.2
+   }
+  }
+ },
+ "oi2026-6-304": {
+  "year": 2022,
+  "voters": 33328,
+  "lists": 22,
+  "lists_with_seats": 2,
+  "wasted_voters": 15302,
+  "wasted_share": 45.9,
+  "by_party": {
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 9052,
+    "seats": 2,
+    "share": 27.2
+   },
+   "ZAVIČAJNI  SOCIJALDEMOKRATI - MILE MARČETA": {
+    "voters": 9,
+    "seats": 0,
+    "share": 0.0
+   },
+   "PARTIJA UJEDINJENIH PENZIONERA": {
+    "voters": 47,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 2665,
+    "seats": 0,
+    "share": 8.0
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 1514,
+    "seats": 0,
+    "share": 4.5
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 8974,
+    "seats": 2,
+    "share": 26.9
+   },
+   "SAVEZ ZA DEMOKRATSKU SRPSKU": {
+    "voters": 45,
+    "seats": 0,
+    "share": 0.1
+   },
+   "RADNIČKA PARTIJA": {
+    "voters": 14,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA": {
+    "voters": 839,
+    "seats": 0,
+    "share": 2.5
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 714,
+    "seats": 0,
+    "share": 2.1
+   },
+   "NAŠA PRIČA REPUBLIKA SRPSKA": {
+    "voters": 4,
+    "seats": 0,
+    "share": 0.0
+   },
+   "DEMOKRATSKI SAVEZ -DEMOS": {
+    "voters": 180,
+    "seats": 0,
+    "share": 0.5
+   },
+   "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"": {
+    "voters": 1489,
+    "seats": 0,
+    "share": 4.5
+   },
+   "SLOBODNA STRANKA SRPSKE": {
+    "voters": 27,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SNS FBIH-SAMO NAJBOLJI IDU NAPRIJED": {
+    "voters": 27,
+    "seats": 0,
+    "share": 0.1
+   },
+   "DCRS-DEMOKRATSKI CENTAR REPUBLIKE SRPSKE": {
+    "voters": 18,
+    "seats": 0,
+    "share": 0.1
+   },
+   "OTADŽBINSKA STRANKA": {
+    "voters": 11,
+    "seats": 0,
+    "share": 0.0
+   },
+   "STRANKA ŽIVOT": {
+    "voters": 41,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PNP - POTKOZARSKI NARODNI POKRET": {
+    "voters": 7,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NARODNA PARTIJA SRPSKE-DARKO BANJAC-PUS-PRVA SDS": {
+    "voters": 2199,
+    "seats": 0,
+    "share": 6.6
+   },
+   "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-NDP-SNP": {
+    "voters": 2927,
+    "seats": 0,
+    "share": 8.8
+   },
+   "POKRET ZA DRŽAVU": {
+    "voters": 2525,
+    "seats": 0,
+    "share": 7.6
+   }
+  }
+ },
+ "oi2026-6-305": {
+  "year": 2022,
+  "voters": 59178,
+  "lists": 27,
+  "lists_with_seats": 4,
+  "wasted_voters": 17591,
+  "wasted_share": 29.7,
+  "by_party": {
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 7660,
+    "seats": 1,
+    "share": 12.9
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 143,
+    "seats": 0,
+    "share": 0.2
+   },
+   "ZAVIČAJNI  SOCIJALDEMOKRATI - MILE MARČETA": {
+    "voters": 5,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SELJAČKA STRANKA": {
+    "voters": 19,
+    "seats": 0,
+    "share": 0.0
+   },
+   "PARTIJA UJEDINJENIH PENZIONERA": {
+    "voters": 64,
+    "seats": 0,
+    "share": 0.1
+   },
+   "PDP- PARTIJA DEMOKRATSKOG PROGRESA": {
+    "voters": 2571,
+    "seats": 0,
+    "share": 4.3
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 1245,
+    "seats": 0,
+    "share": 2.1
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 22818,
+    "seats": 3,
+    "share": 38.6
+   },
+   "SAVEZ ZA DEMOKRATSKU SRPSKU": {
+    "voters": 33,
+    "seats": 0,
+    "share": 0.1
+   },
+   "RADNIČKA PARTIJA": {
+    "voters": 21,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA": {
+    "voters": 1497,
+    "seats": 0,
+    "share": 2.5
+   },
+   "SAVEZ ZA NOVU POLITIKU": {
+    "voters": 33,
+    "seats": 0,
+    "share": 0.1
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 2985,
+    "seats": 0,
+    "share": 5.0
+   },
+   "NAŠA PRIČA REPUBLIKA SRPSKA": {
+    "voters": 179,
+    "seats": 0,
+    "share": 0.3
+   },
+   "DEMOKRATSKI SAVEZ -DEMOS": {
+    "voters": 4216,
+    "seats": 0,
+    "share": 7.1
+   },
+   "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"": {
+    "voters": 4023,
+    "seats": 0,
+    "share": 6.8
+   },
+   "SLOBODNA STRANKA SRPSKE": {
+    "voters": 16,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SNS FBIH-SAMO NAJBOLJI IDU NAPRIJED": {
+    "voters": 60,
+    "seats": 0,
+    "share": 0.1
+   },
+   "DCRS-DEMOKRATSKI CENTAR REPUBLIKE SRPSKE": {
+    "voters": 14,
+    "seats": 0,
+    "share": 0.0
+   },
+   "OTADŽBINSKA STRANKA": {
+    "voters": 12,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NOVO DOBA": {
+    "voters": 18,
+    "seats": 0,
+    "share": 0.0
+   },
+   "REPUBLIČKA STRANKA SRPSKE-RSS": {
+    "voters": 16,
+    "seats": 0,
+    "share": 0.0
+   },
+   "PNP - POTKOZARSKI NARODNI POKRET": {
+    "voters": 28,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NARODNA PARTIJA SRPSKE-DARKO BANJAC-PUS-PRVA SDS": {
+    "voters": 232,
+    "seats": 0,
+    "share": 0.4
+   },
+   "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-NDP-SNP": {
+    "voters": 4549,
+    "seats": 1,
+    "share": 7.7
+   },
+   "POKRET ZA DRŽAVU": {
+    "voters": 6560,
+    "seats": 1,
+    "share": 11.1
+   },
+   "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS ,HDU,HSP HB,HRAST,HNP": {
+    "voters": 161,
+    "seats": 0,
+    "share": 0.3
+   }
+  }
+ },
+ "oi2026-7-201": {
+  "year": 2022,
+  "voters": 90350,
+  "lists": 21,
+  "lists_with_seats": 9,
+  "wasted_voters": 6249,
+  "wasted_share": 6.9,
+  "by_party": {
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 9367,
+    "seats": 3,
+    "share": 10.4
+   },
+   "NAŠA STRANKA": {
+    "voters": 2890,
+    "seats": 1,
+    "share": 3.2
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 1648,
+    "seats": 0,
+    "share": 1.8
+   },
+   "LABURISTIČKA STRANKA BOSNE I HERCEGOVINE LABURISTI BIH": {
+    "voters": 3888,
+    "seats": 1,
+    "share": 4.3
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 124,
+    "seats": 0,
+    "share": 0.1
+   },
+   "UJEDINJENA SRPSKA": {
+    "voters": 43,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NAROD I PRAVDA": {
+    "voters": 4298,
+    "seats": 2,
+    "share": 4.8
+   },
+   "POKRET ZA MODERNU I AKTIVNU KRAJINU-POMAK": {
+    "voters": 7864,
+    "seats": 3,
+    "share": 8.7
+   },
+   "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"": {
+    "voters": 27,
+    "seats": 0,
+    "share": 0.0
+   },
+   "HRVATSKI NACIONALNI POMAK": {
+    "voters": 25,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 7872,
+    "seats": 3,
+    "share": 8.7
+   },
+   "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET": {
+    "voters": 528,
+    "seats": 0,
+    "share": 0.6
+   },
+   "NES": {
+    "voters": 21733,
+    "seats": 8,
+    "share": 24.1
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU-SPU BIH STRANKA PENZIONERA": {
+    "voters": 3250,
+    "seats": 1,
+    "share": 3.6
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 693,
+    "seats": 0,
+    "share": 0.8
+   },
+   "KOALICIJA ZA ČOVJEKA ( DNZBIH-DNS-NSRZB )": {
+    "voters": 930,
+    "seats": 0,
+    "share": 1.0
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 1611,
+    "seats": 0,
+    "share": 1.8
+   },
+   "SOCIJALISTIČKA PARTIJA": {
+    "voters": 60,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 22939,
+    "seats": 8,
+    "share": 25.4
+   },
+   "HDZ BIH,HSSSR,HSS,HSP BIH,HKDUHSPAS,HDU,HSP HB,HRAST,HDZ1990": {
+    "voters": 343,
+    "seats": 0,
+    "share": 0.4
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 217,
+    "seats": 0,
+    "share": 0.2
+   }
+  }
+ },
+ "oi2026-7-203": {
+  "year": 2022,
+  "voters": 200531,
+  "lists": 22,
+  "lists_with_seats": 8,
+  "wasted_voters": 29592,
+  "wasted_share": 14.8,
+  "by_party": {
+   "POKRET DEMOKRATSKE AKCIJE PDA": {
+    "voters": 16101,
+    "seats": 3,
+    "share": 8.0
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 20704,
+    "seats": 4,
+    "share": 10.3
+   },
+   "KOALICIJA BH ZELENI - GLAS NARODA": {
+    "voters": 4311,
+    "seats": 0,
+    "share": 2.1
+   },
+   "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET": {
+    "voters": 8002,
+    "seats": 2,
+    "share": 4.0
+   },
+   "NES": {
+    "voters": 4790,
+    "seats": 0,
+    "share": 2.4
+   },
+   "KOALICIJA DRŽAVA-NEZAVISNI BLOK-NB,ZELENI ZA DRŽAVU": {
+    "voters": 844,
+    "seats": 0,
+    "share": 0.4
+   },
+   "HDZ BIH,HSS,HSP BIH,HKDU,HDU,HSP HB,HRAST,HDZ 1990,HNP": {
+    "voters": 3520,
+    "seats": 0,
+    "share": 1.8
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 10753,
+    "seats": 2,
+    "share": 5.4
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 37156,
+    "seats": 8,
+    "share": 18.5
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 4694,
+    "seats": 0,
+    "share": 2.3
+   },
+   "SOCIJALISTIČKA PARTIJA": {
+    "voters": 145,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 60557,
+    "seats": 13,
+    "share": 30.2
+   },
+   "DNS-DEMOKRATSKI NARODNI SAVEZ": {
+    "voters": 41,
+    "seats": 0,
+    "share": 0.0
+   },
+   "STRANKA PENZIONERA / UMIROVLJENIKA BOSNE I HERCEGOVINE": {
+    "voters": 1158,
+    "seats": 0,
+    "share": 0.6
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 136,
+    "seats": 0,
+    "share": 0.1
+   },
+   "NAŠA STRANKA": {
+    "voters": 7062,
+    "seats": 1,
+    "share": 3.5
+   },
+   "HRVATSKA STRANKA PRAVA DR  ANTE STARČEVIĆ BOSNE I HERCEGOVINE": {
+    "voters": 43,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 5063,
+    "seats": 0,
+    "share": 2.5
+   },
+   "HSS STJEPANA RADIĆA": {
+    "voters": 17,
+    "seats": 0,
+    "share": 0.0
+   },
+   "HRVATSKA NEZAVISNA LISTA": {
+    "voters": 100,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NAROD I PRAVDA": {
+    "voters": 10604,
+    "seats": 2,
+    "share": 5.3
+   },
+   "PLATFORMA ZA PROGRES": {
+    "voters": 4730,
+    "seats": 0,
+    "share": 2.4
+   }
+  }
+ },
+ "oi2026-7-204": {
+  "year": 2022,
+  "voters": 156797,
+  "lists": 16,
+  "lists_with_seats": 9,
+  "wasted_voters": 10621,
+  "wasted_share": 6.8,
+  "by_party": {
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 4014,
+    "seats": 0,
+    "share": 2.6
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 20100,
+    "seats": 5,
+    "share": 12.8
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 1512,
+    "seats": 0,
+    "share": 1.0
+   },
+   "SOCIJALISTIČKA PARTIJA": {
+    "voters": 87,
+    "seats": 0,
+    "share": 0.1
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 45832,
+    "seats": 11,
+    "share": 29.2
+   },
+   "STRANKA PENZIONERA / UMIROVLJENIKA BOSNE I HERCEGOVINE": {
+    "voters": 1213,
+    "seats": 0,
+    "share": 0.8
+   },
+   "NAŠA STRANKA": {
+    "voters": 4952,
+    "seats": 1,
+    "share": 3.2
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 6545,
+    "seats": 2,
+    "share": 4.2
+   },
+   "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH": {
+    "voters": 75,
+    "seats": 0,
+    "share": 0.0
+   },
+   "NAROD I PRAVDA": {
+    "voters": 11315,
+    "seats": 3,
+    "share": 7.2
+   },
+   "POKRET DEMOKRATSKE AKCIJE PDA": {
+    "voters": 386,
+    "seats": 0,
+    "share": 0.2
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 14130,
+    "seats": 3,
+    "share": 9.0
+   },
+   "NES": {
+    "voters": 9329,
+    "seats": 2,
+    "share": 5.9
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD - ZA BIH": {
+    "voters": 23008,
+    "seats": 5,
+    "share": 14.7
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 3334,
+    "seats": 0,
+    "share": 2.1
+   },
+   "HDZBIH,HSSSR,HSS,HSPBIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HDZ90,HNP": {
+    "voters": 10965,
+    "seats": 3,
+    "share": 7.0
+   }
+  }
+ },
+ "oi2026-7-205": {
+  "year": 2022,
+  "voters": 14041,
+  "lists": 19,
+  "lists_with_seats": 13,
+  "wasted_voters": 1372,
+  "wasted_share": 9.8,
+  "by_party": {
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 1092,
+    "seats": 2,
+    "share": 7.8
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 1136,
+    "seats": 2,
+    "share": 8.1
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 22,
+    "seats": 0,
+    "share": 0.2
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 2128,
+    "seats": 5,
+    "share": 15.2
+   },
+   "NAŠA STRANKA": {
+    "voters": 357,
+    "seats": 0,
+    "share": 2.5
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 521,
+    "seats": 1,
+    "share": 3.7
+   },
+   "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH": {
+    "voters": 568,
+    "seats": 1,
+    "share": 4.0
+   },
+   "NAROD I PRAVDA": {
+    "voters": 1444,
+    "seats": 3,
+    "share": 10.3
+   },
+   "BOSANSKA NARODNA STRANKA   BNS": {
+    "voters": 652,
+    "seats": 1,
+    "share": 4.6
+   },
+   "BOSANSKOHERCEGOVAČKI DEMOKRATI - DŽEBRAIL BAJRAMOVIĆ": {
+    "voters": 620,
+    "seats": 1,
+    "share": 4.4
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD": {
+    "voters": 15,
+    "seats": 0,
+    "share": 0.1
+   },
+   "NOVA POLITIČKA INICIJATIVA": {
+    "voters": 917,
+    "seats": 2,
+    "share": 6.5
+   },
+   "NEZAVISNA GRAĐANSKA LISTA": {
+    "voters": 660,
+    "seats": 1,
+    "share": 4.7
+   },
+   "REPUBLIKANSKA STRANKA": {
+    "voters": 407,
+    "seats": 0,
+    "share": 2.9
+   },
+   "\"NOVI POČETAK\"": {
+    "voters": 1424,
+    "seats": 3,
+    "share": 10.1
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 593,
+    "seats": 1,
+    "share": 4.2
+   },
+   "NES": {
+    "voters": 914,
+    "seats": 2,
+    "share": 6.5
+   },
+   "RADOM ZA BOLJITAK GORAŽDE": {
+    "voters": 215,
+    "seats": 0,
+    "share": 1.5
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 356,
+    "seats": 0,
+    "share": 2.5
+   }
+  }
+ },
+ "oi2026-7-206": {
+  "year": 2022,
+  "voters": 109201,
+  "lists": 16,
+  "lists_with_seats": 6,
+  "wasted_voters": 10150,
+  "wasted_share": 9.3,
+  "by_party": {
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 1938,
+    "seats": 0,
+    "share": 1.8
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 12309,
+    "seats": 4,
+    "share": 11.3
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 746,
+    "seats": 0,
+    "share": 0.7
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 36476,
+    "seats": 11,
+    "share": 33.4
+   },
+   "NAŠA STRANKA": {
+    "voters": 1541,
+    "seats": 0,
+    "share": 1.4
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 2854,
+    "seats": 0,
+    "share": 2.6
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 818,
+    "seats": 0,
+    "share": 0.7
+   },
+   "NAROD I PRAVDA": {
+    "voters": 8469,
+    "seats": 2,
+    "share": 7.8
+   },
+   "HRVATSKI NACIONALNI POMAK": {
+    "voters": 34,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 6827,
+    "seats": 2,
+    "share": 6.3
+   },
+   "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET": {
+    "voters": 313,
+    "seats": 0,
+    "share": 0.3
+   },
+   "NES": {
+    "voters": 605,
+    "seats": 0,
+    "share": 0.6
+   },
+   "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD - ZA BIH": {
+    "voters": 401,
+    "seats": 0,
+    "share": 0.4
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 900,
+    "seats": 0,
+    "share": 0.8
+   },
+   "HDZ 1990 - HSP HB I BIH": {
+    "voters": 5390,
+    "seats": 2,
+    "share": 4.9
+   },
+   "HDZ BIH,HSS SR,HSS,HSP BIH,HKDU,HSP AS,HDU,HRAST": {
+    "voters": 29580,
+    "seats": 9,
+    "share": 27.1
+   }
+  }
+ },
+ "oi2026-7-207": {
+  "year": 2022,
+  "voters": 103040,
+  "lists": 17,
+  "lists_with_seats": 8,
+  "wasted_voters": 8046,
+  "wasted_share": 7.8,
+  "by_party": {
+   "HKDU BIH": {
+    "voters": 165,
+    "seats": 0,
+    "share": 0.2
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 10262,
+    "seats": 3,
+    "share": 10.0
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 342,
+    "seats": 0,
+    "share": 0.3
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 19963,
+    "seats": 7,
+    "share": 19.4
+   },
+   "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990": {
+    "voters": 10366,
+    "seats": 3,
+    "share": 10.1
+   },
+   "NAŠA STRANKA": {
+    "voters": 1553,
+    "seats": 0,
+    "share": 1.5
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 1297,
+    "seats": 0,
+    "share": 1.3
+   },
+   "HSS STJEPANA RADIĆA": {
+    "voters": 41,
+    "seats": 0,
+    "share": 0.0
+   },
+   "HRVATSKA NEZAVISNA LISTA": {
+    "voters": 57,
+    "seats": 0,
+    "share": 0.1
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 7498,
+    "seats": 2,
+    "share": 7.3
+   },
+   "NAROD I PRAVDA": {
+    "voters": 3518,
+    "seats": 1,
+    "share": 3.4
+   },
+   "HRVATSKI NACIONALNI POMAK": {
+    "voters": 47,
+    "seats": 0,
+    "share": 0.0
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 5276,
+    "seats": 2,
+    "share": 5.1
+   },
+   "NES": {
+    "voters": 4511,
+    "seats": 1,
+    "share": 4.4
+   },
+   "\"OSTAJTE OVDJE - ZAJEDNO ZA NAŠ MOSTAR\"": {
+    "voters": 1673,
+    "seats": 0,
+    "share": 1.6
+   },
+   "STRANKA ZA BOSNU I HERCEGOVINU-PLATFORMA ZA PROGRES": {
+    "voters": 2871,
+    "seats": 0,
+    "share": 2.8
+   },
+   "HDZ BIH,HSP BIH,HDU,HSP AS,HRAST,HSP HB": {
+    "voters": 33600,
+    "seats": 11,
+    "share": 32.6
+   }
+  }
+ },
+ "oi2026-7-208": {
+  "year": 2022,
+  "voters": 40910,
+  "lists": 10,
+  "lists_with_seats": 6,
+  "wasted_voters": 364,
+  "wasted_share": 0.9,
+  "by_party": {
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 270,
+    "seats": 0,
+    "share": 0.7
+   },
+   "HRVATSKA STRANKA PRAVA BIH": {
+    "voters": 1971,
+    "seats": 1,
+    "share": 4.8
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 51,
+    "seats": 0,
+    "share": 0.1
+   },
+   "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990": {
+    "voters": 6481,
+    "seats": 4,
+    "share": 15.8
+   },
+   "HRVATSKA STRANKA PRAVA DR  ANTE STARČEVIĆ BOSNE I HERCEGOVINE": {
+    "voters": 1713,
+    "seats": 1,
+    "share": 4.2
+   },
+   "HRVATSKA STRANKA PRAVA HERCEG-BOSNE": {
+    "voters": 1430,
+    "seats": 1,
+    "share": 3.5
+   },
+   "HSS STJEPANA RADIĆA": {
+    "voters": 19,
+    "seats": 0,
+    "share": 0.0
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 3069,
+    "seats": 2,
+    "share": 7.5
+   },
+   "HRVATSKI NACIONALNI POMAK": {
+    "voters": 24,
+    "seats": 0,
+    "share": 0.1
+   },
+   "HDZ BIH,HDU,HSS,HKDU": {
+    "voters": 25882,
+    "seats": 14,
+    "share": 63.3
+   }
+  }
+ },
+ "oi2026-7-209": {
+  "year": 2022,
+  "voters": 214763,
+  "lists": 17,
+  "lists_with_seats": 7,
+  "wasted_voters": 21920,
+  "wasted_share": 10.2,
+  "by_party": {
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 27612,
+    "seats": 5,
+    "share": 12.9
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 33818,
+    "seats": 6,
+    "share": 15.7
+   },
+   "SDS-SRPSKA DEMOKRATSKA STRANKA": {
+    "voters": 109,
+    "seats": 0,
+    "share": 0.1
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 2043,
+    "seats": 0,
+    "share": 1.0
+   },
+   "SOCIJALISTIČKA PARTIJA": {
+    "voters": 78,
+    "seats": 0,
+    "share": 0.0
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 39209,
+    "seats": 7,
+    "share": 18.3
+   },
+   "STRANKA PENZIONERA / UMIROVLJENIKA BOSNE I HERCEGOVINE": {
+    "voters": 1168,
+    "seats": 0,
+    "share": 0.5
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 488,
+    "seats": 0,
+    "share": 0.2
+   },
+   "NAŠA STRANKA": {
+    "voters": 25382,
+    "seats": 5,
+    "share": 11.8
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 5587,
+    "seats": 0,
+    "share": 2.6
+   },
+   "NAROD I PRAVDA": {
+    "voters": 39142,
+    "seats": 7,
+    "share": 18.2
+   },
+   "ZA NOVE GENERACIJE": {
+    "voters": 8194,
+    "seats": 1,
+    "share": 3.8
+   },
+   "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": {
+    "voters": 19486,
+    "seats": 4,
+    "share": 9.1
+   },
+   "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET": {
+    "voters": 1172,
+    "seats": 0,
+    "share": 0.5
+   },
+   "NES": {
+    "voters": 6401,
+    "seats": 0,
+    "share": 3.0
+   },
+   "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU": {
+    "voters": 3088,
+    "seats": 0,
+    "share": 1.4
+   },
+   "HDZBIH,HSSSR,HSS,HSPBIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HDZ90,HNP": {
+    "voters": 1786,
+    "seats": 0,
+    "share": 0.8
+   }
+  }
+ },
+ "oi2026-7-210": {
+  "year": 2022,
+  "voters": 25836,
+  "lists": 16,
+  "lists_with_seats": 10,
+  "wasted_voters": 1882,
+  "wasted_share": 7.3,
+  "by_party": {
+   "STRANKA ZA BOSNU I HERCEGOVINU": {
+    "voters": 53,
+    "seats": 0,
+    "share": 0.2
+   },
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 1575,
+    "seats": 2,
+    "share": 6.1
+   },
+   "HRVATSKA STRANKA PRAVA BIH": {
+    "voters": 36,
+    "seats": 0,
+    "share": 0.1
+   },
+   "HDZ BIH - HRVATSKA DEMOKRATSKA ZAJEDNICA BIH": {
+    "voters": 4495,
+    "seats": 5,
+    "share": 17.4
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 1666,
+    "seats": 2,
+    "share": 6.4
+   },
+   "NARODNA STRANKA RADOM ZA BOLJITAK": {
+    "voters": 379,
+    "seats": 0,
+    "share": 1.5
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 2070,
+    "seats": 2,
+    "share": 8.0
+   },
+   "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990": {
+    "voters": 4329,
+    "seats": 4,
+    "share": 16.8
+   },
+   "HSS STJEPANA RADIĆA": {
+    "voters": 9,
+    "seats": 0,
+    "share": 0.0
+   },
+   "HRVATSKA NEZAVISNA LISTA": {
+    "voters": 1876,
+    "seats": 2,
+    "share": 7.3
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 903,
+    "seats": 1,
+    "share": 3.5
+   },
+   "ŽUPANIJSKA NEOVISNA LISTA": {
+    "voters": 709,
+    "seats": 0,
+    "share": 2.7
+   },
+   "HRVATSKI NACIONALNI POMAK": {
+    "voters": 4853,
+    "seats": 5,
+    "share": 18.8
+   },
+   "NEZAVISNA LISTA - HRVATSKA ZVONA": {
+    "voters": 696,
+    "seats": 0,
+    "share": 2.7
+   },
+   "SRPSKO JEDINSTVO (SNPFBIH-SPS)": {
+    "voters": 1032,
+    "seats": 1,
+    "share": 4.0
+   },
+   "SRPSKA SLOGA-SNS FBIH SP DNS PDP SDS": {
+    "voters": 1155,
+    "seats": 1,
+    "share": 4.5
+   }
+  }
+ },
+ "oi2026-7-202": {
+  "year": 2022,
+  "voters": 14605,
+  "lists": 14,
+  "lists_with_seats": 7,
+  "wasted_voters": 1643,
+  "wasted_share": 11.2,
+  "by_party": {
+   "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": {
+    "voters": 927,
+    "seats": 1,
+    "share": 6.3
+   },
+   "HRVATSKA STRANKA PRAVA BIH": {
+    "voters": 366,
+    "seats": 0,
+    "share": 2.5
+   },
+   "HDZ BIH - HRVATSKA DEMOKRATSKA ZAJEDNICA BIH": {
+    "voters": 7699,
+    "seats": 12,
+    "share": 52.7
+   },
+   "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ": {
+    "voters": 67,
+    "seats": 0,
+    "share": 0.5
+   },
+   "SDA-STRANKA DEMOKRATSKE AKCIJE": {
+    "voters": 1625,
+    "seats": 3,
+    "share": 11.1
+   },
+   "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": {
+    "voters": 309,
+    "seats": 0,
+    "share": 2.1
+   },
+   "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990": {
+    "voters": 1135,
+    "seats": 2,
+    "share": 7.8
+   },
+   "SBB - FAHRUDIN RADONČIĆ": {
+    "voters": 248,
+    "seats": 0,
+    "share": 1.7
+   },
+   "POSAVSKA STRANKA": {
+    "voters": 391,
+    "seats": 0,
+    "share": 2.7
+   },
+   "HRVATSKA STRANKA PRAVA HERCEG-BOSNE": {
+    "voters": 251,
+    "seats": 0,
+    "share": 1.7
+   },
+   "HSS STJEPANA RADIĆA": {
+    "voters": 11,
+    "seats": 0,
+    "share": 0.1
+   },
+   "HRS-HRVATSKA REPUBLIKANSKA STRANKA": {
+    "voters": 558,
+    "seats": 1,
+    "share": 3.8
+   },
+   "POKRET DEMOKRATSKE AKCIJE PDA": {
+    "voters": 502,
+    "seats": 1,
+    "share": 3.4
+   },
+   "NEZAVISNI-NEOVISNI": {
+    "voters": 516,
+    "seats": 1,
+    "share": 3.5
+   }
+  }
+ }
+}

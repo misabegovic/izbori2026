@@ -173,6 +173,57 @@ def seat_bar(rows):
     return out
 
 
+def list_strength(rows):
+    """Was a vote for this list thrown away last time?
+
+    A seat chance answers "can this person get in". It does not answer the question a
+    voter actually asks, which is whether the ballot does anything at all. A list under
+    the 3 percent census takes no seat, so every vote on it works out to nothing.
+
+    The share has to be computed over voters, not over personal votes: a ballot may circle
+    up to three names, and lists differ in how much their voters use that (0.45 to 6.24
+    names per ballot in 2022). The API's `percentage` is a candidate's personal votes as a
+    share of their list's ballots, and its implied denominator is identical for every
+    candidate on a list in all 496 lists checked, so it recovers the ballot count exactly.
+    """
+    out = {}
+    for race26, race22 in RACE_2022.items():
+        areas = defaultdict(lambda: defaultdict(list))
+        for r in rows:
+            if r["raceId"] != race22 or r.get("seat") == "single":
+                continue
+            party = (r.get("party") or {}).get("label") or (r.get("party") or {}).get("id")
+            if party:
+                areas[str(r.get("areaCode"))][party].append(r)
+        for area, parties in areas.items():
+            by_party, total = {}, 0
+            for party, cands in parties.items():
+                denoms = [c["votes"] / (c["percentage"]["value"] / 100)
+                          for c in cands
+                          if c.get("votes") and (c.get("percentage") or {}).get("value", 0) > 0.5]
+                voters = round(sum(denoms) / len(denoms)) if denoms else None
+                if not voters:
+                    continue
+                seats = sum(1 for c in cands if c.get("elected"))
+                by_party[party] = {"voters": voters, "seats": seats}
+                total += voters
+            if not total:
+                continue
+            wasted = sum(v["voters"] for v in by_party.values() if not v["seats"])
+            for v in by_party.values():
+                v["share"] = round(100 * v["voters"] / total, 1)
+            out[f"{race26}-{area}"] = {
+                "year": 2022,
+                "voters": total,
+                "lists": len(by_party),
+                "lists_with_seats": sum(1 for v in by_party.values() if v["seats"]),
+                "wasted_voters": wasted,
+                "wasted_share": round(100 * wasted / total, 1),
+                "by_party": by_party,
+            }
+    return out
+
+
 def pull_appointed(pubids):
     """Seats people were appointed to rather than elected, keyed back to our pids.
 
@@ -246,10 +297,10 @@ def main():
     os.makedirs(D, exist_ok=True)
     started = time.time()
 
-    print("1/5 sve kandidature")
+    print("1/6 sve kandidature")
     rows = pull_all_candidacies()
 
-    print("2/5 historije kandidata 2026")
+    print("2/6 historije kandidata 2026")
     wanted = ballot_pids()
     timelines, pubids = build_timelines(rows, wanted)
     prior = sum(1 for t in timelines.values() if any(r["y"] != 2026 for r in t))
@@ -258,15 +309,21 @@ def main():
     json.dump(timelines, open(D + "timelines.json", "w"), ensure_ascii=False)
     json.dump(pubids, open(D + "pubids.json", "w"), ensure_ascii=False)
 
-    print("3/5 koliko je ličnih glasova trebalo za mandat 2022")
+    print("3/6 koliko je ličnih glasova trebalo za mandat 2022")
     bars = seat_bar(rows)
     json.dump(bars, open(D + "seat_bar.json", "w"), ensure_ascii=False, indent=1)
     print(f"   {len(bars)} izbornih jedinica")
 
-    print("4/5 imenovanja")
+    print("4/6 da li je glas za listu bio bačen 2022")
+    strength = list_strength(rows)
+    json.dump(strength, open(D + "list_strength.json", "w"), ensure_ascii=False, indent=1)
+    worst = max(strength.values(), key=lambda v: v["wasted_share"], default=None)
+    print(f"   {len(strength)} jedinica; najviše bačenih glasova {worst['wasted_share']}%" if worst else "   0")
+
+    print("5/6 imenovanja")
     json.dump(pull_appointed(pubids), open(D + "appointed.json", "w"), ensure_ascii=False, indent=1)
 
-    print("5/5 potrošnja jedinica u kojima su sjedili")
+    print("6/6 potrošnja jedinica u kojima su sjedili")
     units = {r["unit"] for t in timelines.values() for r in t if r.get("unit") and r.get("elected")}
     json.dump(pull_unit_spend(units), open(D + "unit_spend.json", "w"), ensure_ascii=False, indent=1)
 

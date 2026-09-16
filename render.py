@@ -181,6 +181,7 @@ ecitizen = json.load(open(D + "ecitizen.json")) if os.path.exists(D + "ecitizen.
 appointed = json.load(open(D + "appointed.json")) if os.path.exists(D + "appointed.json") else {}
 unit_spend = json.load(open(D + "unit_spend.json")) if os.path.exists(D + "unit_spend.json") else {}
 seat_bar = json.load(open(D + "seat_bar.json")) if os.path.exists(D + "seat_bar.json") else {}
+list_strength = json.load(open(D + "list_strength.json")) if os.path.exists(D + "list_strength.json") else {}
 
 units = {}
 for f in glob.glob(D + "units/*.json"):
@@ -189,6 +190,10 @@ for f in glob.glob(D + "units/*.json"):
 
 gen = national["generated"][:10]
 env = Environment(loader=FileSystemLoader("templates"), autoescape=True, trim_blocks=True, lstrip_blocks=True)
+# The site writes thousands with a dot (5.250), so a decimal point reads as thousands:
+# "3.5%" looks like 35. Decimals take a comma.
+env.filters["dec"] = lambda v: ("" if v is None else
+                                ("manje od 0,1" if 0 < v < 0.05 else ("%.1f" % v).replace(".", ",")))
 env.filters["num"] = num
 env.filters["nice"] = nice_name
 env.filters["ptitle"] = party_title
@@ -223,6 +228,9 @@ def nice_area(a):
 
 def mjesta(n):
     return f"{n} mjesto" if n == 1 else f"{n} mjesta"
+
+
+env.globals["mjesta"] = mjesta
 
 
 RACE = {
@@ -695,6 +703,25 @@ def list_chances(u, l):
     return out
 
 
+def vote_weight(u, list_name):
+    """The other question, the one a chance percentage does not answer: is the ballot
+    thrown away? A seat is taken by the list, so a vote on a list under the 3 percent
+    census does nothing at all, however popular the person on it. In 2022 that was 14.8
+    percent of votes in Tuzla canton and 45.9 percent in the worst constituency."""
+    st = list_strength.get(f"{u['race']}-{u['area']}")
+    if not st:
+        return None
+    pi = party_identity(list_name)
+    mine = None
+    for label, row in st["by_party"].items():
+        if party_identity(label) == pi:
+            mine = {**row, "label": label} if mine is None else {
+                **mine, "voters": mine["voters"] + row["voters"],
+                "seats": mine["seats"] + row["seats"],
+                "share": round(mine["share"] + row["share"], 1)}
+    return {"unit": st, "list": mine}
+
+
 # --- per-ballot comparison data (for D3 chart)
 def unit_cands_json(u):
     lists = [party_title(l["name"]) for l in u["lists"]]
@@ -903,10 +930,19 @@ for pid, entries in cand_index.items():
                                      "label": f"{t.get('lvl') or ''}{', ' + nice_area(t['area']) if t.get('area') else ''}"}
                                     for t in (pop or {}).get("rows", [])]}, ensure_ascii=False) if pop else None
     appt = appointed.get(pid) or []
+    _mlist = next((e[1] for e in entries if e[0] == main_uk), None)
+    weight = vote_weight(_mu, _mlist) if _mlist and RACE[_mu["race"]]["kind"] == "list" else None
+    # the legal preferential bar: 20 percent of a list's voters must circle you to jump the
+    # party's order. pop["best"]["pct"] is measured against the same denominator.
+    pref = None
+    if weight:
+        _b = (pop or {}).get("best")
+        pref = {"need": 20, "had": round(_b["pct"]) if _b and _b.get("pct") else None,
+                "y": _b["y"] if _b else None, "where": nice_area(_b["area"]) if _b and _b.get("area") else None}
     bodies = local_record(tl) if not rec else None
     loy = loyalty(tl)
     act_json = {ch: json.dumps({"rows": rows, "avg": (CH_AVG.get(ch) or {}).get("pris")}, ensure_ascii=False) for ch, rows in ACT.get(pid, {}).items()}
-    html = kand_tpl.render(p=v, tl=tl, tl_json=tl_json, pop=pop, pop_json=pop_json, appt=appt, bodies=bodies, loy=loy, bar=bar,
+    html = kand_tpl.render(p=v, tl=tl, tl_json=tl_json, pop=pop, pop_json=pop_json, appt=appt, bodies=bodies, loy=loy, bar=bar, weight=weight, pref=pref,
                            prof=prof, rec=rec, kd=kd, replacement=replacement, cands_url=unit_json_url.get(main_uk), CH_AVG=CH_AVG, speeches_n=len(sp), speeches=sp_good[:5], assets=assets, runs=runs,
                            sim=SIM.get(pid, {}), pline=PLINE.get(pid, {}), act=act_json, my_party=people_rec.get(pid, {}).get("party_name"), **base_ctx)
     write(f"kandidat-{v['slug']}.html", html)
@@ -964,6 +1000,7 @@ for uk, u in units.items():
                       "new": sum(1 for c in cands if c["stood"] == 1), "office": sum(1 for c in cands if c["office"]),
                       "mps": sum(1 for c in cands if c["has_record"]),
                       "votes22": (hist22.get(pi) or {}).get("votes"), "votes18": (hist18.get(pi) or {}).get("votes"),
+                      "w22": (vote_weight(u, l["name"]) or {}).get("list"),
                       "seats22": seats22.get(pi, 0), "program": prog, "p22": p22_for(prog), "hist": history_for(prog), "party_href": party_href(l["name"]),
                       "key_votes": recent_kv})
     total22 = sum((h.get("votes") or 0) for h in u.get("party_history", []) if h["year"] == 2022)
@@ -975,7 +1012,9 @@ for uk, u in units.items():
         pi_ = party_identity(h["party"])
         if pi_ not in now_ids and total22 and (h.get("votes") or 0) >= 0.03 * total22 and pi_ not in {a[2] for a in absent22} and not any(same_party(h["party"], l["name"]) for l in u["lists"]):
             absent22.append((party_title(h["party"]), h.get("votes") or 0, pi_, party_href(h["party"])))
-    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, munis=munis, cands_url=unit_json_url.get(uk), absent22=absent22, **base_ctx)
+    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, munis=munis, cands_url=unit_json_url.get(uk), absent22=absent22,
+                               weight=(vote_weight(u, u["lists"][0]["name"]) if u.get("lists") and RACE[race]["kind"] == "list" else None),
+                               bar=seat_bar.get(f"{race}-{u['area']}"), **base_ctx)
     write(unit_href(race, u["area"]), html)
 
 # --- municipality pages

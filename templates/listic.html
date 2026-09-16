@@ -30,6 +30,19 @@
 
 </div>
 
+{% if weight %}
+<div class="card">
+<h2 style="margin-top:0">Ide li tvoj glas nekud?</h2>
+<p>Mandat prvo osvaja lista. Ispod 3% glasova na ovom području lista ne dobija ništa. Ni 3% ne garantuje mjesto: mjesta se dijele po broju glasova, pa i liste iznad praga ostanu bez ijednog. Tek unutar liste koja je osvojila mjesto lični glas odlučuje ko ga dobije.</p>
+<div class="facts">
+<div class="fact"><b>{{ weight.unit.wasted_share | dec }}%</b><span>glasova je {{ weight.unit.year }}. ovdje otišlo listama koje nisu dobile nijedno mjesto</span></div>
+<div class="fact"><b>{{ weight.unit.lists_with_seats }} od {{ weight.unit.lists }}</b><span>lista je {{ weight.unit.year }}. ovdje uopšte osvojilo mjesto</span></div>
+{% if bar %}<div class="fact"><b>{{ bar.outpolled | num }}</b><span>ljudi je {{ bar.year }}. imalo više ličnih glasova od najslabijeg izabranog, a nije prošlo</span></div>{% endif %}
+</div>
+<p class="small mut">Ovo ne znači da treba glasati za velike. Znači samo da lični glas radi tek unutar liste koja je prešla prag. Prag od 3% i pravilo o 20% ličnih glasova su iz izbornog zakona, s izvorima u <a href="kako-glasati.html">kako se glasa</a>.</p>
+</div>
+{% endif %}
+
 <h2>Sve liste na jedan pogled</h2>
 <div class="card">
 <p class="mut small" style="margin:0 0 .3rem">Plava crta = glasovi 2022 na ovom području (duža crta, više glasova). Pored imena piše da li su sad u vlasti.</p>
@@ -59,7 +72,8 @@ window.homeFilter=function(){var on=document.getElementById('homechk').checked;r
 {{ stack([('već birani', l.won, 'c-blue'), ('prvi put', l.new, 'c-blue2'), ('ostali: ranije se kandidovali bez uspjeha, ili nemamo podataka', l.n - l.won - l.new, 'c-new')], l.n) }}
 {% if l.switch %}<p class="small" style="margin:.2rem 0 0"><i class="sw c-sw"></i>{{ l.switch }} od {{ l.n }} mijenjalo stranke</p>{% endif %}
 {% if l.program %}<p><b>Sad su:</b> {{ l.program.power }}.{% if l.program.power_history %} <span class="mut">{{ l.program.power_history }}</span>{% endif %}</p>{% endif %}
-<p><b>Prošli put ovdje (2022):</b> {% if l.votes22 %}{{ l.votes22 | num }} glasova, {{ l.seats22 }} {% if l.seats22 == 1 %}mandat{% else %}mandata{% endif %}{% if l.votes18 %} (2018: {{ l.votes18 | num }}){% endif %}.{% else %}nije bila na ovom listiću, ili je nastupila pod drugim imenom.{% endif %}</p>
+<p><b>Prošli put ovdje (2022):</b> {% if l.votes22 %}{{ l.votes22 | num }} glasova, {{ l.seats22 }} {% if l.seats22 == 1 %}mandat{% else %}mandata{% endif %}{% if l.votes18 %} (2018: {{ l.votes18 | num }}){% endif %}.{% else %}nije bila na ovom listiću, ili je nastupila pod drugim imenom.{% endif %}
+{% if l.w22 %}<br><span class="small">To je bilo <b>{{ l.w22.share | dec }}%</b> glasača ovdje. {% if l.w22.seats %}Prešla je prag od 3%, pa je glas na nju nosio nekoga u parlament.{% else %}<b>Nije osvojila nijedno mjesto</b>, pa glas na nju tad nije nikoga odveo u parlament.{% endif %}</span>{% endif %}</p>
 {% if l.program %}
 <div class="claim">
 <b>Obećavaju{% if not r.chamber %} (na državnom/entitetskom nivou){% endif %}:</b> {{ l.program.promises[0] }}{% if l.program.promises | length > 1 %} <span class="mut">·</span> {{ l.program.promises[1] }}{% endif %}

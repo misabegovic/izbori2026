@@ -51,6 +51,10 @@
 {% for race, d in cal.stability_by_race.items() %}<li>{{ RACE22_NAME.get(race, race) }}: {{ d.top1 }}% naspram {{ d.none }}%</li>{% endfor %}
 </ul>
 <p>Gdje je grupa mala, broj povlačimo prema prosjeku te vrste mjesta na listi, da ćelija od dvadesetak ljudi ne proizvede samouvjerenu brojku. Snaga tog povlačenja je {{ cal.shrink_k }} zamišljenih slučajeva.</p>
+<h3>Druga brojka: ide li glas nekud</h3>
+<p>„Šansa za mjesto” odgovara na pitanje da li ovaj čovjek može ući. Ne odgovara na pitanje koje birač zapravo postavlja: da li glas uopšte išta nosi. To su dvije stvari i stoje jedna pored druge.</p>
+<p>Mandat prvo osvaja lista. Ispod 3% glasova na području lista ne dobija ništa, pa glas na nju ne odvede nikoga u parlament, ma koliko čovjek na njoj bio popularan. Zato uz svaki listić i svaki profil piše koliko je glasova {{ cal.measured_on.split(',')[0] | replace('opći izbori ', '') }}. na tom istom području otišlo listama koje nisu dobile nijedno mjesto. Negdje je to bilo pod 15 posto, a u najgoroj jedinici blizu 46 posto.</p>
+<p>Udio se računa po <b>glasačima liste</b>, ne po zbiru ličnih glasova. Jedan listić može zaokružiti do tri imena, a liste se razlikuju po tome koliko njihovi birači to koriste: u 2022 od 0,45 do 6,24 imena po listiću. Zbir ličnih glasova bi zato precijenio liste čiji birači zaokružuju više imena. Broj glasača liste vadimo iz procenta koji API daje uz svakog kandidata; nazivnik je isti za sve na listi u svih 496 provjerenih lista, pa se broj listića dobije tačno.</p>
 <h3>Šta ovaj procenat i dalje ne zna</h3>
 <p class="small mut">Ne zna šta se promijenilo od 2022: ko je u međuvremenu postao poznat, koja stranka je pukla, ko se s kim udružio. Ne zna ništa o kampanji. Mjeren je na jednim izborima, 2022, jer su to zadnji opći izbori za koje imamo i rezultat i stanje prije njih. Zato piše „nije prognoza”, a ne „prognoza”.</p>
 </div>

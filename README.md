@@ -21,7 +21,7 @@ Vodič za birače koji ne prate politiku. Opći izbori u BiH, 4. oktobar 2026. B
 
 ```
 fetch.py          Mashinerija → data/units, people_cache, municipalities (kandidature, mandati, rezultati)
-fetch_history.py  Mashinerija → data/timelines (svih 7.028), pubids, appointed, unit_spend, seat_bar
+fetch_history.py  Mashinerija → data/timelines (svih 7.028), pubids, appointed, unit_spend, seat_bar, list_strength
 fetch_ecitizen.py eCitizen → data/ecitizen.json
 fetch_votes.py    Mashinerija → data/divisions, outcomes, records, votes, profiles, parties, speeches
 data/key_decisions.json   ručno odabrane ključne odluke saziva (25 PSBiH + 24 NSRS) s prostim opisom
@@ -74,6 +74,14 @@ Dva ulaza, oba poznata unaprijed: **gdje je čovjek na listi** u odnosu na manda
 Uz procenat na svakom profilu stoji i **šta je mandat ovdje stvarno koštao** prošli put (`data/seat_bar.json`): koliko je ličnih glasova imao najslabije prošao izabrani, koliko prosječan, i koliko je ljudi imalo više glasova od najslabijeg izabranog a ipak ostalo vani. U Tuzlanskom kantonu 2022 takvih je bilo 142 od 588 kandidata. Mandat prvo osvaja lista; lični glasovi odlučuju tek ko ga unutar liste dobije.
 
 Drugi ulaz je dodan jer bez njega brojka ne razlikuje ljude koje birači stvarno zaokružuju. U 2022 je od onih koji su ranije bili prvi po glasovima prošlo 10% čak i duboko na listi bez ijednog mandata, naspram 1% onih koji nikad nisu bili na listiću. Razmak postoji u svakoj grupi po mjestu na listi i u sve četiri trke posebno. Rijetke kombinacije se povlače prema prosjeku te grupe (`SHRINK = 25`), da ćelija od dvadesetak ljudi ne proizvede samouvjerenu brojku.
+
+## Ide li glas nekud (druga metrika)
+
+Šansa za mjesto kaže može li ovaj čovjek ući. Ne kaže da li glas uopšte išta nosi, a to je pitanje koje birač zapravo postavlja. Mandat prvo osvaja lista: ispod 3% na području lista ne dobija ništa, pa ni najpopularniji čovjek na njoj ne ide nikuda.
+
+Zato uz svaki listić i profil stoji koliko je glasova 2022 na tom istom području otišlo listama bez ijednog mandata (`data/list_strength.json`). U Tuzlanskom kantonu 14,8%, u najgoroj jedinici 45,9%.
+
+Udio se računa po **glasačima liste**, ne po zbiru ličnih glasova: jedan listić zaokružuje do tri imena, a liste se razlikuju koliko to koriste (2022: od 0,45 do 6,24 imena po listiću). Broj glasača liste vadi se iz `percentage` koji API daje uz svakog kandidata; nazivnik je isti za sve na listi u svih 496 provjerenih lista, pa je broj listića tačan, a ne procijenjen.
 
 ## Ograničenja
 
