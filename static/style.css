@@ -196,6 +196,12 @@ ol.plist li.cut{border-top:2px solid #1f5fa9;margin-top:.6rem;padding-top:.7rem}
 .pbody{flex:1 1 auto;min-width:0}
 .pname{display:inline-block;font-weight:600;line-height:1.3}
 .pmeta{display:block;font-size:.84rem;color:var(--mut);line-height:1.4;margin-top:.1rem}
+/* The small print under a name is now mostly links — party, constituency, ballot. In accent
+   blue that line shouts louder than the name above it, which is backwards. Keep them the
+   colour of the text they sit in and mark them with a hairline, so the line still reads as a
+   sentence and every part of it is still a way out. */
+.qz a, .pmeta a{color:inherit;text-decoration:underline;text-decoration-color:#ccd4dc;text-underline-offset:2px}
+.qz a:hover, .pmeta a:hover{color:var(--acc);text-decoration-color:currentColor}
 @media (max-width:520px){
   .rng{width:3.2rem}
   table.proj{font-size:.78rem}
@@ -212,8 +218,11 @@ ol.plist li.cut{border-top:2px solid #1f5fa9;margin-top:.6rem;padding-top:.7rem}
      the heading is what has to give. */
   table.proj th{font-size:.72rem}
   /* .b is nowrap everywhere else on the site, and there it is right — but "nova/sklopljena"
-     sitting inside a table cell drags the whole name column out with it. */
-  table.proj td .b{white-space:normal}
+     sitting inside a table cell drags the whole name column out with it. Let it wrap, but not
+     the way the name column wraps: the cell breaks inside words, and a badge that reads
+     "nova/sklopl ena" is worse than a wide column. It may break after the slash and nowhere
+     else. */
+  table.proj td .b{white-space:normal;overflow-wrap:normal;word-break:normal}
   ol.plist li{gap:.5rem}
   .pw{flex-basis:3.1rem}
   .twonum .tn{min-width:0}

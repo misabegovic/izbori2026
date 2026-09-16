@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ r.short }} — listić — Izbori 2026{% endblock %}
+{% from "_links.html" import plink %}
 {% block content %}
 <p class="mut"><a href="javascript:history.back()">← nazad</a> · <a href="index.html">početna</a></p>
 <h1>{{ r.short }}{% if u.race == 'oi2026-1' %} — {{ {'701':'bošnjački član','702':'hrvatski član','703':'srpski član'}[u.area] }}{% endif %}</h1>
@@ -64,7 +65,7 @@
 <p class="mut small" style="margin-top:0">{{ pu.mandati }} mandata se ovdje dijeli direktno. Brojke su iz {{ PROJ.sims | num }} simulacija: rezultat iz 2022, pomjeren onoliko koliko su se glasovi pomjerili na lokalnim izborima 2020→2024, pa mandati podijeljeni po zakonu. <a href="provjera-modela.html">Model je na 2022. griješio {{ PROJ.backtest.share_mae_pp | dec }} p.p. po listi →</a></p>
 <table class="cal proj"><thead><tr><th>Lista</th><th>Udio</th><th>Preko praga</th><th>Mandata</th></tr></thead><tbody>
 {% for r in pu.liste %}{% if r.udio >= 0.4 or r.mandati >= 0.05 %}
-<tr><td class="ln small">{{ r.lista | ptitle }}</td>
+<tr><td class="ln small">{{ plink(r.lista) }}</td>
 <td class="num small">{{ r.udio | tdec }}%</td>
 <td class="num small">{{ r.p_prag | tdec }}%</td>
 <td class="num">{{ r.mandati | tdec }}</td></tr>
@@ -92,7 +93,7 @@ window.homeFilter=function(){var on=document.getElementById('homechk').checked;r
 {% if l.w22 %}<br><span class="small">To je bilo <b>{{ l.w22.share | dec }}%</b> glasača ovdje. {% if l.w22.seats %}Prešla je prag od 3%, pa je glas na nju nosio nekoga u parlament.{% else %}<b>Nije osvojila nijedno mjesto</b>, pa glas na nju tad nije nikoga odveo u parlament.{% endif %}</span>{% endif %}</p>
 {% if l.proj %}
 {% if l.proj.nasljeduje and (l.proj.nasljeduje | length > 1 or l.proj.nasljeduje[0].udio < 90) %}
-<p><b>Čiji su ovo birači bili 2022:</b> {% for s in l.proj.nasljeduje %}{{ s.stranka | ptitle }} ({{ s.udio | dec }}%){% if not loop.last %}, {% endif %}{% endfor %}. <span class="small mut">Ne po imenu liste nego po tome gdje su ljudi s nje stajali prošli put; odatle projekcija računa koliko glasova lista počinje.</span></p>
+<p class="qz"><b>Čiji su ovo birači bili 2022:</b> {% for s in l.proj.nasljeduje %}{{ plink(s.stranka) }} ({{ s.udio | dec }}%){% if not loop.last %}, {% endif %}{% endfor %}. <span class="small mut">Ne po imenu liste nego po tome gdje su ljudi s nje stajali prošli put; odatle projekcija računa koliko glasova lista počinje.</span></p>
 {% endif %}
 <p><b>Projekcija za 2026:</b> oko <b>{{ l.proj.udio | dec }}%</b> glasova ovdje i <b>{{ l.proj.mandati | dec }}</b> mandata{% if l.proj.p_prag < 97 %}; prag od 3% pređe u {{ l.proj.p_prag | dec }}% simulacija{% endif %}.
 {% if l.proj.kandidati and l.proj.kandidati[0].p >= 5 %}<br><span class="small">Najvjerovatniji da uđu: {% for c in l.proj.kandidati[:3] %}{% if c.p >= 5 %}{% set ch = chref(c.pid) %}{% if ch %}<a href="{{ ch }}">{{ c.ime | nice }}</a>{% else %}{{ c.ime | nice }}{% endif %} ({{ c.p | dec }}%){% if not loop.last %}, {% endif %}{% endif %}{% endfor %}.</span>{% endif %}

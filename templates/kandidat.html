@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ p.name }} — Izbori 2026{% endblock %}
+{% from "_links.html" import plink, plinkraw, olink %}
 {% block content %}
 <p class="mut"><a href="javascript:history.back()">← nazad</a> · <a href="index.html">početna</a></p>
 {% if p.img %}<img class="av big" src="{{ p.img }}" alt="{{ p.name }}, službena fotografija">{% endif %}
@@ -57,9 +58,9 @@
 <div class="card">
 <p class="lead" style="margin-top:0">Glas prvo ide listi, pa tek onda čovjeku. Ako zaokružiš listu i ovo ime, glas radi za listu i onda kad ovaj čovjek ne prođe.</p>
 {% if weight.list and weight.list.seats %}
-<p><b>{{ weight.list.label | ptitle }}</b> je {{ weight.unit.year }}. ovdje imala <b>{{ weight.list.share | dec }}%</b> glasova i osvojila <b>{{ mjesta(weight.list.seats) }}</b>. Prešla je prag, glas na nju je tad nešto značio.</p>
+<p><b>{{ plink(weight.list.label) }}</b> je {{ weight.unit.year }}. ovdje imala <b>{{ weight.list.share | dec }}%</b> glasova i osvojila <b>{{ mjesta(weight.list.seats) }}</b>. Prešla je prag, glas na nju je tad nešto značio.</p>
 {% elif weight.list %}
-<p><b>{{ weight.list.label | ptitle }}</b> je {{ weight.unit.year }}. ovdje imala <b>{{ weight.list.share | dec }}%</b> glasova i <b>nije osvojila nijedno mjesto</b>. Ispod 3% lista ne dobija ništa, a ni iznad praga mjesto nije zagarantovano: dijele se po broju glasova.</p>
+<p><b>{{ plink(weight.list.label) }}</b> je {{ weight.unit.year }}. ovdje imala <b>{{ weight.list.share | dec }}%</b> glasova i <b>nije osvojila nijedno mjesto</b>. Ispod 3% lista ne dobija ništa, a ni iznad praga mjesto nije zagarantovano: dijele se po broju glasova.</p>
 {% else %}
 <p><b>Ova lista {{ weight.unit.year }}. ovdje nije izlazila</b>, ili je pod drugim imenom. Nema s čim porediti.</p>
 {% endif %}
@@ -150,7 +151,7 @@
 {% if loy and loy.spans %}
 <div class="card">
 <p style="margin:0 0 .3rem"><b>Stranke kroz vrijeme</b></p>
-<ul style="margin:.2rem 0 .3rem 1.1rem;padding:0">{% for s in loy.spans %}<li class="small">{{ s.name | ptitle_raw }}: {{ s.from }}{% if s.to != s.from %}–{{ s.to }}{% endif %} ({{ s.n }} kandidatur{{ 'a' if s.n == 1 else ('e' if s.n < 5 else 'a') }})</li>{% endfor %}</ul>
+<ul class="qz" style="margin:.2rem 0 .3rem 1.1rem;padding:0">{% for s in loy.spans %}<li class="small">{{ plinkraw(s.name) }}: {{ s.from }}{% if s.to != s.from %}–{{ s.to }}{% endif %} ({{ s.n }} kandidatur{{ 'a' if s.n == 1 else ('e' if s.n < 5 else 'a') }})</li>{% endfor %}</ul>
 {% if loy.switches %}<p class="small">Mijenjao/la je stranku {{ loy.switches }} put{{ '' if loy.switches == 1 else 'a' }}. <span class="mut">Ako je stranka samo promijenila ime ili ušla u koaliciju, ovo može izgledati kao promjena a nije.</span></p>
 {% else %}<p class="small">Uvijek ista stranka.</p>{% endif %}
 </div>
@@ -218,7 +219,7 @@
 <div class="card">
 <div class="d3 d3-years" data-d3='{{ tl_json | safe }}'><span class="fb">{% for t in tl %}{{ t.y }}{% if t.elected %} (izabran/a){% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</span></div>
 {% for t in tl %}
-<div class="kd{% if t.via_merge %} merged{% endif %}" style="padding:.35rem 0"><b>{{ t.y }}</b> — {{ t.lvl }}{% if t.area %}, {{ t.area | area }}{% endif %}{% if t.party %}, <i>{{ t.party | ptitle_raw }}</i>{% endif %}{% if t.pos %}, {{ t.pos }}. na listi{% endif %}{% if t.votes %}, {{ t.votes | num }} glasova{% endif %} — {% if t.elected %}<b>izabran/a</b>{% else %}nije izabran/a{% endif %}{% if t.via_merge %}<span class="tagspoj" title="CIK ovu kandidaturu vodi pod posebnim zapisom o osobi. Spojili smo je s ovim profilom; pravilo je objašnjeno u metodi.">spojeno</span>{% endif %}</div>
+<div class="kd qz{% if t.via_merge %} merged{% endif %}" style="padding:.35rem 0"><b>{{ t.y }}</b> — {{ t.lvl }}{% if t.area %}, {{ olink(t.area) }}{% endif %}{% if t.party %}, <i>{{ plinkraw(t.party) }}</i>{% endif %}{% if t.pos %}, {{ t.pos }}. na listi{% endif %}{% if t.votes %}, {{ t.votes | num }} glasova{% endif %} — {% if t.elected %}<b>izabran/a</b>{% else %}nije izabran/a{% endif %}{% if t.via_merge %}<span class="tagspoj" title="CIK ovu kandidaturu vodi pod posebnim zapisom o osobi. Spojili smo je s ovim profilom; pravilo je objašnjeno u metodi.">spojeno</span>{% endif %}</div>
 {% endfor %}
 {% if p.merged %}
 {% if p.manual %}

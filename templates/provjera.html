@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Koliko model griješi — Izbori 2026{% endblock %}
+{% from "_links.html" import plink %}
 {% block content %}
 <p class="mut"><a href="projekcije.html">← projekcije</a> · <a href="index.html">početna</a></p>
 <h1>Koliko ovaj model griješi</h1>
@@ -49,7 +50,7 @@
 <p class="mut small" style="margin:0 0 .4rem">Prosječna greška {{ v.mae_mandata | dec2 }} mandata · stvarni rezultat je u rasponu od 5 do 95 posto simulacija kod {{ v.u_rasponu }}% lista</p>
 <div class="calwrap"><table class="cal"><thead><tr><th>Lista</th><th>Model</th><th>Raspon</th><th>Stvarno</th></tr></thead><tbody>
 {% for r in v.rows %}{% if r.stvarno or r.projekcija >= 0.5 %}
-<tr><td class="ln">{{ r.lista | ptitle }}</td><td class="num">{{ r.projekcija | tdec }}</td><td class="num small mut">{{ r.p05 }}–{{ r.p95 }}</td><td class="num"><b>{{ r.stvarno }}</b>{% if not r.u_rasponu %} <span class="b out" title="Izvan raspona koji je model dao">van</span>{% endif %}</td></tr>
+<tr><td class="ln">{{ plink(r.lista) }}</td><td class="num">{{ r.projekcija | tdec }}</td><td class="num small mut">{{ r.p05 }}–{{ r.p95 }}</td><td class="num"><b>{{ r.stvarno }}</b>{% if not r.u_rasponu %} <span class="b out" title="Izvan raspona koji je model dao">van</span>{% endif %}</td></tr>
 {% endif %}{% endfor %}
 </tbody></table></div>
 {% endfor %}
@@ -113,7 +114,7 @@
 <p>Za Predsjedništvo i predsjednika RS nema liste ni praga — pobjeđuje jedan čovjek. Za takvu trku imamo svega {{ bt.vecinske.parovi | length }} para „isti subjekt, dva puta zaredom” na kojima se uopšte može izmjeriti koliko se glasovi pomjeraju. Odatle širina raspona ({{ bt.vecinske.sd }} u logaritmu), i zato tim brojkama treba vjerovati najmanje.</p>
 <div class="calwrap"><table class="cal"><thead><tr><th>Trka</th><th>Subjekt</th><th>2018</th><th>2022</th></tr></thead><tbody>
 {% for r in bt.vecinske.parovi %}
-<tr><td class="small">{{ r.trka }}{% if r.area != '5' %} {{ r.area }}{% endif %}</td><td class="ln small">{{ r.stranka | ptitle }}</td><td class="num">{{ r['2018'] | tdec }}%</td><td class="num">{{ r['2022'] | tdec }}%</td></tr>
+<tr><td class="small">{{ r.trka }}{% if r.area != '5' %} {{ r.area }}{% endif %}</td><td class="ln small">{{ plink(r.stranka) }}</td><td class="num">{{ r['2018'] | tdec }}%</td><td class="num">{{ r['2022'] | tdec }}%</td></tr>
 {% endfor %}
 </tbody></table></div>
 </div>

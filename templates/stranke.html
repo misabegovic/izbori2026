@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Stranke — Izbori 2026{% endblock %}
+{% from "_links.html" import plink %}
 {% block content %}
 <h1>Stranke i liste</h1>
 <p class="lead">Za svaku: šta obećavaju sad, i kako su glasali kad su imali vlast.</p>
@@ -18,7 +19,7 @@
 <p class="mut small" style="margin-top:0">Ovo je rupa na ovom sajtu, ne na listiću. Za ove liste <a href="projekcije.html">projekcija</a> računa bar jedan mandat, a nismo našli objavljen program ni provjeru ranijih obećanja. Ako ih objave — ili ako znaš gdje su — <a href="https://github.com/misabegovic/izbori2026/issues">javi</a> i dodaćemo ih.</p>
 <ul style="margin:.3rem 0 0 1.1rem;padding:0">
 {% for b in bez_programa %}
-<li><b>{{ b.lista | ptitle }}</b> <span class="mut small">— oko {{ b.mandati | dec }} mandata, {{ b.dom }}</span></li>
+<li><b>{{ plink(b.lista) }}</b> <span class="mut small">— oko {{ b.mandati | dec }} mandata, {{ b.dom }}</span></li>
 {% endfor %}
 </ul>
 </div>
