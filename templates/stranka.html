@@ -38,7 +38,7 @@
 <div class="viz-bar tagbar" data-for="kvlist"></div>
 <div id="kvlist">
 {% for kv in p.key_votes %}
-<div class="kd" data-tags="{{ kv.d.tags | join(" ") }}"><span class="vote {{ kv.maj_cls }}">{{ kv.maj_word }}</span> <span class="t">{{ kv.d.title }}</span> <span class="d">{{ kv.d.date }}</span><br><span class="small mut">{{ kv.d.plain }}</span>{% set cats = [kv.za, kv.protiv, kv.uz, kv.odsutan] | select | list %}{% if kv.n > 1 and cats | length > 1 %}{{ stack([("za", kv.za, "c-za"), ("protiv", kv.protiv, "c-protiv"), ("uzdržan", kv.uz, "c-uz"), ("nije glasalo", kv.odsutan, "c-od")], None) }}{% elif kv.n > 1 %}<span class="small mut"> · svih {{ kv.n }} isto</span>{% endif %}</div>
+<div class="kd" data-tags="{{ kv.d.tags | join(" ") }}"><span class="vote {{ kv.maj_cls }}">{{ kv.maj_word }}</span> <span class="t">{{ kv.d.title }}</span> <span class="d">{{ kv.d.date }}</span><br><span class="small mut">{{ kv.d.plain }}</span>{% set cats = [kv.za, kv.protiv, kv.uz, kv.odsutan] | select | list %}{% if kv.n > 1 and cats | length > 1 %}{{ stack([("za", kv.za, "c-za"), ("protiv", kv.protiv, "c-protiv"), ("uzdržan", kv.uz, "c-uz"), ("nije glasalo", kv.odsutan, "c-od")], None) }}{% elif kv.n > 1 %}<span class="small mut"> · {{ "oba isto" if kv.n == 2 else ("svih " ~ kv.n ~ " isto") }}</span>{% endif %}</div>
 {% endfor %}
 </div>
 {% else %}
