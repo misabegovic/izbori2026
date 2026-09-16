@@ -13,7 +13,7 @@
   {"promise":"Kandidatski status u EU do 2018.","outcome":"djelimično","what_happened":"Aplikacija 2016, upitnik 2018, status nije dobijen u mandatu.","sources":["https://istinomjer.ba/predizborna_obecanja/opci-izbori/2014-2018/vijece-ministara-bih/sda"]}],
  "sources":["https://istinomjer.ba/predizborna_obecanja/opci-izbori/2014-2018/vlada-fbih/sda","https://istinomjer.ba/predizborna_obecanja/opci-izbori/2014-2018/vijece-ministara-bih/sda"],
  "confidence":"medium","note":"SDA u Vladi FBiH: 219 obećanja, 6 ispunjeno, 9 većim dijelom, 94 neispunjeno, 7 prekršeno (približno). Na državnom nivou 54 obećanja, 3 ispunjena. Svi nivoi 2014–2018: 32 od 966 (3,3%)."},
-{"program":"SDA","mandate":"2018-2022","in_power":"Vijeće ministara BiH (od 2019, sa HDZ BiH, SNSD, DF); Vlada FBiH samo tehnički mandat; Vlada KS 2020–2021.","tracked":89,"fulfilled":3,"partial":4,"broken":49,
+{"program":"SDA","mandate":"2018-2022","in_power":"Vijeće ministara BiH (od 2019, sa HDZ BiH, SNSD, DF); Vlada FBiH samo kao stara vlada koja čeka novu (tehnički mandat); Vlada KS 2020–2021.","tracked":89,"fulfilled":3,"partial":4,"broken":49,
  "examples":[
   {"promise":"Prosječna plata 1.100 KM do 2022, rast BDP-a.","outcome":"ispunjeno","what_happened":"Prosječna plata u maju 2022: 1.106 KM.","sources":["https://istinomjer.ba/tek-3-ispunjenih-obecanja-na-drzavnom-nivou/"]},
   {"promise":"Članstvo u NATO-u; Koridor Vc i autoput Sarajevo–Beograd.","outcome":"nije","what_happened":"Bez napretka ka NATO-u; autoputevi na državnom nivou neispunjeni.","sources":["https://istinomjer.ba/predizborna_obecanja/opci-izbori/2018-2022/vijece-ministara-bih/sda"]},
@@ -45,10 +45,10 @@
   {"promise":"Zdravstvena zaštita za sve u FBiH; manji javni rashodi.","outcome":"nije","what_happened":"Oba neispunjena.","sources":["https://istinomjer.ba/predizborna_obecanja/opci-izbori/2014-2018/vlada-fbih/hdz-bih"]}],
  "sources":["https://istinomjer.ba/predizborna_obecanja/opci-izbori/2014-2018/vlada-fbih/hdz-bih","https://istinomjer.ba/predizborna_obecanja/opci-izbori/2014-2018/vijece-ministara-bih/hdz-bih"],
  "confidence":"medium","note":"HDZ BiH u Vladi FBiH: 92 obećanja, 0 ispunjeno, 2 većim dijelom, 61 neispunjeno, 1 prekršeno. Vijeće ministara: 13 obećanja, 0 ispunjeno."},
-{"program":"HDZ BiH","mandate":"2018-2022","in_power":"Vijeće ministara BiH (od 2019); Vlada FBiH tehnički mandat.","tracked":9,"fulfilled":1,"partial":6,"broken":2,
+{"program":"HDZ BiH","mandate":"2018-2022","in_power":"Vijeće ministara BiH (od 2019); Vlada FBiH samo kao stara vlada koja čeka novu (tehnički mandat).","tracked":9,"fulfilled":1,"partial":6,"broken":2,
  "examples":[
   {"promise":"Provedba odluke Ustavnog suda za Mostar (izbori u Mostaru).","outcome":"ispunjeno","what_happened":"Sporazum SDA–HDZ 2020, izbori u Mostaru decembar 2020.","sources":["https://istinomjer.ba/tek-3-ispunjenih-obecanja-na-drzavnom-nivou/"]},
-  {"promise":"Izmjene Izbornog zakona (legitimno predstavljanje).","outcome":"nije","what_happened":"Dogovor nije postignut do 2022; nametnuo ga OHR na izbornu noć.","sources":["https://istinomjer.ba/tek-3-ispunjenih-obecanja-na-drzavnom-nivou/"]}],
+  {"promise":"Izmjene Izbornog zakona (legitimno predstavljanje).","outcome":"nije","what_happened":"Dogovor nije postignut do 2022; nametnuo ga visoki predstavnik (OHR, stranac koji može nametati zakone) na izbornu noć.","sources":["https://istinomjer.ba/tek-3-ispunjenih-obecanja-na-drzavnom-nivou/"]}],
  "sources":["https://istinomjer.ba/tek-3-ispunjenih-obecanja-na-drzavnom-nivou/"],"confidence":"high","note":"9 obećanja u Vijeću ministara: 1 ispunjeno, 6 djelimično/manjim dijelom, 2 neispunjeno."},
 {"program":"Naša stranka","mandate":"2010-2014","in_power":"opozicija","tracked":null,"fulfilled":null,"partial":null,"broken":null,"examples":[],"sources":[],"confidence":"high","note":""},
 {"program":"Naša stranka","mandate":"2014-2018","in_power":"opozicija","tracked":null,"fulfilled":null,"partial":null,"broken":null,"examples":[],"sources":[],"confidence":"high","note":""},
@@ -79,7 +79,7 @@
  "examples":[
   {"promise":"Zadržati prava boraca.","outcome":"ispunjeno","what_happened":"Jedino ispunjeno SBB obećanje u FBiH.","sources":["https://istinomjer.ba/predizborna_obecanja/opci-izbori/2014-2018/vlada-fbih/sbb"]},
   {"promise":"Masovno zapošljavanje i javni radovi.","outcome":"nije","what_happened":"Neispunjeno.","sources":["https://istinomjer.ba/predizborna_obecanja/opci-izbori/2014-2018/vlada-fbih/sbb"]},
-  {"promise":"Zakon o zabrani negiranja genocida.","outcome":"nije","what_happened":"Nije usvojen u Parlamentu BiH (nametnut 2021 od OHR-a).","sources":["https://istinomjer.ba/predizborna_obecanja/opci-izbori/2014-2018/vijece-ministara-bih/sbb"]}],
+  {"promise":"Zakon o zabrani negiranja genocida.","outcome":"nije","what_happened":"Nije usvojen u Parlamentu BiH (nametnuo ga 2021 visoki predstavnik, OHR).","sources":["https://istinomjer.ba/predizborna_obecanja/opci-izbori/2014-2018/vijece-ministara-bih/sbb"]}],
  "sources":["https://istinomjer.ba/predizborna_obecanja/opci-izbori/2014-2018/vlada-fbih/sbb"],"confidence":"medium","note":"SBB u Vladi FBiH: 51 obećanje, 1 ispunjeno, 15 djelimično, 20 neispunjeno, 1 prekršeno. Vijeće ministara: 26, 0 ispunjeno."},
 {"program":"SBB Fahrudin Radončić","mandate":"2018-2022","in_power":"Vlada KS (2018–2019, 2020–2021); Vijeće ministara 2019–2020 (Radončić ministar sigurnosti, ostavka).","tracked":260,"fulfilled":4,"partial":72,"broken":183,
  "examples":[

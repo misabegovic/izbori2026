@@ -31,6 +31,14 @@ def party_key(s):
     return re.sub(r"[^a-z0-9]+", " ", fold(s)).strip()
 
 
+def home_key(s):
+    """Municipality name -> key that matches both CIK area names ('GRAD MOSTAR', '* STOLAC',
+    'PROZOR - RAMA', 'FOČA (FBIH)') and our municipality list ('Mostar', 'Stolac', 'Prozor-Rama', 'Foča')."""
+    k = party_key(re.sub(r"\(.*?\)", " ", s or ""))
+    k = re.sub(r"^(grad|opcina|opstina) ", "", k)
+    return k
+
+
 def pid_slug(pid):
     return re.sub(r"[^A-Za-z0-9]+", "-", pid)
 
@@ -238,12 +246,29 @@ def party_identity(name):
     return " ".join(k.split()[:2])
 
 
+PARTY_STOP = {"koalicija", "za", "i", "bih", "lista", "zajedno", "u", "na", "pokret", "stranka", "nezavisna", "narodna", "bosnu", "hercegovinu", "bosne", "hercegovine"}
+
+
+def party_tokens(name):
+    return {w for w in party_key(name).split() if w not in PARTY_STOP and not w.isdigit()}
+
+
+def same_party(a, b):
+    """Printed names that are the same party: known identity, or a party that later ran inside a
+    coalition whose printed name still carries it (SDA -> 'Koalicija za Mostar 2020 - SDA, BPS, DF')."""
+    if party_identity(a) == party_identity(b):
+        return True
+    ta, tb = party_tokens(a), party_tokens(b)
+    small, big = (ta, tb) if len(ta) <= len(tb) else (tb, ta)
+    return bool(small) and len(small) <= 2 and small <= big
+
+
 def unique_parties(tl):
-    seen, out = set(), []
+    out = []
     for t in sorted(dedupe_tl(tl), key=lambda t: (t.get("y") or 0)):
         p = t.get("party")
-        if p and party_identity(p) not in seen:
-            seen.add(party_identity(p)); out.append((t["y"], p))
+        if p and not any(same_party(p, q) for _, q in out):
+            out.append((t["y"], p))
     return out
 
 
@@ -286,7 +311,7 @@ def person_view(c):
     for t in sorted(tl, key=lambda t: -(t.get("y") or 0)):
         if t.get("area") and (("vijeće" in (t.get("lvl") or "")) or ("ačelnik" in (t.get("lvl") or ""))):
             home = nice_name(t["area"]); break
-    v = {"pid": pid, "slug": pid_slug(pid) if pid else None, "name": nice_name(c.get("name")), "raw_name": c.get("name"), "home": home, "home_key": fold(home) if home else "",
+    v = {"pid": pid, "slug": pid_slug(pid) if pid else None, "name": nice_name(c.get("name")), "raw_name": c.get("name"), "home": home, "home_key": home_key(home) if home else "",
          "pos": c.get("pos"), "stood": stood, "won": won, "office": rec.get("isOfficeHolder") or c.get("office"),
          "parties": parties, "n_parties": len(parties), "confidence": rec.get("confidence") or c.get("confidence"),
          "has_record": pid in records, "has_page": bool(tl) or pid in records or bool(prof.get("bio")),
@@ -303,7 +328,7 @@ def person_view(c):
         badges.append(("won", (f"izabran {won}× {where}" if won > 1 else f"već biran {where}").strip(),
                        "Ranije izabran: " + ", ".join(f"{t['y']} {t['lvl']}" for t in won_rows[:6])))
     if v["n_parties"] > 1:
-        badges.append(("switch", f"mijenjao stranke ({v['n_parties']})", "Kandidovao se za različite stranke: " + " → ".join(f"{party_title(p)} ({y})" for y, p in parties) + ". Ako je stranka samo promijenila ime, ovo može biti greška."))
+        badges.append(("switch", f"mijenjao stranke ({v['n_parties']})", "Kandidovao se za različite stranke: " + " → ".join(f"{party_title(p, raw=True)} ({y})" for y, p in parties) + ". Ako je stranka samo promijenila ime ili ušla u koaliciju, ovo može biti greška."))
     if stood == 1:
         badges.append(("new", "prvi put", "Prvi put na listiću."))
     if stood >= 3 and not won:
@@ -458,7 +483,7 @@ for grp in list(context["presidency"].values()) + [context["rs_president"]]:
         PRES_CTX[fold(r_["name"])] = r_
 env.filters["lat"] = lambda x: fold(re.sub(r"\s*-\s*NE[OZ]?[A-Z]*VISNI KANDIDAT.*$", "", cyr2lat(x or ""), flags=re.I))
 COMP = {"501": "dodatna lista za cijelu Federaciju", "502": "dodatna lista za cijelu RS", "400": "dodatna lista za cijelu Federaciju", "300": "dodatna lista za cijelu RS"}
-base_ctx = {"generated": gen, "RACE": RACE, "PRES_CTX": PRES_CTX, "COMP": COMP}
+base_ctx = {"generated": gen, "RACE": RACE, "PRES_CTX": PRES_CTX, "COMP": COMP, "CHAMBER_NAME": CHAMBER_NAME}
 
 RACE_LVL = {"oi2026-2": "Predstavnički dom PSBiH", "oi2026-4": "Predstavnički dom Parlamenta FBiH", "oi2026-6": "Narodna skupština Republike Srpske", "oi2026-7": "Skupštine kantona"}
 
@@ -467,7 +492,7 @@ CAL = json.load(open(D + "chance_calibration.json")) if os.path.exists(D + "chan
 def cal_pct(bucket, default):
     return (CAL.get(bucket) or {}).get("pct", default)
 def chance_word(pct):
-    return "velika" if pct >= 50 else "srednja" if pct >= 15 else "mala" if pct >= 5 else "vrlo mala"
+    return "velika" if pct >= 50 else "srednja" if pct >= 18 else "mala" if pct >= 5 else "vrlo mala"
 
 
 def list_chances(u, l):

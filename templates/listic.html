@@ -48,7 +48,7 @@
 <h2>Liste, redom kako su na papiru</h2>
 <div id="homefilter" style="display:none" class="card"><label><input type="checkbox" id="homechk" onchange="homeFilter()"> Označi ljude iz <b id="homename"></b> <span class="mut small">(znamo za <span id="homen"></span>; za ostale ne znamo odakle su)</span></label></div>
 <script>
-window.addEventListener('DOMContentLoaded',function(){var q=new URLSearchParams(location.search).get('o');if(!q)return;var key=foldq(q);var rows=document.querySelectorAll('li.person');var n=0;rows.forEach(function(r){if(r.dataset.home===key)n++;});if(!n)return;document.getElementById('homefilter').style.display='';document.getElementById('homename').textContent=q;document.getElementById('homen').textContent=n;
+window.addEventListener('DOMContentLoaded',function(){var q=new URLSearchParams(location.search).get('o');if(!q)return;var key=foldq(q).replace(/[^a-z0-9]+/g,' ').trim();var rows=document.querySelectorAll('li.person');var n=0;rows.forEach(function(r){if(r.dataset.home===key)n++;});if(!n)return;document.getElementById('homefilter').style.display='';document.getElementById('homename').textContent=q;document.getElementById('homen').textContent=n;
 window.homeFilter=function(){var on=document.getElementById('homechk').checked;rows.forEach(function(r){var hit=r.dataset.home===key;r.style.background=(on&&hit)?'#fff7d6':'';r.style.opacity=(on&&r.dataset.home&&!hit)?'.45':'';});document.querySelectorAll('details').forEach(function(d){if(on&&d.querySelector('li.person[data-home="'+key+'"]'))d.open=true;});};});
 </script>
 {% for l in lists %}
