@@ -13,17 +13,28 @@ p { margin:.4rem 0 .8rem; }
    buttons, and 660px is not enough for them. It only affects the bar. */
 .top .in { max-width:880px; margin:0 auto; padding:.5rem 16px; display:flex; align-items:center; gap:.6rem; }
 .top a.home { font-weight:700; text-decoration:none; color:var(--fg); white-space:nowrap; }
-.top nav { display:flex; gap:.9rem; overflow-x:auto; white-space:nowrap; flex:1; min-width:0; align-items:center; scrollbar-width:none; }
-/* The links scroll sideways when there are more of them than fit. The two toggles must not:
-   a reader who cannot find the Cyrillic switch has no way to know it exists. They sit
-   outside the scrolling strip, pinned to the right. */
+.top nav { display:flex; flex-wrap:wrap; gap:.3rem .9rem; flex:1; min-width:0; align-items:center; }
 .top .tools { display:flex; gap:.4rem; flex:0 0 auto; align-items:center; }
-/* On a phone the strip scrolls, because six links stacked vertically would take the whole
-   screen before the page starts. Above phone width there is room for a second line, and a
-   second line beats a link the reader has no way to know is there. */
-@media (min-width:700px){ .top nav { flex-wrap:wrap; overflow-x:visible; gap:.3rem .9rem; } }
-/* At 320px the two buttons at full size take more of the bar than the links do. */
-@media (max-width:520px){ .top .in { gap:.4rem; } .top .tools .tog { font-size:.85rem; padding:.25rem .45rem; } }
+.burger { display:none; }
+
+/* Below 700px the six links and two buttons do not fit one line, and the strip they used to
+   sit in scrolled sideways — which means whatever did not fit was simply invisible, with
+   nothing on screen to say so. On a phone they go behind a button instead. */
+@media (max-width:699px){
+  .top .in { flex-wrap:wrap; gap:.4rem; }
+  .burger { display:flex; flex-direction:column; justify-content:center; gap:4px; margin-left:auto;
+            width:2.3rem; height:2.1rem; padding:0 .45rem; background:#fff; border:1px solid var(--line);
+            border-radius:8px; cursor:pointer; }
+  .burger .bl { display:block; height:2px; background:var(--fg); border-radius:2px; transition:transform .15s, opacity .15s; }
+  .top.open .burger .bl:nth-child(1) { transform:translateY(6px) rotate(45deg); }
+  .top.open .burger .bl:nth-child(2) { opacity:0; }
+  .top.open .burger .bl:nth-child(3) { transform:translateY(-6px) rotate(-45deg); }
+  .top nav, .top .tools { display:none; }
+  .top.open nav { display:flex; flex-basis:100%; flex-direction:column; align-items:stretch; gap:0;
+                  margin-top:.4rem; border-top:1px solid var(--line); }
+  .top.open nav a { font-size:1rem; padding:.62rem .1rem; border-bottom:1px solid #f1f1f1; }
+  .top.open .tools { display:flex; flex-basis:100%; padding:.55rem 0 .25rem; }
+}
 .top nav a { font-size:.9rem; text-decoration:none; }
 .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1rem; margin:.8rem 0; }
 .card.big { padding:1.2rem; }
