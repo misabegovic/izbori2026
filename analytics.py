@@ -100,7 +100,9 @@ def party_matrix(votes, div_chamber, chambers, people, party_label):
                 top, k = cnt.most_common(1)[0]
                 if k * 2 > sum(cnt.values()):
                     pos[p][d] = top
-        parties.sort(key=lambda p: -len(by_party[p]))
+        # name as the tie-break: four parties with two MPs each is common, and without it
+        # their order in the chart is whatever order the ballots were read in.
+        parties.sort(key=lambda p: (-len(by_party[p]), p))
         m, n = [], []
         for a in parties:
             row, rown = [], []

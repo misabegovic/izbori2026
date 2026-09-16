@@ -201,7 +201,11 @@ PROJ_BT = json.load(open(D + "projection_backtest.json")) if os.path.exists(D + 
 PROJ_CAND = PROJ.get("candidates") or {}
 
 units = {}
-for f in glob.glob(D + "units/*.json"):
+# sorted(), because glob returns the order the filesystem happens to hand back. That order
+# decides which ballot counts as a person's first entry, and through that the party label
+# they carry into the roll-call analytics — so an unsorted read makes two builds of the same
+# commit differ. project.py already sorts this same glob.
+for f in sorted(glob.glob(D + "units/*.json")):
     u = json.load(open(f))
     units[f"{u['race']}-{u['area']}"] = u
 
