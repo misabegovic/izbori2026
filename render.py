@@ -193,7 +193,7 @@ RACE = {
     "oi2026-4": {"short": "Parlament Federacije", "kind": "list", "who": "parlament Federacije BiH (zvanično: Predstavnički dom Parlamenta FBiH)",
                  "plain": "Odlučuje o penzijama, zdravstvu, platama i porezima u Federaciji.", "level": "FBiH"},
     "oi2026-5": {"short": "Predsjednik RS", "kind": "one", "who": "predsjednik i dva potpredsjednika Republike Srpske",
-                 "plain": "Biraš JEDNOG čovjeka. Ko ima najviše glasova je predsjednik; potpredsjednici su najbolji kandidati iz druga dva naroda.", "level": "RS"},
+                 "plain": "Biraš JEDNOG čovjeka. Ko ima najviše glasova je predsjednik; potpredsjednici su kandidati s najviše glasova među Bošnjacima i Hrvatima (ako pobijedi Srbin), jer RS mora imati po jednog iz sva tri naroda.", "level": "RS"},
     "oi2026-6": {"short": "Narodna skupština RS", "kind": "list", "who": "parlament Republike Srpske",
                  "plain": "Odlučuje o penzijama, zdravstvu, platama, porezima i budžetu RS.", "level": "RS", "chamber": "narodna-skupstina-rs"},
     "oi2026-7": {"short": "Skupština kantona", "kind": "list", "who": "parlament tvog kantona",

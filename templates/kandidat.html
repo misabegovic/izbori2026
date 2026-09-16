@@ -35,7 +35,7 @@
 <p class="small mut">Ukupno {{ r.n | num }} glasanja.{% if r.nsrs %} NSRS ne objavljuje ko je bio odsutan, samo ko nije glasao.{% endif %}</p>
 </div>
 {% endfor %}
-{% if rec and not kd %}<p class="mut small">Nije glasao/la ni o jednoj od odabranih ključnih odluka (npr. u to vrijeme bio/la ministar ili nije bio/la u parlamentu).</p>{% endif %}
+{% if rec and not kd %}<p class="mut small">Nije glasao/la ni o jednoj od odabranih ključnih odluka. Najčešći razlog: u to vrijeme nije bio/la u parlamentu, ili je bio/la ministar pa nije glasao/la.</p>{% endif %}
 {% if kd %}
 <h2>Ključne odluke: kako je glasao/la</h2>
 <p class="mut small">Odabrali smo najvažnije zakone saziva. Za svaki piše šta je i kako je ova osoba glasala. Filtriraj po temi:</p>
