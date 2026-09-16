@@ -26,7 +26,8 @@
   ],
   "confidence": "high",
   "note": "Zvanični izborni program 2026-2030 predstavljen 4.9.2026. pod sloganom 'Jedna država. Jedan tim'; obećanja preuzeta iz medijskih izvještaja o programu.",
-  "power": "u vlasti (država, FBiH, KS)"
+  "power": "u vlasti (država, FBiH, KS)",
+  "power_history": "U vlasti 2010–2014 (država i FBiH) i od 2022 (država, FBiH, KS). Ukupno oko 8 godina od 2006."
  },
  {
   "name": "SDA",
@@ -54,7 +55,8 @@
   ],
   "confidence": "medium",
   "note": "Zvanični pisani program 2026 nije pronađen na sda.ba; obećanja su iz Izetbegovićevih govora na otvaranju kampanje (Stolac, septembar 2026), slogan 'Samo SDA'. Mediji navode da nisu dati izvori finansiranja.",
-  "power": "opozicija (država, FBiH); vlast u nekim kantonima"
+  "power": "opozicija (država, FBiH); vlast u nekim kantonima",
+  "power_history": "U vlasti na državnom nivou skoro bez prekida 1990–2022; u FBiH 2002–2022. Od 2022 opozicija. Ukupno oko 30 godina."
  },
  {
   "name": "Stranka za BiH",
@@ -81,7 +83,8 @@
   ],
   "confidence": "medium",
   "note": "Program predstavljen 7.9.2026. u Sarajevu (fokus.ba, nije bilo moguće otvoriti puni tekst); obećanja iz govora Efendića (kandidat za Predsjedništvo BiH) i saopćenja stranke, slogan 'Pokrenimo BiH zajedno'.",
-  "power": "opozicija"
+  "power": "opozicija",
+  "power_history": "U vlasti 2006–2010 (država i FBiH). Od 2010 opozicija."
  },
  {
   "name": "DF (Željko Komšić - Za građansku državu DF/GS)",
@@ -109,7 +112,8 @@
   ],
   "confidence": "medium",
   "note": "Pisani program 2026 nije pronađen (fronta.ba nedostupna); obećanja iz govora na otvaranju kampanje 10.9.2026. i skupa u Visokom, slogan 'Građanska, zemlja ljiljana'.",
-  "power": "opozicija; Komšić u Predsjedništvu"
+  "power": "opozicija; Komšić u Predsjedništvu",
+  "power_history": "Kratko u vlasti 2015 i 2019–2022 (država); Komšić u Predsjedništvu 2006–2014 i 2018–2026."
  },
  {
   "name": "SBB Fahrudin Radončić",
@@ -138,7 +142,8 @@
   ],
   "confidence": "medium",
   "note": "Nije pronađen pisani program 2026; obećanja iz Radončićevih govora u kampanji (Banovići, Tešanj, septembar 2026) i medijskih izvještaja (dijelom Avaz, u vlasništvu Radončića).",
-  "power": "opozicija"
+  "power": "opozicija",
+  "power_history": "U vlasti 2012–2014 i 2015–2018 (država, FBiH), 2019–2020 (država). Od 2020 opozicija."
  },
  {
   "name": "Naša stranka",
@@ -166,7 +171,8 @@
   ],
   "confidence": "low",
   "note": "Detaljan izborni program 2026 nije pronađen; kampanja se svjesno ne zasniva na brojčanim obećanjima. Korišteni govor Ćudić na otvaranju kampanje (Tuzla, 5.9.2026) i programska deklaracija s kongresa 2023.",
-  "power": "u vlasti (država, FBiH, KS)"
+  "power": "u vlasti (država, FBiH, KS)",
+  "power_history": "U vlasti od 2018 u Kantonu Sarajevo, od 2022 i u državi i FBiH. Prije toga opozicija."
  },
  {
   "name": "NES (Nezavisni europski savez, NES BiH / PDA / Naprijed!)",
@@ -194,7 +200,8 @@
   ],
   "confidence": "high",
   "note": "Koalicija ima zvanični program 2026 na zajedno.ba (pet prioriteta) i predstavila ga je javno u septembru 2026.",
-  "power": "u vlasti (FBiH, USK)"
+  "power": "u vlasti (FBiH, USK)",
+  "power_history": "Vodi Unsko-sanski kanton od 2022; u Vladi FBiH od 2023. Nova stranka (2021), prethodnik A-SDA."
  },
  {
   "name": "Snaga naroda",
@@ -220,7 +227,8 @@
   ],
   "confidence": "low",
   "note": "Konkretan program 2026 s mjerama nije pronađen u javno dostupnim tekstovima; navedene su opće poruke s otvaranja kampanje u Zenici (4.9.2026) i programski principi sa snaganaroda.ba. Slogan 'Vrijeme je za snagu naroda'.",
-  "power": "u vlasti (FBiH, ministar policije)"
+  "power": "u vlasti (FBiH, ministar policije)",
+  "power_history": "Nova stranka (2023); Isak ministar u Vladi FBiH od 2023."
  },
  {
   "name": "HDZ BiH",
@@ -248,7 +256,8 @@
   ],
   "confidence": "medium",
   "note": "Program 2026 ('BiH 2030 – moderna europska država', slogan 'Za ono što vrijedi') postoji i predstavljen je na skupovima; puni dokument na hdzbih.org nije bio dostupan (404), pa su mjere preuzete iz izvještaja o predstavljanju programa.",
-  "power": "u vlasti (država, FBiH, kantoni)"
+  "power": "u vlasti (država, FBiH, kantoni)",
+  "power_history": "U vlasti na državnom nivou skoro bez prekida od 1990; u FBiH od 2002 s prekidom 2011–2014. Ukupno preko 30 godina."
  },
  {
   "name": "Narod i pravda (NiP)",
@@ -276,7 +285,8 @@
   ],
   "confidence": "medium",
   "note": "'Razvojni manifest' postoji na narodipravda.ba/izbori2026, ali sadržaj nije bio dostupan u tekstu; obećanja iz otvaranja kampanje (4.9.2026) i tribine 'Mjerljivi napredak' (11.2.2026), uglavnom nastavak dosadašnjih mjera.",
-  "power": "u vlasti (država, FBiH, KS)"
+  "power": "u vlasti (država, FBiH, KS)",
+  "power_history": "Osnovana 2018. U vlasti u KS od 2018, u državi i FBiH od 2022."
  },
  {
   "name": "Bosanskohercegovačka inicijativa Kasumović Fuad",
@@ -303,7 +313,8 @@
   ],
   "confidence": "low",
   "note": "Pisani program 2026 nije pronađen; obećanja iz saopćenja stranke s predstavljanja kandidata (4.9.2026, slogan 'Nastavimo odgovorno, odlučno i hrabro!') i terenskih skupova. Uglavnom lokalni (Zenica/ZDK) fokus.",
-  "power": "vlast u Zenici; opozicija u ZDK"
+  "power": "vlast u Zenici; opozicija u ZDK",
+  "power_history": "Osnovana 2022. Kasumović gradonačelnik Zenice od 2016; vodila Vladu ZDK 2023–2025."
  },
  {
   "name": "HDZ 1990",
@@ -331,7 +342,8 @@
   ],
   "confidence": "low",
   "note": "Pisani program 2026 nije pronađen; obećanja iz govora Cvitanovića (Travnik, proglas o izbornoj jedinici, juni 2026) i izjava kandidata Lučića.",
-  "power": "opozicija"
+  "power": "opozicija",
+  "power_history": "U vlasti 2006–2010 (država i FBiH). Od 2010 opozicija."
  },
  {
   "name": "Naprijed BiH",
@@ -359,7 +371,8 @@
   ],
   "confidence": "medium",
   "note": "Stranka ima programsku platformu za izbore 2026 na naprijed.ba (opći principi bez brojki); konkretne mjere dolaze iz zajedničkog programa koalicije s NES-om i PDA.",
-  "power": "opozicija (nova stranka)"
+  "power": "opozicija (nova stranka)",
+  "power_history": "Nova stranka (2024); Mehmedović poslanik od 2006 (ranije SDA)."
  },
  {
   "name": "Koalicija za državu",
@@ -384,6 +397,7 @@
   ],
   "confidence": "low",
   "note": "Koalicija nastupa samo u RS (ne u FBiH); nema objavljen zaseban program s mjerama – ciljevi iz izjava Edina Ramića i sajta koalicije (slogan '1 za sigurno'). Programske mjere članica vidi kod SDA, SDP, SBB, NES.",
-  "power": "opozicija (u RS)"
+  "power": "opozicija (u RS)",
+  "power_history": "Nova koalicija za 2026; članice (SDA, SDP, SBB, NES…) imaju svoju historiju."
  }
 ]

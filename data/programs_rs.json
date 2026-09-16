@@ -27,7 +27,8 @@
   ],
   "confidence": "medium",
   "note": "Pisani izborni program 2026 nije pronađen; slogan kampanje 'Uvijek uz narod, uvijek uz Srpsku'. Obećanja su iz javnih izjava Dodika i Minića (maj-septembar 2026). Analitičari (nova.rs) navode da SNSD-ova obećanja uglavnom nemaju troškovnik i rokove.",
-  "power": "u vlasti (RS); država do 2025"
+  "power": "u vlasti (RS); država do 2025",
+  "power_history": "Vodi Republiku Srpsku bez prekida od 2006 (20 godina), ranije 1998–2001. Na državnom nivou u vlasti 2006–2014 i 2019–2025."
  },
  {
   "name": "Pokret Sigurna Srpska (Draško Stanivuković; PSS, PDP, NPSP)",
@@ -56,7 +57,8 @@
   ],
   "confidence": "high",
   "note": "Program 2026 nazvan 'Ugovor sa narodom', slogan 'SIGURNO'; predstavljen na otvaranju kampanje u Bijeljini i Doboju (septembar 2026). Unutar koalicije bilo je tenzija sa NPSP (Radojičić) početkom 2026.",
-  "power": "opozicija; vlast u Banjaluci"
+  "power": "opozicija; vlast u Banjaluci",
+  "power_history": "Nova koalicija (2025). Stanivuković vodi Banjaluku od 2020; PDP bio u državnoj vlasti 2014–2018."
  },
  {
   "name": "Ujedinjena Srpska",
@@ -84,7 +86,8 @@
   ],
   "confidence": "medium",
   "note": "Cjelovit dokument programa 2026 nije pronađen online; obećanja su iz izjava Stevandića na predizbornim skupovima (septembar 2026).",
-  "power": "u vlasti (RS, sa SNSD)"
+  "power": "u vlasti (RS, sa SNSD)",
+  "power_history": "Osnovana 2017. U vlasti RS sa SNSD-om od 2018."
  },
  {
   "name": "DNS-NPS (Banjac-Nešić)",
@@ -110,7 +113,8 @@
   ],
   "confidence": "low",
   "note": "Zvanični program koalicije 2026 nije pronađen; navedene su najavljene programske oblasti i izjave lidera (DNS osnovan 2000, NPS je nova stranka Darka Banjca).",
-  "power": "u vlasti (RS, sa SNSD)"
+  "power": "u vlasti (RS, sa SNSD)",
+  "power_history": "DNS u vlasti RS sa SNSD-om 2006–2020 i od 2022; NPS nova stranka."
  },
  {
   "name": "Narodni front Jelena Trivić",
@@ -139,7 +143,8 @@
   ],
   "confidence": "high",
   "note": "Program 2026 predstavljen na otvaranju kampanje kao 'Deset mjera za prvih 100 dana' plus ekonomski ciljevi za mandat; slogan 'Srpska koja radi, Srpska koja pobjeđuje'.",
-  "power": "opozicija"
+  "power": "opozicija",
+  "power_history": "Osnovan 2023. Nikad u vlasti."
  },
  {
   "name": "Socijalistička partija Petar Đokić / DEMOS / NDP",
@@ -165,7 +170,8 @@
   ],
   "confidence": "medium",
   "note": "Zvanični pisani program koalicije nije pronađen; obećanja su iz izjava Đokića i partnera na otvaranju kampanje (septembar 2026). Godina osnivanja 1993 odnosi se na SP; DEMOS osnovan 2018.",
-  "power": "u vlasti (RS, sa SNSD)"
+  "power": "u vlasti (RS, sa SNSD)",
+  "power_history": "SP u vlasti RS bez prekida od 1998 (28 godina); DEMOS od 2018."
  },
  {
   "name": "SPS Goran Selak Pokret Jedinstvena Srpska",
@@ -191,7 +197,8 @@
   ],
   "confidence": "low",
   "note": "Konkretan program 2026 nije pronađen; kampanja je vrijednosna (slogan 'Porodica, pravda, ponos'), bez mjerljivih mjera.",
-  "power": "u vlasti (RS, sa SNSD)"
+  "power": "u vlasti (RS, sa SNSD)",
+  "power_history": "U vlasti RS sa SNSD-om od 2022; Selak ministar pravde."
  },
  {
   "name": "Republička stranka Srpske RSS",
@@ -216,7 +223,8 @@
   ],
   "confidence": "medium",
   "note": "Tri ključne ekonomske mjere objavljene u kampanji (septembar 2026); slogan 'Budućnost. Sada i ovdje'. Cjelovit programski dokument nije pronađen.",
-  "power": "opozicija"
+  "power": "opozicija",
+  "power_history": "Osnovana 2021. Nikad u vlasti."
  },
  {
   "name": "Za pravdu i red - Lista Nebojše Vukanovića / PDP RS Igor Crnadak",
@@ -244,7 +252,8 @@
   ],
   "confidence": "medium",
   "note": "Zvanični program ZPR objavljen na zapravduired.org u sedam oblasti, ali javno dostupni tekst nema brojki i rokova. Godina 2022 odnosi se na ZPR; PDP osnovan 1999.",
-  "power": "opozicija"
+  "power": "opozicija",
+  "power_history": "Vukanović opozicija od 2014; PDP u državnoj vlasti 2014–2018, inače opozicija u RS."
  },
  {
   "name": "Volja naroda Srpske dr Vlado Đajić",
@@ -273,7 +282,8 @@
   ],
   "confidence": "high",
   "note": "Program '10 politika za bolji život' zvanično predstavljen 2026; stranka registrovana aprila 2026 u Banjaluci.",
-  "power": "nova stranka (bivši SNSD)"
+  "power": "nova stranka (bivši SNSD)",
+  "power_history": "Osnovana 2026. Đajić bio dio SNSD-a (direktor UKC) do 2026."
  },
  {
   "name": "Nezavisna lista Doboj Sevlid Hurtić",
@@ -297,6 +307,7 @@
   ],
   "confidence": "low",
   "note": "Stranka je 2022. preimenovana u BH Zeleni; za NSRS 2026 Hurtić nastupa i unutar 'Koalicije za državu'. Pisani program 2026 nije pronađen; navedeni su opšti ciljevi sa otvaranja kampanje u Doboju (slogan 'Snažan iskorak', 4.9.2026).",
-  "power": "u vlasti (država, ministar); opozicija u RS"
+  "power": "u vlasti (država, ministar); opozicija u RS",
+  "power_history": "Hurtić ministar u Vijeću ministara od 2023; u RS opozicija."
  }
 ]

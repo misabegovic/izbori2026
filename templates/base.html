@@ -9,9 +9,9 @@
 {% if ch %}<div class="d3 d3-chance{% if small %} sm{% endif %}" data-d3='{{ {"pct": ch[0], "word": ch[1], "why": ch[2]} | tojson }}'><span class="fb">šansa za mandat: {{ ch[1] }}</span></div>{% endif %}
 {%- endmacro %}
 {% macro person_row(c) -%}
-<li class="person">
+<li class="person" data-home="{{ c.home_key }}">
   <span class="pos">{{ c.pos }}.</span>{% if c.img %}<img class="av" src="{{ c.img }}" alt="" width="36" height="36" loading="lazy">{% endif %}
-  <span class="pname">{% if c.has_page %}<a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</span>
+  <span class="pname">{% if c.has_page %}<a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</span>{% if c.home %} <span class="mut small">({{ c.home }})</span>{% endif %}
   <span class="badges">{% for b in c.badges %}{{ badge(b) }}{% endfor %}{% if c.chance and c.chance[0] >= 15 %}<span class="b ch-{{ c.chance[1] }}" title="{{ c.chance[2] }}">šansa za mjesto: {{ c.chance[1] }} (~{{ c.chance[0] }}%)</span>{% endif %}</span>
 </li>
 {%- endmacro %}
@@ -152,7 +152,7 @@ try{var fs=parseInt(localStorage.getItem("fs")||"0");if(fs)document.documentElem
 window.foldq=function(s){var C={"а":"a","б":"b","в":"v","г":"g","д":"d","ђ":"dj","е":"e","ж":"z","з":"z","и":"i","ј":"j","к":"k","л":"l","љ":"lj","м":"m","н":"n","њ":"nj","о":"o","п":"p","р":"r","с":"s","т":"t","ћ":"c","у":"u","ф":"f","х":"h","ц":"c","ч":"c","џ":"dz","ш":"s","č":"c","ć":"c","ž":"z","š":"s","đ":"dj"};return s.toLowerCase().split("").map(function(c){return C[c]||c;}).join("");};
 window.cyrRefresh=function(){try{if(localStorage.getItem("cyr")==="1")walk(document.body);}catch(e){}};
 window.toggleScript=function(){var on=localStorage.getItem("cyr")==="1";if(on){back(document.body);localStorage.setItem("cyr","0");document.getElementById("tog").textContent="ЋИР";}else{walk(document.body);localStorage.setItem("cyr","1");document.getElementById("tog").textContent="LAT";}};
-var TAG={"novac":"budžet i novac","porezi":"porezi","plate":"plate","sudovi":"sudovi","EU":"put u EU","ustav":"ustav i RS/BiH","sigurnost":"sigurnost","transparentnost":"korupcija i javnost","izbori":"izbori","imovina":"državna imovina","struja":"struja","porodica":"porodica","historija":"historija","privreda":"privreda"};
+var TAG={"putevi":"putevi i autoputevi","zdravstvo":"zdravstvo","poljoprivreda":"poljoprivreda","obrazovanje":"škole","priroda":"priroda i rudnici","infrastruktura":"infrastruktura","novac":"budžet i novac","porezi":"porezi","plate":"plate","sudovi":"sudovi","EU":"put u EU","ustav":"ustav i RS/BiH","sigurnost":"sigurnost","transparentnost":"korupcija i javnost","izbori":"izbori","imovina":"državna imovina","struja":"struja","porodica":"porodica","historija":"historija","privreda":"privreda"};
 document.querySelectorAll(".tagbar").forEach(function(bar){var list=document.getElementById(bar.dataset["for"]);if(!list)return;var items=list.querySelectorAll(".kd");var tags={};items.forEach(function(i){(i.dataset.tags||"").split(" ").forEach(function(t){if(t)tags[t]=(tags[t]||0)+1;});});var all=document.createElement("button");all.className="tog on";all.textContent="sve";bar.appendChild(all);function pick(t,btn){items.forEach(function(i){i.classList.toggle("hid",!!t&&(" "+i.dataset.tags+" ").indexOf(" "+t+" ")<0);});bar.querySelectorAll("button").forEach(function(b){b.classList.remove("on");});btn.classList.add("on");}all.onclick=function(){pick(null,all);};Object.keys(tags).sort(function(a,b){return tags[b]-tags[a];}).forEach(function(t){var b=document.createElement("button");b.className="tog";b.textContent=(TAG[t]||t)+" ("+tags[t]+")";b.onclick=function(){pick(t,b);};bar.appendChild(b);});});
 try{if(localStorage.getItem("cyr")==="1"){walk(document.body);document.getElementById("tog").textContent="LAT";}}catch(e){}
 })();

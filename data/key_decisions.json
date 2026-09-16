@@ -22,6 +22,28 @@
   "adopted": null
  },
  {
+  "id": "nsrs.2023-02-08.1#6",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2023-02-08",
+  "title": "Izmjene Zakona o energetici (2023)",
+  "plain": "Pravila za energetiku, koncesije i elektrane.",
+  "tags": [
+   "struja",
+   "priroda"
+  ],
+  "official": "Приједлог закона о измјенама и допунама Закона о енергетици",
+  "vote_on": null,
+  "published": {
+   "present": 69,
+   "absent": 0,
+   "seats": 0,
+   "for": 53,
+   "against": 13,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
   "id": "nsrs.2023-06-27.1#2",
   "chamber": "narodna-skupstina-rs",
   "date": "2023-06-27",
@@ -81,6 +103,49 @@
    "seats": 0,
    "for": 46,
    "against": 19,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2023-12-14.1#30",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2023-12-14",
+  "title": "Dječija zaštita: izmjene zakona",
+  "plain": "Promjene naknada i prava za djecu i porodice u RS.",
+  "tags": [
+   "porodica",
+   "novac"
+  ],
+  "official": "Приједлог закона о измјенама и допунама Закона о дјечијој заштити – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 65,
+   "absent": 0,
+   "seats": 0,
+   "for": 58,
+   "against": 2,
+   "abstainPublished": 4
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2023-12-22.1#14",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2023-12-22",
+  "title": "Poljoprivredne zadruge",
+  "plain": "Nova pravila za zadruge poljoprivrednika.",
+  "tags": [
+   "poljoprivreda"
+  ],
+  "official": "Приједлог закона о измјенама и допунама Закона о пољопривредним задругама",
+  "vote_on": null,
+  "published": {
+   "present": 51,
+   "absent": 0,
+   "seats": 0,
+   "for": 48,
+   "against": 1,
    "abstainPublished": 0
   },
   "adopted": null
@@ -146,6 +211,50 @@
    "for": 51,
    "against": 4,
    "abstainPublished": 11
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2024-11-05.1#29",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2024-11-05",
+  "title": "Zemljište za aerodrom Trebinje",
+  "plain": "Brža eksproprijacija zemljišta za aerodrom, obećavan od 2018. Gradnja do 2026 nije počela.",
+  "tags": [
+   "putevi",
+   "infrastruktura"
+  ],
+  "official": "Приједлог закона о измјени Закона о посебном поступку експропријације ради изградње аеродрома у Требињу – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 69,
+   "absent": 0,
+   "seats": 0,
+   "for": 61,
+   "against": 0,
+   "abstainPublished": 3
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2024-11-29.1#5",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2024-11-29",
+  "title": "Podsticaji u privredi",
+  "plain": "Novi zakon o tome kome i kako RS daje podsticaje firmama.",
+  "tags": [
+   "privreda",
+   "novac"
+  ],
+  "official": "Приједлог закона о подстицајима у привреди Републике Српске – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 61,
+   "absent": 0,
+   "seats": 0,
+   "for": 46,
+   "against": 13,
+   "abstainPublished": 0
   },
   "adopted": null
  },
@@ -343,6 +452,71 @@
   "adopted": null
  },
  {
+  "id": "nsrs.2025-03-27.1#15",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-03-27",
+  "title": "Plate u zdravstvu RS (2025)",
+  "plain": "Povećanje plata zaposlenih u bolnicama i domovima zdravlja.",
+  "tags": [
+   "plate",
+   "zdravstvo"
+  ],
+  "official": "Приједлог закона о платама запослених лица у јавним установама у области здравства Републике Српске – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 62,
+   "absent": 0,
+   "seats": 0,
+   "for": 61,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-07-10.1#21",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-07-10",
+  "title": "Autoput Banjaluka–Mrkonjić Grad: plan parcelacije",
+  "plain": "Prvi korak (plan) za autoput obećan 2022; gradnja nije počela.",
+  "tags": [
+   "putevi"
+  ],
+  "official": "Приједлог одлуке о изради Плана парцелације за ауто-пут Бања Лука – Млиништа за дионицу Бања Лука југ – Мркоњић Град – по скраћеном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 58,
+   "absent": 0,
+   "seats": 0,
+   "for": 46,
+   "against": 3,
+   "abstainPublished": 8
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2025-07-10.1#22",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-07-10",
+  "title": "Moratorij na rudarske koncesije",
+  "plain": "Prijedlog da se privremeno zaustave nove koncesije za rudnike (npr. litijum). Nije prošao.",
+  "tags": [
+   "priroda",
+   "privreda"
+  ],
+  "official": "Приједлог одлуке о мораторијуму на додјелу концесија за геолошка истраживања и за експлоатацију минералних сировина, руда и других ресурса на подручју планине Мајевица до окончања поступка заштите",
+  "vote_on": null,
+  "published": {
+   "present": 58,
+   "absent": 0,
+   "seats": 0,
+   "for": 17,
+   "against": 0,
+   "abstainPublished": 25
+  },
+  "adopted": null
+ },
+ {
   "id": "nsrs.2025-08-22.1#8",
   "chamber": "narodna-skupstina-rs",
   "date": "2025-08-22",
@@ -428,6 +602,28 @@
   "adopted": null
  },
  {
+  "id": "nsrs.2025-12-18.1#39",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-12-18",
+  "title": "Plate u školama RS (2026)",
+  "plain": "Povećanje plata nastavnika i osoblja u školama.",
+  "tags": [
+   "plate",
+   "obrazovanje"
+  ],
+  "official": "Приједлог закона о измјенама Закона о платама запослених у основним и средњим школама и ђачким домовима у Републици Српској - по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 63,
+   "absent": 0,
+   "seats": 0,
+   "for": 61,
+   "against": 0,
+   "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
   "id": "nsrs.2025-12-24.1#2",
   "chamber": "narodna-skupstina-rs",
   "date": "2025-12-24",
@@ -449,6 +645,27 @@
   "adopted": null
  },
  {
+  "id": "nsrs.2025-12-24.1#15",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2025-12-24",
+  "title": "Zaštita od duvanskog dima",
+  "plain": "Zabrana pušenja u zatvorenim javnim prostorima u RS.",
+  "tags": [
+   "zdravstvo"
+  ],
+  "official": "Приједлог закона о заштити здравља становништва од дуванских и осталих производа за пушење",
+  "vote_on": null,
+  "published": {
+   "present": 58,
+   "absent": 0,
+   "seats": 0,
+   "for": 54,
+   "against": 1,
+   "abstainPublished": 2
+  },
+  "adopted": null
+ },
+ {
   "id": "nsrs.2026-03-17.2#4",
   "chamber": "narodna-skupstina-rs",
   "date": "2026-03-17",
@@ -466,6 +683,49 @@
    "for": 68,
    "against": 0,
    "abstainPublished": 0
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2026-05-20.1#17",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2026-05-20",
+  "title": "Izmjene Zakona o električnoj energiji",
+  "plain": "Pravila o struji i tržištu struje u RS.",
+  "tags": [
+   "struja"
+  ],
+  "official": "Приједлог закона о измјени и допунама Закона о електричној енергији – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 55,
+   "absent": 0,
+   "seats": 0,
+   "for": 44,
+   "against": 0,
+   "abstainPublished": 8
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2026-05-20.1#8",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2026-05-20",
+  "title": "Zemljište za gasovod i autoput (Šepak–Novi Grad)",
+  "plain": "Brža eksproprijacija za gasovod i autoput.",
+  "tags": [
+   "putevi",
+   "struja"
+  ],
+  "official": "Приједлог закона о посебном поступку експропријације ради изградње магистралног гасовода Шепак – Нови Град и ауто – пута Гламочани – Бања Лука – Млиништа – по хитном поступку",
+  "vote_on": null,
+  "published": {
+   "present": 55,
+   "absent": 0,
+   "seats": 0,
+   "for": 44,
+   "against": 0,
+   "abstainPublished": 10
   },
   "adopted": null
  },
@@ -508,6 +768,48 @@
    "for": 45,
    "against": 0,
    "abstainPublished": 11
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2026-07-09.1#22",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2026-07-09",
+  "title": "Zemljište za autoput Banjaluka–Prijedor",
+  "plain": "Eksproprijacija za autoput obećan 2014, 2018 i 2022; radovi počeli tek 2024.",
+  "tags": [
+   "putevi"
+  ],
+  "official": "Приједлог закона о измјени Закона о посебном поступку експропријације ради изградње ауто-пута Бања Лука – Приједор",
+  "vote_on": null,
+  "published": {
+   "present": 58,
+   "absent": 0,
+   "seats": 0,
+   "for": 55,
+   "against": 0,
+   "abstainPublished": 2
+  },
+  "adopted": null
+ },
+ {
+  "id": "nsrs.2026-07-09.1#25",
+  "chamber": "narodna-skupstina-rs",
+  "date": "2026-07-09",
+  "title": "Zemljište za Koridor Vc kroz RS",
+  "plain": "Eksproprijacija za dio Koridora Vc (Vukosavlje–Brčko i dalje).",
+  "tags": [
+   "putevi"
+  ],
+  "official": "Приједлог закона о измјени Закона о посебном поступку експропријације ради изградње ауто-пута Коридор Vc кроз Републику Српску и изградње дионице ауто-пута „9. јануар“ Бања Лука – Добој",
+  "vote_on": null,
+  "published": {
+   "present": 58,
+   "absent": 0,
+   "seats": 0,
+   "for": 54,
+   "against": 0,
+   "abstainPublished": 2
   },
   "adopted": null
  },

@@ -278,7 +278,11 @@ def person_view(c):
     stood, won = rec.get("stood") or c.get("stood") or 0, rec.get("won") or c.get("won") or 0
     parties = unique_parties(tl)
     won_rows = [t for t in tl if t.get("elected")]
-    v = {"pid": pid, "slug": pid_slug(pid) if pid else None, "name": nice_name(c.get("name")), "raw_name": c.get("name"),
+    home = None
+    for t in sorted(tl, key=lambda t: -(t.get("y") or 0)):
+        if t.get("area") and (("vijeće" in (t.get("lvl") or "")) or ("ačelnik" in (t.get("lvl") or ""))):
+            home = nice_name(t["area"]); break
+    v = {"pid": pid, "slug": pid_slug(pid) if pid else None, "name": nice_name(c.get("name")), "raw_name": c.get("name"), "home": home, "home_key": fold(home) if home else "",
          "pos": c.get("pos"), "stood": stood, "won": won, "office": rec.get("isOfficeHolder") or c.get("office"),
          "parties": parties, "n_parties": len(parties), "confidence": rec.get("confidence") or c.get("confidence"),
          "has_record": pid in records, "has_page": bool(tl) or pid in records or bool(prof.get("bio")),
