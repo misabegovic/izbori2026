@@ -1,4 +1,12 @@
 {% macro badge(b) -%}<span class="b {{ b[0] }}" title="{{ b[2] }}">{{ b[1] }}</span>{%- endmacro %}
+{% macro hbar(label, value, maxv, text, cls='c-blue') -%}
+<div class="hb"><div class="hb-l">{{ label }}</div><div class="hb-r"><div class="hb-t"><div class="hb-f {{ cls }}" style="width:{{ (100 * value / maxv) | round(1) if maxv else 0 }}%"></div></div><div class="hb-v">{{ text }}</div></div></div>
+{%- endmacro %}
+{% macro stack(parts, total) -%}
+{# parts: list of (label, value, cls) #}
+<div class="st">{% for lab, val, cls in parts %}{% if val %}<div class="st-s {{ cls }}" style="flex:{{ val }}" title="{{ lab }}: {{ val }}"></div>{% endif %}{% endfor %}</div>
+<div class="st-l">{% for lab, val, cls in parts %}{% if val %}<span><i class="sw {{ cls }}"></i>{{ lab }} {{ val }}{% if total %} ({{ (100 * val / total) | round | int }}%){% endif %}</span>{% endif %}{% endfor %}</div>
+{%- endmacro %}
 {% macro person_row(c) -%}
 <li class="person">
   <span class="pos">{{ c.pos }}.</span>
@@ -74,6 +82,25 @@ table { width:100%; border-collapse:collapse; font-size:.9rem; }
 td, th { padding:.35rem .3rem; text-align:left; vertical-align:top; border-top:1px solid var(--line); }
 th { color:var(--mut); font-weight:normal; font-size:.8rem; }
 footer { max-width:660px; margin:2rem auto 0; padding:1rem 16px 2rem; border-top:1px solid var(--line); font-size:.8rem; color:var(--mut); }
+.hb { padding:.3rem 0; font-size:.9rem; }
+.hb-l { line-height:1.25; margin-bottom:.15rem; }
+.hb-r { display:grid; grid-template-columns:1fr auto; gap:.5rem; align-items:center; }
+.hb-l a { text-decoration:none; color:var(--fg); }
+.hb-t { background:#eceae3; border-radius:4px; height:.8rem; overflow:hidden; }
+.hb-f { height:100%; border-radius:0 4px 4px 0; min-width:2px; }
+.hb-v { color:var(--mut); font-size:.82rem; white-space:nowrap; min-width:3.2rem; text-align:right; }
+.c-blue { background:#2a78d6; } .c-blue2 { background:#86b6ef; } .c-za { background:#0ca30c; } .c-protiv { background:#d03b3b; } .c-uz { background:#fab219; } .c-od { background:#a9a9a9; } .c-new { background:#c3c2b7; } .c-sw { background:#eb6834; }
+.st { display:flex; gap:2px; height:.9rem; border-radius:4px; overflow:hidden; margin:.3rem 0 .2rem; }
+.st-s { min-width:3px; }
+.st-l { display:flex; flex-wrap:wrap; gap:.3rem .9rem; font-size:.8rem; color:var(--mut); }
+.sw { display:inline-block; width:.7rem; height:.7rem; border-radius:2px; margin-right:.3rem; vertical-align:-1px; }
+.years { display:flex; flex-wrap:wrap; gap:.3rem; margin:.4rem 0; }
+.yr { border:2px solid #2a78d6; border-radius:8px; padding:.1rem .45rem; font-size:.8rem; color:#1c5cab; }
+.yr.won { background:#2a78d6; color:#fff; }
+.yr.now { border-style:dashed; }
+.cmp { width:100%; border-collapse:collapse; font-size:.85rem; }
+.cmp td { padding:.3rem .2rem; border-top:1px solid var(--line); vertical-align:middle; }
+.dot { display:inline-block; width:.6rem; height:.6rem; border-radius:50%; margin-right:.3rem; }
 .tog { font-size:.8rem; background:#fff; border:1px solid var(--line); border-radius:8px; padding:.25rem .5rem; cursor:pointer; }
 @media (max-width:420px){ html{font-size:18px} .facts{grid-template-columns:1fr 1fr} }
 </style>

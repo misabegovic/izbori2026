@@ -21,9 +21,14 @@
 <div class="card"><h3><a href="stranke.html">Stranke: šta obećavaju i šta su radile</a></h3><p class="mut">Obećanja za 2026 pored zapisa: kako su njihovi poslanici glasali o budžetu, sudovima, porezima.</p></div>
 <div class="card"><h3><a href="desavanja.html">Šta se desilo od prošlih izbora</a></h3><p class="mut">Najvažnije odluke 2022–2026 u dvije rečenice. Ko je bio za, ko protiv.</p></div>
 
-<h2>3. Tri stvari koje vrijedi znati</h2>
+<h2>3. Ko je na listićima, u brojkama</h2>
 <div class="card">
-<p><b>Na listićima je {{ national.candidacies | num }} kandidata.</b> Samo <b>{{ national.ever_won | num }}</b> ih je ikad izabrano. <b>{{ national.debut | num }}</b> se kandiduje prvi put.</p>
+<p class="mut" style="margin:0 0 .2rem">Od {{ national.candidacies | num }} kandidata:</p>
+{{ hbar('već bili izabrani', national.ever_won, national.candidacies, national.ever_won | num) }}
+{{ hbar('prvi put na listi', national.debut, national.candidacies, national.debut | num, 'c-blue2') }}
+{{ hbar('3+ puta, nikad izabrani', national.fillers3, national.candidacies, national.fillers3 | num, 'c-new') }}
+</div>
+<div class="card">
 <p><b>{{ national.fillers3 | num }}</b> ljudi se kandiduje treći ili više puta, a nikad nisu izabrani. Njihovo ime na listi uglavnom služi da lista bude puna.</p>
 <p><b>Tvoj glas je tajan.</b> Niko ne može vidjeti šta si zaokružio. Ni poslodavac, ni stranka, ni komšija.</p>
 </div>

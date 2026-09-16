@@ -325,12 +325,15 @@ def party_summary(pk):
     for c in mps:
         if c["pid"] not in seen:
             seen.add(c["pid"]); mps_u.append(person_view(c))
-    votes22 = 0; seats22 = 0; units_in = 0
+    votes22 = 0; votes18 = 0; seats22 = 0; units_in = 0
     pi = party_identity(list_display.get(pk, ""))
     for uk, u in units.items():
         for h in u.get("party_history", []):
-            if h["year"] == 2022 and party_identity(h["party"]) == pi:
-                votes22 += h.get("votes") or 0
+            if party_identity(h["party"]) == pi:
+                if h["year"] == 2022:
+                    votes22 += h.get("votes") or 0
+                else:
+                    votes18 += h.get("votes") or 0
         for nm, cnt in u.get("seats22", {}).items():
             if party_identity(nm) == pi:
                 seats22 += cnt
@@ -343,7 +346,7 @@ def party_summary(pk):
             paid = sum(f.get("paid") or 0 for f in p["funding"] if f.get("year") == 2024)
             funding = {"year": 2024, "paid": paid, "rows": sorted(p["funding"], key=lambda f: -(f.get("paid") or 0))[:6]}
     return {"key": pk, "name": list_display.get(pk, pk), "n": n, "won": won, "switch": switch, "new": new, "office": office,
-            "mps": mps_u, "votes22": votes22, "seats22": seats22, "units_in": units_in, "funding": funding,
+            "mps": mps_u, "votes22": votes22, "votes18": votes18, "seats22": seats22, "units_in": units_in, "funding": funding,
             "program": program_for(list_display.get(pk, "")), "key_votes": party_key_votes(pk),
             "href": f"stranka-{re.sub(r'[^a-z0-9]+', '-', pk).strip('-')}.html"}
 

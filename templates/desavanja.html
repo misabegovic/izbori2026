@@ -12,6 +12,6 @@
 <h2>Ključna glasanja u parlamentima</h2>
 <p class="mut small">Za svako piše koliko je poslanika bilo za i protiv. Ko je tačno kako glasao vidiš na stranici kandidata ili stranke.</p>
 {% for d in kd %}
-<div class="kd"><span class="d">{{ d.date }} · {{ d.chamber_name }}</span><br><span class="t">{{ d.title }}</span> <span class="small">— {{ d.za }} za, {{ d.protiv }} protiv{% if d.uz %}, {{ d.uz }} uzdržan{% endif %}</span><br><span class="small mut">{{ d.plain }}</span></div>
+<div class="kd"><span class="d">{{ d.date }} · {{ d.chamber_name }}</span><br><span class="t">{{ d.title }}</span><br><span class="small mut">{{ d.plain }}</span>{{ stack([("za", d.za or 0, "c-za"), ("protiv", d.protiv or 0, "c-protiv"), ("uzdržan", d.uz or 0, "c-uz")], None) }}</div>
 {% endfor %}
 {% endblock %}

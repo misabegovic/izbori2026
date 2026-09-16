@@ -4,14 +4,21 @@
 <p class="mut"><a href="stranke.html">← sve stranke</a> · <a href="index.html">početna</a></p>
 <h1>{{ p.name | ptitle }}</h1>
 {% if p.program %}<p class="lead"><b>Sad su:</b> {{ p.program.power }}.</p><p class="mut">{{ p.program.governing_now }}</p>{% endif %}
-<div class="facts">
-<div class="fact"><b>{{ p.n }}</b><span>kandidata 2026</span></div>
-<div class="fact"><b>{{ p.won }}</b><span>već bili izabrani</span></div>
-<div class="fact"><b>{{ p.switch }}</b><span>mijenjali stranke</span></div>
-<div class="fact"><b>{{ p.new }}</b><span>prvi put</span></div>
+<div class="card">
+<p class="mut small" style="margin:0">{{ p.n }} kandidata 2026 na {{ p.units_in }} listića:</p>
+{{ stack([('već birani', p.won, 'c-blue'), ('prvi put', p.new, 'c-blue2'), ('ostali', p.n - p.won - p.new, 'c-new')], p.n) }}
+{% if p.switch %}<p class="small" style="margin:.2rem 0 0"><i class="sw c-sw"></i>{{ p.switch }} mijenjalo stranke</p>{% endif %}
+{% if p.votes18 or p.votes22 %}
+<p class="mut small" style="margin:.8rem 0 0">Glasovi na svim listićima:</p>
+{{ hbar('2018', p.votes18 or 0, [p.votes18 or 0, p.votes22 or 0] | max, (p.votes18 | num) if p.votes18 else '—', 'c-blue2') }}
+{{ hbar('2022', p.votes22 or 0, [p.votes18 or 0, p.votes22 or 0] | max, (p.votes22 | num) if p.votes22 else '—') }}
+{% endif %}
 </div>
-<p><b>Prošli put (2022):</b> {% if p.votes22 %}{{ p.votes22 | num }} glasova na svim listićima, {{ p.seats22 }} mandata.{% else %}nema zapisa pod ovim imenom (novo ime ili nova koalicija).{% endif %}</p>
-{% if p.funding %}<p><b>Novac iz budžeta {{ p.funding.year }}:</b> {{ p.funding.paid | round | int | num }} KM <span class="mut small">({% for f in p.funding.rows[:3] %}{{ f.payer }} {{ f.paid | round | int | num }}{% if not loop.last %}, {% endif %}{% endfor %})</span></p>{% endif %}
+<p><b>Prošli put (2022):</b> {% if p.votes22 %}{{ p.seats22 }} mandata.{% else %}nema zapisa pod ovim imenom (novo ime ili nova koalicija).{% endif %}</p>
+{% if p.funding %}<div class="card"><p style="margin:0 0 .2rem"><b>Novac iz budžeta {{ p.funding.year }}:</b> {{ p.funding.paid | round | int | num }} KM</p>
+{% set fmax = p.funding.rows | map(attribute='paid') | select | max | default(1) %}
+{% for f in p.funding.rows[:5] %}{{ hbar(f.payer, f.paid or 0, fmax, (f.paid | round | int | num) ~ ' KM') }}{% endfor %}
+<p class="small mut" style="margin:.3rem 0 0">Stranke dobijaju novac iz budžeta po broju mandata. Izvor: CIK izvještaji o finansiranju.</p></div>{% endif %}
 
 {% if p.program %}
 <h2>Šta obećavaju za 2026</h2>
@@ -29,7 +36,7 @@
 {% if p.key_votes %}
 <p class="mut small">Kako su ljudi s ovih listi glasali kao poslanici 2022–2026 o najvažnijim odlukama. ZA/PROTIV = kako je većina njih glasala.</p>
 {% for kv in p.key_votes %}
-<div class="kd"><span class="vote {{ kv.maj_cls }}">{{ kv.maj_word }}</span> <span class="t">{{ kv.d.title }}</span> <span class="d">{{ kv.d.date }}{% if kv.n > 1 %} · {{ kv.za }} za, {{ kv.protiv }} protiv, {{ kv.uz }} uzdržan, {{ kv.odsutan }} nije bilo{% endif %}</span><br><span class="small mut">{{ kv.d.plain }}</span></div>
+<div class="kd"><span class="vote {{ kv.maj_cls }}">{{ kv.maj_word }}</span> <span class="t">{{ kv.d.title }}</span> <span class="d">{{ kv.d.date }}</span><br><span class="small mut">{{ kv.d.plain }}</span>{% if kv.n > 1 %}{{ stack([("za", kv.za, "c-za"), ("protiv", kv.protiv, "c-protiv"), ("uzdržan", kv.uz, "c-uz"), ("nije glasalo", kv.odsutan, "c-od")], None) }}{% endif %}</div>
 {% endfor %}
 {% else %}
 <p class="mut">Niko s njihovih listi nije sjedio u državnom parlamentu ni u NSRS 2022–2026, pa nema zapisa glasanja. Parlament Federacije i kantoni ne objavljuju ko je kako glasao.</p>

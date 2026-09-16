@@ -28,17 +28,22 @@
 {% if total22 %}<p class="mut">Prošli put (2022) ovdje je glasalo oko {{ total22 | num }} ljudi. Najviše su dobili: {% for h in top22 %}{{ h.party | ptitle }} ({{ h.votes | num }}){% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
 </div>
 
+<h2>Sve liste na jedan pogled</h2>
+<div class="card">
+<p class="mut small" style="margin:0 0 .3rem">Plava crta = glasovi 2022 na ovom području. Tačka: <i class="dot c-za"></i>u vlasti sad, <i class="dot c-od"></i>opozicija/nepoznato.</p>
+{% set maxv = lists | map(attribute='votes22') | select | max | default(1) %}
+{% for l in lists %}
+<div class="hb"><div class="hb-l"><a href="#l{{ loop.index }}">{% if l.program %}<i class="dot {{ 'c-za' if l.program.power.startswith('u vlasti') else 'c-od' }}"></i>{% endif %}{{ loop.index }}. {{ l.name | ptitle }}</a></div><div class="hb-r"><div class="hb-t"><div class="hb-f c-blue" style="width:{{ (100 * (l.votes22 or 0) / maxv) | round(1) }}%"></div></div><div class="hb-v">{{ l.votes22 | num if l.votes22 else 'novo' }}</div></div></div>
+{% endfor %}
+</div>
 <h2>Liste, redom kako su na papiru</h2>
 {% for l in lists %}
 <div class="card big" id="l{{ loop.index }}">
 <p class="mut" style="margin:0">Lista {{ loop.index }}</p>
 <h2 style="margin:.1rem 0 .4rem">{% if l.party_href %}<a href="{{ l.party_href }}">{{ l.name | ptitle }}</a>{% else %}{{ l.name | ptitle }}{% endif %}</h2>
-<div class="facts">
-<div class="fact"><b>{{ l.n }}</b><span>ljudi na listi</span></div>
-<div class="fact"><b>{{ l.won }}</b><span>već bili izabrani</span></div>
-<div class="fact"><b>{{ l.switch }}</b><span>mijenjali stranke</span></div>
-<div class="fact"><b>{{ l.new }}</b><span>prvi put</span></div>
-</div>
+<p class="mut small" style="margin:0">{{ l.n }} ljudi na listi:</p>
+{{ stack([('već birani', l.won, 'c-blue'), ('prvi put', l.new, 'c-blue2'), ('ostali', l.n - l.won - l.new, 'c-new')], l.n) }}
+{% if l.switch %}<p class="small" style="margin:.2rem 0 0"><i class="sw c-sw"></i>{{ l.switch }} od {{ l.n }} mijenjalo stranke</p>{% endif %}
 {% if l.program %}<p><b>Sad su:</b> {{ l.program.power }}.</p>{% endif %}
 <p><b>Prošli put ovdje (2022):</b> {% if l.votes22 %}{{ l.votes22 | num }} glasova, {{ l.seats22 }} {% if l.seats22 == 1 %}mandat{% else %}mandata{% endif %}{% if l.votes18 %} (2018: {{ l.votes18 | num }}){% endif %}.{% else %}nije bila na ovom listiću, ili je nastupila pod drugim imenom.{% endif %}</p>
 {% if l.program %}
@@ -53,7 +58,7 @@
 {% if l.key_votes %}
 <p style="margin:.8rem 0 .2rem"><b>Kako su njihovi ljudi glasali u ovom parlamentu 2022–2026:</b></p>
 {% for kv in l.key_votes[:2] %}
-<div class="kd"><span class="vote {{ kv.maj_cls }}">{{ kv.maj_word }}</span> <span class="t">{{ kv.d.title }}</span> <span class="d">{{ kv.d.date[:4] }}{% if kv.n > 1 %} · {{ kv.za }} za, {{ kv.protiv }} protiv, {{ kv.odsutan }} nije bilo{% endif %}</span><br><span class="small mut">{{ kv.d.plain }}</span></div>
+<div class="kd"><span class="vote {{ kv.maj_cls }}">{{ kv.maj_word }}</span> <span class="t">{{ kv.d.title }}</span> <span class="d">{{ kv.d.date[:4] }}</span><br><span class="small mut">{{ kv.d.plain }}</span>{% if kv.n > 1 %}{{ stack([("za", kv.za, "c-za"), ("protiv", kv.protiv, "c-protiv"), ("uzdržan", kv.uz, "c-uz"), ("nije glasalo", kv.odsutan, "c-od")], None) }}{% endif %}</div>
 {% endfor %}
 {% if l.party_href %}<p class="small" style="margin:.3rem 0"><a href="{{ l.party_href }}">Sve ključne odluke ove stranke →</a></p>{% endif %}
 {% elif r.chamber %}
