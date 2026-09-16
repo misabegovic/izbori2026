@@ -25,7 +25,7 @@
   "id": "nsrs.2023-06-27.1#2",
   "chamber": "narodna-skupstina-rs",
   "date": "2023-06-27",
-  "title": "Neprimjenjivanje odluka Ustavnog suda BiH",
+  "title": "Odluke Ustavnog suda BiH ne važe u RS",
   "plain": "Odluke Ustavnog suda BiH se ne primjenjuju u RS. Visoki predstavnik ga je poništio.",
   "tags": [
    "ustav",
@@ -47,7 +47,7 @@
   "id": "nsrs.2023-11-03.1#10",
   "chamber": "narodna-skupstina-rs",
   "date": "2023-11-03",
-  "title": "Rebalans budžeta RS za 2023.",
+  "title": "Promjena budžeta RS usred 2023.",
   "plain": "Promjena budžeta RS usred godine.",
   "tags": [
    "novac"
@@ -216,7 +216,7 @@
   "id": "nsrs.2025-02-28.1#9",
   "chamber": "narodna-skupstina-rs",
   "date": "2025-02-28",
-  "title": "Zabrana rada državnih institucija u RS",
+  "title": "Zabrana rada državnog suda, tužilaštva i SIPA-e u RS",
   "plain": "SIPA, Sud BiH, Tužilaštvo i VSTV se ne smiju primjenjivati u RS. Ustavni sud BiH poništio.",
   "tags": [
    "ustav",
@@ -260,7 +260,7 @@
   "id": "nsrs.2025-02-28.1#11",
   "chamber": "narodna-skupstina-rs",
   "date": "2025-02-28",
-  "title": "VSTS Republike Srpske",
+  "title": "RS pravi svoje tijelo za izbor sudija (VSTS)",
   "plain": "RS formira vlastito tijelo za izbor sudija i tužilaca. Poništeno.",
   "tags": [
    "sudovi",
@@ -473,7 +473,7 @@
   "id": "nsrs.2026-05-26.1#8",
   "chamber": "narodna-skupstina-rs",
   "date": "2026-05-26",
-  "title": "Deklaracija o zatvaranju OHR-a",
+  "title": "Zahtjev da se zatvori Ured visokog predstavnika (OHR)",
   "plain": "NSRS traži zatvaranje Ureda visokog predstavnika.",
   "tags": [
    "ustav"
@@ -494,7 +494,7 @@
   "id": "nsrs.2026-06-18.1#16",
   "chamber": "narodna-skupstina-rs",
   "date": "2026-06-18",
-  "title": "Rebalans budžeta RS za 2026.",
+  "title": "Promjena budžeta RS usred 2026.",
   "plain": "Promjena budžeta RS u izbornoj godini.",
   "tags": [
    "novac"
@@ -536,7 +536,7 @@
   "id": "o.2460#9",
   "chamber": "predstavnicki-dom-psbih",
   "date": "2023-07-05",
-  "title": "Sloboda pristupa informacijama",
+  "title": "Pravo građana da traže podatke od institucija",
   "plain": "Šta državne institucije moraju objaviti građanima kad ih pitaju. Jedan od uslova za EU.",
   "tags": [
    "EU",
@@ -558,7 +558,7 @@
   "id": "o.2487#5",
   "chamber": "predstavnicki-dom-psbih",
   "date": "2023-08-22",
-  "title": "Izmjene Zakona o VSTV-u (provjera sudija)",
+  "title": "Provjera sudija i tužilaca (VSTV)",
   "plain": "Sudije i tužioci moraju prijaviti imovinu i biti provjereni. Uslov za otvaranje EU pregovora.",
   "tags": [
    "EU",
@@ -601,7 +601,7 @@
   "id": "o.2515#11",
   "chamber": "predstavnicki-dom-psbih",
   "date": "2023-11-20",
-  "title": "Ukidanje Zakona o Sudu BiH",
+  "title": "Ukidanje državnog suda",
   "plain": "Prijedlog da se ukine državni sud. Nije prošao.",
   "tags": [
    "sudovi"
@@ -644,7 +644,7 @@
   "id": "o.2578#2",
   "chamber": "predstavnicki-dom-psbih",
   "date": "2024-03-08",
-  "title": "Sprječavanje sukoba interesa",
+  "title": "Zabrana miješanja privatnog i javnog (sukob interesa)",
   "plain": "Ko u državnim institucijama ne smije imati privatni interes i kako se to provjerava. Uslov za EU.",
   "tags": [
    "EU",
@@ -773,7 +773,7 @@
   "id": "o.2699#32",
   "chamber": "predstavnicki-dom-psbih",
   "date": "2025-06-12",
-  "title": "Zakon o Sudu BiH (prijedlog P. Kojovića, 2025)",
+  "title": "Novi zakon o državnom sudu (prijedlog 2025)",
   "plain": "Prijedlog novog zakona o državnom sudu. Nije prošao.",
   "tags": [
    "sudovi"
@@ -837,7 +837,7 @@
   "id": "o.2728#16",
   "chamber": "predstavnicki-dom-psbih",
   "date": "2025-12-12",
-  "title": "Tržište električne energije",
+  "title": "Novi zakon o struji (tržište i regulator)",
   "plain": "Novi zakon o regulatoru i tržištu struje. Ključni EU uslov.",
   "tags": [
    "EU",
@@ -922,7 +922,7 @@
   "id": "o.2735#18",
   "chamber": "predstavnicki-dom-psbih",
   "date": "2026-03-16",
-  "title": "Zamrzavanje imovine radi sprječavanja terorizma",
+  "title": "Blokiranje imovine osumnjičenih za terorizam",
   "plain": "Blokiranje imovine osumnjičenih za terorizam. Međunarodna obaveza.",
   "tags": [
    "sigurnost"
@@ -985,7 +985,7 @@
   "id": "o.2749#19",
   "chamber": "predstavnicki-dom-psbih",
   "date": "2026-05-19",
-  "title": "Zakon o VSTV-u (novi, 2026)",
+  "title": "Novi zakon o tijelu koje bira sudije (VSTV)",
   "plain": "Novi zakon o tijelu koje bira sudije i tužioce. EU uslov. Nije dobio podršku.",
   "tags": [
    "EU",
@@ -1007,7 +1007,7 @@
   "id": "o.2755#12",
   "chamber": "predstavnicki-dom-psbih",
   "date": "2026-07-22",
-  "title": "Zakon o Sudu BiH i Apelacionom sudu",
+  "title": "Novi zakon o državnom sudu i sudu za žalbe",
   "plain": "Novi zakon o državnim sudovima, drugo čitanje. EU uslov.",
   "tags": [
    "EU",

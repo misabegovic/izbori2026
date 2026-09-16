@@ -7,11 +7,12 @@
 <p class="lead" style="margin-top:.6rem">{{ p.story }}</p>
 <div class="card">
 <b>Ove godine na listiću:</b>
-<ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for r in runs %}<li><a href="{{ r.href }}">{{ RACE[r.unit.race].short }}{% if r.unit.race != 'oi2026-1' and r.unit.race != 'oi2026-5' %}, jedinica {{ r.unit.area }}{% endif %}</a> — {% if r.party_href %}<a href="{{ r.party_href }}">{{ r.list | ptitle }}</a>{% else %}{{ r.list | ptitle }}{% endif %}{% if r.pos %}, {{ r.pos }}. na listi{% endif %}</li>{% endfor %}</ul>
+<ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for r in runs %}<li><a href="{{ r.href }}">{{ RACE[r.unit.race].short }}{% if r.unit.race != 'oi2026-1' and r.unit.race != 'oi2026-5' %}, {{ COMP.get(r.unit.area, 'područje ' ~ r.unit.area) }}{% endif %}</a> — {% if r.party_href %}<a href="{{ r.party_href }}">{{ r.list | ptitle }}</a>{% else %}{{ r.list | ptitle }}{% endif %}{% if r.pos %}, {{ r.pos }}. na listi{% endif %}</li>{% endfor %}</ul>
 </div>
 
 {% if rec %}
-<h2>Kako je glasao kao poslanik</h2>
+<h2>Kako je glasao/la kao poslanik/ca</h2>
+{% if replacement %}<p class="mut small">U parlament je ušao/la naknadno, kao zamjena, ne direktno na izborima 2022.</p>{% endif %}
 {% for r in rec %}
 <div class="card">
 <p style="margin:0 0 .4rem"><b>{{ r.chamber_name }}</b>, {{ r.saziv }}</p>
@@ -25,7 +26,7 @@
 </div>
 {% endfor %}
 {% if kd %}
-<h2>Ključne odluke: kako je glasao</h2>
+<h2>Ključne odluke: kako je glasao/la</h2>
 <p class="mut small">Odabrali smo najvažnije zakone saziva. Za svaki piše šta je i kako je ova osoba glasala.</p>
 {% for k in kd %}
 <div class="kd"><span class="vote {{ k.cls }}">{{ k.word }}</span> <span class="t">{{ k.d.title }}</span> <span class="d">{{ k.d.date }}</span><br><span class="small mut">{{ k.d.plain }}</span></div>
@@ -66,5 +67,5 @@
 {% if prof.pageUrl %}<p class="src">Više: <a href="{{ prof.pageUrl }}">{{ prof.pageUrl }}</a></p>{% endif %}
 </div>
 {% endif %}
-{% if p.confidence in ('unverified','probable') %}<p class="small mut">⚠ Kandidature su spojene u jednu osobu po imenu. Ako dvoje ljudi ima isto ime, dio ove priče može pripadati drugom čovjeku.</p>{% endif %}
+{% if p.confidence in ('unverified','probable') and p.stood > 1 %}<p class="small mut">Napomena: kandidature su spojene u jednu osobu po imenu. Ako dvoje ljudi ima isto ime, dio ove priče može pripadati drugom čovjeku.</p>{% endif %}
 {% endblock %}

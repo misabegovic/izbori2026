@@ -81,14 +81,14 @@ footer { max-width:660px; margin:2rem auto 0; padding:1rem 16px 2rem; border-top
 <body>
 <div class="top"><div class="in">
 <a class="home" href="index.html">Izbori 2026</a>
-<nav><a href="kako-glasati.html">Kako glasati</a><a href="predsjednistvo.html">Predsjedništvo</a><a href="stranke.html">Stranke</a><a href="desavanja.html">Šta se desilo</a> <button class="tog" id="tog" onclick="toggleScript()">ЋИР</button></nav>
+<nav><a href="kako-glasati.html">Kako glasati</a><a href="predsjednistvo.html">Predsjedništvo</a><a href="stranke.html">Stranke</a><a href="desavanja.html">Šta se desilo</a> <button class="tog" onclick="bigger()" title="Veća slova">A+</button> <button class="tog" id="tog" onclick="toggleScript()">ЋИР</button></nav>
 </div></div>
 <main>
 {% block content %}{% endblock %}
 </main>
 <footer>
 <p>Brojke: <a href="https://gianniravioli.com/mashinerija/">gianniravioli.com „Mashinerija”</a> (CIK-ove liste, mandati i poimenična glasanja, CC BY 4.0) i eCitizen.ba. Obećanja stranaka: iz medija i stranačkih stranica, uz izvor na svakoj tvrdnji. Generisano {{ generated }}.</p>
-<p>Stranica nikog ne preporučuje. Pokazuje šta je javno zapisano. Karijere osoba su spojene po imenu kroz izbore, pa je kod ⚠ moguća greška.</p>
+<p>Ko smo: volonterski, nestranački projekt bez reklama i praćenja (<a href="https://github.com/misabegovic/izbori2026">kod je javan</a>). Nikog ne preporučujemo. Pokazujemo šta je javno zapisano. Karijere osoba su spojene po imenu kroz izbore, pa je kod istih imena moguća greška.</p>
 </footer>
 <script>
 (function(){
@@ -97,6 +97,9 @@ var L2C={"A":"А","B":"Б","V":"В","G":"Г","D":"Д","Đ":"Ђ","E":"Е","Ž":"�
 function tr(s){return s.replace(/Lj|LJ|lj|Nj|NJ|nj|Dž|DŽ|dž/g,function(m){return {"Lj":"Љ","LJ":"Љ","lj":"љ","Nj":"Њ","NJ":"Њ","nj":"њ","Dž":"Џ","DŽ":"Џ","dž":"џ"}[m];}).replace(/[A-Za-zĐđŽžĆćČčŠš]/g,function(ch){return L2C[ch]||ch;});}
 function walk(n){if(n.nodeType===3){if(!n._lat)n._lat=n.nodeValue;n.nodeValue=tr(n._lat);}else if(n.nodeType===1&&n.tagName!=="SCRIPT"&&n.tagName!=="STYLE"){for(var i=0;i<n.childNodes.length;i++)walk(n.childNodes[i]);}}
 function back(n){if(n.nodeType===3){if(n._lat)n.nodeValue=n._lat;}else if(n.nodeType===1){for(var i=0;i<n.childNodes.length;i++)back(n.childNodes[i]);}}
+window.bigger=function(){var h=document.documentElement;var cur=parseInt(localStorage.getItem("fs")||"0");cur=(cur+1)%3;localStorage.setItem("fs",cur);h.style.fontSize=["","22px","25px"][cur];};
+try{var fs=parseInt(localStorage.getItem("fs")||"0");if(fs)document.documentElement.style.fontSize=["","22px","25px"][fs];}catch(e){}
+window.foldq=function(s){var C={"а":"a","б":"b","в":"v","г":"g","д":"d","ђ":"dj","е":"e","ж":"z","з":"z","и":"i","ј":"j","к":"k","л":"l","љ":"lj","м":"m","н":"n","њ":"nj","о":"o","п":"p","р":"r","с":"s","т":"t","ћ":"c","у":"u","ф":"f","х":"h","ц":"c","ч":"c","џ":"dz","ш":"s","č":"c","ć":"c","ž":"z","š":"s","đ":"dj"};return s.toLowerCase().split("").map(function(c){return C[c]||c;}).join("");};
 window.toggleScript=function(){var on=localStorage.getItem("cyr")==="1";if(on){back(document.body);localStorage.setItem("cyr","0");document.getElementById("tog").textContent="ЋИР";}else{walk(document.body);localStorage.setItem("cyr","1");document.getElementById("tog").textContent="LAT";}};
 try{if(localStorage.getItem("cyr")==="1"){walk(document.body);document.getElementById("tog").textContent="LAT";}}catch(e){}
 })();

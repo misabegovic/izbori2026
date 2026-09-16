@@ -6,9 +6,9 @@
 <div class="list" id="L">
 {% for group, items in groups %}
 <h2 class="g">{{ group }}</h2>
-{% for m in items %}<a class="item o" data-name="{{ m.name | lower }}" href="opcina-{{ m.slug }}.html">{{ m.name }}</a>
+{% for m in items %}<a class="item o" data-name="{{ m.folded }}" href="opcina-{{ m.slug }}.html">{{ m.name }}</a>
 {% endfor %}
 {% endfor %}
 </div>
-<script>function f(){var q=document.getElementById('q').value.toLowerCase();document.querySelectorAll('.o').forEach(function(e){e.style.display=e.dataset.name.indexOf(q)>=0?'':'none'});document.querySelectorAll('.g').forEach(function(e){e.style.display=q?'none':''});}</script>
+<script>function f(){var q=foldq(document.getElementById('q').value);document.querySelectorAll('.o').forEach(function(e){e.style.display=e.dataset.name.indexOf(q)>=0?'':'none'});document.querySelectorAll('.g').forEach(function(e){e.style.display=q?'none':''});}</script>
 {% endblock %}

@@ -3,7 +3,7 @@
 {% block content %}
 <p class="mut"><a href="stranke.html">← sve stranke</a> · <a href="index.html">početna</a></p>
 <h1>{{ p.name | ptitle }}</h1>
-{% if p.program %}<p class="lead">{{ p.program.governing_now }}</p>{% endif %}
+{% if p.program %}<p class="lead"><b>Sad su:</b> {{ p.program.power }}.</p><p class="mut">{{ p.program.governing_now }}</p>{% endif %}
 <div class="facts">
 <div class="fact"><b>{{ p.n }}</b><span>kandidata 2026</span></div>
 <div class="fact"><b>{{ p.won }}</b><span>već bili izabrani</span></div>
@@ -25,14 +25,14 @@
 <p class="mut">Za ovu listu nismo našli objavljen program ili obećanja za 2026.</p>
 {% endif %}
 
-<h2>Šta su radili kad su bili na vlasti</h2>
+<h2>Kako su njihovi poslanici glasali 2022–2026</h2>
 {% if p.key_votes %}
 <p class="mut small">Kako su ljudi s ovih listi glasali kao poslanici 2022–2026 o najvažnijim odlukama. ZA/PROTIV = kako je većina njih glasala.</p>
 {% for kv in p.key_votes %}
 <div class="kd"><span class="vote {{ kv.maj_cls }}">{{ kv.maj_word }}</span> <span class="t">{{ kv.d.title }}</span> <span class="d">{{ kv.d.date }}{% if kv.n > 1 %} · {{ kv.za }} za, {{ kv.protiv }} protiv, {{ kv.uz }} uzdržan, {{ kv.odsutan }} nije bilo{% endif %}</span><br><span class="small mut">{{ kv.d.plain }}</span></div>
 {% endfor %}
 {% else %}
-<p class="mut">Niko s njihovih listi nije bio državni ili RS poslanik 2022–2026, pa nema zapisa glasanja. Parlament FBiH i kantoni ne objavljuju poimenična glasanja.</p>
+<p class="mut">Niko s njihovih listi nije sjedio u državnom parlamentu ni u NSRS 2022–2026, pa nema zapisa glasanja. Parlament Federacije i kantoni ne objavljuju ko je kako glasao.</p>
 {% endif %}
 {% if p.mps %}
 <h2>Njihovi poslanici koji se ponovo kandiduju</h2>

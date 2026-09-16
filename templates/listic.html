@@ -4,7 +4,7 @@
 <p class="mut"><a href="javascript:history.back()">← nazad</a> · <a href="index.html">početna</a></p>
 <h1>{{ r.short }}{% if u.race == 'oi2026-1' %} — {{ {'701':'bošnjački član','702':'hrvatski član','703':'srpski član'}[u.area] }}{% endif %}</h1>
 <p class="lead">{{ r.plain }}</p>
-<p class="mut">Ovo je {{ r.who }}.{% if r.kind == 'list' %} Izborna jedinica {{ u.area }}.{% endif %}</p>
+<p class="mut">Ovo je {{ r.who }}.{% if munis %} Ovaj papir dobijaju birači u: {{ munis | join(", ") }}.{% elif COMP.get(u.area) %} Ovo je {{ COMP[u.area] }}: ta mjesta stranke dijele po svom redu, glasovi iz svih područja se zbrajaju.{% endif %}</p>
 
 {% if r.kind == 'one' %}
 <div class="card">
@@ -16,14 +16,15 @@
 <div class="card">
 <h3>{% if c.has_page %}<a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</h3>
 <p class="mut" style="margin:0 0 .3rem">{% if l.party_href %}<a href="{{ l.party_href }}">{{ l.name | ptitle }}</a>{% else %}{{ l.name | ptitle }}{% endif %}</p>
-<p>{{ c.story }}</p>
-<div>{% for b in c.badges %}{{ badge(b) }}{% endfor %}</div>
+{% set cx = PRES_CTX.get(c.raw_name | lat) %}{% if cx %}<p><b>Ko je:</b> {{ cx.bio }}</p><p><b>Šta kaže:</b> {{ cx.says }} <a class="src" href="{{ cx.src }}">izvor</a></p>{% else %}<p>{{ c.story }}</p>
+<div>{% for b in c.badges %}{{ badge(b) }}{% endfor %}</div>{% endif %}
 </div>
 {% endfor %}
 {% endfor %}
 {% else %}
 <div class="card">
-<p><b>Kako glasaš:</b> prvo popuni kružić ispred JEDNE liste. Onda, ako hoćeš, do TRI čovjeka s te iste liste. Ako zaokružiš samo ljude, a ne i listu, glas propada.</p>
+<p><b>Kako glasaš:</b> prvo popuni kružić ispred JEDNE liste. Onda, ako hoćeš, do TRI čovjeka s te iste liste. Ako zaokružiš samo ljude, a ne i listu, glas propada. Glas je tajan.</p>
+{% if lists | length > 6 %}<details><summary>Skoči na listu</summary><ol style="margin:.3rem 0 0 1.2rem;padding:0">{% for l in lists %}<li><a href="#l{{ loop.index }}">{{ l.name | ptitle }}</a></li>{% endfor %}</ol></details>{% endif %}
 {% if total22 %}<p class="mut">Prošli put (2022) ovdje je glasalo oko {{ total22 | num }} ljudi. Najviše su dobili: {% for h in top22 %}{{ h.party | ptitle }} ({{ h.votes | num }}){% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
 </div>
 
@@ -38,6 +39,7 @@
 <div class="fact"><b>{{ l.switch }}</b><span>mijenjali stranke</span></div>
 <div class="fact"><b>{{ l.new }}</b><span>prvi put</span></div>
 </div>
+{% if l.program %}<p><b>Sad su:</b> {{ l.program.power }}.</p>{% endif %}
 <p><b>Prošli put ovdje (2022):</b> {% if l.votes22 %}{{ l.votes22 | num }} glasova, {{ l.seats22 }} {% if l.seats22 == 1 %}mandat{% else %}mandata{% endif %}{% if l.votes18 %} (2018: {{ l.votes18 | num }}){% endif %}.{% else %}nije bila na ovom listiću, ili je nastupila pod drugim imenom.{% endif %}</p>
 {% if l.program %}
 <div class="claim">
@@ -49,17 +51,19 @@
 </div>
 {% endif %}
 {% if l.key_votes %}
-<p style="margin:.8rem 0 .2rem"><b>Kako su glasali kad su bili na vlasti:</b></p>
+<p style="margin:.8rem 0 .2rem"><b>Kako su njihovi ljudi glasali u ovom parlamentu 2022–2026:</b></p>
 {% for kv in l.key_votes[:2] %}
 <div class="kd"><span class="vote {{ kv.maj_cls }}">{{ kv.maj_word }}</span> <span class="t">{{ kv.d.title }}</span> <span class="d">{{ kv.d.date[:4] }}{% if kv.n > 1 %} · {{ kv.za }} za, {{ kv.protiv }} protiv, {{ kv.odsutan }} nije bilo{% endif %}</span><br><span class="small mut">{{ kv.d.plain }}</span></div>
 {% endfor %}
 {% if l.party_href %}<p class="small" style="margin:.3rem 0"><a href="{{ l.party_href }}">Sve ključne odluke ove stranke →</a></p>{% endif %}
-{% elif l.mps == 0 %}
-<p class="mut small">Niko s ove liste nije bio državni ili RS poslanik 2022–2026, pa nema zapisa glasanja.</p>
+{% elif r.chamber %}
+<p class="mut small">Niko s ove liste nije sjedio u ovom parlamentu 2022–2026, pa nema zapisa glasanja.{% if l.party_href %} <a href="{{ l.party_href }}">Šta je stranka radila drugdje →</a>{% endif %}</p>
+{% else %}
+<p class="mut small">Ovaj parlament ne objavljuje ko je kako glasao.{% if l.party_href %} Kako je ova stranka glasala u državnom parlamentu ili NSRS: <a href="{{ l.party_href }}">vidi stranku →</a>{% endif %}</p>
 {% endif %}
 <details><summary>Ko je na listi ({{ l.n }})</summary>
 <ul class="people">{% for c in l.cands %}{{ person_row(c) }}{% endfor %}</ul>
-<p class="small mut">Klikni na ime za cijelu priču. Značke: „već bio izabran” = osvojio mandat ranije; „mijenjao stranke” = kandidovao se za više stranaka; „prvi put” = nikad prije na listiću.</p>
+<p class="small mut">Klikni na ime za cijelu priču. „već biran” = ranije izabran; „mijenjao stranke” = kandidovao se za različite stranke; „prvi put” = nikad prije na listiću; „na funkciji” = trenutno drži izbornu funkciju. Ime bez značke = nema zapisa prije 2026.</p>
 </details>
 </div>
 {% endfor %}

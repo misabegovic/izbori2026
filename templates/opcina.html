@@ -3,7 +3,7 @@
 {% block content %}
 <p class="mut"><a href="index.html">← početna</a></p>
 <h1>{{ m.name }}: dobit ćeš {{ ballots | length }} listića</h1>
-<p class="lead">Svaki papir bira druge ljude za drugi posao. Otvori svaki i vidi ko je na njemu.</p>
+<p class="lead">Svaki papir bira druge ljude za drugi posao. Otvori svaki i vidi ko je na njemu. Glas je tajan: niko ne može vidjeti šta si zaokružio.</p>
 {% for b in ballots %}
 <div class="card big">
 <p class="mut" style="margin:0">Listić {{ loop.index }}</p>
@@ -21,8 +21,8 @@
 {% endfor %}
 <p class="mut">{{ m.group }}. Ne znaš kako se popunjava? <a href="kako-glasati.html">Kako glasati</a>.</p>
 {% if ec %}
-<details><summary>Šta radi tvoje općinsko vijeće (posljednje sjednice)</summary>
-<p class="mut small">Ovo nisu ovi izbori (vijeće se bira 2028), ali pokazuje kako vlast u tvom mjestu glasa. Izvor: eCitizen.ba.</p>
+<details><summary>Šta radi tvoje {{ "skupština opštine/grada" if m.entity == "rs" else "općinsko vijeće" }} (posljednje sjednice)</summary>
+<p class="mut small">Ovo se ne bira sada (lokalni izbori su 2028). Pokazuje kako lokalna vlast glasa. Izvor: eCitizen.ba.</p>
 {% for s in ec.sessions[:3] %}
 <div class="card">
 <b>{{ s.name }}</b>{% if s.date %} <span class="mut">· {{ s.date }}</span>{% endif %}

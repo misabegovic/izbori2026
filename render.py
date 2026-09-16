@@ -40,7 +40,7 @@ def nice_name(s):
     s = (s or "").strip()
     s = re.sub(r"\s*-\s*NEOVISNI KANDIDAT.*$", "", s, flags=re.I)
     s = re.sub(r"\s*-\s*NEZAVISNI KANDIDAT.*$", "", s, flags=re.I)
-    return " ".join(w.capitalize() if not w.isupper() or len(w) > 3 else w.capitalize() for w in s.title().split())
+    return " ".join("-".join(p.capitalize() for p in w.split("-")) for w in s.lower().split())
 
 
 SHORT = {}  # filled after programs load
@@ -112,6 +112,7 @@ env.filters["num"] = num
 env.filters["nice"] = nice_name
 env.filters["ptitle"] = party_title
 env.filters["km"] = km
+env.filters["lat"] = lambda x: cyr2lat(x or "").upper()
 
 RACE = {
     "oi2026-1": {"short": "Predsjedništvo BiH", "kind": "one", "who": "tri člana koji predstavljaju državu prema svijetu i komanduju vojskom",
@@ -129,6 +130,7 @@ RACE = {
 }
 CHAMBER_NAME = {"predstavnicki-dom-psbih": "Državni parlament (PSBiH)", "narodna-skupstina-rs": "Narodna skupština RS"}
 VOTE_WORD = {"za": "ZA", "protiv": "PROTIV", "suzdrzan": "uzdržan", "nije-prisutan": "nije bio", "nije-glasao": "nije glasao", None: "nije glasao"}
+MAJ_WORD = {"za": "ZA", "protiv": "PROTIV", "suzdrzan": "uzdržani", "nije-prisutan": "većina nije glasala"}
 VOTE_CLS = {"za": "v-za", "protiv": "v-protiv", "suzdrzan": "v-uz", "nije-prisutan": "v-odsutan", "nije-glasao": "v-odsutan", None: "v-odsutan"}
 
 # ---------------------------------------------------------------- party <-> program
@@ -154,12 +156,31 @@ def program_for(list_name):
 
 
 # ---------------------------------------------------------------- people
+def dedupe_tl(tl):
+    seen, out = set(), []
+    for t in tl:
+        k = (t.get("y"), t.get("lvl"), fold(t.get("area") or ""), party_key(t.get("party") or "")[:12])
+        if k in seen:
+            continue
+        seen.add(k); out.append(t)
+    return out
+
+
+def party_identity(name):
+    """Same party under different printed names (coalition lists, renames we know) -> same id."""
+    prog = program_for(name)
+    if prog:
+        return "prog:" + prog["name"]
+    k = party_key(name)
+    return " ".join(k.split()[:2])
+
+
 def unique_parties(tl):
     seen, out = set(), []
-    for t in sorted(tl, key=lambda t: (t.get("y") or 0)):
+    for t in sorted(dedupe_tl(tl), key=lambda t: (t.get("y") or 0)):
         p = t.get("party")
-        if p and party_key(p) not in seen:
-            seen.add(party_key(p)); out.append((t["y"], p))
+        if p and party_identity(p) not in seen:
+            seen.add(party_identity(p)); out.append((t["y"], p))
     return out
 
 
@@ -207,24 +228,26 @@ def person_view(c):
     if v["office"]:
         badges.append(("office", "sada na funkciji", "Trenutno drži izbornu funkciju."))
     if won and won > 0:
-        badges.append(("won", f"izabran {won}×" if won > 1 else "već bio izabran", "Ranije osvojio mandat na izborima."))
+        lv = {t.get("lvl") for t in won_rows}
+        local = lv and all(("vijeće" in (l or "")) or ("ačelnik" in (l or "")) for l in lv)
+        where = "u općini" if local else ""
+        badges.append(("won", (f"izabran {won}× {where}" if won > 1 else f"već biran {where}").strip(),
+                       "Ranije izabran: " + ", ".join(f"{t['y']} {t['lvl']}" for t in won_rows[:6])))
     if v["n_parties"] > 1:
-        badges.append(("switch", f"mijenjao stranke ({v['n_parties']})", "Kandidovao se za više različitih stranaka: " + ", ".join(party_title(p) for _, p in parties)))
+        badges.append(("switch", f"mijenjao stranke ({v['n_parties']})", "Kandidovao se za različite stranke: " + " → ".join(f"{party_title(p)} ({y})" for y, p in parties) + ". Ako je stranka samo promijenila ime, ovo može biti greška."))
     if stood == 1:
         badges.append(("new", "prvi put", "Prvi put na listiću."))
     if stood >= 3 and not won:
-        badges.append(("filler", f"{stood}. pokušaj, nikad izabran", "Kandidovao se više puta, nikad nije osvojio mandat."))
+        badges.append(("filler", f"{stood}. put na listi, još neizabran", "Kandidovao se više puta, do sada nije osvojio mandat."))
     if v["has_record"]:
         badges.append(("record", "ima zapis glasanja", "Bio poslanik 2022–2026, vidi kako je glasao."))
-    if v["confidence"] in ("unverified", "probable") and (stood or 0) > 1:
-        badges.append(("warn", "⚠", "Karijera je spojena po imenu kroz izbore — zaključak, ne dokaz."))
     v["badges"] = badges
     # one-sentence story
     s = []
     if stood == 1:
         s.append("Prvi put se kandiduje.")
     else:
-        s.append(f"Kandiduje se {stood}. put" + (f", izabran {won} puta." if won else ", nikad nije izabran."))
+        s.append(f"Kandiduje se {stood}. put" + (f", izabran/a {won} puta." if won else ", do sada nije izabran/a."))
     if v["n_parties"] > 1:
         s.append("Stranke: " + " → ".join(f"{party_title(p)} ({y})" for y, p in parties) + ".")
     elif parties and stood > 1:
@@ -280,9 +303,10 @@ def party_key_votes(pk):
         if not who:
             continue
         maj = max(("za", "protiv", "suzdrzan"), key=lambda k: cnt.get(k, 0))
-        if cnt.get(maj, 0) == 0:
+        voted = cnt.get("za", 0) + cnt.get("protiv", 0) + cnt.get("suzdrzan", 0)
+        if voted == 0 or voted * 2 < len(who):
             maj = "nije-prisutan"
-        out.append({"d": d, "cnt": dict(cnt), "n": len(who), "maj": maj, "maj_word": VOTE_WORD[maj], "maj_cls": VOTE_CLS[maj],
+        out.append({"d": d, "cnt": dict(cnt), "n": len(who), "maj": maj, "maj_word": MAJ_WORD[maj], "maj_cls": VOTE_CLS[maj],
                     "za": cnt.get("za", 0), "protiv": cnt.get("protiv", 0), "uz": cnt.get("suzdrzan", 0),
                     "odsutan": cnt.get("nije-prisutan", 0) + cnt.get("nije-glasao", 0) + cnt.get(None, 0)})
     return out or None
@@ -302,12 +326,13 @@ def party_summary(pk):
         if c["pid"] not in seen:
             seen.add(c["pid"]); mps_u.append(person_view(c))
     votes22 = 0; seats22 = 0; units_in = 0
+    pi = party_identity(list_display.get(pk, ""))
     for uk, u in units.items():
         for h in u.get("party_history", []):
-            if h["year"] == 2022 and party_key(h["party"]) == pk:
+            if h["year"] == 2022 and party_identity(h["party"]) == pi:
                 votes22 += h.get("votes") or 0
         for nm, cnt in u.get("seats22", {}).items():
-            if party_key(nm) == pk:
+            if party_identity(nm) == pi:
                 seats22 += cnt
         if any(party_key(l["name"]) == pk for l in u["lists"]):
             units_in += 1
@@ -348,7 +373,18 @@ def unit_href(race, area):
     return f"listic-{race}-{area}.html"
 
 
-base_ctx = {"generated": gen, "RACE": RACE}
+unit_munis = defaultdict(list)
+for m in municipalities:
+    for race, area in m["refs"]:
+        unit_munis[f"{race}-{area}"].append(m["name"])
+PRES_CTX = {}
+for grp in context["presidency"].values():
+    for r_ in grp:
+        PRES_CTX[r_["name"].upper()] = r_
+for r_ in context["rs_president"]:
+    PRES_CTX[r_["name"].upper()] = r_
+COMP = {"501": "dodatna lista za cijelu Federaciju", "502": "dodatna lista za cijelu RS", "400": "dodatna lista za cijelu Federaciju", "300": "dodatna lista za cijelu RS"}
+base_ctx = {"generated": gen, "RACE": RACE, "PRES_CTX": PRES_CTX, "COMP": COMP}
 
 # --- candidate pages
 kand_tpl = env.get_template("kandidat.html")
@@ -364,15 +400,16 @@ for pid, entries in cand_index.items():
     v = person_view(c)
     if not v["has_page"]:
         continue
-    tl = sorted(timelines.get(pid, []), key=lambda t: (t.get("y") or 0, t.get("lvl") or ""))
+    tl = sorted(dedupe_tl(timelines.get(pid, [])), key=lambda t: (t.get("y") or 0, t.get("lvl") or ""))
     prof = profiles.get(pid, {})
     vm = vote_map(pid)
     rec = record_summary(pid)
+    replacement = bool(rec) and not any(t.get("elected") and t.get("y") == 2022 for t in tl)
     kd = []
     for d in key_decisions:
         if d["id"] in vm:
             kd.append({"d": d, "vote": vm[d["id"]], "word": VOTE_WORD[vm[d["id"]]], "cls": VOTE_CLS[vm[d["id"]]]})
-    sp = speeches.get(pid, [])
+    sp = [dict(x, text=re.sub(r"_{3,}\s*\(\?\)|_{3,}", "…", x["text"])) for x in speeches.get(pid, [])]
     assets = None
     if prof.get("assets"):
         by_src = defaultdict(list)
@@ -381,7 +418,7 @@ for pid, entries in cand_index.items():
         assets = {src: rows for src, rows in by_src.items()}
     runs = [{"unit": units[e[0]], "list": e[1], "href": unit_href(units[e[0]]["race"], units[e[0]]["area"]), "pos": e[2].get("pos"),
              "party_href": party_href(e[1])} for e in entries]
-    html = kand_tpl.render(p=v, tl=tl, prof=prof, rec=rec, kd=kd, speeches_n=len(sp), speeches=sp[:5], assets=assets, runs=runs, **base_ctx)
+    html = kand_tpl.render(p=v, tl=tl, prof=prof, rec=rec, kd=kd, replacement=replacement, speeches_n=len(sp), speeches=sp[:5], assets=assets, runs=runs, **base_ctx)
     write(f"kandidat-{v['slug']}.html", html)
     n_kand += 1
 
@@ -389,30 +426,34 @@ for pid, entries in cand_index.items():
 listic_tpl = env.get_template("listic.html")
 for uk, u in units.items():
     race = u["race"]
-    hist22 = {party_key(h["party"]): h for h in u.get("party_history", []) if h["year"] == 2022}
-    hist18 = {party_key(h["party"]): h for h in u.get("party_history", []) if h["year"] == 2018}
-    seats22 = {party_key(k): v for k, v in u.get("seats22", {}).items()}
+    hist22 = {party_identity(h["party"]): h for h in u.get("party_history", []) if h["year"] == 2022}
+    hist18 = {party_identity(h["party"]): h for h in u.get("party_history", []) if h["year"] == 2018}
+    seats22 = {}
+    for k_, v_ in u.get("seats22", {}).items():
+        seats22[party_identity(k_)] = seats22.get(party_identity(k_), 0) + v_
     lists = []
     for l in u["lists"]:
         pk = party_key(l["name"])
+        pi = party_identity(l["name"])
         cands = [person_view(c) for c in l["candidates"]]
         prog = program_for(l["name"])
         kv = party_pages[pk]["key_votes"] if pk in party_pages else None
         recent_kv = None
-        if kv:
-            ch = RACE[race].get("chamber")
-            pool = [x for x in kv if x["d"]["chamber"] == ch] if ch else kv
-            recent_kv = sorted(pool or kv, key=lambda x: x["d"]["date"], reverse=True)[:4]
+        ch = RACE[race].get("chamber")
+        if kv and ch:
+            pool = [x for x in kv if x["d"]["chamber"] == ch]
+            recent_kv = sorted(pool, key=lambda x: x["d"]["date"], reverse=True)[:4] or None
         lists.append({"name": l["name"], "key": pk, "cands": cands, "n": len(cands),
                       "won": sum(1 for c in cands if c["won"]), "switch": sum(1 for c in cands if c["n_parties"] > 1),
                       "new": sum(1 for c in cands if c["stood"] == 1), "office": sum(1 for c in cands if c["office"]),
                       "mps": sum(1 for c in cands if c["has_record"]),
-                      "votes22": (hist22.get(pk) or {}).get("votes"), "votes18": (hist18.get(pk) or {}).get("votes"),
-                      "seats22": seats22.get(pk, 0), "program": prog, "party_href": party_href(l["name"]),
+                      "votes22": (hist22.get(pi) or {}).get("votes"), "votes18": (hist18.get(pi) or {}).get("votes"),
+                      "seats22": seats22.get(pi, 0), "program": prog, "party_href": party_href(l["name"]),
                       "key_votes": recent_kv})
     total22 = sum((h.get("votes") or 0) for h in u.get("party_history", []) if h["year"] == 2022)
     top22 = sorted([h for h in u.get("party_history", []) if h["year"] == 2022], key=lambda h: -(h.get("votes") or 0))[:5]
-    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, **base_ctx)
+    munis = unit_munis.get(uk, [])
+    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, munis=munis, **base_ctx)
     write(unit_href(race, u["area"]), html)
 
 # --- municipality pages
@@ -423,7 +464,13 @@ ec_by_slug = {}
 for city, data in ecitizen["cities"].items():
     slug = slug_by_folded.get(fold(city.replace("_", " ")))
     if slug and data.get("sessions"):
-        ec_by_slug[slug] = data
+        good = []
+        for sess in data["sessions"]:
+            ag = [a for a in (sess.get("agendas") or []) if a.get("for") is not None]
+            if ag:
+                good.append({**sess, "agendas": [dict(a, name=(a.get("name") or "")[:110]) for a in ag[:6]]})
+        if good:
+            ec_by_slug[slug] = {**data, "sessions": good}
 opcina_tpl = env.get_template("opcina.html")
 for m in municipalities:
     ballots = []
@@ -456,6 +503,8 @@ for m in municipalities:
 groups = defaultdict(list)
 for m in municipalities:
     groups[m["group"]].append(m)
+for m in municipalities:
+    m["folded"] = fold(m["name"])
 write("opcine.html", env.get_template("opcine.html").render(groups=sorted(groups.items()), **base_ctx))
 
 # --- party pages + index of parties
@@ -503,6 +552,8 @@ write("desavanja.html", env.get_template("desavanja.html").render(events=context
 write("kako-glasati.html", env.get_template("kako.html").render(ctx=context, **base_ctx))
 
 # --- index
+for m in municipalities:
+    m["folded"] = fold(m["name"])
 write("index.html", env.get_template("index.html").render(municipalities=municipalities, national=national, ctx=context, **base_ctx))
 
 print(f"rendered: {len(units)} listića, {len(municipalities)} općina, {n_kand} kandidata, {len(party_pages)} stranaka")

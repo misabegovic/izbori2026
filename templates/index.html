@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Izbori su u nedjelju, 4. oktobra.<br>Evo šta trebaš znati.</h1>
-<p class="lead">Dobit ćeš 3 ili 4 papira. Na svakom biraš druge ljude. Ova stranica ti prostim riječima pokaže ko su, šta su već radili i šta sad obećavaju.</p>
+<p class="lead">Dobit ćeš 3 ili 4 papira. Na svakom biraš druge ljude. Ova stranica ti prostim riječima pokaže ko su, šta su već radili i šta sad obećavaju. Tvoj glas je tajan.</p>
+<a class="btn sec" href="kako-glasati.html">Prvi put glasaš? Kako se popunjava listić →</a>
 
 <div class="card big">
 <h2>1. Gdje glasaš?</h2>
-<input type="search" id="q" placeholder="Ukucaj svoju općinu, npr. Tuzla" oninput="filterOpcine()" autocomplete="off">
+<input type="search" id="q" placeholder="Ukucaj svoju općinu / opštinu, npr. Tuzla, Бањалука" oninput="filterOpcine()" autocomplete="off">
 <div id="opcine-list" class="list" style="display:none;margin-top:.6rem">
 {% for m in municipalities %}
-<a class="item opcina-item" data-name="{{ m.name | lower }}" href="opcina-{{ m.slug }}.html">{{ m.name }} <span>{{ m.group }}</span></a>
+<a class="item opcina-item" data-name="{{ m.folded }}" href="opcina-{{ m.slug }}.html">{{ m.name }} <span>{{ m.group }}</span></a>
 {% endfor %}
 </div>
 <p class="mut" style="margin-top:.6rem">Ili <a href="opcine.html">vidi sve općine</a>.</p>
 </div>
 
-<a class="btn sec" href="kako-glasati.html">Prvi put glasaš? Kako se popunjava listić →</a>
 
 <h2>2. Šta još možeš pogledati</h2>
 <div class="card"><h3><a href="predsjednistvo.html">Ko hoće u Predsjedništvo BiH</a></h3><p class="mut">10 ljudi. Ko su, šta su radili, šta obećavaju. Za RS i ko hoće biti predsjednik RS.</p></div>
@@ -29,7 +29,7 @@
 </div>
 <script>
 function filterOpcine() {
-  var q = document.getElementById('q').value.toLowerCase().trim();
+  var q = foldq(document.getElementById('q').value.trim());
   var box = document.getElementById('opcine-list');
   box.style.display = q.length ? '' : 'none';
   var n = 0;

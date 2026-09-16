@@ -4,9 +4,8 @@
 <div class="card">
 <h3>{% if c.has_page %}<a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</h3>
 <p class="mut" style="margin:0 0 .3rem">{% if c.ctx %}{{ c.ctx.party }}{% else %}{{ c.list | ptitle }}{% endif %}</p>
-{% if c.ctx %}<p><b>Ko je:</b> {{ c.ctx.bio }}</p><p><b>Šta kaže:</b> {{ c.ctx.says }} <a class="src" href="{{ c.ctx.src }}">izvor</a></p>{% endif %}
-<p class="small">{{ c.story }}</p>
-<div>{% for b in c.badges %}{{ badge(b) }}{% endfor %}</div>
+{% if c.ctx %}<p><b>Ko je:</b> {{ c.ctx.bio }}</p><p><b>Šta kaže:</b> {{ c.ctx.says }} <a class="src" href="{{ c.ctx.src }}">izvor</a></p>{% else %}<p class="small">{{ c.story }}</p>
+<div>{% for b in c.badges %}{{ badge(b) }}{% endfor %}</div>{% endif %}
 </div>
 {% endmacro %}
 {% block content %}
@@ -21,5 +20,5 @@
 <h1 id="rs" style="margin-top:2.5rem">Ko hoće biti predsjednik RS</h1>
 <p class="lead">{{ note }}</p>
 {% for c in rs %}{{ pc(c) }}{% endfor %}
-<p class="small mut">Opisi „ko je” i „šta kaže” su sažeti iz medija (izvor uz svaki). Značke i „kandiduje se N. put” su iz CIK-ovog zapisa.</p>
+<p class="small mut">Opisi „ko je” i „šta kaže” su sažeti iz medija, izvor uz svaki. Klikni na ime za CIK-ov zapis kandidatura (od 2006; ranije kandidature nisu u njemu).</p>
 {% endblock %}
