@@ -12,7 +12,7 @@
 <li class="person" data-home="{{ c.home_key }}">
   <span class="pos">{{ c.pos }}.</span>{% if c.img %}<img class="av" src="{{ c.img }}" alt="" width="36" height="36" loading="lazy">{% endif %}
   <span class="pname">{% if c.has_page %}<a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</span>{% if c.home %} <span class="mut small">({{ c.home }})</span>{% endif %}
-  <span class="badges">{% for b in c.badges %}{{ badge(b) }}{% endfor %}{% if c.chance %}<span class="b ch-{{ c.chance[1] }}" title="{{ c.chance[2] }}">šansa: {{ c.chance[1] }} ({{ c.chance[3] }})</span>{% endif %}</span>
+  <span class="badges">{% for b in c.badges %}{{ badge(b) }}{% endfor %}{% if c.chance %}<span class="b ch-{{ c.chance[1] }}" title="{{ c.chance[2] }}">šansa: {{ c.chance[1] }} ({{ c.chance[3] }})</span>{% endif %}{% if c.proj is not none %}<span class="b pj" title="Projekcija za 2026: u {{ c.proj }}% od deset hiljada simuliranih izbora ovaj čovjek dobije mandat. Druga brojka je stopa iz 2022 za ljude u istoj situaciji.">projekcija: {{ c.proj }}%</span>{% endif %}</span>
 </li>
 {%- endmacro %}
 <!doctype html>
@@ -26,7 +26,7 @@
 <body>
 <div class="top"><div class="in">
 <a class="home" href="index.html">Izbori 2026</a>
-<nav><a href="kako-glasati.html">Kako glasati</a><a href="predsjednistvo.html">Predsjedništvo</a><a href="stranke.html">Stranke</a><a href="desavanja.html">Šta se desilo</a> <button class="tog" onclick="bigger()" title="Veća slova">A+</button> <button class="tog" id="tog" onclick="toggleScript()">ЋИР</button></nav>
+<nav><a href="kako-glasati.html">Kako glasati</a><a href="projekcije.html">Šta će biti</a><a href="predsjednistvo.html">Predsjedništvo</a><a href="stranke.html">Stranke</a><a href="desavanja.html">Šta se desilo</a> <button class="tog" onclick="bigger()" title="Veća slova">A+</button> <button class="tog" id="tog" onclick="toggleScript()">ЋИР</button></nav>
 </div></div>
 <main>
 {% block content %}{% endblock %}

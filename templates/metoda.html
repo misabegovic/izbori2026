@@ -80,6 +80,22 @@
 <p>To je <b>drugi izvor</b> i na stranici je tako i označen: u zasebnom bloku, s linkom na stavku, i <b>ne ulazi ni u jednu brojku</b> koju pravi izborni zapis. Osoba se veže uz stavku na tri načina: preko Mashinerijinog zapisa o osobi ({{ offices_link['mashinerija'] }}), što je najjača veza jer je napravljena prema zapisu a ne prema imenu; po imenu kad to ime na listićima 2026 pripada tačno jednom čovjeku ({{ offices_link['ime'] }}); i po funkciji koju osoba drži sada, kad ime dijele dvoje ({{ offices_link['funkcija'] }}). Kad ni to ne razriješi ime, stavku <b>ne koristimo</b>{% if offices_dropped %} — tako je odbačeno {{ offices_dropped }}{% endif %}.</p>
 </div>
 
+<div class="card" id="projekcija">
+<h2>Kako računamo projekciju izbora</h2>
+<p>„Šansa za mjesto” gore odgovara na pitanje <b>koliko je ljudi u ovakvoj situaciji prošlo 2022</b>. To je zapis, ne prognoza, i ne mijenja se ako stranka u međuvremenu propadne ili nikne. Projekcija je druga brojka i drugo pitanje: <b>ako se ovi izbori odigraju danas, koliko često ovaj čovjek dobije mandat</b>.</p>
+<p>Radi se u četiri koraka i svaki od njih se može provjeriti:</p>
+<ol style="margin:.3rem 0 .5rem 1.1rem;padding:0">
+<li><b>Ko nasljeđuje čije glasove.</b> Imena lažu: SDS 2026. uopšte nije na listiću za Narodnu skupštinu, a 28 od 29 kandidata Otadžbinske stranke koji su tamo sjedili 2022. sjedili su za SDS. Zato se veza pravi prvo <b>preko ljudi</b> — gdje su kandidati ove liste stajali prošli put — a tek onda preko imena. Stranka se može i podijeliti na više lista, u omjeru u kojem su se podijelili njeni ljudi.</li>
+<li><b>Koliko su se glasovi pomjerili.</b> Jedini rezultati poslije 2022. su lokalni izbori 2024, prijevremeni izbori za predsjednika RS u novembru 2025. i jedan načelnik. Pomak se mjeri kao odnos lokalnih 2024. prema lokalnim 2020, po općinama koje čine istu izbornu jedinicu. Koliko se tom pomaku vjeruje nije naša odluka: isprobali smo sve i uzeli ono što je na 2022. najmanje griješilo{% if PROJ and PROJ.params %} — ispalo je {{ (PROJ.params.lam * 100) | round | int }} posto punog pomaka{% endif %}.</li>
+<li><b>Zakon dijeli mandate.</b> Sainte-Laguë s djeliteljima 1, 3, 5, 7 (član 9.5), prag od 3% u jedinici i na nivou entiteta (9.6), kompenzacijski mandati redom s kompenzacijske liste (9.7), i unutar liste: ko pređe <b>20% glasača svoje liste</b> uzima mandat po ličnim glasovima, a <b>sve ostale mandate lista dijeli po svom redoslijedu</b> (9.8 stav 2). Ta pravila nisu prepričana nego napisana kao kod i puštena na stvarne rezultate 2018. i 2022: svih 231 lista koje su osvojile mandat i svih 518 mandata po godini izlaze tačno.</li>
+<li><b>Sve to deset hiljada puta.</b> Svaka lista dobije slučajnu grešku čija širina nije pretpostavljena nego izmjerena — to je greška ovog istog modela na izborima 2022.</li>
+</ol>
+<p><b>Ono što ovu stranicu čini provjerljivom</b> je što smo isti model, isti kod i iste postavke pustili unatrag na 2022. i dali mu samo ono što se moglo znati prije: rezultat 2018. i lokalne izbore 2016. i 2020. Pa smo prebrojali koliko je pogriješio, i to objavili u cijelosti, uključujući i jednu ispravku koju smo probali pa odbacili jer je pogoršala rezultat.</p>
+<p><a class="btn" href="provjera-modela.html">Koliko model griješi →</a> <a class="btn" href="projekcije.html">Projekcija izbora →</a></p>
+<p class="small mut">Ankete ulaze, ali s malom težinom: ima ih troje, sve su objavljene preko medija bez metodološkog lista, a jedna mjeri stranku koje na listiću više nema. <a href="provjera-modela.html#ankete">Koje su i koliko vrijede →</a></p>
+<p class="small mut">Koliko mandata koja izborna jedinica bira: član 10.9 izbornog zakona traži da se to svake četiri godine uskladi s brojem upisanih birača. Poslije 2022. to nije urađeno, pa 2026. važi ista raspodjela, a <a href="https://istraga.ba/zbog-krsenja-odredaba-izbornog-zakona-o-izbornim-jedinicama-dva-hdz-a-u-parlamentu-federacije-imaju-tri-mandata-vise-koja-im-ne-pripadaju/">sedam jedinica Parlamenta FBiH bi po zakonu imalo drugačiji broj mandata</a>. Računamo sa stvarnom raspodjelom, ali je u svakoj četvrtoj simulaciji pomjerimo za jedan mandat, da se ta nesigurnost vidi.</p>
+</div>
+
 <div class="card" id="rupe">
 <h2>Opći izbori 2010. i 2014. ne postoje nigdje</h2>
 <p>Ovo nije naš propust i ne može se popraviti skrejperom. Provjereno je na sva tri mjesta gdje bi ti rezultati trebali biti:</p>
@@ -100,6 +116,8 @@
 <li>Šta stranke rade u kantonalnim i općinskim vladama (nema sređenog izvora).</li>
 <li>Da li je obećanje iz programa ozbiljno. Mi ga samo prepišemo i pokažemo šta je bilo s prošlim.</li>
 <li>Ko je iza koga: ne pratimo vlasnike medija, donatore ni porodične veze.</li>
+<li>Koliko mandata svaka izborna jedinica bira 2026. CIK to određuje prije izbora prema broju upisanih birača; za 2026. tu odluku nismo našli objavljenu, pa <a href="#projekcija">projekcija</a> koristi raspodjelu iz 2022. i tu nesigurnost ubacuje u račun.</li>
+<li>Koliko će ljudi izaći. Projekcija računa udjele, ne broj glasača, pa ne vidi ako jedna strana ostane kod kuće.</li>
 <li>Šta je bilo na općim izborima <a href="#rupe">2010. i 2014.</a> — te dvije godine nisu objavljene na čitljiv način nigdje, pa ih nema ni ovdje.</li>
 <li>Da li smo negdje spojili dva čovjeka u jednog. <a href="#spajanje">Pravila su ispisana</a>, ali nijedno nije dokaz.</li>
 </ul>
