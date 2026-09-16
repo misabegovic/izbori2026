@@ -211,6 +211,8 @@ env = Environment(loader=FileSystemLoader("templates"), autoescape=True, trim_bl
 # "3.5%" looks like 35. Decimals take a comma.
 env.filters["dec"] = lambda v: ("" if v is None else
                                 ("manje od 0,1" if 0 < v < 0.05 else ("%.1f" % v).replace(".", ",")))
+env.filters["dec2"] = lambda v: ("" if v is None else f"{v:.2f}".replace(".", ","))
+env.filters["dec3"] = lambda v: ("" if v is None else f"{v:.3f}".replace(".", ","))
 env.filters["dec4"] = lambda v: ("" if v is None else f"{v:.4f}".replace(".", ","))
 env.filters["num"] = num
 env.filters["nice"] = nice_name
@@ -1382,7 +1384,7 @@ if PROJ:
         pj=PROJ, bt=_bt, houses=houses_ctx, cantons=cantons_ctx,
         majority=list((PROJ.get("majority") or {}).values()),
         polls=(PROJ.get("diagnostics") or {}).get("ankete") or [],
-        cal_mid=(f"{_mid['stvarno']:g}%" if _mid else "otprilike toliko"),
+        cal_mid=(f"{_mid['stvarno']:g}%".replace(".", ",") if _mid else "otprilike toliko"),
         worst_new=(_worst[1] if _worst else None), **base_ctx))
 
     _ece = None
