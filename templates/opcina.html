@@ -22,7 +22,7 @@
 {% endfor %}
 <p class="mut">{{ m.group }}. Ne znaš kako se popunjava? <a href="kako-glasati.html">Kako glasati</a>.</p>
 {% if ec %}
-<details><summary>Šta radi tvoje {{ "skupština opštine/grada" if m.entity == "rs" else "općinsko vijeće" }} (posljednje sjednice)</summary>
+<details><summary>Šta radi {{ "skupština tvoje opštine" if m.entity == "rs" else "tvoje općinsko vijeće" }} (posljednje sjednice)</summary>
 <p class="mut small">Ovo se ne bira sada (lokalni izbori su 2028). Pokazuje kako lokalna vlast glasa. Izvor: eCitizen.ba.</p>
 {% for s in ec.sessions[:3] %}
 <div class="card">

@@ -50,7 +50,7 @@
     g.append('path').attr('d', arc({ endAngle: 2 * Math.PI })).attr('fill', '#eceae3');
     g.append('path').attr('fill', col).transition().duration(700).attrTween('d', function () { var i = d3.interpolate(0, 2 * Math.PI * d.pct / 100); return function (t) { return arc({ endAngle: i(t) }); }; });
     g.append('text').attr('text-anchor', 'middle').attr('dy', 5).attr('font-size', sm ? '.58rem' : '.74rem').attr('font-weight', 700).attr('fill', INK).text('~' + d.pct + '%');
-    svg.append('text').attr('x', 2 * R + 12).attr('y', R - 4).attr('font-size', sm ? '.68rem' : '.79rem').attr('font-weight', 700).attr('fill', INK).text('Šansa za mandat: ' + d.word);
+    svg.append('text').attr('x', 2 * R + 12).attr('y', R - 4).attr('font-size', sm ? '.68rem' : '.79rem').attr('font-weight', 700).attr('fill', INK).text('Šansa za mjesto: ' + d.word);
     svg.append('text').attr('x', 2 * R + 12).attr('y', R + 14).attr('font-size', '.58rem').attr('fill', MUT).text('iz rezultata 2022, nije prognoza');
     var why = document.createElement('div'); why.className = 'small mut'; why.textContent = 'Zašto: ' + d.why + '.'; el.appendChild(why);
   }

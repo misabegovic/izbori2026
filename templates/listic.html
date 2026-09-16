@@ -46,10 +46,10 @@
 <script type="application/json" id="cands">{{ cands_json | safe }}</script>
 {% endif %}
 <h2>Liste, redom kako su na papiru</h2>
-<div id="homefilter" style="display:none" class="card"><label><input type="checkbox" id="homechk" onchange="homeFilter()"> Prikaži samo ljude iz <b id="homename"></b> <span class="mut small">(općina je poznata za <span id="homen"></span> ljudi, iz ranijih lokalnih kandidatura)</span></label></div>
+<div id="homefilter" style="display:none" class="card"><label><input type="checkbox" id="homechk" onchange="homeFilter()"> Označi ljude iz <b id="homename"></b> <span class="mut small">(znamo za <span id="homen"></span>; za ostale ne znamo odakle su)</span></label></div>
 <script>
 window.addEventListener('DOMContentLoaded',function(){var q=new URLSearchParams(location.search).get('o');if(!q)return;var key=foldq(q);var rows=document.querySelectorAll('li.person');var n=0;rows.forEach(function(r){if(r.dataset.home===key)n++;});if(!n)return;document.getElementById('homefilter').style.display='';document.getElementById('homename').textContent=q;document.getElementById('homen').textContent=n;
-window.homeFilter=function(){var on=document.getElementById('homechk').checked;rows.forEach(function(r){r.style.display=(!on||r.dataset.home===key)?'':'none';});document.querySelectorAll('details').forEach(function(d){if(on&&d.querySelector('li.person[data-home="'+key+'"]'))d.open=true;});};});
+window.homeFilter=function(){var on=document.getElementById('homechk').checked;rows.forEach(function(r){var hit=r.dataset.home===key;r.style.background=(on&&hit)?'#fff7d6':'';r.style.opacity=(on&&r.dataset.home&&!hit)?'.45':'';});document.querySelectorAll('details').forEach(function(d){if(on&&d.querySelector('li.person[data-home="'+key+'"]'))d.open=true;});};});
 </script>
 {% for l in lists %}
 <div class="card big" id="l{{ loop.index }}">
@@ -68,10 +68,11 @@ window.homeFilter=function(){var on=document.getElementById('homechk').checked;r
 </details>
 <span class="small mut">Tvrdnje stranke, nisu provjerene. {% if l.party_href %}<a href="{{ l.party_href }}">Izvori →</a>{% endif %}</span>
 </div>
+{% if not l.program %}<p class="mut small">Za ovu listu nismo našli objavljena obećanja ni provjeru ranijih.</p>{% endif %}
 {% if l.p22 %}
 <p style="margin:.6rem 0 0"><b>Šta je bilo s obećanjima iz 2022:</b></p>
 {{ stack(l.p22.stack, l.p22.promises_2022 | length) }}
-<p class="small mut" style="margin:.2rem 0 0">{{ l.p22.promises_2022 | length }} provjerenih obećanja (Istinomjer i mediji). {% if l.party_href %}<a href="{{ l.party_href }}#p22">Koja i šta se desilo →</a>{% endif %}</p>
+<p class="small" style="margin:.2rem 0 0">Od {{ l.p22.promises_2022 | length }} provjerenih: {{ l.p22.counts.get('ispunjeno', 0) }} uradili, {{ l.p22.counts.get('djelimično', 0) }} pola, {{ l.p22.counts.get('nije', 0) }} nisu{% if l.p22.counts.get('ne može se ocijeniti') %}, {{ l.p22.counts.get('ne može se ocijeniti') }} se ne može ocijeniti (nisu bili u vlasti){% endif %}. {% if l.party_href %}<a href="{{ l.party_href }}#p22">Koja i šta se desilo →</a>{% endif %}</p>
 {% endif %}
 {% endif %}
 {% if l.key_votes %}

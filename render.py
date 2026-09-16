@@ -103,7 +103,7 @@ promises22 = {}
 for _f in ("promises2022_fbih.json", "promises2022_rs.json"):
     if os.path.exists(D + _f):
         for _p in json.load(open(D + _f)):
-            _p["note"] = re.sub(r"\b[Nn]isam (našao|mogao|potvrdio)", "Nije nađeno", _p.get("note") or "")
+            _p["note"] = re.sub(r"\b[Nn]isam (našao|mogao|potvrdio)", "Nije nađen", _p.get("note") or "")
             for _x in _p["promises_2022"]:
                 _x["what_happened"] = re.sub(r"\b[Nn]isam našao", "Nije nađen", _x.get("what_happened") or "")
             promises22[_p["program"]] = _p
@@ -127,7 +127,7 @@ def history_for(prog):
         h = dict(h)
         note = h.get("note") or ""
         h["gov_wide"] = bool(re.search(r"cijel[ua] vlad|ne po stranci|nisu razvrstan|agregat", note, re.I))
-        h["note"] = re.sub(r"\b[Nn]isam (našao|mogao|potvrdio)", "Nije nađeno", note)
+        h["note"] = re.sub(r"\b[Nn]isam (našao|mogao|potvrdio)", "Nije nađen", note)
         rows.append(h)
     p = promises22.get(prog["name"])
     if p:
@@ -181,7 +181,7 @@ RACE = {
     "oi2026-4": {"short": "Parlament Federacije", "kind": "list", "who": "parlament Federacije BiH (zvanično: Predstavnički dom Parlamenta FBiH)",
                  "plain": "Odlučuje o penzijama, zdravstvu, platama i porezima u Federaciji.", "level": "FBiH"},
     "oi2026-5": {"short": "Predsjednik RS", "kind": "one", "who": "predsjednik i dva potpredsjednika Republike Srpske",
-                 "plain": "Biraš JEDNOG čovjeka. Prvi je predsjednik, najbolji iz druga dva naroda su potpredsjednici.", "level": "RS"},
+                 "plain": "Biraš JEDNOG čovjeka. Ko ima najviše glasova je predsjednik; potpredsjednici su najbolji kandidati iz druga dva naroda.", "level": "RS"},
     "oi2026-6": {"short": "Narodna skupština RS", "kind": "list", "who": "parlament Republike Srpske",
                  "plain": "Odlučuje o penzijama, zdravstvu, platama, porezima i budžetu RS.", "level": "RS", "chamber": "narodna-skupstina-rs"},
     "oi2026-7": {"short": "Skupština kantona", "kind": "list", "who": "parlament tvog kantona",
@@ -484,11 +484,11 @@ def list_chances(u, l):
             if v22 / total22 < 0.03:
                 pct = 2; why = "stranka 2022 ovdje nije bila na listiću ili je imala manje od 3% glasova; takve liste 2022 gotovo nikad nisu dobile mandat"
             elif rank == 1:
-                pct = cal_pct("no_seats_pos1", 15); why = f"stranka 2022 ovdje nije imala mandat, ovaj je prvi na listi; 2022 je od takvih prošlo {pct}%"
+                pct = cal_pct("no_seats_pos1", 15); why = f"stranka 2022 ovdje nije imala mjesto, ovaj je prvi na listi; 2022 je od takvih prošlo {pct}%"
             else:
-                pct = cal_pct("no_seats_rest", 2); why = f"stranka 2022 ovdje nije imala mandat i nije prvi na listi; 2022 je od takvih prošlo {pct}%"
+                pct = cal_pct("no_seats_rest", 2); why = f"stranka 2022 ovdje nije imala mjesto i nije prvi na listi; 2022 je od takvih prošlo {pct}%"
         elif rank <= seats:
-            pct = cal_pct("within", 63); why = f"stranka je 2022 ovdje imala {seats} mandat(a), a ovaj je {rank}. na listi; 2022 je od takvih prošlo {pct}%"
+            pct = cal_pct("within", 63); why = f"stranka je 2022 ovdje imala {seats} mjesta, a ovaj je {rank}. na listi; 2022 je od takvih prošlo {pct}%"
         elif rank == seats + 1:
             pct = cal_pct("plus1", 19); why = f"prvi iza {seats} mjesta koja je stranka imala 2022; 2022 je od takvih prošlo {pct}%"
         elif rank == seats + 2:
