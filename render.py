@@ -211,6 +211,11 @@ env = Environment(loader=FileSystemLoader("templates"), autoescape=True, trim_bl
 # "3.5%" looks like 35. Decimals take a comma.
 env.filters["dec"] = lambda v: ("" if v is None else
                                 ("manje od 0,1" if 0 < v < 0.05 else ("%.1f" % v).replace(".", ",")))
+# Same number, but for a cell in a narrow table. "manje od 0,1" is the right phrase in a
+# sentence; inside a column it is a 100px floor that a nowrap number cell cannot get under,
+# and on a phone that floor is what pushes the table past the edge of the screen.
+env.filters["tdec"] = lambda v: ("" if v is None else
+                                 ("<0,1" if 0 < v < 0.05 else ("%.1f" % v).replace(".", ",")))
 env.filters["dec2"] = lambda v: ("" if v is None else f"{v:.2f}".replace(".", ","))
 env.filters["dec3"] = lambda v: ("" if v is None else f"{v:.3f}".replace(".", ","))
 env.filters["dec4"] = lambda v: ("" if v is None else f"{v:.4f}".replace(".", ","))

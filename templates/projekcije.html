@@ -18,9 +18,9 @@
 {% for r in h.rows %}
 <tr{% if loop.index0 >= 8 %} class="hid"{% endif %}>
 <td class="ln">{{ r.lista | ptitle }}</td>
-<td class="num"><b>{{ r.mandati | dec }}</b></td>
-<td><span class="rng" title="U 9 od 10 simulacija između {{ r.p05 }} i {{ r.p95 }}"><i style="left:{{ r.lo_pct }}%;width:{{ r.w_pct }}%"></i><u style="left:{{ r.mid_pct }}%"></u></span> <span class="small mut">{{ r.p05 }}–{{ r.p95 }}</span></td>
-<td class="num small">{{ r.udio | dec }}%{% if r.jedinica and r.jedinica < h.units_n %}<span class="mut" title="Ova lista izlazi samo u {{ r.jedinica }} od {{ h.units_n }} izbornih jedinica; procenat je od glasova tamo gdje izlazi.">*</span>{% endif %}</td>
+<td class="num"><b>{{ r.mandati | tdec }}</b></td>
+<td class="rg"><span class="rng" title="U 9 od 10 simulacija između {{ r.p05 }} i {{ r.p95 }}"><i style="left:{{ r.lo_pct }}%;width:{{ r.w_pct }}%"></i><u style="left:{{ r.mid_pct }}%"></u></span> <span class="small mut">{{ r.p05 }}–{{ r.p95 }}</span></td>
+<td class="num small">{{ r.udio | tdec }}%{% if r.jedinica and r.jedinica < h.units_n %}<span class="mut" title="Ova lista izlazi samo u {{ r.jedinica }} od {{ h.units_n }} izbornih jedinica; procenat je od glasova tamo gdje izlazi.">*</span>{% endif %}</td>
 </tr>
 {% endfor %}
 </tbody></table>
@@ -58,7 +58,7 @@
 <table class="cal proj"><thead><tr><th>Kandidat</th><th>Lista</th><th>Šansa</th><th>Na čemu počiva</th></tr></thead><tbody>
 {% for c in m.candidates %}
 <tr><td class="ln">{{ c.name | nice }}</td><td class="small mut">{{ c.list | ptitle }}</td>
-<td class="num"><b>{{ c.p_win | dec }}%</b></td>
+<td class="num"><b>{{ c.p_win | tdec }}%</b></td>
 <td class="small mut">{% if c.prev_self %}sam je 2022/2025. imao {{ c.prev_self | dec }}%{% elif c.prev_party %}stranka je zadnji put imala {{ c.prev_party | dec }}%, ali s drugim čovjekom{% elif c.party_proj %}stranka je u ovoj projekciji na {{ c.party_proj | dec }}%{% else %}nema s čim porediti{% endif %}{% if c.poll %} · anketa {{ c.poll | dec }}%{% endif %}</td></tr>
 {% endfor %}
 </tbody></table>

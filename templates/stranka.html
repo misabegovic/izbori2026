@@ -21,8 +21,8 @@
 <table class="cal proj"><thead><tr><th>Dom</th><th>Mandata</th><th>Raspon</th><th>Udio</th></tr></thead><tbody>
 {% for x in proj %}
 <tr><td class="ln"><a href="{{ x.href }}">{{ x.dom }}</a> <span class="mut small">({{ x.seats }} mjesta)</span></td>
-<td class="num"><b>{{ x.mandati | dec }}</b></td><td class="num small mut">{{ x.p05 }}–{{ x.p95 }}</td>
-<td class="num small">{{ x.udio | dec }}%</td></tr>
+<td class="num"><b>{{ x.mandati | tdec }}</b></td><td class="num small mut">{{ x.p05 }}–{{ x.p95 }}</td>
+<td class="num small">{{ x.udio | tdec }}%</td></tr>
 {% endfor %}
 </tbody></table>
 <p class="small mut">Iz {{ PROJ.sims | num if PROJ else '10.000' }} simulacija. Nije anketa ni preporuka; isti model je pušten unatrag na 2022. i sve njegove greške su <a href="provjera-modela.html">objavljene</a>. <a href="projekcije.html">Cijela projekcija →</a></p>
