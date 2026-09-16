@@ -12,7 +12,7 @@
 <p>{{ b.r.plain }} Na papiru su dvije kolone: bošnjački i hrvatski kandidati. Zaokružiš jednog, u bilo kojoj koloni.</p>
 {% for sb in b.subs %}<a class="btn{% if not loop.first %} sec{% endif %}" href="{{ sb.href }}">{{ sb.sub | capitalize }} ({{ sb.n_cands }} kandidata) →</a>{% endfor %}
 {% else %}
-<h2 style="margin:.1rem 0 .3rem"><a href="{{ b.href }}">{{ b.r.short }}{% if b.sub %} — {{ b.sub }}{% endif %}</a></h2>
+<h2 style="margin:.1rem 0 .3rem"><a href="{{ b.href }}?o={{ m.name | urlencode }}">{{ b.r.short }}{% if b.sub %} — {{ b.sub }}{% endif %}</a></h2>
 <p>{{ b.r.plain }}</p>
 <p class="mut">{% if b.r.kind == 'one' %}{{ b.n_cands }} kandidata, biraš jednog.{% else %}{{ b.n_lists }} lista, ukupno {{ b.n_cands }} ljudi. Prvo zaokružiš jednu listu, pa do 3 čovjeka s nje.{% endif %}</p>
 {% if b.top22 and b.r.kind == 'list' %}<p class="mut small" style="margin:.2rem 0 0">Prošli put (2022) ovdje najviše glasova:</p>{% for h in b.top22 %}{{ hbar(h.party | ptitle, h.votes or 0, b.max22, h.votes | num) }}{% endfor %}{% endif %}
@@ -36,4 +36,6 @@
 {% endfor %}
 </details>
 {% endif %}
+<div class="card"><h3><a href="obecanja.html">Ko šta obećava, po temi →</a></h3><p class="mut small">Plate, zdravstvo, putevi, struja: obećanja svih stranaka jedno pored drugog, i kako su prošla ranija obećanja.</p></div>
+<p class="small mut"><a href="metoda.html">Ko radi ovaj sajt i odakle su brojke →</a></p>
 {% endblock %}

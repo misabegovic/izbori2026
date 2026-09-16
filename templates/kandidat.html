@@ -8,7 +8,7 @@
 <p class="lead" style="margin-top:.6rem">{{ p.story }}</p>
 <div class="card">
 <b>Ove godine na listiću:</b>
-<ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for r in runs %}<li>{{ chance(r.chance, true) }}<a href="{{ r.href }}">{{ RACE[r.unit.race].short }}{% if r.unit.race != 'oi2026-1' and r.unit.race != 'oi2026-5' %}, {{ COMP.get(r.unit.area, 'područje ' ~ r.unit.area) }}{% endif %}</a> — {% if r.party_href %}<a href="{{ r.party_href }}">{{ r.list | ptitle }}</a>{% else %}{{ r.list | ptitle }}{% endif %}{% if r.pos %}, {{ r.pos }}. na listi{% endif %}</li>{% endfor %}</ul>
+<ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for r in runs %}<li>{% if r.chance and r.chance[0] >= 18 %}{{ chance(r.chance, true) }}{% endif %}<a href="{{ r.href }}">{{ RACE[r.unit.race].short }}{{ r.where }}</a> — {% if r.party_href %}<a href="{{ r.party_href }}">{{ r.list | ptitle }}</a>{% else %}{{ r.list | ptitle }}{% endif %}{% if r.pos %}, {{ r.pos }}. na listi{% endif %}{% if r.chance and r.chance[0] < 18 %}<br><span class="small mut">{{ r.chance[2] | capitalize }}. Zato ovdje ne pišemo procenat: premali je da nešto znači.</span>{% endif %}</li>{% endfor %}</ul>
 </div>
 
 {% if not rec %}<p class="mut small">Nema zapisa glasanja: ova osoba nije bila u državnom parlamentu ni u NSRS 2022–2026. Parlament Federacije i kantoni ne objavljuju ko je kako glasao.</p>{% endif %}
@@ -25,9 +25,11 @@
 {% for r in rec %}
 <div class="card">
 <p style="margin:0 0 .4rem"><b>{{ r.chamber_name }}</b>, {{ r.saziv }}</p>
-<div class="facts">
-<div class="fact"><b>{{ r.prisustvo_pct }}%</b><span>{% if r.nsrs %}glasanja na kojima je glasao{% else %}bio prisutan na glasanjima{% endif %}{% if CH_AVG.get(r.chamber) %} (prosjek {{ CH_AVG[r.chamber].pris }}%){% endif %}</span></div>
-<div class="fact"><b>{{ r.za_pct }}%</b><span>glasao „za” kad je glasao{% if CH_AVG.get(r.chamber) %} (prosjek doma {{ CH_AVG[r.chamber].za }}%){% endif %}</span></div>
+{% if r.n < 50 %}<p class="small">Samo {{ r.n }} glasanja, premalo da se išta zaključi. Najčešći razlog: ušao/la u parlament kasno, ili je bio/la u vladi (ministri ne glasaju u parlamentu), ili je otišao/la rano.</p>
+<div class="facts" style="opacity:.6">{% else %}
+<div class="facts">{% endif %}
+<div class="fact"><b>{{ r.prisustvo_pct }}%</b><span>{% if r.nsrs %}glasanja na kojima je glasao{% else %}bio prisutan na glasanjima{% endif %}{% if CH_AVG.get(r.chamber) %} (prosjek svih poslanika {{ CH_AVG[r.chamber].pris }}%){% endif %}</span></div>
+<div class="fact"><b>{{ r.za_pct }}%</b><span>glasao „za” kad je glasao{% if CH_AVG.get(r.chamber) %} (prosjek svih poslanika {{ CH_AVG[r.chamber].za }}%){% endif %}</span></div>
 <div class="fact"><b>{{ r.odsutan | num }}</b><span>{% if r.nsrs %}puta nije glasao{% else %}puta nije bio na glasanju{% endif %}</span></div>
 {% if not r.nsrs %}<div class="fact"><b>{{ speeches_n }}</b><span>puta govorio u parlamentu</span></div>{% endif %}
 </div>
@@ -37,7 +39,7 @@
 {% endfor %}
 {% if act %}
 <h2>Koliko je glasao, po godinama</h2>
-<p class="mut small">Na koliko posto glasanja te godine je glasao/la. Isprekidana crta = prosjek doma za cijeli mandat.</p>
+<p class="mut small">Na koliko posto glasanja te godine je glasao/la. Isprekidana crta = prosjek svih poslanika za cijeli mandat. Niska godina ne znači uvijek izostanak: ako je te godine bio/la ministar (ministri ne glasaju u parlamentu), ili je ušao/la kasnije, stub je nizak.</p>
 {% for ch, j in act.items() %}<div class="card"><p class="mut small" style="margin:0 0 .3rem">{{ CHAMBER_NAME.get(ch, ch) }}</p><div class="d3 d3-vbars" data-d3='{{ j }}'><span class="fb">po godinama (traži JavaScript)</span></div></div>{% endfor %}
 {% endif %}
 {% if sim or pline %}
@@ -77,7 +79,7 @@
 <div class="card">
 <div class="d3 d3-years" data-d3='{{ tl_json | safe }}'><span class="fb">{% for t in tl %}{{ t.y }}{% if t.elected %} (izabran/a){% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</span></div>
 {% for t in tl %}
-<div class="kd" style="padding:.35rem 0"><b>{{ t.y }}</b> — {{ t.lvl }}{% if t.area %}, {{ t.area | title }}{% endif %}{% if t.party %}, <i>{{ t.party | ptitle_raw }}</i>{% endif %}{% if t.pos %}, {{ t.pos }}. na listi{% endif %}{% if t.votes %}, {{ t.votes | num }} glasova{% endif %} — {% if t.elected %}<b>izabran/a</b>{% else %}nije izabran/a{% endif %}</div>
+<div class="kd" style="padding:.35rem 0"><b>{{ t.y }}</b> — {{ t.lvl }}{% if t.area %}, {{ t.area | area }}{% endif %}{% if t.party %}, <i>{{ t.party | ptitle_raw }}</i>{% endif %}{% if t.pos %}, {{ t.pos }}. na listi{% endif %}{% if t.votes %}, {{ t.votes | num }} glasova{% endif %} — {% if t.elected %}<b>izabran/a</b>{% else %}nije izabran/a{% endif %}</div>
 {% endfor %}
 </div>
 {% endif %}
@@ -86,10 +88,10 @@
 <h2>Iz javnih izvora</h2>
 <div class="card">
 {% if prof.bio %}
-{% if prof.bio.birth %}<p><b>Rođen/a:</b> {{ prof.bio.birth.value }}{% if prof.bio.birthPlace %}, {{ prof.bio.birthPlace.value }}{% endif %} <span class="src">({{ prof.bio.birth.src }})</span></p>{% endif %}
-{% if prof.bio.education %}<p><b>Škola:</b> {{ prof.bio.education.value | replace(',', ', ') }} <span class="src">({{ prof.bio.education.src }})</span></p>{% endif %}
+{% if prof.bio.birth %}<p><b>Rođen/a:</b> {{ prof.bio.birth.value | datum }}{% if prof.bio.birthPlace %}, {{ prof.bio.birthPlace.value }}{% endif %} <span class="src">(izvor: {{ prof.bio.birth.src | srcname }})</span></p>{% endif %}
+{% if prof.bio.education %}<p><b>Škola:</b> {{ prof.bio.education.value | replace(',', ', ') }} <span class="src">(izvor: {{ prof.bio.education.src | srcname }})</span></p>{% endif %}
 {% if prof.bio.occupations %}<p><b>Zanimanje:</b> {{ prof.bio.occupations.value | replace(',', ', ') }}</p>{% endif %}
-{% if prof.bio.affiliations %}<p><b>Stranke po biografiji:</b> {{ prof.bio.affiliations.value | replace(',', ', ') }} <span class="src">({{ prof.bio.affiliations.src }})</span></p>{% endif %}
+{% if prof.bio.affiliations %}<p><b>Stranke po biografiji:</b> {{ prof.bio.affiliations.value | replace(',', ', ') }} <span class="src">(izvor: {{ prof.bio.affiliations.src | srcname }})</span></p>{% endif %}
 {% endif %}
 {% if assets %}
 <p><b>Prijavljena imovina</b> <span class="mut small">(zbir po vrsti; različiti izvori se ne sabiraju)</span></p>

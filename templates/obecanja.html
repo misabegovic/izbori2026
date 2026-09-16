@@ -3,20 +3,20 @@
 {% block content %}
 <p class="mut"><a href="javascript:history.back()">← nazad</a> · <a href="index.html">početna</a></p>
 <h1>Ko šta obećava, po temi</h1>
-<p class="lead">Izaberi temu koja te tiče. Ispod su obećanja svih stranaka za tu temu, jedno pored drugog. Tvrdnje stranaka, ne naša provjera; izvori su na stranici svake stranke.</p>
+<p class="lead">Izaberi temu koja te tiče. Ispod su obećanja svih stranaka za tu temu, jedno pored drugog. Tvrdnje stranaka, ne naša provjera; izvori su na stranici svake stranke. Ispod svakog obećanja piše kako je stranka prošla s obećanjima iz 2022.</p>
 <p class="mut small">Traka = koliko od {{ n_parties }} stranaka s programom nešto obećava na tu temu.</p>
 <div class="card">
 {% for t in themes %}
-{{ hbar(t.label, t.parties, n_parties, t.parties ~ ' stranaka') }}
+{{ hbar(t.label ~ (' · samo ' ~ (t.levels | join(", ")) if t.levels | length == 1 else ''), t.parties, n_parties, t.parties ~ ' stranaka') }}
 {% endfor %}
 </div>
 <div class="viz-bar tagbar" data-for="oblist"></div>
 <div id="oblist">
 {% for t in themes %}
 {% for r in t.rows %}
-<div class="kd" data-tags="{{ t.key }}"><span class="vote {{ 'v-za' if (r.power or '').startswith('u vlasti') else 'v-odsutan' }}">{{ 'u vlasti' if (r.power or '').startswith('u vlasti') else ('opozicija' if (r.power or '').startswith('opozicija') else 'novi') }}</span> <span class="t">{{ r.party | ptitle }}</span> <span class="d">{{ t.label }}</span><br><span class="small">{{ r.promise }}</span></div>
+{% set pi = pinfo.get(r.party) %}<div class="kd" data-tags="{{ t.key }}"><span class="vote v-odsutan">{{ 'sad u vlasti' if (r.power or '').startswith('u vlasti') else ('sad opozicija' if (r.power or '').startswith('opozicija') else 'nova stranka') }}</span> <span class="t">{% if pi %}<a href="{{ pi.href }}">{{ r.party | ptitle }}</a>{% else %}{{ r.party | ptitle }}{% endif %}</span> <span class="d">{{ t.label }}{% if r.level %} · {{ r.level }}{% endif %}</span><br><span class="small">{{ r.promise }}</span>{% if pi and pi.p22 %}<br><span class="small mut">{{ pi.p22 }}{% if pi.href %} · <a href="{{ pi.href }}#p22">koja →</a>{% endif %}</span>{% endif %}</div>
 {% endfor %}
 {% endfor %}
 </div>
-<p class="small mut">Ista obećanja se ponavljaju iz izbora u izbore. Na stranici stranke pod „Prošli put obećali” vidiš šta je s njima bilo.</p>
+<p class="small mut">Svako obećanje stoji pod jednom temom, onom na koju najviše liči. „FBiH” znači stranku koja izlazi u Federaciji, „RS” u Republici Srpskoj; ako uz temu piše „samo RS”, nijedna stranka iz Federacije tu ništa ne obećava. Ista obećanja se ponavljaju iz izbora u izbore. Na stranici stranke pod „Prošli put obećali” vidiš šta je s njima bilo.</p>
 {% endblock %}

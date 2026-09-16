@@ -160,19 +160,26 @@ THEMES = [
 
 
 def promise_themes(programs):
-    """[{key, label, rows:[{party, promise, href}]}] for every party program with promises."""
+    """Each promise lands in ONE theme: the one whose words it matches most.
+    Returns [{key, label, rows:[{party, promise, power, level}], parties, levels}]."""
     out = {k: [] for k, _, _ in THEMES}
     other = []
     for p in programs:
+        lvl = p.get("entity")
         for pr in p.get("promises") or []:
-            hit = False
+            best, score = None, 0
             for k, _, rx in THEMES:
-                if re.search(rx, pr, re.I):
-                    out[k].append({"party": p["name"], "promise": pr, "power": p.get("power")}); hit = True
-            if not hit:
-                other.append({"party": p["name"], "promise": pr, "power": p.get("power")})
-    themes = [{"key": k, "label": lab, "rows": out[k], "parties": len({r["party"] for r in out[k]})} for k, lab, _ in THEMES if out[k]]
+                n = len(re.findall(rx, pr, re.I))
+                if n > score:
+                    best, score = k, n
+            row = {"party": p["name"], "promise": pr, "power": p.get("power"), "level": lvl}
+            (out[best] if best else other).append(row)
+    def block(k, lab, rows):
+        return {"key": k, "label": lab, "rows": sorted(rows, key=lambda r: (r.get("level") or "", r["party"])),
+                "parties": len({r["party"] for r in rows}),
+                "levels": sorted({r["level"] for r in rows if r.get("level")})}
+    themes = [block(k, lab, out[k]) for k, lab, _ in THEMES if out[k]]
     themes.sort(key=lambda t: -t["parties"])
     if other:
-        themes.append({"key": "ostalo", "label": "Ostalo", "rows": other, "parties": len({r["party"] for r in other})})
+        themes.append(block("ostalo", "Ostalo", other))
     return themes

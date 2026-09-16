@@ -8,7 +8,8 @@
 <h2>Ko glasa kao ko</h2>
 <p class="mut small">Za svake dvije stranke: u koliko posto glasanja 2022–2026 je većina njihovih poslanika glasala isto. Računato po kandidatima 2026 koji su bili poslanici. Zeleno = skoro uvijek isto, crveno = uglavnom suprotno. Dodirni polje za brojke.</p>
 {% for ch, m in pmatrix.items() %}
-<div class="card"><p style="margin:0 0 .3rem"><b>{{ CHAMBER_NAME.get(ch, ch) }}</b></p><div class="d3 d3-heat" data-d3='{{ m }}'><span class="fb">Matrica slaganja stranaka (traži JavaScript).</span></div></div>
+<div class="card"><p style="margin:0 0 .3rem"><b>{{ CHAMBER_NAME.get(ch, ch) }}</b></p><div class="d3 d3-heat" data-d3='{{ m }}'><span class="fb">{% for s in heat_text[ch] %}{{ s }} {% endfor %}</span></div>
+<details><summary class="small">Isto, riječima</summary><ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for s in heat_text[ch] %}<li class="small">{{ s }}</li>{% endfor %}</ul></details></div>
 {% endfor %}
 {% endif %}
 <h2>Sve stranke</h2>

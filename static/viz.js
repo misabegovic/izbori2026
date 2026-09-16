@@ -176,21 +176,22 @@
       svg.append('text').attr('x', x(i) + bw / 2).attr('y', y(r.pct) - 4).attr('text-anchor', 'middle').attr('font-size', '.68rem').attr('font-weight', 700).attr('fill', INK).text(r.pct + '%');
       svg.append('text').attr('x', x(i) + bw / 2).attr('y', H - 5).attr('text-anchor', 'middle').attr('font-size', '.68rem').attr('fill', MUT).text(r.y);
     });
-    if (d.avg != null) { var leg = document.createElement('div'); leg.className = 'st-l'; leg.innerHTML = '<span>- - - prosjek doma za cijeli mandat: ' + d.avg + '%</span>'; el.appendChild(leg); }
+    if (d.avg != null) { var leg = document.createElement('div'); leg.className = 'st-l'; leg.innerHTML = '<span>- - - prosjek svih poslanika za cijeli mandat: ' + d.avg + '%</span>'; el.appendChild(leg); }
   }
   function heat(el, d) {
     // d: {parties:[], mps:[], m:[[pct|null]]} — party x party agreement
     el.innerHTML = '';
-    var n = d.parties.length, W = el.clientWidth || 300, lab = Math.min(110, Math.max(64, W * 0.28)), cell = Math.min(46, Math.floor((W - lab - 4) / n)), H = lab * 0.7 + n * cell + 6;
+    var n = d.parties.length, W = el.clientWidth || 300, lab = Math.min(96, Math.max(66, W * 0.26)), cell = Math.min(46, Math.floor((W - lab - 4) / n)), H = lab * 0.8 + n * cell + 6;
+    var cut = function (s) { return s.length > 12 ? s.slice(0, 11) + '…' : s; };
     var svg = d3.select(el).append('svg').attr('width', W).attr('height', H);
     var show = tipFor(el);
     var col = d3.scaleLinear().domain([30, 65, 100]).range(['#d03b3b', '#fab219', '#0ca30c']).clamp(true);
-    var ty = lab * 0.7;
+    var ty = lab * 0.8;
     d.parties.forEach(function (p, j) {
-      svg.append('text').attr('transform', 'translate(' + (lab + j * cell + cell / 2 + 4) + ',' + (ty - 6) + ') rotate(-55)').attr('font-size', '.62rem').attr('fill', INK).text(p.length > 14 ? p.slice(0, 13) + '…' : p);
+      svg.append('text').attr('transform', 'translate(' + (lab + j * cell + cell / 2 + 4) + ',' + (ty - 6) + ') rotate(-55)').attr('font-size', '.68rem').attr('fill', INK).text(cut(p));
     });
     d.parties.forEach(function (p, i) {
-      svg.append('text').attr('x', lab - 4).attr('y', ty + i * cell + cell / 2 + 4).attr('text-anchor', 'end').attr('font-size', '.66rem').attr('fill', INK).text(p.length > 16 ? p.slice(0, 15) + '…' : p);
+      svg.append('text').attr('x', 0).attr('y', ty + i * cell + cell / 2 + 4).attr('font-size', '.7rem').attr('fill', INK).text(cut(p));
       d.parties.forEach(function (q, j) {
         var v = d.m[i][j];
         var g = svg.append('g').style('cursor', 'pointer').on('click', function (ev) { ev.stopPropagation(); show('<b>' + p + '</b> i <b>' + q + '</b>' + (v == null ? '<br>premalo zajedničkih glasanja' : '<br>glasali isto u <b>' + v + '%</b> glasanja (' + d.n[i][j] + ' zajedničkih)'), ev); });

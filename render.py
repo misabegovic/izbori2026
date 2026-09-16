@@ -105,7 +105,7 @@ votes = json.load(open(D + "votes.json"))
 divisions = json.load(open(D + "divisions.json"))
 key_decisions = json.load(open(D + "key_decisions.json"))
 parties_api = json.load(open(D + "parties.json"))
-programs = json.load(open(D + "programs_fbih.json")) + json.load(open(D + "programs_rs.json"))
+programs = [dict(p, entity="FBiH") for p in json.load(open(D + "programs_fbih.json"))] + [dict(p, entity="RS") for p in json.load(open(D + "programs_rs.json"))]
 aliases = {k: v for k, v in json.load(open(D + "party_aliases.json")).items() if not k.startswith("_")}
 context = json.load(open(D + "context.json"))
 promises22 = {}
@@ -171,7 +171,10 @@ def p22_for(prog):
     if not p:
         return None
     cnt = Counter(x["outcome"] for x in p["promises_2022"])
-    return {**p, "counts": cnt, "stack": [("nisu bili u vlasti, ne može se ocijeniti" if k == "ne može se ocijeniti" else k, cnt.get(k, 0), OUTCOME_CLS[k]) for k in ("ispunjeno", "djelimično", "nije", "ne može se ocijeniti")]}
+    in_power = bool((p.get("in_power_2022_2026") or "").strip()) and "nisu bili" not in (p.get("in_power_2022_2026") or "").lower()
+    grey = "još u toku ili se ne može provjeriti" if in_power else "nisu bili u vlasti, ne može se ocijeniti"
+    return {**p, "counts": cnt, "in_power": in_power,
+            "stack": [(grey if k == "ne može se ocijeniti" else k, cnt.get(k, 0), OUTCOME_CLS[k]) for k in ("ispunjeno", "djelimično", "nije", "ne može se ocijeniti")]}
 speeches = json.load(open(D + "speeches.json")) if os.path.exists(D + "speeches.json") else {}
 ecitizen = json.load(open(D + "ecitizen.json")) if os.path.exists(D + "ecitizen.json") else {"cities": {}}
 
@@ -187,6 +190,36 @@ env.filters["nice"] = nice_name
 env.filters["ptitle"] = party_title
 env.filters["ptitle_raw"] = lambda s: party_title(s, raw=True)
 env.filters["km"] = km
+SRC_NAME = {"cin": "CIN, imovinapoliticara.cin.ba", "pd.fbih.karton": "Parlament FBiH", "psbih.detail": "parlament.ba", "cik": "CIK", "nsrs": "NSRS"}
+env.filters["srcname"] = lambda s: SRC_NAME.get(s or "", s or "")
+env.filters["area"] = lambda a: nice_area(a)
+env.filters["datum"] = lambda s: (lambda m: f"{int(m.group(3))}. {int(m.group(2))}. {m.group(1)}." if m else s)(re.match(r"^(\d{4})-(\d{2})-(\d{2})", s or ""))
+
+
+CANTON = {"1": "Unsko-sanski kanton", "2": "Posavski kanton", "3": "Tuzlanski kanton", "4": "Zeničko-dobojski kanton",
+           "5": "Bosansko-podrinjski kanton", "6": "Srednjobosanski kanton", "7": "Hercegovačko-neretvanski kanton",
+           "8": "Zapadnohercegovački kanton", "9": "Kanton Sarajevo", "10": "Kanton 10 (Livno, Tomislavgrad, Glamoč…)"}
+
+
+def nice_area(a):
+    """CIK area strings into words a voter recognises."""
+    a = re.sub(r"^\*\s*", "", (a or "").strip())
+    a = re.sub(r"^(GRAD|OPĆINA|OPŠTINA)\s+(?!SARAJEVO$)", "", a, flags=re.I)
+    a = re.sub(r"\s*-\s*", "-", a)
+    m = re.match(r"^KANTON (\d+)$", cyr2lat(a).upper())
+    if m:
+        return CANTON.get(m.group(1), a.title())
+    m = re.match(r"^IZBORNA JEDINICA (\S+)$", cyr2lat(a).upper())
+    if m:
+        return f"izborna jedinica {m.group(1).lower()}"
+    if len(a) > 40:
+        return "cijeli entitet"
+    return nice_name(a)
+
+
+def mjesta(n):
+    return f"{n} mjesto" if n == 1 else f"{n} mjesta"
+
 
 RACE = {
     "oi2026-1": {"short": "Predsjedništvo BiH", "kind": "one", "who": "tri člana koji predstavljaju državu prema svijetu i komanduju vojskom",
@@ -304,6 +337,14 @@ def record_summary(pid):
     return out or None
 
 
+def short_or_coal(p):
+    """Short party name; long coalition strings become 'HDZ BiH (koalicija)'."""
+    raw, short = party_title(p, raw=True), party_title(p)
+    if len(raw) > 28 and short != raw:
+        return f"{short} (koalicija)"
+    return raw
+
+
 def person_view(c):
     """Everything a page needs to say about one candidate, in plain words."""
     pid = c.get("pid") or ""
@@ -317,7 +358,7 @@ def person_view(c):
     for t in sorted(tl, key=lambda t: -(t.get("y") or 0)):
         if t.get("area") and (("vijeće" in (t.get("lvl") or "")) or ("ačelnik" in (t.get("lvl") or ""))):
             home = nice_name(t["area"]); break
-    v = {"pid": pid, "slug": pid_slug(pid) if pid else None, "name": nice_name(c.get("name")), "raw_name": c.get("name"), "home": home, "home_key": home_key(home) if home else "",
+    v = {"pid": pid, "slug": pid_slug(pid) if pid else None, "name": nice_name(c.get("name")), "raw_name": c.get("name"), "home": nice_area(home) if home else None, "home_key": home_key(home) if home else "",
          "pos": c.get("pos"), "stood": stood, "won": won, "office": rec.get("isOfficeHolder") or c.get("office"),
          "parties": parties, "n_parties": len(parties), "confidence": rec.get("confidence") or c.get("confidence"),
          "has_record": pid in records, "has_page": bool(tl) or pid in records or bool(prof.get("bio")),
@@ -325,8 +366,11 @@ def person_view(c):
          "img": f"lica/{prof['publicId']}.webp" if prof.get("portrait") and prof.get("publicId") and os.path.exists(f"static/lica/{prof['publicId']}.webp") else None,
          "img_credit": (prof.get("portrait") or {}).get("credit")}
     badges = []
-    if v["office"]:
-        badges.append(("office", "sada na funkciji", "Trenutno drži izbornu funkciju."))
+    last_win = max((t.get("y") or 0) for t in won_rows) if won_rows else 0
+    if v["office"] and (not last_win or last_win >= 2018):
+        badges.append(("office", "sada na funkciji", "Po javnom registru trenutno drži izbornu funkciju."))
+    else:
+        v["office"] = False
     if won and won > 0:
         lv = {t.get("lvl") for t in won_rows}
         local = lv and all(("vijeće" in (l or "")) or ("ačelnik" in (l or "")) for l in lv)
@@ -334,10 +378,10 @@ def person_view(c):
         badges.append(("won", (f"izabran {won}× {where}" if won > 1 else f"već biran {where}").strip(),
                        "Ranije izabran: " + ", ".join(f"{t['y']} {t['lvl']}" for t in won_rows[:6])))
     if v["n_parties"] > 1:
-        badges.append(("switch", f"mijenjao stranke ({v['n_parties']})", "Kandidovao se za različite stranke: " + " → ".join(f"{party_title(p, raw=True)} ({y})" for y, p in parties) + ". Ako je stranka samo promijenila ime ili ušla u koaliciju, ovo može biti greška."))
+        badges.append(("switch", f"mijenjao stranke ({v['n_parties']})", "Kandidovao se za različite stranke: " + " → ".join(f"{short_or_coal(p)} ({y})" for y, p in parties) + ". Ako je stranka samo promijenila ime ili ušla u koaliciju, ovo može biti greška."))
     if stood == 1:
         badges.append(("new", "prvi put", "Prvi put na listiću."))
-    if stood >= 3 and not won:
+    if stood >= 2 and not won:
         badges.append(("filler", f"{stood}. put na listi, još neizabran", "Kandidovao se više puta, do sada nije osvojio mandat."))
     if v["has_record"]:
         badges.append(("record", "ima zapis glasanja", "Bio poslanik 2022–2026, vidi kako je glasao."))
@@ -349,7 +393,7 @@ def person_view(c):
     else:
         s.append(f"Kandiduje se {stood}. put" + (f", izabran/a {won} puta." if won else ", do sada nije izabran/a."))
     if v["n_parties"] > 1:
-        s.append("Stranke: " + " → ".join(f"{party_title(p, raw=True)} ({y})" for y, p in parties) + ".")
+        s.append("Stranke: " + " → ".join(f"{short_or_coal(p)} ({y})" for y, p in parties) + ".")
     elif parties and stood > 1:
         printed = []
         for t in sorted(dedupe_tl(tl), key=lambda t: (t.get("y") or 0)):
@@ -509,6 +553,10 @@ def chance_word(pct):
     return "velika" if pct >= 50 else "srednja" if pct >= 18 else "mala" if pct >= 5 else "vrlo mala"
 
 
+def od_deset(pct):
+    return f"{max(1, round(pct / 10))} od 10"
+
+
 def list_chances(u, l):
     """{pid: (pct, word, why)} for one list on one ballot. pct = share of candidates in the same
     situation who actually won in 2022 (data/chance_calibration.json, backtest.py). Estimate, not a forecast."""
@@ -525,22 +573,22 @@ def list_chances(u, l):
     for rank, c in enumerate(ranked, 1):
         if seats <= 0:
             if v22 / total22 < 0.03:
-                pct = 2; why = "stranka 2022 ovdje nije bila na listiću ili je imala manje od 3% glasova; takve liste 2022 gotovo nikad nisu dobile mandat"
+                pct = 2; why = "ova lista 2022 ovdje nije izlazila, ili je imala manje od 3 posto glasova; takve liste 2022 skoro nikad nisu dobile mjesto"
             elif rank == 1:
-                pct = cal_pct("no_seats_pos1", 15); why = f"stranka 2022 ovdje nije imala mjesto, ovaj je prvi na listi; 2022 je od takvih prošlo {pct}%"
+                pct = cal_pct("no_seats_pos1", 15); why = f"stranka 2022 ovdje nije dobila nijedno mjesto, a ovaj je prvi na listi; 2022 je od ovakvih prošlo {od_deset(pct)}"
             else:
-                pct = cal_pct("no_seats_rest", 2); why = f"stranka 2022 ovdje nije imala mjesto i nije prvi na listi; 2022 je od takvih prošlo {pct}%"
+                pct = cal_pct("no_seats_rest", 2); why = f"stranka 2022 ovdje nije dobila nijedno mjesto, a ovaj nije ni prvi na listi; 2022 je od ovakvih prošlo {od_deset(pct)}"
         elif rank <= seats:
-            pct = cal_pct("within", 63); why = f"stranka je 2022 ovdje imala {seats} mjesta, a ovaj je {rank}. na listi; 2022 je od takvih prošlo {pct}%"
+            pct = cal_pct("within", 63); why = f"stranka je 2022 ovdje dobila {mjesta(seats)}, a ovaj je {rank}. na listi; 2022 je od ovakvih prošlo {od_deset(pct)}"
         elif rank == seats + 1:
-            pct = cal_pct("plus1", 19); why = f"prvi iza {seats} mjesta koja je stranka imala 2022; 2022 je od takvih prošlo {pct}%"
+            pct = cal_pct("plus1", 19); why = f"prvi iza {mjesta(seats)} koliko je stranka dobila 2022; 2022 je od ovakvih prošlo {od_deset(pct)}"
         elif rank == seats + 2:
-            pct = cal_pct("plus2", 6); why = f"drugi iza mjesta koja je stranka imala 2022; 2022 je od takvih prošlo {pct}%"
+            pct = cal_pct("plus2", 6); why = f"drugi iza mjesta koliko je stranka dobila 2022; 2022 je od ovakvih prošlo {od_deset(pct)}"
         else:
-            pct = cal_pct("beyond", 2); why = f"daleko iza mjesta koja je stranka imala 2022; 2022 je od takvih prošlo {pct}%"
+            pct = cal_pct("beyond", 2); why = f"daleko iza mjesta koliko je stranka dobila 2022; 2022 je od ovakvih prošlo {od_deset(pct)}"
         if u["area"] in COMP:
-            pct = min(pct, 19); why = "dodatna lista: mjesta dijeli stranka po svom redu, pa je procjena nesigurna"
-        out[c.get("pid") or c["name"]] = (pct, chance_word(pct), why)
+            pct = min(pct, 19); why = "ovo je dodatna lista: ta mjesta stranka dijeli po svom redu, pa se ne može računati"
+        out[c.get("pid") or c["name"]] = (pct, chance_word(pct), why, od_deset(pct))
     return out
 
 
@@ -617,6 +665,7 @@ for pid, entries in cand_index.items():
         if d["id"] in vm:
             kd.append({"d": d, "vote": vm[d["id"]], "word": VOTE_WORD[vm[d["id"]]], "cls": VOTE_CLS[vm[d["id"]]]})
     sp = [dict(x, text=re.sub(r"_{3,}\s*\(\?\)|_{3,}", "…", x["text"])) for x in speeches.get(pid, [])]
+    sp_good = [x for x in sp if len(re.sub(r"[^\wČĆŽŠĐčćžšđ ]", "", x["text"]).strip()) >= 40]
     assets = None
     if prof.get("assets"):
         by_src = defaultdict(list)
@@ -630,12 +679,19 @@ for pid, entries in cand_index.items():
             return None
         ll = next(l for l in uu["lists"] if l["name"] == e[1])
         return list_chances(uu, ll).get(pid)
+    def _where(uu):
+        if uu["race"] in ("oi2026-1", "oi2026-5"):
+            return ""
+        if uu["area"] in COMP:
+            return ", " + COMP[uu["area"]]
+        ms = unit_munis.get(f"{uu['race']}-{uu['area']}", [])
+        return ", " + (", ".join(ms[:3]) + (f" i još {len(ms) - 3}" if len(ms) > 3 else "")) if ms else f", područje {uu['area']}"
     runs = [{"unit": units[e[0]], "list": e[1], "chance": _chance(e), "href": unit_href(units[e[0]]["race"], units[e[0]]["area"]), "pos": e[2].get("pos"),
-             "party_href": party_href(e[1])} for e in entries]
+             "party_href": party_href(e[1]), "where": _where(units[e[0]])} for e in entries]
     main_uk = next((e[0] for e in entries if units[e[0]]["area"] not in COMP), uk)
     tl_json = json.dumps([{"y": t.get("y"), "won": bool(t.get("elected")), "lvl": t.get("lvl")} for t in tl], ensure_ascii=False)
     act_json = {ch: json.dumps({"rows": rows, "avg": (CH_AVG.get(ch) or {}).get("pris")}, ensure_ascii=False) for ch, rows in ACT.get(pid, {}).items()}
-    html = kand_tpl.render(p=v, tl=tl, tl_json=tl_json, prof=prof, rec=rec, kd=kd, replacement=replacement, cands_json=unit_json.get(main_uk), CH_AVG=CH_AVG, speeches_n=len(sp), speeches=sp[:5], assets=assets, runs=runs,
+    html = kand_tpl.render(p=v, tl=tl, tl_json=tl_json, prof=prof, rec=rec, kd=kd, replacement=replacement, cands_json=unit_json.get(main_uk), CH_AVG=CH_AVG, speeches_n=len(sp), speeches=sp_good[:5], assets=assets, runs=runs,
                            sim=SIM.get(pid, {}), pline=PLINE.get(pid, {}), act=act_json, my_party=people_rec.get(pid, {}).get("party_name"), **base_ctx)
     write(f"kandidat-{v['slug']}.html", html)
     n_kand += 1
@@ -672,7 +728,7 @@ for uk, u in units.items():
                       "new": sum(1 for c in cands if c["stood"] == 1), "office": sum(1 for c in cands if c["office"]),
                       "mps": sum(1 for c in cands if c["has_record"]),
                       "votes22": (hist22.get(pi) or {}).get("votes"), "votes18": (hist18.get(pi) or {}).get("votes"),
-                      "seats22": seats22.get(pi, 0), "program": prog, "p22": p22_for(prog), "party_href": party_href(l["name"]),
+                      "seats22": seats22.get(pi, 0), "program": prog, "p22": p22_for(prog), "hist": history_for(prog), "party_href": party_href(l["name"]),
                       "key_votes": recent_kv})
     total22 = sum((h.get("votes") or 0) for h in u.get("party_history", []) if h["year"] == 2022)
     top22 = sorted([h for h in u.get("party_history", []) if h["year"] == 2022], key=lambda h: -(h.get("votes") or 0))[:5]
@@ -751,8 +807,25 @@ stranka_tpl = env.get_template("stranka.html")
 for pk, ps in party_pages.items():
     write(ps["href"], stranka_tpl.render(p=ps, **base_ctx))
 plist = sorted(party_pages.values(), key=lambda p: -p["n"])
-write("stranke.html", env.get_template("stranke.html").render(parties=plist, pmatrix={ch: json.dumps(m, ensure_ascii=False) for ch, m in PMATRIX.items()}, **base_ctx))
-write("obecanja.html", env.get_template("obecanja.html").render(themes=THEMES, n_parties=len([p for p in programs if p.get("promises")]), **base_ctx))
+def heat_sentences(m):
+    out = []
+    for i, p in enumerate(m["parties"]):
+        pairs = [(m["parties"][j], m["m"][i][j]) for j in range(len(m["parties"])) if j != i and m["m"][i][j] is not None]
+        if not pairs:
+            continue
+        pairs.sort(key=lambda x: -x[1])
+        same = ", ".join(f"{q} {v}%" for q, v in pairs[:2])
+        opp = pairs[-1]
+        out.append(f"{p}: najčešće isto kao {same}; najrjeđe isto kao {opp[0]} ({opp[1]}%).")
+    return out
+PINFO = {}
+for _pk, _pp in party_pages.items():
+    if _pp.get("program"):
+        _c = (_pp.get("p22") or {}).get("counts") or {}
+        _rated = _c.get("ispunjeno", 0) + _c.get("djelimično", 0) + _c.get("nije", 0)
+        PINFO[_pp["program"]["name"]] = {"href": _pp["href"], "p22": f"prošli put provjereno {_rated}: {_c.get('ispunjeno', 0)} uradili, {_c.get('djelimično', 0)} pola, {_c.get('nije', 0)} nisu" if _rated else ("nisu bili u vlasti 2022–2026, nema šta provjeriti" if _c else "")}
+write("stranke.html", env.get_template("stranke.html").render(parties=plist, pmatrix={ch: json.dumps(m, ensure_ascii=False) for ch, m in PMATRIX.items()}, heat_text={ch: heat_sentences(m) for ch, m in PMATRIX.items()}, **base_ctx))
+write("obecanja.html", env.get_template("obecanja.html").render(themes=THEMES, n_parties=len([p for p in programs if p.get("promises")]), pinfo=PINFO, **base_ctx))
 write("metoda.html", env.get_template("metoda.html").render(cal=CAL, kd=key_decisions, n_records=len(records), n_div=len(divisions), n_programs=len(programs), **base_ctx))
 
 # --- presidency page
