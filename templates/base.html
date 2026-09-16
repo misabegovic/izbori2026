@@ -24,9 +24,10 @@
 <link rel="stylesheet" href="style.css?v={{ ASSET_V }}">
 </head>
 <body>
-<div class="top"><div class="in">
+<div class="top" id="top"><div class="in">
 <a class="home" href="index.html">Izbori 2026</a>
-<nav><a href="kako-glasati.html">Kako glasati</a><a href="projekcije.html">Šta će biti</a><a href="predsjednistvo.html">Predsjedništvo</a><a href="stranke.html">Stranke</a><a href="desavanja.html">Šta se desilo</a></nav><div class="tools"><button class="tog" onclick="bigger()" title="Veća slova">A+</button> <button class="tog" id="tog" onclick="toggleScript()">ЋИР</button></div>
+<button class="burger" id="burger" type="button" onclick="toggleMenu()" aria-expanded="false" aria-controls="mainnav" aria-label="Meni"><span class="bl"></span><span class="bl"></span><span class="bl"></span></button>
+<nav id="mainnav"><a href="kako-glasati.html">Kako glasati</a><a href="projekcije.html">Šta će biti</a><a href="predsjednistvo.html">Predsjedništvo</a><a href="stranke.html">Stranke</a><a href="desavanja.html">Šta se desilo</a></nav><div class="tools"><button class="tog" onclick="bigger()" title="Veća slova">A+</button> <button class="tog" id="tog" onclick="toggleScript()">ЋИР</button></div>
 </div></div>
 <main>
 {% block content %}{% endblock %}
