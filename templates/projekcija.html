@@ -7,17 +7,17 @@
 
 <div class="card">
 <h2 style="margin-top:0">Mandati po listama</h2>
-<table class="cal proj"><thead><tr><th>Lista</th><th>Mandata</th><th>Raspon<span class="opt"> (9 od 10 puta)</span></th><th>Udio</th><th class="opt">Bez pomaka</th></tr></thead><tbody>
+<table class="cal proj"><thead><tr><th>Lista</th><th>Mandata</th><th>Raspon<span class="wideonly"> (9 od 10 puta)</span></th><th>Udio</th><th class="wideonly">Bez pomaka</th></tr></thead><tbody>
 {% for r in h.rows %}
 <tr><td class="ln">{% if r.href %}<a href="{{ r.href }}">{{ r.lista | ptitle }}</a>{% else %}{{ r.lista | ptitle }}{% endif %}</td>
 <td class="num"><b>{{ r.mandati | tdec }}</b></td>
 <td class="rg"><span class="rng"><i style="left:{{ r.lo_pct }}%;width:{{ r.w_pct }}%"></i><u style="left:{{ r.mid_pct }}%"></u></span> <span class="small mut">{{ r.p05 }}–{{ r.p95 }}</span></td>
 <td class="num small">{{ r.udio | tdec }}%{% if r.jedinica and r.jedinica < h.units_n %}<span class="mut" title="Izlazi u {{ r.jedinica }} od {{ h.units_n }} jedinica; procenat je od glasova tamo gdje izlazi.">*</span>{% endif %}</td>
-<td class="num small mut opt">{{ r.udio_bez_pomaka | tdec }}%</td>
+<td class="num small mut wideonly">{{ r.udio_bez_pomaka | tdec }}%</td>
 </tr>
 {% endfor %}
 </tbody></table>
-<p class="small mut">„Bez pomaka” je isti račun kad se lokalni izbori 2024. uopšte ne uzmu u obzir — samo rezultat iz 2022, prenesen na ovogodišnje liste. Razlika između te dvije kolone je sve što lokalni izbori govore.</p>
+<p class="small mut wideonly">„Bez pomaka” je isti račun kad se lokalni izbori 2024. uopšte ne uzmu u obzir — samo rezultat iz 2022, prenesen na ovogodišnje liste. Razlika između te dvije kolone je sve što lokalni izbori govore.</p>
 </div>
 
 {% if h.koalicije %}
