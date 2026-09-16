@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Izbori 2026 — informisani glas</h1>
+<p class="note">Opći izbori u BiH: <b>nedjelja, 4. oktobra 2026, 07:00–19:00</b>. Ove stranice pokazuju šta javni zapis kaže o svakom listiću, listi i kandidatu — za četiri listića birača u Tuzli (Predsjedništvo, PSBiH 5A, Parlament FBiH jedinica 3, Skupština TK).</p>
+
+<h2>Kako čitati oznake</h2>
+<div class="card">
+<span class="b office">u funkciji</span> trenutno drži funkciju ·
+<span class="b won">osvojio N×</span> ranije osvojio mandat ·
+<span class="b debut">debitant</span> prvi put na listiću ·
+<span class="b filler">N× bez mandata</span> serijski kandidat bez pobjede ·
+<span class="b warn">⚠ zapis</span> identitet zaključen, ne dokazan
+</div>
+
+<h2>Listići</h2>
+{% for b in ballots %}
+<div class="card">
+<h3 style="margin:.2rem 0"><a href="{{ b.id }}.html">{{ b.title }}</a></h3>
+<p class="mut">{{ b.note }}</p>
+<div class="stats">
+<div class="stat"><b>{{ b.stats.candidates }}</b>kandidata</div>
+<div class="stat"><b>{{ b.mandates }}</b>mandata</div>
+<div class="stat"><b>{{ b.stats.ever_won }}</b>ikad osvojili</div>
+<div class="stat"><b>{{ b.stats.debut }}</b>debitanata</div>
+<div class="stat"><b>{{ b.stats.fillers3 }}</b>punilaca (3+ bez mandata)</div>
+</div>
+</div>
+{% endfor %}
+
+<h2>Koliko je promjena realna? (2018→2022→2026)</h2>
+{% for bid, c in churn.items() %}
+<div class="card">
+<b>{{ {'psbih-5a':'PSBiH 5A','pfbih-j3':'PFBiH jed. 3','tk':'Skupština TK'}[bid] }}</b> —
+2022 je bilo {{ c.m22 }} mandata; od 2018. zadržano {{ c.kept_18_22 }}.
+Na istom listiću 2026: {{ c.running_same_race }}.
+{% if c.moved_up %}Promovisani na više nivoe: {{ c.moved_up | length }} ({{ c.moved_up[:3] | join(', ') | title }}{% if c.moved_up | length > 3 %}…{% endif %}).{% endif %}
+{% if c.gone %}Nestali s listića: {{ c.gone | length }}.{% endif %}
+</div>
+{% endfor %}
+{% endblock %}

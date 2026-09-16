@@ -1,0 +1,45 @@
+{% macro badge(c) -%}
+{%- if c.office %}<span class="b office" title="Trenutno drži funkciju">u funkciji</span>{% endif -%}
+{%- if c.won and c.won > 0 %}<span class="b won" title="Osvojio mandat ranije">osvojio {{ c.won }}×</span>{% endif -%}
+{%- if c.stood == 1 %}<span class="b debut" title="Prvi put na listiću">debitant</span>{% endif -%}
+{%- if c.stood and c.stood >= 3 and not c.won %}<span class="b filler" title="Kandiduje se {{ c.stood }}. put, nikad osvojio mandat">{{ c.stood }}× bez mandata</span>{% endif -%}
+{%- if c.confidence in ['unverified', 'probable'] %}<span class="b warn" title="Zapis o identitetu je zaključak, ne dokaz">⚠ zapis</span>{% endif -%}
+{%- endmacro %}
+<!doctype html>
+<html lang="bs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Izbori 2026 — informisani glas{% endblock %}</title>
+<style>
+:root { --bg:#0f1214; --fg:#e8e6e3; --mut:#9aa0a6; --acc:#4da3ff; --card:#191d20; }
+* { box-sizing: border-box; }
+body { background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, sans-serif; max-width:760px; margin:0 auto; padding:1rem; }
+a { color:var(--acc); }
+h1 { font-size:1.6rem; } h2 { font-size:1.2rem; margin-top:2rem; border-top:1px solid #2a2f33; padding-top:1rem; }
+.card { background:var(--card); border-radius:10px; padding:1rem; margin:.8rem 0; }
+.stats { display:flex; flex-wrap:wrap; gap:.5rem; }
+.stat { background:var(--card); border-radius:8px; padding:.5rem .8rem; font-size:.9rem; }
+.stat b { display:block; font-size:1.3rem; }
+table { width:100%; border-collapse:collapse; font-size:.92rem; }
+td, th { padding:.3rem .4rem; text-align:left; vertical-align:top; }
+tr { border-bottom:1px solid #23282c; }
+.b { display:inline-block; font-size:.72rem; border-radius:5px; padding:.05rem .4rem; margin-left:.35rem; }
+.b.office { background:#1d4731; color:#7be2a8; }
+.b.won { background:#143a5e; color:#7cc0ff; }
+.b.debut { background:#3a3f45; color:#c9ced4; }
+.b.filler { background:#4a3a14; color:#ffd97c; }
+.b.warn { background:#4e1d1d; color:#ff9c9c; }
+.mut { color:var(--mut); font-size:.85rem; }
+.note { border-left:3px solid var(--acc); padding:.4rem .8rem; background:var(--card); border-radius:0 8px 8px 0; }
+footer { margin-top:3rem; padding-top:1rem; border-top:1px solid #2a2f33; font-size:.8rem; color:var(--mut); }
+</style>
+</head>
+<body>
+{% block content %}{% endblock %}
+<footer>
+<p>Izvor podataka: <a href="https://gianniravioli.com/mashinerija/">gianniravioli.com — „Mashinerija”</a> (CIK-verifikovane liste i registar 2006–2026), CC BY 4.0. Generisano {{ generated }}.</p>
+<p>⚠ Zapisi o osobama nastaju spajanjem kandidatura istog imena — to je zaključak, ne dokaz. Stranica je nestranačka: prikazujemo javni zapis, ne preporuke.</p>
+</footer>
+</body>
+</html>

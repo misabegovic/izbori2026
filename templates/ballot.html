@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}{{ ballot.title }} — Izbori 2026{% endblock %}
+{% block content %}
+<p><a href="index.html">← nazad</a></p>
+<h1>{{ ballot.title }}</h1>
+<p class="note">{{ ballot.note }} Mandata: <b>{{ ballot.mandates }}</b>.</p>
+
+<div class="stats">
+<div class="stat"><b>{{ ballot.stats.candidates }}</b>kandidata</div>
+<div class="stat"><b>{{ ballot.stats.ever_won }}</b>ikad osvojili mandat</div>
+<div class="stat"><b>{{ ballot.stats.debut }}</b>debitanata</div>
+<div class="stat"><b>{{ ballot.stats.fillers3 }}</b>3+ puta bez mandata</div>
+</div>
+
+{% if churn %}
+<h2>Promjena u ovoj jedinici</h2>
+<div class="card">
+2022: {{ churn.m22 }} mandata · zadržano od 2018: {{ churn.kept_18_22 }} · na ovom listiću ponovo: {{ churn.running_same_race }}
+{% if churn.moved_up %}<br>Promovisani na više nivoe: {{ churn.moved_up | join(', ') | title }}{% endif %}
+{% if churn.gone %}<br>Nestali: {{ churn.gone | join(', ') | title }}{% endif %}
+</div>
+{% endif %}
+
+{% for l in ballot.lists %}
+<h2>{{ l.name }} <span class="mut">({{ l.candidates | length }})</span></h2>
+<table>
+{% for c in l.candidates %}
+<tr><td style="width:2rem">{{ c.pos }}.</td><td>{{ c.name | title }}{% if c.party %} <span class="mut">({{ c.party | title }})</span>{% endif %}{{ badge(c) }}</td></tr>
+{% endfor %}
+</table>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,8623 @@
+{
+ "generated": "2026-09-16T07:02:42.514073+00:00",
+ "ballots": [
+  {
+   "id": "predsjednistvo",
+   "race": "oi2026-1",
+   "area": null,
+   "title": "Predsjedništvo BiH",
+   "mandates": 2,
+   "note": "Bošnjački i hrvatski član (glas se u FBiH). Jedan kandidat, većinski.",
+   "stats": {
+    "candidates": 7,
+    "persons": 7,
+    "ever_won": 1,
+    "debut": 4,
+    "fillers3": 0
+   },
+   "lists": [
+    {
+     "code": "Bošnjački član",
+     "name": "Bošnjački član",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "FAHRUDIN RADONČIĆ",
+       "party": "SBB - FAHRUDIN RADONČIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 1,
+       "name": "SEMIR EFENDIĆ",
+       "party": "STRANKA ZA BOSNU I HERCEGOVINU",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 1,
+       "name": "BAKIR IZETBEGOVIĆ",
+       "party": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 1,
+       "name": "DENIS BEĆIROVIĆ",
+       "party": "",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "Hrvatski član",
+     "name": "Hrvatski član",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "DARIJANA FILIPOVIĆ",
+       "party": "HDZ BIH - HRVATSKA DEMOKRATSKA ZAJEDNICA BIH",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 1,
+       "name": "ZDENKO LUČIĆ - NEOVISNI KANDIDAT- NEOVISNI KANDIDAT",
+       "party": "",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 1,
+       "name": "SLAVEN KOVAČEVIĆ",
+       "party": "DEMOKRATSKA FRONTA",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "psbih-5a",
+   "race": "oi2026-2",
+   "area": "515",
+   "title": "Predstavnički dom PSBiH — izborna jedinica 5A",
+   "mandates": 5,
+   "note": "Državni parlament. Obavezno jedan subjekt + do 3 kandidata s njegove liste.",
+   "stats": {
+    "candidates": 102,
+    "persons": 102,
+    "ever_won": 14,
+    "debut": 54,
+    "fillers3": 13
+   },
+   "lists": [
+    {
+     "code": "00877",
+     "name": "NAŠA STRANKA",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "AMIR HASIČEVIĆ",
+       "stood": 5,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "MIRNA SALIJEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "ZVJEZDAN KARADŽIN",
+       "stood": 7,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "NATAŠA IBRAHIMAGIĆ",
+       "stood": 6,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "MIDHAT GLAVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "SUADA ALIMANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "AVDO BABOVIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "DILISTA BAŠIĆ",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "MAHIR FIDAHIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "MIRALEM NEVAČINOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03532",
+     "name": "NES BIH, PDA, NAPRIJED! - ZA EVROPSKU BIH ZAJEDNO",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "SAMIR IMAMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "EDISA PAPRAĆANIN",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "NIJAZ MEZETOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "AVDUL ADROVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "JASMINA ĆEHAJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "MIRSAD BEĆIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "LARISA BUŠEVAC",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "ARMIN SAKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "SAMRA JAJČEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "NERMIN EFENDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03555",
+     "name": "HRVATSKA PETORKA HDZ 1990, HRS, HNP, HDS I HSS",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "TOMISLAV DAMJANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "JELA NEDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "FILIP JARIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00008",
+     "name": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "JASMIN IMAMOVIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": true,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "AZRA OKIĆ",
+       "stood": 4,
+       "won": 2,
+       "office": true,
+       "bio": true,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "NEDIM MUSIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "HAMZA BEŠIĆ",
+       "stood": 4,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "NUSRETA DEDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "MIDHAT BEGANOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "MIRELA MUJKANOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "EDIN JUSUFIJA",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "REJHANA DERVIŠEVIĆ",
+       "stood": 5,
+       "won": 2,
+       "office": true,
+       "bio": true,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "ALDIN BIBEROVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00515",
+     "name": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "НЕДО ПЕТРОВИЋ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03508",
+     "name": "CRVENE LINIJE",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "MIRSAD ALIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "MERIMA HASIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "SAMIR SELIMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "02495",
+     "name": "NEZAVISNA LISTA DOBOJ-SEVLID HURTIĆ",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "AZRA PAŠIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "AHMED HURTIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "MIMOZA MORINA MUJABAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "ADIS KAHRIMANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "MUHAREM MUSIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "SANITA MAZIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "MIRALEM VRŠAJEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "JASMINA TULIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "ZEHRUDIN HODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03552",
+     "name": "NAROD I PRAVDA, SDBIH",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "EDIN DELIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "SABRINA IBRIĆ DORIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "IZEN HAJDAREVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "AMIR TROBRADOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "ANELA SKOPLJAK",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "SEAD SOFTIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "HUSO ATLAGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "AMIRA JAŠAREVIĆ MUSTAJBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "MAIDA MALKOČEVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "MUSTAFA H. AĐULOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03542",
+     "name": "HDZ BIH, HSP BIH, HKDU, HSP AS, HDU, HSP HB, HRAST",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "MATO BRKIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "ANA ANDRIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "BOŽO ANTUNOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "LJUBICA ILIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "DRAGUTIN ŽIVKOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "LUCA MATIJEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "DARKO KASAP",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "ĐURO DELIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "EVICA PEJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "FRANJO IVANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "01182",
+     "name": "SBB - FAHRUDIN RADONČIĆ",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "ENVER BIJEDIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "INA PAMUKČIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "MIRNES MUJKIĆ",
+       "stood": 7,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "MUHAMED DAUTOVIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "AZRA MRKONJIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00004",
+     "name": "STRANKA ZA BOSNU I HERCEGOVINU",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "ZIJAD NIŠIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "EMINA ALIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "DENIS BEĆIROVIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": true,
+       "confidence": "probable",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "SAMEDINA ALIHODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "JUSUF GUŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "JOSIP JOSIPOVIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "SALIH MEHANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "LEJLA NASIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "MELIKA IDRIZ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "IFAD KRUŠKIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00090",
+     "name": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "MUAMER ZUKIĆ",
+       "stood": 5,
+       "won": 4,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "MIRELA AVDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "MIDHAT ČAUŠEVIĆ",
+       "stood": 5,
+       "won": 3,
+       "office": true,
+       "bio": true,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "AHMED OMEROVIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "AJDINA SULJEVIĆ SALKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "EVLIJANA ZULIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "JASMINKA MEHINBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "FADIL ALIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "DŽENITA HODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "LEJLA MUJANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03068",
+     "name": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "ZLATAN BEGIĆ",
+       "stood": 3,
+       "won": 2,
+       "office": true,
+       "bio": true,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "DAJANA ALIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "BORIS KREŠIĆ",
+       "stood": 4,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "MENSUR KAMBEROVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "EMINA TERZIĆ KAVGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "IGOR ILIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "FAHRUDIN ČAMDŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "EDISA MUJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "JASNA SRABOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "MUSTAFA HRVIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03506",
+     "name": "REPUBLIKANCI BOSNE I HERCEGOVINE",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "EDIN LIVADIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pfbih-j3",
+   "race": "oi2026-4",
+   "area": "403",
+   "title": "Predstavnički dom Parlamenta FBiH — izborna jedinica 3",
+   "mandates": 7,
+   "note": "Entitetski parlament. Obavezno jedan subjekt + do 3 kandidata.",
+   "stats": {
+    "candidates": 117,
+    "persons": 117,
+    "ever_won": 10,
+    "debut": 79,
+    "fillers3": 14
+   },
+   "lists": [
+    {
+     "code": "00877",
+     "name": "NAŠA STRANKA",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "AMRA NADAREVIĆ VODENČAREVIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "MIRNES MEŠALJIĆ",
+       "stood": 7,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "DRAGANA BERBEROVIĆ GAGRO",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "ENES MAHIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "MIOMIR SMILJANIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "SELMA MUHIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "SANEL PANDUR",
+       "stood": 7,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "JASENKO TOPIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03532",
+     "name": "NES BIH, PDA, NAPRIJED! - ZA EVROPSKU BIH ZAJEDNO",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "EMIR ŠAHOVIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "ENISA OSMANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "MEHMED BIKODUŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "ALMA LIPJANKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "ADO NOVALIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "MEHAN SMAJIĆ",
+       "stood": 6,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "MERITA HOROZIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "ADNAN HODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "AMRA ŠAHAT",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "SAMIR KASUMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "ZERINA ĆATIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "ADNAN SRABOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00008",
+     "name": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "VEDRAN LAKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "VEDRANA PETROVIĆ",
+       "stood": 4,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "ELVIR MAHMUZIĆ",
+       "stood": 5,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "ALMIR BULJUBAŠIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "AMELDINA SULJKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "ADMIR HRUSTANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "AZRA GAZIBEGOVIĆ ŠIMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "MIRSAD HODŽIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "FATA HASANOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "ANEL IBELJIĆ",
+       "stood": 3,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "LAMIJA JUKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "SENAD NEIMARLIJA",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03544",
+     "name": "HDZ BIH, HSS SR, HSP BIH, HKDU, HSP AS, HDU, HSP HB, HRAST",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "MATO MATIJEVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "NATAŠA PAVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "BOŽO JURIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "JOZO TUNJIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "VEDRANA ANĐIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "MATO BRČINA",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "LUCIJA SPASIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00515",
+     "name": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "МИЛАН ИЛИЋ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03556",
+     "name": "KOALICIJA HDZ 1990, HRS, HDS I HSS",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "IVICA MARINOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "MARJANA MARKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "DANIJEL MARKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03191",
+     "name": "SNAGA NARODA",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "MEDINA PURIĆ IBRIŠIMOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "ELDAR HODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "RUŽICA MIHAJLOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "ŠEMSO GULAM",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "IVANA RAMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03508",
+     "name": "CRVENE LINIJE",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "MURIS MULIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "AIDA MUSTAFIĆ BOŠNJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "MAHIR PIRIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03550",
+     "name": "NAROD I PRAVDA, SDBIH, SPUBIH",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "ADMIR ČAVALIĆ",
+       "stood": 5,
+       "won": 2,
+       "office": true,
+       "bio": true,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "SAMRA MALAGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "VEDIN TOKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "MIRSAD ARAPČIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "DŽANA PAŠIĆ",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "MUSTAFA ŠABIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "VEHID JAHIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "DENISA MUMINOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "ALMEDINA ĆERIMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "AMER MUSTAČEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "LEJLA KURALIĆ-ĆIŠIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "NIHAD OMEROVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "01182",
+     "name": "SBB - FAHRUDIN RADONČIĆ",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "SEMIR MEŠANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "EMINA ŠKAHIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "MUAMER BRČANINOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "MIRZA KIKANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "SANELA BEĆIROVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03531",
+     "name": "BH ZELENI - NOVO VRIJEME - TUZLANSKA ALTERNATIVA",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "MENSUR ALIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "MAISA ARNUS",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "NEDIM BIJEDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "SAMRA ĆORHODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "SENAD NUKIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "ŠEFIK ĆIVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "DALIBOR PAVLOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "MAIDA MEHMEDOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "AMRA MUJKANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "JASMIN MEMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "AMINA HASIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "EMIR KALABA",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00004",
+     "name": "STRANKA ZA BOSNU I HERCEGOVINU",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "JAKUB MAHOVKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "OLGICA BEŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "FIKRET AVDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "AMIR MORANKIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "NEDŽMA HASIČEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "SAMIR MEŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "AID DEDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "AMINA MAHMUTOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "RAHIMA MUJČINOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "ELDAR SUŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "ANITA SELIMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "MAHIR BAJRIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00090",
+     "name": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "IRFAN HALILAGIĆ",
+       "stood": 6,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "SENIA HUSIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "EDIN VIKALO",
+       "stood": 3,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "SALKO ZILDŽIĆ",
+       "stood": 5,
+       "won": 3,
+       "office": true,
+       "bio": true,
+       "confidence": "unverified",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "ELVIRA SULJKIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "FARUK DURMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "LEJLA KAPLAN",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "ISMAR FORIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "SENADA RESIĆ DŽANANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "ADMIR MOSOROVIĆ",
+       "stood": 4,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "SANELA SULJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "ZORAN BLAGOJEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03068",
+     "name": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "MUSTAFA TABAKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "SANDRA IMŠIROVIĆ",
+       "stood": 5,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "RIZAH DŽANIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "ALIJA IMAMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "MARIJANA PROTIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "NEDIM SULJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "ELDIN MUJKIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "SEVLETA ARNAUTOVIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "FATIMA HALILOVIĆ SALKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "SEMIR KEVRIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "ALMIRA KURTIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "JASMIN ŠKAHIĆ",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03506",
+     "name": "REPUBLIKANCI BOSNE I HERCEGOVINE",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "ARMINA JAHIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "proved",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tk",
+   "race": "oi2026-7",
+   "area": "203",
+   "title": "Skupština Tuzlanskog kantona (CIK: Kanton 3)",
+   "mandates": 35,
+   "note": "Kantonalna skupština. Obavezno jedan subjekt + do 3 kandidata.",
+   "stats": {
+    "candidates": 519,
+    "persons": 519,
+    "ever_won": 64,
+    "debut": 324,
+    "fillers3": 58
+   },
+   "lists": [
+    {
+     "code": "02711",
+     "name": "SOCIJALDEMOKRATE  BOSNE I HERCEGOVINE SDBIH",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "HUSEIN TOKIĆ",
+       "stood": 4,
+       "won": 3,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "ANELA KARIĆ HUSARIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "NEDIM SUBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "SELMA SUBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "MURIS OSMIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "MELISA DELIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "ZIHER SULJIĆ",
+       "stood": 6,
+       "won": 5,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "MEHMED DŽAMBIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "ALMEDINA AKELJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "TEUFIK ZAHIROVIĆ",
+       "stood": 6,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "EMILIJA MEMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "JAKUB SULJKANOVIĆ",
+       "stood": 4,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "SARA HUSKANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "INDIR DELIOMEROVIĆ",
+       "stood": 4,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "BAHRIJA REŠIDOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "EDIN HEĆIMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "ELDINA PALATA",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "MIDHET ZULIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "AZUR LALIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "NEDŽADA DAMADŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "MIRZA BAJRAMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "SELMA GOLAĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "ADMIR KOVAČEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "SADMIR TURSUNOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "LAMIJA PEKARIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "ELDINA ALIŠKANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "ADIN OMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "IRMA OSMANOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "DINO DELIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "MELINA IMŠIROVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "ENES NUMANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 32,
+       "name": "ASJA MUJANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 33,
+       "name": "ALMEDINA SEJDINOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 34,
+       "name": "AZRA ŠUĆUROVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00090",
+     "name": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "ŠEKIB UMIHANIĆ",
+       "stood": 3,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "LEJLA VUKOVIĆ",
+       "stood": 4,
+       "won": 3,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "SMAJO MANDŽIĆ",
+       "stood": 3,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "SELMA SMAJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "BAHRUDIN AHMETAGIĆ",
+       "stood": 5,
+       "won": 4,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "FAHRUDIN SKOPLJAK",
+       "stood": 5,
+       "won": 3,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "SENAD ALIĆ",
+       "stood": 3,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "EDIBA AVDIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "SELMA JUKAN",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "EDIN DEDIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "MINELA AGIĆ",
+       "stood": 4,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "DAMIR ŠIŠIĆ",
+       "stood": 5,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "MONIKA NOVAKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "SUVADA DŽUZDANOVIĆ",
+       "stood": 6,
+       "won": 5,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "MUMIN ČAUŠEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "NIZAR BAJRAKTAREVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "FAHRETA SOFTIĆ",
+       "stood": 5,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "BERISA AHMETOVIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "ENES IDRIZOVIĆ",
+       "stood": 8,
+       "won": 5,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "HARUN AVDAGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "ALMA MUSIĆ OMEROVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "NEDŽAD BRISTRIĆ",
+       "stood": 4,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "ALDIJANA BAĆIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "EDIN DURAKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "ARMIN KADRIĆ",
+       "stood": 5,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "SLAVICA IVANOV",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "MEHMED MUJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "ZUMRETA ALJKANOVIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "HARUN BEĆIROVIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "AMIR HADŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "AMRA SINANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 32,
+       "name": "OMER AHMETOVIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 33,
+       "name": "FATIMA ĆOSIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 34,
+       "name": "MIRALEM HUREMOVIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 35,
+       "name": "SUAD SELIMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 36,
+       "name": "MEDINA IBRIŠEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 37,
+       "name": "ERNES PRELIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 38,
+       "name": "NEDŽMIJA ŠAKIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 39,
+       "name": "ARNES AVDIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 40,
+       "name": "ELVIR SULJIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03068",
+     "name": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "MAHIR MEŠALIĆ",
+       "stood": 3,
+       "won": 2,
+       "office": true,
+       "bio": true,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "DRAGANA BOSANKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "IVANA MIJATOVIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "MUSTAFA LJALJIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "ELVIR MUJKANOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "ALMIR DORIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "SAMIR NUMANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "NATAŠA MAROŠEVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "AMELA MEHMEDOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "ZIJAD OMERČIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "ALDINA KESIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "DAMIR GAZDIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "AZRA IBRAHIMOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "EDIM KADIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "IGOR HUDIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "AMELA RAMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "ALMIR ŽILIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "AMELA TUPAJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "ERMIN BAĆIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "TARIK SMAJLOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "SAMRA MAHMUTOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "HAMID HUSIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "BEGAJETA AHMETOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "MIRHAN KALTIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "KEMAL NUKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "ZERINA SUBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "ADMIR HASAKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "ADISA IBRIŠIMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "NEDŽAD KULIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "SANEL HASANBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "MIRELA HANDŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 32,
+       "name": "ESAD PURDIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 33,
+       "name": "MELIKA FAZLIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 34,
+       "name": "ARMIN TALOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 35,
+       "name": "ANES POLJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 36,
+       "name": "JASMINA JAŠAREVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 37,
+       "name": "EDIN ŽUNIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 38,
+       "name": "ŠEJLA HODŽIĆ TRŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 39,
+       "name": "NERMIN BEKTIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 40,
+       "name": "ARMIN HODŽIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "TK203-NONE-1",
+     "name": "NAROD I PRAVDA (NIP), STRANKA PENZIONERA-UMIROVLJENIKA BIH",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "ADIS FAZLIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "SILVA BANOVIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "SUAD HADŽIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "ADMIR KARIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "FARZIJALA ŠIŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "HUSEIN TOPČAGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "ZLATKO MEŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "MAJA SARAJLIĆ HADŽIOMEROVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "SANDRA MUSIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "FUAD IMAMOVIĆ",
+       "stood": 6,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "JASNA RAHIMIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "HARUN HODŽIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "MUBINA AHMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "OMER BANJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "NEDŽAD DAUTOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "SUZANA OSTOJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "ERMIN ŠARIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "SANELA RABIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "EDIN ŠEHIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "MUSTAFA KOVAČ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "ELVIRA SULJKANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "ILJAZ HASANBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "DŽANA PRELIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "AMER JUSIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "ŠAHZO SINANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "SELMA HAJDARBEGOVIĆ MURATOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "AMIR PAŠALIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "RAMIZA MUJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "SAMED MEHMEDOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "ADEM BOŠNJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "NERMINA KASUMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 32,
+       "name": "HAZIM HALILOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 33,
+       "name": "FUADA MOĆIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 34,
+       "name": "MARKO PETROVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 35,
+       "name": "ZIJAD IMAMOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 36,
+       "name": "ADELA DAUTOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 37,
+       "name": "ALMIR MURSELOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 38,
+       "name": "JASMINKA HODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 39,
+       "name": "NEDŽAD JUSIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 40,
+       "name": "MIRZA MALKOČEVIĆ",
+       "stood": 4,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03506",
+     "name": "REPUBLIKANCI BOSNE I HERCEGOVINE",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "ALEN JAHIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "ABIDA MULAHUSEJNOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "STANISLAV PETRAK",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "SEMIR OMERDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "DŽENITA MEHINBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "SAMIRA ERDELJAC",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "MUHAMED DURAKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00877",
+     "name": "NAŠA STRANKA",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "MIRSAD ČAMDŽIĆ",
+       "stood": 7,
+       "won": 5,
+       "office": true,
+       "bio": true,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "AMILA HODŽIĆ",
+       "stood": 3,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "ADNAN ŠERAK",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "AMIR HUSARIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "LEJLA DIDIK SARAJLIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "SAŠA DELIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "VESNA ZONIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "JASMINKA ČELIĆ",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "MENSUD SMAJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "ALMA BEGANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "AMIR MORANKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "AHMED ALISPAHIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "MERIMA ĆATIBUŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "NINO JOVANOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "IVANA PAVLIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "DŽAFER BRKIĆ",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "ĆERA OSMANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "MUHAREM MUSIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "MERIMA DORIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "ELNUR HALILBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "ŽANA JUNUZOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "TARIK GOGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "ANA ZEC",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "FUAD HALILOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "AMELA DELIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "RASIM ŠIŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "SALIM TAHIROVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "MINEHETA KARIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "BIHA MEHANOVIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "DAMIR INKIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "DŽENANA OMAZIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 32,
+       "name": "JAKUB ŠERBEČIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 33,
+       "name": "JASMIN MUJANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 34,
+       "name": "SAKIB SALIHBAŠIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 35,
+       "name": "LAMIJA HAMIDOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 36,
+       "name": "SENAD IBRAHIMOVIĆ",
+       "stood": 7,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 37,
+       "name": "MIRSAD BILALIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 38,
+       "name": "SELMA ĆATIBUŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 39,
+       "name": "ADNAN ALJIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 40,
+       "name": "OMER BERBIĆ",
+       "stood": 4,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03532",
+     "name": "NES BIH, PDA, NAPRIJED! - ZA EVROPSKU BIH ZAJEDNO",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "SUAD SALIBAŠIĆ",
+       "stood": 6,
+       "won": 3,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "LEJLA ĆEBIĆ ĐERZIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "NEDŽAD HAMZIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "RIZO ALIDŽANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "AZRA LIVADIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "DŽEVAD HALILOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "AMIR HAJRULAHOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "AMELA PIRIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "ALISA SINANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "SEMIR HUSEJNEFENDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "AZRA HUKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "AMER MEŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "MELIHA PAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "AIDIN HRNJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "SEJDIJA ADŽIKIĆ",
+       "stood": 6,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "AZRINA RAZIĆ IVANKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "EMIR IDRIZOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "NAZA RIZVIĆ-MUJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "REFIK MAJDANČIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "VEJSIL HALILOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "ELVISA IBRAHIMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "NERMIN KOVAČEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "EDINA SALIHOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "MIRSAD MAZALOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "ADIS EFENDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "JASMINA PEDLJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "DŽEMO SUBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "AZRA DEDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "MUAMER JAHIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "ŠEVREF DELJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "MINASA BLEKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 32,
+       "name": "DAMIR NUKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 33,
+       "name": "BELMA MEŠKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 34,
+       "name": "SANEL DŽAFIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 35,
+       "name": "SAKIB KOPIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 36,
+       "name": "DŽENANA NIKOLIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 37,
+       "name": "SAMIR SALIHOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 38,
+       "name": "AZEMINA MUJKANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 39,
+       "name": "EDIN POŽEGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 40,
+       "name": "OLIVER JURIŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00027",
+     "name": "HDZ BIH - HRVATSKA DEMOKRATSKA ZAJEDNICA BIH",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "VINKO PAVLOVIĆ",
+       "stood": 7,
+       "won": 3,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "VANJA BOSANKIĆ-MILIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "DEJAN KOVAČEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "JADRANKA PAVLIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "SLOBODAN BABIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "TINA PAVLOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "DENIS ŽEPIĆ",
+       "stood": 7,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "DANIJEL PAVIĆ",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "DRAGANA BANOVIĆ",
+       "stood": 6,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "DANIJEL NIKOLIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "JULIJANA PAVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "DRAŽAN DIVKOVIĆ",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "VEDRANA BRAKIĆ HOLUB",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "BLAŠKO TOPALOVIĆ",
+       "stood": 6,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "MLADEN MIŠIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "IVANA BRKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "AZUR AZABAGIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "SNJEŽANA TOKIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "JAKOV TOPALOVIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "MARIO GRGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "ZORICA LUKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "ANTO JURIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "ERNA MIJATOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "ANTO LUKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "ZLATKO KOVAČEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "RADA MATIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "MARIO CVITKUŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "ANICA GRGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "ZORAN BANOVIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "ZDRAVKO JURIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "KATA JOKIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 32,
+       "name": "IVICA PEJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 33,
+       "name": "SMILJA ANDRIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 34,
+       "name": "IVAN PAVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 35,
+       "name": "GORAN STOJAK",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 36,
+       "name": "VERONIKA PRANJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 37,
+       "name": "DARIO ĐORDIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 38,
+       "name": "MARTINA CRVENKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 39,
+       "name": "IGOR ANĐIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00008",
+     "name": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "DŽEVAD HADŽIĆ",
+       "stood": 3,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "MIRELA MEMIĆ",
+       "stood": 5,
+       "won": 3,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "SLAĐAN ILIĆ",
+       "stood": 5,
+       "won": 3,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "VAHIDIN SMAJLOVIĆ",
+       "stood": 4,
+       "won": 3,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "AZRA LJALJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "ADEL JUKAN",
+       "stood": 5,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "RADOJKA STOJAK",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "OMER BEŠIROVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "EMIRA KARIĆ",
+       "stood": 5,
+       "won": 3,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "NISVET SEJDINOVIĆ",
+       "stood": 6,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "SVJETLANA KAKEŠ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "NEDŽAD UZEJROVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "DANIJELA AVDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "ADIS KOVČIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "EMIR KAVAZOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "VESNA HUSIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "NUSMIR MEKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "NAĐIJA SINANOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "ERVIN BARAKOVIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "ELDAR GLUHIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "AJLA BEŠIROVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "ZLATAN HODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "TIJANA LUKIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "EDIS KEŠETOVIĆ",
+       "stood": 4,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "HARIS ULJIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "FATIMA HALILOVIĆ-TERZIMEHIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "IZUDIN SUBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "AMRA HASIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "BEKIR FERHATBEGOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "MAHIR ŠMIGALOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "JASMINA MAHOVKIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 32,
+       "name": "DUŠKA TARADE",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 33,
+       "name": "AMIRA BULJUBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 34,
+       "name": "DAMIR ĐONLIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 35,
+       "name": "HASAN KREKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 36,
+       "name": "ALMA AVDIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 37,
+       "name": "KASIM SALIHOVIĆ",
+       "stood": 4,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 38,
+       "name": "SAMRA ALIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 39,
+       "name": "ALEN MEŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 40,
+       "name": "ISMET NASIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00515",
+     "name": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "ПРЕДРАГ ЛАЗИЋ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "МИЛА ТАНИЋ",
+       "stood": 8,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03191",
+     "name": "SNAGA NARODA",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "ŠAHBAZ LAPANDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "ESANA KAVAZBAŠIĆ-HUSKANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "SENAD OKANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "MEVLUDIN BABAJIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "ARNELA HAMZIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "NERMIN MRKALJEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "MIRNES GULAM",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "ADNA BABAJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "ALVIRA LJUBIJANKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "ŠEFIK BAJRIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "MIDHETA BRIGIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "ADEM MUJKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "ŠEJLA DELIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "HUSEJN HRVAT",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "HARIS SKEJIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "AMIRA BAJRIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "MEVLUDIN ŠKRIPIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "VESNA AGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "MUSTAFA ČAJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "EKREM SULJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "RASIMA SMAILOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "RAMO DELIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "AMRA ŠEHIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "AMAR LAPANDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "NAIDA KOVAČEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "MURADIF KARIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "LEJLA AGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "IBRAHIM NUMANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "ELVIR LAPANDIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "ASMIR BABIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "DAMIRA MEKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "03508",
+     "name": "CRVENE LINIJE",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "AMER BOŠNJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "ADELA ALTUMBABIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "DAMIR H. SELIMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "EDIS VRTAGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "MELISA LOVRIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "ANES ADANALIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "ALEMA KUJRAKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "BORIS ŠURIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "AZRA ADANALIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "MUSTAFA KUJRAKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "SABIRA FERIZOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "ERVIN MEHMEDOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "01702",
+     "name": "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "ЈАСМИН ЛИПЈАНКИЋ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00769",
+     "name": "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "VEDRANA ANDRIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "TK203-NONE-2",
+     "name": "BH ZELENI, BPS-SEFER HALILOVIĆ, TUZLANSKA ALTERNATIVA",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "JASMIN HANDŽIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "AMIRA MALKOČEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "MIRZA SAKIĆ",
+       "stood": 7,
+       "won": 3,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "ADMIR HASANBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "SAMRA MUJKANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "MIRSAD GLUHIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "DAMIR ĐULOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "JASMINA MUSTAČEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "RAZIJA HODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "ELMIR TUKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "AMELA ŠEHIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "AGAN DELIBAJRIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "KANITA ZAKETOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "AMIR MUSTAČEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "ASJA ALJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "IBRAHIM BEĆIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "HASIB HIRKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "AJNA MEŠANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "MIRSAD ZONIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "MUHIDIN MEHANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "ADISA BARIŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "MIRZA AHMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "RAJFA HODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "ELDAR DURAKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "KENAN ČELIKOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "AIDA SULJANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "SAMIR AHMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "ADISA ŠAHINAGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "ZLATKO MILOSAVLJEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "ALSAD SAKIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "MEDINA HUSEJNOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 32,
+       "name": "MIRZA ŠLJIVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 33,
+       "name": "ELVIRA REDŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 34,
+       "name": "MEHMED BEČIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 35,
+       "name": "MIHRET KAVAZOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 36,
+       "name": "MIRNESA PALAVRIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 37,
+       "name": "MUHAMMED MAHMUTOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 38,
+       "name": "NERMINA RAMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 39,
+       "name": "ADO TRUMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 40,
+       "name": "IBRAHIM DAUTOVIĆ",
+       "stood": 8,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00036",
+     "name": "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "MIRNES AJANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "MARIZELA SENKIĆ",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "DANIJEL SENKIĆ",
+       "stood": 8,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "AMRA DORIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "MUAMER DEDIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "ALMA ZONIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "FADIL MEŠIĆ",
+       "stood": 8,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "ARMIN HERCEGOVAC",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "ILMA HAJDAREVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "SLAVICA TOMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "IZUDIN MEDENJAKOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "JASMINKA ZONIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "MARKO PRANJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "ASEF DORIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "BEATRISA ČELIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "ALMIN JUSUFOVIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "ALMERINA BEGOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "MERIS MEMIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "SALIH GUŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "SANDRA JUSUFOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "MEHAN SAKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "ELVIR ŠABIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "MIRSADA TERZIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "MEHMEDALIJA DŽAFIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "MAIDA BEĆAR",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "RASIM MUJČINOVIĆ",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "MUHAMED BEĆAR",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "ASMIRA STANKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "MEHMED KUNOSIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "AMELA SALKIČIĆ",
+       "stood": 3,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "NEDŽAD ZONIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 32,
+       "name": "MUFID MEHANOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "01182",
+     "name": "SBB - FAHRUDIN RADONČIĆ",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "ELVIR SALIHOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "ZUMRA BEGIĆ",
+       "stood": 4,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "EDIS TRUMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "AMIR HODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "INDIRA HAMZIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "HASAN KAVAZOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "SAMIRA MAZALOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "EMIR SALIHOVIĆ",
+       "stood": 2,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "JASNA MUJANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "MEHMED OMIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "DIJANA HUSKANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "MIRHAD OMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "BELMA DELIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "ALDIN DELIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "EDIN KURTIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "IRMA MULAHAMZIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "IBRAHIM HADŽIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "AMNELA LUKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "EDIM ŠARIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "SALIH SELIMBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "IRNA KADIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "ARMIN OKANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "SEMINA BRČANINOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "EDIN SELIMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "MURIS MUJKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "ARNELA DŽINIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "EMIR SMAJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "EMINA RIZVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "EDIN BEŠIĆ",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2016,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "MURIS HUSIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "MURISA SIOČIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 32,
+       "name": "ELVIR KASUMOVIĆ",
+       "stood": 5,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 33,
+       "name": "NEJLA AVDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 34,
+       "name": "ADNAN ŠKALJIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 35,
+       "name": "NEDŽAD SAKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 36,
+       "name": "ŽELJKA LUKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 37,
+       "name": "MAHIR KOVAČEVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 38,
+       "name": "JASMIN DŽINDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 39,
+       "name": "SADŽIDA KADIRIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 40,
+       "name": "NEDŽAD JAŠARAGIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      }
+     ]
+    },
+    {
+     "code": "00004",
+     "name": "STRANKA ZA BOSNU I HERCEGOVINU",
+     "candidates": [
+      {
+       "pos": 1,
+       "name": "MIRNES GUŠIĆ",
+       "stood": 6,
+       "won": 3,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 2,
+       "name": "MIRNESA ŠEĆIĆ",
+       "stood": 4,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 3,
+       "name": "ŽARKO VUJOVIĆ",
+       "stood": 5,
+       "won": 2,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2008,
+       "last": 2026
+      },
+      {
+       "pos": 4,
+       "name": "AMEL ILJAZOVIĆ",
+       "stood": 3,
+       "won": 1,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 5,
+       "name": "EDIBA TOKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 6,
+       "name": "ESAD BRČANINOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 7,
+       "name": "LEJLA BALUKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 8,
+       "name": "ENVER ISLAMOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 9,
+       "name": "DRAGANA PANTIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 10,
+       "name": "MIRZA KURTIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 11,
+       "name": "MELISA OSMIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 12,
+       "name": "NEDŽAD HODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 13,
+       "name": "MIRELA OSMIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 14,
+       "name": "SEAD KURALIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 15,
+       "name": "MIRZA HRNČIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 16,
+       "name": "ZERINA HASANOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 17,
+       "name": "OMER HALILKOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 18,
+       "name": "ENISA BRČANINOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 19,
+       "name": "DŽEVAD ZUKIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 20,
+       "name": "NEDIM SELIMOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 21,
+       "name": "ARMELINA AHMETOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 22,
+       "name": "MUSTAFA MEŠKOVIĆ",
+       "stood": 7,
+       "won": 3,
+       "office": true,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2006,
+       "last": 2026
+      },
+      {
+       "pos": 23,
+       "name": "NEJIRA ARAPOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 24,
+       "name": "IRHAD MEŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 25,
+       "name": "ERVIN ALIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      },
+      {
+       "pos": 26,
+       "name": "SANELA HUSEJNOVIĆ",
+       "stood": 7,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2012,
+       "last": 2026
+      },
+      {
+       "pos": 27,
+       "name": "SEMIR MEŠIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 28,
+       "name": "AIDA HOTOVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 29,
+       "name": "EMRAH SMAJLOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 30,
+       "name": "EDIN DŽAMBIĆ",
+       "stood": 5,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2018,
+       "last": 2026
+      },
+      {
+       "pos": 31,
+       "name": "SELMA BULJUBAŠIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 32,
+       "name": "ALEN TURBIĆ",
+       "stood": 4,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2020,
+       "last": 2026
+      },
+      {
+       "pos": 33,
+       "name": "DŽERALDINA MALKANOVIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 34,
+       "name": "NEGRIN AVDIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "unverified",
+       "first": 2024,
+       "last": 2026
+      },
+      {
+       "pos": 35,
+       "name": "ASMIN DEDIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 36,
+       "name": "EMINA HASIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 37,
+       "name": "SAMIR BIBEROVIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 38,
+       "name": "AMELA HODŽIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 39,
+       "name": "MEHMED ČANIĆ",
+       "stood": 1,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "single",
+       "first": 2026,
+       "last": 2026
+      },
+      {
+       "pos": 40,
+       "name": "AJDIN SOFTIĆ",
+       "stood": 2,
+       "won": 0,
+       "office": false,
+       "bio": false,
+       "confidence": "probable",
+       "first": 2022,
+       "last": 2026
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "churn": {
+  "psbih-5a": {
+   "m22": 7,
+   "kept_18_22": 1,
+   "running_same_race": 4,
+   "moved_up": [
+    "NIHAD OMEROVIĆ"
+   ],
+   "gone": [
+    "DENIJAL TULUMOVIĆ",
+    "MATIĆ SLAVKO"
+   ]
+  },
+  "pfbih-j3": {
+   "m22": 9,
+   "kept_18_22": 2,
+   "running_same_race": 2,
+   "moved_up": [
+    "AZRA OKIĆ",
+    "FAHRUDIN SKOPLJAK",
+    "MAHIR MEŠALIĆ"
+   ],
+   "gone": [
+    "AZMIR HUSIĆ",
+    "DAJANA ČOLIĆ",
+    "HODŽIĆ KADRIJA",
+    "MARINKOVIĆ-LEPIĆ MIRJANA"
+   ]
+  },
+  "tk": {
+   "m22": 35,
+   "kept_18_22": 20,
+   "running_same_race": 20,
+   "moved_up": [
+    "AMIR HASIČEVIĆ",
+    "BEŠIĆ HAMZA",
+    "BORIS KREŠIĆ",
+    "EDIN VIKALO",
+    "HAJDAREVIĆ IZEN",
+    "HALILAGIĆ IRFAN",
+    "IMŠIROVIĆ SANDRA",
+    "MUAMER ZUKIĆ",
+    "PETROVIĆ VEDRANA"
+   ],
+   "gone": [
+    "ALEN KARIĆ",
+    "ASMIR HASIĆ",
+    "BEGIĆ EMIR",
+    "FADIL KUDUMOVIĆ",
+    "HASIBA KURTIĆ",
+    "JASMINA LUGAVIĆ"
+   ]
+  }
+ }
+}
