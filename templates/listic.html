@@ -64,6 +64,11 @@
 </details>
 <span class="small mut">Tvrdnje stranke, nisu provjerene. {% if l.party_href %}<a href="{{ l.party_href }}">Izvori →</a>{% endif %}</span>
 </div>
+{% if l.p22 %}
+<p style="margin:.6rem 0 0"><b>Šta je bilo s obećanjima iz 2022:</b></p>
+{{ stack(l.p22.stack, l.p22.promises_2022 | length) }}
+<p class="small mut" style="margin:.2rem 0 0">{{ l.p22.promises_2022 | length }} provjerenih obećanja (Istinomjer i mediji). {% if l.party_href %}<a href="{{ l.party_href }}#p22">Koja i šta se desilo →</a>{% endif %}</p>
+{% endif %}
 {% endif %}
 {% if l.key_votes %}
 <p style="margin:.8rem 0 .2rem"><b>Kako su njihovi ljudi glasali u ovom parlamentu 2022–2026:</b></p>

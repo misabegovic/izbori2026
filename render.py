@@ -98,6 +98,22 @@ parties_api = json.load(open(D + "parties.json"))
 programs = json.load(open(D + "programs_fbih.json")) + json.load(open(D + "programs_rs.json"))
 aliases = {k: v for k, v in json.load(open(D + "party_aliases.json")).items() if not k.startswith("_")}
 context = json.load(open(D + "context.json"))
+promises22 = {}
+for _f in ("promises2022_fbih.json", "promises2022_rs.json"):
+    if os.path.exists(D + _f):
+        for _p in json.load(open(D + _f)):
+            promises22[_p["program"]] = _p
+OUTCOME_CLS = {"ispunjeno": "c-za", "djelimično": "c-uz", "nije": "c-protiv", "ne može se ocijeniti": "c-od"}
+
+
+def p22_for(prog):
+    if not prog:
+        return None
+    p = promises22.get(prog["name"])
+    if not p:
+        return None
+    cnt = Counter(x["outcome"] for x in p["promises_2022"])
+    return {**p, "counts": cnt, "stack": [(k, cnt.get(k, 0), OUTCOME_CLS[k]) for k in ("ispunjeno", "djelimično", "nije", "ne može se ocijeniti")]}
 speeches = json.load(open(D + "speeches.json")) if os.path.exists(D + "speeches.json") else {}
 ecitizen = json.load(open(D + "ecitizen.json")) if os.path.exists(D + "ecitizen.json") else {"cities": {}}
 
@@ -351,7 +367,7 @@ def party_summary(pk):
             funding = {"year": 2024, "paid": paid, "rows": sorted(p["funding"], key=lambda f: -(f.get("paid") or 0))[:6]}
     return {"key": pk, "name": list_display.get(pk, pk), "n": n, "won": won, "switch": switch, "new": new, "office": office,
             "mps": mps_u, "votes22": votes22, "votes18": votes18, "seats22": seats22, "units_in": units_in, "funding": funding,
-            "program": program_for(list_display.get(pk, "")), "key_votes": party_key_votes(pk),
+            "program": program_for(list_display.get(pk, "")), "p22": p22_for(program_for(list_display.get(pk, ""))), "key_votes": party_key_votes(pk),
             "href": f"stranka-{re.sub(r'[^a-z0-9]+', '-', fold(pk.replace('prog:', ''))).strip('-')}.html"}
 
 
@@ -545,7 +561,7 @@ for uk, u in units.items():
                       "new": sum(1 for c in cands if c["stood"] == 1), "office": sum(1 for c in cands if c["office"]),
                       "mps": sum(1 for c in cands if c["has_record"]),
                       "votes22": (hist22.get(pi) or {}).get("votes"), "votes18": (hist18.get(pi) or {}).get("votes"),
-                      "seats22": seats22.get(pi, 0), "program": prog, "party_href": party_href(l["name"]),
+                      "seats22": seats22.get(pi, 0), "program": prog, "p22": p22_for(prog), "party_href": party_href(l["name"]),
                       "key_votes": recent_kv})
     total22 = sum((h.get("votes") or 0) for h in u.get("party_history", []) if h["year"] == 2022)
     top22 = sorted([h for h in u.get("party_history", []) if h["year"] == 2022], key=lambda h: -(h.get("votes") or 0))[:5]

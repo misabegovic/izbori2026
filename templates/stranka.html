@@ -32,6 +32,15 @@
 <p class="mut">Za ovu listu nismo našli objavljen program ili obećanja za 2026.</p>
 {% endif %}
 
+{% if p.p22 %}
+<h2 id="p22">Prošli put obećali, i šta se desilo</h2>
+<p class="mut small">Obećanja iz kampanje 2022 i ishod do septembra 2026, po Istinomjeru i medijima (izvor uz svako). {{ p.p22.in_power_2022_2026 }}</p>
+{{ stack(p.p22.stack, p.p22.promises_2022 | length) }}
+{% for x in p.p22.promises_2022 %}
+<div class="kd"><span class="vote {{ {'ispunjeno':'v-za','djelimično':'v-uz','nije':'v-protiv','ne može se ocijeniti':'v-odsutan'}[x.outcome] }}">{{ x.outcome }}</span> <span class="t">{{ x.promise }}</span><br><span class="small">{{ x.what_happened }}</span> <span class="src">{% for s in x.sources %}<a href="{{ s }}">izvor{{ loop.index if x.sources | length > 1 else '' }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</span></div>
+{% endfor %}
+{% if p.p22.note %}<p class="small mut">{{ p.p22.note }}</p>{% endif %}
+{% endif %}
 <h2>Kako su njihovi poslanici glasali 2022–2026</h2>
 {% if p.key_votes %}
 <p class="mut small">Kako su ljudi s ovih listi glasali kao poslanici 2022–2026 o najvažnijim odlukama. ZA/PROTIV = kako je većina njih glasala; „uzdržan” = ni za ni protiv. Filtriraj po temi:</p>
