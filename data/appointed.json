@@ -527,6 +527,18 @@
    "src": "https://parlamentfbih.gov.ba/v2/bs/stranica.php?idstranica=6"
   }
  ],
+ "p.oi2026-4.446": [
+  {
+   "institution": "Dom naroda Parlamenta Federacije BiH",
+   "position": "delegat",
+   "role": "delegat, BOŠNJACI",
+   "party": "NES",
+   "club": null,
+   "from": null,
+   "to": null,
+   "src": "https://parlamentfbih.gov.ba/v2/bs/stranica.php?idstranica=6"
+  }
+ ],
  "p.2081-9.12835": [
   {
    "institution": "Dom naroda Parlamenta Federacije BiH",
@@ -545,6 +557,18 @@
    "position": "delegat",
    "role": "delegat, SRBI",
    "party": "SDA",
+   "club": null,
+   "from": null,
+   "to": null,
+   "src": "https://parlamentfbih.gov.ba/v2/bs/stranica.php?idstranica=6"
+  }
+ ],
+ "p.oi2026-4.1236": [
+  {
+   "institution": "Dom naroda Parlamenta Federacije BiH",
+   "position": "delegat",
+   "role": "delegat, HRVATI",
+   "party": "HDZ BiH",
    "club": null,
    "from": null,
    "to": null,
@@ -621,6 +645,18 @@
    "from": null,
    "to": null,
    "src": "https://www.parlament.ba/delegate/detail/614"
+  }
+ ],
+ "p.25-2.142": [
+  {
+   "institution": "Dom naroda Parlamentarne skupštine BiH",
+   "position": "delegat",
+   "role": "delegat",
+   "party": "HDZ 1990",
+   "club": "Klub hrvatskog naroda",
+   "from": null,
+   "to": null,
+   "src": "https://www.parlament.ba/delegate/detail/618"
   }
  ],
  "p.25-2.232": [
@@ -713,6 +749,18 @@
    "position": "delegat",
    "role": "delegat, БОШЊАЦИ",
    "party": "СДА",
+   "club": "БОШЊАЦИ",
+   "from": null,
+   "to": null,
+   "src": "https://www.vijecenarodars.net/index.php/sastav-vijeca/delegati-kluba-iz-reda-srpskog-naroda"
+  }
+ ],
+ "p.32-6.308": [
+  {
+   "institution": "Vijeće naroda Republike Srpske",
+   "position": "delegat",
+   "role": "delegat, БОШЊАЦИ",
+   "party": "СДП БиХ",
    "club": "БОШЊАЦИ",
    "from": null,
    "to": null,
@@ -839,6 +887,30 @@
    "src": "https://www.vladahbz.com/vlada/"
   }
  ],
+ "p.2061-4.1260": [
+  {
+   "institution": "Vlada Hercegbosanske županije",
+   "position": "ministar",
+   "role": "Ministar graditeljstva, obnove, prostornog uređenja i zaštite okoliša",
+   "party": null,
+   "club": null,
+   "from": null,
+   "to": null,
+   "src": "https://www.vladahbz.com/vlada/"
+  }
+ ],
+ "p.oi2026-2.400": [
+  {
+   "institution": "Vlada Županije Posavske",
+   "position": "ministar",
+   "role": "MINISTARSTVO PROSVJETE, ZNANOSTI, KULTURE I SPORTA",
+   "party": null,
+   "club": null,
+   "from": null,
+   "to": null,
+   "src": "https://www.zupanijaposavska.ba/clanovi-vlade-zupanije-posavske/"
+  }
+ ],
  "p.2121-9.3937": [
   {
    "institution": "Vlada Županije Posavske",
@@ -959,6 +1031,18 @@
    "src": "https://vladausk.ba/v4/sadrzaj/sastav/6"
   }
  ],
+ "p.25-4.100": [
+  {
+   "institution": "Vlada Unsko-sanskog kantona",
+   "position": "ministar",
+   "role": "ministar za pitanja boraca i ratnih vojnih invalida",
+   "party": null,
+   "club": null,
+   "from": null,
+   "to": null,
+   "src": "https://vladausk.ba/v4/sadrzaj/sastav/6"
+  }
+ ],
  "p.25-7.79": [
   {
    "institution": "Vlada Unsko-sanskog kantona",
@@ -983,6 +1067,18 @@
    "src": "https://www.vladazzh.gov.ba/detaljno.aspx?id=52"
   }
  ],
+ "p.32-4.1051": [
+  {
+   "institution": "Vlada Županije Zapadnohercegovačke",
+   "position": "ministar",
+   "role": "ministar prostornog uređenja,",
+   "party": null,
+   "club": null,
+   "from": null,
+   "to": null,
+   "src": "https://www.vladazzh.gov.ba/detaljno.aspx?id=52"
+  }
+ ],
  "p.2081-9.21258": [
   {
    "institution": "Vlada Županije Zapadnohercegovačke",
@@ -1000,6 +1096,18 @@
    "institution": "Vlada Zeničko-dobojskog kantona",
    "position": "ministar",
    "role": "Ministar Ministarstva za prostorno uređenje, promet i komunikacije i zaštitu okoline",
+   "party": null,
+   "club": null,
+   "from": null,
+   "to": null,
+   "src": "https://zdk.ba/clanovi-vlade-kantona"
+  }
+ ],
+ "p.25-7.1602": [
+  {
+   "institution": "Vlada Zeničko-dobojskog kantona",
+   "position": "ministar",
+   "role": "Ministar Ministarstva za rad, socijalnu politiku i izbjeglice",
    "party": null,
    "club": null,
    "from": null,

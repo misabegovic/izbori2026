@@ -29,6 +29,7 @@ p { margin:.4rem 0 .8rem; }
 .b.new { background:#ececec; color:#444; }
 .b.filler { background:#f3e1e1; color:#7a1f1f; }
 .b.record { background:#e8ddf7; color:#4a2a80; }
+.b.funkcija { background:#d9e9f7; color:#12456e; }
 .b.warn { background:#fff3cd; color:#664d03; }
 ul.people { list-style:none; padding:0; margin:.4rem 0; }
 li.person { display:flex; gap:.5rem; padding:.45rem 0; border-top:1px solid var(--line); align-items:baseline; flex-wrap:wrap; }
@@ -114,3 +115,12 @@ table.cal .small { font-size:.72rem; }
 .calwrap table.cal { min-width:520px; margin:0; }
 table.cal td, table.cal th { white-space:nowrap; }
 table.cal th:first-child, table.cal td:first-child { white-space:normal; min-width:150px; }
+
+/* Red koji je na profil stigao spajanjem dva zapisa o istoj osobi, i prijedlozi koje
+   nismo prihvatili. Oboje mora da se vidi da nije isto što i ostatak stranice. */
+.merged { border-left:3px solid #c9b98a; padding-left:.5rem; }
+.tagspoj { background:#f0ece3; color:#5a4a28; font-size:.72rem; border-radius:3px; padding:.05rem .3rem; margin-left:.3rem; }
+.fn { padding:.35rem 0; border-top:1px solid var(--line); }
+.fn:first-of-type { border-top:0; }
+.fn b { font-weight:600; }
+.fn .when { color:var(--mut); font-size:.82rem; }

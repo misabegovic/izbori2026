@@ -1,6 +1,9 @@
 {
- "generated": "2026-09-16T12:48:57.889444+00:00",
+ "generated": "2026-09-16T15:15:37.970611+00:00",
  "candidacies_seen": 173752,
+ "bridges_seen": 28034,
+ "bridges_applied": 9462,
  "people_on_ballots": 7028,
- "people_with_history": 2882
+ "people_with_history": 4113,
+ "people_gained_by_merge": 1875
 }

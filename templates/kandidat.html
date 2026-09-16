@@ -11,6 +11,18 @@
 <ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for r in runs %}<li>{% if r.chance %}{{ chance(r.chance, true) }}{% endif %}<a href="{{ r.href }}">{{ RACE[r.unit.race].short }}{{ r.where }}</a> — {% if r.party_href %}<a href="{{ r.party_href }}">{{ r.list | ptitle }}</a>{% else %}{{ r.list | ptitle }}{% endif %}{% if r.pos %}, {{ r.pos }}. na listi{% endif %}</li>{% endfor %}</ul>
 </div>
 
+{% if p.office_rows %}
+<h2>Funkcije koje izborni zapis ne pokriva</h2>
+<div class="card">
+<p class="small mut" style="margin-top:0">CIK objavljuje kandidature i ništa više. Ministre, delegate u domovima naroda, entitetske premijere i predsjednike stranaka niko ne bira na listiću, pa ih izborni zapis ne zna. Ne zna ni opće izbore 2010. i 2014. — <a href="metoda.html#rupe">nisu objavljeni nigdje</a>. Ovo je odatle:</p>
+{% for f in p.office_terms %}
+<div class="fn"><b>{{ f.title }}</b>{% if f.of %}, {{ f.of }}{% endif %}{% if f.district %}, {{ f.district }}{% endif %}<br>
+<span class="when">{{ f.terms | join(', ') if f.terms else 'bez datuma' }}{% if f.party %} · {{ f.party }}{% endif %}</span></div>
+{% endfor %}
+<p class="src" style="margin-top:.5rem">Izvor: <a href="{{ p.office_rows.url }}">Wikidata, {{ p.office_rows.qid }}</a> (CC0){% if p.office_rows.wiki %} · <a href="{{ p.office_rows.wiki }}">Wikipedia</a>{% endif %}. Nije CIK i ne ulazi ni u jednu brojku na ovoj stranici. Spojeno s listićem {{ 'preko Mashinerijinog zapisa o osobi' if p.office_rows.link == 'mashinerija' else ('po imenu' if p.office_rows.link == 'ime' else 'po funkciji koju drži sada') }}.</p>
+</div>
+{% endif %}
+
 {% if weight %}
 <h2>Ide li tvoj glas nekud?</h2>
 <div class="card">
@@ -70,7 +82,8 @@
 {% elif p.stood == 1 %}
 <div class="card">
 <h2 style="margin-top:0">O ovoj osobi nema izbornog zapisa</h2>
-<p>Prvi put je na listiću, pa nema ranijih glasova, mandata ni glasanja koje bismo pokazali. To nije zamjerka: svi su nekad bili novi. Ali znači da se o njoj, iz javnih izvora, ne može reći ništa osim gdje je na listi.</p>
+<p>Prvi put je na listiću pod ovim zapisom, pa nema ranijih glasova, mandata ni glasanja koje bismo pokazali. To nije zamjerka: svi su nekad bili novi. Ali znači da se o njoj, iz javnih izvora, ne može reći ništa osim gdje je na listi.</p>
+{% if p.maybe %}<p><b>Ali pod istim imenom postoji {{ p.maybe | length }} ranij{{ 'a kandidatura' if p.maybe | length == 1 else ('e kandidature' if p.maybe | length < 5 else 'ih kandidatura') }}{% if p.maybe | selectattr('elected') | list %}, i {{ 'u njoj' if p.maybe | length == 1 else 'među njima' }} ima i osvojenih mandata{% endif %}.</b> Ne možemo dokazati da je isti čovjek, pa to ne ubrajamo — ali možeš <a href="#mozda">pogledati o čemu se radi</a>.</p>{% endif %}
 <p class="small mut">Ako znaš nešto što je javno zapisano i provjerljivo, <a href="https://github.com/misabegovic/izbori2026/issues">javi nam</a>.</p>
 </div>
 {% endif %}
@@ -176,9 +189,20 @@
 <div class="card">
 <div class="d3 d3-years" data-d3='{{ tl_json | safe }}'><span class="fb">{% for t in tl %}{{ t.y }}{% if t.elected %} (izabran/a){% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</span></div>
 {% for t in tl %}
-<div class="kd" style="padding:.35rem 0"><b>{{ t.y }}</b> — {{ t.lvl }}{% if t.area %}, {{ t.area | area }}{% endif %}{% if t.party %}, <i>{{ t.party | ptitle_raw }}</i>{% endif %}{% if t.pos %}, {{ t.pos }}. na listi{% endif %}{% if t.votes %}, {{ t.votes | num }} glasova{% endif %} — {% if t.elected %}<b>izabran/a</b>{% else %}nije izabran/a{% endif %}</div>
+<div class="kd{% if t.via_merge %} merged{% endif %}" style="padding:.35rem 0"><b>{{ t.y }}</b> — {{ t.lvl }}{% if t.area %}, {{ t.area | area }}{% endif %}{% if t.party %}, <i>{{ t.party | ptitle_raw }}</i>{% endif %}{% if t.pos %}, {{ t.pos }}. na listi{% endif %}{% if t.votes %}, {{ t.votes | num }} glasova{% endif %} — {% if t.elected %}<b>izabran/a</b>{% else %}nije izabran/a{% endif %}{% if t.via_merge %}<span class="tagspoj" title="CIK ovu kandidaturu vodi pod posebnim zapisom o osobi. Spojili smo je s ovim profilom; pravilo je objašnjeno u metodi.">spojeno</span>{% endif %}</div>
 {% endfor %}
+{% if p.merged %}<p class="small mut" style="margin-top:.5rem">Redovi označeni s <span class="tagspoj">spojeno</span> dolaze iz zapisa koji CIK vodi odvojeno. Nijedan izvor u BiH ne objavljuje identifikator osobe, pa je spajanje naš zaključak — <a href="metoda.html#spajanje">po kojim pravilima, piše u metodi</a>.</p>{% endif %}
 </div>
+{% endif %}
+
+{% if p.maybe %}
+<details class="card" id="mozda"{% if p.stood == 1 %} open{% endif %}>
+<summary>Možda je ista osoba ({{ p.maybe | length }})</summary>
+<p class="small mut" style="margin:.4rem 0">Kandidature pod istim imenom koje <b>nismo</b> pripisali ovoj osobi: signali nisu dovoljni da se tvrdi da je isti čovjek. Ne ulaze ni u jednu brojku na ovoj stranici. Ako prepoznaš osobu, zapis je na Mashineriji.</p>
+{% for m in p.maybe %}
+<div class="kd" style="padding:.3rem 0"><span class="small"><b>{{ m.y }}</b> — {{ m.lvl }}{% if m.area %}, {{ m.area | area }}{% endif %}{% if m.party %}, <i>{{ m.party | ptitle_raw }}</i>{% endif %}{% if m.votes %}, {{ m.votes | num }} glasova{% endif %} — {% if m.elected %}izabran/a{% else %}nije izabran/a{% endif %}</span>{% if m.url %} <span class="src"><a href="{{ m.url }}">zapis</a></span>{% endif %}</div>
+{% endfor %}
+</details>
 {% endif %}
 
 {% if prof.bio or assets %}
