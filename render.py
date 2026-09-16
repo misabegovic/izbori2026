@@ -227,6 +227,8 @@ env.filters["km"] = km
 # Templates that print a person's name ask this for the link; it answers None when that
 # person has no page, so a name is never a link to a 404.
 env.globals["chref"] = lambda pid: cand_href(pid)
+env.globals["phref"] = lambda name: party_href(name)
+env.globals["ohref"] = lambda area: area_href(area)
 SRC_NAME = {"cin": "CIN, imovinapoliticara.cin.ba", "pd.fbih.karton": "Parlament FBiH", "psbih.detail": "parlament.ba", "cik": "CIK", "nsrs": "NSRS"}
 env.filters["srcname"] = lambda s: SRC_NAME.get(s or "", s or "")
 env.filters["area"] = lambda a: nice_area(a)
@@ -707,6 +709,16 @@ for pk, mem in list_members.items():
 def party_href(list_name):
     pk = party_identity(list_name)
     return party_pages[pk]["href"] if pk in party_pages else None
+
+
+# home_key() already exists to match CIK's area spellings ("GRAD MOSTAR", "* STOLAC") against
+# our municipality list, so a timeline entry can point at the place it happened in.
+MUNI_PAGE = {home_key(m["name"]): f"opcina-{m['slug']}.html" for m in municipalities}
+
+
+def area_href(area):
+    """A CIK area string -> that municipality's page, or nothing when it is not one."""
+    return MUNI_PAGE.get(home_key(area)) if area else None
 
 
 # --- the projection (data/projection.json, written by project.py)
@@ -1365,6 +1377,7 @@ if PROJ:
                         cp = PROJ_CAND.get(c["pid"] or "") or {}
                         ranked.append({**c, "lista": l["lista"],
                                        "unit_title": pu_["title"] if len(uks) > 1 else None,
+                                       "unit_href": unit_href(race, pu_["area"]),
                                        "href": cand_href(c.get("pid")),
                                        "komp": (cp.get("komp_lista") or {}).get("mjesto")})
             ranked.sort(key=lambda c: -c["p"])

@@ -1,0 +1,22 @@
+{# A name is a dead end unless it points at the page that explains it. These two decide
+   whether a link exists before writing one: phref() and chref() answer None when the party
+   or the person has no page, and then the name prints as plain text. Never link blind —
+   every party on a ballot has a name, only some have a page. #}
+{% macro plink(name) -%}
+{%- set h = phref(name) -%}
+{%- if h %}<a href="{{ h }}">{{ name | ptitle }}</a>{% else %}{{ name | ptitle }}{% endif -%}
+{%- endmacro %}
+{% macro clink(pid, name) -%}
+{%- set h = chref(pid) -%}
+{%- if h %}<a href="{{ h }}">{{ name | nice }}</a>{% else %}{{ name | nice }}{% endif -%}
+{%- endmacro %}
+{# Same idea for a party name printed the way CIK printed it that year: the text stays the
+   historical one, the link goes to what the site knows about that lineage. #}
+{% macro plinkraw(name) -%}
+{%- set h = phref(name) -%}
+{%- if h %}<a href="{{ h }}">{{ name | ptitle_raw }}</a>{% else %}{{ name | ptitle_raw }}{% endif -%}
+{%- endmacro %}
+{% macro olink(area) -%}
+{%- set h = ohref(area) -%}
+{%- if h %}<a href="{{ h }}">{{ area | area }}</a>{% else %}{{ area | area }}{% endif -%}
+{%- endmacro %}

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Šta će najvjerovatnije biti — Izbori 2026{% endblock %}
+{% from "_links.html" import plink %}
 {% block content %}
 <p class="mut"><a href="index.html">← početna</a></p>
 <h1>Šta će najvjerovatnije biti</h1>
@@ -17,7 +18,7 @@
 <table class="cal proj"><thead><tr><th>Lista</th><th>Mandata</th><th>Raspon</th><th>Udio glasova</th></tr></thead><tbody>
 {% for r in h.rows %}
 <tr{% if loop.index0 >= 8 %} class="hid"{% endif %}>
-<td class="ln">{{ r.lista | ptitle }}</td>
+<td class="ln">{{ plink(r.lista) }}</td>
 <td class="num"><b>{{ r.mandati | tdec }}</b></td>
 <td class="rg"><span class="rng" title="U 9 od 10 simulacija između {{ r.p05 }} i {{ r.p95 }}"><i style="left:{{ r.lo_pct }}%;width:{{ r.w_pct }}%"></i><u style="left:{{ r.mid_pct }}%"></u></span> <span class="small mut">{{ r.p05 }}–{{ r.p95 }}</span></td>
 <td class="num small">{{ r.udio | tdec }}%{% if r.jedinica and r.jedinica < h.units_n %}<span class="mut" title="Ova lista izlazi samo u {{ r.jedinica }} od {{ h.units_n }} izbornih jedinica; procenat je od glasova tamo gdje izlazi.">*</span>{% endif %}</td>
@@ -29,7 +30,7 @@
 {% if h.koalicije %}
 <p class="small mut" style="margin-bottom:.2rem"><b>Ko sam ima većinu od {{ h.koalicije.vecina }}:</b>
 {% set solo = h.koalicije.kombinacije | selectattr('n', 'equalto', 1) | list %}
-{% if solo and solo[0].p >= 1 %}{% for c in solo %}{{ c.liste[0] | ptitle }} u {{ c.p | dec }}% simulacija{% if not loop.last %}, {% endif %}{% endfor %}.{% else %}nijedna lista sama ne dođe do većine ni u jednoj simulaciji.{% endif %}</p>
+{% if solo and solo[0].p >= 1 %}{% for c in solo %}{{ plink(c.liste[0]) }} u {{ c.p | dec }}% simulacija{% if not loop.last %}, {% endif %}{% endfor %}.{% else %}nijedna lista sama ne dođe do većine ni u jednoj simulaciji.{% endif %}</p>
 <p class="small mut" style="margin-top:.2rem">Najmanje lista koje treba za većinu: {{ h.najmanje | join(', ') }}.</p>
 {% endif %}
 {% if h.href %}<p><a class="btn" href="{{ h.href }}">Ko ulazi poimenično →</a></p>{% endif %}
@@ -43,8 +44,8 @@
 <table class="cal proj"><thead><tr><th>Skupština</th><th>Mjesta</th><th>Najjača lista</th><th>Druga</th></tr></thead><tbody>
 {% for c in cantons %}
 <tr><td class="ln"><a href="{{ c.href }}">{{ c.title }}</a></td><td class="num">{{ c.seats }}</td>
-<td class="small">{{ c.first.lista | ptitle }} <b>{{ c.first.mandati | dec }}</b> <span class="mut">({{ c.first.p05 }}–{{ c.first.p95 }})</span></td>
-<td class="small">{% if c.second %}{{ c.second.lista | ptitle }} <b>{{ c.second.mandati | dec }}</b> <span class="mut">({{ c.second.p05 }}–{{ c.second.p95 }})</span>{% endif %}</td></tr>
+<td class="small">{{ plink(c.first.lista) }} <b>{{ c.first.mandati | dec }}</b> <span class="mut">({{ c.first.p05 }}–{{ c.first.p95 }})</span></td>
+<td class="small">{% if c.second %}{{ plink(c.second.lista) }} <b>{{ c.second.mandati | dec }}</b> <span class="mut">({{ c.second.p05 }}–{{ c.second.p95 }})</span>{% endif %}</td></tr>
 {% endfor %}
 </tbody></table>
 </div>
@@ -61,7 +62,7 @@
 <span class="pw{% if c.p_win >= 50 %} hi{% elif c.p_win >= 20 %} mid{% elif c.p_win >= 5 %} lo{% endif %}">{{ c.p_win | tdec }}%</span>
 <span class="pbody">
 {% if c.href %}<a class="pname" href="{{ c.href }}">{{ c.name | nice }}</a>{% else %}<span class="pname">{{ c.name | nice }}</span>{% endif %}
-<span class="pmeta">{{ c.list | ptitle }}</span>
+<span class="pmeta">{{ plink(c.list) }}</span>
 <span class="pmeta">{% if c.prev_self %}sam je 2022/2025. imao {{ c.prev_self | dec }}%{% elif c.prev_party %}stranka je zadnji put imala {{ c.prev_party | dec }}%, ali s drugim čovjekom{% elif c.party_proj %}stranka je u ovoj projekciji na {{ c.party_proj | dec }}%{% else %}nema s čim porediti{% endif %}{% if c.poll %} · anketa {{ c.poll | dec }}%{% endif %}</span>
 </span>
 </li>
