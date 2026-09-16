@@ -120,7 +120,8 @@ def history_for(prog):
     p = promises22.get(prog["name"])
     if p:
         cnt = Counter(x["outcome"] for x in p["promises_2022"])
-        rows.append({"mandate": "2022-2026", "in_power": p.get("in_power_2022_2026"), "tracked": len(p["promises_2022"]),
+        rated = cnt.get("ispunjeno", 0) + cnt.get("djelimično", 0) + cnt.get("nije", 0)
+        rows.append({"mandate": "2022-2026", "in_power": p.get("in_power_2022_2026"), "tracked": rated or None,
                      "fulfilled": cnt.get("ispunjeno", 0), "partial": cnt.get("djelimično", 0), "broken": cnt.get("nije", 0),
                      "examples": [], "sources": [], "confidence": p.get("confidence"), "note": "uzorak provjerenih obećanja, ne cijeli Istinomjerov skup"})
     rows.sort(key=lambda r: r["mandate"])

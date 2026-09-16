@@ -91,7 +91,7 @@
         });
         svg.append('text').attr('x', W).attr('y', y + 19).attr('text-anchor', 'end').attr('font-size', 12).attr('fill', MUT).text(Math.round(100 * r.f / t) + '%');
       } else {
-        svg.append('text').attr('x', x0 + 6).attr('y', y + 18).attr('font-size', 12).attr('fill', MUT).text('nema praćenih obećanja (opozicija ili nema podataka)');
+        svg.append('text').attr('x', x0 + 6).attr('y', y + 18).attr('font-size', 12).attr('fill', MUT).text('nema brojki po stranci za ovaj mandat');
       }
       var pw = svg.append('text').attr('x', x0).attr('y', y + 36).attr('font-size', 10.5).attr('fill', MUT).text(r.power);
       var n = pw.node(); while (n.getComputedTextLength() > w + 40 && n.textContent.length > 8) n.textContent = n.textContent.slice(0, -4) + '…';
