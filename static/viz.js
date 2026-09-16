@@ -123,7 +123,7 @@
       g.selectAll('circle').data(pts).enter().append('circle')
         .attr('cx', function (c) { return c.x; }).attr('cy', function (c) { return c.y; }).attr('r', 0)
         .attr('class', function (c) { return 'viz-dot' + (c.rec ? ' rec' : '') + (c.id === me ? ' me' : ''); })
-        .on('click', function (ev, c) { ev.stopPropagation(); show('<b>' + c.n + '</b><br><span class="mut small">' + lists[c.l] + ', ' + c.pos + '. na listi</span><br>' + cur.label + ': <b>' + cur.fmt(c[cur.k]) + '</b>' + (c.chw ? '<br>šansa za mandat: ' + c.chw : '') + (c.story ? '<br><span class="small">' + c.story + '</span>' : '') + (c.href ? '<br><a href="' + c.href + '">cijela priča →</a>' : ''), ev); })
+        .on('click', function (ev, c) { ev.stopPropagation(); show((c.img ? '<img class="av" src="' + c.img + '" alt=""> ' : '') + '<b>' + c.n + '</b><br><span class="mut small">' + lists[c.l] + ', ' + c.pos + '. na listi</span><br>' + cur.label + ': <b>' + cur.fmt(c[cur.k]) + '</b>' + (c.chw ? '<br>šansa za mandat: ' + c.chw : '') + (c.story ? '<br><span class="small">' + c.story + '</span>' : '') + (c.href ? '<br><a href="' + c.href + '">cijela priča →</a>' : ''), ev); })
         .transition().duration(400).attr('r', function (c) { return c.id === me ? 9 : rad; });
       if (me) { var m = pts.filter(function (c) { return c.id === me; })[0]; if (m) { var tx = Math.max(left + labelW + 40, Math.min(W - right - 40, m.x)); g.append('text').attr('x', tx).attr('y', m.y - 13).attr('text-anchor', 'middle').attr('class', 'viz-me').text('ovaj kandidat'); } }
     }

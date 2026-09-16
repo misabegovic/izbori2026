@@ -222,7 +222,9 @@ def person_view(c):
          "pos": c.get("pos"), "stood": stood, "won": won, "office": rec.get("isOfficeHolder") or c.get("office"),
          "parties": parties, "n_parties": len(parties), "confidence": rec.get("confidence") or c.get("confidence"),
          "has_record": pid in records, "has_page": bool(tl) or pid in records or bool(prof.get("bio")),
-         "won_rows": won_rows}
+         "won_rows": won_rows,
+         "img": f"lica/{prof['publicId']}.webp" if prof.get("portrait") and prof.get("publicId") and os.path.exists(f"static/lica/{prof['publicId']}.webp") else None,
+         "img_credit": (prof.get("portrait") or {}).get("credit")}
     badges = []
     if v["office"]:
         badges.append(("office", "sada na funkciji", "Trenutno drži izbornu funkciju."))
@@ -454,12 +456,13 @@ def unit_cands_json(u):
             r0 = (rec or [None])[-1] if rec else None
             out.append({"id": pid, "n": v["name"], "l": li, "pos": c.get("pos"), "s": v["stood"] or 0, "w": v["won"] or 0, "p": max(v["n_parties"], 1),
                         "v22": v22, "za": r0["za_pct"] if r0 else None, "pris": r0["prisustvo_pct"] if r0 else None, "rec": bool(rec),
-                        "story": v["story"], "href": f"kandidat-{v['slug']}.html" if v["has_page"] else None,
+                        "story": v["story"], "href": f"kandidat-{v['slug']}.html" if v["has_page"] else None, "img": v["img"],
                         "ch": chance[0] if chance else None, "chw": chance[1] if chance else None})
     return json.dumps({"lists": lists, "cands": out}, ensure_ascii=False, separators=(",", ":"))
 
 unit_json = {uk: unit_cands_json(u) for uk, u in units.items() if RACE[u["race"]]["kind"] == "list"}
 shutil.copy("static/viz.js", "dist/viz.js")
+shutil.copytree("static/lica", "dist/lica")
 
 # chamber averages for comparison on candidate pages
 CH_AVG = {}

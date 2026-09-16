@@ -14,6 +14,7 @@
 {% for l in lists %}
 {% for c in l.cands %}
 <div class="card">
+{% if c.img %}<img class="av big" src="{{ c.img }}" alt="">{% endif %}
 <h3>{% if c.has_page %}<a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</h3>
 <p class="mut" style="margin:0 0 .3rem">{% if l.party_href %}<a href="{{ l.party_href }}">{{ l.name | ptitle }}</a>{% else %}{{ l.name | ptitle }}{% endif %}</p>
 {% set cx = PRES_CTX.get(c.raw_name | lat) %}{% if cx %}<p><b>Ko je:</b> {{ cx.bio }}</p><p><b>Šta kaže:</b> {{ cx.says }} <a class="src" href="{{ cx.src }}">izvor</a></p>{% else %}<p>{{ c.story }}</p>

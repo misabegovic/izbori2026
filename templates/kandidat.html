@@ -2,6 +2,7 @@
 {% block title %}{{ p.name }} — Izbori 2026{% endblock %}
 {% block content %}
 <p class="mut"><a href="javascript:history.back()">← nazad</a> · <a href="index.html">početna</a></p>
+{% if p.img %}<img class="av big" src="{{ p.img }}" alt="{{ p.name }}, službena fotografija">{% endif %}
 <h1>{{ p.name }}</h1>
 <div>{% for b in p.badges %}{{ badge(b) }}{% endfor %}</div>
 <p class="lead" style="margin-top:.6rem">{{ p.story }}</p>
@@ -78,6 +79,7 @@
 <p class="small"><b>{{ 'CIK prijava' if src == 'cik' else src | upper }}:</b> {% for a in rows %}{{ a.kind }}{% if a.totalFening %} {{ a.totalFening | km }}{% endif %}{% if a.holdings and a.holdings > 1 %} ({{ a.holdings }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}</p>
 {% endfor %}
 {% endif %}
+{% if p.img %}<p class="src">Foto: {{ p.img_credit }} (službena fotografija, preko Mashinerije).</p>{% endif %}
 {% if prof.pageUrl %}<p class="src">Više: <a href="{{ prof.pageUrl }}">{{ prof.pageUrl }}</a></p>{% endif %}
 </div>
 {% endif %}

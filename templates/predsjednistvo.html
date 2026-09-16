@@ -2,6 +2,7 @@
 {% block title %}Predsjedništvo BiH i predsjednik RS — Izbori 2026{% endblock %}
 {% macro pc(c) %}
 <div class="card">
+{% if c.img %}<img class="av big" src="{{ c.img }}" alt="">{% endif %}
 <h3>{% if c.has_page %}<a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</h3>
 <p class="mut" style="margin:0 0 .3rem">{% if c.ctx %}{{ c.ctx.party }}{% else %}{{ c.list | ptitle }}{% endif %}</p>
 {% if c.ctx %}<p><b>Ko je:</b> {{ c.ctx.bio }}</p><p><b>Šta kaže:</b> {{ c.ctx.says }} <a class="src" href="{{ c.ctx.src }}">izvor</a></p>{% else %}<p class="small">{{ c.story }}</p>
