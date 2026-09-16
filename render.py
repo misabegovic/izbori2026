@@ -392,6 +392,27 @@ for r_ in context["rs_president"]:
 COMP = {"501": "dodatna lista za cijelu Federaciju", "502": "dodatna lista za cijelu RS", "400": "dodatna lista za cijelu Federaciju", "300": "dodatna lista za cijelu RS"}
 base_ctx = {"generated": gen, "RACE": RACE, "PRES_CTX": PRES_CTX, "COMP": COMP}
 
+# --- per-ballot comparison data (for D3 chart)
+def unit_cands_json(u):
+    lists = [party_title(l["name"]) for l in u["lists"]]
+    out = []
+    for li, l in enumerate(u["lists"]):
+        for c in l["candidates"]:
+            v = person_view(c)
+            pid = c.get("pid") or ""
+            tl = timelines.get(pid, [])
+            v22 = next((t.get("votes") for t in tl if t.get("y") == 2022 and t.get("votes") and (t.get("lvl") or "") == RACE_LVL.get(u["race"], "")), None)
+            rec = record_summary(pid)
+            r0 = (rec or [None])[-1] if rec else None
+            out.append({"id": pid, "n": v["name"], "l": li, "pos": c.get("pos"), "s": v["stood"] or 0, "w": v["won"] or 0, "p": max(v["n_parties"], 1),
+                        "v22": v22, "za": r0["za_pct"] if r0 else None, "pris": r0["prisustvo_pct"] if r0 else None, "rec": bool(rec),
+                        "story": v["story"], "href": f"kandidat-{v['slug']}.html" if v["has_page"] else None})
+    return json.dumps({"lists": lists, "cands": out}, ensure_ascii=False, separators=(",", ":"))
+
+RACE_LVL = {"oi2026-2": "Predstavnički dom PSBiH", "oi2026-4": "Predstavnički dom Parlamenta FBiH", "oi2026-6": "Narodna skupština Republike Srpske", "oi2026-7": "Skupštine kantona"}
+unit_json = {uk: unit_cands_json(u) for uk, u in units.items() if RACE[u["race"]]["kind"] == "list"}
+shutil.copy("static/viz.js", "dist/viz.js")
+
 # --- candidate pages
 kand_tpl = env.get_template("kandidat.html")
 cand_index = {}   # pid -> (unit_key, list name, candidate)
@@ -422,9 +443,11 @@ for pid, entries in cand_index.items():
         for a in prof["assets"]:
             by_src[a["src"]].append(a)
         assets = {src: rows for src, rows in by_src.items()}
+    entries = sorted(entries, key=lambda e: units[e[0]]["area"] in COMP)
     runs = [{"unit": units[e[0]], "list": e[1], "href": unit_href(units[e[0]]["race"], units[e[0]]["area"]), "pos": e[2].get("pos"),
              "party_href": party_href(e[1])} for e in entries]
-    html = kand_tpl.render(p=v, tl=tl, prof=prof, rec=rec, kd=kd, replacement=replacement, speeches_n=len(sp), speeches=sp[:5], assets=assets, runs=runs, **base_ctx)
+    main_uk = next((e[0] for e in entries if units[e[0]]["area"] not in COMP), uk)
+    html = kand_tpl.render(p=v, tl=tl, prof=prof, rec=rec, kd=kd, replacement=replacement, cands_json=unit_json.get(main_uk), speeches_n=len(sp), speeches=sp[:5], assets=assets, runs=runs, **base_ctx)
     write(f"kandidat-{v['slug']}.html", html)
     n_kand += 1
 
@@ -459,7 +482,7 @@ for uk, u in units.items():
     total22 = sum((h.get("votes") or 0) for h in u.get("party_history", []) if h["year"] == 2022)
     top22 = sorted([h for h in u.get("party_history", []) if h["year"] == 2022], key=lambda h: -(h.get("votes") or 0))[:5]
     munis = unit_munis.get(uk, [])
-    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, munis=munis, **base_ctx)
+    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, munis=munis, cands_json=unit_json.get(uk), **base_ctx)
     write(unit_href(race, u["area"]), html)
 
 # --- municipality pages

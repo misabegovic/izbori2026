@@ -28,6 +28,16 @@
 {% if total22 %}<p class="mut">Prošli put (2022) ovdje je glasalo oko {{ total22 | num }} ljudi. Najviše su dobili: {% for h in top22 %}{{ h.party | ptitle }} ({{ h.votes | num }}){% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
 </div>
 
+{% if cands_json %}
+<h2>Svi kandidati na ovom papiru</h2>
+<div class="card">
+<p class="mut small" style="margin:0 0 .3rem">Jedan krug = jedan čovjek, red = lista. Dodirni krug za ime i priču. Tamnoplavo = bio poslanik 2022–26.</p>
+<div class="viz" data-src="cands"></div>
+<noscript><p class="mut small">Graf traži JavaScript; sve isto piše niže u listama.</p></noscript>
+</div>
+<script type="application/json" id="cands">{{ cands_json | safe }}</script>
+<script src="viz.js" defer></script>
+{% endif %}
 <h2>Sve liste na jedan pogled</h2>
 <div class="card">
 <p class="mut small" style="margin:0 0 .3rem">Plava crta = glasovi 2022 na ovom području. Tačka: <i class="dot c-za"></i>u vlasti sad, <i class="dot c-od"></i>opozicija/nepoznato.</p>

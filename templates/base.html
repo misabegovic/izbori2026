@@ -104,6 +104,18 @@ footer { max-width:660px; margin:2rem auto 0; padding:1rem 16px 2rem; border-top
 .tl { border-left:3px solid var(--line); margin:.5rem 0 0 .45rem; padding-left:1rem; }
 .tl-i { position:relative; padding:.4rem 0 .7rem; }
 .tl-d { position:absolute; left:-1.55rem; top:.7rem; width:.9rem; height:.9rem; border-radius:50%; border:2px solid #fff; }
+.viz { position:relative; margin:.5rem 0; }
+.viz-bar { display:flex; flex-wrap:wrap; gap:.3rem; margin-bottom:.4rem; }
+.viz-bar .tog.on { background:var(--acc); color:#fff; border-color:var(--acc); }
+.viz-axis text { font-size:11px; fill:var(--mut); } .viz-axis path, .viz-axis line { stroke:var(--line); }
+.viz-grid { stroke:var(--line); }
+.viz-lab { font-size:12px; fill:var(--fg); }
+.viz-dot { fill:#86b6ef; stroke:#fff; stroke-width:1.5; cursor:pointer; }
+.viz-dot.rec { fill:#2a78d6; }
+.viz-dot.me { fill:#eb6834; stroke:#7a2e0a; stroke-width:2; }
+.viz-me { font-size:11px; font-weight:700; fill:#7a2e0a; paint-order:stroke; stroke:#fff; stroke-width:3px; }
+.viz-lab { font-size:11px; }
+.viz-tip { position:absolute; z-index:5; background:#fff; border:1px solid var(--line); border-radius:10px; padding:.5rem .7rem; width:240px; font-size:.85rem; box-shadow:0 4px 14px rgba(0,0,0,.12); }
 .tog { font-size:.8rem; background:#fff; border:1px solid var(--line); border-radius:8px; padding:.25rem .5rem; cursor:pointer; }
 @media (max-width:420px){ html{font-size:18px} .facts{grid-template-columns:1fr 1fr} }
 </style>
