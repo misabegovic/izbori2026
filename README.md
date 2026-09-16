@@ -37,9 +37,13 @@ static/viz.js     D3 grafovi (trake, složene trake, karijera, gauge šanse, swa
 
 Podaci su commitani, deploy ne zavisi od API-ja.
 
-## Deploy (Railway)
+## Deploy
 
-Nixpacks; build `pip install -r requirements.txt && python render.py`; start `python serve.py` (u `railway.json`).
+**muhamed.at/politika/analiza-izbora** — glavni javni URL. Sajt [muhamed.github.io](https://github.com/misabegovic/muhamed.github.io) u svom Pages buildu klonira ovaj repo s `main`, pokrene `render.py` i montira `dist/` pod `/politika/analiza-izbora/` (skripta `.github/scripts/build-analiza-izbora.sh` tamo). Svi linkovi koje `render.py` pravi su relativni, pa `dist/` radi pod bilo kojim putem bez prepisivanja.
+
+Push na `main` ovdje pokrene `.github/workflows/notify-site.yml`, koji preko `repository_dispatch` javi sajtu da se rebuilda. Za to treba secret `SITE_DISPATCH_TOKEN` (PAT s `contents: write` na `misabegovic/muhamed.github.io`); bez njega sajt pokupi izmjenu na svom dnevnom buildu.
+
+**Railway** — Nixpacks; build `pip install -r requirements.txt && python render.py`; start `python serve.py` (u `railway.json`).
 
 ## Lokalno
 
