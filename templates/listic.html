@@ -38,11 +38,11 @@
 {% endfor %}
 </div>
 {% if cands_json %}
-<div class="card">
-<p class="mut small" style="margin:0 0 .3rem">Jedan krug = jedan čovjek, red = lista. Dodirni krug za ime i priču. Tamnoplavo = bio poslanik 2022–26. „Šansa za mandat” je naša gruba procjena iz rezultata 2022 i mjesta na listi, ne prognoza.</p>
+<details class="card"><summary>Uporedi sve kandidate na grafu ({{ u.stats.candidates }} ljudi)</summary>
+<p class="mut small" style="margin:.4rem 0 .3rem">Jedan krug = jedan čovjek, red = lista. Dodirni krug za ime i priču. Tamnoplavo = bio poslanik 2022–26. „Šansa za mjesto” je gruba procjena iz rezultata 2022 i reda na listi, ne preporuka.</p>
 <div class="viz" data-src="cands"></div>
 <noscript><p class="mut small">Graf traži JavaScript; sve isto piše niže u listama.</p></noscript>
-</div>
+</details>
 <script type="application/json" id="cands">{{ cands_json | safe }}</script>
 {% endif %}
 <h2>Liste, redom kako su na papiru</h2>
