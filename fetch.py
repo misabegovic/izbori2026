@@ -393,25 +393,11 @@ def main():
     json.dump(mps, open("data/mps.json", "w"), ensure_ascii=False, indent=1)
     print(f"   {len(mps)} poslanika sa zapisom glasanja")
 
-    # full candidacy timelines for anyone who ever won or holds office
-    notable = [pid for pid, p in people.items() if p.get("won", 0) > 0 or p.get("isOfficeHolder")]
-    def timeline(pid):
-        try:
-            rows = get(f"{BASE}/persons/{urllib.parse.quote(pid, safe='')}/candidacies")["data"]
-            return pid, [{"y": r.get("year"), "lvl": (r.get("level") or {}).get("label"),
-                          "area": (r.get("area") or {}).get("label"),
-                          "party": (r.get("party") or {}).get("label"),
-                          "pos": r.get("position"), "votes": r.get("votes"),
-                          "elected": r.get("elected")} for r in rows]
-        except Exception:
-            return pid, None
-    timelines = {}
-    with ThreadPoolExecutor(24) as ex:
-        for pid, t in ex.map(timeline, notable):
-            if t:
-                timelines[pid] = t
-    json.dump(timelines, open("data/timelines.json", "w"), ensure_ascii=False)
-    print(f"   {len(timelines)} historija kandidata")
+    # Candidacy timelines used to be fetched here, one request per person, and only for
+    # people who had already won or hold office. That left five of every six people on the
+    # 2026 ballots with no history and no page. fetch_history.py now pulls the whole
+    # /candidacies collection in bulk instead, which covers everyone and also places each
+    # candidacy against the people it ran against. Run it after this script.
 
     print("7/7 nacionalna slika…")
     allp = list(people.values())

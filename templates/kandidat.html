@@ -8,18 +8,115 @@
 <p class="lead" style="margin-top:.6rem">{{ p.story }}</p>
 <div class="card">
 <b>Ove godine na listiću:</b>
-<ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for r in runs %}<li>{% if r.chance and r.chance[0] >= 18 %}{{ chance(r.chance, true) }}{% endif %}<a href="{{ r.href }}">{{ RACE[r.unit.race].short }}{{ r.where }}</a> — {% if r.party_href %}<a href="{{ r.party_href }}">{{ r.list | ptitle }}</a>{% else %}{{ r.list | ptitle }}{% endif %}{% if r.pos %}, {{ r.pos }}. na listi{% endif %}{% if r.chance and r.chance[0] < 18 %}<br><span class="small mut">{{ r.chance[2] | capitalize }}. Zato ovdje ne pišemo procenat: premali je da nešto znači.</span>{% endif %}</li>{% endfor %}</ul>
+<ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for r in runs %}<li>{% if r.chance %}{{ chance(r.chance, true) }}{% endif %}<a href="{{ r.href }}">{{ RACE[r.unit.race].short }}{{ r.where }}</a> — {% if r.party_href %}<a href="{{ r.party_href }}">{{ r.list | ptitle }}</a>{% else %}{{ r.list | ptitle }}{% endif %}{% if r.pos %}, {{ r.pos }}. na listi{% endif %}</li>{% endfor %}</ul>
 </div>
 
-{% if not rec %}<p class="mut small">Nema zapisa glasanja: ova osoba nije bila u državnom parlamentu ni u NSRS 2022–2026. Parlament Federacije i kantoni ne objavljuju ko je kako glasao.</p>{% endif %}
-{% if rec %}
-{% if cands_json %}
-<details class="card"><summary>Gdje je među kandidatima na tvom papiru (graf)</summary>
-<p class="mut small" style="margin:.4rem 0 .3rem">Narandžasti krug je ova osoba. Ostali krugovi su svi kandidati na istom listiću ({{ RACE[runs[0].unit.race].short }}). Dodirni krug za ime.</p>
-<div class="viz" data-src="cands" data-me="{{ p.pid }}"></div>
-</details>
-<script type="application/json" id="cands">{{ cands_json | safe }}</script>
+{% if weight %}
+<h2>Ide li tvoj glas nekud?</h2>
+<div class="card">
+<p class="lead" style="margin-top:0">Glas prvo ide listi, pa tek onda čovjeku. Ako zaokružiš listu i ovo ime, glas radi za listu i onda kad ovaj čovjek ne prođe.</p>
+{% if weight.list and weight.list.seats %}
+<p><b>{{ weight.list.label | ptitle }}</b> je {{ weight.unit.year }}. ovdje imala <b>{{ weight.list.share | dec }}%</b> glasova i osvojila <b>{{ mjesta(weight.list.seats) }}</b>. Prešla je prag, glas na nju je tad nešto značio.</p>
+{% elif weight.list %}
+<p><b>{{ weight.list.label | ptitle }}</b> je {{ weight.unit.year }}. ovdje imala <b>{{ weight.list.share | dec }}%</b> glasova i <b>nije osvojila nijedno mjesto</b>. Ispod 3% lista ne dobija ništa, a ni iznad praga mjesto nije zagarantovano: dijele se po broju glasova.</p>
+{% else %}
+<p><b>Ova lista {{ weight.unit.year }}. ovdje nije izlazila</b>, ili je pod drugim imenom. Nema s čim porediti.</p>
 {% endif %}
+<div class="facts">
+<div class="fact"><b>{{ weight.unit.wasted_share | dec }}%</b><span>glasova je {{ weight.unit.year }}. ovdje otišlo listama koje nisu dobile nijedno mjesto</span></div>
+<div class="fact"><b>{{ weight.unit.lists_with_seats }} od {{ weight.unit.lists }}</b><span>lista je ovdje uopšte osvojilo mjesto</span></div>
+{% if pref and pref.had %}<div class="fact"><b>{{ pref.need }}%</b><span>glasača liste te mora lično zaokružiti da preskočiš red; ova osoba je {{ pref.y }}. imala {{ pref.had }}% na svojoj tadašnjoj listi{% if pref.where %} ({{ pref.where }}){% endif %}</span></div>
+{% else %}<div class="fact"><b>{{ pref.need if pref else 20 }}%</b><span>glasača liste te mora lično zaokružiti da preskočiš red koji je stranka odredila</span></div>{% endif %}
+</div>
+<p class="small mut">Prag od 3% i pravilo od 20% su iz izbornog zakona, objašnjeni s izvorima u <a href="kako-glasati.html">kako se glasa</a>. Postotci su iz rezultata {{ weight.unit.year }}. na ovom istom području i računati su po glasačima liste, ne po zbiru ličnih glasova, jer jedan listić može zaokružiti do tri imena.</p>
+</div>
+{% endif %}
+
+{% if bar %}
+<h2>Šta je ovdje trebalo za mandat</h2>
+<div class="card">
+<p style="margin-top:0">Na istom papiru {{ bar.year }}. bilo je <b>{{ bar.candidates | num }}</b> kandidata za <b>{{ bar.seats }}</b> mjesta.</p>
+<div class="facts">
+<div class="fact"><b>{{ bar.min | num }}</b><span>ličnih glasova imao je najslabije prošao izabrani</span></div>
+<div class="fact"><b>{{ bar.median | num }}</b><span>ličnih glasova imao je prosječan izabrani</span></div>
+<div class="fact"><b>{{ bar.outpolled | num }}</b><span>ljudi je imalo više ličnih glasova od najslabijeg izabranog, a nije prošlo</span></div>
+</div>
+<p class="small">Zato lični glasovi nisu cijela priča. Mandat prvo osvaja lista, pa tek onda lični glasovi odlučuju ko ga unutar liste dobije. Zbog toga je {{ bar.outpolled | num }} ljudi {{ bar.year }}. skupilo više glasova od nekoga ko je prošao, i svejedno ostalo vani.</p>
+</div>
+{% endif %}
+
+{% if cands_url %}
+<details class="card"><summary>Gdje je među svim kandidatima na tvom papiru (graf)</summary>
+<p class="mut small" style="margin:.4rem 0 .3rem">Narandžasti krug je ova osoba. Ostali krugovi su svi kandidati na istom listiću ({{ RACE[runs[0].unit.race].short }}), poredani po listama. Prekidačem iznad grafa mijenjaš šta se mjeri: šansa, koliko puta je biran, najviše ličnih glasova ikad, najbolje mjesto po glasovima na svojoj listi, mjesto na listi ove godine. Dodirni krug za ime.</p>
+<div class="viz" data-url="{{ cands_url }}" data-me="{{ p.pid }}"></div>
+</details>
+{% endif %}
+
+{% if pop %}
+<h2>Koliko je glasova dobijao</h2>
+<div class="card">
+<div class="facts">
+<div class="fact"><b>{{ pop.top.votes | num }}</b><span>najviše glasova, {{ pop.top.y }}{% if pop.top.area %}, {{ pop.top.area | area }}{% endif %}</span></div>
+{% if pop.best %}<div class="fact"><b>{{ pop.best.rank }}. od {{ pop.best.of }}</b><span>najbolje mjesto po glasovima na svojoj listi ({{ pop.best.y }})</span></div>{% endif %}
+{% if pop.best and pop.best.pct %}<div class="fact"><b>{{ pop.best.pct | round | int }}%</b><span>svih glasova te liste otišlo je njemu/njoj ({{ pop.best.y }})</span></div>{% endif %}
+<div class="fact"><b>{{ pop.n }}</b><span>puta je dosad bio/la na listiću s rezultatom</span></div>
+</div>
+{% if pop_json %}<div class="d3 d3-votes" data-d3='{{ pop_json | safe }}'><span class="fb">{% for r in pop.rows %}{{ r.y }}: {{ r.votes | num }} glasova{% if r.rank %} ({{ r.rank }}. od {{ r.of }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}</span></div>{% endif %}
+{% if pop.best and pop.best.rank == 1 %}
+<p class="small">Kod nas se glasa za listu, ali se može zaokružiti i ime. Ova osoba je {{ pop.best.y }}. bila <b>prva po ličnim glasovima</b> na svojoj listi{% if pop.best.pos and pop.best.pos > 3 %}, iako je bila tek {{ pop.best.pos }}. po redu{% endif %}. To ulazi u računicu šanse gore: <a href="metoda.html#sansa">kako</a>.</p>
+{% endif %}
+<p class="small mut">Brojka je koliko je ljudi zaokružilo baš ovo ime. „{{ pop.best.rank if pop.best else '—' }}. od {{ pop.best.of if pop.best else '—' }}” je mjesto među ljudima na istoj listi, ne među svima na listiću.</p>
+</div>
+{% elif p.stood == 1 %}
+<div class="card">
+<h2 style="margin-top:0">O ovoj osobi nema izbornog zapisa</h2>
+<p>Prvi put je na listiću, pa nema ranijih glasova, mandata ni glasanja koje bismo pokazali. To nije zamjerka: svi su nekad bili novi. Ali znači da se o njoj, iz javnih izvora, ne može reći ništa osim gdje je na listi.</p>
+<p class="small mut">Ako znaš nešto što je javno zapisano i provjerljivo, <a href="https://github.com/misabegovic/izbori2026/issues">javi nam</a>.</p>
+</div>
+{% endif %}
+
+{% if not rec %}
+{% set has_record = appt or bodies or (loy and loy.spans) %}
+{% if has_record %}
+<h2>Šta je radio/la</h2>
+{% endif %}
+{% if appt %}
+<div class="card">
+<p style="margin:0 0 .3rem"><b>Imenovan/a, ne izabran/a</b></p>
+{% for a in appt %}<p class="small" style="margin:.2rem 0">{{ a.position | capitalize }} u tijelu <b>{{ a.institution }}</b>{% if a.role %} ({{ a.role }}){% endif %}{% if a.party %}, kao {{ a.party }}{% endif %}{% if a.from %}, od {{ a.from | datum }}{% endif %}. <span class="src">(izvor: <a href="{{ a.src }}">stranica tijela</a>)</span></p>{% endfor %}
+<p class="small mut">Imenovanja se ne biraju na izborima. Mashinerija ih drži odvojeno jer iza njih ne stoji ista provjera identiteta kao iza kandidatura.</p>
+</div>
+{% endif %}
+{% if bodies %}
+{% for b in bodies %}
+<div class="card">
+<p style="margin:0 0 .3rem"><b>{{ b.lvl }}{% if b.area %}, {{ b.area | area }}{% endif %}</b> <span class="mut small">od {{ b.since }}.</span></p>
+{% if b.spend %}
+<p class="small" style="margin:.2rem 0">Koliko je to tijelo trošilo dok je bio/la u njemu:</p>
+<ul style="margin:.2rem 0 .4rem 1.1rem;padding:0">{% for s in b.spend %}<li class="small">{{ s.y }}: <b>{{ (s.value * 100) | int | km }}</b> {{ s.what }}</li>{% endfor %}</ul>
+<p class="small mut">Ovo je iznos <b>cijelog tijela</b>, ne ove osobe. Jedan vijećnik od njih tridesetak ne troši gradski budžet. Pokazujemo da se vidi o kolikom novcu se tu odlučuje.</p>
+{% endif %}
+{% if b.agenda %}
+<p class="small" style="margin:.5rem 0 .2rem">O čemu je vijeće odlučivalo (zadnje sjednice{% if b.muni %}, {{ b.muni }}{% endif %}):</p>
+{% for a in b.agenda %}<div class="kd" style="padding:.3rem 0"><span class="small">{{ a.name }}</span><br><span class="small mut">{{ a.date | datum }}{% if a.for is not none %} · za {{ a.for }}, protiv {{ a.against }}, uzdržanih {{ a.abstained }}{% endif %}</span></div>{% endfor %}
+<p class="small mut">eCitizen objavljuje samo zbir glasova po tački, <b>bez imena</b>. Ne zna se kako je ova osoba glasala ni da li je bila prisutna.</p>
+{% endif %}
+{% if not b.spend and not b.agenda %}<p class="small mut">Za ovo tijelo nemamo ni iznose ni dnevni red.</p>{% endif %}
+</div>
+{% endfor %}
+{% endif %}
+{% if loy and loy.spans %}
+<div class="card">
+<p style="margin:0 0 .3rem"><b>Stranke kroz vrijeme</b></p>
+<ul style="margin:.2rem 0 .3rem 1.1rem;padding:0">{% for s in loy.spans %}<li class="small">{{ s.name | ptitle_raw }}: {{ s.from }}{% if s.to != s.from %}–{{ s.to }}{% endif %} ({{ s.n }} kandidatur{{ 'a' if s.n == 1 else ('e' if s.n < 5 else 'a') }})</li>{% endfor %}</ul>
+{% if loy.switches %}<p class="small">Mijenjao/la je stranku {{ loy.switches }} put{{ '' if loy.switches == 1 else 'a' }}. <span class="mut">Ako je stranka samo promijenila ime ili ušla u koaliciju, ovo može izgledati kao promjena a nije.</span></p>
+{% else %}<p class="small">Uvijek ista stranka.</p>{% endif %}
+</div>
+{% endif %}
+{% if has_record or pop %}<p class="mut small">Kako je glasao/la ne možemo pokazati: poimenična glasanja objavljuju samo državni parlament i NSRS. Parlament Federacije, kantonalne skupštine i općinska vijeća ne objavljuju ko je kako glasao, pa taj zapis ne postoji ni za koga na tom nivou.</p>{% endif %}
+{% endif %}
+
+{% if rec %}
 <h2>Kako je glasao/la kao poslanik/ca</h2>
 {% if replacement %}<p class="mut small">U parlament je ušao/la naknadno, kao zamjena, ne direktno na izborima 2022.</p>{% endif %}
 {% for r in rec %}

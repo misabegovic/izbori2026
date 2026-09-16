@@ -2,6 +2,8 @@
 (function () {
   var COL = { 'c-blue': '#2a78d6', 'c-blue2': '#86b6ef', 'c-za': '#0ca30c', 'c-protiv': '#d03b3b', 'c-uz': '#fab219', 'c-od': '#a9a9a9', 'c-new': '#c3c2b7', 'c-sw': '#eb6834' };
   var MUT = '#5c5c5c', INK = '#181818', LINE = '#dedbd3';
+  // 1421 -> '1.421', the separator used everywhere else on the site
+  function fmt(v) { return (v == null ? '' : v.toLocaleString('de-DE')); }
   function tipFor(host) {
     var tip = document.createElement('div'); tip.className = 'viz-tip'; tip.style.display = 'none'; host.style.position = 'relative'; host.appendChild(tip);
     return function (html, ev) {
@@ -106,18 +108,42 @@
     { k: 's', label: 'koliko puta na listi', fmt: function (v) { return v + '×'; } },
     { k: 'p', label: 'promjene stranaka', fmt: function (v) { return v + (v == 1 ? ' stranka' : ' stranke'); } },
     { k: 'v22', label: 'lični glasovi 2022', fmt: function (v) { return v.toLocaleString('de-DE'); }, only: true },
+    { k: 'vb', label: 'najviše ličnih glasova ikad', fmt: function (v) { return fmt(v); }, only: true },
+    { k: 'rk', label: 'najbolje mjesto po glasovima na svojoj listi', fmt: function (v) { return v + '.'; }, only: true, low: true },
+    { k: 'pos', label: 'mjesto na listi ove godine', fmt: function (v) { return v + '.'; }, low: true },
     { k: 'za', label: '% glasao „za” (poslanici)', fmt: function (v) { return v + '%'; }, only: true },
     { k: 'pris', label: '% prisutan (poslanici)', fmt: function (v) { return v + '%'; }, only: true }
   ];
+  // The ballot data is the same blob for every candidate on a paper: 588 people on the
+  // Tuzla canton list. Inlining it in each of 7000 profiles cost hundreds of megabytes, so
+  // it lives in one file per ballot and is fetched only when the reader opens the chart.
   function swarm(el) {
-    var data = JSON.parse(document.getElementById(el.dataset.src).textContent);
+    if (el.dataset.src) return render(el, JSON.parse(document.getElementById(el.dataset.src).textContent));
+    if (!el.dataset.url || el.dataset.loading) return;
+    var host = el.closest('details');
+    var go = function () {
+      if (el.dataset.loading) return;
+      el.dataset.loading = '1';
+      el.innerHTML = '<p class="small mut">Učitavam graf…</p>';
+      fetch(el.dataset.url).then(function (r) { return r.json(); })
+        .then(function (d) { el.innerHTML = ''; render(el, d); })
+        .catch(function () { el.innerHTML = '<p class="small mut">Graf se nije učitao.</p>'; });
+    };
+    if (host && !host.open) host.addEventListener('toggle', function once() { if (host.open) { host.removeEventListener('toggle', once); go(); } });
+    else go();
+  }
+  function render(el, data) {
     var lists = data.lists, cands = data.cands, me = el.dataset.me || null;
     var W = el.clientWidth || 360, left = 8, right = 26, top = 26;
     var bar = document.createElement('div'); bar.className = 'viz-bar'; el.appendChild(bar);
     var show = tipFor(el);
     var svg = d3.select(el).append('svg').attr('width', W);
-    var cur = METRICS[1];
-    METRICS.forEach(function (m) {
+    // Drop metrics nobody on this ballot has: an empty chart with a button above it looks
+    // like a bug. On a ballot with no former MPs that removes the two parliament metrics.
+    var usable = METRICS.filter(function (m) { return cands.some(function (c) { return c[m.k] != null; }); });
+    if (!usable.length) return;
+    var cur = usable.filter(function (m) { return m.k === 'w'; })[0] || usable[0];
+    usable.forEach(function (m) {
       var b = document.createElement('button'); b.textContent = m.label; b.className = 'tog';
       b.onclick = function () { cur = m; draw(); bar.querySelectorAll('button').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on'); };
       if (m === cur) b.classList.add('on');
@@ -137,7 +163,10 @@
       var cnt = el.querySelector('.viz-cnt'); if (!cnt) { cnt = document.createElement('div'); cnt.className = 'small mut viz-cnt'; el.insertBefore(cnt, svg.node()); } cnt.textContent = pts.length < cands.length ? 'Prikazano ' + pts.length + ' od ' + cands.length + ' ljudi (ostali nemaju ovaj podatak).' : 'Svih ' + cands.length + ' ljudi.';
       var max = d3.max(pts, function (c) { return c[cur.k]; }) || 1;
       var labelW = Math.round(W * 0.42);
-      var x = d3.scaleLinear().domain([0, cur.k === 'ch' ? 100 : max]).range([left + labelW, W - right]).nice();
+      // For rank-like metrics 1 is the good end, so flip the axis: on every metric the
+      // right-hand side is the stronger position.
+      var dom = cur.low ? [max, 1] : [0, cur.k === 'ch' ? 100 : max];
+      var x = d3.scaleLinear().domain(dom).range([left + labelW, W - right]).nice();
       var yOf = {}; rows.forEach(function (r, j) { yOf[r.i] = top + j * rowH + rowH / 2; });
       var g = svg.append('g');
       g.append('g').attr('transform', 'translate(0,' + (top - 8) + ')').call(d3.axisTop(x).ticks(4).tickFormat(function (v) { return cur.fmt(v); })).attr('class', 'viz-axis');
@@ -178,6 +207,46 @@
     });
     if (d.avg != null) { var leg = document.createElement('div'); leg.className = 'st-l'; leg.innerHTML = '<span>- - - prosjek svih poslanika za cijeli mandat: ' + d.avg + '%</span>'; el.appendChild(leg); }
   }
+  function votes(el, d) {
+    // d: {rows:[{y, votes, label, rank, of, pct, elected}]} — personal votes per election.
+    // Height is the vote count, not a percentage, because the question this answers is
+    // "how many people wrote this name down", and the rank underneath says how that
+    // compared with everyone the person shared a list with.
+    el.innerHTML = '';
+    var W = el.clientWidth || 300, H = 118, top = 22, bot = 34, n = d.rows.length;
+    if (!n) return;
+    var bw = Math.min(64, (W - 10) / n - 8);
+    var svg = d3.select(el).append('svg').attr('width', W).attr('height', H);
+    var show = tipFor(el);
+    var max = d3.max(d.rows, function (r) { return r.votes; }) || 1;
+    var x = function (i) { return 6 + i * ((W - 12) / n) + ((W - 12) / n - bw) / 2; };
+    var y = d3.scaleLinear().domain([0, max]).range([H - bot, top]);
+    d.rows.forEach(function (r, i) {
+      var col = r.elected ? COL['c-za'] : COL['c-blue'];
+      svg.append('rect').attr('x', x(i)).attr('y', y(0)).attr('width', bw).attr('height', 0).attr('rx', 4)
+        .attr('fill', col).style('cursor', 'pointer')
+        .on('click', function (ev) {
+          ev.stopPropagation();
+          var s = '<b>' + r.y + '</b> ' + r.label + '<br>' + fmt(r.votes) + ' glasova';
+          if (r.rank) s += '<br>' + r.rank + '. od ' + r.of + ' ljudi na svojoj listi';
+          if (r.pct) s += ' (' + Math.round(r.pct) + '% svih glasova liste)';
+          s += '<br>' + (r.elected ? 'izabran/a' : 'nije izabran/a');
+          show(s, ev);
+        })
+        .transition().duration(600).attr('y', y(r.votes)).attr('height', y(0) - y(r.votes));
+      svg.append('text').attr('x', x(i) + bw / 2).attr('y', y(r.votes) - 5).attr('text-anchor', 'middle')
+        .attr('font-size', '.68rem').attr('font-weight', 700).attr('fill', INK).text(fmt(r.votes));
+      svg.append('text').attr('x', x(i) + bw / 2).attr('y', H - 18).attr('text-anchor', 'middle')
+        .attr('font-size', '.68rem').attr('fill', MUT).text(r.y);
+      if (r.rank) svg.append('text').attr('x', x(i) + bw / 2).attr('y', H - 5).attr('text-anchor', 'middle')
+        .attr('font-size', '.62rem').attr('fill', r.rank === 1 ? COL['c-za'] : MUT)
+        .attr('font-weight', r.rank === 1 ? 700 : 400).text(r.rank + '/' + r.of);
+    });
+    var leg = document.createElement('div');
+    leg.className = 'st-l';
+    leg.innerHTML = '<span>Stub je broj glasova. Ispod godine piše koje je bio po glasovima na svojoj listi.</span>';
+    el.appendChild(leg);
+  }
   function heat(el, d) {
     // d: {parties:[], mps:[], m:[[pct|null]]} — party x party agreement
     el.innerHTML = '';
@@ -205,6 +274,7 @@
   }
   function init() {
     document.querySelectorAll('.d3-vbars').forEach(function (el) { vbars(el, JSON.parse(el.dataset.d3)); });
+    document.querySelectorAll('.d3-votes').forEach(function (el) { votes(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-heat').forEach(function (el) { heat(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-bar').forEach(function (el) { bar(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-stack').forEach(function (el) { stack(el, JSON.parse(el.dataset.d3)); });

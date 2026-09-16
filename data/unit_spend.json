@@ -1,0 +1,6802 @@
+{
+ "ba.fbih.bpk.gorazde": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1131401.83,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 605221.67,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 673648.36,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 854502.17,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 529423.99,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 651913.01,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 744928.05,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 386131.8,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 355999.34,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.bpk.pale-praca": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 38461.54,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 29939.04,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2478.3,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 29734.48,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 75297.84,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 110,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 152962.46,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 36725.62,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 164659.36,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.hnk.capljina": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 923564.3,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 974302.94,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 635380.08,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 889397.57,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 408061.55,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 486111.88,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 693706.98,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 445082.15,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 316744.49,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.hnk.citluk": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1708904.55,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1859380.24,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1573756.6,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1189105.64,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1003366.5,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1199354.89,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 372541.9,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1580117.09,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 389973.67,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.hnk.jablanica": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 570210.52,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 451301.12,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 416083.88,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 450992.88,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 233426.61,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 306096.17,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 671744.76,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 331576.57,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 297966.63,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.hnk.konjic": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2367609.53,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1881273.38,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1836673.06,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1315787.63,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1581327.18,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2360201.98,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1402173.13,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1580549.99,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1174496.83,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.hnk.mostar": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 19011809.3,
+    "full_year": true
+   },
+   "2024": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 14679866.94,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 23400595.74,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 16902598.51,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7776634.64,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 9129919.94,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7035244.54,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 11697843.13,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5415582.42,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 6352327.56,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.hnk.neum": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 873612.23,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1030514.74,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2978693.53,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7536899.73,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3576027.45,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 750940.17,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3509101.84,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 487529.67,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 482139.15,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.hnk.prozor-rama": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 634058.1,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 622709.59,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 648619.83,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2754642.77,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 751984.11,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2898552.21,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 298960.39,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 316782.77,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1760395.59,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.hnk.ravno": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 22845,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 62200,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 13400,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.hnk.stolac": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 807663.55,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 552003.5,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 673245.23,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 330603.94,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 600055.6,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 581698.83,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 461145.69,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 539771.38,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 365825.39,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.k10.drvar": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 120177,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 105000,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 42420,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 24507,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.k10.glamoc": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 85470.13,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 99000,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 24118,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 40221.5,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.k10.kupres": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 606033.33,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 69616.14,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 136882.05,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 49082.68,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 81585.58,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 136714.48,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 36605.65,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 113150.8,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.k10.livno": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1495545.91,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1108738.33,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1890113.48,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1245238.7,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1402064.43,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 677391.93,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 818032.98,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 501501.35,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 920828.47,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.k10.tomislavgrad": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1549715.03,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 774222.63,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 173135,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1114609.07,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 18417.95,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7467.5,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.ks.centar-sarajevo": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1481629.52,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1043147.64,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1182776.81,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 707628.97,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1236098.28,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 552559.12,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 304134.49,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 239731.09,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 402406.18,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.ks.hadzici": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1619368.69,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1353286.69,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2081905.58,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2255280.28,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1301852.67,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2575788.38,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1932813.86,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2166807.22,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2867400.67,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.ks.ilidza": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1483506.77,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2478467.58,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2357196.53,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1002432.71,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 404784.84,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 265089.17,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 318038.19,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 14965.63,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 59321.69,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.ks.ilijas": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1328070.36,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1226467.3,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 778495.11,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1339738.13,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 698321.64,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 885410.6,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 714271.25,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 871708.1,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 437875.5,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.ks.novi-grad-sarajevo": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3602305.8,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2125735.33,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1430152.12,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2309426.71,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1060189.84,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1416629.38,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 812485.7,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 530919.78,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 468713.97,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.ks.novo-sarajevo": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1806301.86,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 823558.32,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 493494.39,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 516815.63,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 484524.39,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 458212.23,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 351355.73,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 430090.55,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 245397.87,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.ks.stari-grad-sarajevo": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 729650.97,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.ks.trnovo": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 272456.26,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 617569.65,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 380711.16,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 281241.51,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 332465.68,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 198681.04,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 125456.6,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 228033.84,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.ks.vogosca": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 217928.92,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 232988.94,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 173629.47,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 155086.89,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 188133.21,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 216119.83,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 64806.22,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 585169.93,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 71989.63,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.posavski.domaljevac-samac": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 370366.06,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 267716.76,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 78895.23,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 11744.54,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4200.99,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 49350,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.posavski.odzak": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 850000.35,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 586788.07,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 905588.62,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 273631.44,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 129609.46,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 131744.09,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 112909.74,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 81233.92,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 62546.14,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.posavski.orasje": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1079526.24,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1265964.4,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1310466.78,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 641853.99,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 375954.46,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 319448.41,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 184201.21,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 145350.06,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 71609.93,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.sbk.bugojno": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2850812.74,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3085481.05,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2970561.61,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1383536.22,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1272281.97,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 860473.52,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 871083.72,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 946018.67,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1612412.57,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.sbk.busovaca": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 965199.91,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 769318.19,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 854336.75,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 353873.56,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 350693.19,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 185904.98,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 58676.44,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 72072.26,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.sbk.donji-vakuf": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 776796.15,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 76423.88,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 12321.53,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10500,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 101126.22,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 49568.2,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.sbk.fojnica": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1419230,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 897729.73,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 898470.97,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 765153.65,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 825135.38,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 761445.82,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 476630.24,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 323173.32,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 338386.23,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.sbk.gornji-vakuf-uskoplje": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1442914.47,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 973999.94,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 545491.3,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 371182.51,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 131166.06,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 210967.2,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 14107,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 248116.43,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.sbk.jajce": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1997033.73,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 890719.48,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 986622.36,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 991189.87,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 583741.53,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 519904.67,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 718674.21,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 159042.16,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 64144.45,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.sbk.kiseljak": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10494995.7,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4648546.63,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5599369.25,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2880189.54,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5354733.25,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2755075.22,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3397861.06,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1877754.67,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1833602.38,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.sbk.novi-travnik": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1375614,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1279167.19,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 865366.39,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 240657.41,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 526871.01,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 370036.47,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 565825.81,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 176988.69,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 202718.69,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.sbk.travnik": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 12615636.23,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7424396.72,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7229346.89,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5013206.72,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4511471.4,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4492947.43,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3734027.58,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3633082.72,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3697890.46,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.sbk.vitez": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1623652.24,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1269285.42,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1359919.01,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 961587.11,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 794110.4,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 273078.23,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 594900.61,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 164613.04,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 354702.63,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.banovici": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2368080.92,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2430686.93,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2036089.19,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1888859.21,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2336361.45,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1691875.09,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1944395.4,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 955597.22,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 921024.59,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.celic": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 324902.16,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 242670.51,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 382065.57,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 168659.66,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 253678.46,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 159384.86,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 312309.79,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 230564.85,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 157120.03,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.doboj-istok": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 173198.21,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 87783,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 80490.84,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 31944,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 11500.01,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.gracanica": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4128110.68,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4225347.08,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3363604.57,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2785593.06,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2516574.55,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1796715.52,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2650005.37,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2393923.61,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2076428.59,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.gradacac": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3026840.66,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3358725.53,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1996452.41,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2083607.3,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1867165.6,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3743597.34,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2377418.05,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2273711.98,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2155240.44,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.kalesija": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1246998.41,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 977719.68,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1244273.4,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 961991.7,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 630725.05,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1071131.1,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 999831.52,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 893399.09,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 459332.09,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.kladanj": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 746253.92,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 812266.57,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 517180.49,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 326185.85,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 381313.62,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 391982.13,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 275305.92,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 242843.98,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 80291.46,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.lukavac": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1832516.86,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2378361.51,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2346476.73,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1892066.43,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1005194.5,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 841017.64,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 644856.89,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 358791.47,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 319109.85,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.sapna": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 275986.85,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 202254.74,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 136802.73,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 141873.74,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 22788.68,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 100633.56,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 81029.13,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 20824,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.srebrenik": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2117673.77,
+    "full_year": true
+   },
+   "2024": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2723391.94,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2395457.9,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2525674.62,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2013503.4,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1715857.74,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1718659.07,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2036154.94,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1472813.12,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1764680.51,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.teocak": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 380735.05,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 174252.05,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 136265.72,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 140375.14,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 60285.51,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 78058,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 32241.98,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 68325.04,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 41639.95,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.tuzla": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 28012263.21,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 24228931.8,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 18217690.65,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 15341436.88,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 11957631.67,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 16854421.42,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 14877853.54,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 9734185.81,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7161854.13,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.tk.zivinice": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4091976.02,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2625684.24,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2314212.56,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1669300.17,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1404237.47,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1897830.94,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 808658.77,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1184918.04,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1390247.43,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.usk.bihac": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 15645432.32,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10331479.64,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7866572.02,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4909322.27,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7731969.07,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8893227.6,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3522740.93,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2480459.3,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2110245.17,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.usk.bosanska-krupa": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1697252.09,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1546873.54,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1389375.89,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 610661.36,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 653164.04,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 110413.41,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 285365.82,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 333023.52,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 518539.83,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.usk.bosanski-petrovac": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 963283.27,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 512953.35,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 419073.43,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 420585.18,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 483586.58,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 66931.63,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 117029.38,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 99787.44,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 68938.98,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.usk.buzim": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 36426.5,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 44498.11,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8700.74,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5816.16,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 13564.61,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 177218.43,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 24414.49,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 68927.41,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 31967.77,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.usk.cazin": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8221619.58,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 9218997.29,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10960958.26,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5211358.05,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 9949808.18,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5653162.2,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 6599718.6,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2826797.57,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4535427.63,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.usk.kljuc": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 934671.87,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 776528.22,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 903515.38,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 733089.77,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 482271.26,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 875411.16,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 413227.8,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 649231.56,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 535447.74,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.usk.sanski-most": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3951363.9,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2638805.31,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1902895.24,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1513123.11,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2086058.75,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1204379.05,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2610317.55,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1754744.1,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2960072.72,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.usk.velika-kladusa": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3713993.81,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 826632.03,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1311762.12,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 953431.23,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1720453.8,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2391162.88,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1185100.35,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2444097.57,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 148804.21,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zdk.breza": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 901623.73,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 835007.26,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 927077.13,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 489076.19,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 474655.59,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 646579.19,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 513783.39,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 473284.07,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 537644.75,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zdk.doboj-jug": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 711913.08,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 266247.4,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 353859.05,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 317403.18,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 144984.24,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 173719.79,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 22175,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zdk.kakanj": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5628955.86,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8166653.86,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7905962.81,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 6745670.57,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8039982.58,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3270862.92,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8082038.48,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5241980.12,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3381377.25,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zdk.maglaj": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1071777.89,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 657241.47,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 680746.4,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 570374.4,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 512141.04,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 510845.21,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 672773.34,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 404004.7,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 368784.72,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zdk.olovo": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2358367.02,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1866573.33,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1166437.55,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1136472.26,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 577171.72,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1688256.33,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3429595.45,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 938939.02,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1004600.73,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zdk.tesanj": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7397876.7,
+    "full_year": true
+   },
+   "2024": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5862126.72,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4850732.32,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5413417.99,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4820559.83,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3560456.9,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5353488.25,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4076927.44,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3577383.2,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4229971.14,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zdk.usora": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 70962.86,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 32458,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 168700,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 23000,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zdk.vares": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 165412.8,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 119921.54,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 315136.6,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 101531.69,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 110627.2,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 36571.6,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 86775.72,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 25078.5,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8320.72,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zdk.visoko": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3708447.05,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2305289.72,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1676775.55,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1325413.5,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1406524.27,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1877554.95,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2803514.99,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1556186.73,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 451380.41,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zdk.zavidovici": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3620667.1,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2029345.11,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2791800.15,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1765662.15,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2267020.7,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2204777.27,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2131282.11,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1898431.08,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1716858.43,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zdk.zenica": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 18231243.44,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 14370552.46,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 16431857.8,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7985608.78,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 11513149.55,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10090680.26,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8282507.12,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4891372.2,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7426896.18,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zdk.zepce": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 6387330.28,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 6736789.43,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 6575276.2,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1620823.99,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2539096.04,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1923742.2,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3388439.48,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1150528.61,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 615773.38,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zhk.grude": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1036391.69,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 482755.81,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1441854.64,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 170956.87,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 108930,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 115135,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 115382.3,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 309000.11,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zhk.ljubuski": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4912631.63,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4444955.88,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4222955.9,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2591694.07,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1132184.87,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1824026.49,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3477656.01,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 794705.22,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1250164.67,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zhk.posusje": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1124457.69,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1298543.08,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 285963.71,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1215117.3,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 423106.56,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 575027.08,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1275326.8,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 199535,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 163700.15,
+    "full_year": true
+   }
+  }
+ },
+ "ba.fbih.zhk.siroki-brijeg": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2134585.2,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1251195.4,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 757635.14,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1278861.48,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 722552.33,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 822709.02,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1813491.69,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1028030.37,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 942055.55,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.banja-luka": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 11942036.82,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 14724856.72,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 9382848.64,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7060442.74,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 12290306.43,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10619793.55,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7048270.28,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 11273721.7,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7762322.86,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.berkovici": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 67630.44,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 46701.86,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7700,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.bijeljina": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10317869.4,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10671238.96,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 12156368.89,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 6825608.4,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 9758105.92,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 11463844.21,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 9030338.08,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 6839735.75,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 5691028.06,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.bileca": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 872278.45,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 182845.54,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 269142.63,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 163444.87,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 97741.52,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 41738.68,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 82716.64,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 37098.2,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 81208.76,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.bratunac": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 653526.62,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 332259.77,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 161417.84,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 269489.94,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 294592.54,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 390838.32,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 313427.15,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 115665.2,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4841.67,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.brod": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1342709.36,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2421687.07,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1554469.18,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1485460.68,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1223739.46,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1115924.57,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1308474,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2062306.26,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 844418.61,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.cajnice": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 168371.49,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 86875.18,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 67495.58,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3547.44,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 256400,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.celinac": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 648187.08,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 665760.86,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 351326.86,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 342725.76,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 502980.84,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 278951.61,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 225098.44,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 188340.51,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 388362.35,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.derventa": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3192375.19,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1999424.94,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2364742.4,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1640456.69,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1525645.82,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2264534.03,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2036046.25,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1485316.37,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1401337.43,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.doboj": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10273914.08,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10100692.77,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10001094.08,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7988937.39,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8904497.28,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7064176.96,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8002712.47,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7728903.36,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 6225846.08,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.foca": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1141026.45,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 513635.45,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 509081.95,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 510959.33,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 479963.57,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 530909.91,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 556031.43,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 374085.53,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 234221.53,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.gacko": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 540577.17,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 375582.79,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 464424.84,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 296456.96,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 235658.6,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 197301.11,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 353643.56,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 142032.57,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 102520.42,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.gradiska": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3333365.01,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1825479.71,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2450574.27,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1750933.14,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2056457.77,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1300085.11,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 47351042.32,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1093307.34,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 906906.03,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.han-pijesak": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 154474.35,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 250417.52,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 286167.08,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 89086.73,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 59903.75,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 23802.22,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 86119.15,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.istocno-sarajevo.istocna-ilidza": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 451428.84,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10574.36,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 186302.61,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 23774.44,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 16507.83,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 33672.85,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 103508.17,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 54185.8,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 128285.49,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.istocno-sarajevo.istocni-stari-grad": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 146569.04,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 57538.8,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 61031.26,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 94373.14,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 52144.39,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 71784.89,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 45519.85,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.istocno-sarajevo.istocno-novo-sarajevo": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2694648.04,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2205659.01,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3333654.66,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1706624.3,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2618166.16,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1600135.91,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2302553.82,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1416357.18,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1572711.6,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.istocno-sarajevo.pale": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2395690.85,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2719030.15,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2494590.3,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1471459.76,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1154002.76,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 871395.34,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 550782.07,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1063137.82,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 826295.69,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.istocno-sarajevo.sokolac": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1178530.24,
+    "full_year": true
+   },
+   "2024": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 908383.36,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 114632.44,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 558341.16,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 219677.64,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8590,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 42000,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 18620,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 15100,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.kalinovik": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 61147.4,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 164320.44,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 64687.12,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 105970.4,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 98580.48,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 100433.15,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 119961.44,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 64085.28,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 104901.11,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.knezevo": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 313254.47,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 287563.72,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 359609.12,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 226871.8,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 176977.39,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 146358.88,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 151520.47,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 40172.35,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 35640,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.kostajnica": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 357373.63,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 414092.49,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 257523.58,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 195625.16,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 142539.71,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 190847.35,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.kotor-varos": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1341117.52,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 702799.32,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 515912.82,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 435902.3,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 554502.38,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 851308.53,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 768464.46,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 300248.31,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 628801.19,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.kozarska-dubica": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1481924.95,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 721976.05,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1001022.62,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 821853.21,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 875582.81,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1329920,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 329780.1,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 294188.16,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 24202.81,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.laktasi": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 4355229.98,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2645441.31,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3153448.46,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2837500.9,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2286614.04,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2554093.51,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2500204.29,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 847717.74,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1142998.43,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.ljubinje": {
+  "years": {
+   "2024": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 299000,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.lopare": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 271064.81,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 262213.79,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 364787.99,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 210153.04,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 167426.43,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 210209.83,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 470361.79,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 80333.98,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 80039.35,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.milici": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 65799.78,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 97572.15,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 153685.8,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 144438,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 57645.6,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 242357.87,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 122858,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 91948.7,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.modrica": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 310160.69,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 141882.52,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 217009.99,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 114434.31,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 123453.02,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 232652.62,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 124207.14,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 105204.35,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 112304.87,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.mrkonjic-grad": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1064500.4,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 664711.61,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 958276.09,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1212222.68,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 551914.17,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 772331.66,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 614727.83,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 718555.11,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 607190.6,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.nevesinje": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 340089.88,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 237361.45,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 442948.09,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 199229.29,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 69254.12,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 34972.18,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 50000,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.novi-grad": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 744296.83,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 603488.98,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 519292.99,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 395572.85,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 379696.44,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 266940.81,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 222371.66,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 259584.01,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 215533.24,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.novo-gorazde": {
+  "years": {
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7350,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 19650,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.osmaci": {
+  "years": {
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8641.1,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8133.43,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.ostra-luka": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 146908.14,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 79322.07,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 26324.32,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 24514.15,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 15078.84,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 34024.79,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.prijedor": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 16096402.95,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 11374017.45,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 10492003.63,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 11421323.05,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 6404258,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8595244.34,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 11293787.95,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8480511.15,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 6285656.18,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.prnjavor": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1911109.76,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1567790.06,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1174000.15,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1064629.73,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 954171.16,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1160181.01,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1386502.36,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1026330.85,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1638096.18,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.ribnik": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 243827.5,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 168319.21,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 166251.65,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 109033.75,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 70289.74,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 94601.07,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 354807.18,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 75250,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 61863,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.rogatica": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 421665.35,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 398430.22,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 553837.71,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 350785.95,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 278336.87,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 161294.9,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 361324.04,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 262091.43,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 236944.01,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.rudo": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 119853.4,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 65599.1,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3500,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 332185,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 9400,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 31503.52,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7893.6,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 13418.8,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.samac": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 806568.63,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 334003.36,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 528000.15,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 341538.75,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 314644.37,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 219915.89,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 250783.24,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 159721.56,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 206325.02,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.sekovici": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 66521.26,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 7.04,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 61564.62,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 195273,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 24000,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.sipovo": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 526886.18,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 471083.73,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 382952.25,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 227565.14,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 244061.53,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 211379.39,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 400225.31,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 97616.05,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 162732.19,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.srbac": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1066848.8,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 509848.7,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 714288.69,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 732833.52,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 295923.07,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 194302.75,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 525899.73,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 574783.23,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 713684.97,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.srebrenica": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 229719.95,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 214550.73,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 126485.91,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 95896.23,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 12613,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.stanari": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 345785.56,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 888484.65,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1098853.25,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 519042.61,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 635555.64,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 383590.45,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 574972.32,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 350941.19,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 34536,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.teslic": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1251697.3,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 815490.86,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1064493.43,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1170516.52,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1096620.63,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1015712.9,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1084839.44,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 803163.68,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 957148.86,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.trebinje": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1996226.04,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1586987.15,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1753305.05,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1558039.44,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 908686.31,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 593663.99,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 781685.85,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 683562.53,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 774855.05,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.ugljevik": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 861980.09,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 695746.7,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 756113.87,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 644104.11,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 474525.88,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 441698.48,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 408760.52,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 489868.73,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 380789.72,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.visegrad": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2761848.62,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 971849.8,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 517262.69,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 288254.21,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 625680.49,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 508021.58,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 451107.77,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 454134,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 659598.35,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.vlasenica": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 8529.1,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 337490.54,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 54780.77,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 217678,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2987.36,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 363415.03,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.vukosavlje": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 37293.62,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 14549.44,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 49188.59,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 14236.99,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 13908.12,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 2865.98,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 3293.59,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1696.15,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1790,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.zvornik": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1839650.39,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1729769.25,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1388073.62,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 904672.41,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1104385.14,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1011632.59,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1332926.14,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 1021957.82,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 745312.8,
+    "full_year": true
+   }
+  }
+ }
+}

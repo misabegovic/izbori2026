@@ -7,6 +7,7 @@ sentences, plain words, one idea per card, sources on every claim.
 import json
 import os
 import glob
+import hashlib
 import re
 import shutil
 import unicodedata
@@ -177,6 +178,10 @@ def p22_for(prog):
             "stack": [(grey if k == "ne može se ocijeniti" else k, cnt.get(k, 0), OUTCOME_CLS[k]) for k in ("ispunjeno", "djelimično", "nije", "ne može se ocijeniti")]}
 speeches = json.load(open(D + "speeches.json")) if os.path.exists(D + "speeches.json") else {}
 ecitizen = json.load(open(D + "ecitizen.json")) if os.path.exists(D + "ecitizen.json") else {"cities": {}}
+appointed = json.load(open(D + "appointed.json")) if os.path.exists(D + "appointed.json") else {}
+unit_spend = json.load(open(D + "unit_spend.json")) if os.path.exists(D + "unit_spend.json") else {}
+seat_bar = json.load(open(D + "seat_bar.json")) if os.path.exists(D + "seat_bar.json") else {}
+list_strength = json.load(open(D + "list_strength.json")) if os.path.exists(D + "list_strength.json") else {}
 
 units = {}
 for f in glob.glob(D + "units/*.json"):
@@ -185,6 +190,10 @@ for f in glob.glob(D + "units/*.json"):
 
 gen = national["generated"][:10]
 env = Environment(loader=FileSystemLoader("templates"), autoescape=True, trim_blocks=True, lstrip_blocks=True)
+# The site writes thousands with a dot (5.250), so a decimal point reads as thousands:
+# "3.5%" looks like 35. Decimals take a comma.
+env.filters["dec"] = lambda v: ("" if v is None else
+                                ("manje od 0,1" if 0 < v < 0.05 else ("%.1f" % v).replace(".", ",")))
 env.filters["num"] = num
 env.filters["nice"] = nice_name
 env.filters["ptitle"] = party_title
@@ -219,6 +228,9 @@ def nice_area(a):
 
 def mjesta(n):
     return f"{n} mjesto" if n == 1 else f"{n} mjesta"
+
+
+env.globals["mjesta"] = mjesta
 
 
 RACE = {
@@ -345,6 +357,77 @@ def short_or_coal(p):
     return raw
 
 
+CAL = json.load(open(D + "chance_calibration.json")) if os.path.exists(D + "chance_calibration.json") else {}
+
+
+def cal_pct(bucket, personal, default):
+    """Observed 2022 win rate for people in this position bucket with this past record.
+
+    Falls back to the position-only rate, then to the hand-set default, so a missing
+    or half-built calibration file degrades instead of inventing a number."""
+    cell = (CAL.get("crossed") or {}).get(f"{bucket}|{personal}")
+    if cell and cell.get("pct"):
+        return cell["pct"]
+    return ((CAL.get("position") or {}).get(bucket) or {}).get("pct") or default
+
+
+# How the record read before this election. backtest.py measures the 2022 win rate for
+# each of these against each list position, because on an open list a preferential vote
+# moves people: in 2022 someone who had already topped their own list won about one time
+# in four, against one in thirty for someone who had never been on a ballot.
+PERSONAL_CLAUSE = {
+    "top1": "Već je bio prvi po glasovima na svojoj listi.",
+    "strong": "Već je biran ili bio pri vrhu svoje liste po glasovima.",
+    "ran": "Dosad se nije približio vrhu svoje liste po glasovima.",
+    "none": "Nikad prije nije bio na listiću.",
+}
+PERSONAL_SHORT = {
+    "top1": "bio prvi po glasovima",
+    "strong": "bio pri vrhu po glasovima",
+    "ran": "bez jačeg rezultata",
+    "none": "prvi put na listiću",
+}
+
+
+def personal_bucket(pid):
+    """Four classes, same ones backtest.py measured on 2022, using only what was known
+    before 2026. Ranks come from data/timelines.json, where every candidacy is placed
+    against the people on the same list."""
+    past = [t for t in timelines.get(pid, []) if (t.get("y") or 0) < 2026]
+    if not past:
+        return "none"
+    best, won = None, False
+    for t in past:
+        if t.get("elected"):
+            won = True
+        if t.get("seat") != "single" and t.get("rank") and (best is None or t["rank"] < best):
+            best = t["rank"]
+    if best == 1:
+        return "top1"
+    if won or (best is not None and best <= 3):
+        return "strong"
+    return "ran"
+
+
+def popularity(pid):
+    """Personal votes already won, and where that placed the person on their own list.
+
+    This is a record, not a forecast: every number here already happened."""
+    past = [t for t in timelines.get(pid, []) if (t.get("y") or 0) < 2026 and t.get("votes")]
+    if not past:
+        return None
+    ranked = [t for t in past if t.get("rank") and t.get("seat") != "single"]
+    return {
+        "rows": sorted(past, key=lambda t: (t.get("y") or 0)),
+        "n": len(past),
+        "top": max(past, key=lambda t: t.get("votes") or 0),
+        "last": max(past, key=lambda t: t.get("y") or 0),
+        "best": min(ranked, key=lambda t: (t["rank"], -(t.get("pct") or 0))) if ranked else None,
+        "bucket": personal_bucket(pid),
+        "bucket_text": PERSONAL_SHORT[personal_bucket(pid)],
+    }
+
+
 def person_view(c):
     """Everything a page needs to say about one candidate, in plain words."""
     pid = c.get("pid") or ""
@@ -361,10 +444,11 @@ def person_view(c):
     v = {"pid": pid, "slug": pid_slug(pid) if pid else None, "name": nice_name(c.get("name")), "raw_name": c.get("name"), "home": nice_area(home) if home else None, "home_key": home_key(home) if home else "",
          "pos": c.get("pos"), "stood": stood, "won": won, "office": rec.get("isOfficeHolder") or c.get("office"),
          "parties": parties, "n_parties": len(parties), "confidence": rec.get("confidence") or c.get("confidence"),
-         "has_record": pid in records, "has_page": bool(tl) or pid in records or bool(prof.get("bio")),
+         "has_record": pid in records, "has_page": bool(pid),
          "won_rows": won_rows,
          "img": f"lica/{prof['publicId']}.webp" if prof.get("portrait") and prof.get("publicId") and os.path.exists(f"static/lica/{prof['publicId']}.webp") else None,
-         "img_credit": (prof.get("portrait") or {}).get("credit")}
+         "img_credit": (prof.get("portrait") or {}).get("credit"),
+         "pop": popularity(pid) if pid else None}
     badges = []
     last_win = max((t.get("y") or 0) for t in won_rows) if won_rows else 0
     if v["office"] and (not last_win or last_win >= 2018):
@@ -385,6 +469,16 @@ def person_view(c):
         badges.append(("filler", f"{stood}. put na listi, još neizabran", "Kandidovao se više puta, do sada nije osvojio mandat."))
     if v["has_record"]:
         badges.append(("record", "ima zapis glasanja", "Bio poslanik 2022–2026, vidi kako je glasao."))
+    # personal votes, the thing an open list actually decides. Same badge on the ballot
+    # card and on the profile, so the two pages never tell a different story.
+    best = (v["pop"] or {}).get("best")
+    if best and best.get("rank") == 1:
+        badges.append(("pop", "prvi po glasovima",
+                       f"{best['y']}: {num(best['votes'])} glasova, najviše od {best['of']} ljudi na svojoj listi"
+                       + (f" ({round(best['pct'])} posto svih glasova liste)" if best.get("pct") else "") + "."))
+    elif best and best.get("rank") and best["rank"] <= 3:
+        badges.append(("pop", f"{best['rank']}. po glasovima",
+                       f"{best['y']}: {num(best['votes'])} glasova, {best['rank']}. od {best['of']} ljudi na svojoj listi."))
     v["badges"] = badges
     # one-sentence story
     s = []
@@ -541,20 +635,23 @@ for grp in list(context["presidency"].values()) + [context["rs_president"]]:
         PRES_CTX[fold(r_["name"])] = r_
 env.filters["lat"] = lambda x: fold(re.sub(r"\s*-\s*NE[OZ]?[A-Z]*VISNI KANDIDAT.*$", "", cyr2lat(x or ""), flags=re.I))
 COMP = {"501": "dodatna lista za cijelu Federaciju", "502": "dodatna lista za cijelu RS", "400": "dodatna lista za cijelu Federaciju", "300": "dodatna lista za cijelu RS"}
-base_ctx = {"generated": gen, "RACE": RACE, "PRES_CTX": PRES_CTX, "COMP": COMP, "CHAMBER_NAME": CHAMBER_NAME}
+ASSET_V = hashlib.sha256(b"".join(open(f, "rb").read() for f in ("static/style.css", "static/app.js"))).hexdigest()[:8]
+base_ctx = {"generated": gen, "RACE": RACE, "PRES_CTX": PRES_CTX, "COMP": COMP, "CHAMBER_NAME": CHAMBER_NAME, "ASSET_V": ASSET_V}
 
 RACE_LVL = {"oi2026-2": "Predstavnički dom PSBiH", "oi2026-4": "Predstavnički dom Parlamenta FBiH", "oi2026-6": "Narodna skupština Republike Srpske", "oi2026-7": "Skupštine kantona"}
 
 # --- chance of winning a seat: rough estimate from 2022 seats here, list position, prior wins
-CAL = json.load(open(D + "chance_calibration.json")) if os.path.exists(D + "chance_calibration.json") else {}
-def cal_pct(bucket, default):
-    return (CAL.get(bucket) or {}).get("pct", default)
 def chance_word(pct):
     return "velika" if pct >= 50 else "srednja" if pct >= 18 else "mala" if pct >= 5 else "vrlo mala"
 
 
 def od_deset(pct):
-    return f"{max(1, round(pct / 10))} od 10"
+    """Odds in words. „N od 10" reads naturally down to about a tenth, but below that it
+    flattens everything: 1 percent and 9 percent both became „1 od 10". Now that the rule
+    tells those apart, small numbers switch to „1 od N"."""
+    if pct >= 10:
+        return f"{round(pct / 10)} od 10"
+    return f"1 od {max(2, round(100 / max(pct, 1)))}"
 
 
 def list_chances(u, l):
@@ -571,25 +668,58 @@ def list_chances(u, l):
     ranked = sorted(cands, key=lambda c: c.get("pos") or 99)
     out = {}
     for rank, c in enumerate(ranked, 1):
+        pid = c.get("pid") or ""
+        pb = personal_bucket(pid) if pid else "none"
+        # A list that did not clear 3 percent here in 2022 is the weak end of the
+        # "party holds no seat" group the calibration measured, so the measured number is
+        # closer to a ceiling than a floor for it. We say that rather than invent a number:
+        # matching a 2026 list back to its 2022 self by name is itself unreliable, and for
+        # 2634 of 7779 candidates we find no 2022 votes for their list at all.
+        dead_list = seats <= 0 and v22 / total22 < 0.03
         if seats <= 0:
-            if v22 / total22 < 0.03:
-                pct = 2; why = "ova lista 2022 ovdje nije izlazila, ili je imala manje od 3 posto glasova; takve liste 2022 skoro nikad nisu dobile mjesto"
-            elif rank == 1:
-                pct = cal_pct("no_seats_pos1", 15); why = f"stranka 2022 ovdje nije dobila nijedno mjesto, a ovaj je prvi na listi; 2022 je od ovakvih prošlo {od_deset(pct)}"
-            else:
-                pct = cal_pct("no_seats_rest", 2); why = f"stranka 2022 ovdje nije dobila nijedno mjesto, a ovaj nije ni prvi na listi; 2022 je od ovakvih prošlo {od_deset(pct)}"
+            bucket = "no_seats_pos1" if rank == 1 else "no_seats_rest"
+            where = ("stranka 2022 ovdje nije dobila nijedno mjesto, a ovaj je prvi na listi" if rank == 1
+                     else "stranka 2022 ovdje nije dobila nijedno mjesto, a ovaj nije ni prvi na listi")
         elif rank <= seats:
-            pct = cal_pct("within", 63); why = f"stranka je 2022 ovdje dobila {mjesta(seats)}, a ovaj je {rank}. na listi; 2022 je od ovakvih prošlo {od_deset(pct)}"
+            bucket = "within"; where = f"stranka je 2022 ovdje dobila {mjesta(seats)}, a ovaj je {rank}. na listi"
         elif rank == seats + 1:
-            pct = cal_pct("plus1", 19); why = f"prvi iza {mjesta(seats)} koliko je stranka dobila 2022; 2022 je od ovakvih prošlo {od_deset(pct)}"
+            bucket = "plus1"; where = f"prvi iza {mjesta(seats)} koliko je stranka dobila 2022"
         elif rank == seats + 2:
-            pct = cal_pct("plus2", 6); why = f"drugi iza mjesta koliko je stranka dobila 2022; 2022 je od ovakvih prošlo {od_deset(pct)}"
+            bucket = "plus2"; where = "drugi iza mjesta koliko je stranka dobila 2022"
         else:
-            pct = cal_pct("beyond", 2); why = f"daleko iza mjesta koliko je stranka dobila 2022; 2022 je od ovakvih prošlo {od_deset(pct)}"
+            bucket = "beyond"; where = "daleko iza mjesta koliko je stranka dobila 2022"
+
+        default = {"within": 63, "plus1": 19, "plus2": 6, "beyond": 2,
+                   "no_seats_pos1": 15, "no_seats_rest": 2}[bucket]
+        pct = cal_pct(bucket, pb, default)
+        why = (where[0].upper() + where[1:] + ". " + PERSONAL_CLAUSE[pb]
+               + f" Od ovakvih je 2022 prošlo {od_deset(pct)}.")
+        if dead_list:
+            why += (" Ova lista 2022 ovdje nije izlazila ili nije prešla 3 posto glasova, "
+                    "pa je za nju ovaj procenat prije gornja nego donja granica.")
         if u["area"] in COMP:
-            pct = min(pct, 19); why = "ovo je dodatna lista: ta mjesta stranka dijeli po svom redu, pa se ne može računati"
-        out[c.get("pid") or c["name"]] = (pct, chance_word(pct), why, od_deset(pct))
+            pct = min(pct, 19); why = "Ovo je dodatna lista: ta mjesta stranka dijeli po svom redu, pa se ne može računati."
+        out[c.get("pid") or c["name"]] = (pct, chance_word(pct), why, od_deset(pct), pb)
     return out
+
+
+def vote_weight(u, list_name):
+    """The other question, the one a chance percentage does not answer: is the ballot
+    thrown away? A seat is taken by the list, so a vote on a list under the 3 percent
+    census does nothing at all, however popular the person on it. In 2022 that was 14.8
+    percent of votes in Tuzla canton and 45.9 percent in the worst constituency."""
+    st = list_strength.get(f"{u['race']}-{u['area']}")
+    if not st:
+        return None
+    pi = party_identity(list_name)
+    mine = None
+    for label, row in st["by_party"].items():
+        if party_identity(label) == pi:
+            mine = {**row, "label": label} if mine is None else {
+                **mine, "voters": mine["voters"] + row["voters"],
+                "seats": mine["seats"] + row["seats"],
+                "share": round(mine["share"] + row["share"], 1)}
+    return {"unit": st, "list": mine}
 
 
 # --- per-ballot comparison data (for D3 chart)
@@ -604,16 +734,30 @@ def unit_cands_json(u):
             chance = ch.get(pid or c["name"])
             tl = timelines.get(pid, [])
             v22 = next((t.get("votes") for t in tl if t.get("y") == 2022 and t.get("votes") and (t.get("lvl") or "") == RACE_LVL.get(u["race"], "")), None)
+            past = [x for x in tl if (x.get("y") or 0) < 2026 and x.get("votes")]
+            best_v = max(past, key=lambda x: x["votes"]) if past else None
+            ranked = [x for x in past if x.get("rank") and x.get("seat") != "single"]
+            best_r = min(ranked, key=lambda x: x["rank"]) if ranked else None
             rec = record_summary(pid)
             r0 = (rec or [None])[-1] if rec else None
             out.append({"id": pid, "n": v["name"], "l": li, "pos": c.get("pos"), "s": v["stood"] or 0, "w": v["won"] or 0, "p": max(v["n_parties"], 1),
                         "v22": v22, "za": r0["za_pct"] if r0 else None, "pris": r0["prisustvo_pct"] if r0 else None, "rec": bool(rec),
+                        "vb": best_v["votes"] if best_v else None, "vby": best_v["y"] if best_v else None,
+                        "rk": best_r["rank"] if best_r else None, "rko": best_r["of"] if best_r else None,
                         "story": v["story"], "href": f"kandidat-{v['slug']}.html" if v["has_page"] else None, "img": v["img"],
                         "ch": chance[0] if chance else None, "chw": chance[1] if chance else None})
     return json.dumps({"lists": lists, "cands": out}, ensure_ascii=False, separators=(",", ":"))
 
 unit_json = {uk: unit_cands_json(u) for uk, u in units.items() if RACE[u["race"]]["kind"] == "list"}
-shutil.copy("static/viz.js", "dist/viz.js")
+# One file per ballot, fetched by viz.js when the reader opens the chart. Inlining this in
+# every profile made dist/ 661 MB; as files it is a couple of megabytes served once.
+unit_json_url = {}
+for _uk, _j in unit_json.items():
+    _name = f"kandidati-{_uk}.json"
+    write(_name, _j)
+    unit_json_url[_uk] = _name
+for _asset in ("viz.js", "style.css", "app.js"):
+    shutil.copy(f"static/{_asset}", f"dist/{_asset}")
 shutil.copytree("static/lica", "dist/lica")
 
 # chamber averages for comparison on candidate pages
@@ -649,7 +793,95 @@ for _pid in SIM:
             _row["party"] = people_rec[_row["pid"]]["party_name"]
 THEMES = analytics.promise_themes(programs)
 
+slug_by_folded = {}
+for m in municipalities:
+    slug_by_folded[fold(m["slug"].split(".")[-1]).replace("-", " ")] = m["slug"]
+ec_by_slug = {}
+for city, data in ecitizen["cities"].items():
+    slug = slug_by_folded.get(fold(city.replace("_", " ")))
+    if slug and data.get("sessions"):
+        good = []
+        for sess in data["sessions"]:
+            ag = [a for a in (sess.get("agendas") or []) if a.get("for") is not None]
+            if ag:
+                good.append({**sess, "agendas": [dict(a, name=(a.get("name") or "")[:110]) for a in ag[:6]]})
+        if good:
+            ec_by_slug[slug] = {**data, "sessions": good}
+
+
+# Council work, as close to a personal record as the sources allow.
+# eCitizen publishes agendas and the for/against/abstain totals of a session, but it
+# never names who voted which way: 38 cities, 142 sessions, zero named councillors.
+# So this is what the body decided while the person sat in it, labelled as such, and
+# it must never be printed as if it were their own vote.
+ec_by_home = {}
+for _m in municipalities:
+    if _m["slug"] in ec_by_slug:
+        ec_by_home[home_key(_m["name"])] = {**ec_by_slug[_m["slug"]], "muni": _m["name"], "slug": _m["slug"]}
+
+SPEND_WORD = {"procurement.awarded.total": "ugovorenih javnih nabavki",
+              "budget.appropriation.adopted": "usvojenog budžeta"}
+
+
+def local_record(tl):
+    """For someone with no roll-call record: the bodies they actually sat in, what those
+    bodies spend, and what they had on the agenda. Institution-level facts, every one."""
+    seats = [t_ for t_ in tl if t_.get("elected") and t_.get("unit")]
+    if not seats:
+        return None
+    first = {}
+    for t_ in seats:
+        u = t_["unit"]
+        if u not in first or (t_.get("y") or 0) < first[u]["y"]:
+            first[u] = {"y": t_.get("y"), "lvl": t_.get("lvl"), "area": t_.get("area")}
+    bodies = []
+    for uid, info in sorted(first.items(), key=lambda kv: -(kv[1]["y"] or 0)):
+        spend = unit_spend.get(uid) or {}
+        years = sorted(((int(y), v) for y, v in (spend.get("years") or {}).items()
+                        if int(y) >= (info["y"] or 0)), reverse=True)[:4]
+        council = ec_by_home.get(home_key(info["area"] or ""))
+        agenda = []
+        # Only sessions that fall inside the term this seat started. A council sits four
+        # years; showing this year's agenda to someone who left in 2020 would be a lie.
+        last_win = max((t_.get("y") or 0) for t_ in seats if t_.get("unit") == uid)
+        if council:
+            for sess in council["sessions"]:
+                year = int((sess.get("date") or "0")[:4] or 0)
+                if not (last_win <= year <= last_win + 4):
+                    continue
+                for a in sess["agendas"][:3]:
+                    agenda.append({"date": sess.get("date"), "name": a.get("name"),
+                                   "for": a.get("for"), "against": a.get("against"),
+                                   "abstained": a.get("abstained")})
+        bodies.append({"unit": uid, "lvl": info["lvl"], "area": info["area"], "since": info["y"],
+                       "spend": [{"y": y, "value": v["value"], "what": SPEND_WORD.get(v["measure"], v["measure"])}
+                                 for y, v in years],
+                       "muni": council["muni"] if council else None,
+                       "agenda": agenda[:6]})
+    return bodies or None
+
+
+def loyalty(tl):
+    """Which party, for how long, and every switch — computed from candidacies, so it is
+    what CIK published and not what anyone says about themselves."""
+    rows = [t_ for t_ in tl if t_.get("party") and t_.get("y")]
+    if not rows:
+        return None
+    spans, cur = [], None
+    for t_ in sorted(rows, key=lambda r: r["y"]):
+        k = party_identity(t_["party"])
+        if cur and cur["key"] == k:
+            cur["to"] = t_["y"]
+            cur["n"] += 1
+        else:
+            cur = {"key": k, "name": t_["party"], "from": t_["y"], "to": t_["y"], "n": 1}
+            spans.append(cur)
+    return {"spans": spans, "switches": len(spans) - 1,
+            "years": (spans[-1]["to"] - spans[-1]["from"]) if spans else 0}
+
+
 n_kand = 0
+search_rows = []
 for pid, entries in cand_index.items():
     uk, lname, c = entries[0]
     v = person_view(c)
@@ -689,12 +921,52 @@ for pid, entries in cand_index.items():
     runs = [{"unit": units[e[0]], "list": e[1], "chance": _chance(e), "href": unit_href(units[e[0]]["race"], units[e[0]]["area"]), "pos": e[2].get("pos"),
              "party_href": party_href(e[1]), "where": _where(units[e[0]])} for e in entries]
     main_uk = next((e[0] for e in entries if units[e[0]]["area"] not in COMP), uk)
+    _mu = units[main_uk]
+    bar = seat_bar.get(f"{_mu['race']}-{_mu['area']}")
     tl_json = json.dumps([{"y": t.get("y"), "won": bool(t.get("elected")), "lvl": t.get("lvl")} for t in tl], ensure_ascii=False)
+    pop = v["pop"]
+    pop_json = json.dumps({"rows": [{"y": t.get("y"), "votes": t.get("votes"), "rank": t.get("rank"),
+                                     "of": t.get("of"), "pct": t.get("pct"), "elected": bool(t.get("elected")),
+                                     "label": f"{t.get('lvl') or ''}{', ' + nice_area(t['area']) if t.get('area') else ''}"}
+                                    for t in (pop or {}).get("rows", [])]}, ensure_ascii=False) if pop else None
+    appt = appointed.get(pid) or []
+    _mlist = next((e[1] for e in entries if e[0] == main_uk), None)
+    weight = vote_weight(_mu, _mlist) if _mlist and RACE[_mu["race"]]["kind"] == "list" else None
+    # the legal preferential bar: 20 percent of a list's voters must circle you to jump the
+    # party's order. pop["best"]["pct"] is measured against the same denominator.
+    pref = None
+    if weight:
+        _b = (pop or {}).get("best")
+        pref = {"need": 20, "had": round(_b["pct"]) if _b and _b.get("pct") else None,
+                "y": _b["y"] if _b else None, "where": nice_area(_b["area"]) if _b and _b.get("area") else None}
+    bodies = local_record(tl) if not rec else None
+    loy = loyalty(tl)
     act_json = {ch: json.dumps({"rows": rows, "avg": (CH_AVG.get(ch) or {}).get("pris")}, ensure_ascii=False) for ch, rows in ACT.get(pid, {}).items()}
-    html = kand_tpl.render(p=v, tl=tl, tl_json=tl_json, prof=prof, rec=rec, kd=kd, replacement=replacement, cands_json=unit_json.get(main_uk), CH_AVG=CH_AVG, speeches_n=len(sp), speeches=sp_good[:5], assets=assets, runs=runs,
+    html = kand_tpl.render(p=v, tl=tl, tl_json=tl_json, pop=pop, pop_json=pop_json, appt=appt, bodies=bodies, loy=loy, bar=bar, weight=weight, pref=pref,
+                           prof=prof, rec=rec, kd=kd, replacement=replacement, cands_url=unit_json_url.get(main_uk), CH_AVG=CH_AVG, speeches_n=len(sp), speeches=sp_good[:5], assets=assets, runs=runs,
                            sim=SIM.get(pid, {}), pline=PLINE.get(pid, {}), act=act_json, my_party=people_rec.get(pid, {}).get("party_name"), **base_ctx)
     write(f"kandidat-{v['slug']}.html", html)
     n_kand += 1
+    # One compact row per person for the name search. Folding happens in the browser with
+    # the same foldq() the municipality box uses, so Cyrillic and Latin both match and the
+    # file does not have to carry a second copy of every name.
+    marks = ""
+    if v["office"]:
+        marks += "o"
+    elif v["won"]:
+        marks += "w"
+    if (v["pop"] or {}).get("best") and v["pop"]["best"]["rank"] == 1:
+        marks += "p"
+    if v["stood"] == 1:
+        marks += "n"
+    _u0 = units[entries[0][0]]
+    _ms = unit_munis.get(f"{_u0['race']}-{_u0['area']}", [])
+    where = v["home"] or (", ".join(_ms[:2]) + ("…" if len(_ms) > 2 else "") if _ms else RACE[_u0["race"]]["short"])
+    search_rows.append([v["name"], v["slug"], party_title(entries[0][1]), where, marks])
+
+search_rows.sort(key=lambda r: fold(r[0]))
+write("kandidati.json", json.dumps({"n": len(search_rows), "c": search_rows},
+                                   ensure_ascii=False, separators=(",", ":")))
 
 # --- ballot (unit) pages
 listic_tpl = env.get_template("listic.html")
@@ -728,6 +1000,7 @@ for uk, u in units.items():
                       "new": sum(1 for c in cands if c["stood"] == 1), "office": sum(1 for c in cands if c["office"]),
                       "mps": sum(1 for c in cands if c["has_record"]),
                       "votes22": (hist22.get(pi) or {}).get("votes"), "votes18": (hist18.get(pi) or {}).get("votes"),
+                      "w22": (vote_weight(u, l["name"]) or {}).get("list"),
                       "seats22": seats22.get(pi, 0), "program": prog, "p22": p22_for(prog), "hist": history_for(prog), "party_href": party_href(l["name"]),
                       "key_votes": recent_kv})
     total22 = sum((h.get("votes") or 0) for h in u.get("party_history", []) if h["year"] == 2022)
@@ -739,24 +1012,12 @@ for uk, u in units.items():
         pi_ = party_identity(h["party"])
         if pi_ not in now_ids and total22 and (h.get("votes") or 0) >= 0.03 * total22 and pi_ not in {a[2] for a in absent22} and not any(same_party(h["party"], l["name"]) for l in u["lists"]):
             absent22.append((party_title(h["party"]), h.get("votes") or 0, pi_, party_href(h["party"])))
-    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, munis=munis, cands_json=unit_json.get(uk), absent22=absent22, **base_ctx)
+    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, munis=munis, cands_url=unit_json_url.get(uk), absent22=absent22,
+                               weight=(vote_weight(u, u["lists"][0]["name"]) if u.get("lists") and RACE[race]["kind"] == "list" else None),
+                               bar=seat_bar.get(f"{race}-{u['area']}"), **base_ctx)
     write(unit_href(race, u["area"]), html)
 
 # --- municipality pages
-slug_by_folded = {}
-for m in municipalities:
-    slug_by_folded[fold(m["slug"].split(".")[-1]).replace("-", " ")] = m["slug"]
-ec_by_slug = {}
-for city, data in ecitizen["cities"].items():
-    slug = slug_by_folded.get(fold(city.replace("_", " ")))
-    if slug and data.get("sessions"):
-        good = []
-        for sess in data["sessions"]:
-            ag = [a for a in (sess.get("agendas") or []) if a.get("for") is not None]
-            if ag:
-                good.append({**sess, "agendas": [dict(a, name=(a.get("name") or "")[:110]) for a in ag[:6]]})
-        if good:
-            ec_by_slug[slug] = {**data, "sessions": good}
 opcina_tpl = env.get_template("opcina.html")
 for m in municipalities:
     ballots = []
@@ -826,7 +1087,22 @@ for _pk, _pp in party_pages.items():
         PINFO[_pp["program"]["name"]] = {"href": _pp["href"], "p22": f"prošli put provjereno {_rated}: {_c.get('ispunjeno', 0)} uradili, {_c.get('djelimično', 0)} pola, {_c.get('nije', 0)} nisu" if _rated else ("nisu bili u vlasti 2022–2026, nema šta provjeriti" if _c else "")}
 write("stranke.html", env.get_template("stranke.html").render(parties=plist, pmatrix={ch: json.dumps(m, ensure_ascii=False) for ch, m in PMATRIX.items()}, heat_text={ch: heat_sentences(m) for ch, m in PMATRIX.items()}, **base_ctx))
 write("obecanja.html", env.get_template("obecanja.html").render(themes=THEMES, n_parties=len([p for p in programs if p.get("promises")]), pinfo=PINFO, **base_ctx))
-write("metoda.html", env.get_template("metoda.html").render(cal=CAL, kd=key_decisions, n_records=len(records), n_div=len(divisions), n_programs=len(programs), **base_ctx))
+RACE22_NAME = {"32-2": "Predstavnički dom PSBiH", "32-4": "Predstavnički dom Parlamenta FBiH",
+               "32-6": "Narodna skupština RS", "32-7": "Skupštine kantona"}
+# How often a 2026 list cannot be matched back to any 2022 result by name. This is a real
+# limit on the chance estimate, so metoda.html prints it rather than hiding it.
+unmatched_lists, total_cands = 0, 0
+for _uk, _u in units.items():
+    if RACE[_u["race"]]["kind"] != "list":
+        continue
+    for _l in _u["lists"]:
+        _pi = party_identity(_l["name"])
+        _v = sum((h.get("votes") or 0) for h in _u.get("party_history", [])
+                 if h["year"] == 2022 and party_identity(h["party"]) == _pi)
+        total_cands += len(_l["candidates"])
+        if not _v:
+            unmatched_lists += len(_l["candidates"])
+write("metoda.html", env.get_template("metoda.html").render(cal=CAL, RACE22_NAME=RACE22_NAME, unmatched_lists=unmatched_lists, total_cands=total_cands, kd=key_decisions, n_records=len(records), n_div=len(divisions), n_programs=len(programs), **base_ctx))
 
 # --- presidency page
 def pres_cands(area):

@@ -1,0 +1,587 @@
+{
+ "oi2026-2-511": {
+  "year": 2022,
+  "candidates": 94,
+  "seats": 3,
+  "min": 4543,
+  "median": 9973,
+  "max": 15316,
+  "outpolled": 4,
+  "lowest": {
+   "name": "ALBIN MUSLIĆ",
+   "votes": 4543,
+   "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+   "pos": 1
+  }
+ },
+ "oi2026-2-512": {
+  "year": 2022,
+  "candidates": 75,
+  "seats": 3,
+  "min": 8645,
+  "median": 13704,
+  "max": 24653,
+  "outpolled": 2,
+  "lowest": {
+   "name": "ŠERIF ŠPAGO",
+   "votes": 8645,
+   "party": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+   "pos": 1
+  }
+ },
+ "oi2026-2-513": {
+  "year": 2022,
+  "candidates": 93,
+  "seats": 9,
+  "min": 2816,
+  "median": 11416,
+  "max": 27174,
+  "outpolled": 21,
+  "lowest": {
+   "name": "MILAN DUNOVIĆ",
+   "votes": 2816,
+   "party": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+   "pos": 4
+  }
+ },
+ "oi2026-2-514": {
+  "year": 2022,
+  "candidates": 116,
+  "seats": 6,
+  "min": 7297,
+  "median": 15255,
+  "max": 34861,
+  "outpolled": 5,
+  "lowest": {
+   "name": "VLATKO GLAVAŠ",
+   "votes": 7297,
+   "party": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+   "pos": 1
+  }
+ },
+ "oi2026-2-515": {
+  "year": 2022,
+  "candidates": 129,
+  "seats": 7,
+  "min": 1441,
+  "median": 12135,
+  "max": 32660,
+  "outpolled": 49,
+  "lowest": {
+   "name": "SLAVKO MATIĆ",
+   "votes": 1441,
+   "party": "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST",
+   "pos": 3
+  }
+ },
+ "oi2026-2-521": {
+  "year": 2022,
+  "candidates": 80,
+  "seats": 5,
+  "min": 4424,
+  "median": 32404,
+  "max": 35313,
+  "outpolled": 13,
+  "lowest": {
+   "name": "MIRA PEKIĆ",
+   "votes": 4424,
+   "party": "PDP- PARTIJA DEMOKRATSKOG PROGRESA",
+   "pos": 2
+  }
+ },
+ "oi2026-2-522": {
+  "year": 2022,
+  "candidates": 82,
+  "seats": 4,
+  "min": 12585,
+  "median": 19352,
+  "max": 28088,
+  "outpolled": 1,
+  "lowest": {
+   "name": "ČEDOMIR STOJANOVIĆ",
+   "votes": 12585,
+   "party": "DEMOKRATSKI SAVEZ -DEMOS",
+   "pos": 1
+  }
+ },
+ "oi2026-2-523": {
+  "year": 2022,
+  "candidates": 83,
+  "seats": 5,
+  "min": 3507,
+  "median": 19053,
+  "max": 34752,
+  "outpolled": 9,
+  "lowest": {
+   "name": "NENAD GRKOVIĆ",
+   "votes": 3507,
+   "party": "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA",
+   "pos": 1
+  }
+ },
+ "oi2026-4-401": {
+  "year": 2022,
+  "candidates": 124,
+  "seats": 11,
+  "min": 328,
+  "median": 5550,
+  "max": 8121,
+  "outpolled": 71,
+  "lowest": {
+   "name": "HALIL BAJRAMOVIĆ",
+   "votes": 328,
+   "party": "POVJERENJE! (NAROD I PRAVDA, SPU BIH)",
+   "pos": 10
+  }
+ },
+ "oi2026-4-409": {
+  "year": 2022,
+  "candidates": 108,
+  "seats": 12,
+  "min": 197,
+  "median": 3463,
+  "max": 9715,
+  "outpolled": 67,
+  "lowest": {
+   "name": "SUADA HALILOVIĆ",
+   "votes": 197,
+   "party": "POVJERENJE! (NAROD I PRAVDA, SPU BIH)",
+   "pos": 6
+  }
+ },
+ "oi2026-4-410": {
+  "year": 2022,
+  "candidates": 24,
+  "seats": 5,
+  "min": 261,
+  "median": 10472,
+  "max": 14737,
+  "outpolled": 15,
+  "lowest": {
+   "name": "IVAN BOBAN",
+   "votes": 261,
+   "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+   "pos": 1
+  }
+ },
+ "oi2026-4-411": {
+  "year": 2022,
+  "candidates": 130,
+  "seats": 13,
+  "min": 807,
+  "median": 3191,
+  "max": 14095,
+  "outpolled": 48,
+  "lowest": {
+   "name": "AMIR IBROVIĆ",
+   "votes": 807,
+   "party": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+   "pos": 12
+  }
+ },
+ "oi2026-4-412": {
+  "year": 2022,
+  "candidates": 43,
+  "seats": 3,
+  "min": 1435,
+  "median": 1571,
+  "max": 3261,
+  "outpolled": 2,
+  "lowest": {
+   "name": "KARLO NEVISTIĆ",
+   "votes": 1435,
+   "party": "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL",
+   "pos": 1
+  }
+ },
+ "oi2026-4-402": {
+  "year": 2022,
+  "candidates": 115,
+  "seats": 9,
+  "min": 499,
+  "median": 2346,
+  "max": 10825,
+  "outpolled": 38,
+  "lowest": {
+   "name": "RASIM SMAJLOVIĆ",
+   "votes": 499,
+   "party": "POVJERENJE! (NAROD I PRAVDA, SPU BIH)",
+   "pos": 4
+  }
+ },
+ "oi2026-4-403": {
+  "year": 2022,
+  "candidates": 131,
+  "seats": 9,
+  "min": 1419,
+  "median": 3876,
+  "max": 8072,
+  "outpolled": 16,
+  "lowest": {
+   "name": "MIRJANA MARINKOVIĆ-LEPIĆ",
+   "votes": 1419,
+   "party": "NAŠA STRANKA",
+   "pos": 1
+  }
+ },
+ "oi2026-4-404": {
+  "year": 2022,
+  "candidates": 93,
+  "seats": 4,
+  "min": 3983,
+  "median": 7666,
+  "max": 12693,
+  "outpolled": 4,
+  "lowest": {
+   "name": "HAJRUDIN KOZAREVIĆ",
+   "votes": 3983,
+   "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+   "pos": 1
+  }
+ },
+ "oi2026-4-405": {
+  "year": 2022,
+  "candidates": 123,
+  "seats": 9,
+  "min": 2409,
+  "median": 4836,
+  "max": 10713,
+  "outpolled": 12,
+  "lowest": {
+   "name": "ARNEL ISAK",
+   "votes": 2409,
+   "party": "NES-ZA EVROPSKU BIH",
+   "pos": 2
+  }
+ },
+ "oi2026-4-406": {
+  "year": 2022,
+  "candidates": 88,
+  "seats": 4,
+  "min": 1704,
+  "median": 3113,
+  "max": 6794,
+  "outpolled": 6,
+  "lowest": {
+   "name": "HAJRUDIN ŽILIĆ",
+   "votes": 1704,
+   "party": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+   "pos": 1
+  }
+ },
+ "oi2026-4-407": {
+  "year": 2022,
+  "candidates": 124,
+  "seats": 8,
+  "min": 1604,
+  "median": 3736,
+  "max": 11563,
+  "outpolled": 24,
+  "lowest": {
+   "name": "EDINA GABELA",
+   "votes": 1604,
+   "party": "STRANKA ZA BOSNU I HERCEGOVINU",
+   "pos": 5
+  }
+ },
+ "oi2026-4-408": {
+  "year": 2022,
+  "candidates": 127,
+  "seats": 11,
+  "min": 551,
+  "median": 3466,
+  "max": 12271,
+  "outpolled": 44,
+  "lowest": {
+   "name": "ALMA BEGANOVIĆ",
+   "votes": 551,
+   "party": "POVJERENJE! (NAROD I PRAVDA, SPU BIH)",
+   "pos": 2
+  }
+ },
+ "oi2026-6-301": {
+  "year": 2022,
+  "candidates": 168,
+  "seats": 11,
+  "min": 333,
+  "median": 2330,
+  "max": 9594,
+  "outpolled": 83,
+  "lowest": {
+   "name": "SUZANA GAŠIĆ",
+   "votes": 333,
+   "party": "DEMOKRATSKI SAVEZ -DEMOS",
+   "pos": 1
+  }
+ },
+ "oi2026-6-306": {
+  "year": 2022,
+  "candidates": 186,
+  "seats": 9,
+  "min": 2758,
+  "median": 7877,
+  "max": 12948,
+  "outpolled": 12,
+  "lowest": {
+   "name": "MILAN TRNINIĆ",
+   "votes": 2758,
+   "party": "UJEDINJENA SRPSKA",
+   "pos": 1
+  }
+ },
+ "oi2026-6-307": {
+  "year": 2022,
+  "candidates": 165,
+  "seats": 9,
+  "min": 1258,
+  "median": 3807,
+  "max": 10827,
+  "outpolled": 22,
+  "lowest": {
+   "name": "DRAGAN GALIĆ",
+   "votes": 1258,
+   "party": "NARODNA PARTIJA SRPSKE-DARKO BANJAC-PUS-PRVA SDS",
+   "pos": 1
+  }
+ },
+ "oi2026-6-308": {
+  "year": 2022,
+  "candidates": 108,
+  "seats": 6,
+  "min": 601,
+  "median": 5764,
+  "max": 10943,
+  "outpolled": 26,
+  "lowest": {
+   "name": "NIKOLINA ŠLJIVIĆ",
+   "votes": 601,
+   "party": "DNS-DEMOKRATSKI NARODNI SAVEZ",
+   "pos": 2
+  }
+ },
+ "oi2026-6-309": {
+  "year": 2022,
+  "candidates": 151,
+  "seats": 10,
+  "min": 960,
+  "median": 4556,
+  "max": 12090,
+  "outpolled": 23,
+  "lowest": {
+   "name": "ZAGORKA GRAHOVAC",
+   "votes": 960,
+   "party": "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA",
+   "pos": 2
+  }
+ },
+ "oi2026-6-302": {
+  "year": 2022,
+  "candidates": 155,
+  "seats": 7,
+  "min": 2069,
+  "median": 6325,
+  "max": 13421,
+  "outpolled": 8,
+  "lowest": {
+   "name": "RADISLAV DONČIĆ",
+   "votes": 2069,
+   "party": "PDP- PARTIJA DEMOKRATSKOG PROGRESA",
+   "pos": 1
+  }
+ },
+ "oi2026-6-303": {
+  "year": 2022,
+  "candidates": 253,
+  "seats": 21,
+  "min": 175,
+  "median": 4693,
+  "max": 29038,
+  "outpolled": 138,
+  "lowest": {
+   "name": "ANDREA GAJIĆ",
+   "votes": 175,
+   "party": "POKRET ZA DRŽAVU",
+   "pos": 6
+  }
+ },
+ "oi2026-6-304": {
+  "year": 2022,
+  "candidates": 102,
+  "seats": 4,
+  "min": 2407,
+  "median": 2502,
+  "max": 4216,
+  "outpolled": 0,
+  "lowest": {
+   "name": "TAMARA EVĐIĆ",
+   "votes": 2407,
+   "party": "SDS-SRPSKA DEMOKRATSKA STRANKA",
+   "pos": 7
+  }
+ },
+ "oi2026-6-305": {
+  "year": 2022,
+  "candidates": 141,
+  "seats": 6,
+  "min": 3044,
+  "median": 6379,
+  "max": 12105,
+  "outpolled": 8,
+  "lowest": {
+   "name": "SRĐAN TODOROVIĆ",
+   "votes": 3044,
+   "party": "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-NDP-SNP",
+   "pos": 1
+  }
+ },
+ "oi2026-7-201": {
+  "year": 2022,
+  "candidates": 420,
+  "seats": 30,
+  "min": 644,
+  "median": 1970,
+  "max": 14224,
+  "outpolled": 76,
+  "lowest": {
+   "name": "SENITA HANDUKIĆ",
+   "votes": 644,
+   "party": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+   "pos": 2
+  }
+ },
+ "oi2026-7-203": {
+  "year": 2022,
+  "candidates": 588,
+  "seats": 35,
+  "min": 794,
+  "median": 5250,
+  "max": 21313,
+  "outpolled": 142,
+  "lowest": {
+   "name": "SILVA BANOVIĆ",
+   "votes": 794,
+   "party": "NAROD I PRAVDA",
+   "pos": 2
+  }
+ },
+ "oi2026-7-204": {
+  "year": 2022,
+  "candidates": 484,
+  "seats": 35,
+  "min": 619,
+  "median": 2703,
+  "max": 16346,
+  "outpolled": 126,
+  "lowest": {
+   "name": "ANITA PAURIĆ",
+   "votes": 619,
+   "party": "HDZBIH,HSSSR,HSS,HSPBIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HDZ90,HNP",
+   "pos": 2
+  }
+ },
+ "oi2026-7-205": {
+  "year": 2022,
+  "candidates": 437,
+  "seats": 25,
+  "min": 232,
+  "median": 488,
+  "max": 1240,
+  "outpolled": 26,
+  "lowest": {
+   "name": "DALIBORKA MILOVIĆ",
+   "votes": 232,
+   "party": "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH",
+   "pos": 2
+  }
+ },
+ "oi2026-7-206": {
+  "year": 2022,
+  "candidates": 349,
+  "seats": 30,
+  "min": 408,
+  "median": 2499,
+  "max": 14010,
+  "outpolled": 96,
+  "lowest": {
+   "name": "TANJA MATOŠEVIĆ",
+   "votes": 408,
+   "party": "HDZ 1990 - HSP HB I BIH",
+   "pos": 2
+  }
+ },
+ "oi2026-7-207": {
+  "year": 2022,
+  "candidates": 347,
+  "seats": 30,
+  "min": 485,
+  "median": 1952,
+  "max": 6518,
+  "outpolled": 75,
+  "lowest": {
+   "name": "SADINA HEJUB",
+   "votes": 485,
+   "party": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+   "pos": 2
+  }
+ },
+ "oi2026-7-208": {
+  "year": 2022,
+  "candidates": 138,
+  "seats": 23,
+  "min": 946,
+  "median": 5866,
+  "max": 12496,
+  "outpolled": 18,
+  "lowest": {
+   "name": "MARIJA LOVRIĆ",
+   "votes": 946,
+   "party": "HRVATSKA STRANKA PRAVA DR  ANTE STARČEVIĆ BOSNE I HERCEGOVINE",
+   "pos": 1
+  }
+ },
+ "oi2026-7-209": {
+  "year": 2022,
+  "candidates": 520,
+  "seats": 35,
+  "min": 1204,
+  "median": 4587,
+  "max": 21503,
+  "outpolled": 106,
+  "lowest": {
+   "name": "VEDRANA VUJOVIĆ",
+   "votes": 1204,
+   "party": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+   "pos": 4
+  }
+ },
+ "oi2026-7-210": {
+  "year": 2022,
+  "candidates": 323,
+  "seats": 25,
+  "min": 172,
+  "median": 665,
+  "max": 2889,
+  "outpolled": 99,
+  "lowest": {
+   "name": "TONKA KOVČALIJA",
+   "votes": 172,
+   "party": "HDZ BIH - HRVATSKA DEMOKRATSKA ZAJEDNICA BIH",
+   "pos": 4
+  }
+ },
+ "oi2026-7-202": {
+  "year": 2022,
+  "candidates": 200,
+  "seats": 21,
+  "min": 230,
+  "median": 706,
+  "max": 3791,
+  "outpolled": 23,
+  "lowest": {
+   "name": "EMIR BEŠIREVIĆ",
+   "votes": 230,
+   "party": "NEZAVISNI-NEOVISNI",
+   "pos": 20
+  }
+ }
+}
