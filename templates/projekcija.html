@@ -38,11 +38,14 @@
 <div class="card">
 <h2 style="margin-top:0">Ko ulazi</h2>
 <p class="mut small" style="margin-top:0">Koliko često svaki čovjek dobije mandat u {{ pj.sims | num }} simulacija. Unutar jedne liste to ne odlučuju samo lični glasovi: ko pređe 20 posto glasača svoje liste uzima mjesto po glasovima, a <b>sve ostale mandate lista dijeli po svom redoslijedu</b> (član 9.8 izbornog zakona). Zato prvo i drugo mjesto na listi vrijede više nego kampanja.</p>
-<ol class="list proj-people">
+<ol class="plist">
 {% for c in h.people %}
 <li{% if not loop.first and c.p < 50 and h.people[loop.index0 - 1].p >= 50 %} class="cut"{% endif %}>
-<span class="pw{% if c.p >= 80 %} hi{% elif c.p >= 50 %} mid{% elif c.p >= 20 %} lo{% endif %}">{{ c.p | dec }}%</span>
-{% if c.href %}<a href="{{ c.href }}">{{ c.ime | nice }}</a>{% else %}{{ c.ime | nice }}{% endif %} <span class="small mut">{{ c.lista | ptitle }}{% if c.pos %}, {{ c.pos }}. na listi{% endif %}{% if c.unit_title %} · {{ c.unit_title }}{% endif %}{% if c.komp %} · {{ c.komp }}. na kompenzacijskoj listi{% endif %}</span>
+<span class="pw{% if c.p >= 80 %} hi{% elif c.p >= 50 %} mid{% elif c.p >= 20 %} lo{% endif %}">{{ c.p | tdec }}%</span>
+<span class="pbody">
+{% if c.href %}<a class="pname" href="{{ c.href }}">{{ c.ime | nice }}</a>{% else %}<span class="pname">{{ c.ime | nice }}</span>{% endif %}
+<span class="pmeta">{{ c.lista | ptitle }}{% if c.pos %} · {{ c.pos }}. na listi{% endif %}{% if c.unit_title %} · {{ c.unit_title }}{% endif %}{% if c.komp %} · {{ c.komp }}. na kompenzacijskoj listi{% endif %}</span>
+</span>
 </li>
 {% endfor %}
 </ol>

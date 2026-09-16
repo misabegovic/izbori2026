@@ -181,13 +181,21 @@ table.proj td.rg{white-space:nowrap}
 .twonum .tn{flex:1 1 12rem;min-width:11rem;background:#fafafa;border:1px solid #ececec;border-radius:.5rem;padding:.6rem .7rem}
 .twonum .tn b{display:block;font-size:1.7rem;line-height:1.1}
 .twonum .tn .tl2{display:block;font-size:.8rem;color:#5c5c5c;margin:.1rem 0 .3rem;text-transform:uppercase;letter-spacing:.03em}
-ol.proj-people{list-style:none;margin:.4rem 0 0;padding:0}
-ol.proj-people li{padding:.22rem 0;border-bottom:1px solid #f4f4f4;font-size:.95rem}
-ol.proj-people li.cut{border-top:2px solid #1f5fa9;margin-top:.5rem;padding-top:.5rem}
-.pw{display:inline-block;min-width:3.2rem;text-align:right;margin-right:.5rem;font-variant-numeric:tabular-nums;color:#8a8a8a}
+/* A person is three things — how often they get in, who they are, and the detail behind it —
+   and they were all running together in one wrapped paragraph per person, which on a phone
+   came out as three dense lines with no edge between the name and the small print. Give each
+   its own place: the number is a column, the name is a line, the detail is a line under it. */
+ol.plist{list-style:none;margin:.5rem 0 0;padding:0}
+ol.plist li{display:flex;gap:.7rem;align-items:baseline;padding:.5rem 0;border-bottom:1px solid #f0f0f0}
+ol.plist li:last-child{border-bottom:0}
+ol.plist li.cut{border-top:2px solid #1f5fa9;margin-top:.6rem;padding-top:.7rem}
+.pw{flex:0 0 3.7rem;text-align:right;font-variant-numeric:tabular-nums;color:#8a8a8a}
 .pw.hi{color:#14532d;font-weight:700}
 .pw.mid{color:#1f5fa9;font-weight:700}
 .pw.lo{color:#5c5c5c}
+.pbody{flex:1 1 auto;min-width:0}
+.pname{display:inline-block;font-weight:600;line-height:1.3}
+.pmeta{display:block;font-size:.84rem;color:var(--mut);line-height:1.4;margin-top:.1rem}
 @media (max-width:520px){
   .rng{width:3.2rem}
   table.proj{font-size:.78rem}
@@ -206,5 +214,7 @@ ol.proj-people li.cut{border-top:2px solid #1f5fa9;margin-top:.5rem;padding-top:
   /* .b is nowrap everywhere else on the site, and there it is right — but "nova/sklopljena"
      sitting inside a table cell drags the whole name column out with it. */
   table.proj td .b{white-space:normal}
+  ol.plist li{gap:.5rem}
+  .pw{flex-basis:3.1rem}
   .twonum .tn{min-width:0}
 }

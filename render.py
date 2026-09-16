@@ -224,6 +224,9 @@ env.filters["nice"] = nice_name
 env.filters["ptitle"] = party_title
 env.filters["ptitle_raw"] = lambda s: party_title(s, raw=True)
 env.filters["km"] = km
+# Templates that print a person's name ask this for the link; it answers None when that
+# person has no page, so a name is never a link to a 404.
+env.globals["chref"] = lambda pid: cand_href(pid)
 SRC_NAME = {"cin": "CIN, imovinapoliticara.cin.ba", "pd.fbih.karton": "Parlament FBiH", "psbih.detail": "parlament.ba", "cik": "CIK", "nsrs": "NSRS"}
 env.filters["srcname"] = lambda s: SRC_NAME.get(s or "", s or "")
 env.filters["area"] = lambda a: nice_area(a)
@@ -711,6 +714,11 @@ def proj_href(key):
     return f"projekcija-{key}.html"
 
 
+def cand_href(pid):
+    """Link to a person's page, or nothing if they did not get one."""
+    return f"kandidat-{pid_slug(pid)}.html" if pid and pid in CAND_PAGE else None
+
+
 def proj_unit(race, uk):
     return (((PROJ.get("races") or {}).get(race) or {}).get("units") or {}).get(uk)
 
@@ -1048,6 +1056,9 @@ def loyalty(tl):
 
 
 n_kand = 0
+# Which people actually got a profile page. Anything that links to a person has to ask this
+# first: a pid exists for everyone on a ballot, a page does not.
+CAND_PAGE = set()
 search_rows = []
 for pid, entries in cand_index.items():
     uk, lname, c = entries[0]
@@ -1114,6 +1125,7 @@ for pid, entries in cand_index.items():
                            prof=prof, rec=rec, kd=kd, replacement=replacement, cands_url=unit_json_url.get(main_uk), CH_AVG=CH_AVG, speeches_n=len(sp), speeches=sp_good[:5], assets=assets, runs=runs,
                            sim=SIM.get(pid, {}), pline=PLINE.get(pid, {}), act=act_json, my_party=people_rec.get(pid, {}).get("party_name"), **base_ctx)
     write(f"kandidat-{v['slug']}.html", html)
+    CAND_PAGE.add(pid)
     n_kand += 1
     # One compact row per person for the name search. Folding happens in the browser with
     # the same foldq() the municipality box uses, so Cyrillic and Latin both match and the
@@ -1353,7 +1365,7 @@ if PROJ:
                         cp = PROJ_CAND.get(c["pid"] or "") or {}
                         ranked.append({**c, "lista": l["lista"],
                                        "unit_title": pu_["title"] if len(uks) > 1 else None,
-                                       "href": f"kandidat-{pid_slug(c['pid'])}.html" if c.get("pid") else None,
+                                       "href": cand_href(c.get("pid")),
                                        "komp": (cp.get("komp_lista") or {}).get("mjesto")})
             ranked.sort(key=lambda c: -c["p"])
             _nl = (h.get("koalicije") or {}).get("najmanje_lista") or {}
@@ -1385,9 +1397,15 @@ if PROJ:
                 if _worst is None or (_r["projekcija"] - _r["stvarno"]) > _worst[0]:
                     _worst = (_r["projekcija"] - _r["stvarno"],
                               f"modelu je {party_title(_r['lista'])} davao {_r['projekcija']:g} mandata, a dobila je {_r['stvarno']}")
+    # The presidency races carry a pid per candidate but no link; add one where a page exists.
+    majority_ctx = []
+    for _m in (PROJ.get("majority") or {}).values():
+        _m = dict(_m)
+        _m["candidates"] = [dict(c, href=cand_href(c.get("pid"))) for c in _m.get("candidates") or []]
+        majority_ctx.append(_m)
     write("projekcije.html", env.get_template("projekcije.html").render(
         pj=PROJ, bt=_bt, houses=houses_ctx, cantons=cantons_ctx,
-        majority=list((PROJ.get("majority") or {}).values()),
+        majority=majority_ctx,
         polls=(PROJ.get("diagnostics") or {}).get("ankete") or [],
         cal_mid=(f"{_mid['stvarno']:g}%".replace(".", ",") if _mid else "otprilike toliko"),
         worst_new=(_worst[1] if _worst else None), **base_ctx))

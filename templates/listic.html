@@ -95,7 +95,7 @@ window.homeFilter=function(){var on=document.getElementById('homechk').checked;r
 <p><b>Čiji su ovo birači bili 2022:</b> {% for s in l.proj.nasljeduje %}{{ s.stranka | ptitle }} ({{ s.udio | dec }}%){% if not loop.last %}, {% endif %}{% endfor %}. <span class="small mut">Ne po imenu liste nego po tome gdje su ljudi s nje stajali prošli put; odatle projekcija računa koliko glasova lista počinje.</span></p>
 {% endif %}
 <p><b>Projekcija za 2026:</b> oko <b>{{ l.proj.udio | dec }}%</b> glasova ovdje i <b>{{ l.proj.mandati | dec }}</b> mandata{% if l.proj.p_prag < 97 %}; prag od 3% pređe u {{ l.proj.p_prag | dec }}% simulacija{% endif %}.
-{% if l.proj.kandidati and l.proj.kandidati[0].p >= 5 %}<br><span class="small">Najvjerovatniji da uđu: {% for c in l.proj.kandidati[:3] %}{% if c.p >= 5 %}{{ c.ime | nice }} ({{ c.p | dec }}%){% if not loop.last %}, {% endif %}{% endif %}{% endfor %}.</span>{% endif %}
+{% if l.proj.kandidati and l.proj.kandidati[0].p >= 5 %}<br><span class="small">Najvjerovatniji da uđu: {% for c in l.proj.kandidati[:3] %}{% if c.p >= 5 %}{% set ch = chref(c.pid) %}{% if ch %}<a href="{{ ch }}">{{ c.ime | nice }}</a>{% else %}{{ c.ime | nice }}{% endif %} ({{ c.p | dec }}%){% if not loop.last %}, {% endif %}{% endif %}{% endfor %}.</span>{% endif %}
 {% if l.proj.nastavak < 0.6 %}<br><span class="small mut">Ovu listu model sklapa iz ranijih stranaka jer nije nastavak jedne — takve su u provjeri na 2022. najviše promašivale, pa ovoj brojci treba vjerovati manje.</span>{% endif %}
 </p>
 {% endif %}
