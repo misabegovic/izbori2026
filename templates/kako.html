@@ -6,8 +6,9 @@
 {% for s in ctx.how_to_vote %}
 <div class="step"><div class="n">{{ loop.index }}</div><div><b>{{ s.step }}</b><br><span class="mut">{{ s.detail }}</span></div></div>
 {% endfor %}
-<h2>Kako od glasova nastaju mandati</h2>
-<div class="card">{% for s in ctx.how_votes_become_seats %}<p>{{ s }}</p>{% endfor %}</div>
+<div class="card"><b>Ne brini:</b> na biralištu ti ljudi iz komisije pokažu gdje se stavlja prst i gdje ide papir. Ako pogriješiš na listiću, možeš tražiti novi. Nema pitanja za koga glasaš.</div>
+<details><summary>Kako od glasova nastaju mjesta u parlamentu (ako te zanima)</summary>
+<div class="card">{% for s in ctx.how_votes_become_seats %}<p>{{ s }}</p>{% endfor %}</div></details>
 <p class="src">Izvori: {% for s in ctx.how_to_vote_sources %}<a href="{{ s }}">{{ s | replace('https://','') | truncate(40) }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
 <a class="btn" href="index.html">Nađi svoju općinu →</a>
 {% endblock %}

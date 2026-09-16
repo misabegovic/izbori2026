@@ -159,7 +159,7 @@ def program_for(list_name):
 def dedupe_tl(tl):
     seen, out = set(), []
     for t in tl:
-        k = (t.get("y"), t.get("lvl"), fold(t.get("area") or ""), party_key(t.get("party") or "")[:12])
+        k = (t.get("y"), fold(t.get("lvl") or "")[:8], fold(t.get("area") or "")[:10], party_key(t.get("party") or "")[:12])
         if k in seen:
             continue
         seen.add(k); out.append(t)
@@ -340,7 +340,7 @@ def party_summary(pk):
         for nm, cnt in u.get("seats22", {}).items():
             if party_identity(nm) == pi:
                 seats22 += cnt
-        if any(party_key(l["name"]) == pk for l in u["lists"]):
+        if any(party_identity(l["name"]) == pk for l in u["lists"]):
             units_in += 1
     funding = None
     for code in list_codes.get(pk, []):

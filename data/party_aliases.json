@@ -23,16 +23,23 @@
  ],
  "NES (Nezavisni europski savez, NES BiH / PDA / Naprijed!)": [
   "^nes bih",
-  "^nes pda"
+  "^nes pda",
+  "^nes$",
+  "^nes ",
+  "^pokret demokratske akcije pda",
+  "^za nove generacije",
+  "^a sda"
  ],
  "Snaga naroda": [
   "^snaga naroda"
  ],
  "HDZ BiH": [
-  "^hdz bih"
+  "^hdz bih",
+  "^hdzbih"
  ],
  "Narod i pravda (NiP)": [
-  "^narod i pravda"
+  "^narod i pravda",
+  "^povjerenje"
  ],
  "Bosanskohercegovačka inicijativa Kasumović Fuad": [
   "^bosanskohercegovacka inicijativa"
@@ -60,13 +67,16 @@
   "^ujedinjena srpska"
  ],
  "DNS-NPS (Banjac-Nešić)": [
-  "^dns nps"
+  "^dns nps",
+  "^dns demokratski narodni savez",
+  "^narodna partija srpske"
  ],
  "Narodni front Jelena Trivić": [
   "^narodni front"
  ],
  "Socijalistička partija Petar Đokić / DEMOS / NDP": [
-  "^socijalisticka partija petar djokic"
+  "^socijalisticka partija petar djokic",
+  "^demokratski savez demos"
  ],
  "SPS Goran Selak Pokret Jedinstvena Srpska": [
   "^sps goran selak"
