@@ -180,6 +180,7 @@ speeches = json.load(open(D + "speeches.json")) if os.path.exists(D + "speeches.
 ecitizen = json.load(open(D + "ecitizen.json")) if os.path.exists(D + "ecitizen.json") else {"cities": {}}
 appointed = json.load(open(D + "appointed.json")) if os.path.exists(D + "appointed.json") else {}
 unit_spend = json.load(open(D + "unit_spend.json")) if os.path.exists(D + "unit_spend.json") else {}
+seat_bar = json.load(open(D + "seat_bar.json")) if os.path.exists(D + "seat_bar.json") else {}
 
 units = {}
 for f in glob.glob(D + "units/*.json"):
@@ -706,15 +707,28 @@ def unit_cands_json(u):
             chance = ch.get(pid or c["name"])
             tl = timelines.get(pid, [])
             v22 = next((t.get("votes") for t in tl if t.get("y") == 2022 and t.get("votes") and (t.get("lvl") or "") == RACE_LVL.get(u["race"], "")), None)
+            past = [x for x in tl if (x.get("y") or 0) < 2026 and x.get("votes")]
+            best_v = max(past, key=lambda x: x["votes"]) if past else None
+            ranked = [x for x in past if x.get("rank") and x.get("seat") != "single"]
+            best_r = min(ranked, key=lambda x: x["rank"]) if ranked else None
             rec = record_summary(pid)
             r0 = (rec or [None])[-1] if rec else None
             out.append({"id": pid, "n": v["name"], "l": li, "pos": c.get("pos"), "s": v["stood"] or 0, "w": v["won"] or 0, "p": max(v["n_parties"], 1),
                         "v22": v22, "za": r0["za_pct"] if r0 else None, "pris": r0["prisustvo_pct"] if r0 else None, "rec": bool(rec),
+                        "vb": best_v["votes"] if best_v else None, "vby": best_v["y"] if best_v else None,
+                        "rk": best_r["rank"] if best_r else None, "rko": best_r["of"] if best_r else None,
                         "story": v["story"], "href": f"kandidat-{v['slug']}.html" if v["has_page"] else None, "img": v["img"],
                         "ch": chance[0] if chance else None, "chw": chance[1] if chance else None})
     return json.dumps({"lists": lists, "cands": out}, ensure_ascii=False, separators=(",", ":"))
 
 unit_json = {uk: unit_cands_json(u) for uk, u in units.items() if RACE[u["race"]]["kind"] == "list"}
+# One file per ballot, fetched by viz.js when the reader opens the chart. Inlining this in
+# every profile made dist/ 661 MB; as files it is a couple of megabytes served once.
+unit_json_url = {}
+for _uk, _j in unit_json.items():
+    _name = f"kandidati-{_uk}.json"
+    write(_name, _j)
+    unit_json_url[_uk] = _name
 for _asset in ("viz.js", "style.css", "app.js"):
     shutil.copy(f"static/{_asset}", f"dist/{_asset}")
 shutil.copytree("static/lica", "dist/lica")
@@ -880,6 +894,8 @@ for pid, entries in cand_index.items():
     runs = [{"unit": units[e[0]], "list": e[1], "chance": _chance(e), "href": unit_href(units[e[0]]["race"], units[e[0]]["area"]), "pos": e[2].get("pos"),
              "party_href": party_href(e[1]), "where": _where(units[e[0]])} for e in entries]
     main_uk = next((e[0] for e in entries if units[e[0]]["area"] not in COMP), uk)
+    _mu = units[main_uk]
+    bar = seat_bar.get(f"{_mu['race']}-{_mu['area']}")
     tl_json = json.dumps([{"y": t.get("y"), "won": bool(t.get("elected")), "lvl": t.get("lvl")} for t in tl], ensure_ascii=False)
     pop = v["pop"]
     pop_json = json.dumps({"rows": [{"y": t.get("y"), "votes": t.get("votes"), "rank": t.get("rank"),
@@ -890,8 +906,8 @@ for pid, entries in cand_index.items():
     bodies = local_record(tl) if not rec else None
     loy = loyalty(tl)
     act_json = {ch: json.dumps({"rows": rows, "avg": (CH_AVG.get(ch) or {}).get("pris")}, ensure_ascii=False) for ch, rows in ACT.get(pid, {}).items()}
-    html = kand_tpl.render(p=v, tl=tl, tl_json=tl_json, pop=pop, pop_json=pop_json, appt=appt, bodies=bodies, loy=loy,
-                           prof=prof, rec=rec, kd=kd, replacement=replacement, cands_json=unit_json.get(main_uk), CH_AVG=CH_AVG, speeches_n=len(sp), speeches=sp_good[:5], assets=assets, runs=runs,
+    html = kand_tpl.render(p=v, tl=tl, tl_json=tl_json, pop=pop, pop_json=pop_json, appt=appt, bodies=bodies, loy=loy, bar=bar,
+                           prof=prof, rec=rec, kd=kd, replacement=replacement, cands_url=unit_json_url.get(main_uk), CH_AVG=CH_AVG, speeches_n=len(sp), speeches=sp_good[:5], assets=assets, runs=runs,
                            sim=SIM.get(pid, {}), pline=PLINE.get(pid, {}), act=act_json, my_party=people_rec.get(pid, {}).get("party_name"), **base_ctx)
     write(f"kandidat-{v['slug']}.html", html)
     n_kand += 1
@@ -959,7 +975,7 @@ for uk, u in units.items():
         pi_ = party_identity(h["party"])
         if pi_ not in now_ids and total22 and (h.get("votes") or 0) >= 0.03 * total22 and pi_ not in {a[2] for a in absent22} and not any(same_party(h["party"], l["name"]) for l in u["lists"]):
             absent22.append((party_title(h["party"]), h.get("votes") or 0, pi_, party_href(h["party"])))
-    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, munis=munis, cands_json=unit_json.get(uk), absent22=absent22, **base_ctx)
+    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, munis=munis, cands_url=unit_json_url.get(uk), absent22=absent22, **base_ctx)
     write(unit_href(race, u["area"]), html)
 
 # --- municipality pages

@@ -38,13 +38,12 @@
 {{ hbar((loop.index ~ '. ' ~ (l.name | ptitle)) ~ (' · ' ~ ('u vlasti' if l.program.power.startswith('u vlasti') else ('opozicija' if l.program.power.startswith('opozicija') else 'nova stranka')) if l.program else ' · bez programa'), l.votes22 or 0, maxv, (l.votes22 | num) if l.votes22 else 'nije bila 2022') }}
 {% endfor %}
 </div>
-{% if cands_json %}
+{% if cands_url %}
 <details class="card"><summary>Uporedi sve kandidate na grafu ({{ u.stats.candidates }} ljudi)</summary>
 <p class="mut small" style="margin:.4rem 0 .3rem">Jedan krug = jedan čovjek, red = lista. Dodirni krug za ime i priču. Tamnoplavo = bio poslanik 2022–26. „Šansa za mjesto” je gruba procjena iz rezultata 2022 i reda na listi, ne preporuka.</p>
-<div class="viz" data-src="cands"></div>
+<div class="viz" data-url="{{ cands_url }}"></div>
 <noscript><p class="mut small">Graf traži JavaScript; sve isto piše niže u listama.</p></noscript>
 </details>
-<script type="application/json" id="cands">{{ cands_json | safe }}</script>
 {% endif %}
 <h2>Liste, redom kako su na papiru</h2>
 <div id="homefilter" style="display:none" class="card"><label><input type="checkbox" id="homechk" onchange="homeFilter()"> Označi ljude iz: <b id="homename"></b> <span class="mut small">(znamo za <span id="homen"></span>; za ostale ne znamo odakle su)</span></label></div>

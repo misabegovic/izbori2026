@@ -129,6 +129,50 @@ def build_timelines(rows, wanted):
     return dict(out), pubids
 
 
+# 2026 race -> the same race in 2022. Area codes are identical across the two years;
+# the only 2026-only codes are the compensatory lists (501, 502, 400, 300), which have
+# no 2022 counterpart and are handled separately in render.py.
+RACE_2022 = {"oi2026-2": "32-2", "oi2026-4": "32-4", "oi2026-6": "32-6", "oi2026-7": "32-7"}
+
+
+def seat_bar(rows):
+    """What a seat actually cost in personal votes here last time.
+
+    This exists to answer the obvious objection to a low chance: "but people vote for
+    him". Both things are true at once. A seat is won by the list first, and only then
+    does your own count decide who inside the list takes it. In Tuzla canton in 2022,
+    142 people collected more personal votes than the lowest-polling winner and still
+    did not get in. Printing that next to the percentage is more use than the percentage.
+    """
+    out = {}
+    for race26, race22 in RACE_2022.items():
+        areas = {}
+        for r in rows:
+            if r["raceId"] != race22 or r.get("votes") is None:
+                continue
+            areas.setdefault(str(r.get("areaCode")), []).append(r)
+        for area, cands in areas.items():
+            won = sorted((r for r in cands if r.get("elected")), key=lambda r: r["votes"])
+            if not won:
+                continue
+            floor = won[0]["votes"]
+            votes = [r["votes"] for r in won]
+            mid = votes[len(votes) // 2] if len(votes) % 2 else (votes[len(votes) // 2 - 1] + votes[len(votes) // 2]) // 2
+            out[f"{race26}-{area}"] = {
+                "year": 2022,
+                "candidates": len(cands),
+                "seats": len(won),
+                "min": floor,
+                "median": mid,
+                "max": votes[-1],
+                "outpolled": sum(1 for r in cands if not r.get("elected") and r["votes"] > floor),
+                "lowest": {"name": won[0].get("name"), "votes": floor,
+                           "party": (won[0].get("party") or {}).get("label"),
+                           "pos": won[0].get("position")},
+            }
+    return out
+
+
 def pull_appointed(pubids):
     """Seats people were appointed to rather than elected, keyed back to our pids.
 
@@ -202,10 +246,10 @@ def main():
     os.makedirs(D, exist_ok=True)
     started = time.time()
 
-    print("1/4 sve kandidature")
+    print("1/5 sve kandidature")
     rows = pull_all_candidacies()
 
-    print("2/4 historije kandidata 2026")
+    print("2/5 historije kandidata 2026")
     wanted = ballot_pids()
     timelines, pubids = build_timelines(rows, wanted)
     prior = sum(1 for t in timelines.values() if any(r["y"] != 2026 for r in t))
@@ -214,10 +258,15 @@ def main():
     json.dump(timelines, open(D + "timelines.json", "w"), ensure_ascii=False)
     json.dump(pubids, open(D + "pubids.json", "w"), ensure_ascii=False)
 
-    print("3/4 imenovanja")
+    print("3/5 koliko je ličnih glasova trebalo za mandat 2022")
+    bars = seat_bar(rows)
+    json.dump(bars, open(D + "seat_bar.json", "w"), ensure_ascii=False, indent=1)
+    print(f"   {len(bars)} izbornih jedinica")
+
+    print("4/5 imenovanja")
     json.dump(pull_appointed(pubids), open(D + "appointed.json", "w"), ensure_ascii=False, indent=1)
 
-    print("4/4 potrošnja jedinica u kojima su sjedili")
+    print("5/5 potrošnja jedinica u kojima su sjedili")
     units = {r["unit"] for t in timelines.values() for r in t if r.get("unit") and r.get("elected")}
     json.dump(pull_unit_spend(units), open(D + "unit_spend.json", "w"), ensure_ascii=False, indent=1)
 

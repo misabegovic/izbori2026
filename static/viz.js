@@ -108,18 +108,42 @@
     { k: 's', label: 'koliko puta na listi', fmt: function (v) { return v + '×'; } },
     { k: 'p', label: 'promjene stranaka', fmt: function (v) { return v + (v == 1 ? ' stranka' : ' stranke'); } },
     { k: 'v22', label: 'lični glasovi 2022', fmt: function (v) { return v.toLocaleString('de-DE'); }, only: true },
+    { k: 'vb', label: 'najviše ličnih glasova ikad', fmt: function (v) { return fmt(v); }, only: true },
+    { k: 'rk', label: 'najbolje mjesto po glasovima na svojoj listi', fmt: function (v) { return v + '.'; }, only: true, low: true },
+    { k: 'pos', label: 'mjesto na listi ove godine', fmt: function (v) { return v + '.'; }, low: true },
     { k: 'za', label: '% glasao „za” (poslanici)', fmt: function (v) { return v + '%'; }, only: true },
     { k: 'pris', label: '% prisutan (poslanici)', fmt: function (v) { return v + '%'; }, only: true }
   ];
+  // The ballot data is the same blob for every candidate on a paper: 588 people on the
+  // Tuzla canton list. Inlining it in each of 7000 profiles cost hundreds of megabytes, so
+  // it lives in one file per ballot and is fetched only when the reader opens the chart.
   function swarm(el) {
-    var data = JSON.parse(document.getElementById(el.dataset.src).textContent);
+    if (el.dataset.src) return render(el, JSON.parse(document.getElementById(el.dataset.src).textContent));
+    if (!el.dataset.url || el.dataset.loading) return;
+    var host = el.closest('details');
+    var go = function () {
+      if (el.dataset.loading) return;
+      el.dataset.loading = '1';
+      el.innerHTML = '<p class="small mut">Učitavam graf…</p>';
+      fetch(el.dataset.url).then(function (r) { return r.json(); })
+        .then(function (d) { el.innerHTML = ''; render(el, d); })
+        .catch(function () { el.innerHTML = '<p class="small mut">Graf se nije učitao.</p>'; });
+    };
+    if (host && !host.open) host.addEventListener('toggle', function once() { if (host.open) { host.removeEventListener('toggle', once); go(); } });
+    else go();
+  }
+  function render(el, data) {
     var lists = data.lists, cands = data.cands, me = el.dataset.me || null;
     var W = el.clientWidth || 360, left = 8, right = 26, top = 26;
     var bar = document.createElement('div'); bar.className = 'viz-bar'; el.appendChild(bar);
     var show = tipFor(el);
     var svg = d3.select(el).append('svg').attr('width', W);
-    var cur = METRICS[1];
-    METRICS.forEach(function (m) {
+    // Drop metrics nobody on this ballot has: an empty chart with a button above it looks
+    // like a bug. On a ballot with no former MPs that removes the two parliament metrics.
+    var usable = METRICS.filter(function (m) { return cands.some(function (c) { return c[m.k] != null; }); });
+    if (!usable.length) return;
+    var cur = usable.filter(function (m) { return m.k === 'w'; })[0] || usable[0];
+    usable.forEach(function (m) {
       var b = document.createElement('button'); b.textContent = m.label; b.className = 'tog';
       b.onclick = function () { cur = m; draw(); bar.querySelectorAll('button').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on'); };
       if (m === cur) b.classList.add('on');
@@ -139,7 +163,10 @@
       var cnt = el.querySelector('.viz-cnt'); if (!cnt) { cnt = document.createElement('div'); cnt.className = 'small mut viz-cnt'; el.insertBefore(cnt, svg.node()); } cnt.textContent = pts.length < cands.length ? 'Prikazano ' + pts.length + ' od ' + cands.length + ' ljudi (ostali nemaju ovaj podatak).' : 'Svih ' + cands.length + ' ljudi.';
       var max = d3.max(pts, function (c) { return c[cur.k]; }) || 1;
       var labelW = Math.round(W * 0.42);
-      var x = d3.scaleLinear().domain([0, cur.k === 'ch' ? 100 : max]).range([left + labelW, W - right]).nice();
+      // For rank-like metrics 1 is the good end, so flip the axis: on every metric the
+      // right-hand side is the stronger position.
+      var dom = cur.low ? [max, 1] : [0, cur.k === 'ch' ? 100 : max];
+      var x = d3.scaleLinear().domain(dom).range([left + labelW, W - right]).nice();
       var yOf = {}; rows.forEach(function (r, j) { yOf[r.i] = top + j * rowH + rowH / 2; });
       var g = svg.append('g');
       g.append('g').attr('transform', 'translate(0,' + (top - 8) + ')').call(d3.axisTop(x).ticks(4).tickFormat(function (v) { return cur.fmt(v); })).attr('class', 'viz-axis');
