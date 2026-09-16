@@ -33,22 +33,34 @@
 
 <div class="card" id="sansa">
 <h2>Kako računamo „šansu za mjesto”</h2>
-<p>Ne pogađamo ko će pobijediti. Gledamo samo dvije stvari: <b>koliko je mjesta stranka dobila 2022 na istom papiru</b> i <b>koji je čovjek po redu na listi</b>. Onda uzmemo sve kandidate iz 2022 koji su bili u istoj situaciji i prebrojimo koliko ih je stvarno prošlo. To je taj procenat.</p>
+<p>Ne pogađamo ko će pobijediti. Uzmemo dvije stvari koje se znaju unaprijed, nađemo sve kandidate iz 2022 koji su bili u istoj situaciji, i prebrojimo koliko ih je stvarno prošlo. To je taj procenat.</p>
+<p>Prva stvar je <b>gdje je čovjek na listi</b>, u odnosu na broj mjesta koje je njegova stranka dobila 2022 na istom papiru. Druga je <b>šta je taj čovjek već napravio na izborima</b>: da li je ikad bio prvi po ličnim glasovima na svojoj listi, da li je već biran, ili nikad nije bio na listiću.</p>
+<p>Druga stvar je dodana jer bez nje brojka laže. Kod nas se glasa za listu, ali se može zaokružiti i ime, i to ime pomjera. U 2022 je od ljudi koji su ranije bili prvi po glasovima na svojoj listi prošlo {{ cal.crossed['no_seats_rest|top1'].raw_pct }}% čak i kad su bili duboko na listi bez ijednog mjesta, dok je od onih koji nikad nisu bili na listiću prošlo {{ cal.crossed['no_seats_rest|none'].raw_pct }}%. Model koji gleda samo mjesto na listi objema grupama daje isti broj.</p>
+<p>Evo izmjerenih brojeva. „Ranije prvi” znači da je čovjek već bio prvi po ličnim glasovima na nekoj svojoj listi; „nikad na listiću” da se prvi put kandiduje.</p>
+<div class="calwrap"><table class="cal"><thead><tr><th>Gdje je na listi</th><th>Svi</th><th>Ranije prvi</th><th>Već biran ili pri vrhu</th><th>Bez jačeg rezultata</th><th>Nikad na listiću</th></tr></thead><tbody>
+{% for key, label in [('within','Unutar mjesta koje je stranka imala 2022'), ('plus1','Prvi iza tih mjesta'), ('plus2','Drugi iza'), ('beyond','Dalje na listi'), ('no_seats_pos1','Stranka bez mjesta, čovjek prvi na listi'), ('no_seats_rest','Stranka bez mjesta, ostali')] %}
+<tr><td>{{ label }}</td><td><b>{{ cal.position[key].pct }}%</b><br><span class="small mut">{{ cal.position[key].won }} od {{ cal.position[key].n }}</span></td>
+{% for pb in ['top1','strong','ran','none'] %}{% set c = cal.crossed.get(key ~ '|' ~ pb) %}<td>{% if c %}{{ c.pct }}%<br><span class="small mut">{{ c.won }} od {{ c.n }}</span>{% else %}—{% endif %}</td>{% endfor %}</tr>
+{% endfor %}
+</tbody></table></div>
+<p class="small mut">Tabela se na telefonu pomjera lijevo-desno.</p>
+<p class="small mut">Liste koje 2022 ovdje nisu izlazile ili nisu prešle 3% glasova računamo po istom redu „stranka bez mjesta”, jer su dio te iste grupe. Uz procenat im dopišemo da je za njih to prije gornja nego donja granica. Ne izmišljamo im posebnu brojku: da bismo je izmjerili, morali bismo pouzdano spojiti svaku listu iz 2026 s njenom listom iz 2022, a to po imenu ne ide.</p>
+<h3>Zašto vjerujemo da ovo nije slučajnost</h3>
+<p>Isti razmak postoji u sve četiri trke 2022 posebno, ne samo u zbiru. Procenat izabranih među onima koji su ranije bili prvi po glasovima, naspram onih koji nikad nisu bili na listiću:</p>
 <ul style="margin:.3rem 0 0 1.1rem;padding:0">
-<li>Unutar broja mjesta koje je stranka imala 2022: prošlo {{ cal.within.won }} od {{ cal.within.n }} ({{ cal.within.pct }}%) → „velika”.</li>
-<li>Prvi iza tih mjesta: {{ cal.plus1.won }} od {{ cal.plus1.n }} ({{ cal.plus1.pct }}%) → „srednja”.</li>
-<li>Drugi iza: {{ cal.plus2.won }} od {{ cal.plus2.n }} ({{ cal.plus2.pct }}%) → „mala”.</li>
-<li>Dalje na listi: {{ cal.beyond.won }} od {{ cal.beyond.n }} ({{ cal.beyond.pct }}%) → „vrlo mala”.</li>
-<li>Stranka 2022 nije imala mjesto, ali je čovjek prvi na listi: {{ cal.no_seats_pos1.won }} od {{ cal.no_seats_pos1.n }} ({{ cal.no_seats_pos1.pct }}%) → „mala”. Ostali s takve liste: {{ cal.no_seats_rest.pct }}%.</li>
-<li>Liste koje 2022 nisu bile na papiru ili su imale manje od 3% glasova: 2%.</li>
+{% for race, d in cal.stability_by_race.items() %}<li>{{ RACE22_NAME.get(race, race) }}: {{ d.top1 }}% naspram {{ d.none }}%</li>{% endfor %}
 </ul>
-<p class="small mut">Procenat ne zna ko je popularan, ko je nov, ni šta se promijenilo od 2022. Zato piše „nije prognoza”. Na listiću značku pokazujemo samo kad je šansa bar „srednja”, da lista ne izgleda kao rang.</p>
+<p>Gdje je grupa mala, broj povlačimo prema prosjeku te vrste mjesta na listi, da ćelija od dvadesetak ljudi ne proizvede samouvjerenu brojku. Snaga tog povlačenja je {{ cal.shrink_k }} zamišljenih slučajeva.</p>
+<h3>Šta ovaj procenat i dalje ne zna</h3>
+<p class="small mut">Ne zna šta se promijenilo od 2022: ko je u međuvremenu postao poznat, koja stranka je pukla, ko se s kim udružio. Ne zna ništa o kampanji. Mjeren je na jednim izborima, 2022, jer su to zadnji opći izbori za koje imamo i rezultat i stanje prije njih. Zato piše „nije prognoza”, a ne „prognoza”.</p>
 </div>
 
 <div class="card">
 <h2>Šta ne znamo</h2>
 <ul style="margin:.3rem 0 0 1.1rem;padding:0">
 <li>Kako su glasali poslanici u Parlamentu FBiH i kantonima (ne objavljuje se).</li>
+<li>Kako je bilo ko glasao u općinskom ili gradskom vijeću. eCitizen objavljuje dnevni red i zbir „za/protiv/uzdržan” po tački, ali <b>nijedno ime</b>. Zato na stranici vijećnika pokazujemo šta je vijeće odlučivalo, a ne kako je on glasao.</li>
+<li>Da li je lista iz 2026 zaista ista stranka kao lista iz 2022. Spajamo ih po imenu, a imena koalicija se mijenjaju svake četiri godine. Za {{ unmatched_lists }} od {{ total_cands }} kandidata ne nađemo nijedan glas njihove liste iz 2022, pa ih računica tretira kao novu listu. Neki to i jesu, neki nisu.</li>
 <li>Šta stranke rade u kantonalnim i općinskim vladama (nema sređenog izvora).</li>
 <li>Da li je obećanje iz programa ozbiljno. Mi ga samo prepišemo i pokažemo šta je bilo s prošlim.</li>
 <li>Ko je iza koga: ne pratimo vlasnike medija, donatore ni porodične veze.</li>

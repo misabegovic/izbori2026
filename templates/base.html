@@ -6,13 +6,13 @@
 <div class="d3 d3-stack" data-d3='{{ {"parts": parts, "total": total} | tojson }}'><span class="fb">{% set ns = namespace(items=[]) %}{% for lab, val, cls in parts %}{% if val %}{% set ns.items = ns.items + [lab ~ " " ~ val] %}{% endif %}{% endfor %}{{ ns.items | join(", ") }}</span></div>
 {%- endmacro %}
 {% macro chance(ch, small=false) -%}
-{% if ch %}<div class="d3 d3-chance{% if small %} sm{% endif %}" data-d3='{{ {"pct": ch[0], "word": ch[1], "why": ch[2], "frac": ch[3]} | tojson }}'><span class="fb">šansa za mjesto: {{ ch[1] }}</span></div>{% endif %}
+{% if ch %}<div class="d3 d3-chance{% if small %} sm{% endif %}" data-d3='{{ {"pct": ch[0], "word": ch[1], "why": ch[2], "frac": ch[3]} | tojson }}'><span class="fb">Šansa za mjesto: {{ ch[1] }} ({{ ch[3] }}). {{ ch[2] }} Nije prognoza.</span></div>{% endif %}
 {%- endmacro %}
 {% macro person_row(c) -%}
 <li class="person" data-home="{{ c.home_key }}">
   <span class="pos">{{ c.pos }}.</span>{% if c.img %}<img class="av" src="{{ c.img }}" alt="" width="36" height="36" loading="lazy">{% endif %}
   <span class="pname">{% if c.has_page %}<a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</span>{% if c.home %} <span class="mut small">({{ c.home }})</span>{% endif %}
-  <span class="badges">{% for b in c.badges %}{{ badge(b) }}{% endfor %}{% if c.chance and c.chance[0] >= 15 %}<span class="b ch-{{ c.chance[1] }}" title="{{ c.chance[2] }}">šansa za mjesto: {{ c.chance[1] }}</span>{% endif %}</span>
+  <span class="badges">{% for b in c.badges %}{{ badge(b) }}{% endfor %}{% if c.chance %}<span class="b ch-{{ c.chance[1] }}" title="{{ c.chance[2] }}">šansa: {{ c.chance[1] }} ({{ c.chance[3] }})</span>{% endif %}</span>
 </li>
 {%- endmacro %}
 <!doctype html>
@@ -21,112 +21,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}Izbori 2026 — jednostavno{% endblock %}</title>
-<style>
-:root { --bg:#f7f6f2; --fg:#181818; --mut:#5c5c5c; --acc:#1650a8; --card:#ffffff; --line:#dedbd3; --za:#1a7f37; --protiv:#b42318; --uz:#8a6d00; --od:#6b6b6b; }
-* { box-sizing:border-box; }
-html { font-size:19px; }
-body { background:var(--bg); color:var(--fg); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-height:1.5; margin:0; }
-main { max-width:660px; margin:0 auto; padding:0 16px 3rem; }
-a { color:var(--acc); }
-h1 { font-size:1.6rem; line-height:1.2; margin:1rem 0 .6rem; }
-h2 { font-size:1.2rem; margin:1.8rem 0 .6rem; }
-h3 { font-size:1.05rem; margin:.2rem 0 .4rem; }
-p { margin:.4rem 0 .8rem; }
-.top { background:#fff; border-bottom:1px solid var(--line); }
-.top .in { max-width:660px; margin:0 auto; padding:.5rem 16px; display:flex; align-items:center; gap:.6rem; }
-.top a.home { font-weight:700; text-decoration:none; color:var(--fg); white-space:nowrap; }
-.top nav { display:flex; gap:.9rem; overflow-x:auto; white-space:nowrap; flex:1; align-items:center; scrollbar-width:none; }
-.top nav a { font-size:.9rem; text-decoration:none; }
-.card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1rem; margin:.8rem 0; }
-.card.big { padding:1.2rem; }
-.card h2, .card h3 { margin-top:0; }
-.btn { display:block; background:var(--acc); color:#fff; text-decoration:none; text-align:center; padding:.9rem 1rem; border-radius:12px; font-weight:700; font-size:1.05rem; margin:.6rem 0; }
-.btn.sec { background:#fff; color:var(--acc); border:2px solid var(--acc); }
-.mut { color:var(--mut); font-size:.9rem; }
-.small { font-size:.85rem; }
-.lead { font-size:1.1rem; }
-.why { display:block; font-size:.82rem; color:#444; background:#fff7d6; border-radius:8px; padding:.3rem .5rem; margin:.2rem 0; white-space:normal; }
-.b { cursor:pointer; display:inline-block; font-size:.78rem; border-radius:999px; padding:.1rem .55rem; margin:.15rem .25rem .15rem 0; white-space:nowrap; background:#eee; color:#333; }
-.b.office { background:#dff5e6; color:#0f5e2a; }
-.b.won { background:#dbe8ff; color:#1a3f8a; }
-.b.switch { background:#ffe8c7; color:#7a4300; }
-.b.new { background:#ececec; color:#444; }
-.b.filler { background:#f3e1e1; color:#7a1f1f; }
-.b.record { background:#e8ddf7; color:#4a2a80; }
-.b.warn { background:#fff3cd; color:#664d03; }
-ul.people { list-style:none; padding:0; margin:.4rem 0; }
-li.person { display:flex; gap:.5rem; padding:.45rem 0; border-top:1px solid var(--line); align-items:baseline; flex-wrap:wrap; }
-li.person .pos { color:var(--mut); min-width:2rem; }
-li.person .pname { font-weight:600; }
-li.person .badges { flex-basis:100%; padding-left:2.5rem; }
-.facts { display:grid; grid-template-columns:1fr 1fr; gap:.5rem; margin:.6rem 0; }
-.fact { background:#f2f0ea; border-radius:10px; padding:.55rem .7rem; }
-.fact b { display:block; font-size:1.3rem; line-height:1.2; }
-.fact span { font-size:.82rem; color:var(--mut); }
-.vote { display:inline-block; font-weight:700; padding:.05rem .5rem; border-radius:8px; font-size:.85rem; }
-.v-za { background:#dff5e6; color:var(--za); }
-.v-protiv { background:#fde2df; color:var(--protiv); }
-.v-uz { background:#fff1c2; color:var(--uz); }
-.v-odsutan { background:#e9e9e9; color:var(--od); }
-.kd { border-top:1px solid var(--line); padding:.5rem 0; }
-.kd .t { font-weight:600; }
-.kd .d { color:var(--mut); font-size:.85rem; }
-details { margin:.4rem 0; }
-summary { cursor:pointer; color:var(--acc); font-weight:600; }
-input[type=search] { width:100%; padding:.9rem 1rem; font-size:1.15rem; border-radius:12px; border:2px solid var(--line); background:#fff; color:var(--fg); }
-.list a.item { display:block; padding:.6rem .2rem; border-top:1px solid var(--line); text-decoration:none; font-size:1.05rem; }
-.list a.item span { color:var(--mut); font-size:.85rem; margin-left:.4rem; }
-.claim { border-left:4px solid #e0b100; padding:.5rem .8rem; background:#fffbe6; border-radius:0 10px 10px 0; }
-.src { font-size:.78rem; color:var(--mut); word-break:break-all; }
-.step { display:flex; gap:.8rem; margin:.7rem 0; }
-.step .n { background:var(--acc); color:#fff; border-radius:50%; width:2rem; height:2rem; min-width:2rem; display:flex; align-items:center; justify-content:center; font-weight:700; }
-table { width:100%; border-collapse:collapse; font-size:.9rem; }
-td, th { padding:.35rem .3rem; text-align:left; vertical-align:top; border-top:1px solid var(--line); }
-th { color:var(--mut); font-weight:normal; font-size:.8rem; }
-footer { max-width:660px; margin:2rem auto 0; padding:1rem 16px 2rem; border-top:1px solid var(--line); font-size:.8rem; color:var(--mut); }
-.hb { padding:.3rem 0; font-size:.9rem; }
-.hb-l { line-height:1.25; margin-bottom:.15rem; }
-.hb-r { display:grid; grid-template-columns:1fr auto; gap:.5rem; align-items:center; }
-.hb-l a { text-decoration:none; color:var(--fg); }
-.hb-t { background:#eceae3; border-radius:4px; height:.8rem; overflow:hidden; }
-.hb-f { height:100%; border-radius:0 4px 4px 0; min-width:2px; }
-.hb-v { color:var(--mut); font-size:.82rem; white-space:nowrap; min-width:3.2rem; text-align:right; }
-.c-blue { background:#2a78d6; } .c-blue2 { background:#86b6ef; } .c-za { background:#0ca30c; } .c-protiv { background:#d03b3b; } .c-uz { background:#fab219; } .c-od { background:#a9a9a9; } .c-new { background:#c3c2b7; } .c-sw { background:#eb6834; }
-.st { display:flex; gap:2px; height:.9rem; border-radius:4px; overflow:hidden; margin:.3rem 0 .2rem; }
-.st-s { min-width:3px; }
-.st-l { display:flex; flex-wrap:wrap; gap:.3rem .9rem; font-size:.8rem; color:var(--mut); }
-.sw { display:inline-block; width:.7rem; height:.7rem; border-radius:2px; margin-right:.3rem; vertical-align:-1px; }
-.years { display:flex; flex-wrap:wrap; gap:.3rem; margin:.4rem 0; }
-.yr { border:2px solid #2a78d6; border-radius:8px; padding:.1rem .45rem; font-size:.8rem; color:#1c5cab; }
-.yr.won { background:#2a78d6; color:#fff; }
-.yr.now { border-style:dashed; }
-.cmp { width:100%; border-collapse:collapse; font-size:.85rem; }
-.cmp td { padding:.3rem .2rem; border-top:1px solid var(--line); vertical-align:middle; }
-.dot { display:inline-block; width:.6rem; height:.6rem; border-radius:50%; margin-right:.3rem; }
-.tl { border-left:3px solid var(--line); margin:.5rem 0 0 .45rem; padding-left:1rem; }
-.tl-i { position:relative; padding:.4rem 0 .7rem; }
-.tl-d { position:absolute; left:-1.55rem; top:.7rem; width:.9rem; height:.9rem; border-radius:50%; border:2px solid #fff; }
-.viz { position:relative; margin:.5rem 0; }
-.viz-bar { display:flex; flex-wrap:wrap; gap:.3rem; margin-bottom:.4rem; }
-.viz-bar .tog.on { background:var(--acc); color:#fff; border-color:var(--acc); }
-.viz-axis text { font-size:.6rem; fill:var(--mut); } .viz-axis path, .viz-axis line { stroke:var(--line); }
-.viz-grid { stroke:var(--line); }
-.viz-lab { font-size:.62rem; fill:var(--fg); }
-.viz-dot { fill:#86b6ef; stroke:#fff; stroke-width:1.5; cursor:pointer; }
-.viz-dot.rec { fill:#2a78d6; }
-.viz-dot.me { fill:#eb6834; stroke:#7a2e0a; stroke-width:2; }
-.viz-me { font-size:.6rem; font-weight:700; fill:#7a2e0a; paint-order:stroke; stroke:#fff; stroke-width:3px; }
-.viz-tip { position:absolute; z-index:5; background:#fff; border:1px solid var(--line); border-radius:10px; padding:.5rem .7rem; width:240px; font-size:.85rem; box-shadow:0 4px 14px rgba(0,0,0,.12); }
-.d3 .fb { font-size:.85rem; color:var(--mut); }
-.d3-bar { margin:.15rem 0; } .d3-stack { margin:.3rem 0; } .d3-chance { margin:.4rem 0; }
-.d3 svg text { font-family:inherit; }
-.b.ch-velika { background:#dff5e6; color:#0f5e2a; } .b.ch-srednja { background:#fff1c2; color:#6b5300; } .b.ch-mala, .b.ch-vrlo { background:#eeeeee; color:#555; }
-.av { width:36px; height:36px; border-radius:50%; object-fit:cover; vertical-align:middle; background:#eee; }
-.av.big { width:84px; height:84px; float:right; margin:0 0 .5rem .8rem; }
-.tog { font-size:1rem; background:#fff; border:1px solid var(--line); border-radius:8px; padding:.35rem .6rem; cursor:pointer; }
-.kd.hid { display:none; }
-@media (max-width:420px){ html{font-size:18px} .facts{grid-template-columns:1fr 1fr} }
-</style>
+<link rel="stylesheet" href="style.css?v={{ ASSET_V }}">
 </head>
 <body>
 <div class="top"><div class="in">
@@ -141,23 +36,6 @@ footer { max-width:660px; margin:2rem auto 0; padding:1rem 16px 2rem; border-top
 <p>Ko smo: volonterski, nestranački projekt bez reklama i praćenja (<a href="https://github.com/misabegovic/izbori2026">kod je javan</a>). Nikog ne preporučujemo. Pokazujemo šta je javno zapisano. <a href="metoda.html"><b>Kako je nastao sajt, odakle su brojke i kako smo birali odluke →</b></a></p>
 </footer>
 <script src="viz.js" defer></script>
-<script>
-(function(){
-var L2C={"A":"А","B":"Б","V":"В","G":"Г","D":"Д","Đ":"Ђ","E":"Е","Ž":"Ж","Z":"З","I":"И","J":"Ј","K":"К","L":"Л","M":"М","N":"Н","O":"О","P":"П","R":"Р","S":"С","T":"Т","Ć":"Ћ","U":"У","F":"Ф","H":"Х","C":"Ц","Č":"Ч","Š":"Ш",
-"a":"а","b":"б","v":"в","g":"г","d":"д","đ":"ђ","e":"е","ž":"ж","z":"з","i":"и","j":"ј","k":"к","l":"л","m":"м","n":"н","o":"о","p":"п","r":"р","s":"с","t":"т","ć":"ћ","u":"у","f":"ф","h":"х","c":"ц","č":"ч","š":"ш"};
-function tr(s){return s.replace(/Lj|LJ|lj|Nj|NJ|nj|Dž|DŽ|dž/g,function(m){return {"Lj":"Љ","LJ":"Љ","lj":"љ","Nj":"Њ","NJ":"Њ","nj":"њ","Dž":"Џ","DŽ":"Џ","dž":"џ"}[m];}).replace(/[A-Za-zĐđŽžĆćČčŠš]/g,function(ch){return L2C[ch]||ch;});}
-function walk(n){if(n.nodeType===3){if(!n._lat)n._lat=n.nodeValue;n.nodeValue=tr(n._lat);}else if(n.nodeType===1&&n.tagName!=="SCRIPT"&&n.tagName!=="STYLE"){for(var i=0;i<n.childNodes.length;i++)walk(n.childNodes[i]);}}
-function back(n){if(n.nodeType===3){if(n._lat)n.nodeValue=n._lat;}else if(n.nodeType===1){for(var i=0;i<n.childNodes.length;i++)back(n.childNodes[i]);}}
-window.bigger=function(){var h=document.documentElement;var cur=parseInt(localStorage.getItem("fs")||"0");cur=(cur+1)%3;localStorage.setItem("fs",cur);h.style.fontSize=["","22px","25px"][cur];};
-try{var fs=parseInt(localStorage.getItem("fs")||"0");if(fs)document.documentElement.style.fontSize=["","22px","25px"][fs];}catch(e){}
-window.foldq=function(s){var C={"а":"a","б":"b","в":"v","г":"g","д":"d","ђ":"dj","е":"e","ж":"z","з":"z","и":"i","ј":"j","к":"k","л":"l","љ":"lj","м":"m","н":"n","њ":"nj","о":"o","п":"p","р":"r","с":"s","т":"t","ћ":"c","у":"u","ф":"f","х":"h","ц":"c","ч":"c","џ":"dz","ш":"s","č":"c","ć":"c","ž":"z","š":"s","đ":"dj"};return s.toLowerCase().split("").map(function(c){return C[c]||c;}).join("");};
-window.cyrRefresh=function(){try{if(localStorage.getItem("cyr")==="1")walk(document.body);}catch(e){}};
-window.toggleScript=function(){var on=localStorage.getItem("cyr")==="1";if(on){back(document.body);localStorage.setItem("cyr","0");document.getElementById("tog").textContent="ЋИР";}else{walk(document.body);localStorage.setItem("cyr","1");document.getElementById("tog").textContent="LAT";}};
-var TAG={"putevi":"putevi i autoputevi","zdravstvo":"zdravstvo","poljoprivreda":"poljoprivreda","obrazovanje":"škole","priroda":"priroda i rudnici","infrastruktura":"infrastruktura","novac":"budžet i novac","porezi":"porezi","plate":"plate","sudovi":"sudovi","EU":"put u EU","ustav":"ustav i RS/BiH","sigurnost":"sigurnost","transparentnost":"korupcija i javnost","izbori":"izbori","imovina":"državna imovina","struja":"struja","porodica":"porodica","historija":"historija","privreda":"privreda","posao":"posao i mladi","korupcija":"korupcija i sudovi","eu":"EU i NATO","socijala":"socijalna pomoć i stanovi","ostalo":"ostalo","privreda":"privreda i investicije","sigurnost":"sigurnost","okolis":"voda, otpad, priroda"};
-document.addEventListener("click",function(e){var b=e.target.closest(".b[title]");if(!b)return;var w=b.parentNode.querySelector(".why");if(w&&w.dataset.for===b.textContent){w.remove();return;}if(w)w.remove();w=document.createElement("span");w.className="why";w.dataset.for=b.textContent;w.textContent=b.title;b.parentNode.appendChild(w);});
-document.querySelectorAll(".tagbar").forEach(function(bar){var list=document.getElementById(bar.dataset["for"]);if(!list)return;var items=list.querySelectorAll(".kd");var tags={};items.forEach(function(i){(i.dataset.tags||"").split(" ").forEach(function(t){if(t)tags[t]=(tags[t]||0)+1;});});var all=document.createElement("button");all.className="tog on";all.textContent="sve";bar.appendChild(all);var empty=document.createElement("p");empty.className="mut small";empty.textContent="Za ovu temu nema zabilježene odluke u ovom parlamentu.";empty.style.display="none";list.appendChild(empty);function pick(t,btn){var vis=0;items.forEach(function(i){var h=!!t&&(" "+i.dataset.tags+" ").indexOf(" "+t+" ")<0;i.classList.toggle("hid",h);if(!h)vis++;});empty.style.display=vis?"none":"";list.querySelectorAll(".chh").forEach(function(h){var d=h.nextElementSibling,any=false;while(d&&d.tagName!=="H3"){if(d.classList&&d.classList.contains("kd")&&!d.classList.contains("hid"))any=true;d=d.nextElementSibling;}h.style.display=any?"":"none";});bar.querySelectorAll("button").forEach(function(b){b.classList.remove("on");});btn.classList.add("on");}all.onclick=function(){pick(null,all);};Object.keys(tags).sort(function(a,b){return tags[b]-tags[a];}).forEach(function(t){var b=document.createElement("button");b.className="tog";b.textContent=(TAG[t]||t)+" ("+tags[t]+")";b.onclick=function(){pick(t,b);};bar.appendChild(b);});});
-try{if(localStorage.getItem("cyr")==="1"){walk(document.body);document.getElementById("tog").textContent="LAT";}}catch(e){}
-})();
-</script>
+<script src="app.js?v={{ ASSET_V }}" defer></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 (function () {
   var COL = { 'c-blue': '#2a78d6', 'c-blue2': '#86b6ef', 'c-za': '#0ca30c', 'c-protiv': '#d03b3b', 'c-uz': '#fab219', 'c-od': '#a9a9a9', 'c-new': '#c3c2b7', 'c-sw': '#eb6834' };
   var MUT = '#5c5c5c', INK = '#181818', LINE = '#dedbd3';
+  // 1421 -> '1.421', the separator used everywhere else on the site
+  function fmt(v) { return (v == null ? '' : v.toLocaleString('de-DE')); }
   function tipFor(host) {
     var tip = document.createElement('div'); tip.className = 'viz-tip'; tip.style.display = 'none'; host.style.position = 'relative'; host.appendChild(tip);
     return function (html, ev) {
@@ -178,6 +180,46 @@
     });
     if (d.avg != null) { var leg = document.createElement('div'); leg.className = 'st-l'; leg.innerHTML = '<span>- - - prosjek svih poslanika za cijeli mandat: ' + d.avg + '%</span>'; el.appendChild(leg); }
   }
+  function votes(el, d) {
+    // d: {rows:[{y, votes, label, rank, of, pct, elected}]} — personal votes per election.
+    // Height is the vote count, not a percentage, because the question this answers is
+    // "how many people wrote this name down", and the rank underneath says how that
+    // compared with everyone the person shared a list with.
+    el.innerHTML = '';
+    var W = el.clientWidth || 300, H = 118, top = 22, bot = 34, n = d.rows.length;
+    if (!n) return;
+    var bw = Math.min(64, (W - 10) / n - 8);
+    var svg = d3.select(el).append('svg').attr('width', W).attr('height', H);
+    var show = tipFor(el);
+    var max = d3.max(d.rows, function (r) { return r.votes; }) || 1;
+    var x = function (i) { return 6 + i * ((W - 12) / n) + ((W - 12) / n - bw) / 2; };
+    var y = d3.scaleLinear().domain([0, max]).range([H - bot, top]);
+    d.rows.forEach(function (r, i) {
+      var col = r.elected ? COL['c-za'] : COL['c-blue'];
+      svg.append('rect').attr('x', x(i)).attr('y', y(0)).attr('width', bw).attr('height', 0).attr('rx', 4)
+        .attr('fill', col).style('cursor', 'pointer')
+        .on('click', function (ev) {
+          ev.stopPropagation();
+          var s = '<b>' + r.y + '</b> ' + r.label + '<br>' + fmt(r.votes) + ' glasova';
+          if (r.rank) s += '<br>' + r.rank + '. od ' + r.of + ' ljudi na svojoj listi';
+          if (r.pct) s += ' (' + Math.round(r.pct) + '% svih glasova liste)';
+          s += '<br>' + (r.elected ? 'izabran/a' : 'nije izabran/a');
+          show(s, ev);
+        })
+        .transition().duration(600).attr('y', y(r.votes)).attr('height', y(0) - y(r.votes));
+      svg.append('text').attr('x', x(i) + bw / 2).attr('y', y(r.votes) - 5).attr('text-anchor', 'middle')
+        .attr('font-size', '.68rem').attr('font-weight', 700).attr('fill', INK).text(fmt(r.votes));
+      svg.append('text').attr('x', x(i) + bw / 2).attr('y', H - 18).attr('text-anchor', 'middle')
+        .attr('font-size', '.68rem').attr('fill', MUT).text(r.y);
+      if (r.rank) svg.append('text').attr('x', x(i) + bw / 2).attr('y', H - 5).attr('text-anchor', 'middle')
+        .attr('font-size', '.62rem').attr('fill', r.rank === 1 ? COL['c-za'] : MUT)
+        .attr('font-weight', r.rank === 1 ? 700 : 400).text(r.rank + '/' + r.of);
+    });
+    var leg = document.createElement('div');
+    leg.className = 'st-l';
+    leg.innerHTML = '<span>Stub je broj glasova. Ispod godine piše koje je bio po glasovima na svojoj listi.</span>';
+    el.appendChild(leg);
+  }
   function heat(el, d) {
     // d: {parties:[], mps:[], m:[[pct|null]]} — party x party agreement
     el.innerHTML = '';
@@ -205,6 +247,7 @@
   }
   function init() {
     document.querySelectorAll('.d3-vbars').forEach(function (el) { vbars(el, JSON.parse(el.dataset.d3)); });
+    document.querySelectorAll('.d3-votes').forEach(function (el) { votes(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-heat').forEach(function (el) { heat(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-bar').forEach(function (el) { bar(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-stack').forEach(function (el) { stack(el, JSON.parse(el.dataset.d3)); });

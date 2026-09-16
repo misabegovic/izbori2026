@@ -15,15 +15,23 @@
 <p class="mut" style="margin-top:.6rem">Ili <a href="opcine.html">vidi sve općine</a>.</p>
 </div>
 
+<div class="card big">
+<h2>2. Tražiš određenog čovjeka?</h2>
+<p class="mut" style="margin:.2rem 0 .5rem">Ukucaj ime i prezime bilo kojeg od {{ national.persons | num }} kandidata. Svaki ima svoju stranicu: koliko je glasova dobijao, šta je već radio i kolika mu je šansa.</p>
+<input type="search" id="qp" placeholder="Npr. Omer Berbić, Драган…" oninput="filterLjudi()" autocomplete="off">
+<div id="ljudi-list" class="list" style="display:none;margin-top:.6rem"></div>
+<p id="ljudi-hint" class="mut small" style="margin-top:.4rem;display:none"></p>
+</div>
 
-<h2>2. Šta još možeš pogledati</h2>
+
+<h2>3. Šta još možeš pogledati</h2>
 <div class="card"><h3><a href="predsjednistvo.html">Ko hoće u Predsjedništvo BiH</a></h3><p class="mut">10 ljudi. Ko su, šta su radili, šta obećavaju. Za RS i ko hoće biti predsjednik RS.</p></div>
 <div class="card"><h3><a href="stranke.html">Stranke: šta obećavaju i šta su radile</a></h3><p class="mut">Obećanja za 2026 pored zapisa: kako su njihovi poslanici glasali o budžetu, sudovima, porezima.</p></div>
 <div class="card"><h3><a href="desavanja.html">Šta se desilo od prošlih izbora</a></h3><p class="mut">Najvažnije odluke 2022–2026 u dvije rečenice. Ko je bio za, ko protiv.</p></div>
 <div class="card"><h3><a href="obecanja.html">Ko šta obećava, po temi</a></h3><p class="mut">Plate, zdravstvo, putevi, struja… obećanja svih stranaka jedno pored drugog.</p></div>
 <div class="card"><h3><a href="metoda.html">Ko radi ovaj sajt i odakle su brojke</a></h3><p class="mut">Da znaš čemu vjeruješ: izvori, kako smo birali odluke, kako računamo šansu.</p></div>
 
-<h2>3. Ko je na listićima, u brojkama</h2>
+<h2>4. Ko je na listićima, u brojkama</h2>
 <div class="card">
 <p class="mut" style="margin:0 0 .2rem">Od {{ national.candidacies | num }} kandidata:</p>
 {{ hbar('već bili izabrani', national.ever_won, national.candidacies, national.ever_won | num) }}
@@ -35,6 +43,42 @@
 <p><b>Tvoj glas je tajan.</b> Niko ne može vidjeti šta si zaokružio. Ni poslodavac, ni stranka, ni komšija.</p>
 </div>
 <script>
+var LJUDI = null, ljudiLoading = false;
+var MARK = { o: 'sada na funkciji', w: 'već biran', p: 'prvi po glasovima', n: 'prvi put' };
+
+function drawLjudi() {
+  var box = document.getElementById('ljudi-list');
+  var hint = document.getElementById('ljudi-hint');
+  var q = foldq(document.getElementById('qp').value.trim());
+  if (q.length < 2) { box.style.display = 'none'; hint.style.display = 'none'; return; }
+  if (!LJUDI) { hint.style.display = ''; hint.textContent = 'Učitavam spisak…'; return; }
+  var hits = [];
+  for (var i = 0; i < LJUDI.length && hits.length < 25; i++) {
+    if (foldq(LJUDI[i][0]).indexOf(q) >= 0) hits.push(LJUDI[i]);
+  }
+  box.innerHTML = hits.map(function (r) {
+    var marks = (r[4] || '').split('').map(function (m) { return MARK[m]; }).filter(Boolean).join(' · ');
+    return '<a class="item" href="kandidat-' + r[1] + '.html">' + r[0] +
+           '<span>' + r[2] + (r[3] ? ', ' + r[3] : '') + (marks ? ' — ' + marks : '') + '</span></a>';
+  }).join('');
+  box.style.display = hits.length ? '' : 'none';
+  hint.style.display = hits.length ? 'none' : '';
+  hint.textContent = hits.length ? '' : 'Nema nikoga s tim imenom na listama za 2026.';
+}
+
+function filterLjudi() {
+  if (!LJUDI && !ljudiLoading) {
+    ljudiLoading = true;
+    fetch('kandidati.json').then(function (r) { return r.json(); })
+      .then(function (d) { LJUDI = d.c; drawLjudi(); })
+      .catch(function () {
+        var hint = document.getElementById('ljudi-hint');
+        hint.style.display = ''; hint.textContent = 'Spisak se nije učitao. Probaj preko svoje općine iznad.';
+      });
+  }
+  drawLjudi();
+}
+
 function filterOpcine() {
   var q = foldq(document.getElementById('q').value.trim());
   var box = document.getElementById('opcine-list');
