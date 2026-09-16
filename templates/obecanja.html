@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Obećanja po temi — Izbori 2026{% endblock %}
+{% block content %}
+<p class="mut"><a href="javascript:history.back()">← nazad</a> · <a href="index.html">početna</a></p>
+<h1>Ko šta obećava, po temi</h1>
+<p class="lead">Izaberi temu koja te tiče. Ispod su obećanja svih stranaka za tu temu, jedno pored drugog. Tvrdnje stranaka, ne naša provjera; izvori su na stranici svake stranke.</p>
+<p class="mut small">Traka = koliko od {{ n_parties }} stranaka s programom nešto obećava na tu temu.</p>
+<div class="card">
+{% for t in themes %}
+{{ hbar(t.label, t.parties, n_parties, t.parties ~ ' stranaka') }}
+{% endfor %}
+</div>
+<div class="viz-bar tagbar" data-for="oblist"></div>
+<div id="oblist">
+{% for t in themes %}
+{% for r in t.rows %}
+<div class="kd" data-tags="{{ t.key }}"><span class="vote {{ 'v-za' if (r.power or '').startswith('u vlasti') else 'v-odsutan' }}">{{ 'u vlasti' if (r.power or '').startswith('u vlasti') else ('opozicija' if (r.power or '').startswith('opozicija') else 'novi') }}</span> <span class="t">{{ r.party | ptitle }}</span> <span class="d">{{ t.label }}</span><br><span class="small">{{ r.promise }}</span></div>
+{% endfor %}
+{% endfor %}
+</div>
+<p class="small mut">Ista obećanja se ponavljaju iz izbora u izbore. Na stranici stranke pod „Prošli put obećali” vidiš šta je s njima bilo.</p>
+{% endblock %}

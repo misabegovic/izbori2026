@@ -9,9 +9,12 @@ Vodič za birače koji ne prate politiku. Opći izbori u BiH, 4. oktobar 2026. B
 - `index.html` — gdje glasaš (pretraga općine), ulaz za prvi put, tri činjenice
 - `opcina-<slug>.html` — tvoji listići kao kartice (3–4), šta koji bira
 - `listic-<race>-<area>.html` — po listi: 4 brojke (ljudi, već izabrani, mijenjali stranke, prvi put), rezultat 2022 ovdje, prvo obećanje, kako su njihovi poslanici glasali, ljudi na listi sa značkama
-- `kandidat-<pid>.html` — priča u jednoj rečenici, glasanje kao poslanik (prisustvo, % za, ključne odluke), sve kandidature, biografija/imovina iz javnih izvora
+- `kandidat-<pid>.html` — priča u jednoj rečenici, šansa za mjesto, glasanje kao poslanik (prisustvo, % za, po godinama, ključne odluke), s kim glasa isto / suprotno, koliko prati svoju stranku, sve kandidature, biografija/imovina
 - `stranka-<key>.html` — obećanja 2026 s izvorima i pouzdanošću, zapis glasanja po ključnim odlukama, budžetsko finansiranje 2024, poslanici koji se ponovo kandiduju
-- `predsjednistvo.html`, `desavanja.html`, `kako-glasati.html`, `stranke.html`, `opcine.html`
+- `stranke.html` — sve stranke + matrica „ko glasa kao ko” (slaganje većina stranaka po domu)
+- `obecanja.html` — obećanja 2026 svih stranaka po temi (plate, zdravstvo, putevi…), filter
+- `metoda.html` — ko radi sajt, odakle su brojke, kako su birane ključne odluke, kako se računa šansa, šta ne znamo
+- `predsjednistvo.html`, `desavanja.html`, `kako-glasati.html`, `opcine.html`
 - ЋИР/LAT prekidač u zaglavlju (transliteracija u pregledniku)
 
 ## Kako radi
@@ -28,7 +31,8 @@ render.py         Jinja2 → dist/ (≈1.400 statičkih stranica)
 serve.py          statički server za Railway
 review.py         persona-review preko Claude API-ja (persone u phone-brain/personas/users)
 backtest.py       kalibracija „šanse za mandat”: isto pravilo primijenjeno na liste 2022 vs. stvarni pobjednici → data/chance_calibration.json
-static/viz.js     D3 grafovi (trake, složene trake, karijera, gauge šanse, swarm svih kandidata na listiću)
+analytics.py      izvedena analitika iz glasanja: sličnost poslanika, linija stranke, matrica stranaka, aktivnost po godinama; obećanja po temi
+static/viz.js     D3 grafovi (trake, složene trake, karijera, gauge šanse, swarm svih kandidata, stupci po godinama, matrica)
 ```
 
 Podaci su commitani, deploy ne zavisi od API-ja.

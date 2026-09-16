@@ -35,6 +35,24 @@
 <p class="small mut">Ukupno {{ r.n | num }} glasanja.{% if r.nsrs %} NSRS ne objavljuje ko je bio odsutan, samo ko nije glasao.{% endif %}</p>
 </div>
 {% endfor %}
+{% if act %}
+<h2>Koliko je glasao, po godinama</h2>
+<p class="mut small">Na koliko posto glasanja te godine je glasao/la. Isprekidana crta = prosjek doma za cijeli mandat.</p>
+{% for ch, j in act.items() %}<div class="card"><p class="mut small" style="margin:0 0 .3rem">{{ CHAMBER_NAME.get(ch, ch) }}</p><div class="d3 d3-vbars" data-d3='{{ j }}'><span class="fb">po godinama (traži JavaScript)</span></div></div>{% endfor %}
+{% endif %}
+{% if sim or pline %}
+<h2>S kim glasa isto</h2>
+{% for ch, s in sim.items() %}
+<div class="card">
+<p class="mut small" style="margin:0 0 .3rem">{{ CHAMBER_NAME.get(ch, ch) }}, poređeno sa {{ s.pool - 1 }} drugih kandidata 2026 koji su bili poslanici. Procenat = koliko puta su glasali isto kad su oba glasala.</p>
+{% if pline.get(ch) %}<p style="margin:.2rem 0"><b>Kao svoja stranka ({{ my_party }}):</b> {{ pline[ch].pct }}% glasanja isto kao većina ostalih {{ pline[ch].others }} poslanika stranke.{% if pline[ch].pct < 85 %} <span class="mut small">Ispod 85% znači da nerijetko glasa mimo svojih.</span>{% endif %}</p>{% endif %}
+<p style="margin:.2rem 0"><b>Najčešće isto kao:</b></p>
+<ul style="margin:0 0 .3rem 1.1rem;padding:0">{% for x in s.same %}<li><a href="{{ x.href }}">{{ x.name }}</a> ({{ x.party }}): {{ x.pct }}%</li>{% endfor %}</ul>
+{% if s.opposite %}<p style="margin:.2rem 0"><b>Najčešće suprotno od:</b></p>
+<ul style="margin:0 0 .3rem 1.1rem;padding:0">{% for x in s.opposite %}<li><a href="{{ x.href }}">{{ x.name }}</a> ({{ x.party }}): isto samo {{ x.pct }}%</li>{% endfor %}</ul>{% endif %}
+</div>
+{% endfor %}
+{% endif %}
 {% if rec and not kd %}<p class="mut small">Nije glasao/la ni o jednoj od odabranih ključnih odluka. Najčešći razlog: u to vrijeme nije bio/la u parlamentu, ili je bio/la ministar pa nije glasao/la.</p>{% endif %}
 {% if kd %}
 <h2>Ključne odluke: kako je glasao/la</h2>

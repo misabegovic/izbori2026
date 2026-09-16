@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Kako je nastao ovaj sajt — Izbori 2026{% endblock %}
+{% block content %}
+<p class="mut"><a href="javascript:history.back()">← nazad</a> · <a href="index.html">početna</a></p>
+<h1>Kako je nastao ovaj sajt, i ko ga radi</h1>
+<p class="lead">Da znaš čemu vjeruješ. Sve ispod možeš sam provjeriti: brojke imaju izvor, kod je javan.</p>
+
+<div class="card big">
+<h2>Ko smo</h2>
+<p>Volonterski projekt, jedna osoba i pomoć alata, bez stranke iza, bez reklama, bez praćenja ko šta gleda. Sajt ne prima novac ni od koga. <a href="https://github.com/misabegovic/izbori2026">Kod i svi podaci su javni</a>, pa svako može vidjeti kako je koja brojka nastala i prijaviti grešku.</p>
+<p><b>Ne preporučujemo nikoga.</b> Ako ti se čini da sajt nekog gura, javi: to je greška koju hoćemo ispraviti.</p>
+</div>
+
+<div class="card">
+<h2>Odakle su brojke</h2>
+<ul style="margin:.3rem 0 0 1.1rem;padding:0">
+<li><b>Ko se kandiduje, ko je ranije bio izabran, za koju stranku:</b> službene liste Centralne izborne komisije od 2006 do 2026, sređene na <a href="https://gianniravioli.com/mashinerija/">gianniravioli.com „Mashinerija”</a> (otvoreni podaci, CC BY 4.0). Osobe su spojene po imenu kroz izbore, pa kod dva čovjeka istog imena u istoj općini može doći do greške; tamo gdje je to moguće, sajt to i kaže.</li>
+<li><b>Kako je ko glasao:</b> {{ n_div | num }} poimeničnih glasanja u državnom parlamentu (PSBiH) i Narodnoj skupštini RS, 2022–2026, za {{ n_records }} kandidata koji su bili poslanici. Parlament Federacije i kantoni ne objavljuju ko je kako glasao, pa za te ljude zapisa nema.</li>
+<li><b>Obećanja 2026:</b> iz programa, saopštenja i intervjua {{ n_programs }} stranaka, uz link na izvor. To su tvrdnje stranaka, ne naša provjera. Uz svaku stranku piše koliko je izvor pouzdan.</li>
+<li><b>Šta je bilo s ranijim obećanjima:</b> uglavnom <a href="https://istinomjer.ba">Istinomjer</a> (provjerava obećanja od 2010) i mediji, uz link. Gdje Istinomjer prati cijelu vladu, a ne jednu stranku, red je tako i označen.</li>
+<li><b>Imovina, biografije, portreti, finansiranje iz budžeta:</b> javne prijave CIK-u, službene biografije i fotografije parlamenata, izvještaji o finansiranju, sve preko Mashinerije.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Kako smo birali „ključne odluke”</h2>
+<p>Od {{ n_div | num }} glasanja odabrali smo {{ kd | length }} (PSBiH {{ kd | selectattr('chamber', 'equalto', 'predstavnicki-dom-psbih') | list | length }}, NSRS {{ kd | selectattr('chamber', 'equalto', 'narodna-skupstina-rs') | list | length }}). Pravilo je bilo: odluka koja direktno dira običan život (plate, penzije, cijene, putevi, struja, zdravstvo, poljoprivreda, škole), ili mijenja pravila igre (ustav, izbori, sudovi, EU), ili je bila u vijestima kao velika stvar. Ratifikacije, tehničke izmjene i imenovanja smo izostavili. Izbor je naš, i zato je popis u cijelosti ovdje:</p>
+<details><summary>Sve odabrane odluke ({{ kd | length }})</summary>
+{% for d in kd %}<div class="kd"><span class="t">{{ d.title }}</span> <span class="d">{{ d.date }} · {{ CHAMBER_NAME.get(d.chamber, d.chamber) }}</span><br><span class="small mut">{{ d.plain }}</span></div>{% endfor %}
+</details>
+</div>
+
+<div class="card">
+<h2>Kako računamo „šansu za mjesto”</h2>
+<p>Ne pogađamo ko će pobijediti. Gledamo samo dvije stvari: <b>koliko je mjesta stranka dobila 2022 na istom papiru</b> i <b>koji je čovjek po redu na listi</b>. Onda uzmemo sve kandidate iz 2022 koji su bili u istoj situaciji i prebrojimo koliko ih je stvarno prošlo. To je taj procenat.</p>
+<ul style="margin:.3rem 0 0 1.1rem;padding:0">
+<li>Unutar broja mjesta koje je stranka imala 2022: prošlo {{ cal.within.won }} od {{ cal.within.n }} ({{ cal.within.pct }}%) → „velika”.</li>
+<li>Prvi iza tih mjesta: {{ cal.plus1.won }} od {{ cal.plus1.n }} ({{ cal.plus1.pct }}%) → „srednja”.</li>
+<li>Drugi iza: {{ cal.plus2.won }} od {{ cal.plus2.n }} ({{ cal.plus2.pct }}%) → „mala”.</li>
+<li>Dalje na listi: {{ cal.beyond.won }} od {{ cal.beyond.n }} ({{ cal.beyond.pct }}%) → „vrlo mala”.</li>
+<li>Stranka 2022 nije imala mjesto, ali je čovjek prvi na listi: {{ cal.no_seats_pos1.won }} od {{ cal.no_seats_pos1.n }} ({{ cal.no_seats_pos1.pct }}%) → „mala”. Ostali s takve liste: {{ cal.no_seats_rest.pct }}%.</li>
+<li>Liste koje 2022 nisu bile na papiru ili su imale manje od 3% glasova: 2%.</li>
+</ul>
+<p class="small mut">Procenat ne zna ko je popularan, ko je nov, ni šta se promijenilo od 2022. Zato piše „nije prognoza”. Na listiću značku pokazujemo samo kad je šansa bar „srednja”, da lista ne izgleda kao rang.</p>
+</div>
+
+<div class="card">
+<h2>Šta ne znamo</h2>
+<ul style="margin:.3rem 0 0 1.1rem;padding:0">
+<li>Kako su glasali poslanici u Parlamentu FBiH i kantonima (ne objavljuje se).</li>
+<li>Šta stranke rade u kantonalnim i općinskim vladama (nema sređenog izvora).</li>
+<li>Da li je obećanje iz programa ozbiljno. Mi ga samo prepišemo i pokažemo šta je bilo s prošlim.</li>
+<li>Ko je iza koga: ne pratimo vlasnike medija, donatore ni porodične veze.</li>
+</ul>
+<p>Greška, dopuna, zamjerka: otvori <a href="https://github.com/misabegovic/izbori2026/issues">prijavu na GitHubu</a>.</p>
+</div>
+{% endblock %}

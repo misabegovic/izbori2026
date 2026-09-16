@@ -4,6 +4,14 @@
 <h1>Stranke i liste</h1>
 <p class="lead">Za svaku: šta obećavaju sad, i kako su glasali kad su imali vlast.</p>
 <p class="mut small">Traka = koliko ljudi imaju na listićima 2026.</p>
+{% if pmatrix %}
+<h2>Ko glasa kao ko</h2>
+<p class="mut small">Za svake dvije stranke: u koliko posto glasanja 2022–2026 je većina njihovih poslanika glasala isto. Računato po kandidatima 2026 koji su bili poslanici. Zeleno = skoro uvijek isto, crveno = uglavnom suprotno. Dodirni polje za brojke.</p>
+{% for ch, m in pmatrix.items() %}
+<div class="card"><p style="margin:0 0 .3rem"><b>{{ CHAMBER_NAME.get(ch, ch) }}</b></p><div class="d3 d3-heat" data-d3='{{ m }}'><span class="fb">Matrica slaganja stranaka (traži JavaScript).</span></div></div>
+{% endfor %}
+{% endif %}
+<h2>Sve stranke</h2>
 {% set maxn = parties[0].n %}
 {% for p in parties %}
 <p style="margin:.6rem 0 0"><a href="{{ p.href }}">{{ p.name | ptitle }}</a>{% if p.program %} <span class="mut small">· {{ 'u vlasti' if p.program.power.startswith('u vlasti') else ('opozicija' if p.program.power.startswith('opozicija') else 'novo') }} · obećanja</span>{% endif %}{% if p.key_votes %} <span class="mut small">· zapis glasanja</span>{% endif %}</p>

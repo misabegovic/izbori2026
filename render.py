@@ -12,6 +12,7 @@ import shutil
 import unicodedata
 from collections import defaultdict, Counter
 from jinja2 import Environment, FileSystemLoader
+import analytics
 
 CYR = dict(zip("абвгдђежзијклљмнњопрстћуфхцчџшАБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ",
                ["a","b","v","g","d","đ","e","ž","z","i","j","k","l","lj","m","n","nj","o","p","r","s","t","ć","u","f","h","c","č","dž","š",
@@ -152,13 +153,15 @@ def history_for(prog):
     if not rated:
         rated = [r for r in rows if r.get("tracked") and r.get("fulfilled") is not None]
         gov_only = True
-    pattern = None
-    if rated:
-        tot = sum(r["tracked"] for r in rated); ful = sum(r["fulfilled"] or 0 for r in rated); part = sum(r.get("partial") or 0 for r in rated)
-        pattern = {"mandates": len(rated), "tracked": tot, "pct_full": round(100 * ful / tot), "pct_part": round(100 * part / tot), "gov_only": gov_only}
+    def _pat(rs, gov_only):
+        tot = sum(r["tracked"] for r in rs); ful = sum(r["fulfilled"] or 0 for r in rs); part = sum(r.get("partial") or 0 for r in rs)
+        return {"mandates": len(rs), "tracked": tot, "pct_full": round(100 * ful / tot), "pct_part": round(100 * part / tot), "gov_only": gov_only}
+    pattern = _pat(rated, gov_only) if rated else None
+    gov_rows = [r for r in rows if r.get("tracked") and r.get("fulfilled") is not None and r.get("gov_wide")]
+    pattern_gov = _pat(gov_rows, True) if gov_rows and not gov_only else None
     chart = [{"m": r["mandate"], "f": r.get("fulfilled") or 0, "p": r.get("partial") or 0, "b": r.get("broken") or 0,
               "t": r.get("tracked") or 0, "power": (("[brojke za cijelu vladu] " if r.get("gov_wide") else "") + (r.get("in_power") or ""))} for r in rows]
-    return {"rows": rows, "pattern": pattern, "chart": json.dumps(chart, ensure_ascii=False)}
+    return {"rows": rows, "pattern": pattern, "pattern_gov": pattern_gov, "chart": json.dumps(chart, ensure_ascii=False)}
 
 
 def p22_for(prog):
@@ -168,7 +171,7 @@ def p22_for(prog):
     if not p:
         return None
     cnt = Counter(x["outcome"] for x in p["promises_2022"])
-    return {**p, "counts": cnt, "stack": [(k, cnt.get(k, 0), OUTCOME_CLS[k]) for k in ("ispunjeno", "djelimično", "nije", "ne može se ocijeniti")]}
+    return {**p, "counts": cnt, "stack": [("nisu bili u vlasti, ne može se ocijeniti" if k == "ne može se ocijeniti" else k, cnt.get(k, 0), OUTCOME_CLS[k]) for k in ("ispunjeno", "djelimično", "nije", "ne može se ocijeniti")]}
 speeches = json.load(open(D + "speeches.json")) if os.path.exists(D + "speeches.json") else {}
 ecitizen = json.load(open(D + "ecitizen.json")) if os.path.exists(D + "ecitizen.json") else {"cities": {}}
 
@@ -246,7 +249,7 @@ def party_identity(name):
     return " ".join(k.split()[:2])
 
 
-PARTY_STOP = {"koalicija", "za", "i", "bih", "lista", "zajedno", "u", "na", "pokret", "stranka", "nezavisna", "narodna", "bosnu", "hercegovinu", "bosne", "hercegovine"}
+PARTY_STOP = {"koalicija", "za", "i", "bih", "lista", "zajedno", "u", "na", "pokret", "stranka", "nezavisna", "narodna", "bosnu", "hercegovinu", "bosne", "hercegovine", "rs", "dr", "hb", "as", "srpske", "srpska"}
 
 
 def party_tokens(name):
@@ -260,7 +263,10 @@ def same_party(a, b):
         return True
     ta, tb = party_tokens(a), party_tokens(b)
     small, big = (ta, tb) if len(ta) <= len(tb) else (tb, ta)
-    return bool(small) and len(small) <= 2 and small <= big
+    if bool(small) and len(small) <= 2 and small <= big:
+        return True
+    acr = {t for t in small if len(t) <= 4 and not t.isdigit()}   # 'pdp' inside 'za pravdu i red ... pdp rs'
+    return bool(acr) and acr <= big and len(small) <= 5
 
 
 def unique_parties(tl):
@@ -345,7 +351,15 @@ def person_view(c):
     if v["n_parties"] > 1:
         s.append("Stranke: " + " → ".join(f"{party_title(p, raw=True)} ({y})" for y, p in parties) + ".")
     elif parties and stood > 1:
-        s.append(f"Uvijek za: {party_title(parties[0][1])}.")
+        printed = []
+        for t in sorted(dedupe_tl(tl), key=lambda t: (t.get("y") or 0)):
+            nm = party_title(t.get("party"), raw=True) if t.get("party") else None
+            if nm and nm not in printed:
+                printed.append(nm)
+        if len(printed) > 1:
+            s.append(f"Uvijek za istu stranku, koja je na listiću pisala kao: {' → '.join(printed)} (promjena imena ili koalicija, ne stranke).")
+        else:
+            s.append(f"Uvijek za: {party_title(parties[0][1])}.")
     v["story"] = " ".join(s)
     return v
 
@@ -569,6 +583,24 @@ for uk, u in units.items():
         for c in l["candidates"]:
             if c.get("pid"):
                 cand_index.setdefault(c["pid"], []).append((uk, l["name"], c))
+# --- derived analytics over roll-call votes (analytics.py)
+DIV_CH = {d: x["chamber"] for d, x in divisions.items()}
+people_rec = {}
+for pid, entries in cand_index.items():
+    if pid in records:
+        uk0, lname0, c0 = entries[0]
+        people_rec[pid] = {"name": nice_name(c0.get("name")), "party": party_identity(lname0), "party_name": party_title(lname0),
+                           "href": f"kandidat-{pid_slug(pid)}.html"}
+SIM = analytics.similarity(votes, DIV_CH, list(CHAMBER_NAME), people_rec)
+PLINE = analytics.party_line(votes, DIV_CH, list(CHAMBER_NAME), people_rec)
+PMATRIX = analytics.party_matrix(votes, DIV_CH, list(CHAMBER_NAME), people_rec, lambda pk: party_title(list_display.get(pk, pk)))
+ACT = analytics.activity(votes, divisions, DIV_CH, list(CHAMBER_NAME), people_rec, records)
+for _pid in SIM:
+    for _ch in SIM[_pid]:
+        for _row in SIM[_pid][_ch]["same"] + SIM[_pid][_ch]["opposite"]:
+            _row["party"] = people_rec[_row["pid"]]["party_name"]
+THEMES = analytics.promise_themes(programs)
+
 n_kand = 0
 for pid, entries in cand_index.items():
     uk, lname, c = entries[0]
@@ -602,7 +634,9 @@ for pid, entries in cand_index.items():
              "party_href": party_href(e[1])} for e in entries]
     main_uk = next((e[0] for e in entries if units[e[0]]["area"] not in COMP), uk)
     tl_json = json.dumps([{"y": t.get("y"), "won": bool(t.get("elected")), "lvl": t.get("lvl")} for t in tl], ensure_ascii=False)
-    html = kand_tpl.render(p=v, tl=tl, tl_json=tl_json, prof=prof, rec=rec, kd=kd, replacement=replacement, cands_json=unit_json.get(main_uk), CH_AVG=CH_AVG, speeches_n=len(sp), speeches=sp[:5], assets=assets, runs=runs, **base_ctx)
+    act_json = {ch: json.dumps({"rows": rows, "avg": (CH_AVG.get(ch) or {}).get("pris")}, ensure_ascii=False) for ch, rows in ACT.get(pid, {}).items()}
+    html = kand_tpl.render(p=v, tl=tl, tl_json=tl_json, prof=prof, rec=rec, kd=kd, replacement=replacement, cands_json=unit_json.get(main_uk), CH_AVG=CH_AVG, speeches_n=len(sp), speeches=sp[:5], assets=assets, runs=runs,
+                           sim=SIM.get(pid, {}), pline=PLINE.get(pid, {}), act=act_json, my_party=people_rec.get(pid, {}).get("party_name"), **base_ctx)
     write(f"kandidat-{v['slug']}.html", html)
     n_kand += 1
 
@@ -643,7 +677,13 @@ for uk, u in units.items():
     total22 = sum((h.get("votes") or 0) for h in u.get("party_history", []) if h["year"] == 2022)
     top22 = sorted([h for h in u.get("party_history", []) if h["year"] == 2022], key=lambda h: -(h.get("votes") or 0))[:5]
     munis = unit_munis.get(uk, [])
-    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, munis=munis, cands_json=unit_json.get(uk), **base_ctx)
+    now_ids = {party_identity(l["name"]) for l in u["lists"]}
+    absent22 = []
+    for h in sorted([h for h in u.get("party_history", []) if h["year"] == 2022], key=lambda h: -(h.get("votes") or 0)):
+        pi_ = party_identity(h["party"])
+        if pi_ not in now_ids and total22 and (h.get("votes") or 0) >= 0.03 * total22 and pi_ not in {a[2] for a in absent22} and not any(same_party(h["party"], l["name"]) for l in u["lists"]):
+            absent22.append((party_title(h["party"]), h.get("votes") or 0, pi_, party_href(h["party"])))
+    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, munis=munis, cands_json=unit_json.get(uk), absent22=absent22, **base_ctx)
     write(unit_href(race, u["area"]), html)
 
 # --- municipality pages
@@ -711,7 +751,9 @@ stranka_tpl = env.get_template("stranka.html")
 for pk, ps in party_pages.items():
     write(ps["href"], stranka_tpl.render(p=ps, **base_ctx))
 plist = sorted(party_pages.values(), key=lambda p: -p["n"])
-write("stranke.html", env.get_template("stranke.html").render(parties=plist, **base_ctx))
+write("stranke.html", env.get_template("stranke.html").render(parties=plist, pmatrix={ch: json.dumps(m, ensure_ascii=False) for ch, m in PMATRIX.items()}, **base_ctx))
+write("obecanja.html", env.get_template("obecanja.html").render(themes=THEMES, n_parties=len([p for p in programs if p.get("promises")]), **base_ctx))
+write("metoda.html", env.get_template("metoda.html").render(cal=CAL, kd=key_decisions, n_records=len(records), n_div=len(divisions), n_programs=len(programs), **base_ctx))
 
 # --- presidency page
 def pres_cands(area):

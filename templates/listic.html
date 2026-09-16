@@ -5,6 +5,7 @@
 <h1>{{ r.short }}{% if u.race == 'oi2026-1' %} — {{ {'701':'bošnjački član','702':'hrvatski član','703':'srpski član'}[u.area] }}{% endif %}</h1>
 <p class="lead">{{ r.plain }}</p>
 <p class="mut">Ovo je {{ r.who }}.{% if munis %} Ovaj papir dobijaju birači u: {{ munis | join(", ") }}.{% elif COMP.get(u.area) %} Ovo je {{ COMP[u.area] }}: ta mjesta stranke dijele po svom redu, glasovi iz svih područja se zbrajaju.{% endif %}</p>
+{% if absent22 %}<p class="mut small">Prošli put (2022) su ovdje glasove imali i: {% for a in absent22 %}{% if a[3] %}<a href="{{ a[3] }}">{{ a[0] }}</a>{% else %}{{ a[0] }}{% endif %} ({{ a[1] | num }}){% if not loop.last %}, {% endif %}{% endfor %}. Ove godine ih na ovom papiru nema pod tim imenom: nisu izašli, ili su u koaliciji pod drugim imenom.</p>{% endif %}
 
 {% if r.kind == 'one' %}
 <div class="card">
@@ -68,12 +69,13 @@ window.homeFilter=function(){var on=document.getElementById('homechk').checked;r
 </details>
 <span class="small mut">Tvrdnje stranke, nisu provjerene. {% if l.party_href %}<a href="{{ l.party_href }}">Izvori →</a>{% endif %}</span>
 </div>
-{% if not l.program %}<p class="mut small">Za ovu listu nismo našli objavljena obećanja ni provjeru ranijih.</p>{% endif %}
 {% if l.p22 %}
 <p style="margin:.6rem 0 0"><b>Šta je bilo s obećanjima iz 2022:</b></p>
 {{ stack(l.p22.stack, l.p22.promises_2022 | length) }}
 <p class="small" style="margin:.2rem 0 0">Od {{ l.p22.promises_2022 | length }} provjerenih: {{ l.p22.counts.get('ispunjeno', 0) }} uradili, {{ l.p22.counts.get('djelimično', 0) }} pola, {{ l.p22.counts.get('nije', 0) }} nisu{% if l.p22.counts.get('ne može se ocijeniti') %}, {{ l.p22.counts.get('ne može se ocijeniti') }} se ne može ocijeniti (nisu bili u vlasti){% endif %}. {% if l.party_href %}<a href="{{ l.party_href }}#p22">Koja i šta se desilo →</a>{% endif %}</p>
 {% endif %}
+{% else %}
+<p class="mut small">Za ovu listu nismo našli objavljen program ni provjeru ranijih obećanja. Ako ga stranka objavi, dodat ćemo ga.</p>
 {% endif %}
 {% if l.key_votes %}
 <p style="margin:.8rem 0 .2rem"><b>Kako su njihovi ljudi glasali u ovom parlamentu 2022–2026:</b></p>
@@ -88,7 +90,7 @@ window.homeFilter=function(){var on=document.getElementById('homechk').checked;r
 {% endif %}
 <details><summary>Ko je na listi ({{ l.n }})</summary>
 <ul class="people">{% for c in l.cands %}{{ person_row(c) }}{% endfor %}</ul>
-<p class="small mut">Klikni na ime za cijelu priču. „već biran” = ranije izabran; „mijenjao stranke” = kandidovao se za različite stranke; „prvi put” = nikad prije na listiću; „na funkciji” = trenutno drži izbornu funkciju. Ime bez značke = nema ranijih uspjeha ili nemamo podataka. „Šansa za mjesto” je gruba procjena iz rezultata 2022 i reda na listi, ne preporuka.</p>
+<p class="small mut">Klikni na ime za cijelu priču. „već biran” = ranije izabran; „mijenjao stranke” = kandidovao se za različite stranke; „prvi put” = nikad prije na listiću; „na funkciji” = trenutno drži izbornu funkciju. Ime bez značke = nema ranijih uspjeha ili nemamo podataka. „Šansa za mjesto” je gruba procjena iz rezultata 2022 i reda na listi, ne preporuka. Dodirni značku da vidiš zašto. <a href="metoda.html">Kako računamo →</a></p>
 </details>
 </div>
 {% endfor %}

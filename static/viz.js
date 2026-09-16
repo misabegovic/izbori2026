@@ -159,7 +159,52 @@
     }
     draw();
   }
+  function vbars(el, d) {
+    // d: {rows:[{y, pct, voted, total}], avg} — one bar per year, attendance over time
+    el.innerHTML = '';
+    var W = el.clientWidth || 300, H = 92, top = 18, bot = 20, n = d.rows.length, bw = Math.min(64, (W - 10) / n - 8);
+    var svg = d3.select(el).append('svg').attr('width', W).attr('height', H);
+    var show = tipFor(el);
+    var x = function (i) { return 6 + i * ((W - 12) / n) + ((W - 12) / n - bw) / 2; };
+    var y = d3.scaleLinear().domain([0, 100]).range([H - bot, top]);
+    if (d.avg != null) svg.append('line').attr('x1', 0).attr('x2', W).attr('y1', y(d.avg)).attr('y2', y(d.avg)).attr('stroke', MUT).attr('stroke-dasharray', '3 3');
+    d.rows.forEach(function (r, i) {
+      var col = r.pct >= 80 ? COL['c-za'] : r.pct >= 60 ? COL['c-uz'] : COL['c-protiv'];
+      svg.append('rect').attr('x', x(i)).attr('y', y(0)).attr('width', bw).attr('height', 0).attr('rx', 4).attr('fill', col).style('cursor', 'pointer')
+        .on('click', function (ev) { ev.stopPropagation(); show('<b>' + r.y + '</b>: glasao/la na ' + r.voted + ' od ' + r.total + ' glasanja (' + r.pct + '%)', ev); })
+        .transition().duration(600).attr('y', y(r.pct)).attr('height', y(0) - y(r.pct));
+      svg.append('text').attr('x', x(i) + bw / 2).attr('y', y(r.pct) - 4).attr('text-anchor', 'middle').attr('font-size', '.68rem').attr('font-weight', 700).attr('fill', INK).text(r.pct + '%');
+      svg.append('text').attr('x', x(i) + bw / 2).attr('y', H - 5).attr('text-anchor', 'middle').attr('font-size', '.68rem').attr('fill', MUT).text(r.y);
+    });
+    if (d.avg != null) { var leg = document.createElement('div'); leg.className = 'st-l'; leg.innerHTML = '<span>- - - prosjek doma za cijeli mandat: ' + d.avg + '%</span>'; el.appendChild(leg); }
+  }
+  function heat(el, d) {
+    // d: {parties:[], mps:[], m:[[pct|null]]} — party x party agreement
+    el.innerHTML = '';
+    var n = d.parties.length, W = el.clientWidth || 300, lab = Math.min(110, Math.max(64, W * 0.28)), cell = Math.min(46, Math.floor((W - lab - 4) / n)), H = lab * 0.7 + n * cell + 6;
+    var svg = d3.select(el).append('svg').attr('width', W).attr('height', H);
+    var show = tipFor(el);
+    var col = d3.scaleLinear().domain([30, 65, 100]).range(['#d03b3b', '#fab219', '#0ca30c']).clamp(true);
+    var ty = lab * 0.7;
+    d.parties.forEach(function (p, j) {
+      svg.append('text').attr('transform', 'translate(' + (lab + j * cell + cell / 2 + 4) + ',' + (ty - 6) + ') rotate(-55)').attr('font-size', '.62rem').attr('fill', INK).text(p.length > 14 ? p.slice(0, 13) + '…' : p);
+    });
+    d.parties.forEach(function (p, i) {
+      svg.append('text').attr('x', lab - 4).attr('y', ty + i * cell + cell / 2 + 4).attr('text-anchor', 'end').attr('font-size', '.66rem').attr('fill', INK).text(p.length > 16 ? p.slice(0, 15) + '…' : p);
+      d.parties.forEach(function (q, j) {
+        var v = d.m[i][j];
+        var g = svg.append('g').style('cursor', 'pointer').on('click', function (ev) { ev.stopPropagation(); show('<b>' + p + '</b> i <b>' + q + '</b>' + (v == null ? '<br>premalo zajedničkih glasanja' : '<br>glasali isto u <b>' + v + '%</b> glasanja (' + d.n[i][j] + ' zajedničkih)'), ev); });
+        g.append('rect').attr('x', lab + j * cell + 1).attr('y', ty + i * cell + 1).attr('width', cell - 2).attr('height', cell - 2).attr('rx', 4).attr('fill', v == null ? '#f0efe9' : (i === j ? '#e6e4dc' : col(v)));
+        if (v != null && i !== j) g.append('text').attr('x', lab + j * cell + cell / 2).attr('y', ty + i * cell + cell / 2 + 4).attr('text-anchor', 'middle').attr('font-size', cell < 34 ? '.55rem' : '.66rem').attr('font-weight', 700).attr('fill', v >= 45 && v < 80 ? INK : '#fff').text(v);
+      });
+    });
+    var leg = document.createElement('div'); leg.className = 'st-l';
+    leg.innerHTML = '<span><i class="sw" style="background:#0ca30c"></i>skoro uvijek isto</span><span><i class="sw" style="background:#fab219"></i>pola-pola</span><span><i class="sw" style="background:#d03b3b"></i>uglavnom suprotno</span>';
+    el.appendChild(leg);
+  }
   function init() {
+    document.querySelectorAll('.d3-vbars').forEach(function (el) { vbars(el, JSON.parse(el.dataset.d3)); });
+    document.querySelectorAll('.d3-heat').forEach(function (el) { heat(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-bar').forEach(function (el) { bar(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-stack').forEach(function (el) { stack(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-chance').forEach(function (el) { chance(el, JSON.parse(el.dataset.d3)); });

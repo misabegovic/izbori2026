@@ -34,7 +34,7 @@
 
 {% if p.hist and p.hist.rows | length > 1 %}
 <h2 id="obrazac">Obrazac: obećanja kroz mandate</h2>
-{% if p.hist.pattern %}<p class="lead">U {{ p.hist.pattern.mandates }} mandata u vlasti: <b>{{ p.hist.pattern.pct_full }}%</b> obećanja ispunjeno u potpunosti, {{ p.hist.pattern.pct_part }}% djelimično ({{ p.hist.pattern.tracked | num }} praćenih obećanja {% if p.hist.pattern.gov_only %}vlada u kojima je stranka bila{% else %}same stranke{% endif %}, po Istinomjeru).</p>{% endif %}
+{% if p.hist.pattern %}<p class="lead">U {{ p.hist.pattern.mandates }} mandata u vlasti: <b>{{ p.hist.pattern.pct_full }}%</b> obećanja ispunjeno u potpunosti, {{ p.hist.pattern.pct_part }}% djelimično ({{ p.hist.pattern.tracked | num }} praćenih obećanja {% if p.hist.pattern.gov_only %}vlada u kojima je stranka bila{% else %}same stranke{% endif %}, po Istinomjeru).{% if p.hist.pattern_gov %} Posebno, za cijele vlade u kojima je bila (brojke nisu samo za ovu stranku): {{ p.hist.pattern_gov.pct_full }}% ispunjeno, {{ p.hist.pattern_gov.pct_part }}% djelimično od {{ p.hist.pattern_gov.tracked | num }}.{% endif %}</p>{% endif %}
 <div class="d3 d3-mandates" data-d3='{{ p.hist.chart | safe }}'><span class="fb">{% for r in p.hist.rows %}{{ r.mandate }}: {% if r.tracked %}{{ r.fulfilled or 0 }} od {{ r.tracked }} ispunjeno{% else %}nema brojki{% endif %}; {% endfor %}</span></div>
 {% for r in p.hist.rows if r.mandate != '2022-2026' %}
 <details><summary>{{ r.mandate }} · {{ r.in_power }}{% if r.gov_wide %} (brojke za cijelu vladu){% endif %}</summary>
