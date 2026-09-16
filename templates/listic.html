@@ -65,9 +65,9 @@
 <table class="cal proj"><thead><tr><th>Lista</th><th>Udio</th><th>Preko praga</th><th>Mandata</th></tr></thead><tbody>
 {% for r in pu.liste %}{% if r.udio >= 0.4 or r.mandati >= 0.05 %}
 <tr><td class="ln small">{{ r.lista | ptitle }}</td>
-<td class="num small">{{ r.udio | dec }}%</td>
-<td class="num small">{{ r.p_prag | dec }}%</td>
-<td class="num">{{ r.mandati | dec }}</td></tr>
+<td class="num small">{{ r.udio | tdec }}%</td>
+<td class="num small">{{ r.p_prag | tdec }}%</td>
+<td class="num">{{ r.mandati | tdec }}</td></tr>
 {% endif %}{% endfor %}
 </tbody></table>
 <p class="small mut">„Preko praga” je koliko često lista pređe 3% — ispod toga ne dobija ništa, pa ni najpopularniji čovjek na njoj.{% if pu.siroce_2022_pct and pu.siroce_2022_pct > 3 %} {{ pu.siroce_2022_pct | dec }}% glasova iz 2022. pripada listama kojih ove godine nema pod tim imenom; model prati njihove ljude da vidi gdje su otišli, i to je najnesigurniji dio računa.{% endif %}</p>

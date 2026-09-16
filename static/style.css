@@ -4,14 +4,26 @@ html { font-size:19px; }
 body { background:var(--bg); color:var(--fg); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-height:1.5; margin:0; }
 main { max-width:660px; margin:0 auto; padding:0 16px 3rem; }
 a { color:var(--acc); }
-h1 { font-size:1.6rem; line-height:1.2; margin:1rem 0 .6rem; }
+h1 { font-size:1.6rem; line-height:1.2; margin:1rem 0 .6rem; overflow-wrap:break-word; }
 h2 { font-size:1.2rem; margin:1.8rem 0 .6rem; }
 h3 { font-size:1.05rem; margin:.2rem 0 .4rem; }
 p { margin:.4rem 0 .8rem; }
 .top { background:#fff; border-bottom:1px solid var(--line); }
-.top .in { max-width:660px; margin:0 auto; padding:.5rem 16px; display:flex; align-items:center; gap:.6rem; }
+/* Wider than the 660px reading column on purpose: the header holds six links and two
+   buttons, and 660px is not enough for them. It only affects the bar. */
+.top .in { max-width:880px; margin:0 auto; padding:.5rem 16px; display:flex; align-items:center; gap:.6rem; }
 .top a.home { font-weight:700; text-decoration:none; color:var(--fg); white-space:nowrap; }
-.top nav { display:flex; gap:.9rem; overflow-x:auto; white-space:nowrap; flex:1; align-items:center; scrollbar-width:none; }
+.top nav { display:flex; gap:.9rem; overflow-x:auto; white-space:nowrap; flex:1; min-width:0; align-items:center; scrollbar-width:none; }
+/* The links scroll sideways when there are more of them than fit. The two toggles must not:
+   a reader who cannot find the Cyrillic switch has no way to know it exists. They sit
+   outside the scrolling strip, pinned to the right. */
+.top .tools { display:flex; gap:.4rem; flex:0 0 auto; align-items:center; }
+/* On a phone the strip scrolls, because six links stacked vertically would take the whole
+   screen before the page starts. Above phone width there is room for a second line, and a
+   second line beats a link the reader has no way to know is there. */
+@media (min-width:700px){ .top nav { flex-wrap:wrap; overflow-x:visible; gap:.3rem .9rem; } }
+/* At 320px the two buttons at full size take more of the bar than the links do. */
+@media (max-width:520px){ .top .in { gap:.4rem; } .top .tools .tog { font-size:.85rem; padding:.25rem .45rem; } }
 .top nav a { font-size:.9rem; text-decoration:none; }
 .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1rem; margin:.8rem 0; }
 .card.big { padding:1.2rem; }
@@ -126,14 +138,29 @@ table.cal th:first-child, table.cal td:first-child { white-space:normal; min-wid
 .fn .when { color:var(--mut); font-size:.82rem; }
 
 /* --- projekcije (project.py) --------------------------------------------- */
-table.proj{width:100%;border-collapse:collapse;margin:.4rem 0}
+/* The projection tables borrow table.cal for its look, but not its shape. table.cal is the
+   calibration grid on metoda.html: six fixed columns of numbers that cannot wrap, which is
+   why every use of it sits inside .calwrap and scrolls sideways. These tables are the other
+   kind — four columns, one of them a party name long enough to be a sentence — and they are
+   the main thing on the page, so sideways scrolling is the wrong answer. Undo the nowrap and
+   the 150px floor that table.cal imposes, and let the name wrap instead. Without this the
+   projection page renders 901px wide inside a 390px phone. */
+table.proj{width:100%;border-collapse:collapse;margin:.4rem 0;table-layout:auto}
 table.proj th{text-align:left;font-size:.82rem;color:#5c5c5c;font-weight:600;border-bottom:1px solid #e3e3e3;padding:.25rem .4rem}
 table.proj td{padding:.3rem .4rem;border-bottom:1px solid #f0f0f0;vertical-align:middle}
-table.proj td.num{text-align:right;white-space:nowrap}
+table.proj td, table.proj th{white-space:normal}
+/* only the name column may break inside a word — that is what lets the table shrink.
+   Let it loose on a heading and "Mandata" comes out as "Man dat a". */
+table.proj td.ln, table.proj th:first-child{overflow-wrap:anywhere}
+table.proj td.num, table.proj th.num{text-align:right;white-space:nowrap}
+table.proj td:first-child, table.proj th:first-child{min-width:0;text-align:left}
 table.proj td.ln{max-width:17rem}
 table.proj tr.hid{display:none}
 table.cal tr.best td{background:#f3f8ff}
-.rng{position:relative;display:inline-block;width:7.5rem;height:.7rem;vertical-align:middle;background:#f0f0f0;border-radius:.35rem}
+/* The bar and the "20–39" beside it are one unit. Left to wrap, the en dash in the label
+   is a break opportunity and a range comes out as "7–" on one line and "21" on the next. */
+table.proj td.rg{white-space:nowrap}
+.rng{position:relative;display:inline-block;width:5.5rem;height:.7rem;vertical-align:middle;background:#f0f0f0;border-radius:.35rem}
 .rng i{position:absolute;top:0;height:100%;background:#9dc3ec;border-radius:.35rem}
 .rng u{position:absolute;top:-.12rem;width:2px;height:.94rem;background:#1f5fa9;text-decoration:none}
 .b.pj{background:#eef4fb;color:#1f5fa9;border-color:#cfe0f3}
@@ -150,4 +177,23 @@ ol.proj-people li.cut{border-top:2px solid #1f5fa9;margin-top:.5rem;padding-top:
 .pw.hi{color:#14532d;font-weight:700}
 .pw.mid{color:#1f5fa9;font-weight:700}
 .pw.lo{color:#5c5c5c}
-@media (max-width:520px){.rng{width:4.5rem}table.proj td.ln{max-width:9rem;word-break:break-word}}
+@media (max-width:520px){
+  .rng{width:3.2rem}
+  table.proj{font-size:.78rem}
+  table.proj td, table.proj th{padding:.3rem .2rem}
+  table.proj td.ln{max-width:none}
+  /* the range column carries a bar and a "5–13" label; on a phone the label is the part
+     that has to survive, so the bar goes and the numbers stay */
+  table.proj td .rng{display:none}
+  /* Five columns do not fit a phone. .opt marks the one the page can do without: it is a
+     footnote to the column beside it, and the paragraph under the table says the same thing
+     in words. */
+  table.proj .opt{display:none}
+  /* A heading is what sets the floor for a column of three-character numbers, so on a phone
+     the heading is what has to give. */
+  table.proj th{font-size:.72rem}
+  /* .b is nowrap everywhere else on the site, and there it is right — but "nova/sklopljena"
+     sitting inside a table cell drags the whole name column out with it. */
+  table.proj td .b{white-space:normal}
+  .twonum .tn{min-width:0}
+}

@@ -18,7 +18,7 @@
 <p>Ovo je jedini test koji stvarno nešto znači. Uzmemo svih {{ bt.n_kandidata | num }} kandidata iz 2022, poredamo ih po tome koliku im je šansu model dao, i za svaku grupu prebrojimo koliko ih je stvarno izabrano. Ako brojka nešto znači, dvije kolone desno moraju biti slične.</p>
 <div class="calwrap"><table class="cal"><thead><tr><th>Model je rekao</th><th>Ljudi</th><th>Prosječno rekli</th><th>Stvarno prošlo</th><th>Izabranih</th></tr></thead><tbody>
 {% for r in bt.kalibracija %}
-<tr><td>{{ r.od }}–{{ r.do }}%</td><td class="num">{{ r.n | num }}</td><td class="num">{{ r.rekli | dec }}%</td><td class="num"><b>{{ r.stvarno | dec }}%</b></td><td class="num mut">{{ r.izabranih }}</td></tr>
+<tr><td>{{ r.od }}–{{ r.do }}%</td><td class="num">{{ r.n | num }}</td><td class="num">{{ r.rekli | tdec }}%</td><td class="num"><b>{{ r.stvarno | tdec }}%</b></td><td class="num mut">{{ r.izabranih }}</td></tr>
 {% endfor %}
 </tbody></table></div>
 <p class="small mut">Čita se ovako: u redu „50–65%” model je u prosjeku rekao {{ mid.rekli | dec }}%, a stvarno je prošlo {{ mid.stvarno | dec }}% tih ljudi. Najveće odstupanje je na vrhu: od onih kojima je dao preko 92% prošlo ih je {{ top.stvarno | dec }}%, a ne {{ top.rekli | dec }}%. Prosječan promašaj kroz cijelu tabelu je {{ ece | dec }} postotna boda.</p>
@@ -26,7 +26,7 @@
 <p class="small">{{ bt.ogranicenje_komp }}</p>
 <div class="calwrap"><table class="cal"><thead><tr><th>Model je rekao</th><th>Ljudi</th><th>Prosječno rekli</th><th>Stvarno prošlo</th></tr></thead><tbody>
 {% for r in bt.kalibracija_direktni %}
-<tr><td>{{ r.od }}–{{ r.do }}%</td><td class="num">{{ r.n | num }}</td><td class="num">{{ r.rekli | dec }}%</td><td class="num"><b>{{ r.stvarno | dec }}%</b></td></tr>
+<tr><td>{{ r.od }}–{{ r.do }}%</td><td class="num">{{ r.n | num }}</td><td class="num">{{ r.rekli | tdec }}%</td><td class="num"><b>{{ r.stvarno | tdec }}%</b></td></tr>
 {% endfor %}
 </tbody></table></div>
 </details>
@@ -49,7 +49,7 @@
 <p class="mut small" style="margin:0 0 .4rem">Prosječna greška {{ v.mae_mandata | dec2 }} mandata · stvarni rezultat je u rasponu od 5 do 95 posto simulacija kod {{ v.u_rasponu }}% lista</p>
 <div class="calwrap"><table class="cal"><thead><tr><th>Lista</th><th>Model</th><th>Raspon</th><th>Stvarno</th></tr></thead><tbody>
 {% for r in v.rows %}{% if r.stvarno or r.projekcija >= 0.5 %}
-<tr><td class="ln">{{ r.lista | ptitle }}</td><td class="num">{{ r.projekcija | dec }}</td><td class="num small mut">{{ r.p05 }}–{{ r.p95 }}</td><td class="num"><b>{{ r.stvarno }}</b>{% if not r.u_rasponu %} <span class="b out" title="Izvan raspona koji je model dao">van</span>{% endif %}</td></tr>
+<tr><td class="ln">{{ r.lista | ptitle }}</td><td class="num">{{ r.projekcija | tdec }}</td><td class="num small mut">{{ r.p05 }}–{{ r.p95 }}</td><td class="num"><b>{{ r.stvarno }}</b>{% if not r.u_rasponu %} <span class="b out" title="Izvan raspona koji je model dao">van</span>{% endif %}</td></tr>
 {% endif %}{% endfor %}
 </tbody></table></div>
 {% endfor %}
@@ -76,7 +76,7 @@
 {% if boost_grid %}
 <div class="calwrap"><table class="cal"><thead><tr><th>Udjeli ×</th><th>Lični glasovi ×</th><th>Promašaj kalibracije</th><th>Raspon pokriva</th><th>Brier</th></tr></thead><tbody>
 {% for b in boost_grid %}
-<tr{% if b.udjeli == boost and b.licni == pers_boost %} class="best"{% endif %}><td>{{ b.udjeli | dec }}</td><td>{{ b.licni | dec }}</td><td class="num">{{ b.ece | dec }} p.p.</td><td class="num">{{ b.pokrivenost | dec }}%</td><td class="num">{{ b.brier | dec4 }}</td></tr>
+<tr{% if b.udjeli == boost and b.licni == pers_boost %} class="best"{% endif %}><td>{{ b.udjeli | dec }}</td><td>{{ b.licni | dec }}</td><td class="num">{{ b.ece | tdec }} p.p.</td><td class="num">{{ b.pokrivenost | tdec }}%</td><td class="num">{{ b.brier | dec4 }}</td></tr>
 {% endfor %}
 </tbody></table></div>
 <p class="small mut">Izabrano je: udjeli ×{{ boost | dec }}, lični glasovi ×{{ pers_boost | dec }}. Raspon treba pokrivati oko 90 posto — raspon koji je uvijek u pravu ne govori ništa. Brier se pritom skoro ne mijenja: model ne postaje tačniji, nego prestaje tvrditi više nego što zna.</p>
@@ -113,7 +113,7 @@
 <p>Za Predsjedništvo i predsjednika RS nema liste ni praga — pobjeđuje jedan čovjek. Za takvu trku imamo svega {{ bt.vecinske.parovi | length }} para „isti subjekt, dva puta zaredom” na kojima se uopšte može izmjeriti koliko se glasovi pomjeraju. Odatle širina raspona ({{ bt.vecinske.sd }} u logaritmu), i zato tim brojkama treba vjerovati najmanje.</p>
 <div class="calwrap"><table class="cal"><thead><tr><th>Trka</th><th>Subjekt</th><th>2018</th><th>2022</th></tr></thead><tbody>
 {% for r in bt.vecinske.parovi %}
-<tr><td class="small">{{ r.trka }}{% if r.area != '5' %} {{ r.area }}{% endif %}</td><td class="ln small">{{ r.stranka | ptitle }}</td><td class="num">{{ r['2018'] | dec }}%</td><td class="num">{{ r['2022'] | dec }}%</td></tr>
+<tr><td class="small">{{ r.trka }}{% if r.area != '5' %} {{ r.area }}{% endif %}</td><td class="ln small">{{ r.stranka | ptitle }}</td><td class="num">{{ r['2018'] | tdec }}%</td><td class="num">{{ r['2022'] | tdec }}%</td></tr>
 {% endfor %}
 </tbody></table></div>
 </div>
