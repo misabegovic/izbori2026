@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}{{ p.name | ptitle }} — Izbori 2026{% endblock %}
+{% block content %}
+<p class="mut"><a href="stranke.html">← sve stranke</a> · <a href="index.html">početna</a></p>
+<h1>{{ p.name | ptitle }}</h1>
+{% if p.program %}<p class="lead">{{ p.program.governing_now }}</p>{% endif %}
+<div class="facts">
+<div class="fact"><b>{{ p.n }}</b><span>kandidata 2026</span></div>
+<div class="fact"><b>{{ p.won }}</b><span>već bili izabrani</span></div>
+<div class="fact"><b>{{ p.switch }}</b><span>mijenjali stranke</span></div>
+<div class="fact"><b>{{ p.new }}</b><span>prvi put</span></div>
+</div>
+<p><b>Prošli put (2022):</b> {% if p.votes22 %}{{ p.votes22 | num }} glasova na svim listićima, {{ p.seats22 }} mandata.{% else %}nema zapisa pod ovim imenom (novo ime ili nova koalicija).{% endif %}</p>
+{% if p.funding %}<p><b>Novac iz budžeta {{ p.funding.year }}:</b> {{ p.funding.paid | round | int | num }} KM <span class="mut small">({% for f in p.funding.rows[:3] %}{{ f.payer }} {{ f.paid | round | int | num }}{% if not loop.last %}, {% endif %}{% endfor %})</span></p>{% endif %}
+
+{% if p.program %}
+<h2>Šta obećavaju za 2026</h2>
+<div class="claim">
+<ul style="margin:.2rem 0 .4rem 1.1rem;padding:0">{% for pr in p.program.promises %}<li>{{ pr }}</li>{% endfor %}</ul>
+<p class="small" style="margin:.2rem 0">Ovo su tvrdnje stranke. {{ p.program.note }}</p>
+<p class="small mut">Pouzdanost izvora: {{ {'high':'dobra (objavljen program)','medium':'srednja (govori i mediji)','low':'slaba (samo izjave)'}[p.program.confidence] }}.</p>
+<p class="src">Izvori: {% for s in p.program.sources %}<a href="{{ s }}">{{ s | replace('https://','') | truncate(45) }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+</div>
+{% else %}
+<p class="mut">Za ovu listu nismo našli objavljen program ili obećanja za 2026.</p>
+{% endif %}
+
+<h2>Šta su radili kad su bili na vlasti</h2>
+{% if p.key_votes %}
+<p class="mut small">Kako su ljudi s ovih listi glasali kao poslanici 2022–2026 o najvažnijim odlukama. ZA/PROTIV = kako je većina njih glasala.</p>
+{% for kv in p.key_votes %}
+<div class="kd"><span class="vote {{ kv.maj_cls }}">{{ kv.maj_word }}</span> <span class="t">{{ kv.d.title }}</span> <span class="d">{{ kv.d.date }}{% if kv.n > 1 %} · {{ kv.za }} za, {{ kv.protiv }} protiv, {{ kv.uz }} uzdržan, {{ kv.odsutan }} nije bilo{% endif %}</span><br><span class="small mut">{{ kv.d.plain }}</span></div>
+{% endfor %}
+{% else %}
+<p class="mut">Niko s njihovih listi nije bio državni ili RS poslanik 2022–2026, pa nema zapisa glasanja. Parlament FBiH i kantoni ne objavljuju poimenična glasanja.</p>
+{% endif %}
+{% if p.mps %}
+<h2>Njihovi poslanici koji se ponovo kandiduju</h2>
+<ul class="people">{% for c in p.mps %}<li class="person"><span class="pname"><a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a></span><span class="badges">{% for b in c.badges %}{{ badge(b) }}{% endfor %}</span></li>{% endfor %}</ul>
+{% endif %}
+<p class="mut small">Na listićima u {{ p.units_in }} izbornih jedinica.</p>
+{% endblock %}

@@ -1,202 +1,508 @@
 #!/usr/bin/env python3
-"""Render data/ into dist/ static HTML (national coverage)."""
+"""Render data/ into dist/ — the simple voter guide (v3).
+
+Every page is written for someone who does not follow politics: short
+sentences, plain words, one idea per card, sources on every claim.
+"""
 import json
 import os
 import glob
 import re
 import shutil
 import unicodedata
-from collections import defaultdict
+from collections import defaultdict, Counter
 from jinja2 import Environment, FileSystemLoader
 
+CYR = dict(zip("абвгдђежзијклљмнњопрстћуфхцчџшАБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ",
+               ["a","b","v","g","d","đ","e","ž","z","i","j","k","l","lj","m","n","nj","o","p","r","s","t","ć","u","f","h","c","č","dž","š",
+                "A","B","V","G","D","Đ","E","Ž","Z","I","J","K","L","Lj","M","N","Nj","O","P","R","S","T","Ć","U","F","H","C","Č","Dž","Š"]))
+
+
+def cyr2lat(s):
+    return "".join(CYR.get(ch, ch) for ch in (s or ""))
+
+
 def fold(s):
-    s = (s or "").lower().replace("\u0111", "dj")
+    s = cyr2lat(s or "").lower().replace("đ", "dj")
     return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
 
-env = Environment(loader=FileSystemLoader("templates"), autoescape=True)
-national = json.load(open("data/national.json"))
-municipalities = json.load(open("data/municipalities.json"))
-timelines = json.load(open("data/timelines.json"))
-mps = json.load(open("data/mps.json"))
-ecitizen = json.load(open("data/ecitizen.json")) if os.path.exists("data/ecitizen.json") else {"cities": {}}
+
+def party_key(s):
+    return re.sub(r"[^a-z0-9]+", " ", fold(s)).strip()
+
+
+def pid_slug(pid):
+    return re.sub(r"[^A-Za-z0-9]+", "-", pid)
+
+
+def nice_name(s):
+    """CIK prints names in caps; show them as people write them."""
+    s = (s or "").strip()
+    s = re.sub(r"\s*-\s*NEOVISNI KANDIDAT.*$", "", s, flags=re.I)
+    s = re.sub(r"\s*-\s*NEZAVISNI KANDIDAT.*$", "", s, flags=re.I)
+    return " ".join(w.capitalize() if not w.isupper() or len(w) > 3 else w.capitalize() for w in s.title().split())
+
+
+SHORT = {}  # filled after programs load
+KEEP = {"SDA", "SDP", "SBB", "HDZ", "SNSD", "NES", "PDA", "DF", "GS", "BIH", "RS", "NIP", "DNS", "NPS", "PSS", "PDP", "NPSP", "SPS", "RSS",
+        "HRS", "HDS", "HSS", "HNP", "SDS", "BH", "NDP", "BPS", "HSP", "HKDU", "HDU", "HB", "AS", "SR", "SDBIH", "SPUBIH", "BNS", "SNP",
+        "FBIH", "DNZ", "SNS", "BOSS", "HUM", "NL", "SRS", "SP", "DEMOS", "ZDK", "TK", "USK", "SBK", "HNK", "ZHK", "KS", "BPK", "PK", "SBIH", "A-SDA", "ASDA", "HSPAS", "HSPHB", "HRAST", "HDZ1990"}
+
+
+def party_title(s):
+    """Readable party name: short name when we know it, otherwise gentle title case."""
+    s = (s or "").strip()
+    if not s:
+        return s
+    k = party_key(s)
+    if k in SHORT:
+        return SHORT[k]
+    for name, rxs in alias_rx:
+        if any(r.search(k) for r in rxs) and name in SHORT_NAMES:
+            SHORT[k] = SHORT_NAMES[name]
+            return SHORT[k]
+    def fix(tok):
+        core = re.sub(r"[^A-Za-z0-9ČĆŽŠĐА-Яа-я]", "", cyr2lat(tok))
+        up = core.upper()
+        if up in KEEP or (len(core) <= 4 and core.isupper() and not re.search(r"[AEIOU]", up)):
+            return tok.upper() if not re.search("[А-Яа-я]", tok) else tok
+        return tok.capitalize()
+    parts = re.split(r"(\s+|-|/|,|\(|\))", s)
+    out = "".join(fix(p) if p and not re.fullmatch(r"(\s+|-|/|,|\(|\))", p) else p for p in parts)
+    return out.replace("Bih", "BiH").replace("BIH", "BiH").replace("Rs ", "RS ").replace(" I ", " i ").replace(" Za ", " za ").replace(" Od ", " od ")
+
+
+def km(fening):
+    if fening is None:
+        return None
+    v = fening / 100
+    return f"{v:,.0f}".replace(",", ".") + " KM"
+
+
+def num(n):
+    return f"{n:,}".replace(",", ".") if isinstance(n, (int, float)) else n
+
+
+# ---------------------------------------------------------------- load
+D = "data/"
+national = json.load(open(D + "national.json"))
+municipalities = json.load(open(D + "municipalities.json"))
+timelines = json.load(open(D + "timelines.json"))
+people = json.load(open(D + "people_cache.json"))
+profiles = json.load(open(D + "profiles.json"))
+records = json.load(open(D + "records.json"))
+votes = json.load(open(D + "votes.json"))
+divisions = json.load(open(D + "divisions.json"))
+key_decisions = json.load(open(D + "key_decisions.json"))
+parties_api = json.load(open(D + "parties.json"))
+programs = json.load(open(D + "programs_fbih.json")) + json.load(open(D + "programs_rs.json"))
+aliases = {k: v for k, v in json.load(open(D + "party_aliases.json")).items() if not k.startswith("_")}
+context = json.load(open(D + "context.json"))
+speeches = json.load(open(D + "speeches.json")) if os.path.exists(D + "speeches.json") else {}
+ecitizen = json.load(open(D + "ecitizen.json")) if os.path.exists(D + "ecitizen.json") else {"cities": {}}
 
 units = {}
-for f in glob.glob("data/units/*.json"):
+for f in glob.glob(D + "units/*.json"):
     u = json.load(open(f))
     units[f"{u['race']}-{u['area']}"] = u
 
+gen = national["generated"][:10]
+env = Environment(loader=FileSystemLoader("templates"), autoescape=True, trim_blocks=True, lstrip_blocks=True)
+env.filters["num"] = num
+env.filters["nice"] = nice_name
+env.filters["ptitle"] = party_title
+env.filters["km"] = km
+
+RACE = {
+    "oi2026-1": {"short": "Predsjedništvo BiH", "kind": "one", "who": "tri člana koji predstavljaju državu prema svijetu i komanduju vojskom",
+                 "plain": "Biraš JEDNOG čovjeka. Pobjeđuje ko ima najviše glasova.", "level": "BiH"},
+    "oi2026-2": {"short": "Državni parlament", "kind": "list", "who": "Predstavnički dom Parlamentarne skupštine BiH",
+                 "plain": "Odlučuje o zakonima za cijelu BiH: granica, PDV, sudovi, put u EU.", "level": "BiH", "chamber": "predstavnicki-dom-psbih"},
+    "oi2026-4": {"short": "Parlament Federacije", "kind": "list", "who": "Predstavnički dom Parlamenta FBiH",
+                 "plain": "Odlučuje o penzijama, zdravstvu, platama i porezima u Federaciji.", "level": "FBiH"},
+    "oi2026-5": {"short": "Predsjednik RS", "kind": "one", "who": "predsjednik i dva potpredsjednika Republike Srpske",
+                 "plain": "Biraš JEDNOG čovjeka. Prvi je predsjednik, najbolji iz druga dva naroda su potpredsjednici.", "level": "RS"},
+    "oi2026-6": {"short": "Narodna skupština RS", "kind": "list", "who": "parlament Republike Srpske",
+                 "plain": "Odlučuje o penzijama, zdravstvu, platama, porezima i budžetu RS.", "level": "RS", "chamber": "narodna-skupstina-rs"},
+    "oi2026-7": {"short": "Skupština kantona", "kind": "list", "who": "parlament tvog kantona",
+                 "plain": "Odlučuje o školama, bolnicama, policiji i inspekcijama u tvom kantonu.", "level": "kanton"},
+}
+CHAMBER_NAME = {"predstavnicki-dom-psbih": "Državni parlament (PSBiH)", "narodna-skupstina-rs": "Narodna skupština RS"}
+VOTE_WORD = {"za": "ZA", "protiv": "PROTIV", "suzdrzan": "uzdržan", "nije-prisutan": "nije bio", "nije-glasao": "nije glasao", None: "nije glasao"}
+VOTE_CLS = {"za": "v-za", "protiv": "v-protiv", "suzdrzan": "v-uz", "nije-prisutan": "v-odsutan", "nije-glasao": "v-odsutan", None: "v-odsutan"}
+
+# ---------------------------------------------------------------- party <-> program
+prog_by_name = {p["name"]: p for p in programs}
+alias_rx = [(name, [re.compile(r) for r in rxs]) for name, rxs in aliases.items()]
+SHORT_NAMES = {"SDP BiH": "SDP BiH", "SDA": "SDA", "Stranka za BiH": "Stranka za BiH", "DF (Željko Komšić - Za građansku državu DF/GS)": "DF (Komšić)",
+               "SBB Fahrudin Radončić": "SBB (Radončić)", "Naša stranka": "Naša stranka", "NES (Nezavisni europski savez, NES BiH / PDA / Naprijed!)": "NES, PDA, Naprijed!",
+               "Snaga naroda": "Snaga naroda (Isak)", "HDZ BiH": "HDZ BiH", "Narod i pravda (NiP)": "Narod i pravda (NiP)",
+               "Bosanskohercegovačka inicijativa Kasumović Fuad": "BH inicijativa (Kasumović)", "HDZ 1990": "HDZ 1990 (koalicija)", "Naprijed BiH": "Naprijed BiH!",
+               "Koalicija za državu": "Koalicija za državu", "SNSD": "SNSD", "Pokret Sigurna Srpska (Draško Stanivuković; PSS, PDP, NPSP)": "Pokret Sigurna Srpska (Stanivuković)",
+               "Ujedinjena Srpska": "Ujedinjena Srpska", "DNS-NPS (Banjac-Nešić)": "DNS-NPS (Banjac, Nešić)", "Narodni front Jelena Trivić": "Narodni front (Trivić)",
+               "Socijalistička partija Petar Đokić / DEMOS / NDP": "SP (Đokić), DEMOS, NDP", "SPS Goran Selak Pokret Jedinstvena Srpska": "SPS (Selak)",
+               "Republička stranka Srpske RSS": "Republička stranka Srpske", "Za pravdu i red - Lista Nebojše Vukanovića / PDP RS Igor Crnadak": "Za pravdu i red (Vukanović), PDP (Crnadak)",
+               "Volja naroda Srpske dr Vlado Đajić": "Volja naroda Srpske (Đajić)", "Nezavisna lista Doboj Sevlid Hurtić": "Nezavisna lista Doboj (Hurtić)"}
+
+
+def program_for(list_name):
+    k = party_key(list_name)
+    for name, rxs in alias_rx:
+        if any(r.search(k) for r in rxs):
+            return prog_by_name.get(name)
+    return None
+
+
+# ---------------------------------------------------------------- people
+def unique_parties(tl):
+    seen, out = set(), []
+    for t in sorted(tl, key=lambda t: (t.get("y") or 0)):
+        p = t.get("party")
+        if p and party_key(p) not in seen:
+            seen.add(party_key(p)); out.append((t["y"], p))
+    return out
+
+
+def vote_map(pid):
+    return {d: v for d, v, ann in votes.get(pid, []) if not ann}
+
+
+def record_summary(pid):
+    r = records.get(pid)
+    if not r:
+        return None
+    out = []
+    for ch in r["chambers"]:
+        c = ch.get("counted") or {}
+        voted = c.get("for", 0) + c.get("against", 0) + c.get("abstained", 0)
+        nsrs = ch["chamber"] == "narodna-skupstina-rs"
+        missed = c.get("absent", 0) + c.get("didNotVote", 0) + (c.get("noVotePrinted", 0) if nsrs else 0)
+        seen = voted + missed
+        if seen == 0:
+            continue
+        out.append({"chamber": ch["chamber"], "chamber_name": CHAMBER_NAME.get(ch["chamber"], ch["chamber"]), "nsrs": nsrs,
+                    "saziv": ch.get("saziv"), "za": c.get("for", 0), "protiv": c.get("against", 0), "uz": c.get("abstained", 0),
+                    "odsutan": missed,
+                    "za_pct": round(100 * c.get("for", 0) / voted) if voted else None,
+                    "prisustvo_pct": round(100 * voted / seen),
+                    "n": seen})
+    return out or None
+
+
+def person_view(c):
+    """Everything a page needs to say about one candidate, in plain words."""
+    pid = c.get("pid") or ""
+    rec = people.get(pid, {})
+    tl = timelines.get(pid, [])
+    prof = profiles.get(pid, {})
+    stood, won = rec.get("stood") or c.get("stood") or 0, rec.get("won") or c.get("won") or 0
+    parties = unique_parties(tl)
+    won_rows = [t for t in tl if t.get("elected")]
+    v = {"pid": pid, "slug": pid_slug(pid) if pid else None, "name": nice_name(c.get("name")), "raw_name": c.get("name"),
+         "pos": c.get("pos"), "stood": stood, "won": won, "office": rec.get("isOfficeHolder") or c.get("office"),
+         "parties": parties, "n_parties": len(parties), "confidence": rec.get("confidence") or c.get("confidence"),
+         "has_record": pid in records, "has_page": bool(tl) or pid in records or bool(prof.get("bio")),
+         "won_rows": won_rows}
+    badges = []
+    if v["office"]:
+        badges.append(("office", "sada na funkciji", "Trenutno drži izbornu funkciju."))
+    if won and won > 0:
+        badges.append(("won", f"izabran {won}×" if won > 1 else "već bio izabran", "Ranije osvojio mandat na izborima."))
+    if v["n_parties"] > 1:
+        badges.append(("switch", f"mijenjao stranke ({v['n_parties']})", "Kandidovao se za više različitih stranaka: " + ", ".join(party_title(p) for _, p in parties)))
+    if stood == 1:
+        badges.append(("new", "prvi put", "Prvi put na listiću."))
+    if stood >= 3 and not won:
+        badges.append(("filler", f"{stood}. pokušaj, nikad izabran", "Kandidovao se više puta, nikad nije osvojio mandat."))
+    if v["has_record"]:
+        badges.append(("record", "ima zapis glasanja", "Bio poslanik 2022–2026, vidi kako je glasao."))
+    if v["confidence"] in ("unverified", "probable") and (stood or 0) > 1:
+        badges.append(("warn", "⚠", "Karijera je spojena po imenu kroz izbore — zaključak, ne dokaz."))
+    v["badges"] = badges
+    # one-sentence story
+    s = []
+    if stood == 1:
+        s.append("Prvi put se kandiduje.")
+    else:
+        s.append(f"Kandiduje se {stood}. put" + (f", izabran {won} puta." if won else ", nikad nije izabran."))
+    if v["n_parties"] > 1:
+        s.append("Stranke: " + " → ".join(f"{party_title(p)} ({y})" for y, p in parties) + ".")
+    elif parties and stood > 1:
+        s.append(f"Uvijek za: {party_title(parties[0][1])}.")
+    v["story"] = " ".join(s)
+    return v
+
+
+# ---------------------------------------------------------------- lists / parties
+list_members = defaultdict(list)     # party_key -> [(unit_key, candidate dict)]
+list_display = {}                    # party_key -> printed name
+list_codes = defaultdict(set)
+for uk, u in units.items():
+    for l in u["lists"]:
+        k = party_key(l["name"])
+        list_display.setdefault(k, l["name"])
+        list_codes[k].add(l["code"])
+        for c in l["candidates"]:
+            list_members[k].append((uk, c))
+
+for _pk, _nm in list_display.items():
+    for name, rxs in alias_rx:
+        if any(r.search(_pk) for r in rxs) and name in SHORT_NAMES:
+            SHORT[_pk] = SHORT_NAMES[name]
+            break
+# ballot names that are exactly one presidency list
+SHORT[party_key("UJEDINJENI ZA DRŽAVU BOSNU I HERCEGOVINU")] = "Ujedinjeni za državu BiH (SDP i partneri)"
+SHORT[party_key("ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA")] = "Za pravdu i red (Vukanović)"
+SHORT[party_key("SDS-SRPSKA DEMOKRATSKA STRANKA")] = "SDS"
+SHORT[party_key("NAROD I PRAVDA")] = "Narod i pravda (NiP)"
+SHORT[party_key("DEMOKRATSKA FRONTA")] = "DF"
+
+kd_by_id = {d["id"]: d for d in key_decisions}
+kd_by_chamber = defaultdict(list)
+for d in key_decisions:
+    kd_by_chamber[d["chamber"]].append(d)
+
+
+def party_key_votes(pk):
+    """For each key decision: how this list's 2026 candidates (who were MPs) voted."""
+    pids = {c["pid"] for _, c in list_members.get(pk, []) if c.get("pid") in records}
+    if not pids:
+        return None
+    out = []
+    for d in key_decisions:
+        cnt = Counter(); who = []
+        for pid in pids:
+            vm = vote_map(pid)
+            if d["id"] in vm:
+                v = vm[d["id"]]
+                cnt[v] += 1
+                who.append((pid, v))
+        if not who:
+            continue
+        maj = max(("za", "protiv", "suzdrzan"), key=lambda k: cnt.get(k, 0))
+        if cnt.get(maj, 0) == 0:
+            maj = "nije-prisutan"
+        out.append({"d": d, "cnt": dict(cnt), "n": len(who), "maj": maj, "maj_word": VOTE_WORD[maj], "maj_cls": VOTE_CLS[maj],
+                    "za": cnt.get("za", 0), "protiv": cnt.get("protiv", 0), "uz": cnt.get("suzdrzan", 0),
+                    "odsutan": cnt.get("nije-prisutan", 0) + cnt.get("nije-glasao", 0) + cnt.get(None, 0)})
+    return out or None
+
+
+def party_summary(pk):
+    mem = list_members.get(pk, [])
+    n = len(mem)
+    pids = [c.get("pid") for _, c in mem]
+    won = sum(1 for _, c in mem if (people.get(c.get("pid"), {}).get("won") or 0) > 0)
+    switch = sum(1 for _, c in mem if len(unique_parties(timelines.get(c.get("pid") or "", []))) > 1)
+    new = sum(1 for _, c in mem if (people.get(c.get("pid"), {}).get("stood") or 0) == 1)
+    office = sum(1 for _, c in mem if people.get(c.get("pid"), {}).get("isOfficeHolder"))
+    mps = [c for _, c in mem if c.get("pid") in records]
+    seen = set(); mps_u = []
+    for c in mps:
+        if c["pid"] not in seen:
+            seen.add(c["pid"]); mps_u.append(person_view(c))
+    votes22 = 0; seats22 = 0; units_in = 0
+    for uk, u in units.items():
+        for h in u.get("party_history", []):
+            if h["year"] == 2022 and party_key(h["party"]) == pk:
+                votes22 += h.get("votes") or 0
+        for nm, cnt in u.get("seats22", {}).items():
+            if party_key(nm) == pk:
+                seats22 += cnt
+        if any(party_key(l["name"]) == pk for l in u["lists"]):
+            units_in += 1
+    funding = None
+    for code in list_codes.get(pk, []):
+        p = parties_api.get(code)
+        if p and p.get("funding"):
+            paid = sum(f.get("paid") or 0 for f in p["funding"] if f.get("year") == 2024)
+            funding = {"year": 2024, "paid": paid, "rows": sorted(p["funding"], key=lambda f: -(f.get("paid") or 0))[:6]}
+    return {"key": pk, "name": list_display.get(pk, pk), "n": n, "won": won, "switch": switch, "new": new, "office": office,
+            "mps": mps_u, "votes22": votes22, "seats22": seats22, "units_in": units_in, "funding": funding,
+            "program": program_for(list_display.get(pk, "")), "key_votes": party_key_votes(pk),
+            "href": f"stranka-{re.sub(r'[^a-z0-9]+', '-', pk).strip('-')}.html"}
+
+
+party_pages = {}
+for pk, mem in list_members.items():
+    if len(mem) >= 15 or program_for(list_display[pk]):
+        party_pages[pk] = party_summary(pk)
+
+
+def party_href(list_name):
+    pk = party_key(list_name)
+    return party_pages[pk]["href"] if pk in party_pages else None
+
+
+# ---------------------------------------------------------------- output
 if os.path.exists("dist"):
     shutil.rmtree("dist")
 os.makedirs("dist")
 
-gen = national["generated"][:10]
-RACE_LABEL = {"oi2026-1": "Predsjedništvo BiH", "oi2026-2": "Predstavnički dom PSBiH",
-              "oi2026-4": "Parlament FBiH", "oi2026-5": "Predsjednik i potpredsjednici RS",
-              "oi2026-6": "Narodna skupština RS", "oi2026-7": "Skupštine kantona"}
-AREA_LABEL = {}
-for u in units.values():
-    AREA_LABEL[(u["race"], u["area"])] = None  # filled below from unit pages' titles where useful
+
+def write(name, html):
+    open(f"dist/{name}", "w").write(html)
 
 
 def unit_href(race, area):
-    return f"jedinica-{race}-{area}.html"
+    return f"listic-{race}-{area}.html"
 
 
-def unit_name(race, area):
-    u = units.get(f"{race}-{area}")
-    if not u:
-        return f"{RACE_LABEL.get(race, race)} {area}"
-    lbl = u["lists"][0]["name"] if u["race"] == "oi2026-1" else None
-    return f"{u['title']} — jedinica {area}"
+base_ctx = {"generated": gen, "RACE": RACE}
 
+# --- candidate pages
+kand_tpl = env.get_template("kandidat.html")
+cand_index = {}   # pid -> (unit_key, list name, candidate)
+for uk, u in units.items():
+    for l in u["lists"]:
+        for c in l["candidates"]:
+            if c.get("pid"):
+                cand_index.setdefault(c["pid"], []).append((uk, l["name"], c))
+n_kand = 0
+for pid, entries in cand_index.items():
+    uk, lname, c = entries[0]
+    v = person_view(c)
+    if not v["has_page"]:
+        continue
+    tl = sorted(timelines.get(pid, []), key=lambda t: (t.get("y") or 0, t.get("lvl") or ""))
+    prof = profiles.get(pid, {})
+    vm = vote_map(pid)
+    rec = record_summary(pid)
+    kd = []
+    for d in key_decisions:
+        if d["id"] in vm:
+            kd.append({"d": d, "vote": vm[d["id"]], "word": VOTE_WORD[vm[d["id"]]], "cls": VOTE_CLS[vm[d["id"]]]})
+    sp = speeches.get(pid, [])
+    assets = None
+    if prof.get("assets"):
+        by_src = defaultdict(list)
+        for a in prof["assets"]:
+            by_src[a["src"]].append(a)
+        assets = {src: rows for src, rows in by_src.items()}
+    runs = [{"unit": units[e[0]], "list": e[1], "href": unit_href(units[e[0]]["race"], units[e[0]]["area"]), "pos": e[2].get("pos"),
+             "party_href": party_href(e[1])} for e in entries]
+    html = kand_tpl.render(p=v, tl=tl, prof=prof, rec=rec, kd=kd, speeches_n=len(sp), speeches=sp[:5], assets=assets, runs=runs, **base_ctx)
+    write(f"kandidat-{v['slug']}.html", html)
+    n_kand += 1
 
-# eCitizen city slug -> municipality slug (fold diacritics, unify separators)
+# --- ballot (unit) pages
+listic_tpl = env.get_template("listic.html")
+for uk, u in units.items():
+    race = u["race"]
+    hist22 = {party_key(h["party"]): h for h in u.get("party_history", []) if h["year"] == 2022}
+    hist18 = {party_key(h["party"]): h for h in u.get("party_history", []) if h["year"] == 2018}
+    seats22 = {party_key(k): v for k, v in u.get("seats22", {}).items()}
+    lists = []
+    for l in u["lists"]:
+        pk = party_key(l["name"])
+        cands = [person_view(c) for c in l["candidates"]]
+        prog = program_for(l["name"])
+        kv = party_pages[pk]["key_votes"] if pk in party_pages else None
+        recent_kv = None
+        if kv:
+            ch = RACE[race].get("chamber")
+            pool = [x for x in kv if x["d"]["chamber"] == ch] if ch else kv
+            recent_kv = sorted(pool or kv, key=lambda x: x["d"]["date"], reverse=True)[:4]
+        lists.append({"name": l["name"], "key": pk, "cands": cands, "n": len(cands),
+                      "won": sum(1 for c in cands if c["won"]), "switch": sum(1 for c in cands if c["n_parties"] > 1),
+                      "new": sum(1 for c in cands if c["stood"] == 1), "office": sum(1 for c in cands if c["office"]),
+                      "mps": sum(1 for c in cands if c["has_record"]),
+                      "votes22": (hist22.get(pk) or {}).get("votes"), "votes18": (hist18.get(pk) or {}).get("votes"),
+                      "seats22": seats22.get(pk, 0), "program": prog, "party_href": party_href(l["name"]),
+                      "key_votes": recent_kv})
+    total22 = sum((h.get("votes") or 0) for h in u.get("party_history", []) if h["year"] == 2022)
+    top22 = sorted([h for h in u.get("party_history", []) if h["year"] == 2022], key=lambda h: -(h.get("votes") or 0))[:5]
+    html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, **base_ctx)
+    write(unit_href(race, u["area"]), html)
+
+# --- municipality pages
 slug_by_folded = {}
 for m in municipalities:
-    tail = m["slug"].split(".")[-1]
-    slug_by_folded[fold(tail).replace("-", " ")] = m["slug"]
+    slug_by_folded[fold(m["slug"].split(".")[-1]).replace("-", " ")] = m["slug"]
 ec_by_slug = {}
 for city, data in ecitizen["cities"].items():
-    key = fold(city.replace("_", " "))
-    slug = slug_by_folded.get(key)
+    slug = slug_by_folded.get(fold(city.replace("_", " ")))
     if slug and data.get("sessions"):
-        ec_by_slug[slug] = {"city": city, **data}
-print(f"eCitizen mapirano: {len(ec_by_slug)} općina")
-
-# party-level MP aggregates (za/protiv/suzdrzan/odsutan + govori)
-party_mp = defaultdict(lambda: {"for": 0, "against": 0, "abstained": 0, "absent": 0, "speeches": 0, "n": 0})
-for nm, r in mps.items():
-    if not r.get("party") or not r.get("record"):
-        continue
-    c = r["record"].get("counted", {})
-    p = party_mp[r["party"]]
-    p["for"] += c.get("for", 0); p["against"] += c.get("against", 0)
-    p["abstained"] += c.get("abstained", 0); p["absent"] += c.get("absent", 0)
-    p["speeches"] += r.get("speeches", 0); p["n"] += 1
-
-def party_key(s):
-    return fold(s).replace(" ", "")
-
-party_mp_folded = {party_key(k): v for k, v in party_mp.items()}
-
-
-def enrich_candidate(c):
-    c = dict(c)
-    c["timeline"] = timelines.get(c.get("pid") or "", [])
-    return c
-
-
-# --- unit pages ---
-unit_tpl = env.get_template("unit.html")
-for key, u in units.items():
-    lists = [{**l, "candidates": [enrich_candidate(c) for c in l["candidates"]]} for l in u["lists"]]
-    # 'šta dobijaš' cards: per-list 2022 votes+seats in this unit + list quality + MP behavior
-    hist22_by_party = {party_key(h["party"]): h for h in u.get("party_history", []) if h["year"] == 2022}
-    hist18_by_party = {party_key(h["party"]): h for h in u.get("party_history", []) if h["year"] == 2018}
-    seats22_by_party = {party_key(k): v for k, v in u.get("seats22", {}).items()}
-    for l in lists:
-        k = party_key(l["name"])
-        l["card"] = {
-            "votes22": (hist22_by_party.get(k) or {}).get("votes"),
-            "votes18": (hist18_by_party.get(k) or {}).get("votes"),
-            "seats22": seats22_by_party.get(k, 0),
-            "n": len(l["candidates"]),
-            "office": sum(1 for c in l["candidates"] if c.get("office")),
-            "won": sum(1 for c in l["candidates"] if c.get("won")),
-            "debut": sum(1 for c in l["candidates"] if c.get("stood") == 1),
-            "fillers": sum(1 for c in l["candidates"] if (c.get("stood") or 0) >= 3 and not c.get("won")),
-            "mp": party_mp_folded.get(k),
-        }
-    html = unit_tpl.render(u=u, lists=lists, generated=gen,
-                           hist18=[h for h in u["party_history"] if h["year"] == 2018],
-                           hist22=[h for h in u["party_history"] if h["year"] == 2022])
-    open(f"dist/{unit_href(u['race'], u['area'])}", "w").write(html)
-
-# --- municipality pages ---
+        ec_by_slug[slug] = data
 opcina_tpl = env.get_template("opcina.html")
 for m in municipalities:
     ballots = []
     if m["entity"] == "rs":
-        ballots.append({"href": unit_href("oi2026-1", "703"), "name": "Predsjedništvo BiH — srpski član"})
-        ballots.append({"href": unit_href("oi2026-5", "5"), "name": "Predsjednik i potpredsjednici RS"})
+        pres = [("oi2026-1", "703")]
     elif m["entity"] == "fbih":
-        ballots.append({"href": unit_href("oi2026-1", "701"), "name": "Predsjedništvo BiH — bošnjački član"})
-        ballots.append({"href": unit_href("oi2026-1", "702"), "name": "Predsjedništvo BiH — hrvatski član"})
+        pres = [("oi2026-1", "701"), ("oi2026-1", "702")]
     else:
-        ballots.append({"href": None, "name": "Predsjedništvo BiH — zavisi od opcije (Brčko)"})
-    for race, area in m["refs"]:
-        ballots.append({"href": unit_href(race, area), "name": unit_name(race, area)})
-    html = opcina_tpl.render(m=m, ballots=ballots, ec=ec_by_slug.get(m["slug"]), generated=gen)
-    open(f"dist/opcina-{m['slug']}.html", "w").write(html)
+        pres = [("oi2026-1", "701"), ("oi2026-1", "702"), ("oi2026-1", "703")]
+    order = pres + ([("oi2026-5", "5")] if m["entity"] == "rs" else []) + [tuple(r) for r in m["refs"]]
+    seen = set()
+    for race, area in order:
+        if (race, area) in seen:
+            continue
+        seen.add((race, area))
+        u = units.get(f"{race}-{area}")
+        if not u:
+            continue
+        sub = {"701": "bošnjački član", "702": "hrvatski član", "703": "srpski član"}.get(area) if race == "oi2026-1" else None
+        ballots.append({"race": race, "r": RACE[race], "sub": sub, "href": unit_href(race, area), "n_lists": len(u["lists"]),
+                        "n_cands": u["stats"]["candidates"], "area": area})
+    # FBiH: bošnjački + hrvatski član su jedan papir s dvije kolone
+    pres_b = [b for b in ballots if b["race"] == "oi2026-1" and b["area"] in ("701", "702")]
+    if len(pres_b) == 2:
+        merged = {"race": "oi2026-1", "r": RACE["oi2026-1"], "multi": True, "subs": pres_b}
+        ballots = [merged] + [b for b in ballots if b not in pres_b]
+    html = opcina_tpl.render(m=m, ballots=ballots, ec=ec_by_slug.get(m["slug"]), **base_ctx)
+    write(f"opcina-{m['slug']}.html", html)
 
-# --- općine index ---
 groups = defaultdict(list)
 for m in municipalities:
     groups[m["group"]].append(m)
-html = env.get_template("opcine.html").render(
-    groups=sorted(groups.items()), municipalities=municipalities, generated=gen)
-open("dist/opcine.html", "w").write(html)
+write("opcine.html", env.get_template("opcine.html").render(groups=sorted(groups.items()), **base_ctx))
 
-# --- stranke: national party comparison ---
-party_nat = defaultdict(lambda: {"votes18": 0, "votes22": 0, "cands26": 0, "won_ever": 0, "debut": 0})
-for u in units.values():
-    for h in u["party_history"]:
-        k = h["party"]
-        if h["year"] == 2018:
-            party_nat[k]["votes18"] += h["votes"] or 0
-        else:
-            party_nat[k]["votes22"] += h["votes"] or 0
+# --- party pages + index of parties
+stranka_tpl = env.get_template("stranka.html")
+for pk, ps in party_pages.items():
+    write(ps["href"], stranka_tpl.render(p=ps, **base_ctx))
+plist = sorted(party_pages.values(), key=lambda p: -p["n"])
+write("stranke.html", env.get_template("stranke.html").render(parties=plist, **base_ctx))
+
+# --- presidency page
+def pres_cands(area):
+    u = units[f"oi2026-1-{area}"]
+    out = []
     for l in u["lists"]:
-        k = l["name"]
         for c in l["candidates"]:
-            party_nat[k]["cands26"] += 1
-            if c.get("won"):
-                party_nat[k]["won_ever"] += 1
-            if c.get("stood") == 1:
-                party_nat[k]["debut"] += 1
-top = sorted(party_nat.items(), key=lambda kv: -kv[1]["cands26"])[:30]
-html = env.get_template("stranke.html").render(parties=top, generated=gen)
-open("dist/stranke.html", "w").write(html)
+            v = person_view(c)
+            v["list"] = l["name"]; v["party_href"] = party_href(l["name"])
+            out.append(v)
+    return out
+ctx_pres = context["presidency"]
+def merge_ctx(cands, ctx_rows):
+    by = {fold(r["name"]): r for r in ctx_rows}
+    for c in cands:
+        c["ctx"] = by.get(fold(cyr2lat(c["raw_name"]).split(" - ")[0]))
+    return cands
+pres = {"bosnjacki": merge_ctx(pres_cands("701"), ctx_pres["bosnjacki"]),
+        "hrvatski": merge_ctx(pres_cands("702"), ctx_pres["hrvatski"]),
+        "srpski": merge_ctx(pres_cands("703"), ctx_pres["srpski"])}
+rs_u = units["oi2026-5-5"]
+rs_c = []
+for l in rs_u["lists"]:
+    for c in l["candidates"]:
+        v = person_view(c); v["list"] = l["name"]; v["party_href"] = party_href(l["name"]); rs_c.append(v)
+rs_c = merge_ctx(rs_c, context["rs_president"])
+write("predsjednistvo.html", env.get_template("predsjednistvo.html").render(pres=pres, rs=rs_c, note=context["rs_president_note"], **base_ctx))
 
-# --- poslanici: PSBiH incumbents' voting records ---
-mp_rows = []
-for nm, r in mps.items():
-    rec = r.get("record") or {}
-    c = rec.get("counted", {})
-    tot = c.get("for", 0) + c.get("against", 0) + c.get("abstained", 0) or 1
-    seen = c.get("for", 0) + c.get("against", 0) + c.get("abstained", 0) + c.get("absent", 0) or 1
-    tl = timelines.get(r["pid"], [])
-    v2022 = next((t.get("votes") for t in tl if t.get("y") == 2022 and t.get("lvl") == "Predstavnički dom PSBiH"), None)
-    mp_rows.append({"name": nm, "party": r.get("party"),
-                    "za": c.get("for", 0), "protiv": c.get("against", 0),
-                    "suzdrzan": c.get("abstained", 0), "odsutan": c.get("absent", 0),
-                    "za_pct": round(100 * c.get("for", 0) / tot),
-                    "prisustvo": round(100 * (seen - c.get("absent", 0)) / seen),
-                    "speeches": r.get("speeches", 0), "personal22": v2022})
-mp_rows.sort(key=lambda r: -r["za_pct"])
-html = env.get_template("poslanici.html").render(mps=mp_rows, generated=gen)
-open("dist/poslanici.html", "w").write(html)
+# --- what happened
+kd_view = []
+for d in sorted(key_decisions, key=lambda d: d["date"], reverse=True):
+    p = d.get("published") or {}
+    kd_view.append({**d, "chamber_name": CHAMBER_NAME.get(d["chamber"]), "za": p.get("for"), "protiv": p.get("against"), "uz": p.get("abstainPublished")})
+write("desavanja.html", env.get_template("desavanja.html").render(events=context["events"], themes=context["themes"], kd=kd_view, **base_ctx))
 
-# --- sjednice: national eCitizen overview ---
-sj = []
-m_by_slug = {m["slug"]: m for m in municipalities}
-for slug, ec in ec_by_slug.items():
-    m = m_by_slug.get(slug)
-    if not m:
-        continue
-    sessions = ec.get("sessions", [])
-    latest = None
-    if sessions:
-        s = sessions[0]
-        latest = {"name": s.get("name"), "date": s.get("date"), "n_agendas": len(s.get("agendas", []))}
-    sj.append({"slug": slug, "name": m["name"], "latest": latest})
-sj.sort(key=lambda c: c["name"])
-html = env.get_template("sjednice.html").render(cities=sj, generated=gen)
-open("dist/sjednice.html", "w").write(html)
+# --- how to vote
+write("kako-glasati.html", env.get_template("kako.html").render(ctx=context, **base_ctx))
 
-# --- index ---
-html = env.get_template("index.html").render(
-    national=national, municipalities=municipalities, generated=gen)
-open("dist/index.html", "w").write(html)
+# --- index
+write("index.html", env.get_template("index.html").render(municipalities=municipalities, national=national, ctx=context, **base_ctx))
 
-print(f"rendered: {len(units)} jedinica, {len(municipalities)} općina, stranke, poslanici, index")
+print(f"rendered: {len(units)} listića, {len(municipalities)} općina, {n_kand} kandidata, {len(party_pages)} stranaka")

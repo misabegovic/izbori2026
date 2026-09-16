@@ -1,0 +1,79 @@
+{
+ "researched": "2026-09-16",
+ "basics": {
+  "date": "nedjelja, 4. oktobar 2026, 07:00–19:00",
+  "campaign": "4. 9. – 3. 10. 2026 (izborna šutnja od 3. 10. u 07:00)",
+  "voters": 3414364,
+  "new_this_year": "Prvi opći izbori s otiskom prsta umjesto potpisa i skenerom u koji sam ubacuješ listić.",
+  "sources": ["https://www.izbori.ba/?Lang=3&CategoryID=64&Id=6125", "https://politicki.ba/izbori/pocinje-izborna-kampanja-u-bih-vise-od-34-miliona-biraca-108-politickih-subjekata-i-prvi-izbori-s-biometrijom-i-skenerima/108269"]
+ },
+ "how_to_vote": [
+  {"step": "Ponesi ličnu kartu, pasoš ili vozačku.", "detail": "Umjesto potpisa daješ otisak prsta na uređaj."},
+  {"step": "Piši tamnom hemijskom, ne crvenom.", "detail": "Skener ne čita crvenu boju."},
+  {"step": "Predsjedništvo (i predsjednik RS): popuni JEDAN kružić.", "detail": "Jedan kandidat. Pobjeđuje ko ima najviše glasova, nema drugog kruga."},
+  {"step": "Parlamenti: PRVO popuni kružić ispred jedne stranke.", "detail": "Ako zaokružiš samo kandidate, a ne i stranku, listić je nevažeći. Ovo je novo pravilo."},
+  {"step": "Onda, ako hoćeš, do TRI kandidata s te iste liste.", "detail": "To je „lični glas”. Na listiću su brojevi, imena su na pomoćnom listu koji dobiješ uz listić."},
+  {"step": "Kružić popuni cijeli. Listić okreni licem dolje i ubaci u skener.", "detail": "Skener čuva kopiju. Poslije se broji i ručno kao kontrola."},
+  {"step": "Glas je tajan.", "detail": "Niko, ni poslodavac ni stranka, ne može vidjeti šta si zaokružio. Slikanje listića je zabranjeno i nepotrebno."}
+ ],
+ "how_votes_become_seats": [
+  "Stranka mora imati bar 3% glasova u izbornoj jedinici da dobije mandat.",
+  "Unutar liste prvo prolaze kandidati koji sami skupe bar 20% glasova te liste. Ostatak ide po redoslijedu koji je stranka odredila.",
+  "Praktično: čovjek s dna liste može preskočiti prvog samo ako ga dovoljno ljudi lično zaokruži.",
+  "Dio mandata (kompenzacijski) stranke dijele same, tu tvoj lični glas ne mijenja ništa."
+ ],
+ "how_to_vote_sources": ["https://radiosarajevo.ba/vijesti/bosna-i-hercegovina/cik-obavio-izgled-glasackih-listica-za-izbore-2026/647856", "https://otvoreno.ba/novosti/bih/novi-glasacki-listic-donosi-velike-promjene-evo-kako-ce-se-glasati-4-oktobra/", "https://avaz.ba/vijesti/bih/1070463/hitno-upozorenje-iz-cik-a-bih-ako-napravite-ovu-gresku-vas-glas-propada", "https://raport.ba/sistem-u-kojem-stranke-na-izborima-pobjeduju-i-svoje-kandidate-zasto-je-vazna-pozicija-na-listi-i-koliko-je-teze-onima-pod-dvocifrenim-brojevima"],
+ "themes": [
+  {"t": "Ko će vladati poslije izbora", "plain": "Državna vlast (Trojka + HDZ + SNSD) raspala se u januaru 2025. Pitanje je može li se sastaviti vlast bez Dodikove stranke."},
+  {"t": "Republika Srpska poslije Dodika", "plain": "Dodik je osuđen i ne smije obavljati funkcije, ali i dalje vodi SNSD. Na prijevremenim izborima 2025 razlika između vlasti i opozicije bila je oko 2%."},
+  {"t": "Put u EU", "plain": "BiH je kandidat i pregovori su otvoreni, ali zakoni koje EU traži (sudovi, VSTV) stoje. Svi kažu da su za EU, razlika je ko koga krivi."},
+  {"t": "Plate, penzije, cijene, stanovi", "plain": "Skoro svi obećavaju brojke: minimalac, penzije, stanovi za mlade. Ista obećanja davali su i 2022."},
+  {"t": "Odlazak mladih i korupcija", "plain": "Zapošljavanje „po podobnosti” i korupcija se vežu za iseljavanje."},
+  {"t": "Izborni zakon i ko bira hrvatskog člana", "plain": "HDZ traži da Hrvati sami biraju svog člana Predsjedništva, DF nudi građanski model."},
+  {"t": "Pravosuđe i povjerenje", "plain": "Suđenje Dodiku, prazne funkcije (SIPA, ministar sigurnosti) i istrage hrane nepovjerenje."},
+  {"t": "Poštenje izbora", "plain": "Prvi put otisak prsta i skeneri. Brige se sele na kupovinu glasova prije izbornog dana."}
+ ],
+ "themes_sources": ["https://www.kas.de/en/country-reports/detail/-/content/bosnia-and-herzegovina-in-the-election-year-2026", "https://www.oslobodjenje.ba/vijesti/bih/glasaci-izvolite-opet-ono-sto-smo-vec-obecali-vece-plate-i-penzija-ili-reforme/", "https://6yka.com/bih/sutra-pocinje-kampanja-sta-se-mijenja-za-birace-a-sta-za-one-koji-pokusavaju-ukrasti-izbore/"],
+ "presidency": {
+  "bosnjacki": [
+   {"name": "DENIS BEĆIROVIĆ", "party": "SDP BiH (koalicija „Ujedinjeni za državu BiH”)", "bio": "Sadašnji član Predsjedništva BiH od 2022. Prije toga poslanik i delegat u državnom parlamentu. Doktor historije.", "says": "Protivnici su mu „nezaposlenost, kriminal i korupcija”; obećava namjensku industriju, radna mjesta, ostanak mladih.", "src": "https://www.vijesti.ba/clanak/774188/becirovic-u-travniku-moji-protivnici-su-nezaposlenost-kriminal-i-korupcija"},
+   {"name": "BAKIR IZETBEGOVIĆ", "party": "SDA", "bio": "Predsjednik SDA. Dva mandata u Predsjedništvu (2010–2018), zatim delegat u Domu naroda.", "says": "Program „3×50”: 50 milijardi KM investicija, 50.000 radnih mjesta, 50% veće plate i penzije.", "src": "https://www.fokus.ba/vijesti/bih/sda-u-stocu-odrzala-prvi-predizborni-skup-izetbegovic-predstavio-poruke-stranke/3574454/"},
+   {"name": "SEMIR EFENDIĆ", "party": "Stranka za BiH", "bio": "Dugogodišnji načelnik Novog Grada Sarajevo, bivši SDA. Prvi put se kandiduje za Predsjedništvo.", "says": "„Pokrenimo BiH”: alternativa i Trojci i SDA; investicioni fond, industrija.", "src": "https://www.klix.ba/vijesti/bih/efendic-iz-hadzica-bih-je-obezglavljena-moramo-vratiti-vezu-izmedu-naroda-i-onih-koji-ga-predstavljaju/260915060"},
+   {"name": "FAHRUDIN RADONČIĆ", "party": "SBB", "bio": "Vlasnik Avaza, dva puta ministar sigurnosti BiH. Četvrti pokušaj za Predsjedništvo.", "says": "30–50 hiljada subvencioniranih stanova za mlade, pomoć za kiriju, ugovor države s Islamskom zajednicom.", "src": "https://www.klix.ba/vijesti/bih/sbb-poceo-kampanju-u-banovicima-obratio-se-radoncic-moj-zadatak-je-da-uradim-ono-sto-nisu-ni-izetbegovic-ni-becirovic/260905011"}
+  ],
+  "hrvatski": [
+   {"name": "DARIJANA FILIPOVIĆ", "party": "HDZ BiH", "bio": "Poslanica u državnom parlamentu od 2018, prije toga u Parlamentu FBiH. Potpredsjednica HDZ-a.", "says": "„Legitimno predstavljanje”: da Hrvati sami biraju svog člana; izmjene Izbornog zakona.", "src": "https://n1info.hr/regija/bitka-za-predsjednistvo-bih-paraglajder-ravnopravnost-hrvata-i-komsicev-nasljednik"},
+   {"name": "ZDENKO LUČIĆ", "party": "nezavisni (podrška HDZ 1990, HRS, HNP, HSS, HDS)", "bio": "Pravnik, general u penziji. U politici od kraja 90-ih.", "says": "Alternativa Čoviću unutar hrvatskog biračkog tijela; strategija nacionalne sigurnosti.", "src": "https://n1info.hr/regija/bitka-za-predsjednistvo-bih-paraglajder-ravnopravnost-hrvata-i-komsicev-nasljednik"},
+   {"name": "SLAVEN KOVAČEVIĆ", "party": "DF", "bio": "Doktor političkih nauka, savjetnik Željka Komšića (koji odlazi nakon 4 mandata). Tužio BiH u Strazburu.", "says": "Građanska država, protiv etničkog modela izbora; neće podržati pomilovanje Dodika.", "src": "https://www.oslobodjenje.ba/vijesti/bih/izbori-su-sve-blize-ovo-su-svi-kandidati-u-utrci-za-predsjednistvo-bi-h/"}
+  ],
+  "srpski": [
+   {"name": "ŽELJKA CVIJANOVIĆ", "party": "SNSD", "bio": "Sadašnja članica Predsjedništva od 2022. Prije toga premijerka (2013–2018) i predsjednica RS (2018–2022). SAD ukinule sankcije oktobra 2025.", "says": "„Odbrana Republike Srpske”, nastavak politike SNSD-a. Konkretna obećanja slabo pokrivena u medijima.", "src": "https://www.oslobodjenje.ba/vijesti/bih/izbori-su-sve-blize-ovo-su-svi-kandidati-u-utrci-za-predsjednistvo-bi-h/"},
+   {"name": "MARINKO BOŽOVIĆ", "party": "SDS", "bio": "Dugogodišnji načelnik Istočne Ilidže, ekonomista.", "says": "SDS: „Pravda se vraća u Srpsku”. Lične poruke slabo pokrivene.", "src": "https://www.oslobodjenje.ba/vijesti/bih/sds-odabrao-blanusa-kandidat-za-predsjednika-rs-a-a-bozovic-za-predsjednistvo-bi-h/"},
+   {"name": "NEBOJŠA VUKANOVIĆ", "party": "Za pravdu i red", "bio": "Poslanik NSRS, najglasniji kritičar Dodika. Bivši savjetnik u SDS-u.", "says": "Kritikuje i SNSD i „meku” opoziciju; za predsjednika RS podržava SDS-ovog Blanušu.", "src": "https://www.oslobodjenje.ba/vijesti/bih/vukanovic-kandidat-za-predsjednistvo-bi-h-podrzava-blanusu-za-predsjednika-rs/"}
+  ]
+ },
+ "rs_president": [
+  {"name": "SAVO MINIĆ", "party": "SNSD", "bio": "Premijer RS od septembra 2025. Prije toga načelnik Šamca, ministar poljoprivrede RS.", "says": "Nastavak politike SNSD-a; putevi, škole, bolnice, veće plate prosvjeti i zdravstvu.", "src": "https://www.argumenti.rs/minic-u-krupi-na-vrbasu-idemo-u-susret-pobjedi-razvoju-i-napretku-republike-srpske/"},
+  {"name": "BRANKO BLANUŠA", "party": "SDS (zajednički kandidat opozicije)", "bio": "Predsjednik SDS-a, profesor elektrotehnike. Na prijevremenim izborima 2025 izgubio za oko 2%.", "says": "Otklon od SNSD-a, borci, borba protiv korupcije.", "src": "https://srpskacafe.com/2025/12/blanusa-kandidat-sds-a-za-predsjednika-rs-i-na-opstim-izborima-2026/"},
+  {"name": "BOGDAN JOVANOVIĆ", "party": "Stranka „Život”", "bio": "Predsjednik stranke. Manji kandidat.", "says": "Program slabo pokriven u medijima.", "src": "https://6yka.com/bih/trka-za-palatu-ovo-je-svih-12-kandidata-za-predsjednika-rs/"},
+  {"name": "ĆAMIL DURAKOVIĆ", "party": "nezavisni", "bio": "Sadašnji potpredsjednik RS iz reda Bošnjaka, bivši načelnik Srebrenice.", "says": "Cilja na ponovni izbor za potpredsjednika.", "src": "https://www.danas.rs/svet/region/u-trci-za-predsednika-i-potpredsednike-rs-na-oktobarskim-izborima-12-kandidata/"}
+ ],
+ "rs_president_note": "Predsjednik i dva potpredsjednika biraju se s jedne liste: pobjednik je predsjednik, a potpredsjednici su najbolje plasirani kandidati iz druga dva naroda. 12 kandidata ukupno.",
+ "events": [
+  {"date": "2022-12-15", "level": "BiH", "t": "BiH dobila status kandidata za EU", "plain": "Evropsko vijeće dodijelilo BiH status kandidata.", "src": "https://www.consilium.europa.eu/en/policies/bosnia-herzegovina/"},
+  {"date": "2023-01-25", "level": "BiH", "t": "Formirano Vijeće ministara (Krišto)", "plain": "Koalicija SNSD + HDZ + Trojka (SDP, NiP, NS). SDA prvi put u opoziciji na državnom nivou.", "src": "https://balkans.aljazeera.net/news/balkan/2023/1/25/bosna-i-hercegovina-dobila-novo-vijece-ministara"},
+  {"date": "2023-06-27", "level": "RS", "t": "NSRS: odluke Ustavnog suda BiH se ne primjenjuju", "plain": "Visoki predstavnik poništio zakon i kriminalizovao nepoštivanje svojih odluka. Iz toga je proizašla presuda Dodiku.", "src": "https://balkans.aljazeera.net/news/balkan/2023/6/27/danas-posebna-sjednica-nsrs-o-neprimjenjivanju-odluka-ustavnog-suda-bih"},
+  {"date": "2024-03-21", "level": "BiH", "t": "Otvoreni pristupni pregovori s EU", "plain": "Uslovljeno reformama: sudovi, VSTV, vladavina prava.", "src": "https://www.consilium.europa.eu/en/policies/bosnia-herzegovina/"},
+  {"date": "2024-03-26", "level": "BiH", "t": "Schmidt nametnuo izmjene Izbornog zakona", "plain": "Skeneri, biometrija, video-nadzor, kazne za dezinformacije. Zbog toga se 2026 glasa drugačije.", "src": "https://detektor.ba/2024/03/27/sta-trebate-znati-o-nametnutim-izmjenama-izbornog-zakona-bih/"},
+  {"date": "2024-04-19", "level": "RS", "t": "NSRS donijela vlastiti Izborni zakon RS", "plain": "Odgovor na Schmidtove izmjene; kasnije stavljen van snage.", "src": "https://en.wikipedia.org/wiki/2026_Bosnian_general_election"},
+  {"date": "2025-01-23", "level": "BiH", "t": "Trojka raskinula koaliciju sa SNSD-om", "plain": "Nakon što SNSD nije podržao dva „evropska” zakona. HDZ ostao uz SNSD.", "src": "https://balkans.aljazeera.net/news/2025/1/23/stranke-trojke-raskidaju-koaliciju-sa-snsd-om"},
+  {"date": "2025-02-26", "level": "BiH", "t": "Presuda Dodiku", "plain": "Godina zatvora i 6 godina zabrane funkcija. Pravosnažno 1. 8. 2025, zatvor otkupio, CIK mu oduzeo mandat.", "src": "https://detektor.ba/2025/08/18/odlukom-suda-bih-dodik-vise-nije-predsjednik-rs-a/"},
+  {"date": "2025-02-28", "level": "RS", "t": "NSRS: paket zakona nakon presude", "plain": "Zabrana rada Suda, Tužilaštva, VSTV-a i SIPA-e u RS; VSTS RS; registar NVO. Ustavni sud BiH sve poništio 29. 5. 2025.", "src": "https://detektor.ba/2025/05/29/ustavni-sud-neustavnim-proglasio-sve-zakone-koje-je-nsrs-usvojila-nakon-presude-dodiku/"},
+  {"date": "2025-09-30", "level": "BiH", "t": "Usvojena Reformska agenda", "plain": "Uslov za novac iz EU Plana rasta, usvojen skoro dvije godine kasno.", "src": "https://www.paragraf.ba/dnevne-vijesti/01102025/01102025-vijest3.html"},
+  {"date": "2025-10-18", "level": "RS", "t": "NSRS povukla šest spornih zakona", "plain": "Dio dogovora sa SAD; opozicija nije glasala.", "src": "https://www.oslobodjenje.ba/vijesti/bih/nsrs-povukla-vise-dodikovih-zakona-evo-koji-prestaju-vaziti-1084248/"},
+  {"date": "2025-10-29", "level": "BiH", "t": "SAD ukinule sankcije Dodiku i Cvijanović", "plain": "Nakon što je Dodik odstupio i omogućio izbore.", "src": "https://www.slobodnaevropa.org/amp/dodik-ukinute-sankcije-sad/33568374.html"},
+  {"date": "2025-11-23", "level": "RS", "t": "Prijevremeni izbori za predsjednika RS", "plain": "Karan (SNSD) oko 50% protiv Blanuše (SDS) oko 48%. Ponovljeno na 136 mjesta 8. 2. 2026.", "src": "https://www.osw.waw.pl/en/publikacje/analyses/2025-11-26/snap-presidential-election-republika-srpska-dodiks-candidate-wins"},
+  {"date": "2026-05-19", "level": "BiH", "t": "Zakon o Sudu BiH prošao Predstavnički dom", "plain": "Prošao jer je 5 poslanika SNSD-a bilo odsutno. Zakon o VSTV-u nije. Do septembra 2026 nije završen u Domu naroda.", "src": "https://www.klix.ba/vijesti/bih/predstavnicki-dom-psbih-usvojen-nacrt-zakona-o-sudu-bih-i-apelacionom-sudu-zakon-o-vstv-u-bez-podrske/260519179"},
+  {"date": "2026-07-28", "level": "BiH", "t": "Budžet institucija BiH za 2026 usvojen sa 7 mjeseci kašnjenja", "plain": "Budžeti kasne svake godine u ovom sazivu.", "src": "https://sarajevotimes.com/state-budget-for-2026-adopted-with-a-seven-month-delay/"}
+ ]
+}

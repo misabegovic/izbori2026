@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Šta se desilo 2022–2026 — Izbori 2026{% endblock %}
+{% block content %}
+<h1>Šta se desilo od prošlih izbora</h1>
+<p class="lead">Kratko, redom. Da znaš o čemu se priča u kampanji.</p>
+<h2>O čemu se priča</h2>
+{% for t in themes %}<div class="card"><h3>{{ t.t }}</h3><p style="margin:0">{{ t.plain }}</p></div>{% endfor %}
+<h2>Najvažniji događaji</h2>
+{% for e in events %}
+<div class="kd"><span class="d">{{ e.date }} · {{ e.level }}</span><br><span class="t">{{ e.t }}</span><br><span class="small">{{ e.plain }} <a class="src" href="{{ e.src }}">izvor</a></span></div>
+{% endfor %}
+<h2>Ključna glasanja u parlamentima</h2>
+<p class="mut small">Za svako piše koliko je poslanika bilo za i protiv. Ko je tačno kako glasao vidiš na stranici kandidata ili stranke.</p>
+{% for d in kd %}
+<div class="kd"><span class="d">{{ d.date }} · {{ d.chamber_name }}</span><br><span class="t">{{ d.title }}</span> <span class="small">— {{ d.za }} za, {{ d.protiv }} protiv{% if d.uz %}, {{ d.uz }} uzdržan{% endif %}</span><br><span class="small mut">{{ d.plain }}</span></div>
+{% endfor %}
+{% endblock %}

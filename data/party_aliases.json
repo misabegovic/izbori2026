@@ -1,0 +1,86 @@
+{
+ "_note": "program name (programs_*.json) -> regexes matched against folded (lowercase ascii) CIK list names; first match wins",
+ "SDP BiH": [
+  "^sdp socijaldemokratska",
+  "^ujedinjeni za drzavu"
+ ],
+ "SDA": [
+  "^sda stranka demokratske"
+ ],
+ "Stranka za BiH": [
+  "^stranka za bosnu i hercegovinu",
+  "^semir efendic"
+ ],
+ "DF (Željko Komšić - Za građansku državu DF/GS)": [
+  "^zeljko komsic",
+  "^demokratska fronta"
+ ],
+ "SBB Fahrudin Radončić": [
+  "^sbb"
+ ],
+ "Naša stranka": [
+  "^nasa stranka"
+ ],
+ "NES (Nezavisni europski savez, NES BiH / PDA / Naprijed!)": [
+  "^nes bih",
+  "^nes pda"
+ ],
+ "Snaga naroda": [
+  "^snaga naroda"
+ ],
+ "HDZ BiH": [
+  "^hdz bih"
+ ],
+ "Narod i pravda (NiP)": [
+  "^narod i pravda"
+ ],
+ "Bosanskohercegovačka inicijativa Kasumović Fuad": [
+  "^bosanskohercegovacka inicijativa"
+ ],
+ "HDZ 1990": [
+  "^koalicija hdz 1990",
+  "^hdz 1990",
+  "^hrvatska petorka",
+  "^hrvatska demokratska zajednica 1990"
+ ],
+ "Naprijed BiH": [
+  "^naprijed bih"
+ ],
+ "Koalicija za državu": [
+  "^koalicija za drzavu"
+ ],
+ "SNSD": [
+  "^savez nezavisnih socijaldemokrata",
+  "^snsd"
+ ],
+ "Pokret Sigurna Srpska (Draško Stanivuković; PSS, PDP, NPSP)": [
+  "^drasko stanivukovic"
+ ],
+ "Ujedinjena Srpska": [
+  "^ujedinjena srpska"
+ ],
+ "DNS-NPS (Banjac-Nešić)": [
+  "^dns nps"
+ ],
+ "Narodni front Jelena Trivić": [
+  "^narodni front"
+ ],
+ "Socijalistička partija Petar Đokić / DEMOS / NDP": [
+  "^socijalisticka partija petar djokic"
+ ],
+ "SPS Goran Selak Pokret Jedinstvena Srpska": [
+  "^sps goran selak"
+ ],
+ "Republička stranka Srpske RSS": [
+  "^republicka stranka srpske"
+ ],
+ "Za pravdu i red - Lista Nebojše Vukanovića / PDP RS Igor Crnadak": [
+  "^za pravdu i red"
+ ],
+ "Volja naroda Srpske dr Vlado Đajić": [
+  "^volja naroda srpske"
+ ],
+ "Nezavisna lista Doboj Sevlid Hurtić": [
+  "^nezavisna lista doboj"
+ ]
+}

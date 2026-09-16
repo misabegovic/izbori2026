@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Kako se glasa — Izbori 2026{% endblock %}
+{% block content %}
+<h1>Kako se glasa, korak po korak</h1>
+<p class="lead">{{ ctx.basics.date }}. {{ ctx.basics.new_this_year }}</p>
+{% for s in ctx.how_to_vote %}
+<div class="step"><div class="n">{{ loop.index }}</div><div><b>{{ s.step }}</b><br><span class="mut">{{ s.detail }}</span></div></div>
+{% endfor %}
+<h2>Kako od glasova nastaju mandati</h2>
+<div class="card">{% for s in ctx.how_votes_become_seats %}<p>{{ s }}</p>{% endfor %}</div>
+<p class="src">Izvori: {% for s in ctx.how_to_vote_sources %}<a href="{{ s }}">{{ s | replace('https://','') | truncate(40) }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+<a class="btn" href="index.html">Nađi svoju općinu →</a>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}{{ p.name }} — Izbori 2026{% endblock %}
+{% block content %}
+<p class="mut"><a href="javascript:history.back()">← nazad</a> · <a href="index.html">početna</a></p>
+<h1>{{ p.name }}</h1>
+<div>{% for b in p.badges %}{{ badge(b) }}{% endfor %}</div>
+<p class="lead" style="margin-top:.6rem">{{ p.story }}</p>
+<div class="card">
+<b>Ove godine na listiću:</b>
+<ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for r in runs %}<li><a href="{{ r.href }}">{{ RACE[r.unit.race].short }}{% if r.unit.race != 'oi2026-1' and r.unit.race != 'oi2026-5' %}, jedinica {{ r.unit.area }}{% endif %}</a> — {% if r.party_href %}<a href="{{ r.party_href }}">{{ r.list | ptitle }}</a>{% else %}{{ r.list | ptitle }}{% endif %}{% if r.pos %}, {{ r.pos }}. na listi{% endif %}</li>{% endfor %}</ul>
+</div>
+
+{% if rec %}
+<h2>Kako je glasao kao poslanik</h2>
+{% for r in rec %}
+<div class="card">
+<p style="margin:0 0 .4rem"><b>{{ r.chamber_name }}</b>, {{ r.saziv }}</p>
+<div class="facts">
+<div class="fact"><b>{{ r.prisustvo_pct }}%</b><span>{% if r.nsrs %}glasanja na kojima je glasao{% else %}bio prisutan na glasanjima{% endif %}</span></div>
+<div class="fact"><b>{{ r.za_pct }}%</b><span>glasao „za” kad je glasao</span></div>
+<div class="fact"><b>{{ r.odsutan | num }}</b><span>{% if r.nsrs %}puta nije glasao{% else %}puta nije bio na glasanju{% endif %}</span></div>
+{% if not r.nsrs %}<div class="fact"><b>{{ speeches_n }}</b><span>puta govorio u parlamentu</span></div>{% endif %}
+</div>
+<p class="small mut">Ukupno {{ r.n | num }} glasanja: {{ r.za | num }} za, {{ r.protiv | num }} protiv, {{ r.uz | num }} uzdržan.{% if r.nsrs %} NSRS ne objavljuje ko je bio odsutan, samo ko nije glasao.{% endif %}</p>
+</div>
+{% endfor %}
+{% if kd %}
+<h2>Ključne odluke: kako je glasao</h2>
+<p class="mut small">Odabrali smo najvažnije zakone saziva. Za svaki piše šta je i kako je ova osoba glasala.</p>
+{% for k in kd %}
+<div class="kd"><span class="vote {{ k.cls }}">{{ k.word }}</span> <span class="t">{{ k.d.title }}</span> <span class="d">{{ k.d.date }}</span><br><span class="small mut">{{ k.d.plain }}</span></div>
+{% endfor %}
+{% endif %}
+{% if speeches %}
+<details><summary>Šta je govorio (primjeri)</summary>
+{% for s in speeches %}<p class="small">„{{ s.text[:300] }}{% if s.text | length > 300 %}…{% endif %}”</p>{% endfor %}
+<p class="small mut">Iz stenograma, neautorizovanog. Ukupno {{ speeches_n }} izlaganja.</p>
+</details>
+{% endif %}
+{% endif %}
+
+{% if tl %}
+<h2>Sve kandidature</h2>
+<div class="card">
+{% for t in tl %}
+<div class="kd" style="padding:.35rem 0"><b>{{ t.y }}</b> — {{ t.lvl }}{% if t.area %}, {{ t.area | title }}{% endif %}{% if t.party %}, <i>{{ t.party | ptitle }}</i>{% endif %}{% if t.pos %}, {{ t.pos }}. na listi{% endif %}{% if t.votes %}, {{ t.votes | num }} glasova{% endif %} — {% if t.elected %}<b>izabran</b>{% elif t.elected is none %}sada{% else %}nije izabran{% endif %}</div>
+{% endfor %}
+</div>
+{% endif %}
+
+{% if prof.bio or assets %}
+<h2>Iz javnih izvora</h2>
+<div class="card">
+{% if prof.bio %}
+{% if prof.bio.birth %}<p><b>Rođen/a:</b> {{ prof.bio.birth.value }}{% if prof.bio.birthPlace %}, {{ prof.bio.birthPlace.value }}{% endif %} <span class="src">({{ prof.bio.birth.src }})</span></p>{% endif %}
+{% if prof.bio.education %}<p><b>Škola:</b> {{ prof.bio.education.value | replace(',', ', ') }} <span class="src">({{ prof.bio.education.src }})</span></p>{% endif %}
+{% if prof.bio.occupations %}<p><b>Zanimanje:</b> {{ prof.bio.occupations.value | replace(',', ', ') }}</p>{% endif %}
+{% if prof.bio.affiliations %}<p><b>Stranke po biografiji:</b> {{ prof.bio.affiliations.value | replace(',', ', ') }} <span class="src">({{ prof.bio.affiliations.src }})</span></p>{% endif %}
+{% endif %}
+{% if assets %}
+<p><b>Prijavljena imovina</b> <span class="mut small">(zbir po vrsti; različiti izvori se ne sabiraju)</span></p>
+{% for src, rows in assets.items() %}
+<p class="small"><b>{{ 'CIK prijava' if src == 'cik' else src | upper }}:</b> {% for a in rows %}{{ a.kind }}{% if a.totalFening %} {{ a.totalFening | km }}{% endif %}{% if a.holdings and a.holdings > 1 %} ({{ a.holdings }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}</p>
+{% endfor %}
+{% endif %}
+{% if prof.pageUrl %}<p class="src">Više: <a href="{{ prof.pageUrl }}">{{ prof.pageUrl }}</a></p>{% endif %}
+</div>
+{% endif %}
+{% if p.confidence in ('unverified','probable') %}<p class="small mut">⚠ Kandidature su spojene u jednu osobu po imenu. Ako dvoje ljudi ima isto ime, dio ove priče može pripadati drugom čovjeku.</p>{% endif %}
+{% endblock %}
