@@ -27,8 +27,10 @@
       var pts = cands.filter(function (c) { return c[cur.k] != null; });
       var byList = {}; pts.forEach(function (c) { byList[c.l] = 1; });
       var rows = lists.map(function (n, i) { return { i: i, n: n }; }).filter(function (r) { return byList[r.i] || !cur.only; });
-      var perRow = {}; pts.forEach(function (c) { perRow[c.l] = (perRow[c.l] || 0) + 1; });
-      var rowH = d3.max(rows, function (r) { return perRow[r.i] || 0; }) > 12 ? 46 : 34;
+      var bucket = {}; pts.forEach(function (c) { var k = c.l + ':' + c[cur.k]; bucket[k] = (bucket[k] || 0) + 1; });
+      var maxB = d3.max(Object.keys(bucket), function (k) { return bucket[k]; }) || 1;
+      var rad = maxB > 20 ? 4.5 : 5.5;
+      var rowH = Math.max(34, Math.min(110, Math.round(2.2 * rad * Math.sqrt(maxB) + 14)));
       var H = top + rows.length * rowH + 10;
       svg.attr('height', H);
       var max = d3.max(pts, function (c) { return c[cur.k]; }) || 1;
@@ -48,12 +50,12 @@
       var sim = d3.forceSimulation(pts)
         .force('x', d3.forceX(function (c) { return x(c[cur.k]); }).strength(1))
         .force('y', d3.forceY(function (c) { return yOf[c.l]; }).strength(0.4))
-        .force('c', d3.forceCollide(6.5)).stop();
+        .force('c', d3.forceCollide(rad + 1)).stop();
       for (var i = 0; i < 90; i++) sim.tick();
-      pts.forEach(function (c) { c.y = Math.max(yOf[c.l] - rowH / 2 + 6, Math.min(yOf[c.l] + rowH / 2 - 6, c.y)); });
+      pts.forEach(function (c) { c.y = Math.max(yOf[c.l] - rowH / 2 + rad, Math.min(yOf[c.l] + rowH / 2 - rad, c.y)); c.x = Math.max(left + labelW + rad, Math.min(W - right, c.x)); });
       var dots = g.selectAll('circle').data(pts).enter().append('circle')
         .attr('cx', function (c) { return c.x; }).attr('cy', function (c) { return c.y; })
-        .attr('r', function (c) { return c.id === me ? 9 : 5.5; })
+        .attr('r', function (c) { return c.id === me ? 9 : rad; })
         .attr('class', function (c) { return 'viz-dot' + (c.rec ? ' rec' : '') + (c.id === me ? ' me' : ''); })
         .on('click', function (ev, c) { show(c, ev); }).on('mouseenter', function (ev, c) { show(c, ev); });
       if (me) { var m = pts.filter(function (c) { return c.id === me; })[0]; if (m) { var tx = Math.max(left + labelW + 40, Math.min(W - right - 40, m.x)); g.append('text').attr('x', tx).attr('y', m.y - 13).attr('text-anchor', 'middle').attr('class', 'viz-me').text('ovaj kandidat'); } }
