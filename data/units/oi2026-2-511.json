@@ -1174,5 +1174,10 @@
    "party": "LIJEVO KRILO",
    "votes": 9
   }
- ]
+ ],
+ "seats22": {
+  "SDA-STRANKA DEMOKRATSKE AKCIJE": 1,
+  "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": 1,
+  "NES-ZA NOVE GENERACIJE": 1
+ }
 }

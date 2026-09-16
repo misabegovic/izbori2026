@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Sjednice vijeća — Izbori 2026{% endblock %}
+{% block content %}
+<h1>Sjednice vijeća — posljednje objavljene</h1>
+<p class="mut">Općine/gradovi na eCitizen.ba platformi objavljuju sjednice sa tačkama dnevnog reda i ishodima glasanja. Pokriveno {{ cities | length }} od 143 općine — ostale objavljuju (ili ne) na svojim sajtovima.</p>
+{% for c in cities %}
+<div class="card">
+<b><a href="opcina-{{ c.slug }}.html">{{ c.name }}</a></b>
+{% if c.latest %}<span class="mut"> — posljednja: {{ c.latest.name }}{% if c.latest.date %}, {{ c.latest.date }}{% endif %}, {{ c.latest.n_agendas }} tačaka</span>{% endif %}
+</div>
+{% endfor %}
+{% endblock %}

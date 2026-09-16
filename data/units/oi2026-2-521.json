@@ -1170,5 +1170,10 @@
    "party": "KRUG",
    "votes": 61
   }
- ]
+ ],
+ "seats22": {
+  "PDP- PARTIJA DEMOKRATSKOG PROGRESA": 2,
+  "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD": 2,
+  "UJEDINJENA SRPSKA": 1
+ }
 }

@@ -1176,5 +1176,10 @@
    "party": "HRVATSKI NACIONALNI POMAK",
    "votes": 3
   }
- ]
+ ],
+ "seats22": {
+  "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": 1,
+  "SDA-STRANKA DEMOKRATSKE AKCIJE": 2,
+  "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": 1
+ }
 }

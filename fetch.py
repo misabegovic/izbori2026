@@ -224,10 +224,16 @@ def main():
 
     print("5/7 mandati 2018/2022…")
     winners = {}  # (level, area, year) -> set(norm names)
+    winner_party = {}  # (level, area, year) -> {party: count}
+    winner_names_full = {}  # (level, area, year) -> {norm: {"name": orig, "party": label}}
     for year in (2018, 2022):
         for m in paged(f"/mandates?year={year}"):
             lvl, area = (m.get("level") or {}).get("id"), str((m.get("area") or {}).get("id"))
+            plab = (m.get("party") or {}).get("label") or "?"
             winners.setdefault((lvl, area, year), set()).add(norm(m.get("name")))
+            winner_party.setdefault((lvl, area, year), {}).setdefault(plab, 0)
+            winner_party[(lvl, area, year)][plab] += 1
+            winner_names_full.setdefault((lvl, area, year), {})[norm(m.get("name"))] = {"name": m.get("name"), "party": plab}
     print(f"   {len(winners)} grupa")
 
     print("6/7 jedinice…")
@@ -339,8 +345,10 @@ def main():
                  "running_again": len(w22 & names26),
                  "gone": sorted(w22 - names26)}
         hist = sorted(party_hist.get((lvl, area), []), key=lambda r: -(r["votes"] or 0))
+        seats22 = winner_party.get((lvl, area, 2022), {})
         json.dump({"race": race, "area": area, "title": race_meta[race][4],
-                   "stats": stats, "lists": lists, "churn": churn, "party_history": hist},
+                   "stats": stats, "lists": lists, "churn": churn, "party_history": hist,
+                   "seats22": seats22},
                   open(f"data/units/{race}-{area}.json", "w"), ensure_ascii=False, indent=1)
     print(f"   {len(unit_keys)} jedinica")
     json.dump(party_names, open("data/party_names.json", "w"), ensure_ascii=False, indent=1)
@@ -362,10 +370,19 @@ def main():
     def mp_stats(item):
         nm, pid = item
         try:
-            v = {k: get(f"{BASE}/persons/{urllib.parse.quote(pid, safe='')}/votes?vote={k}&limit=1")["meta"]["total"]
-                 for k in ("za", "protiv", "suzdrzan")}
+            recs = get(f"{BASE}/persons/{urllib.parse.quote(pid, safe='')}/voting-record")["data"]
+            vr = None
+            for r in recs:
+                if r.get("saziv") == "2022-2026":
+                    vr = r
+            if vr is None and recs:
+                vr = recs[0]
             sp = get(f"{BASE}/persons/{urllib.parse.quote(pid, safe='')}/speeches?limit=1")["meta"]["total"]
-            return nm, {"pid": pid, "votes": v, "speeches": sp}
+            party = None
+            for (lvl, area, year), names in winner_names_full.items():
+                if lvl == "pd-psbih" and year == 2022 and nm in names:
+                    party = names[nm]["party"]
+            return nm, {"pid": pid, "record": vr, "speeches": sp, "party": party}
         except Exception:
             return nm, None
     todo = [(nm, name26_to_pid[nm]) for nm in mp_winners22 if nm in name26_to_pid]

@@ -1,227 +1,746 @@
 {
- "DENIS ZVIZDIĆ": {
-  "pid": "p.2061-7.3162",
-  "votes": {
-   "za": 1296,
-   "protiv": 95,
-   "suzdrzan": 71
+ "AIDA BARUČIJA": {
+  "pid": "p.25-2.318",
+  "record": {
+   "person": {
+    "id": "o-15527769410",
+    "label": "AIDA BARUČIJA",
+    "href": "/mashinerija/v1/persons/o-15527769410"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 972,
+    "against": 97,
+    "abstained": 20,
+    "absent": 282,
+    "didNotVote": 0,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-15527769410/votes"
   },
-  "speeches": 2682
- },
- "KEŠO SAFET": {
-  "pid": "p.25-2.174",
-  "votes": {
-   "za": 1039,
-   "protiv": 224,
-   "suzdrzan": 130
-  },
-  "speeches": 294
- },
- "NIHAD OMEROVIĆ": {
-  "pid": "p.oi2026-4.287",
-  "votes": {
-   "za": 0,
-   "protiv": 0,
-   "suzdrzan": 0
-  },
-  "speeches": 0
- },
- "KOJOVIĆ PREDRAG": {
-  "pid": "p.25-2.188",
-  "votes": {
-   "za": 1168,
-   "protiv": 140,
-   "suzdrzan": 44
-  },
-  "speeches": 58
- },
- "BEGIĆ ZLATAN": {
-  "pid": "p.25-2.473",
-  "votes": {
-   "za": 828,
-   "protiv": 281,
-   "suzdrzan": 205
-  },
-  "speeches": 233
- },
- "MAGAZINOVIĆ SAŠA": {
-  "pid": "p.2061-7.3207",
-  "votes": {
-   "za": 1300,
-   "protiv": 124,
-   "suzdrzan": 49
-  },
-  "speeches": 268
- },
- "MEHMEDOVIĆ ŠEMSUDIN": {
-  "pid": "p.2061-2.236",
-  "votes": {
-   "za": 1057,
-   "protiv": 162,
-   "suzdrzan": 115
-  },
-  "speeches": 226
- },
- "ŠERIF ŠPAGO": {
-  "pid": "p.25-7.2454",
-  "votes": {
-   "za": 1099,
-   "protiv": 229,
-   "suzdrzan": 171
-  },
-  "speeches": 263
+  "speeches": 22,
+  "party": "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD"
  },
  "MANDRA NERMIN": {
   "pid": "p.2061-7.1137",
-  "votes": {
-   "za": 987,
-   "protiv": 188,
-   "suzdrzan": 136
+  "record": {
+   "person": {
+    "id": "o-10880763929",
+    "label": "NERMIN MANDRA",
+    "href": "/mashinerija/v1/persons/o-10880763929"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 900,
+    "against": 152,
+    "abstained": 122,
+    "absent": 191,
+    "didNotVote": 6,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-10880763929/votes"
   },
-  "speeches": 25
- },
- "EMRIĆ JASMIN": {
-  "pid": "p.25-2.45",
-  "votes": {
-   "za": 1234,
-   "protiv": 213,
-   "suzdrzan": 34
-  },
-  "speeches": 432
- },
- "KOŽUL PREDRAG": {
-  "pid": "p.25-2.134",
-  "votes": {
-   "za": 780,
-   "protiv": 298,
-   "suzdrzan": 251
-  },
-  "speeches": 110
- },
- "KARAMEHIĆ-ABAZOVIĆ MIA": {
-  "pid": "p.oi2026-7.3039",
-  "votes": {
-   "za": 0,
-   "protiv": 0,
-   "suzdrzan": 0
-  },
-  "speeches": 0
+  "speeches": 25,
+  "party": "SDA-STRANKA DEMOKRATSKE AKCIJE"
  },
  "GLAVAŠ VLATKO": {
   "pid": "p.25-2.343",
-  "votes": {
-   "za": 729,
-   "protiv": 135,
-   "suzdrzan": 122
+  "record": {
+   "person": {
+    "id": "o-19446620335",
+    "label": "VLATKO GLAVAŠ",
+    "href": "/mashinerija/v1/persons/o-19446620335"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 665,
+    "against": 111,
+    "abstained": 115,
+    "absent": 474,
+    "didNotVote": 6,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-19446620335/votes"
   },
-  "speeches": 4
- },
- "HELEZ ZUKAN": {
-  "pid": "p.2061-4.813",
-  "votes": {
-   "za": 10,
-   "protiv": 0,
-   "suzdrzan": 0
-  },
-  "speeches": 1
- },
- "MIDHAT ČAUŠEVIĆ": {
-  "pid": "p.2121-9.16328",
-  "votes": {
-   "za": 700,
-   "protiv": 166,
-   "suzdrzan": 78
-  },
-  "speeches": 123
- },
- "EDIN RAMIĆ": {
-  "pid": "p.25-6.1191",
-  "votes": {
-   "za": 43,
-   "protiv": 37,
-   "suzdrzan": 29
-  },
-  "speeches": 0
- },
- "DEDIĆ ŠEMSUDIN": {
-  "pid": "p.25-2.15",
-  "votes": {
-   "za": 1026,
-   "protiv": 134,
-   "suzdrzan": 57
-  },
-  "speeches": 18
- },
- "IMAMOVIĆ JASMIN": {
-  "pid": "p.32-2.388",
-  "votes": {
-   "za": 1326,
-   "protiv": 113,
-   "suzdrzan": 39
-  },
-  "speeches": 91
- },
- "SABINA ĆUDIĆ": {
-  "pid": "p.2121-8.438",
-  "votes": {
-   "za": 1032,
-   "protiv": 123,
-   "suzdrzan": 51
-  },
-  "speeches": 94
- },
- "AIDA BARUČIJA": {
-  "pid": "p.25-2.318",
-  "votes": {
-   "za": 1062,
-   "protiv": 119,
-   "suzdrzan": 23
-  },
-  "speeches": 22
- },
- "DARIJANA FILIPOVIĆ": {
-  "pid": "p.oi2026-1.4",
-  "votes": {
-   "za": 0,
-   "protiv": 0,
-   "suzdrzan": 0
-  },
-  "speeches": 0
+  "speeches": 4,
+  "party": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS"
  },
  "AMOR MAŠOVIĆ": {
   "pid": "p.2061-4.1082",
-  "votes": {
-   "za": 899,
-   "protiv": 277,
-   "suzdrzan": 159
+  "record": {
+   "person": {
+    "id": "o-14590119007",
+    "label": "AMOR MAŠOVIĆ",
+    "href": "/mashinerija/v1/persons/o-14590119007"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 819,
+    "against": 240,
+    "abstained": 146,
+    "absent": 153,
+    "didNotVote": 13,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-14590119007/votes"
   },
-  "speeches": 2
+  "speeches": 2,
+  "party": "SDA-STRANKA DEMOKRATSKE AKCIJE"
+ },
+ "EMRIĆ JASMIN": {
+  "pid": "p.25-2.45",
+  "record": {
+   "person": {
+    "id": "o-15399938542",
+    "label": "JASMIN EMRIĆ",
+    "href": "/mashinerija/v1/persons/o-15399938542"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 1128,
+    "against": 178,
+    "abstained": 28,
+    "absent": 29,
+    "didNotVote": 8,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-15399938542/votes"
+  },
+  "speeches": 432,
+  "party": "NES-ZA NOVE GENERACIJE"
  },
  "DERVIŠEVIĆ REJHANA": {
   "pid": "p.13-9.10371",
-  "votes": {
-   "za": 1292,
-   "protiv": 114,
-   "suzdrzan": 51
+  "record": {
+   "person": {
+    "id": "o-12237553078",
+    "label": "REJHANA DERVIŠEVIĆ",
+    "href": "/mashinerija/v1/persons/o-12237553078"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 1174,
+    "against": 101,
+    "abstained": 47,
+    "absent": 38,
+    "didNotVote": 11,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-12237553078/votes"
   },
-  "speeches": 67
+  "speeches": 67,
+  "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH"
+ },
+ "SABINA ĆUDIĆ": {
+  "pid": "p.2121-8.438",
+  "record": {
+   "person": {
+    "id": "o-16678730088",
+    "label": "SABINA ĆUDIĆ",
+    "href": "/mashinerija/v1/persons/o-16678730088"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 955,
+    "against": 100,
+    "abstained": 45,
+    "absent": 232,
+    "didNotVote": 39,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-16678730088/votes"
+  },
+  "speeches": 94,
+  "party": "NAŠA STRANKA"
+ },
+ "KEŠO SAFET": {
+  "pid": "p.25-2.174",
+  "record": {
+   "person": {
+    "id": "o-17691582651",
+    "label": "SAFET KEŠO",
+    "href": "/mashinerija/v1/persons/o-17691582651"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 952,
+    "against": 191,
+    "abstained": 117,
+    "absent": 104,
+    "didNotVote": 7,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-17691582651/votes"
+  },
+  "speeches": 294,
+  "party": "SDA-STRANKA DEMOKRATSKE AKCIJE"
+ },
+ "DENIS ZVIZDIĆ": {
+  "pid": "p.2061-7.3162",
+  "record": {
+   "person": {
+    "id": "o-10805104317",
+    "label": "DENIS ZVIZDIĆ",
+    "href": "/mashinerija/v1/persons/o-10805104317"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 1193,
+    "against": 82,
+    "abstained": 62,
+    "absent": 19,
+    "didNotVote": 15,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-10805104317/votes"
+  },
+  "speeches": 2682,
+  "party": "NAROD I PRAVDA"
+ },
+ "KARAMEHIĆ-ABAZOVIĆ MIA": {
+  "pid": "p.oi2026-7.3039",
+  "record": null,
+  "speeches": 0,
+  "party": "NAROD I PRAVDA"
+ },
+ "DARIJANA FILIPOVIĆ": {
+  "pid": "p.oi2026-1.4",
+  "record": null,
+  "speeches": 0,
+  "party": "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST"
+ },
+ "HELEZ ZUKAN": {
+  "pid": "p.2061-4.813",
+  "record": {
+   "person": {
+    "id": "o-18963880047",
+    "label": "ZUKAN HELEZ",
+    "href": "/mashinerija/v1/persons/o-18963880047"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 8,
+   "counted": {
+    "for": 8,
+    "against": 0,
+    "abstained": 0,
+    "absent": 0,
+    "didNotVote": 0,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 2,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2023-01-25",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-18963880047/votes"
+  },
+  "speeches": 1,
+  "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH"
+ },
+ "BEGIĆ ZLATAN": {
+  "pid": "p.25-2.473",
+  "record": {
+   "person": {
+    "id": "o-11300278259",
+    "label": "ZLATAN BEGIĆ",
+    "href": "/mashinerija/v1/persons/o-11300278259"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 752,
+    "against": 243,
+    "abstained": 193,
+    "absent": 177,
+    "didNotVote": 6,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-11300278259/votes"
+  },
+  "speeches": 233,
+  "party": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS"
+ },
+ "MIDHAT ČAUŠEVIĆ": {
+  "pid": "p.2121-9.16328",
+  "record": {
+   "person": {
+    "id": "o-10286911402",
+    "label": "MIDHAT ČAUŠEVIĆ",
+    "href": "/mashinerija/v1/persons/o-10286911402"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 633,
+    "against": 138,
+    "abstained": 70,
+    "absent": 526,
+    "didNotVote": 4,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-10286911402/votes"
+  },
+  "speeches": 123,
+  "party": "SDA-STRANKA DEMOKRATSKE AKCIJE"
+ },
+ "NIHAD OMEROVIĆ": {
+  "pid": "p.oi2026-4.287",
+  "record": null,
+  "speeches": 0,
+  "party": "NAROD I PRAVDA"
+ },
+ "KOŽUL PREDRAG": {
+  "pid": "p.25-2.134",
+  "record": {
+   "person": {
+    "id": "o-12903559443",
+    "label": "PREDRAG KOŽUL",
+    "href": "/mashinerija/v1/persons/o-12903559443"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 710,
+    "against": 263,
+    "abstained": 232,
+    "absent": 148,
+    "didNotVote": 18,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-12903559443/votes"
+  },
+  "speeches": 110,
+  "party": "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST"
+ },
+ "MAGAZINOVIĆ SAŠA": {
+  "pid": "p.2061-7.3207",
+  "record": {
+   "person": {
+    "id": "o-13518729369",
+    "label": "SAŠA MAGAZINOVIĆ",
+    "href": "/mashinerija/v1/persons/o-13518729369"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 1183,
+    "against": 107,
+    "abstained": 47,
+    "absent": 26,
+    "didNotVote": 8,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-13518729369/votes"
+  },
+  "speeches": 268,
+  "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH"
+ },
+ "ŠERIF ŠPAGO": {
+  "pid": "p.25-7.2454",
+  "record": {
+   "person": {
+    "id": "o-11121117707",
+    "label": "ŠERIF ŠPAGO",
+    "href": "/mashinerija/v1/persons/o-11121117707"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 1011,
+    "against": 194,
+    "abstained": 157,
+    "absent": 6,
+    "didNotVote": 3,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-11121117707/votes"
+  },
+  "speeches": 263,
+  "party": "SDA-STRANKA DEMOKRATSKE AKCIJE"
+ },
+ "KOJOVIĆ PREDRAG": {
+  "pid": "p.25-2.188",
+  "record": {
+   "person": {
+    "id": "o-15834751421",
+    "label": "PREDRAG KOJOVIĆ",
+    "href": "/mashinerija/v1/persons/o-15834751421"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 1077,
+    "against": 117,
+    "abstained": 40,
+    "absent": 95,
+    "didNotVote": 42,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-15834751421/votes"
+  },
+  "speeches": 58,
+  "party": "NAŠA STRANKA"
+ },
+ "MEHMEDOVIĆ ŠEMSUDIN": {
+  "pid": "p.2061-2.236",
+  "record": {
+   "person": {
+    "id": "o-17985653671",
+    "label": "ŠEMSUDIN MEHMEDOVIĆ",
+    "href": "/mashinerija/v1/persons/o-17985653671"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 966,
+    "against": 133,
+    "abstained": 106,
+    "absent": 158,
+    "didNotVote": 8,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-17985653671/votes"
+  },
+  "speeches": 226,
+  "party": "SDA-STRANKA DEMOKRATSKE AKCIJE"
+ },
+ "EDIN RAMIĆ": {
+  "pid": "p.25-6.1191",
+  "record": {
+   "person": {
+    "id": "o-18842687083",
+    "label": "EDIN RAMIĆ",
+    "href": "/mashinerija/v1/persons/o-18842687083"
+   },
+   "chamber": {
+    "id": "narodna-skupstina-rs",
+    "label": "Narodna skupština RS",
+    "href": "/mashinerija/v1/institutions/narodna-skupstina-rs"
+   },
+   "saziv": "2018-2022",
+   "divisions": 154,
+   "counted": {
+    "for": 43,
+    "against": 37,
+    "abstained": 29,
+    "absent": 0,
+    "didNotVote": 0,
+    "noVotePrinted": 45
+   },
+   "annulledExcluded": 0,
+   "seatBasis": "elected",
+   "firstSeen": "2018-11-20",
+   "lastSeen": "2022-10-26",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-18842687083/votes"
+  },
+  "speeches": 0,
+  "party": "SDA-STRANKA DEMOKRATSKE AKCIJE"
  },
  "MARINKO ČAVARA": {
   "pid": "p.32-2.367",
-  "votes": {
-   "za": 905,
-   "protiv": 327,
-   "suzdrzan": 242
+  "record": {
+   "person": {
+    "id": "o-19221816045",
+    "label": "MARINKO ČAVARA",
+    "href": "/mashinerija/v1/persons/o-19221816045"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 824,
+    "against": 289,
+    "abstained": 228,
+    "absent": 20,
+    "didNotVote": 10,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-19221816045/votes"
   },
-  "speeches": 2727
+  "speeches": 2727,
+  "party": "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST"
+ },
+ "IMAMOVIĆ JASMIN": {
+  "pid": "p.32-2.388",
+  "record": {
+   "person": {
+    "id": "o-15785015253",
+    "label": "JASMIN IMAMOVIĆ",
+    "href": "/mashinerija/v1/persons/o-15785015253"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 1209,
+    "against": 103,
+    "abstained": 34,
+    "absent": 13,
+    "didNotVote": 12,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-15785015253/votes"
+  },
+  "speeches": 91,
+  "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH"
  },
  "ALBIN MUSLIĆ": {
   "pid": "p.2061-7.218",
-  "votes": {
-   "za": 1221,
-   "protiv": 113,
-   "suzdrzan": 30
+  "record": {
+   "person": {
+    "id": "o-12648404629",
+    "label": "ALBIN MUSLIĆ",
+    "href": "/mashinerija/v1/persons/o-12648404629"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 1110,
+    "against": 99,
+    "abstained": 26,
+    "absent": 117,
+    "didNotVote": 19,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-12648404629/votes"
   },
-  "speeches": 69
+  "speeches": 69,
+  "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH"
+ },
+ "DEDIĆ ŠEMSUDIN": {
+  "pid": "p.25-2.15",
+  "record": {
+   "person": {
+    "id": "o-11100390068",
+    "label": "ŠEMSUDIN DEDIĆ",
+    "href": "/mashinerija/v1/persons/o-11100390068"
+   },
+   "chamber": {
+    "id": "predstavnicki-dom-psbih",
+    "label": "Predstavnički dom PSBiH",
+    "href": "/mashinerija/v1/institutions/predstavnicki-dom-psbih"
+   },
+   "saziv": "2022-2026",
+   "divisions": 1371,
+   "counted": {
+    "for": 945,
+    "against": 111,
+    "abstained": 51,
+    "absent": 155,
+    "didNotVote": 109,
+    "noVotePrinted": 0
+   },
+   "annulledExcluded": 158,
+   "seatBasis": "elected",
+   "firstSeen": "2022-12-01",
+   "lastSeen": "2026-07-22",
+   "note": "Zbirovi ne uključuju poništena glasanja. „Prvi put viđen\" i „posljednji put viđen\" su prva i posljednja sjednica na kojoj je dom ispisao ovo ime na poimeničnom glasanju — to nije početak ni kraj mandata.",
+   "href": "/mashinerija/v1/persons/o-11100390068/votes"
+  },
+  "speeches": 18,
+  "party": "SDA-STRANKA DEMOKRATSKE AKCIJE"
  }
 }

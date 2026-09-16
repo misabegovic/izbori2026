@@ -1196,5 +1196,13 @@
    "party": "LIJEVO KRILO",
    "votes": 8
   }
- ]
+ ],
+ "seats22": {
+  "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH": 1,
+  "SDA-STRANKA DEMOKRATSKE AKCIJE": 2,
+  "NAŠA STRANKA": 2,
+  "NAROD I PRAVDA": 2,
+  "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS": 1,
+  "NES-ZA NOVE GENERACIJE": 1
+ }
 }

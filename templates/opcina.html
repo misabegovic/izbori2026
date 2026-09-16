@@ -9,5 +9,28 @@
 {% if b.href %}<a href="{{ b.href }}">{{ b.name }}</a>{% else %}{{ b.name }}{% endif %}
 </div>
 {% endfor %}
+{% if ec %}
+<h2>Sjednice vijeća — posljednje objavljene (eCitizen)</h2>
+{% for s in ec.sessions %}
+<div class="card">
+<b>{{ s.name }}</b>{% if s.date %} <span class="mut">· {{ s.date }}</span>{% endif %}
+{% if s.agendas %}
+<table style="margin-top:.5rem">
+<tr><th>Tačka</th><th>za</th><th>protiv</th><th>suzdrž.</th><th>odsutni</th></tr>
+{% for a in s.agendas %}
+<tr><td>{{ a.name }}</td>
+<td>{{ a.for if a.for is not none else '—' }}</td>
+<td>{{ a.against if a.against is not none else '—' }}</td>
+<td>{{ a.abstained if a.abstained is not none else '—' }}</td>
+<td>{{ a.notPresent if a.notPresent is not none else '—' }}</td></tr>
+{% endfor %}
+</table>
+{% else %}
+<p class="mut">Tačke nisu objavljene.</p>
+{% endif %}
+</div>
+{% endfor %}
+<p class="mut">Izvor: eCitizen.ba platforma (javni podaci ove općine/grada).</p>
+{% endif %}
 <p class="note">Na svim proporcionalnim listićima: obavezno zaokruži <b>jedan subjekt</b>, uz to smiješ do <b>3 kandidata</b> s njegove liste. Na Predsjedništvu: tačno <b>jedan</b> kandidat.</p>
 {% endblock %}

@@ -864,5 +864,9 @@
    "party": "KRUG",
    "votes": 6
   }
- ]
+ ],
+ "seats22": {
+  "SDA-STRANKA DEMOKRATSKE AKCIJE": 1,
+  "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST": 2
+ }
 }
