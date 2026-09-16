@@ -11,6 +11,7 @@
 <ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for r in runs %}<li>{{ chance(r.chance, true) }}<a href="{{ r.href }}">{{ RACE[r.unit.race].short }}{% if r.unit.race != 'oi2026-1' and r.unit.race != 'oi2026-5' %}, {{ COMP.get(r.unit.area, 'područje ' ~ r.unit.area) }}{% endif %}</a> — {% if r.party_href %}<a href="{{ r.party_href }}">{{ r.list | ptitle }}</a>{% else %}{{ r.list | ptitle }}{% endif %}{% if r.pos %}, {{ r.pos }}. na listi{% endif %}</li>{% endfor %}</ul>
 </div>
 
+{% if not rec %}<p class="mut small">Nema zapisa glasanja: ova osoba nije bila u državnom parlamentu ni u NSRS 2022–2026. Parlament Federacije i kantoni ne objavljuju ko je kako glasao.</p>{% endif %}
 {% if rec %}
 {% if cands_json %}
 <details class="card"><summary>Gdje je među kandidatima na tvom papiru (graf)</summary>
