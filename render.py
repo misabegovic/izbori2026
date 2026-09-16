@@ -257,21 +257,24 @@ def person_view(c):
 
 
 # ---------------------------------------------------------------- lists / parties
-list_members = defaultdict(list)     # party_key -> [(unit_key, candidate dict)]
-list_display = {}                    # party_key -> printed name
+list_members = defaultdict(list)     # party identity -> [(unit_key, candidate dict)]
+list_display = {}                    # party identity -> printed name (most common variant)
 list_codes = defaultdict(set)
+_name_count = defaultdict(Counter)
 for uk, u in units.items():
     for l in u["lists"]:
-        k = party_key(l["name"])
-        list_display.setdefault(k, l["name"])
+        k = party_identity(l["name"])
+        _name_count[k][l["name"]] += len(l["candidates"])
         list_codes[k].add(l["code"])
         for c in l["candidates"]:
             list_members[k].append((uk, c))
+for k, cnt in _name_count.items():
+    list_display[k] = cnt.most_common(1)[0][0]
 
 for _pk, _nm in list_display.items():
     for name, rxs in alias_rx:
-        if any(r.search(_pk) for r in rxs) and name in SHORT_NAMES:
-            SHORT[_pk] = SHORT_NAMES[name]
+        if any(r.search(party_key(_nm)) for r in rxs) and name in SHORT_NAMES:
+            SHORT[party_key(_nm)] = SHORT_NAMES[name]
             break
 # ballot names that are exactly one presidency list
 SHORT[party_key("UJEDINJENI ZA DRŽAVU BOSNU I HERCEGOVINU")] = "Ujedinjeni za državu BiH (SDP i partneri)"
@@ -348,7 +351,7 @@ def party_summary(pk):
     return {"key": pk, "name": list_display.get(pk, pk), "n": n, "won": won, "switch": switch, "new": new, "office": office,
             "mps": mps_u, "votes22": votes22, "votes18": votes18, "seats22": seats22, "units_in": units_in, "funding": funding,
             "program": program_for(list_display.get(pk, "")), "key_votes": party_key_votes(pk),
-            "href": f"stranka-{re.sub(r'[^a-z0-9]+', '-', pk).strip('-')}.html"}
+            "href": f"stranka-{re.sub(r'[^a-z0-9]+', '-', fold(pk.replace('prog:', ''))).strip('-')}.html"}
 
 
 party_pages = {}
@@ -358,7 +361,7 @@ for pk, mem in list_members.items():
 
 
 def party_href(list_name):
-    pk = party_key(list_name)
+    pk = party_identity(list_name)
     return party_pages[pk]["href"] if pk in party_pages else None
 
 
@@ -436,11 +439,11 @@ for uk, u in units.items():
         seats22[party_identity(k_)] = seats22.get(party_identity(k_), 0) + v_
     lists = []
     for l in u["lists"]:
-        pk = party_key(l["name"])
         pi = party_identity(l["name"])
+        pk = pi
         cands = [person_view(c) for c in l["candidates"]]
         prog = program_for(l["name"])
-        kv = party_pages[pk]["key_votes"] if pk in party_pages else None
+        kv = party_pages[pi]["key_votes"] if pi in party_pages else None
         recent_kv = None
         ch = RACE[race].get("chamber")
         if kv and ch:
@@ -493,8 +496,9 @@ for m in municipalities:
         if not u:
             continue
         sub = {"701": "bošnjački član", "702": "hrvatski član", "703": "srpski član"}.get(area) if race == "oi2026-1" else None
+        top = sorted([h for h in u.get("party_history", []) if h["year"] == 2022], key=lambda h: -(h.get("votes") or 0))[:3]
         ballots.append({"race": race, "r": RACE[race], "sub": sub, "href": unit_href(race, area), "n_lists": len(u["lists"]),
-                        "n_cands": u["stats"]["candidates"], "area": area})
+                        "n_cands": u["stats"]["candidates"], "area": area, "top22": top, "max22": (top[0].get("votes") or 1) if top else 1})
     # FBiH: bošnjački + hrvatski član su jedan papir s dvije kolone
     pres_b = [b for b in ballots if b["race"] == "oi2026-1" and b["area"] in ("701", "702")]
     if len(pres_b) == 2:

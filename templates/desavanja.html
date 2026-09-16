@@ -6,9 +6,12 @@
 <h2>O čemu se priča</h2>
 {% for t in themes %}<div class="card"><h3>{{ t.t }}</h3><p style="margin:0">{{ t.plain }}</p></div>{% endfor %}
 <h2>Najvažniji događaji</h2>
+<p class="mut small"><i class="dot c-blue"></i>država (BiH) &nbsp; <i class="dot c-sw"></i>Republika Srpska</p>
+<div class="tl">
 {% for e in events %}
-<div class="kd"><span class="d">{{ e.date }} · {{ e.level }}</span><br><span class="t">{{ e.t }}</span><br><span class="small">{{ e.plain }} <a class="src" href="{{ e.src }}">izvor</a></span></div>
+<div class="tl-i"><span class="tl-d {{ 'c-blue' if e.level == 'BiH' else 'c-sw' }}"></span><div><span class="d">{{ e.date[:7] }} · {{ e.level }}</span><br><span class="t">{{ e.t }}</span><br><span class="small">{{ e.plain }} <a class="src" href="{{ e.src }}">izvor</a></span></div></div>
 {% endfor %}
+</div>
 <h2>Ključna glasanja u parlamentima</h2>
 <p class="mut small">Za svako piše koliko je poslanika bilo za i protiv. Ko je tačno kako glasao vidiš na stranici kandidata ili stranke.</p>
 {% for d in kd %}
