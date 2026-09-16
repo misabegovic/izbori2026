@@ -7,7 +7,7 @@
 <p class="lead" style="margin-top:.6rem">{{ p.story }}</p>
 <div class="card">
 <b>Ove godine na listiću:</b>
-<ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for r in runs %}<li><a href="{{ r.href }}">{{ RACE[r.unit.race].short }}{% if r.unit.race != 'oi2026-1' and r.unit.race != 'oi2026-5' %}, {{ COMP.get(r.unit.area, 'područje ' ~ r.unit.area) }}{% endif %}</a> — {% if r.party_href %}<a href="{{ r.party_href }}">{{ r.list | ptitle }}</a>{% else %}{{ r.list | ptitle }}{% endif %}{% if r.pos %}, {{ r.pos }}. na listi{% endif %}</li>{% endfor %}</ul>
+<ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for r in runs %}<li>{{ chance(r.chance, true) }}<a href="{{ r.href }}">{{ RACE[r.unit.race].short }}{% if r.unit.race != 'oi2026-1' and r.unit.race != 'oi2026-5' %}, {{ COMP.get(r.unit.area, 'područje ' ~ r.unit.area) }}{% endif %}</a> — {% if r.party_href %}<a href="{{ r.party_href }}">{{ r.list | ptitle }}</a>{% else %}{{ r.list | ptitle }}{% endif %}{% if r.pos %}, {{ r.pos }}. na listi{% endif %}</li>{% endfor %}</ul>
 </div>
 
 {% if rec %}
@@ -18,7 +18,6 @@
 <div class="viz" data-src="cands" data-me="{{ p.pid }}"></div>
 </div>
 <script type="application/json" id="cands">{{ cands_json | safe }}</script>
-<script src="viz.js" defer></script>
 {% endif %}
 <h2>Kako je glasao/la kao poslanik/ca</h2>
 {% if replacement %}<p class="mut small">U parlament je ušao/la naknadno, kao zamjena, ne direktno na izborima 2022.</p>{% endif %}
@@ -26,22 +25,25 @@
 <div class="card">
 <p style="margin:0 0 .4rem"><b>{{ r.chamber_name }}</b>, {{ r.saziv }}</p>
 <div class="facts">
-<div class="fact"><b>{{ r.prisustvo_pct }}%</b><span>{% if r.nsrs %}glasanja na kojima je glasao{% else %}bio prisutan na glasanjima{% endif %}</span></div>
-<div class="fact"><b>{{ r.za_pct }}%</b><span>glasao „za” kad je glasao</span></div>
+<div class="fact"><b>{{ r.prisustvo_pct }}%</b><span>{% if r.nsrs %}glasanja na kojima je glasao{% else %}bio prisutan na glasanjima{% endif %}{% if CH_AVG.get(r.chamber) %} (prosjek {{ CH_AVG[r.chamber].pris }}%){% endif %}</span></div>
+<div class="fact"><b>{{ r.za_pct }}%</b><span>glasao „za” kad je glasao{% if CH_AVG.get(r.chamber) %} (prosjek doma {{ CH_AVG[r.chamber].za }}%){% endif %}</span></div>
 <div class="fact"><b>{{ r.odsutan | num }}</b><span>{% if r.nsrs %}puta nije glasao{% else %}puta nije bio na glasanju{% endif %}</span></div>
 {% if not r.nsrs %}<div class="fact"><b>{{ speeches_n }}</b><span>puta govorio u parlamentu</span></div>{% endif %}
 </div>
-{{ stack([("za", r.za, "c-za"), ("protiv", r.protiv, "c-protiv"), ("uzdržan", r.uz, "c-uz"), ("nije glasao" if r.nsrs else "nije bio", r.odsutan, "c-od")], r.n) }}
+{{ stack([("za", r.za, "c-za"), ("protiv", r.protiv, "c-protiv"), ("uzdržan (ni za ni protiv)", r.uz, "c-uz"), ("nije glasao" if r.nsrs else "nije bio", r.odsutan, "c-od")], r.n) }}
 <p class="small mut">Ukupno {{ r.n | num }} glasanja.{% if r.nsrs %} NSRS ne objavljuje ko je bio odsutan, samo ko nije glasao.{% endif %}</p>
 </div>
 {% endfor %}
 {% if rec and not kd %}<p class="mut small">Nema zapisa o ključnim odlukama: većinu vremena nije glasao/la (npr. bio/la ministar ili zamjena na kratko).</p>{% endif %}
 {% if kd %}
 <h2>Ključne odluke: kako je glasao/la</h2>
-<p class="mut small">Odabrali smo najvažnije zakone saziva. Za svaki piše šta je i kako je ova osoba glasala.</p>
+<p class="mut small">Odabrali smo najvažnije zakone saziva. Za svaki piše šta je i kako je ova osoba glasala. Filtriraj po temi:</p>
+<div class="viz-bar tagbar" data-for="kdlist"></div>
+<div id="kdlist">
 {% for k in kd %}
-<div class="kd"><span class="vote {{ k.cls }}">{{ k.word }}</span> <span class="t">{{ k.d.title }}</span> <span class="d">{{ k.d.date }}</span><br><span class="small mut">{{ k.d.plain }}</span></div>
+<div class="kd" data-tags="{{ k.d.tags | join(" ") }}"><span class="vote {{ k.cls }}">{{ k.word }}</span> <span class="t">{{ k.d.title }}</span> <span class="d">{{ k.d.date }}</span><br><span class="small mut">{{ k.d.plain }}</span></div>
 {% endfor %}
+</div>
 {% endif %}
 {% if speeches %}
 <details><summary>Šta je govorio (primjeri)</summary>
@@ -54,8 +56,7 @@
 {% if tl %}
 <h2>Sve kandidature</h2>
 <div class="card">
-<div class="years">{% for t in tl %}<span class="yr{% if t.elected %} won{% endif %}" title="{{ t.lvl }}">{{ t.y }}</span>{% endfor %}<span class="yr now">2026</span></div>
-<p class="small mut" style="margin:0 0 .5rem"><span class="yr won" style="font-size:.7rem">plavo</span> = izabran/a te godine, <span class="yr" style="font-size:.7rem">prazno</span> = kandidovao/la se, nije izabran/a, <span class="yr now" style="font-size:.7rem">crtkano</span> = sada.</p>
+<div class="d3 d3-years" data-d3='{{ tl_json | safe }}'><span class="fb">{% for t in tl %}{{ t.y }}{% if t.elected %} (izabran/a){% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</span></div>
 {% for t in tl %}
 <div class="kd" style="padding:.35rem 0"><b>{{ t.y }}</b> — {{ t.lvl }}{% if t.area %}, {{ t.area | title }}{% endif %}{% if t.party %}, <i>{{ t.party | ptitle }}</i>{% endif %}{% if t.pos %}, {{ t.pos }}. na listi{% endif %}{% if t.votes %}, {{ t.votes | num }} glasova{% endif %} — {% if t.elected %}<b>izabran/a</b>{% else %}nije izabran/a{% endif %}</div>
 {% endfor %}

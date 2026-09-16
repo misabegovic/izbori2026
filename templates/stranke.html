@@ -6,6 +6,7 @@
 <p class="mut small">Traka = koliko ljudi imaju na listićima 2026.</p>
 {% set maxn = parties[0].n %}
 {% for p in parties %}
-<div class="hb"><div class="hb-l"><a href="{{ p.href }}">{{ p.name | ptitle }}</a>{% if p.program %} <span class="mut small">· {{ 'u vlasti' if p.program.power.startswith('u vlasti') else ('opozicija' if p.program.power.startswith('opozicija') else 'novo') }} · obećanja</span>{% endif %}{% if p.key_votes %} <span class="mut small">· zapis glasanja</span>{% endif %}</div><div class="hb-r"><div class="hb-t"><div class="hb-f c-blue" style="width:{{ (100 * p.n / maxn) | round(1) }}%"></div></div><div class="hb-v">{{ p.n }}</div></div></div>
+<p style="margin:.6rem 0 0"><a href="{{ p.href }}">{{ p.name | ptitle }}</a>{% if p.program %} <span class="mut small">· {{ 'u vlasti' if p.program.power.startswith('u vlasti') else ('opozicija' if p.program.power.startswith('opozicija') else 'novo') }} · obećanja</span>{% endif %}{% if p.key_votes %} <span class="mut small">· zapis glasanja</span>{% endif %}</p>
+{{ hbar('', p.n, maxn, p.n ~ ' kandidata') }}
 {% endfor %}
 {% endblock %}

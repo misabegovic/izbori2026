@@ -1,17 +1,18 @@
 {% macro badge(b) -%}<span class="b {{ b[0] }}" title="{{ b[2] }}">{{ b[1] }}</span>{%- endmacro %}
 {% macro hbar(label, value, maxv, text, cls='c-blue') -%}
-<div class="hb"><div class="hb-l">{{ label }}</div><div class="hb-r"><div class="hb-t"><div class="hb-f {{ cls }}" style="width:{{ (100 * value / maxv) | round(1) if maxv else 0 }}%"></div></div><div class="hb-v">{{ text }}</div></div></div>
+<div class="d3 d3-bar" data-d3='{{ {"label": label, "v": value, "max": maxv, "text": text, "cls": cls} | tojson }}'><span class="fb">{{ label }}: {{ text }}</span></div>
 {%- endmacro %}
 {% macro stack(parts, total) -%}
-{# parts: list of (label, value, cls) #}
-<div class="st">{% for lab, val, cls in parts %}{% if val %}<div class="st-s {{ cls }}" style="flex:{{ val }}" title="{{ lab }}: {{ val }}"></div>{% endif %}{% endfor %}</div>
-<div class="st-l">{% for lab, val, cls in parts %}{% if val %}<span><i class="sw {{ cls }}"></i>{{ lab }} {{ val }}{% if total %} ({{ (100 * val / total) | round | int }}%){% endif %}</span>{% endif %}{% endfor %}</div>
+<div class="d3 d3-stack" data-d3='{{ {"parts": parts, "total": total} | tojson }}'><span class="fb">{% for lab, val, cls in parts %}{% if val %}{{ lab }} {{ val }}{% if not loop.last %}, {% endif %}{% endif %}{% endfor %}</span></div>
+{%- endmacro %}
+{% macro chance(ch, small=false) -%}
+{% if ch %}<div class="d3 d3-chance{% if small %} sm{% endif %}" data-d3='{{ {"pct": ch[0], "word": ch[1], "why": ch[2]} | tojson }}'><span class="fb">šansa za mandat: {{ ch[1] }}</span></div>{% endif %}
 {%- endmacro %}
 {% macro person_row(c) -%}
 <li class="person">
   <span class="pos">{{ c.pos }}.</span>
   <span class="pname">{% if c.has_page %}<a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</span>
-  <span class="badges">{% for b in c.badges %}{{ badge(b) }}{% endfor %}</span>
+  <span class="badges">{% if c.chance %}<span class="b ch-{{ c.chance[0] }}" title="{{ c.chance[2] }}">šansa za mandat: {{ c.chance[1] }}</span>{% endif %}{% for b in c.badges %}{{ badge(b) }}{% endfor %}</span>
 </li>
 {%- endmacro %}
 <!doctype html>
@@ -116,7 +117,12 @@ footer { max-width:660px; margin:2rem auto 0; padding:1rem 16px 2rem; border-top
 .viz-me { font-size:11px; font-weight:700; fill:#7a2e0a; paint-order:stroke; stroke:#fff; stroke-width:3px; }
 .viz-lab { font-size:11px; }
 .viz-tip { position:absolute; z-index:5; background:#fff; border:1px solid var(--line); border-radius:10px; padding:.5rem .7rem; width:240px; font-size:.85rem; box-shadow:0 4px 14px rgba(0,0,0,.12); }
-.tog { font-size:.8rem; background:#fff; border:1px solid var(--line); border-radius:8px; padding:.25rem .5rem; cursor:pointer; }
+.d3 .fb { font-size:.85rem; color:var(--mut); }
+.d3-bar { margin:.15rem 0; } .d3-stack { margin:.3rem 0; } .d3-chance { margin:.4rem 0; }
+.d3 svg text { font-family:inherit; }
+.b.ch-75 { background:#dff5e6; color:#0f5e2a; } .b.ch-45 { background:#fff1c2; color:#6b5300; } .b.ch-20, .b.ch-8, .b.ch-5, .b.ch-3 { background:#eeeeee; color:#555; }
+.tog { font-size:.9rem; background:#fff; border:1px solid var(--line); border-radius:8px; padding:.35rem .6rem; cursor:pointer; }
+.kd.hid { display:none; }
 @media (max-width:420px){ html{font-size:18px} .facts{grid-template-columns:1fr 1fr} }
 </style>
 </head>
@@ -132,6 +138,7 @@ footer { max-width:660px; margin:2rem auto 0; padding:1rem 16px 2rem; border-top
 <p>Brojke: <a href="https://gianniravioli.com/mashinerija/">gianniravioli.com „Mashinerija”</a> (CIK-ove liste, mandati i poimenična glasanja, CC BY 4.0) i eCitizen.ba. Obećanja stranaka: iz medija i stranačkih stranica, uz izvor na svakoj tvrdnji. Generisano {{ generated }}.</p>
 <p>Ko smo: volonterski, nestranački projekt bez reklama i praćenja (<a href="https://github.com/misabegovic/izbori2026">kod je javan</a>). Nikog ne preporučujemo. Pokazujemo šta je javno zapisano. Karijere osoba su spojene po imenu kroz izbore, pa je kod istih imena moguća greška.</p>
 </footer>
+<script src="viz.js" defer></script>
 <script>
 (function(){
 var L2C={"A":"А","B":"Б","V":"В","G":"Г","D":"Д","Đ":"Ђ","E":"Е","Ž":"Ж","Z":"З","I":"И","J":"Ј","K":"К","L":"Л","M":"М","N":"Н","O":"О","P":"П","R":"Р","S":"С","T":"Т","Ć":"Ћ","U":"У","F":"Ф","H":"Х","C":"Ц","Č":"Ч","Š":"Ш",
@@ -143,6 +150,8 @@ window.bigger=function(){var h=document.documentElement;var cur=parseInt(localSt
 try{var fs=parseInt(localStorage.getItem("fs")||"0");if(fs)document.documentElement.style.fontSize=["","22px","25px"][fs];}catch(e){}
 window.foldq=function(s){var C={"а":"a","б":"b","в":"v","г":"g","д":"d","ђ":"dj","е":"e","ж":"z","з":"z","и":"i","ј":"j","к":"k","л":"l","љ":"lj","м":"m","н":"n","њ":"nj","о":"o","п":"p","р":"r","с":"s","т":"t","ћ":"c","у":"u","ф":"f","х":"h","ц":"c","ч":"c","џ":"dz","ш":"s","č":"c","ć":"c","ž":"z","š":"s","đ":"dj"};return s.toLowerCase().split("").map(function(c){return C[c]||c;}).join("");};
 window.toggleScript=function(){var on=localStorage.getItem("cyr")==="1";if(on){back(document.body);localStorage.setItem("cyr","0");document.getElementById("tog").textContent="ЋИР";}else{walk(document.body);localStorage.setItem("cyr","1");document.getElementById("tog").textContent="LAT";}};
+var TAG={"novac":"budžet i novac","porezi":"porezi","plate":"plate","sudovi":"sudovi","EU":"put u EU","ustav":"ustav i RS/BiH","sigurnost":"sigurnost","transparentnost":"korupcija i javnost","izbori":"izbori","imovina":"državna imovina","struja":"struja","porodica":"porodica","historija":"historija","privreda":"privreda"};
+document.querySelectorAll(".tagbar").forEach(function(bar){var list=document.getElementById(bar.dataset["for"]);if(!list)return;var items=list.querySelectorAll(".kd");var tags={};items.forEach(function(i){(i.dataset.tags||"").split(" ").forEach(function(t){if(t)tags[t]=(tags[t]||0)+1;});});var all=document.createElement("button");all.className="tog on";all.textContent="sve";bar.appendChild(all);function pick(t,btn){items.forEach(function(i){i.classList.toggle("hid",!!t&&(" "+i.dataset.tags+" ").indexOf(" "+t+" ")<0);});bar.querySelectorAll("button").forEach(function(b){b.classList.remove("on");});btn.classList.add("on");}all.onclick=function(){pick(null,all);};Object.keys(tags).sort(function(a,b){return tags[b]-tags[a];}).forEach(function(t){var b=document.createElement("button");b.className="tog";b.textContent=(TAG[t]||t)+" ("+tags[t]+")";b.onclick=function(){pick(t,b);};bar.appendChild(b);});});
 try{if(localStorage.getItem("cyr")==="1"){walk(document.body);document.getElementById("tog").textContent="LAT";}}catch(e){}
 })();
 </script>

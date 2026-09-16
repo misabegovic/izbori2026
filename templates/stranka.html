@@ -34,10 +34,13 @@
 
 <h2>Kako su njihovi poslanici glasali 2022–2026</h2>
 {% if p.key_votes %}
-<p class="mut small">Kako su ljudi s ovih listi glasali kao poslanici 2022–2026 o najvažnijim odlukama. ZA/PROTIV = kako je većina njih glasala.</p>
+<p class="mut small">Kako su ljudi s ovih listi glasali kao poslanici 2022–2026 o najvažnijim odlukama. ZA/PROTIV = kako je većina njih glasala; „uzdržan” = ni za ni protiv. Filtriraj po temi:</p>
+<div class="viz-bar tagbar" data-for="kvlist"></div>
+<div id="kvlist">
 {% for kv in p.key_votes %}
-<div class="kd"><span class="vote {{ kv.maj_cls }}">{{ kv.maj_word }}</span> <span class="t">{{ kv.d.title }}</span> <span class="d">{{ kv.d.date }}</span><br><span class="small mut">{{ kv.d.plain }}</span>{% set cats = [kv.za, kv.protiv, kv.uz, kv.odsutan] | select | list %}{% if kv.n > 1 and cats | length > 1 %}{{ stack([("za", kv.za, "c-za"), ("protiv", kv.protiv, "c-protiv"), ("uzdržan", kv.uz, "c-uz"), ("nije glasalo", kv.odsutan, "c-od")], None) }}{% elif kv.n > 1 %}<span class="small mut"> · svih {{ kv.n }} isto</span>{% endif %}</div>
+<div class="kd" data-tags="{{ kv.d.tags | join(" ") }}"><span class="vote {{ kv.maj_cls }}">{{ kv.maj_word }}</span> <span class="t">{{ kv.d.title }}</span> <span class="d">{{ kv.d.date }}</span><br><span class="small mut">{{ kv.d.plain }}</span>{% set cats = [kv.za, kv.protiv, kv.uz, kv.odsutan] | select | list %}{% if kv.n > 1 and cats | length > 1 %}{{ stack([("za", kv.za, "c-za"), ("protiv", kv.protiv, "c-protiv"), ("uzdržan", kv.uz, "c-uz"), ("nije glasalo", kv.odsutan, "c-od")], None) }}{% elif kv.n > 1 %}<span class="small mut"> · svih {{ kv.n }} isto</span>{% endif %}</div>
 {% endfor %}
+</div>
 {% else %}
 <p class="mut">Niko s njihovih listi nije sjedio u državnom parlamentu ni u NSRS 2022–2026, pa nema zapisa glasanja. Parlament Federacije i kantoni ne objavljuju ko je kako glasao.</p>
 {% endif %}

@@ -31,19 +31,18 @@
 {% if cands_json %}
 <h2>Svi kandidati na ovom papiru</h2>
 <div class="card">
-<p class="mut small" style="margin:0 0 .3rem">Jedan krug = jedan čovjek, red = lista. Dodirni krug za ime i priču. Tamnoplavo = bio poslanik 2022–26.</p>
+<p class="mut small" style="margin:0 0 .3rem">Jedan krug = jedan čovjek, red = lista. Dodirni krug za ime i priču. Tamnoplavo = bio poslanik 2022–26. „Šansa za mandat” je naša gruba procjena iz rezultata 2022 i mjesta na listi, ne prognoza.</p>
 <div class="viz" data-src="cands"></div>
 <noscript><p class="mut small">Graf traži JavaScript; sve isto piše niže u listama.</p></noscript>
 </div>
 <script type="application/json" id="cands">{{ cands_json | safe }}</script>
-<script src="viz.js" defer></script>
 {% endif %}
 <h2>Sve liste na jedan pogled</h2>
 <div class="card">
 <p class="mut small" style="margin:0 0 .3rem">Plava crta = glasovi 2022 na ovom području (duža crta, više glasova). Pored imena piše da li su sad u vlasti.</p>
 {% set maxv = lists | map(attribute='votes22') | select | max | default(1) %}
 {% for l in lists %}
-<div class="hb"><div class="hb-l"><a href="#l{{ loop.index }}">{{ loop.index }}. {{ l.name | ptitle }}</a>{% if l.program %} <span class="mut small">· {{ 'u vlasti' if l.program.power.startswith('u vlasti') else ('opozicija' if l.program.power.startswith('opozicija') else 'novo') }}</span>{% endif %}</div><div class="hb-r"><div class="hb-t"><div class="hb-f c-blue" style="width:{{ (100 * (l.votes22 or 0) / maxv) | round(1) }}%"></div></div><div class="hb-v">{{ l.votes22 | num if l.votes22 else 'novo' }}</div></div></div>
+{{ hbar((loop.index ~ '. ' ~ (l.name | ptitle)) ~ (' · ' ~ ('u vlasti' if l.program.power.startswith('u vlasti') else ('opozicija' if l.program.power.startswith('opozicija') else 'novo')) if l.program else ''), l.votes22 or 0, maxv, (l.votes22 | num) if l.votes22 else 'novo 2026') }}
 {% endfor %}
 </div>
 <h2>Liste, redom kako su na papiru</h2>
