@@ -55,13 +55,18 @@
 {% for m in majority %}
 <div class="card">
 <h3 style="margin-top:0">{{ m.title }}</h3>
-<table class="cal proj"><thead><tr><th>Kandidat</th><th>Lista</th><th>Šansa</th><th>Na čemu počiva</th></tr></thead><tbody>
+<ol class="plist">
 {% for c in m.candidates %}
-<tr><td class="ln">{{ c.name | nice }}</td><td class="small mut">{{ c.list | ptitle }}</td>
-<td class="num"><b>{{ c.p_win | tdec }}%</b></td>
-<td class="small mut">{% if c.prev_self %}sam je 2022/2025. imao {{ c.prev_self | dec }}%{% elif c.prev_party %}stranka je zadnji put imala {{ c.prev_party | dec }}%, ali s drugim čovjekom{% elif c.party_proj %}stranka je u ovoj projekciji na {{ c.party_proj | dec }}%{% else %}nema s čim porediti{% endif %}{% if c.poll %} · anketa {{ c.poll | dec }}%{% endif %}</td></tr>
+<li>
+<span class="pw{% if c.p_win >= 50 %} hi{% elif c.p_win >= 20 %} mid{% elif c.p_win >= 5 %} lo{% endif %}">{{ c.p_win | tdec }}%</span>
+<span class="pbody">
+{% if c.href %}<a class="pname" href="{{ c.href }}">{{ c.name | nice }}</a>{% else %}<span class="pname">{{ c.name | nice }}</span>{% endif %}
+<span class="pmeta">{{ c.list | ptitle }}</span>
+<span class="pmeta">{% if c.prev_self %}sam je 2022/2025. imao {{ c.prev_self | dec }}%{% elif c.prev_party %}stranka je zadnji put imala {{ c.prev_party | dec }}%, ali s drugim čovjekom{% elif c.party_proj %}stranka je u ovoj projekciji na {{ c.party_proj | dec }}%{% else %}nema s čim porediti{% endif %}{% if c.poll %} · anketa {{ c.poll | dec }}%{% endif %}</span>
+</span>
+</li>
 {% endfor %}
-</tbody></table>
+</ol>
 <details><summary class="small">Odakle brojke iza ove trke</summary>
 {% for s in m.izvori %}
 <p class="small" style="margin:.4rem 0 .1rem"><b>{{ s.label }}</b> <span class="mut">(težina {{ s.tezina | dec }})</span></p>
