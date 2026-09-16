@@ -13,7 +13,10 @@ Vodič za birače koji ne prate politiku. Opći izbori u BiH, 4. oktobar 2026. B
 - `stranka-<key>.html` — obećanja 2026 s izvorima i pouzdanošću, zapis glasanja po ključnim odlukama, budžetsko finansiranje 2024, poslanici koji se ponovo kandiduju
 - `stranke.html` — sve stranke + matrica „ko glasa kao ko” (slaganje većina stranaka po domu)
 - `obecanja.html` — obećanja 2026 svih stranaka po temi (plate, zdravstvo, putevi…), filter
-- `metoda.html` — ko radi sajt, odakle su brojke, kako su birane ključne odluke, kako se računa šansa, šta ne znamo
+- `projekcije.html` — **najvjerovatniji ishod izbora**: mandati po listama s rasponom, aritmetika većine, Predsjedništvo i predsjednik RS
+- `projekcija-<dom>.html` — po domu (PSBiH, Parlament FBiH, NSRS, 10 kantona): mandati, ko ulazi poimenično, po izbornim jedinicama
+- `provjera-modela.html` — koliko model griješi: isti model pušten unatrag na 2022, kalibracija, Brier, šta je probano pa odbačeno
+- `metoda.html` — ko radi sajt, odakle su brojke, kako su birane ključne odluke, kako se računa šansa i projekcija, šta ne znamo
 - `predsjednistvo.html`, `desavanja.html`, `kako-glasati.html`, `opcine.html`
 - ЋИР/LAT prekidač u zaglavlju (transliteracija u pregledniku)
 
@@ -37,6 +40,18 @@ render.py         Jinja2 → dist/ (≈1.400 statičkih stranica)
 serve.py          statički server za Railway
 review.py         persona-review preko Claude API-ja (persone u phone-brain/personas/users)
 backtest.py       kalibracija „šanse za mandat” na rezultatu 2022 → data/chance_calibration.json
+fetch_swing.py    Mashinerija → data/swing.json (lokalni izbori 2016/2020/2024 po općinama,
+                  prijevremeni RS 2025, opći 2018/2022 po jedinicama) i data/ballots.json
+                  (ranije kandidature: ko, gdje, koje mjesto na listi, koliko glasova)
+seatlaw.py        izborni zakon kao kod: Sainte-Laguë, prag, kompenzacijski mandati, pravilo
+                  20% unutar liste. `python seatlaw.py` ga pusti na 2018. i 2022. i mora
+                  reprodukovati svaki mandat
+model.py          mašinerija projekcije: ko nasljeđuje čije glasove, pomak s lokalnih izbora,
+                  rasipanje ličnih glasova unutar liste
+project.py        podesi se na 2022 (ne vidi 2022), izmjeri koliko griješi, pa projektuje
+                  2026 → data/projection.json, data/projection_backtest.json
+data/polls.json           ankete 2025–2026 s izvorom, uzorkom i ocjenom pouzdanosti
+data/seats2026.json       koliko mandata koja jedinica bira direktno, s izvorom i spornim dijelom
 analytics.py      izvedena analitika iz glasanja: sličnost poslanika, linija stranke, matrica stranaka, aktivnost po godinama; obećanja po temi
 static/viz.js     D3 grafovi (trake, složene trake, karijera, gauge šanse, lični glasovi po izborima,
                   swarm svih kandidata s fokusom na jednog, stupci po godinama, matrica)
@@ -44,7 +59,7 @@ static/style.css  zajednički stil; ranije je bio uvučen u svaku stranicu
 static/app.js     ЋИР/LAT, veličina slova, filteri; isto tako izdvojen
 ```
 
-Redoslijed kad se osvježava sve: `fetch.py` → `fetch_history.py` (pravi `merges.json`, o koji se oslanja ostalo) → `fetch_wikidata.py` → `fetch_votes.py` → `backtest.py` → `render.py`.
+Redoslijed kad se osvježava sve: `fetch.py` → `fetch_history.py` (pravi `merges.json`, o koji se oslanja ostalo) → `fetch_wikidata.py` → `fetch_votes.py` → `fetch_swing.py` → `backtest.py` → `project.py` → `render.py`.
 
 Podaci su commitani, deploy ne zavisi od API-ja.
 
@@ -81,6 +96,26 @@ Dva ulaza, oba poznata unaprijed: **gdje je čovjek na listi** u odnosu na manda
 Uz procenat na svakom profilu stoji i **šta je mandat ovdje stvarno koštao** prošli put (`data/seat_bar.json`): koliko je ličnih glasova imao najslabije prošao izabrani, koliko prosječan, i koliko je ljudi imalo više glasova od najslabijeg izabranog a ipak ostalo vani. U Tuzlanskom kantonu 2022 takvih je bilo 142 od 588 kandidata. Mandat prvo osvaja lista; lični glasovi odlučuju tek ko ga unutar liste dobije.
 
 Drugi ulaz je dodan jer bez njega brojka ne razlikuje ljude koje birači stvarno zaokružuju. U 2022 je od onih koji su ranije bili prvi po glasovima prošlo 10% čak i duboko na listi bez ijednog mandata, naspram 1% onih koji nikad nisu bili na listiću. Razmak postoji u svakoj grupi po mjestu na listi i u sve četiri trke posebno. Rijetke kombinacije se povlače prema prosjeku te grupe (`SHRINK = 25`), da ćelija od dvadesetak ljudi ne proizvede samouvjerenu brojku.
+
+## Projekcija izbora
+
+`project.py` odgovara na drugo pitanje od „šanse za mjesto”: ne koliko je ljudi u ovakvoj situaciji prošlo 2022, nego **koliko često ovaj čovjek dobije mandat ako se izbori 2026. odigraju deset hiljada puta**. Obje brojke stoje jedna pored druge na profilu, jer razlika među njima nešto znači.
+
+Lanac je: **ko nasljeđuje čije glasove** (preko ljudi, ne preko imena — SDS 2026. nije na listiću za NSRS, a 28 od 29 kandidata Otadžbinske stranke koji su tamo sjedili 2022. sjedili su za SDS), **koliko su se glasovi pomjerili** (lokalni 2020 → 2024 po općinama iste jedinice, oslabljeno na udio koji je na 2022. najmanje griješio — ispalo je oko petine), **ankete** (mala težina, `data/polls.json` uz svaku piše zašto), pa **izborni zakon** iz `seatlaw.py`.
+
+`seatlaw.py` nije prepričan nego napisan kao kod i pušten na stvarne rezultate: Sainte-Laguë s djeliteljima 1, 3, 5 (član 9.5), prag 3% u jedinici i entitetu (9.6), kompenzacijski mandati redom s kompenzacijske liste (9.7), i unutar liste — ko pređe **20% glasača svoje liste** uzima mandat po ličnim glasovima, a **sve ostale mandate lista dijeli po svom redoslijedu** (9.8 stav 2). `python seatlaw.py` to provjeri na 2018. i 2022: svih 231 lista s mandatom i svih 518 mandata po godini izlaze tačno.
+
+To zadnje pravilo mijenja sliku: mjesto na listi i mjesto na kompenzacijskoj listi obično znače više od kampanje. 74 kandidata 2026. ulazi prvenstveno preko kompenzacijske liste, čiji redoslijed birač ne može promijeniti.
+
+### Kako znamo koliko griješi
+
+Isti model, isti kod, pušten unatrag na 2022. i hranjen samo onim što se moglo znati prije: rezultat 2018. i lokalni 2016. i 2020. Rezultat (`data/projection_backtest.json`, stranica `provjera-modela.html`):
+
+- prosječna greška u udjelu **1,65 postotna boda** po listi po jedinici, **1,43 mandata** po stranci
+- Brier **0,038**; od ljudi kojima je model dao 80–92%, prošlo ih je 86%
+- poimenično pogođeno 50–71% stvarno izabranih, po domovima
+
+Na tom testu su se podesila i tri broja koja nisu mogla biti izmjerena: koliko vjerovati imenu naspram ljudi, koliko glasova ugašene stranke se vrati, i koliko vjerovati pomaku s lokalnih. Isprobana je i ispravka sistematskog nagiba modela — pogoršala je rezultat, pa nije uključena, ali stoji zapisana. Rasponi mandata i dalje pokrivaju stvarni rezultat u 98% slučajeva umjesto u 90, i to na stranici piše.
 
 ## Ide li glas nekud (druga metrika)
 

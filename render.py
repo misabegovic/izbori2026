@@ -194,6 +194,11 @@ history_meta = json.load(open(D + "history_meta.json")) if os.path.exists(D + "h
 unit_spend = json.load(open(D + "unit_spend.json")) if os.path.exists(D + "unit_spend.json") else {}
 seat_bar = json.load(open(D + "seat_bar.json")) if os.path.exists(D + "seat_bar.json") else {}
 list_strength = json.load(open(D + "list_strength.json")) if os.path.exists(D + "list_strength.json") else {}
+# project.py writes these two. The site renders without them (they are the only files that
+# forecast rather than record), so everything below is guarded.
+PROJ = json.load(open(D + "projection.json")) if os.path.exists(D + "projection.json") else {}
+PROJ_BT = json.load(open(D + "projection_backtest.json")) if os.path.exists(D + "projection_backtest.json") else {}
+PROJ_CAND = PROJ.get("candidates") or {}
 
 units = {}
 for f in glob.glob(D + "units/*.json"):
@@ -206,6 +211,7 @@ env = Environment(loader=FileSystemLoader("templates"), autoescape=True, trim_bl
 # "3.5%" looks like 35. Decimals take a comma.
 env.filters["dec"] = lambda v: ("" if v is None else
                                 ("manje od 0,1" if 0 < v < 0.05 else ("%.1f" % v).replace(".", ",")))
+env.filters["dec4"] = lambda v: ("" if v is None else f"{v:.4f}".replace(".", ","))
 env.filters["num"] = num
 env.filters["nice"] = nice_name
 env.filters["ptitle"] = party_title
@@ -693,6 +699,78 @@ def party_href(list_name):
     return party_pages[pk]["href"] if pk in party_pages else None
 
 
+# --- the projection (data/projection.json, written by project.py)
+def proj_href(key):
+    return f"projekcija-{key}.html"
+
+
+def proj_unit(race, uk):
+    return (((PROJ.get("races") or {}).get(race) or {}).get("units") or {}).get(uk)
+
+
+def proj_list_row(race, uk, list_name):
+    u = proj_unit(race, uk)
+    if not u:
+        return None
+    return next((l for l in u["liste"] if l["lista"] == list_name), None)
+
+
+def bars(rows, key_lo="p05", key_hi="p95", key_mid="mandati"):
+    """Percent offsets for the CSS range bar, scaled to the widest row in the table."""
+    top = max([r[key_hi] or 0 for r in rows] or [1]) or 1
+    for r in rows:
+        lo, hi = r[key_lo] or 0, r[key_hi] or 0
+        r["lo_pct"] = round(100 * lo / top, 1)
+        r["w_pct"] = round(max(100 * (hi - lo) / top, 1.2), 1)
+        r["mid_pct"] = round(100 * (r[key_mid] or 0) / top, 1)
+    return rows
+
+
+def cand_projection(pid, uk, list_name):
+    """What the simulation says about one person, in the words their profile needs.
+
+    The number itself is only half of it. The other half is *why*, and in BiH the why is
+    usually the list order rather than the campaign: a seat goes on personal votes only to
+    someone over 20 percent of their own list's ballots, and every other seat goes down the
+    printed order. Saying 12 percent without saying that is useless to a voter."""
+    p = PROJ_CAND.get(pid or "")
+    if not p:
+        return None
+    race = units[uk]["race"] if uk in units else None
+    row = proj_list_row(race, p["unit"], p["lista"]) if race else None
+    out = {**p, "lista_mandati": row["mandati"] if row else None,
+           "p_prag": row["p_prag"] if row else None,
+           "lista_udio": row["udio"] if row else None,
+           "nastavak": row.get("nastavak") if row else None}
+    if row:
+        order = [c for c in row["kandidati"]]
+        out["rank"] = next((i for i, c in enumerate(order, 1) if c["pid"] == pid), None)
+        out["od"] = len(order)
+        ahead = [c for c in order if (c["p"] or 0) > (p["p"] or 0)]
+        out["ispred"] = len(ahead)
+        out["ispred_imena"] = [nice_name(c["ime"]) for c in ahead[:3]]
+    def bs(x, d=1):
+        return f"{x:.{d}f}".replace(".", ",")
+
+    why = []
+    if row:
+        if row["p_prag"] < 60:
+            why.append(f"Lista ovdje prelazi prag od 3% u {row['p_prag']:.0f}% simulacija; "
+                       "ispod praga ne dobija ništa, pa ni ovaj čovjek.")
+        n = row["mandati"]
+        why.append("Lista ovdje ne dobija nijedan mandat u većini simulacija." if n < 0.5
+                   else f"Lista ovdje dobija oko {bs(n)} mandata.")
+    if p.get("pos"):
+        why.append(f"Ovaj je {p['pos']}. na listi.")
+    if p.get("komp_lista"):
+        k = p["komp_lista"]
+        why.append(f"Uz to je {k['mjesto']}. od {k['od']} na kompenzacijskoj listi, a ta mjesta idu redom s te liste i birač ih ne može promijeniti.")
+    if (p.get("p_komp") or 0) >= 3 and (p.get("p") or 0) > 0:
+        why.append(f"Od njegove ukupne šanse, {round(100 * p['p_komp'] / p['p'])}% dolazi baš preko kompenzacijskog mandata.")
+    out["why"] = " ".join(why)
+    return out
+
+
 # ---------------------------------------------------------------- output
 if os.path.exists("dist"):
     shutil.rmtree("dist")
@@ -718,7 +796,7 @@ for grp in list(context["presidency"].values()) + [context["rs_president"]]:
 env.filters["lat"] = lambda x: fold(re.sub(r"\s*-\s*NE[OZ]?[A-Z]*VISNI KANDIDAT.*$", "", cyr2lat(x or ""), flags=re.I))
 COMP = {"501": "dodatna lista za cijelu Federaciju", "502": "dodatna lista za cijelu RS", "400": "dodatna lista za cijelu Federaciju", "300": "dodatna lista za cijelu RS"}
 ASSET_V = hashlib.sha256(b"".join(open(f, "rb").read() for f in ("static/style.css", "static/app.js"))).hexdigest()[:8]
-base_ctx = {"generated": gen, "RACE": RACE, "PRES_CTX": PRES_CTX, "COMP": COMP, "CHAMBER_NAME": CHAMBER_NAME, "ASSET_V": ASSET_V}
+base_ctx = {"generated": gen, "RACE": RACE, "PRES_CTX": PRES_CTX, "COMP": COMP, "CHAMBER_NAME": CHAMBER_NAME, "ASSET_V": ASSET_V, "PROJ": PROJ}
 
 RACE_LVL = {"oi2026-2": "Predstavnički dom PSBiH", "oi2026-4": "Predstavnički dom Parlamenta FBiH", "oi2026-6": "Narodna skupština Republike Srpske", "oi2026-7": "Skupštine kantona"}
 
@@ -1024,7 +1102,8 @@ for pid, entries in cand_index.items():
     bodies = local_record(tl) if not rec else None
     loy = loyalty(tl)
     act_json = {ch: json.dumps({"rows": rows, "avg": (CH_AVG.get(ch) or {}).get("pris")}, ensure_ascii=False) for ch, rows in ACT.get(pid, {}).items()}
-    html = kand_tpl.render(p=v, tl=tl, tl_json=tl_json, pop=pop, pop_json=pop_json, appt=appt, bodies=bodies, loy=loy, bar=bar, weight=weight, pref=pref,
+    proj = cand_projection(pid, main_uk, _mlist)
+    html = kand_tpl.render(p=v, tl=tl, tl_json=tl_json, pop=pop, pop_json=pop_json, appt=appt, bodies=bodies, loy=loy, bar=bar, weight=weight, pref=pref, proj=proj,
                            prof=prof, rec=rec, kd=kd, replacement=replacement, cands_url=unit_json_url.get(main_uk), CH_AVG=CH_AVG, speeches_n=len(sp), speeches=sp_good[:5], assets=assets, runs=runs,
                            sim=SIM.get(pid, {}), pline=PLINE.get(pid, {}), act=act_json, my_party=people_rec.get(pid, {}).get("party_name"), **base_ctx)
     write(f"kandidat-{v['slug']}.html", html)
@@ -1068,8 +1147,10 @@ for uk, u in units.items():
         pk = pi
         cands = [person_view(c) for c in l["candidates"]]
         chs = list_chances(u, l) if RACE[race]["kind"] == "list" else {}
+        prow = proj_list_row(race, uk, l["name"])
         for cv, c in zip(cands, l["candidates"]):
             cv["chance"] = chs.get(c.get("pid") or c["name"])
+            cv["proj"] = (PROJ_CAND.get(c.get("pid") or "") or {}).get("p")
         prog = program_for(l["name"])
         kv = party_pages[pi]["key_votes"] if pi in party_pages else None
         recent_kv = None
@@ -1084,7 +1165,7 @@ for uk, u in units.items():
                       "votes22": (hist22.get(pi) or {}).get("votes"), "votes18": (hist18.get(pi) or {}).get("votes"),
                       "w22": (vote_weight(u, l["name"]) or {}).get("list"),
                       "seats22": seats22.get(pi, 0), "program": prog, "p22": p22_for(prog), "hist": history_for(prog), "party_href": party_href(l["name"]),
-                      "key_votes": recent_kv})
+                      "key_votes": recent_kv, "proj": prow})
     total22 = sum((h.get("votes") or 0) for h in u.get("party_history", []) if h["year"] == 2022)
     top22 = sorted([h for h in u.get("party_history", []) if h["year"] == 2022], key=lambda h: -(h.get("votes") or 0))[:5]
     munis = unit_munis.get(uk, [])
@@ -1094,7 +1175,11 @@ for uk, u in units.items():
         pi_ = party_identity(h["party"])
         if pi_ not in now_ids and total22 and (h.get("votes") or 0) >= 0.03 * total22 and pi_ not in {a[2] for a in absent22} and not any(same_party(h["party"], l["name"]) for l in u["lists"]):
             absent22.append((party_title(h["party"]), h.get("votes") or 0, pi_, party_href(h["party"])))
+    _pu = proj_unit(race, uk)
+    if _pu:
+        _pu = dict(_pu, href=proj_href(race if (PROJ["races"].get(race) or {}).get("one_house") else uk))
     html = listic_tpl.render(u=u, r=RACE[race], lists=lists, total22=total22, top22=top22, munis=munis, cands_url=unit_json_url.get(uk), absent22=absent22,
+                               pu=_pu,
                                weight=(vote_weight(u, u["lists"][0]["name"]) if u.get("lists") and RACE[race]["kind"] == "list" else None),
                                bar=seat_bar.get(f"{race}-{u['area']}"), **base_ctx)
     write(unit_href(race, u["area"]), html)
@@ -1147,8 +1232,35 @@ write("opcine.html", env.get_template("opcine.html").render(groups=sorted(groups
 
 # --- party pages + index of parties
 stranka_tpl = env.get_template("stranka.html")
+
+
+def party_projection(pk):
+    """Seats this party is projected to win, chamber by chamber.
+
+    A party is one thing to a voter and several list names to the CIK, so the rows are matched
+    the way the rest of the site matches them — by party_identity, not by the printed string."""
+    if not PROJ:
+        return None
+    out = []
+    for race, r_ in PROJ["races"].items():
+        for h in r_["houses"]:
+            hit = [x for x in h["rows"] if party_identity(x["lista"]) == pk]
+            if not hit:
+                continue
+            tot = sum(x["mandati"] for x in hit)
+            if tot < 0.05 and max(x["p95"] or 0 for x in hit) == 0:
+                continue
+            out.append({"dom": h["title"], "href": proj_href(h["key"]),
+                        "mandati": round(tot, 1),
+                        "p05": sum(x["p05"] or 0 for x in hit), "p95": sum(x["p95"] or 0 for x in hit),
+                        "seats": h["seats"],
+                        "udio": round(sum(x["udio"] for x in hit) / len(hit), 1)})
+    out.sort(key=lambda x: -x["mandati"])
+    return out or None
+
+
 for pk, ps in party_pages.items():
-    write(ps["href"], stranka_tpl.render(p=ps, **base_ctx))
+    write(ps["href"], stranka_tpl.render(p=ps, proj=party_projection(pk), **base_ctx))
 plist = sorted(party_pages.values(), key=lambda p: -p["n"])
 def heat_sentences(m):
     out = []
@@ -1195,6 +1307,90 @@ write("metoda.html", env.get_template("metoda.html").render(
     offices_people=len(offices), offices_link=Counter(v["link"] for v in offices.values()),
     offices_dropped=len(offices_meta.get("ambiguous", [])), **base_ctx))
 
+# --- projection pages (only if project.py has been run)
+if PROJ:
+    proj_tpl = env.get_template("projekcija.html")
+    houses_ctx, cantons_ctx = [], []
+    for race, r in PROJ["races"].items():
+        for h in r["houses"]:
+            komp = sum(r.get("kompenzacijski", {}).values()) if r["one_house"] else 0
+            rows = bars([dict(x) for x in h["rows"]])
+            for x in rows:
+                x["href"] = party_href(x["lista"])
+            uks = h["units"]
+            ranked = []
+            for uk in uks:
+                pu_ = r["units"][uk]
+                for l in pu_["liste"]:
+                    for c in l["kandidati"]:
+                        if c["p"] <= 0.5:
+                            continue
+                        cp = PROJ_CAND.get(c["pid"] or "") or {}
+                        ranked.append({**c, "lista": l["lista"],
+                                       "unit_title": pu_["title"] if len(uks) > 1 else None,
+                                       "href": f"kandidat-{pid_slug(c['pid'])}.html" if c.get("pid") else None,
+                                       "komp": (cp.get("komp_lista") or {}).get("mjesto")})
+            ranked.sort(key=lambda c: -c["p"])
+            _nl = (h.get("koalicije") or {}).get("najmanje_lista") or {}
+            hview = {"key": h["key"], "title": h["title"], "seats": h["seats"], "komp": komp,
+                     "units_n": len(h["units"]),
+                     "partial": any((x.get("jedinica") or 0) < len(h["units"]) for x in rows),
+                     "najmanje": [f"{k} lista → {v:g}%".replace(".", ",") for k, v in _nl.items() if v >= 1],
+                     "vecina": (h.get("koalicije") or {}).get("vecina", h["seats"] // 2 + 1),
+                     "rows": rows, "koalicije": h.get("koalicije"),
+                     "people": ranked[: max(h["seats"] * 2, h["seats"] + 20)],
+                     "units": [dict(r["units"][uk], listic_href=unit_href(race, r["units"][uk]["area"]))
+                               for uk in uks],
+                     "href": proj_href(h["key"])}
+            write(proj_href(h["key"]), proj_tpl.render(h=hview, pj=PROJ, bt=PROJ["backtest"], **base_ctx))
+            if r["one_house"]:
+                houses_ctx.append(hview)
+            else:
+                cantons_ctx.append({"title": h["title"], "seats": h["seats"], "href": proj_href(h["key"]),
+                                    "first": rows[0] if rows else None,
+                                    "second": rows[1] if len(rows) > 1 else None})
+
+    _bt = PROJ["backtest"]
+    _mid = next((r for r in _bt["kalibracija"] if r["od"] == 50), None)
+    _worst = None
+    _po = PROJ_BT.get("po_trkama") or {}
+    for _v in _po.values():
+        for _r in _v["rows"]:
+            if not _r["u_rasponu"] and _r["projekcija"] >= 3 and _r["projekcija"] > _r["stvarno"]:
+                if _worst is None or (_r["projekcija"] - _r["stvarno"]) > _worst[0]:
+                    _worst = (_r["projekcija"] - _r["stvarno"],
+                              f"modelu je {party_title(_r['lista'])} davao {_r['projekcija']:g} mandata, a dobila je {_r['stvarno']}")
+    write("projekcije.html", env.get_template("projekcije.html").render(
+        pj=PROJ, bt=_bt, houses=houses_ctx, cantons=cantons_ctx,
+        majority=list((PROJ.get("majority") or {}).values()),
+        polls=(PROJ.get("diagnostics") or {}).get("ankete") or [],
+        cal_mid=(f"{_mid['stvarno']:g}%" if _mid else "otprilike toliko"),
+        worst_new=(_worst[1] if _worst else None), **base_ctx))
+
+    _ece = None
+    _rows = _bt.get("kalibracija") or []
+    if _rows:
+        _n = sum(x["n"] for x in _rows) or 1
+        _ece = round(sum(x["n"] * abs(x["rekli"] - x["stvarno"]) for x in _rows) / _n, 2)
+    _lam = {}
+    for g in _bt.get("grid", []):
+        _lam[g["lam"]] = min(_lam.get(g["lam"], 99), g["mae"])
+    write("provjera-modela.html", env.get_template("provjera.html").render(
+        bt={**_bt, **PROJ_BT}, per_race=_po,
+        mid=_mid or {"rekli": 0, "stvarno": 0},
+        top=next((r for r in _bt["kalibracija"] if r["od"] == 92), {"rekli": 0, "stvarno": 0}),
+        lam_rows=sorted(_lam.items()),
+        boost=(_bt.get("rasipanje") or {}).get("boost"),
+        coverage=next((g["pokrivenost"] for g in ((_bt.get("rasipanje") or {}).get("boost_grid") or [])
+                       if g["udjeli"] == (_bt.get("rasipanje") or {}).get("boost")
+                       and g["licni"] == (_bt.get("rasipanje") or {}).get("pers_boost")), None),
+        pers_boost=(_bt.get("rasipanje") or {}).get("pers_boost"),
+        boost_grid=(_bt.get("rasipanje") or {}).get("boost_grid"),
+        ece=_ece,
+        polls=json.load(open(D + "polls.json"))["polls"],
+        polls_note=json.load(open(D + "polls.json"))["weight_evidence"], **base_ctx))
+    write("projection_backtest.json", json.dumps(PROJ_BT, ensure_ascii=False, indent=1))
+
 # --- presidency page
 def pres_cands(area):
     u = units[f"oi2026-1-{area}"]
@@ -1211,6 +1407,14 @@ def merge_ctx(cands, ctx_rows):
     for c in cands:
         c["ctx"] = by.get(fold(cyr2lat(c["raw_name"]).split(" - ")[0]))
     return cands
+def add_majority(cands, key):
+    rows = ((PROJ.get("majority") or {}).get(key) or {}).get("candidates") or []
+    by = {fold(cyr2lat(r["name"])): r for r in rows}
+    for c in cands:
+        c["mp"] = by.get(fold(cyr2lat(c["raw_name"])))
+    return cands
+
+
 pres = {"bosnjacki": merge_ctx(pres_cands("701"), ctx_pres["bosnjacki"]),
         "hrvatski": merge_ctx(pres_cands("702"), ctx_pres["hrvatski"]),
         "srpski": merge_ctx(pres_cands("703"), ctx_pres["srpski"])}
@@ -1220,6 +1424,9 @@ for l in rs_u["lists"]:
     for c in l["candidates"]:
         v = person_view(c); v["list"] = l["name"]; v["party_href"] = party_href(l["name"]); rs_c.append(v)
 rs_c = merge_ctx(rs_c, context["rs_president"])
+for _k, _grp in (("oi2026-1-701", pres["bosnjacki"]), ("oi2026-1-702", pres["hrvatski"]),
+                ("oi2026-1-703", pres["srpski"]), ("oi2026-5-5", rs_c)):
+    add_majority(_grp, _k)
 write("predsjednistvo.html", env.get_template("predsjednistvo.html").render(pres=pres, rs=rs_c, note=context["rs_president_note"], **base_ctx))
 
 # --- what happened

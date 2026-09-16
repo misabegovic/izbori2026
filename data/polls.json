@@ -1,0 +1,143 @@
+{
+ "_note": "Javne ankete pred opće izbore 2026, prepisane iz objavljenog izvora. Model ih koristi s malom težinom (vidjeti 'weight_evidence' dolje i metoda.html). Ključevi stranaka su imena iz data/programs_*.json; ono što se ne veže ni na jednu listu 2026 stoji pod 'unmatched' i ne ulazi u računicu.",
+ "_fields": {
+  "agency": "ko je radio anketu",
+  "client": "ko ju je platio, ako je objavljeno",
+  "published": "datum objave",
+  "fieldwork": "kad je anketa rađena, ako je objavljeno",
+  "sample": "veličina uzorka, ako je objavljena",
+  "scope": "koga anketa mjeri (država, FBiH, RS, kanton)",
+  "race": "trka na koju se odnosi",
+  "reliability": "high | medium | low — naša ocjena, s obrazloženjem",
+  "caveat": "šta s ovom anketom nije u redu",
+  "source": "URL objave",
+  "parties": "ime iz programs_*.json -> procenat",
+  "unmatched": "ono što anketa mjeri a ne postoji na listiću 2026 ili se ne veže na listu"
+ },
+ "weight_evidence": {
+  "claim": "Ankete u BiH promašuju višestruko više od objavljene margine greške, pa u model ulaze s malom težinom.",
+  "example": "Valicon je 2014. mjerio SDA na 17 posto; SDA je dobila 27,7. Za Predsjedništvo je Suljagiću mjerio 25, dobio je 15.",
+  "source": "https://nap.ba/post/ankete-u-sluzbi-izborne-kampanje",
+  "fake_polls": "U aprilu 2026. su se portalima proširili rezultati navodne ankete o kandidatima za Predsjedništvo koji potiču sa satirične stranice; provjereno na Raskrinkavanju.",
+  "fake_polls_source": "https://raskrinkavanje.ba/analiza/nepouzdana-anketa-o-popularnosti-potencijalnih-kandidata-za-predsjednistvo-bi-h"
+ },
+ "polls": [
+  {
+   "id": "ipsos-iri-2025-09",
+   "agency": "Ipsos",
+   "client": "IRI (International Republican Institute)",
+   "published": "2025-09-27",
+   "fieldwork": null,
+   "sample": 355,
+   "scope": "FBiH",
+   "race": "oi2026-2",
+   "reliability": "low",
+   "caveat": "Uzorak od 355 ljudi i godinu dana prije izbora; 16 posto neopredijeljenih nije raspoređeno. Objavljeno preko medija, bez metodološkog lista.",
+   "source": "https://en.wikipedia.org/wiki/2026_Federation_of_Bosnia_and_Herzegovina_general_election",
+   "source_original": "https://istraga.ba/",
+   "parties": {
+    "SDA": 18.0,
+    "HDZ BiH": 8.0,
+    "DF (Željko Komšić - Za građansku državu DF/GS)": 8.0,
+    "SDP BiH": 7.0,
+    "Narod i pravda (NiP)": 6.0,
+    "NES (Nezavisni europski savez, NES BiH / PDA / Naprijed!)": 5.0,
+    "Naša stranka": 4.0,
+    "Stranka za BiH": 2.0,
+    "Snaga naroda": 2.0,
+    "HDZ 1990": 1.0
+   },
+   "undecided": 16.0,
+   "unmatched": {
+    "PDA": 2.0,
+    "ostali": 2.0
+   }
+  },
+  {
+   "id": "faktor-plus-2026-02",
+   "agency": "Faktor Plus",
+   "client": null,
+   "published": "2026-02",
+   "fieldwork": "2026-02",
+   "sample": null,
+   "scope": "RS",
+   "race": "oi2026-6",
+   "reliability": "low",
+   "caveat": "Rađena osam mjeseci prije izbora i prije nego što su liste ovjerene: mjeri SDS na 12 posto, a SDS 2026. uopšte ne izlazi na listić za Narodnu skupštinu. Uzorak i metod nisu objavljeni; prenesena je preko agregatora, ne iz prve ruke.",
+   "source": "https://x.com/EuropeElects/status/2051762122346955243",
+   "parties": {
+    "SNSD": 43.0,
+    "Pokret Sigurna Srpska (Draško Stanivuković; PSS, PDP, NPSP)": 20.0,
+    "Narodni front Jelena Trivić": 7.0,
+    "Za pravdu i red - Lista Nebojše Vukanovića / PDP RS Igor Crnadak": 5.0,
+    "Socijalistička partija Petar Đokić / DEMOS / NDP": 4.0,
+    "Ujedinjena Srpska": 3.0,
+    "DNS-NPS (Banjac-Nešić)": 3.0,
+    "SPS Goran Selak Pokret Jedinstvena Srpska": 1.0
+   },
+   "unmatched": {
+    "SDS": 12.0,
+    "DEMOS (odvojeno)": 1.0,
+    "PzD": 0.0
+   }
+  },
+  {
+   "id": "ipsos-2026-07",
+   "agency": "Ipsos",
+   "client": "objavljeno kao istraživanje 'za potrebe međunarodne zajednice'",
+   "published": "2026-07",
+   "fieldwork": "sredina jula 2026, s ponovljenim mjerenjem u avgustu",
+   "sample": 1000,
+   "scope": "država",
+   "race": "oi2026-2",
+   "reliability": "medium",
+   "caveat": "Najveći objavljeni uzorak i najbliže izborima, ali je objavljena preko medija bez metodološkog lista, a dio pitanja mjeri ljude koji na kraju nisu na listiću (Šarović i Komšić se 2026. ne kandiduju za mjesta o kojima se pita).",
+   "source": "https://www.dnevnik.ba/vijesti/ipsos-proveo-anketu-evo-koji-kandidati-imaju-najvece-sanse-za-predsjednistvo-2642314/",
+   "parties": {
+    "SDA": 14.0,
+    "SNSD": 10.0,
+    "HDZ BiH": 10.0,
+    "SDP BiH": 7.0,
+    "DF (Željko Komšić - Za građansku državu DF/GS)": 2.0,
+    "SBB Fahrudin Radončić": 1.0
+   },
+   "unmatched": {
+    "PDP (samostalno, 2026. unutar PSS-a i ZPR-a)": 5.0
+   },
+   "presidency": {
+    "701": {
+     "DENIS BEĆIROVIĆ": 17.0,
+     "BAKIR IZETBEGOVIĆ": 16.0,
+     "MIRSAD HADŽIKADIĆ": 2.0
+    },
+    "703": {
+     "ЖЕЉКА ЦВИЈАНОВИЋ": 29.0
+    },
+    "_note": "Procenti su od svih ispitanika, ne od izlaznosti trke, pa se ne zbrajaju na 100. Imena koja je anketa mjerila a nisu na listiću 2026 stoje pod 'unmatched_presidency'."
+   },
+   "unmatched_presidency": {
+    "MIRKO ŠAROVIĆ (SDS, 2026. nije kandidat za Predsjedništvo)": 17.0,
+    "NENAD NEŠIĆ (2026. nije kandidat za Predsjedništvo)": 4.0,
+    "ŽELJKO KOMŠIĆ (2026. se ne kandiduje za hrvatskog člana)": 12.0,
+    "BORJANA KRIŠTO (2026. nije kandidat za Predsjedništvo)": 16.0,
+    "_note": "Anketa je mjerena prije nego što su liste ovjerene, pa dobar dio imena nije na listiću. To je razlog zašto joj model daje malu težinu."
+   }
+  }
+ ],
+ "not_used": [
+  {
+   "id": "klix-citaoci-2026",
+   "agency": "Klix.ba (anketa čitalaca)",
+   "published": "2026-09",
+   "source": "https://izbori.klix.ba/rezultati",
+   "why_not": "Nije istraživanje javnog mnijenja nego glasanje čitalaca portala: glasa ko hoće, ko god koliko puta može, i uzorak nije ni približno birački korpus. To piše i sam Klix uz rezultate. Zato ne ulazi u model — ali se navodi ovdje jer je u kampanji najvidljivija „anketa”, pa je korisno znati šta jeste."
+  },
+  {
+   "id": "navodna-anketa-april-2026",
+   "agency": "nepoznato (satirična stranica)",
+   "published": "2026-04",
+   "source": "https://raskrinkavanje.ba/analiza/nepouzdana-anketa-o-popularnosti-potencijalnih-kandidata-za-predsjednistvo-bi-h",
+   "why_not": "Rezultati navodne ankete o kandidatima za Predsjedništvo proširili su se portalima iz izvora koji je satirična stranica. Nema agencije, uzorka ni metoda. Provjereno na Raskrinkavanju."
+  }
+ ]
+}

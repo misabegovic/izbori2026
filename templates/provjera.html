@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block title %}Koliko model griješi — Izbori 2026{% endblock %}
+{% block content %}
+<p class="mut"><a href="projekcije.html">← projekcije</a> · <a href="index.html">početna</a></p>
+<h1>Koliko ovaj model griješi</h1>
+<p class="lead">Projekcija bez izmjerene greške je marketing. Zato smo isti model, isti kod i iste postavke pustili unatrag na izbore 2022. i dali mu samo ono što se moglo znati prije njih: rezultat općih izbora 2018. i lokalne izbore 2016. i 2020. Nijedan glas iz 2022. nije ušao u račun. Onda smo prebrojali koliko je pogriješio.</p>
+
+<div class="card big">
+<div class="facts">
+<div class="fact"><b>{{ bt.share_mae_pp | dec }} p.p.</b><span>prosječna greška u udjelu glasova, po listi po izbornoj jedinici</span></div>
+<div class="fact"><b>{{ bt.mandati_mae | dec }}</b><span>prosječna greška u broju mandata, po stranci</span></div>
+<div class="fact"><b>{{ bt.brier_direktni | dec4 }}</b><span>Brier score na direktnim mandatima (0 je savršeno, 0,25 je bacanje novčića)</span></div>
+</div>
+</div>
+
+<div class="card" id="kalibracija">
+<h2>Kad kažemo „60 posto”, desi li se 60 posto?</h2>
+<p>Ovo je jedini test koji stvarno nešto znači. Uzmemo svih {{ bt.n_kandidata | num }} kandidata iz 2022, poredamo ih po tome koliku im je šansu model dao, i za svaku grupu prebrojimo koliko ih je stvarno izabrano. Ako brojka nešto znači, dvije kolone desno moraju biti slične.</p>
+<div class="calwrap"><table class="cal"><thead><tr><th>Model je rekao</th><th>Ljudi</th><th>Prosječno rekli</th><th>Stvarno prošlo</th><th>Izabranih</th></tr></thead><tbody>
+{% for r in bt.kalibracija %}
+<tr><td>{{ r.od }}–{{ r.do }}%</td><td class="num">{{ r.n | num }}</td><td class="num">{{ r.rekli | dec }}%</td><td class="num"><b>{{ r.stvarno | dec }}%</b></td><td class="num mut">{{ r.izabranih }}</td></tr>
+{% endfor %}
+</tbody></table></div>
+<p class="small mut">Čita se ovako: u redu „50–65%” model je u prosjeku rekao {{ mid.rekli | dec }}%, a stvarno je prošlo {{ mid.stvarno | dec }}% tih ljudi. Najveće odstupanje je na vrhu: od onih kojima je dao preko 92% prošlo ih je {{ top.stvarno | dec }}%, a ne {{ top.rekli | dec }}%. Prosječan promašaj kroz cijelu tabelu je {{ ece | dec }} postotna boda.</p>
+<details><summary>Ista tabela bez kompenzacijskih mandata</summary>
+<p class="small">{{ bt.ogranicenje_komp }}</p>
+<div class="calwrap"><table class="cal"><thead><tr><th>Model je rekao</th><th>Ljudi</th><th>Prosječno rekli</th><th>Stvarno prošlo</th></tr></thead><tbody>
+{% for r in bt.kalibracija_direktni %}
+<tr><td>{{ r.od }}–{{ r.do }}%</td><td class="num">{{ r.n | num }}</td><td class="num">{{ r.rekli | dec }}%</td><td class="num"><b>{{ r.stvarno | dec }}%</b></td></tr>
+{% endfor %}
+</tbody></table></div>
+</details>
+</div>
+
+<div class="card">
+<h2>Koliko je imena pogodio</h2>
+<p>Strože pitanje: uzmi onoliko najvjerovatnijih ljudi koliko dom ima mjesta i vidi koliko ih je stvarno ušlo. Pogoditi ime traži da model pogodi i koliko lista dobija, i koga lista stavlja naprijed, i ko će preskočiti red ličnim glasovima.</p>
+<div class="facts">
+{% for race, n in bt.imena.items() %}
+<div class="fact"><b>{{ n.pogodjeno }} / {{ n.mjesta }}</b><span>{{ n.title }} ({{ n.pct }}%)</span></div>
+{% endfor %}
+</div>
+</div>
+
+<div class="card">
+<h2>Mandati po strankama, 2022: rekli i bilo</h2>
+{% for race, v in per_race.items() %}
+<h3 style="margin-bottom:.2rem">{{ v.title }}</h3>
+<p class="mut small" style="margin:0 0 .4rem">Prosječna greška {{ v.mae_mandata }} mandata · stvarni rezultat je u rasponu od 5 do 95 posto simulacija kod {{ v.u_rasponu }}% lista</p>
+<div class="calwrap"><table class="cal"><thead><tr><th>Lista</th><th>Model</th><th>Raspon</th><th>Stvarno</th></tr></thead><tbody>
+{% for r in v.rows %}{% if r.stvarno or r.projekcija >= 0.5 %}
+<tr><td class="ln">{{ r.lista | ptitle }}</td><td class="num">{{ r.projekcija | dec }}</td><td class="num small mut">{{ r.p05 }}–{{ r.p95 }}</td><td class="num"><b>{{ r.stvarno }}</b>{% if not r.u_rasponu %} <span class="b out" title="Izvan raspona koji je model dao">van</span>{% endif %}</td></tr>
+{% endif %}{% endfor %}
+</tbody></table></div>
+{% endfor %}
+</div>
+
+<div class="card" id="rasipanje">
+<h2>Odakle rasponi</h2>
+<p>Rasponi nisu procjena osjećaja. To je izmjereno rasipanje greške ovog istog modela na 2022, i ono zavisi od dvije stvari: koliko je lista velika i da li je jednostavno nastavak jedne ranije stranke.</p>
+<p>Greške nisu zvonolika krivulja. Velika lista koja je očigledan nastavak obično promaši malo — ali otprilike jedna od {{ (100 / (bt.rasipanje.q * 100)) | round | int }} promaši za mnogo. Da smo na sve to natakli jednu prosječnu širinu, raspon za SDA bi ispao besmislen, a pad neke liste u ništa i dalje sakriven. Zato svaka lista ima „uobičajeno” rasipanje i „rep”, i simulacija poseže za repom onoliko često koliko je 2022. posegnula stvarnost.</p>
+<div class="calwrap"><table class="cal"><thead><tr><th>Veličina liste</th><th>Vrsta</th><th>Mjerenja</th><th>Uobičajeno</th><th>Rep</th></tr></thead><tbody>
+{% for b in bt.rasipanje.buckets %}
+<tr><td>{{ b.od | dec }}–{{ b.do | dec }}%</td><td class="small">{{ 'nastavak ranije liste' if b.vrsta == 'nastavak' else 'nova ili sklopljena' }}</td><td class="num">{{ b.n }}</td><td class="num">{{ b.jezgro }}</td><td class="num mut">{{ b.rep_sirina }}</td></tr>
+{% endfor %}
+</tbody></table></div>
+<p class="small mut">Brojevi su u logaritmu udjela: 0,20 znači da lista obično završi između otprilike 82% i 122% onoga što joj model daje.</p>
+<p class="small"><b>Šta smo probali i odbacili:</b> {{ bt.rasipanje.ispravka_nagiba.zasto }} Bez nje je greška {{ bt.rasipanje.ispravka_nagiba.greska_bez_nje }} p.p., s njom {{ bt.rasipanje.ispravka_nagiba.greska_s_njom }} p.p.{% if not bt.rasipanje.ispravka_nagiba.primijenjena %} Nije uključena.{% else %} Uključena je.{% endif %}</p>
+</div>
+
+<div class="card" id="sirina">
+<h2>Gdje je nesigurnost falila</h2>
+<p>Pušten neudešen, model je griješio u dva suprotna smjera odjednom. Pojedinim ljudima je davao prevelike šanse — rekao je 97 posto za 140 kandidata iz 2022, a ušlo ih je 119 — dok je raspon mandata po stranci pokrivao stvarni rezultat gotovo svaki put, dakle šire nego devet od deset koliko obećava.</p>
+<p>Isprobali smo dvije ručice: širu grešku u udjelima glasova i šire rasipanje ličnih glasova unutar liste. Pretpostavili smo da je problem u drugoj — da model prečvrsto vjeruje redoslijedu na listi — ali test to ne potvrđuje. Kalibraciju popravlja prva: šira greška u udjelima. Uzeta je ona, i to je jedini broj na ovom sajtu koji je namješten na ovaj test, a ne izmjeren.</p>
+<p><b>Ono što tako nije popravljeno, i ovdje piše umjesto da se prećuti:</b> rasponi mandata po strankama ostaju širi nego što bi trebali. Pišemo „u 9 od 10 simulacija između X i Y”, a na rezultatu iz 2022. je stvarni broj upadao u taj raspon u {{ coverage | dec }}% slučajeva umjesto u oko 90. Praktično: rasponima vjerujte kao gornjoj granici neizvjesnosti, a ne kao preciznoj mjeri. Procentima uz imena vjerujte onoliko koliko tabela gore pokazuje.</p>
+{% if boost_grid %}
+<div class="calwrap"><table class="cal"><thead><tr><th>Udjeli ×</th><th>Lični glasovi ×</th><th>Promašaj kalibracije</th><th>Raspon pokriva</th><th>Brier</th></tr></thead><tbody>
+{% for b in boost_grid %}
+<tr{% if b.udjeli == boost and b.licni == pers_boost %} class="best"{% endif %}><td>{{ b.udjeli | dec }}</td><td>{{ b.licni | dec }}</td><td class="num">{{ b.ece | dec }} p.p.</td><td class="num">{{ b.pokrivenost | dec }}%</td><td class="num">{{ b.brier | dec4 }}</td></tr>
+{% endfor %}
+</tbody></table></div>
+<p class="small mut">Izabrano je: udjeli ×{{ boost | dec }}, lični glasovi ×{{ pers_boost | dec }}. Raspon treba pokrivati oko 90 posto — raspon koji je uvijek u pravu ne govori ništa. Brier se pritom skoro ne mijenja: model ne postaje tačniji, nego prestaje tvrditi više nego što zna.</p>
+{% endif %}
+</div>
+
+<div class="card">
+<h2>Koliko pomažu lokalni izbori</h2>
+<p>Model polazi od prošlih općih izbora i pomjeri ih onoliko koliko su se glasovi pomjerili između dvoje lokalnih. Koliko se toj brojci vjeruje nije naša odluka — isprobali smo sve i uzeli ono što je na 2022. najmanje griješilo.</p>
+<div class="calwrap"><table class="cal"><thead><tr><th>Koliko se vjeruje pomaku s lokalnih</th><th>Najmanja greška (p.p. po listi)</th></tr></thead><tbody>
+{% for lam, mae in lam_rows %}
+<tr{% if lam == bt.params.lam %} class="best"{% endif %}><td>{% if lam == 0 %}nimalo — samo prošli opći izbori{% elif lam == 1.0 %}potpuno — pomak se prenosi cijeli{% else %}{{ (lam * 100) | round | int }}% pomaka{% endif %}</td><td class="num">{{ mae }}{% if lam == bt.params.lam %} <b>← izabrano</b>{% endif %}</td></tr>
+{% endfor %}
+</tbody></table></div>
+<p class="small mut">Ispalo je da lokalni izbori nose oko petinu pomaka između općih. To je malo, ali nije nula, i bolje je nego pretvarati se da se ništa nije desilo od 2022.</p>
+</div>
+
+<div class="card" id="ankete">
+<h2>Ankete</h2>
+<p>{{ polls_note.claim }} {{ polls_note.example }} <a class="src" href="{{ polls_note.source }}">izvor</a></p>
+<p class="small">{{ polls_note.fake_polls }} <a class="src" href="{{ polls_note.fake_polls_source }}">Raskrinkavanje</a></p>
+<p>Zato ankete ulaze u model, ali s malom težinom i svaka sa svojim obrazloženjem.</p>
+{% for p in polls %}
+<div class="fn"><b>{{ p.agency }}</b>{% if p.client %} za {{ p.client }}{% endif %} · objavljena {{ p.published }}{% if p.sample %} · uzorak {{ p.sample }}{% endif %} · {{ p.scope }}<br>
+<span class="small mut">{{ p.caveat }}</span><br>
+<span class="small">{% for k, v in p.parties.items() %}{{ k }} {{ v | dec }}%{% if not loop.last %} · {% endif %}{% endfor %}</span>
+{% if p.unmatched %}<br><span class="small mut">Ne veže se ni na jednu listu 2026: {% for k, v in p.unmatched.items() %}{{ k }} {{ v | dec }}%{% if not loop.last %}, {% endif %}{% endfor %} — te brojke ne ulaze u račun.</span>{% endif %}
+<br><a class="src" href="{{ p.source }}">izvor</a></div>
+{% endfor %}
+</div>
+
+<div class="card" id="vecinske">
+<h2>Većinske trke: najslabiji dio</h2>
+<p>Za Predsjedništvo i predsjednika RS nema liste ni praga — pobjeđuje jedan čovjek. Za takvu trku imamo svega {{ bt.vecinske.parovi | length }} para „isti subjekt, dva puta zaredom” na kojima se uopšte može izmjeriti koliko se glasovi pomjeraju. Odatle širina raspona ({{ bt.vecinske.sd }} u logaritmu), i zato tim brojkama treba vjerovati najmanje.</p>
+<div class="calwrap"><table class="cal"><thead><tr><th>Trka</th><th>Subjekt</th><th>2018</th><th>2022</th></tr></thead><tbody>
+{% for r in bt.vecinske.parovi %}
+<tr><td class="small">{{ r.trka }}{% if r.area != '5' %} {{ r.area }}{% endif %}</td><td class="ln small">{{ r.stranka | ptitle }}</td><td class="num">{{ r['2018'] | dec }}%</td><td class="num">{{ r['2022'] | dec }}%</td></tr>
+{% endfor %}
+</tbody></table></div>
+</div>
+
+<div class="card">
+<h2>Šta model ne može znati</h2>
+<ul style="margin:.3rem 0 0 1.1rem;padding:0">
+<li><b>Izlaznost.</b> Računa udjele, ne ljude. Ako jedna strana ostane kod kuće, ovo to ne vidi.</li>
+<li><b>Opći izbori 2010. i 2014.</b> ne postoje ni u jednom čitljivom izvoru, pa je baza samo 2018. i 2022. i test se mogao uraditi samo jednom. <a href="metoda.html#rupe">Zašto →</a></li>
+<li><b>Kompenzacijske liste iz 2018. i 2022.</b> nisu objavljene, pa je 57 mandata u testu model morao pogađati na način na koji za 2026. neće morati — te liste za 2026. postoje i model ih čita.</li>
+<li><b>Koliko mandata jedinica bira 2026.</b> CIK to određuje prije izbora prema broju upisanih birača; za 2026. nismo našli objavljenu odluku, pa koristimo raspodjelu iz 2022. i tu nesigurnost ubacimo u simulaciju.</li>
+<li><b>Jedan test nije dokaz.</b> Sve gore je izmjereno na jednim izborima. Sljedeći put može biti gore.</li>
+</ul>
+</div>
+
+<p class="src">Cijeli izvještaj u strojnom obliku: <a href="projection_backtest.json">projection_backtest.json</a>. Kod: <a href="https://github.com/misabegovic/izbori2026">project.py, model.py, seatlaw.py</a>.</p>
+{% endblock %}

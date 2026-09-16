@@ -11,6 +11,35 @@
 <ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for r in runs %}<li>{% if r.chance %}{{ chance(r.chance, true) }}{% endif %}<a href="{{ r.href }}">{{ RACE[r.unit.race].short }}{{ r.where }}</a> — {% if r.party_href %}<a href="{{ r.party_href }}">{{ r.list | ptitle }}</a>{% else %}{{ r.list | ptitle }}{% endif %}{% if r.pos %}, {{ r.pos }}. na listi{% endif %}</li>{% endfor %}</ul>
 </div>
 
+{% if proj %}
+<div class="card big" id="projekcija">
+<h2 style="margin-top:0">Hoće li ući? Dvije brojke, dva pitanja</h2>
+<div class="twonum">
+<div class="tn">
+<b>{{ proj.p | dec }}%</b>
+<span class="tl2">projekcija za 2026</span>
+<span class="small mut">Koliko puta ovaj čovjek dobije mandat kad se ovi izbori odigraju {{ PROJ.sims | num }} puta, s glasovima onako kako se čine u 2026.</span>
+</div>
+{% if runs and runs[0].chance %}
+<div class="tn">
+<b>{{ runs[0].chance[0] }}%</b>
+<span class="tl2">stopa iz 2022</span>
+<span class="small mut">Koliko je ljudi u istoj situaciji (isto mjesto na listi u odnosu na mandate stranke, isti lični rezultat) stvarno prošlo 2022. Ne mijenja se s kampanjom.</span>
+</div>
+{% endif %}
+</div>
+{% if runs and runs[0].chance and (proj.p - runs[0].chance[0]) | abs >= 12 %}
+<p class="small"><b>Brojke se razilaze</b>, i to nešto znači: {% if proj.p > runs[0].chance[0] %}projekcija je viša jer je lista ove godine u boljem stanju nego što bi se po 2022. očekivalo{% else %}projekcija je niža jer lista ove godine stoji slabije nego 2022, ili je red na listi takav da lični glasovi ne pomažu{% endif %}.</p>
+{% endif %}
+<p>{{ proj.why }}</p>
+{% if proj.rank and proj.od %}
+<p class="small mut">Po vjerovatnoći je <b>{{ proj.rank }}. od {{ proj.od }}</b> na svojoj listi{% if proj.ispred %} — ispred su {{ proj.ispred_imena | join(', ') }}{% if proj.ispred > proj.ispred_imena | length %} i još {{ proj.ispred - (proj.ispred_imena | length) }}{% endif %}{% endif %}.</p>
+{% endif %}
+<p class="small mut"><b>Kako se dijeli unutar liste:</b> ko pređe 20 posto glasača svoje liste uzima mandat po ličnim glasovima. Sve ostale mandate lista dijeli <b>po svom redoslijedu</b>, bez obzira na to ko je dobio više glasova (Izborni zakon BiH, član 9.8 stav 2). Zato mjesto na listi često znači više od kampanje.</p>
+<p class="small"><a href="projekcije.html">Cijela projekcija izbora →</a> · <a href="provjera-modela.html">koliko ovaj model griješi →</a></p>
+</div>
+{% endif %}
+
 {% if p.office_rows %}
 <h2>Funkcije koje izborni zapis ne pokriva</h2>
 <div class="card">

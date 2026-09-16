@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}{{ h.title }} — projekcija — Izbori 2026{% endblock %}
+{% block content %}
+<p class="mut"><a href="projekcije.html">← sve projekcije</a> · <a href="index.html">početna</a></p>
+<h1>{{ h.title }}</h1>
+<p class="lead">{{ h.seats }} mjesta{% if h.komp %}, od toga {{ h.komp }} kompenzacijskih{% endif %}. Većina je {{ h.vecina }}. Sve ispod je iz {{ pj.sims | num }} simulacija istog modela koji je na izborima 2022. griješio {{ bt.share_mae_pp | dec }} postotna boda po listi.</p>
+
+<div class="card">
+<h2 style="margin-top:0">Mandati po listama</h2>
+<table class="cal proj"><thead><tr><th>Lista</th><th>Mandata</th><th>Raspon (9 od 10 puta)</th><th>Udio</th><th>Bez pomaka</th></tr></thead><tbody>
+{% for r in h.rows %}
+<tr><td class="ln">{% if r.href %}<a href="{{ r.href }}">{{ r.lista | ptitle }}</a>{% else %}{{ r.lista | ptitle }}{% endif %}</td>
+<td class="num"><b>{{ r.mandati | dec }}</b></td>
+<td><span class="rng"><i style="left:{{ r.lo_pct }}%;width:{{ r.w_pct }}%"></i><u style="left:{{ r.mid_pct }}%"></u></span> <span class="small mut">{{ r.p05 }}–{{ r.p95 }}</span></td>
+<td class="num small">{{ r.udio | dec }}%{% if r.jedinica and r.jedinica < h.units_n %}<span class="mut" title="Izlazi u {{ r.jedinica }} od {{ h.units_n }} jedinica; procenat je od glasova tamo gdje izlazi.">*</span>{% endif %}</td>
+<td class="num small mut">{{ r.udio_bez_pomaka | dec }}%</td>
+</tr>
+{% endfor %}
+</tbody></table>
+<p class="small mut">„Bez pomaka” je isti račun kad se lokalni izbori 2024. uopšte ne uzmu u obzir — samo rezultat iz 2022, prenesen na ovogodišnje liste. Razlika između te dvije kolone je sve što lokalni izbori govore.</p>
+</div>
+
+{% if h.koalicije %}
+<div class="card">
+<h2 style="margin-top:0">Ko s kim ima većinu</h2>
+<p class="mut small" style="margin-top:0">Ovo je sabiranje, ne predviđanje ko će s kim. Ne znamo ko bi s kim sjeo i ne nagađamo; samo pišemo koje kombinacije dođu do {{ h.koalicije.vecina }} mandata i koliko često.</p>
+<table class="cal proj"><thead><tr><th>Liste</th><th>Mandata</th><th>Ima većinu</th></tr></thead><tbody>
+{% for c in h.koalicije.kombinacije %}{% if c.p >= 3 %}
+<tr><td class="ln small">{% for l in c.liste %}{{ l | ptitle }}{% if not loop.last %} + {% endif %}{% endfor %}</td>
+<td class="num">{{ c.mandati | dec }}</td><td class="num"><b>{{ c.p | dec }}%</b></td></tr>
+{% endif %}{% endfor %}
+</tbody></table>
+{% set veto = h.koalicije.bez_njih_nema_vecine.items() | selectattr('1', 'ge', 5) | list %}
+{% if veto %}<p class="small"><b>Bez koga se ne može:</b> {% for l, v in veto %}{{ l | ptitle }} u {{ v | dec }}% simulacija (svi ostali zajedno ne dođu do većine){% if not loop.last %}; {% endif %}{% endfor %}.</p>{% endif %}
+</div>
+{% endif %}
+
+<div class="card">
+<h2 style="margin-top:0">Ko ulazi</h2>
+<p class="mut small" style="margin-top:0">Koliko često svaki čovjek dobije mandat u {{ pj.sims | num }} simulacija. Unutar jedne liste to ne odlučuju samo lični glasovi: ko pređe 20 posto glasača svoje liste uzima mjesto po glasovima, a <b>sve ostale mandate lista dijeli po svom redoslijedu</b> (član 9.8 izbornog zakona). Zato prvo i drugo mjesto na listi vrijede više nego kampanja.</p>
+<ol class="list proj-people">
+{% for c in h.people %}
+<li{% if not loop.first and c.p < 50 and h.people[loop.index0 - 1].p >= 50 %} class="cut"{% endif %}>
+<span class="pw{% if c.p >= 80 %} hi{% elif c.p >= 50 %} mid{% elif c.p >= 20 %} lo{% endif %}">{{ c.p | dec }}%</span>
+{% if c.href %}<a href="{{ c.href }}">{{ c.ime | nice }}</a>{% else %}{{ c.ime | nice }}{% endif %}
+<span class="small mut">{{ c.lista | ptitle }}{% if c.pos %}, {{ c.pos }}. na listi{% endif %}{% if c.unit_title %} · {{ c.unit_title }}{% endif %}{% if c.komp %} · {{ c.komp }}. na kompenzacijskoj listi{% endif %}</span>
+</li>
+{% endfor %}
+</ol>
+<p class="small mut">Crta pokazuje gdje pada ispod pola. Iznad nje je otprilike onoliko ljudi koliko dom ima mjesta; ispod su oni koji ulaze samo ako nešto pukne.</p>
+</div>
+
+<h2>Po izbornim jedinicama</h2>
+{% for u in h.units %}
+<div class="card">
+<h3 style="margin-top:0">{% if u.listic_href %}<a href="{{ u.listic_href }}">{{ u.title }}</a>{% else %}{{ u.title }}{% endif %}</h3>
+<p class="mut small" style="margin:.2rem 0 .5rem">{{ u.mandati }} mandata se ovdje dijeli direktno{% if u.glasaca_2022 %} · 2022. je glasalo {{ u.glasaca_2022 | num }} ljudi{% endif %}{% if u.siroce_2022_pct %} · {{ u.siroce_2022_pct | dec }}% glasova iz 2022. pripada listama kojih ove godine nema pod tim imenom{% endif %}</p>
+<table class="cal proj"><thead><tr><th>Lista</th><th>Udio</th><th>Preko praga</th><th>Mandata</th></tr></thead><tbody>
+{% for r in u.liste %}{% if r.udio >= 0.4 or r.mandati >= 0.05 %}
+<tr><td class="ln small">{{ r.lista | ptitle }}{% if r.nastavak < 0.6 %} <span class="b nova" title="Ovu listu model sklapa iz ranijih stranaka, jer nije jednostavno nastavak jedne. Takve su u provjeri na 2022. najviše promašivale, pa im je raspon širi.">nova/sklopljena</span>{% endif %}</td>
+<td class="num small">{{ r.udio | dec }}%{% if r.pomak and (r.pomak > 1.05 or r.pomak < 0.95) %} <span class="mut" title="Pomak izmjeren na lokalnim izborima 2020→2024">{{ '↑' if r.pomak > 1 else '↓' }}</span>{% endif %}</td>
+<td class="num small">{{ r.p_prag | dec }}%</td>
+<td class="num">{{ r.mandati | dec }}</td></tr>
+{% endif %}{% endfor %}
+</tbody></table>
+</div>
+{% endfor %}
+
+<p class="src">Kako ovo nastaje i koliko griješi: <a href="provjera-modela.html">provjera modela</a> · <a href="metoda.html#projekcija">metoda</a>. Kod: <a href="https://github.com/misabegovic/izbori2026">project.py</a>.</p>
+{% endblock %}
