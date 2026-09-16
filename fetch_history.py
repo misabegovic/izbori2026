@@ -116,9 +116,21 @@ def pull_bridges():
         off += PAGE
 
 
+# CIK prints RS candidates in Cyrillic and everyone else in Latin, and the same person
+# can appear in either script across years. Without this, "БРАНКО БЛАНУША" and "BRANKO
+# BLANUŠA" are two different names, which quietly breaks the rarity test below: a name
+# held by five people looks like two in each script, and tier 0 fires when it must not.
+CYRILLIC = {
+    "А": "A", "Б": "B", "В": "V", "Г": "G", "Д": "D", "Ђ": "DJ", "Е": "E", "Ж": "Z",
+    "З": "Z", "И": "I", "Ј": "J", "К": "K", "Л": "L", "Љ": "LJ", "М": "M", "Н": "N",
+    "Њ": "NJ", "О": "O", "П": "P", "Р": "R", "С": "S", "Т": "T", "Ћ": "C", "У": "U",
+    "Ф": "F", "Х": "H", "Ц": "C", "Ч": "C", "Џ": "DZ", "Ш": "S",
+}
+
+
 def fold_name(row):
-    """(SURNAME, GIVEN), diacritics stripped. CIK printed 'IZETBEGOVIĆ BAKIR' in 2006
-    and 'BAKIR IZETBEGOVIĆ' from 2016, which is one reason the two never met."""
+    """(SURNAME, GIVEN), one script, diacritics stripped. CIK printed 'IZETBEGOVIĆ BAKIR'
+    in 2006 and 'BAKIR IZETBEGOVIĆ' from 2016, which is one reason the two never met."""
     sn, gn = (row.get("surname") or "").strip(), (row.get("given") or "").strip()
     if not sn or not gn:
         parts = (row.get("name") or "").split()
@@ -126,9 +138,10 @@ def fold_name(row):
             return None
         sn, gn = parts[0], parts[1]
     def f(s):
-        s = s.replace("Đ", "DJ").replace("đ", "dj")
+        s = "".join(CYRILLIC.get(c, c) for c in s.upper())
+        s = s.replace("Đ", "DJ")
         s = unicodedata.normalize("NFD", s)
-        return "".join(c for c in s if unicodedata.category(c) != "Mn").upper()
+        return "".join(c for c in s if unicodedata.category(c) != "Mn")
     return (" ".join(f(sn).split()), " ".join(f(gn).split()))
 
 
@@ -138,10 +151,30 @@ def fold_name(row):
 COMPENSATORY = {"501", "502", "400", "300"}
 
 TIERS = {
+    -1: "ručno provjereno",
     0: "ime se u cijeloj bazi javlja samo u ta dva zapisa",
     1: "ista stranka na obje kandidature, ime rijetko",
     2: "jedno područje sadrži drugo, a zapisi dijele stranku",
 }
+
+MANUAL = D + "manual_merges.json"
+
+
+def read_manual():
+    """Hand-checked identities, from data/manual_merges.json.
+
+    Some people the automatic rules can never reach, and they are exactly the people a
+    voter looks up. Semir Efendić was mayor of Novi Grad Sarajevo three times and sat in
+    the Sarajevo canton assembly, then stood for the Presidency in 2026 for a different
+    party — no shared party, no shared area, no rare name, so every signal the register
+    publishes says nothing. The file is the place to say "we checked this one", with the
+    reason and a source per row, and `not_same` for the reverse: suggestions we looked at
+    and rejected, so a namesake's record stops being offered as a maybe.
+    """
+    if not os.path.exists(MANUAL):
+        return [], []
+    d = json.load(open(MANUAL))
+    return d.get("merges") or [], d.get("not_same") or []
 
 
 def build_merges(rows, bridges):
@@ -218,6 +251,36 @@ def build_merges(rows, bridges):
         if not group[r]:
             group[r].add(p)
 
+    manual, _ = read_manual()
+    applied, maybe, refused = [], [], defaultdict(int)
+    manual_conflicts = []
+    for entry in manual:
+        pids = [p for p in entry.get("pids", []) if p in by_pid]
+        missing = [p for p in entry.get("pids", []) if p not in by_pid]
+        if missing:
+            print(f"   upozorenje: {entry.get('name')} — nepoznat zapis {missing}")
+        if len(pids) < 2:
+            continue
+        for p in pids:
+            seed(p)
+        roots = {find(p) for p in pids}
+        union = set().union(*(group[r] for r in roots))
+        if conflicted(union):
+            # The guard outranks a hand-written line: a person on two ballots of one
+            # election is a mistake in the file, not a fact about the person.
+            manual_conflicts.append(entry.get("name"))
+            continue
+        keep = find(pids[0])
+        for r in roots:
+            if r != keep:
+                parent[r] = keep
+                group.pop(r, None)
+        group[keep] = union
+        applied.append({"tier": -1, "pids": sorted(union), "name": entry.get("name"),
+                        "why": entry.get("why"), "sources": entry.get("sources") or []})
+    if manual_conflicts:
+        print(f"   ODBIJENO iz manual_merges.json (dva listića istih izbora): {manual_conflicts}")
+
     ranked = []
     for b in bridges:
         pa = (rows_by_id.get(b["a"]["candidacyId"]) or {}).get("person", {}).get("id")
@@ -226,7 +289,6 @@ def build_merges(rows, bridges):
             continue
         ranked.append((tier(b, pa, pb), b["id"], pa, pb, b))
 
-    applied, maybe, refused = [], [], defaultdict(int)
     for t, bid, pa, pb, b in sorted(ranked, key=lambda x: (99 if x[0] is None else x[0], x[1])):
         if t is None:
             maybe.append((b, "signali nisu dovoljni"))
@@ -256,8 +318,10 @@ def build_merges(rows, bridges):
     # assign is derivable from groups (anything not in one is its own identity), so only
     # groups is written out; identity_map() in backtest.py and render.py rebuild it.
     assign = {p: root for root, members in groups.items() for p in members}
-    print(f"   {len(bridges)} mostova, {len(applied)} primijenjeno, "
-          f"{len(maybe)} ostaje kao prijedlog; odbijeno: {dict(refused)}")
+    n_manual = sum(1 for a in applied if a["tier"] == -1)
+    print(f"   {len(bridges)} mostova: {len(applied) - n_manual} primijenjeno + {n_manual} ručnih, "
+          f"{len(maybe)} ostaje kao prijedlog (većina van listića 2026); "
+          f"odbijeno: {dict(refused)}")
     return assign, groups, applied, maybe
 
 
@@ -272,6 +336,10 @@ def maybe_records(maybe, rows, wanted, assign):
     ballot_of = defaultdict(set)
     for pid in wanted:
         ballot_of[assign.get(pid, pid)].add(pid)
+    # suggestions we looked at by hand and rejected: a namesake, not this person
+    rejected = defaultdict(set)
+    for entry in read_manual()[1]:
+        rejected[entry.get("pid")] |= set(entry.get("others") or [])
     out = defaultdict(list)
     seen = set()
     for b, why in maybe:
@@ -285,6 +353,8 @@ def maybe_records(maybe, rows, wanted, assign):
             if assign.get(other_pid, other_pid) == root:
                 continue
             for pid in ballot_of.get(root, ()):
+                if other_pid in rejected.get(pid, ()):
+                    continue
                 key = (pid, other["id"])
                 if key in seen:
                     continue

@@ -185,6 +185,8 @@ appointed = json.load(open(D + "appointed.json")) if os.path.exists(D + "appoint
 pstats = json.load(open(D + "person_stats.json")) if os.path.exists(D + "person_stats.json") else {}
 merges = json.load(open(D + "merges.json")) if os.path.exists(D + "merges.json") else {}
 merge_tiers = Counter(a["tier"] for a in merges.get("applied", []))
+# hand-checked identities carry a reason and a source, and the profile has to print both
+manual_merge = {pid: a for a in merges.get("applied", []) if a["tier"] == -1 for pid in a["pids"]}
 maybe_same = json.load(open(D + "maybe_same.json")) if os.path.exists(D + "maybe_same.json") else {}
 offices = json.load(open(D + "offices.json")) if os.path.exists(D + "offices.json") else {}
 offices_meta = json.load(open(D + "offices_meta.json")) if os.path.exists(D + "offices_meta.json") else {}
@@ -511,7 +513,8 @@ def person_view(c):
          "pos": c.get("pos"), "stood": stood, "won": won, "office": rec.get("isOfficeHolder") or c.get("office"),
          "parties": parties, "n_parties": len(parties), "confidence": rec.get("confidence") or c.get("confidence"),
          "has_record": pid in records, "has_page": bool(pid),
-         "merged": st.get("merged") or 0, "office_rows": offices.get(pid),
+         "merged": st.get("merged") or 0, "manual": manual_merge.get(pid),
+         "office_rows": offices.get(pid),
          "office_terms": office_terms((offices.get(pid) or {}).get("offices")),
          "maybe": maybe_same.get(pid) or [],
          "won_rows": won_rows,

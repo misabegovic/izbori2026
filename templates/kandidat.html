@@ -191,7 +191,14 @@
 {% for t in tl %}
 <div class="kd{% if t.via_merge %} merged{% endif %}" style="padding:.35rem 0"><b>{{ t.y }}</b> — {{ t.lvl }}{% if t.area %}, {{ t.area | area }}{% endif %}{% if t.party %}, <i>{{ t.party | ptitle_raw }}</i>{% endif %}{% if t.pos %}, {{ t.pos }}. na listi{% endif %}{% if t.votes %}, {{ t.votes | num }} glasova{% endif %} — {% if t.elected %}<b>izabran/a</b>{% else %}nije izabran/a{% endif %}{% if t.via_merge %}<span class="tagspoj" title="CIK ovu kandidaturu vodi pod posebnim zapisom o osobi. Spojili smo je s ovim profilom; pravilo je objašnjeno u metodi.">spojeno</span>{% endif %}</div>
 {% endfor %}
-{% if p.merged %}<p class="small mut" style="margin-top:.5rem">Redovi označeni s <span class="tagspoj">spojeno</span> dolaze iz zapisa koji CIK vodi odvojeno. Nijedan izvor u BiH ne objavljuje identifikator osobe, pa je spajanje naš zaključak — <a href="metoda.html#spajanje">po kojim pravilima, piše u metodi</a>.</p>{% endif %}
+{% if p.merged %}
+{% if p.manual %}
+<p class="small" style="margin-top:.5rem"><b>Ručno provjereno.</b> Redovi označeni s <span class="tagspoj">spojeno</span> dolaze iz zapisa koje CIK vodi odvojeno; ovdje ih nije spojilo pravilo nego čovjek, uz izvor. {{ p.manual.why }}{% if p.manual.sources %} <span class="src">(izvor: {% for s in p.manual.sources %}<a href="{{ s }}">{{ loop.index }}</a>{% if not loop.last %}, {% endif %}{% endfor %})</span>{% endif %}</p>
+<p class="small mut">Ako je i ovo greška, <a href="https://github.com/misabegovic/izbori2026/issues">javi</a> — <a href="metoda.html#spajanje">kako spajamo, piše u metodi</a>.</p>
+{% else %}
+<p class="small mut" style="margin-top:.5rem">Redovi označeni s <span class="tagspoj">spojeno</span> dolaze iz zapisa koji CIK vodi odvojeno. Nijedan izvor u BiH ne objavljuje identifikator osobe, pa je spajanje naš zaključak — <a href="metoda.html#spajanje">po kojim pravilima, piše u metodi</a>.</p>
+{% endif %}
+{% endif %}
 </div>
 {% endif %}
 

@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T15:10:09.277140+00:00",
+ "generated": "2026-09-16T16:36:32.400837+00:00",
  "measured_on": "opći izbori 2022, trke 32-2, 32-4, 32-6, 32-7",
  "seats_from": "mandati 2018",
  "identities": "spojene po data/merges.json",
@@ -44,8 +44,8 @@
    "pct": 65
   },
   "within|strong": {
-   "n": 146,
-   "won": 107,
+   "n": 147,
+   "won": 108,
    "raw_pct": 73,
    "pct": 72
   },
@@ -56,10 +56,10 @@
    "pct": 48
   },
   "within|none": {
-   "n": 73,
-   "won": 39,
+   "n": 72,
+   "won": 38,
    "raw_pct": 53,
-   "pct": 56
+   "pct": 55
   },
   "plus1|top1": {
    "n": 39,
@@ -110,13 +110,13 @@
    "pct": 4
   },
   "beyond|top1": {
-   "n": 167,
-   "won": 13,
+   "n": 166,
+   "won": 14,
    "raw_pct": 8,
-   "pct": 7
+   "pct": 8
   },
   "beyond|strong": {
-   "n": 300,
+   "n": 298,
    "won": 11,
    "raw_pct": 4,
    "pct": 4
@@ -128,55 +128,55 @@
    "pct": 1
   },
   "beyond|none": {
-   "n": 809,
-   "won": 10,
+   "n": 812,
+   "won": 9,
    "raw_pct": 1,
    "pct": 1
   },
   "no_seats_pos1|top1": {
    "n": 195,
-   "won": 54,
+   "won": 55,
    "raw_pct": 28,
-   "pct": 26
+   "pct": 27
   },
   "no_seats_pos1|strong": {
-   "n": 65,
-   "won": 17,
-   "raw_pct": 26,
-   "pct": 23
+   "n": 67,
+   "won": 18,
+   "raw_pct": 27,
+   "pct": 24
   },
   "no_seats_pos1|ran": {
-   "n": 87,
+   "n": 85,
    "won": 5,
    "raw_pct": 6,
    "pct": 8
   },
   "no_seats_pos1|none": {
    "n": 290,
-   "won": 20,
-   "raw_pct": 7,
-   "pct": 8
+   "won": 18,
+   "raw_pct": 6,
+   "pct": 7
   },
   "no_seats_rest|top1": {
-   "n": 387,
+   "n": 384,
    "won": 34,
    "raw_pct": 9,
    "pct": 8
   },
   "no_seats_rest|strong": {
-   "n": 486,
+   "n": 485,
    "won": 26,
    "raw_pct": 5,
    "pct": 5
   },
   "no_seats_rest|ran": {
-   "n": 1148,
+   "n": 1145,
    "won": 14,
    "raw_pct": 1,
    "pct": 1
   },
   "no_seats_rest|none": {
-   "n": 1946,
+   "n": 1953,
    "won": 23,
    "raw_pct": 1,
    "pct": 1
@@ -184,22 +184,22 @@
  },
  "stability_by_race": {
   "32-2": {
-   "top1": 23.5,
-   "strong": 6.4,
+   "top1": 23.8,
+   "strong": 7.2,
    "ran": 1.1,
-   "none": 2.5
+   "none": 2.2
   },
   "32-4": {
-   "top1": 21.1,
+   "top1": 22.2,
    "strong": 14.7,
    "ran": 2.6,
-   "none": 4.1
+   "none": 3.7
   },
   "32-6": {
-   "top1": 13.7,
-   "strong": 12.0,
+   "top1": 13.9,
+   "strong": 12.6,
    "ran": 1.1,
-   "none": 2.7
+   "none": 2.5
   },
   "32-7": {
    "top1": 24.7,

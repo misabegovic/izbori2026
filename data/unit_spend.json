@@ -4641,6 +4641,16 @@
    }
   }
  },
+ "ba.rs.donji-zabar": {
+  "years": {
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 42426.49,
+    "full_year": true
+   }
+  }
+ },
  "ba.rs.foca": {
   "years": {
    "2025": {
@@ -5463,6 +5473,16 @@
    }
   }
  },
+ "ba.rs.krupa-na-uni": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 12558.66,
+    "full_year": true
+   }
+  }
+ },
  "ba.rs.laktasi": {
   "years": {
    "2025": {
@@ -5929,6 +5949,64 @@
     "measure": "procurement.awarded.total",
     "basis": "awarded",
     "value": 34024.79,
+    "full_year": true
+   }
+  }
+ },
+ "ba.rs.petrovo": {
+  "years": {
+   "2025": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 160763.49,
+    "full_year": true
+   },
+   "2023": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 88164.64,
+    "full_year": true
+   },
+   "2022": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 119963.67,
+    "full_year": true
+   },
+   "2021": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 40562.61,
+    "full_year": true
+   },
+   "2020": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 91132.65,
+    "full_year": true
+   },
+   "2019": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 32349,
+    "full_year": true
+   },
+   "2018": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 34602.75,
+    "full_year": true
+   },
+   "2017": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 46224.98,
+    "full_year": true
+   },
+   "2016": {
+    "measure": "procurement.awarded.total",
+    "basis": "awarded",
+    "value": 30373.78,
     "full_year": true
    }
   }
