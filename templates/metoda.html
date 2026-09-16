@@ -48,7 +48,7 @@
 <h3>Zašto vjerujemo da ovo nije slučajnost</h3>
 <p>Isti razmak postoji u sve četiri trke 2022 posebno, ne samo u zbiru. Procenat izabranih među onima koji su ranije bili prvi po glasovima, naspram onih koji nikad nisu bili na listiću:</p>
 <ul style="margin:.3rem 0 0 1.1rem;padding:0">
-{% for race, d in cal.stability_by_race.items() %}<li>{{ RACE22_NAME.get(race, race) }}: {{ d.top1 }}% naspram {{ d.none }}%</li>{% endfor %}
+{% for race, d in cal.stability_by_race.items() %}<li>{{ RACE22_NAME.get(race, race) }}: {{ d.top1 | dec }}% naspram {{ d.none | dec }}%</li>{% endfor %}
 </ul>
 <p>Gdje je grupa mala, broj povlačimo prema prosjeku te vrste mjesta na listi, da ćelija od dvadesetak ljudi ne proizvede samouvjerenu brojku. Snaga tog povlačenja je {{ cal.shrink_k }} zamišljenih slučajeva.</p>
 <h3>Druga brojka: ide li glas nekud</h3>

@@ -46,7 +46,7 @@
 <h2>Mandati po strankama, 2022: rekli i bilo</h2>
 {% for race, v in per_race.items() %}
 <h3 style="margin-bottom:.2rem">{{ v.title }}</h3>
-<p class="mut small" style="margin:0 0 .4rem">Prosječna greška {{ v.mae_mandata }} mandata · stvarni rezultat je u rasponu od 5 do 95 posto simulacija kod {{ v.u_rasponu }}% lista</p>
+<p class="mut small" style="margin:0 0 .4rem">Prosječna greška {{ v.mae_mandata | dec2 }} mandata · stvarni rezultat je u rasponu od 5 do 95 posto simulacija kod {{ v.u_rasponu }}% lista</p>
 <div class="calwrap"><table class="cal"><thead><tr><th>Lista</th><th>Model</th><th>Raspon</th><th>Stvarno</th></tr></thead><tbody>
 {% for r in v.rows %}{% if r.stvarno or r.projekcija >= 0.5 %}
 <tr><td class="ln">{{ r.lista | ptitle }}</td><td class="num">{{ r.projekcija | dec }}</td><td class="num small mut">{{ r.p05 }}–{{ r.p95 }}</td><td class="num"><b>{{ r.stvarno }}</b>{% if not r.u_rasponu %} <span class="b out" title="Izvan raspona koji je model dao">van</span>{% endif %}</td></tr>
@@ -61,11 +61,11 @@
 <p>Greške nisu zvonolika krivulja. Velika lista koja je očigledan nastavak obično promaši malo — ali otprilike jedna od {{ (100 / (bt.rasipanje.q * 100)) | round | int }} promaši za mnogo. Da smo na sve to natakli jednu prosječnu širinu, raspon za SDA bi ispao besmislen, a pad neke liste u ništa i dalje sakriven. Zato svaka lista ima „uobičajeno” rasipanje i „rep”, i simulacija poseže za repom onoliko često koliko je 2022. posegnula stvarnost.</p>
 <div class="calwrap"><table class="cal"><thead><tr><th>Veličina liste</th><th>Vrsta</th><th>Mjerenja</th><th>Uobičajeno</th><th>Rep</th></tr></thead><tbody>
 {% for b in bt.rasipanje.buckets %}
-<tr><td>{{ b.od | dec }}–{{ b.do | dec }}%</td><td class="small">{{ 'nastavak ranije liste' if b.vrsta == 'nastavak' else 'nova ili sklopljena' }}</td><td class="num">{{ b.n }}</td><td class="num">{{ b.jezgro }}</td><td class="num mut">{{ b.rep_sirina }}</td></tr>
+<tr><td>{{ b.od | dec }}–{{ b.do | dec }}%</td><td class="small">{{ 'nastavak ranije liste' if b.vrsta == 'nastavak' else 'nova ili sklopljena' }}</td><td class="num">{{ b.n }}</td><td class="num">{{ b.jezgro | dec2 }}</td><td class="num mut">{{ b.rep_sirina | dec2 }}</td></tr>
 {% endfor %}
 </tbody></table></div>
 <p class="small mut">Brojevi su u logaritmu udjela: 0,20 znači da lista obično završi između otprilike 82% i 122% onoga što joj model daje.</p>
-<p class="small"><b>Šta smo probali i odbacili:</b> {{ bt.rasipanje.ispravka_nagiba.zasto }} Bez nje je greška {{ bt.rasipanje.ispravka_nagiba.greska_bez_nje }} p.p., s njom {{ bt.rasipanje.ispravka_nagiba.greska_s_njom }} p.p.{% if not bt.rasipanje.ispravka_nagiba.primijenjena %} Nije uključena.{% else %} Uključena je.{% endif %}</p>
+<p class="small"><b>Šta smo probali i odbacili:</b> {{ bt.rasipanje.ispravka_nagiba.zasto }} Bez nje je greška {{ bt.rasipanje.ispravka_nagiba.greska_bez_nje | dec2 }} p.p., s njom {{ bt.rasipanje.ispravka_nagiba.greska_s_njom | dec2 }} p.p.{% if not bt.rasipanje.ispravka_nagiba.primijenjena %} Nije uključena.{% else %} Uključena je.{% endif %}</p>
 </div>
 
 <div class="card" id="sirina">
