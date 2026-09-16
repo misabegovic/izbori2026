@@ -54,10 +54,10 @@
 {% if tl %}
 <h2>Sve kandidature</h2>
 <div class="card">
-<div class="years">{% for t in tl %}<span class="yr{% if t.elected %} won{% elif t.elected is none %} now{% endif %}" title="{{ t.lvl }}">{{ t.y }}</span>{% endfor %}</div>
-<p class="small mut" style="margin:0 0 .5rem"><span class="yr won" style="font-size:.7rem">plavo</span> = izabran/a, <span class="yr" style="font-size:.7rem">prazno</span> = nije, <span class="yr now" style="font-size:.7rem">crtkano</span> = sada.</p>
+<div class="years">{% for t in tl %}<span class="yr{% if t.elected %} won{% endif %}" title="{{ t.lvl }}">{{ t.y }}</span>{% endfor %}<span class="yr now">2026</span></div>
+<p class="small mut" style="margin:0 0 .5rem"><span class="yr won" style="font-size:.7rem">plavo</span> = izabran/a te godine, <span class="yr" style="font-size:.7rem">prazno</span> = kandidovao/la se, nije izabran/a, <span class="yr now" style="font-size:.7rem">crtkano</span> = sada.</p>
 {% for t in tl %}
-<div class="kd" style="padding:.35rem 0"><b>{{ t.y }}</b> — {{ t.lvl }}{% if t.area %}, {{ t.area | title }}{% endif %}{% if t.party %}, <i>{{ t.party | ptitle }}</i>{% endif %}{% if t.pos %}, {{ t.pos }}. na listi{% endif %}{% if t.votes %}, {{ t.votes | num }} glasova{% endif %} — {% if t.elected %}<b>izabran</b>{% elif t.elected is none %}sada{% else %}nije izabran{% endif %}</div>
+<div class="kd" style="padding:.35rem 0"><b>{{ t.y }}</b> — {{ t.lvl }}{% if t.area %}, {{ t.area | title }}{% endif %}{% if t.party %}, <i>{{ t.party | ptitle }}</i>{% endif %}{% if t.pos %}, {{ t.pos }}. na listi{% endif %}{% if t.votes %}, {{ t.votes | num }} glasova{% endif %} — {% if t.elected %}<b>izabran/a</b>{% else %}nije izabran/a{% endif %}</div>
 {% endfor %}
 </div>
 {% endif %}

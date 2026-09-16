@@ -427,7 +427,7 @@ for pid, entries in cand_index.items():
     v = person_view(c)
     if not v["has_page"]:
         continue
-    tl = sorted(dedupe_tl(timelines.get(pid, [])), key=lambda t: (t.get("y") or 0, t.get("lvl") or ""))
+    tl = sorted([t for t in dedupe_tl(timelines.get(pid, [])) if t.get("y") != 2026], key=lambda t: (t.get("y") or 0, t.get("lvl") or ""))
     prof = profiles.get(pid, {})
     vm = vote_map(pid)
     rec = record_summary(pid)

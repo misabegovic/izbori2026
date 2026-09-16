@@ -12,6 +12,10 @@
  },
  "how_to_vote": [
   {
+   "step": "Glas je tajan. Niko ne može provjeriti šta si zaokružio.",
+   "detail": "Ni šef, ni stranka, ni komšija. Otisak prsta služi samo da se zna da si došao; ne ide na listić i listić nema tvoje ime. Ako te neko traži da slikaš listić, ne moraš i to je zabranjeno. Ako te šef pritiska: reci da ćeš glasati kako on hoće, a u kabini glasaj kako ti hoćeš. Niko ne može provjeriti."
+  },
+  {
    "step": "Ponesi ličnu kartu, pasoš ili vozačku.",
    "detail": "Umjesto potpisa staviš prst na mali uređaj, kao na novoj ličnoj. Traje sekundu, komisija pokaže gdje."
   },
@@ -34,10 +38,6 @@
   {
    "step": "Kružić popuni cijeli. Listić okreni licem dolje i ubaci u skener.",
    "detail": "Skener je kutija s prorezom, listić ubaciš kao pismo. Skener ga čuva. Poslije se broji i ručno kao kontrola."
-  },
-  {
-   "step": "Glas je tajan. Niko ne može provjeriti šta si zaokružio.",
-   "detail": "Ni šef, ni stranka, ni komšija. Ako te neko traži da slikaš listić, ne moraš; to je zabranjeno i niko te ne može natjerati. U kabini si sam."
   }
  ],
  "how_votes_become_seats": [
