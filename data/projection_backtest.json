@@ -154,98 +154,98 @@
    {
     "udjeli": 1.0,
     "licni": 1.0,
-    "ece": 1.82,
+    "ece": 1.889,
     "brier": 0.0383,
     "pokrivenost": 93.6,
-    "ukupno": 2.06
+    "ukupno": 2.129
    },
    {
     "udjeli": 1.0,
     "licni": 1.5,
-    "ece": 1.114,
+    "ece": 1.031,
     "brier": 0.0377,
     "pokrivenost": 93.6,
-    "ukupno": 1.354
+    "ukupno": 1.271
    },
    {
     "udjeli": 1.0,
     "licni": 2.0,
-    "ece": 1.216,
-    "brier": 0.0381,
+    "ece": 1.194,
+    "brier": 0.0382,
     "pokrivenost": 93.6,
-    "ukupno": 1.456
+    "ukupno": 1.434
    },
    {
     "udjeli": 1.0,
     "licni": 2.5,
-    "ece": 1.593,
+    "ece": 1.713,
     "brier": 0.039,
     "pokrivenost": 93.6,
-    "ukupno": 1.833
+    "ukupno": 1.953
    },
    {
     "udjeli": 1.3,
     "licni": 1.0,
-    "ece": 1.106,
+    "ece": 1.522,
+    "brier": 0.0379,
+    "pokrivenost": 97.9,
+    "ukupno": 2.049
+   },
+   {
+    "udjeli": 1.3,
+    "licni": 1.5,
+    "ece": 0.953,
     "brier": 0.0375,
     "pokrivenost": 97.9,
-    "ukupno": 1.633
-   },
-   {
-    "udjeli": 1.3,
-    "licni": 1.5,
-    "ece": 0.702,
-    "brier": 0.0374,
-    "pokrivenost": 97.9,
-    "ukupno": 1.229
+    "ukupno": 1.479
    },
    {
     "udjeli": 1.3,
     "licni": 2.0,
-    "ece": 1.127,
+    "ece": 1.021,
     "brier": 0.0381,
     "pokrivenost": 97.9,
-    "ukupno": 1.653
+    "ukupno": 1.547
    },
    {
     "udjeli": 1.3,
     "licni": 2.5,
-    "ece": 1.555,
+    "ece": 1.55,
     "brier": 0.0389,
     "pokrivenost": 97.9,
-    "ukupno": 2.082
+    "ukupno": 2.076
    },
    {
     "udjeli": 1.6,
     "licni": 1.0,
-    "ece": 0.719,
+    "ece": 1.169,
     "brier": 0.0376,
-    "pokrivenost": 98.0,
-    "ukupno": 1.253
+    "pokrivenost": 97.9,
+    "ukupno": 1.696
    },
    {
     "udjeli": 1.6,
     "licni": 1.5,
-    "ece": 0.617,
-    "brier": 0.0378,
-    "pokrivenost": 98.0,
-    "ukupno": 1.15
+    "ece": 0.539,
+    "brier": 0.0374,
+    "pokrivenost": 97.9,
+    "ukupno": 1.066
    },
    {
     "udjeli": 1.6,
     "licni": 2.0,
-    "ece": 1.274,
-    "brier": 0.0386,
-    "pokrivenost": 98.0,
-    "ukupno": 1.807
+    "ece": 1.012,
+    "brier": 0.038,
+    "pokrivenost": 97.9,
+    "ukupno": 1.539
    },
    {
     "udjeli": 1.6,
     "licni": 2.5,
-    "ece": 1.668,
-    "brier": 0.0395,
-    "pokrivenost": 98.0,
-    "ukupno": 2.201
+    "ece": 1.539,
+    "brier": 0.0389,
+    "pokrivenost": 97.9,
+    "ukupno": 2.066
    }
   ]
  },
@@ -633,168 +633,168 @@
   {
    "od": 0,
    "do": 2,
-   "n": 4337,
-   "rekli": 0.7,
+   "n": 4684,
+   "rekli": 0.6,
    "stvarno": 0.7,
-   "izabranih": 32
+   "izabranih": 33
   },
   {
    "od": 2,
    "do": 5,
-   "n": 1316,
-   "rekli": 3.1,
-   "stvarno": 2.3,
-   "izabranih": 30
+   "n": 1051,
+   "rekli": 3.2,
+   "stvarno": 3.0,
+   "izabranih": 32
   },
   {
    "od": 5,
    "do": 10,
-   "n": 601,
-   "rekli": 7.0,
+   "n": 527,
+   "rekli": 7.1,
    "stvarno": 7.0,
-   "izabranih": 42
+   "izabranih": 37
   },
   {
    "od": 10,
    "do": 20,
-   "n": 333,
-   "rekli": 14.0,
-   "stvarno": 15.9,
-   "izabranih": 53
+   "n": 312,
+   "rekli": 14.2,
+   "stvarno": 16.0,
+   "izabranih": 50
   },
   {
    "od": 20,
    "do": 35,
-   "n": 192,
-   "rekli": 27.2,
-   "stvarno": 29.7,
-   "izabranih": 57
+   "n": 178,
+   "rekli": 27.0,
+   "stvarno": 27.5,
+   "izabranih": 49
   },
   {
    "od": 35,
    "do": 50,
-   "n": 117,
-   "rekli": 41.7,
-   "stvarno": 51.3,
-   "izabranih": 60
+   "n": 126,
+   "rekli": 41.4,
+   "stvarno": 48.4,
+   "izabranih": 61
   },
   {
    "od": 50,
    "do": 65,
    "n": 87,
-   "rekli": 56.7,
+   "rekli": 57.0,
    "stvarno": 56.3,
    "izabranih": 49
   },
   {
    "od": 65,
    "do": 80,
-   "n": 90,
-   "rekli": 72.3,
-   "stvarno": 74.4,
-   "izabranih": 67
+   "n": 87,
+   "rekli": 72.8,
+   "stvarno": 72.4,
+   "izabranih": 63
   },
   {
    "od": 80,
    "do": 92,
-   "n": 71,
-   "rekli": 86.3,
-   "stvarno": 85.9,
-   "izabranih": 61
+   "n": 63,
+   "rekli": 86.2,
+   "stvarno": 81.0,
+   "izabranih": 51
   },
   {
    "od": 92,
    "do": 100,
-   "n": 73,
-   "rekli": 96.3,
-   "stvarno": 83.6,
-   "izabranih": 61
+   "n": 102,
+   "rekli": 97.3,
+   "stvarno": 85.3,
+   "izabranih": 87
   }
  ],
  "kalibracija_direktni": [
   {
    "od": 0,
    "do": 2,
-   "n": 4321,
-   "rekli": 0.7,
-   "stvarno": 0.4,
+   "n": 4667,
+   "rekli": 0.6,
+   "stvarno": 0.3,
    "izabranih": 16
   },
   {
    "od": 2,
    "do": 5,
-   "n": 1309,
-   "rekli": 3.1,
-   "stvarno": 1.8,
-   "izabranih": 23
+   "n": 1044,
+   "rekli": 3.2,
+   "stvarno": 2.4,
+   "izabranih": 25
   },
   {
    "od": 5,
    "do": 10,
-   "n": 590,
-   "rekli": 7.0,
-   "stvarno": 5.3,
-   "izabranih": 31
+   "n": 517,
+   "rekli": 7.1,
+   "stvarno": 5.2,
+   "izabranih": 27
   },
   {
    "od": 10,
    "do": 20,
-   "n": 319,
-   "rekli": 14.0,
-   "stvarno": 12.2,
-   "izabranih": 39
+   "n": 300,
+   "rekli": 14.2,
+   "stvarno": 12.7,
+   "izabranih": 38
   },
   {
    "od": 20,
    "do": 35,
-   "n": 189,
-   "rekli": 27.2,
-   "stvarno": 28.6,
-   "izabranih": 54
+   "n": 173,
+   "rekli": 27.0,
+   "stvarno": 25.4,
+   "izabranih": 44
   },
   {
    "od": 35,
    "do": 50,
-   "n": 115,
-   "rekli": 41.8,
-   "stvarno": 50.4,
-   "izabranih": 58
+   "n": 124,
+   "rekli": 41.5,
+   "stvarno": 47.6,
+   "izabranih": 59
   },
   {
    "od": 50,
    "do": 65,
    "n": 85,
-   "rekli": 56.9,
+   "rekli": 57.0,
    "stvarno": 55.3,
    "izabranih": 47
   },
   {
    "od": 65,
    "do": 80,
-   "n": 90,
-   "rekli": 72.3,
-   "stvarno": 74.4,
-   "izabranih": 67
+   "n": 87,
+   "rekli": 72.8,
+   "stvarno": 72.4,
+   "izabranih": 63
   },
   {
    "od": 80,
    "do": 92,
-   "n": 69,
-   "rekli": 86.4,
-   "stvarno": 85.5,
-   "izabranih": 59
+   "n": 61,
+   "rekli": 86.3,
+   "stvarno": 80.3,
+   "izabranih": 49
   },
   {
    "od": 92,
    "do": 100,
-   "n": 73,
-   "rekli": 96.3,
-   "stvarno": 83.6,
-   "izabranih": 61
+   "n": 102,
+   "rekli": 97.3,
+   "stvarno": 85.3,
+   "izabranih": 87
   }
  ],
- "brier": 0.0378,
- "brier_direktni": 0.0318,
+ "brier": 0.0374,
+ "brier_direktni": 0.0315,
  "n_kandidata": 7217,
  "n_kompenzacijskih": 57,
  "po_trkama": {
@@ -803,31 +803,31 @@
    "rows": [
     {
      "lista": "SDA-STRANKA DEMOKRATSKE AKCIJE",
-     "projekcija": 8.0,
+     "projekcija": 7.9,
      "stvarno": 9,
      "p05": 4,
-     "p95": 13,
+     "p95": 12,
      "u_rasponu": true
     },
     {
      "lista": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
-     "projekcija": 6.6,
+     "projekcija": 6.7,
      "stvarno": 6,
-     "p05": 3,
-     "p95": 10,
+     "p05": 4,
+     "p95": 9,
      "u_rasponu": true
     },
     {
      "lista": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
-     "projekcija": 3.9,
+     "projekcija": 4.0,
      "stvarno": 5,
-     "p05": 1,
+     "p05": 2,
      "p95": 7,
      "u_rasponu": true
     },
     {
      "lista": "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST",
-     "projekcija": 4.8,
+     "projekcija": 4.9,
      "stvarno": 4,
      "p05": 2,
      "p95": 8,
@@ -837,13 +837,13 @@
      "lista": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
      "projekcija": 3.0,
      "stvarno": 3,
-     "p05": 0,
+     "p05": 1,
      "p95": 6,
      "u_rasponu": true
     },
     {
      "lista": "NAROD I PRAVDA",
-     "projekcija": 1.5,
+     "projekcija": 1.6,
      "stvarno": 3,
      "p05": 0,
      "p95": 4,
@@ -861,7 +861,7 @@
      "lista": "PDP- PARTIJA DEMOKRATSKOG PROGRESA",
      "projekcija": 1.9,
      "stvarno": 2,
-     "p05": 0,
+     "p05": 1,
      "p95": 4,
      "u_rasponu": true
     },
@@ -870,7 +870,7 @@
      "projekcija": 1.2,
      "stvarno": 2,
      "p05": 0,
-     "p95": 4,
+     "p95": 3,
      "u_rasponu": true
     },
     {
@@ -899,7 +899,7 @@
     },
     {
      "lista": "SBB - FAHRUDIN RADONČIĆ",
-     "projekcija": 1.8,
+     "projekcija": 1.7,
      "stvarno": 0,
      "p05": 0,
      "p95": 5,
@@ -910,7 +910,7 @@
      "projekcija": 1.5,
      "stvarno": 0,
      "p05": 0,
-     "p95": 4,
+     "p95": 3,
      "u_rasponu": true
     },
     {
@@ -947,7 +947,7 @@
     },
     {
      "lista": "STRANKA ZA BOSNU I HERCEGOVINU",
-     "projekcija": 0.3,
+     "projekcija": 0.2,
      "stvarno": 0,
      "p05": 0,
      "p95": 2,
@@ -955,26 +955,10 @@
     },
     {
      "lista": "LABURISTIČKA STRANKA BOSNE I HERCEGOVINE LABURISTI BIH",
-     "projekcija": 0.2,
+     "projekcija": 0.1,
      "stvarno": 0,
      "p05": 0,
      "p95": 1,
-     "u_rasponu": true
-    },
-    {
-     "lista": "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ",
-     "projekcija": 0.1,
-     "stvarno": 0,
-     "p05": 0,
-     "p95": 0,
-     "u_rasponu": true
-    },
-    {
-     "lista": "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PLATFORMA ZA PROGRES,NB",
-     "projekcija": 0.1,
-     "stvarno": 0,
-     "p05": 0,
-     "p95": 0,
      "u_rasponu": true
     },
     {
@@ -986,7 +970,7 @@
      "u_rasponu": true
     },
     {
-     "lista": "SAVEZ ZA NOVU POLITIKU",
+     "lista": "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PLATFORMA ZA PROGRES,NB",
      "projekcija": 0.1,
      "stvarno": 0,
      "p05": 0,
@@ -995,6 +979,22 @@
     },
     {
      "lista": "RE-BALANS",
+     "projekcija": 0.0,
+     "stvarno": 0,
+     "p05": 0,
+     "p95": 0,
+     "u_rasponu": true
+    },
+    {
+     "lista": "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ",
+     "projekcija": 0.0,
+     "stvarno": 0,
+     "p05": 0,
+     "p95": 0,
+     "u_rasponu": true
+    },
+    {
+     "lista": "SAVEZ ZA NOVU POLITIKU",
      "projekcija": 0.0,
      "stvarno": 0,
      "p05": 0,
@@ -1016,14 +1016,6 @@
      "p05": 0,
      "p95": 0,
      "u_rasponu": true
-    },
-    {
-     "lista": "KRUG",
-     "projekcija": 0.0,
-     "stvarno": 0,
-     "p05": 0,
-     "p95": 0,
-     "u_rasponu": true
     }
    ],
    "mae_mandata": 0.55,
@@ -1034,34 +1026,34 @@
    "rows": [
     {
      "lista": "SDA-STRANKA DEMOKRATSKE AKCIJE",
-     "projekcija": 27.9,
+     "projekcija": 28.0,
      "stvarno": 26,
-     "p05": 16,
-     "p95": 40,
+     "p05": 19,
+     "p95": 38,
      "u_rasponu": true
     },
     {
      "lista": "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL",
-     "projekcija": 16.0,
+     "projekcija": 15.9,
      "stvarno": 15,
-     "p05": 9,
-     "p95": 24,
+     "p05": 10,
+     "p95": 23,
      "u_rasponu": true
     },
     {
      "lista": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
-     "projekcija": 12.0,
+     "projekcija": 12.1,
      "stvarno": 15,
-     "p05": 5,
-     "p95": 22,
+     "p05": 6,
+     "p95": 21,
      "u_rasponu": true
     },
     {
      "lista": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
-     "projekcija": 9.9,
+     "projekcija": 9.8,
      "stvarno": 12,
      "p05": 4,
-     "p95": 19,
+     "p95": 18,
      "u_rasponu": true
     },
     {
@@ -1074,15 +1066,15 @@
     },
     {
      "lista": "NAŠA STRANKA",
-     "projekcija": 5.8,
+     "projekcija": 5.9,
      "stvarno": 6,
-     "p05": 0,
+     "p05": 1,
      "p95": 13,
      "u_rasponu": true
     },
     {
      "lista": "NES-ZA EVROPSKU BIH",
-     "projekcija": 3.3,
+     "projekcija": 3.4,
      "stvarno": 5,
      "p05": 0,
      "p95": 9,
@@ -1093,12 +1085,12 @@
      "projekcija": 1.1,
      "stvarno": 4,
      "p05": 0,
-     "p95": 6,
+     "p95": 5,
      "u_rasponu": true
     },
     {
      "lista": "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990",
-     "projekcija": 0.8,
+     "projekcija": 0.7,
      "stvarno": 3,
      "p05": 0,
      "p95": 3,
@@ -1106,7 +1098,7 @@
     },
     {
      "lista": "POKRET DEMOKRATSKE AKCIJE PDA",
-     "projekcija": 3.6,
+     "projekcija": 3.7,
      "stvarno": 1,
      "p05": 0,
      "p95": 8,
@@ -1130,7 +1122,7 @@
     },
     {
      "lista": "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD",
-     "projekcija": 0.2,
+     "projekcija": 0.1,
      "stvarno": 1,
      "p05": 0,
      "p95": 1,
@@ -1149,12 +1141,12 @@
      "projekcija": 5.8,
      "stvarno": 0,
      "p05": 0,
-     "p95": 14,
+     "p95": 13,
      "u_rasponu": true
     },
     {
      "lista": "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET",
-     "projekcija": 2.8,
+     "projekcija": 2.9,
      "stvarno": 0,
      "p05": 0,
      "p95": 7,
@@ -1162,10 +1154,10 @@
     },
     {
      "lista": "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU",
-     "projekcija": 2.1,
+     "projekcija": 2.0,
      "stvarno": 0,
      "p05": 0,
-     "p95": 7,
+     "p95": 6,
      "u_rasponu": true
     },
     {
@@ -1177,24 +1169,24 @@
      "u_rasponu": true
     },
     {
-     "lista": "BPS-SEFER HALILOVIĆ",
-     "projekcija": 0.6,
+     "lista": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
+     "projekcija": 0.4,
      "stvarno": 0,
      "p05": 0,
-     "p95": 4,
+     "p95": 1,
      "u_rasponu": true
     },
     {
-     "lista": "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ",
-     "projekcija": 0.5,
+     "lista": "BPS-SEFER HALILOVIĆ",
+     "projekcija": 0.4,
      "stvarno": 0,
      "p05": 0,
      "p95": 3,
      "u_rasponu": true
     },
     {
-     "lista": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
-     "projekcija": 0.4,
+     "lista": "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ",
+     "projekcija": 0.3,
      "stvarno": 0,
      "p05": 0,
      "p95": 1,
@@ -1209,7 +1201,7 @@
      "u_rasponu": true
     }
    ],
-   "mae_mandata": 1.66,
+   "mae_mandata": 1.65,
    "u_rasponu": 95
   },
   "oi2026-6": {
@@ -1217,23 +1209,23 @@
    "rows": [
     {
      "lista": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
-     "projekcija": 30.4,
+     "projekcija": 30.3,
      "stvarno": 29,
-     "p05": 17,
-     "p95": 42,
+     "p05": 21,
+     "p95": 40,
      "u_rasponu": true
     },
     {
      "lista": "SDS-SRPSKA DEMOKRATSKA STRANKA",
      "projekcija": 12.0,
      "stvarno": 13,
-     "p05": 5,
-     "p95": 21,
+     "p05": 6,
+     "p95": 20,
      "u_rasponu": true
     },
     {
      "lista": "PDP- PARTIJA DEMOKRATSKOG PROGRESA",
-     "projekcija": 8.3,
+     "projekcija": 8.4,
      "stvarno": 8,
      "p05": 3,
      "p95": 16,
@@ -1241,9 +1233,9 @@
     },
     {
      "lista": "SOCIJALISTIČKA PARTIJA PETAR ĐOKIĆ-NDP-SNP",
-     "projekcija": 7.0,
+     "projekcija": 7.4,
      "stvarno": 5,
-     "p05": 0,
+     "p05": 3,
      "p95": 15,
      "u_rasponu": true
     },
@@ -1252,7 +1244,7 @@
      "projekcija": 5.6,
      "stvarno": 5,
      "p05": 0,
-     "p95": 13,
+     "p95": 12,
      "u_rasponu": true
     },
     {
@@ -1260,7 +1252,7 @@
      "projekcija": 4.4,
      "stvarno": 5,
      "p05": 0,
-     "p95": 11,
+     "p95": 10,
      "u_rasponu": true
     },
     {
@@ -1268,20 +1260,20 @@
      "projekcija": 3.5,
      "stvarno": 4,
      "p05": 0,
-     "p95": 10,
+     "p95": 9,
      "u_rasponu": true
     },
     {
      "lista": "DNS-DEMOKRATSKI NARODNI SAVEZ",
-     "projekcija": 3.3,
+     "projekcija": 3.2,
      "stvarno": 4,
      "p05": 0,
-     "p95": 10,
+     "p95": 9,
      "u_rasponu": true
     },
     {
      "lista": "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA",
-     "projekcija": 1.3,
+     "projekcija": 1.4,
      "stvarno": 4,
      "p05": 0,
      "p95": 4,
@@ -1289,15 +1281,15 @@
     },
     {
      "lista": "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"",
-     "projekcija": 4.3,
+     "projekcija": 4.4,
      "stvarno": 3,
      "p05": 0,
-     "p95": 12,
+     "p95": 11,
      "u_rasponu": true
     },
     {
      "lista": "NARODNA PARTIJA SRPSKE-DARKO BANJAC-PUS-PRVA SDS",
-     "projekcija": 1.9,
+     "projekcija": 1.8,
      "stvarno": 3,
      "p05": 0,
      "p95": 7,
@@ -1312,27 +1304,11 @@
      "u_rasponu": true
     },
     {
-     "lista": "SAVEZ ZA NOVU POLITIKU",
-     "projekcija": 0.2,
-     "stvarno": 0,
-     "p05": 0,
-     "p95": 1,
-     "u_rasponu": true
-    },
-    {
      "lista": "NAŠA PRIČA REPUBLIKA SRPSKA",
-     "projekcija": 0.2,
-     "stvarno": 0,
-     "p05": 0,
-     "p95": 1,
-     "u_rasponu": true
-    },
-    {
-     "lista": "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS ,HDU,HSP HB,HRAST,HNP",
      "projekcija": 0.1,
      "stvarno": 0,
      "p05": 0,
-     "p95": 0,
+     "p95": 1,
      "u_rasponu": true
     },
     {
@@ -1344,7 +1320,7 @@
      "u_rasponu": true
     },
     {
-     "lista": "EKOLOŠKA PARTIJA REPUBLIKE SRPSKE",
+     "lista": "SAVEZ ZA NOVU POLITIKU",
      "projekcija": 0.0,
      "stvarno": 0,
      "p05": 0,
@@ -1352,15 +1328,7 @@
      "u_rasponu": true
     },
     {
-     "lista": "SAVEZ ZA DEMOKRATSKU SRPSKU",
-     "projekcija": 0.0,
-     "stvarno": 0,
-     "p05": 0,
-     "p95": 0,
-     "u_rasponu": true
-    },
-    {
-     "lista": "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ",
+     "lista": "HDZ BIH,HSS,HSP BIH,HKDU,HSPAS ,HDU,HSP HB,HRAST,HNP",
      "projekcija": 0.0,
      "stvarno": 0,
      "p05": 0,
@@ -1376,7 +1344,31 @@
      "u_rasponu": true
     },
     {
+     "lista": "SAVEZ ZA DEMOKRATSKU SRPSKU",
+     "projekcija": 0.0,
+     "stvarno": 0,
+     "p05": 0,
+     "p95": 0,
+     "u_rasponu": true
+    },
+    {
+     "lista": "EKOLOŠKA PARTIJA REPUBLIKE SRPSKE",
+     "projekcija": 0.0,
+     "stvarno": 0,
+     "p05": 0,
+     "p95": 0,
+     "u_rasponu": true
+    },
+    {
      "lista": "ZAVIČAJNI  SOCIJALDEMOKRATI - MILE MARČETA",
+     "projekcija": 0.0,
+     "stvarno": 0,
+     "p05": 0,
+     "p95": 0,
+     "u_rasponu": true
+    },
+    {
+     "lista": "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ",
      "projekcija": 0.0,
      "stvarno": 0,
      "p05": 0,
@@ -1384,7 +1376,7 @@
      "u_rasponu": true
     }
    ],
-   "mae_mandata": 0.62,
+   "mae_mandata": 0.63,
    "u_rasponu": 100
   },
   "oi2026-7": {
@@ -1392,41 +1384,41 @@
    "rows": [
     {
      "lista": "SDA-STRANKA DEMOKRATSKE AKCIJE",
-     "projekcija": 66.5,
+     "projekcija": 66.8,
      "stvarno": 67,
-     "p05": 37,
-     "p95": 96,
+     "p05": 43,
+     "p95": 93,
      "u_rasponu": true
     },
     {
      "lista": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
      "projekcija": 34.3,
      "stvarno": 34,
-     "p05": 13,
-     "p95": 63,
+     "p05": 15,
+     "p95": 60,
      "u_rasponu": true
     },
     {
      "lista": "NAROD I PRAVDA",
-     "projekcija": 11.5,
+     "projekcija": 11.8,
      "stvarno": 20,
-     "p05": 2,
-     "p95": 28,
-     "u_rasponu": true
-    },
-    {
-     "lista": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
-     "projekcija": 9.4,
-     "stvarno": 19,
-     "p05": 0,
+     "p05": 3,
      "p95": 26,
      "u_rasponu": true
     },
     {
+     "lista": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+     "projekcija": 9.1,
+     "stvarno": 19,
+     "p05": 0,
+     "p95": 25,
+     "u_rasponu": true
+    },
+    {
      "lista": "HDZ BIH - HRVATSKA DEMOKRATSKA ZAJEDNICA BIH",
-     "projekcija": 11.2,
+     "projekcija": 11.4,
      "stvarno": 17,
-     "p05": 4,
+     "p05": 6,
      "p95": 19,
      "u_rasponu": true
     },
@@ -1434,96 +1426,104 @@
      "lista": "HDZ BIH,HDU,HSS,HKDU",
      "projekcija": 16.4,
      "stvarno": 14,
-     "p05": 8,
+     "p05": 11,
      "p95": 21,
      "u_rasponu": true
     },
     {
      "lista": "NES",
-     "projekcija": 12.6,
+     "projekcija": 13.1,
      "stvarno": 13,
-     "p05": 1,
-     "p95": 34,
+     "p05": 2,
+     "p95": 32,
      "u_rasponu": true
     },
     {
      "lista": "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990",
-     "projekcija": 9.0,
+     "projekcija": 9.2,
      "stvarno": 13,
-     "p05": 2,
-     "p95": 20,
-     "u_rasponu": true
-    },
-    {
-     "lista": "HDZ BIH,HSP BIH,HDU,HSP AS,HRAST,HSP HB",
-     "projekcija": 10.8,
-     "stvarno": 11,
      "p05": 3,
-     "p95": 17,
-     "u_rasponu": true
-    },
-    {
-     "lista": "STRANKA ZA BOSNU I HERCEGOVINU",
-     "projekcija": 8.4,
-     "stvarno": 9,
-     "p05": 0,
-     "p95": 24,
-     "u_rasponu": true
-    },
-    {
-     "lista": "HDZ BIH,HSS SR,HSS,HSP BIH,HKDU,HSP AS,HDU,HRAST",
-     "projekcija": 8.3,
-     "stvarno": 9,
-     "p05": 2,
-     "p95": 14,
-     "u_rasponu": true
-    },
-    {
-     "lista": "NAŠA STRANKA",
-     "projekcija": 7.4,
-     "stvarno": 8,
-     "p05": 0,
-     "p95": 23,
-     "u_rasponu": true
-    },
-    {
-     "lista": "HRS-HRVATSKA REPUBLIKANSKA STRANKA",
-     "projekcija": 3.5,
-     "stvarno": 6,
-     "p05": 0,
-     "p95": 14,
-     "u_rasponu": true
-    },
-    {
-     "lista": "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD - ZA BIH",
-     "projekcija": 5.3,
-     "stvarno": 5,
-     "p05": 0,
-     "p95": 17,
-     "u_rasponu": true
-    },
-    {
-     "lista": "HRVATSKI NACIONALNI POMAK",
-     "projekcija": 3.6,
-     "stvarno": 5,
-     "p05": 0,
-     "p95": 13,
-     "u_rasponu": true
-    },
-    {
-     "lista": "POKRET DEMOKRATSKE AKCIJE PDA",
-     "projekcija": 7.2,
-     "stvarno": 4,
-     "p05": 1,
      "p95": 19,
      "u_rasponu": true
     },
     {
+     "lista": "HDZ BIH,HSP BIH,HDU,HSP AS,HRAST,HSP HB",
+     "projekcija": 11.0,
+     "stvarno": 11,
+     "p05": 6,
+     "p95": 16,
+     "u_rasponu": true
+    },
+    {
+     "lista": "HDZ BIH,HSS SR,HSS,HSP BIH,HKDU,HSP AS,HDU,HRAST",
+     "projekcija": 8.4,
+     "stvarno": 9,
+     "p05": 4,
+     "p95": 13,
+     "u_rasponu": true
+    },
+    {
+     "lista": "STRANKA ZA BOSNU I HERCEGOVINU",
+     "projekcija": 8.1,
+     "stvarno": 9,
+     "p05": 0,
+     "p95": 22,
+     "u_rasponu": true
+    },
+    {
+     "lista": "NAŠA STRANKA",
+     "projekcija": 7.3,
+     "stvarno": 8,
+     "p05": 0,
+     "p95": 22,
+     "u_rasponu": true
+    },
+    {
+     "lista": "HRS-HRVATSKA REPUBLIKANSKA STRANKA",
+     "projekcija": 3.4,
+     "stvarno": 6,
+     "p05": 0,
+     "p95": 12,
+     "u_rasponu": true
+    },
+    {
+     "lista": "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD - ZA BIH",
+     "projekcija": 5.7,
+     "stvarno": 5,
+     "p05": 0,
+     "p95": 16,
+     "u_rasponu": true
+    },
+    {
+     "lista": "HRVATSKI NACIONALNI POMAK",
+     "projekcija": 3.9,
+     "stvarno": 5,
+     "p05": 0,
+     "p95": 12,
+     "u_rasponu": true
+    },
+    {
+     "lista": "POKRET DEMOKRATSKE AKCIJE PDA",
+     "projekcija": 7.3,
+     "stvarno": 4,
+     "p05": 2,
+     "p95": 17,
+     "u_rasponu": true
+    },
+    {
      "lista": "SBB - FAHRUDIN RADONČIĆ",
-     "projekcija": 12.1,
+     "projekcija": 11.7,
+     "stvarno": 3,
+     "p05": 1,
+     "p95": 31,
+     "u_rasponu": true
+    },
+    {
+     "lista": "POKRET ZA MODERNU I AKTIVNU KRAJINU-POMAK",
+     "projekcija": 3.7,
      "stvarno": 3,
      "p05": 0,
-     "p95": 33,
+     "p95": 11,
      "u_rasponu": true
     },
     {
@@ -1535,19 +1535,11 @@
      "u_rasponu": true
     },
     {
-     "lista": "POKRET ZA MODERNU I AKTIVNU KRAJINU-POMAK",
-     "projekcija": 3.2,
-     "stvarno": 3,
-     "p05": 0,
-     "p95": 11,
-     "u_rasponu": true
-    },
-    {
      "lista": "\"NOVI POČETAK\"",
-     "projekcija": 0.8,
+     "projekcija": 0.7,
      "stvarno": 3,
      "p05": 0,
-     "p95": 4,
+     "p95": 3,
      "u_rasponu": true
     },
     {
@@ -1555,19 +1547,19 @@
      "projekcija": 2.8,
      "stvarno": 2,
      "p05": 0,
-     "p95": 10,
-     "u_rasponu": true
-    },
-    {
-     "lista": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
-     "projekcija": 2.2,
-     "stvarno": 2,
-     "p05": 0,
      "p95": 9,
      "u_rasponu": true
     },
     {
      "lista": "HDZ 1990 - HSP HB I BIH",
+     "projekcija": 2.2,
+     "stvarno": 2,
+     "p05": 0,
+     "p95": 7,
+     "u_rasponu": true
+    },
+    {
+     "lista": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
      "projekcija": 2.0,
      "stvarno": 2,
      "p05": 0,
@@ -1584,18 +1576,18 @@
     },
     {
      "lista": "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET",
-     "projekcija": 1.3,
+     "projekcija": 0.9,
      "stvarno": 2,
      "p05": 0,
-     "p95": 6,
+     "p95": 5,
      "u_rasponu": true
     },
     {
      "lista": "HRVATSKA STRANKA PRAVA BIH",
-     "projekcija": 4.0,
+     "projekcija": 3.9,
      "stvarno": 1,
      "p05": 0,
-     "p95": 11,
+     "p95": 10,
      "u_rasponu": true
     },
     {
@@ -1608,7 +1600,7 @@
     },
     {
      "lista": "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH",
-     "projekcija": 2.2,
+     "projekcija": 2.4,
      "stvarno": 1,
      "p05": 0,
      "p95": 8,
@@ -1624,7 +1616,7 @@
     },
     {
      "lista": "ZA NOVE GENERACIJE",
-     "projekcija": 1.2,
+     "projekcija": 1.3,
      "stvarno": 1,
      "p05": 0,
      "p95": 6,
@@ -1632,31 +1624,15 @@
     },
     {
      "lista": "BOSANSKA NARODNA STRANKA   BNS",
-     "projekcija": 1.0,
+     "projekcija": 1.1,
      "stvarno": 1,
      "p05": 0,
-     "p95": 4,
+     "p95": 5,
      "u_rasponu": true
     },
     {
      "lista": "STRANKA ZA BOSNU I HERCEGOVINU-SPU BIH STRANKA PENZIONERA",
      "projekcija": 0.9,
-     "stvarno": 1,
-     "p05": 0,
-     "p95": 4,
-     "u_rasponu": true
-    },
-    {
-     "lista": "SRPSKO JEDINSTVO (SNPFBIH-SPS)",
-     "projekcija": 0.9,
-     "stvarno": 1,
-     "p05": 0,
-     "p95": 4,
-     "u_rasponu": true
-    },
-    {
-     "lista": "HRVATSKA STRANKA PRAVA HERCEG-BOSNE",
-     "projekcija": 0.8,
      "stvarno": 1,
      "p05": 0,
      "p95": 4,
@@ -1671,8 +1647,24 @@
      "u_rasponu": true
     },
     {
+     "lista": "SRPSKO JEDINSTVO (SNPFBIH-SPS)",
+     "projekcija": 0.8,
+     "stvarno": 1,
+     "p05": 0,
+     "p95": 4,
+     "u_rasponu": true
+    },
+    {
+     "lista": "HRVATSKA STRANKA PRAVA HERCEG-BOSNE",
+     "projekcija": 0.8,
+     "stvarno": 1,
+     "p05": 0,
+     "p95": 3,
+     "u_rasponu": true
+    },
+    {
      "lista": "BOSANSKOHERCEGOVAČKI DEMOKRATI - DŽEBRAIL BAJRAMOVIĆ",
-     "projekcija": 0.7,
+     "projekcija": 0.6,
      "stvarno": 1,
      "p05": 0,
      "p95": 3,
@@ -1683,7 +1675,7 @@
      "projekcija": 0.5,
      "stvarno": 1,
      "p05": 0,
-     "p95": 2,
+     "p95": 3,
      "u_rasponu": true
     },
     {
@@ -1703,35 +1695,27 @@
      "u_rasponu": true
     },
     {
-     "lista": "HSS STJEPANA RADIĆA",
-     "projekcija": 1.7,
+     "lista": "POSAVSKA STRANKA",
+     "projekcija": 1.6,
      "stvarno": 0,
      "p05": 0,
-     "p95": 8,
+     "p95": 5,
      "u_rasponu": true
     },
     {
-     "lista": "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ",
-     "projekcija": 1.7,
+     "lista": "HSS STJEPANA RADIĆA",
+     "projekcija": 1.6,
      "stvarno": 0,
      "p05": 0,
      "p95": 7,
      "u_rasponu": true
     },
     {
-     "lista": "POSAVSKA STRANKA",
-     "projekcija": 1.6,
+     "lista": "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ",
+     "projekcija": 1.3,
      "stvarno": 0,
      "p05": 0,
-     "p95": 4,
-     "u_rasponu": true
-    },
-    {
-     "lista": "STRANKA PENZIONERA / UMIROVLJENIKA BOSNE I HERCEGOVINE",
-     "projekcija": 1.2,
-     "stvarno": 0,
-     "p05": 0,
-     "p95": 5,
+     "p95": 6,
      "u_rasponu": true
     },
     {
@@ -1744,23 +1728,23 @@
     },
     {
      "lista": "ŽUPANIJSKA NEOVISNA LISTA",
-     "projekcija": 1.2,
+     "projekcija": 1.1,
      "stvarno": 0,
      "p05": 0,
      "p95": 4,
      "u_rasponu": true
     },
     {
-     "lista": "NEZAVISNA LISTA - HRVATSKA ZVONA",
-     "projekcija": 0.8,
+     "lista": "STRANKA PENZIONERA / UMIROVLJENIKA BOSNE I HERCEGOVINE",
+     "projekcija": 1.0,
      "stvarno": 0,
      "p05": 0,
-     "p95": 3,
+     "p95": 5,
      "u_rasponu": true
     },
     {
-     "lista": "NARODNA STRANKA RADOM ZA BOLJITAK",
-     "projekcija": 0.8,
+     "lista": "NEZAVISNA LISTA - HRVATSKA ZVONA",
+     "projekcija": 0.7,
      "stvarno": 0,
      "p05": 0,
      "p95": 3,
@@ -1775,8 +1759,16 @@
      "u_rasponu": true
     },
     {
-     "lista": "HDZ BIH,HSS,HSP BIH,HKDU,HDU,HSP HB,HRAST,HDZ 1990,HNP",
-     "projekcija": 0.6,
+     "lista": "NARODNA STRANKA RADOM ZA BOLJITAK",
+     "projekcija": 0.7,
+     "stvarno": 0,
+     "p05": 0,
+     "p95": 3,
+     "u_rasponu": true
+    },
+    {
+     "lista": "RADOM ZA BOLJITAK GORAŽDE",
+     "projekcija": 0.5,
      "stvarno": 0,
      "p05": 0,
      "p95": 3,
@@ -1784,7 +1776,7 @@
     },
     {
      "lista": "STRANKA ZA BOSNU I HERCEGOVINU-PLATFORMA ZA PROGRES",
-     "projekcija": 0.6,
+     "projekcija": 0.5,
      "stvarno": 0,
      "p05": 0,
      "p95": 3,
@@ -1799,8 +1791,16 @@
      "u_rasponu": true
     },
     {
-     "lista": "RADOM ZA BOLJITAK GORAŽDE",
+     "lista": "HDZ BIH,HSS,HSP BIH,HKDU,HDU,HSP HB,HRAST,HDZ 1990,HNP",
      "projekcija": 0.5,
+     "stvarno": 0,
+     "p05": 0,
+     "p95": 3,
+     "u_rasponu": true
+    },
+    {
+     "lista": "REPUBLIKANSKA STRANKA",
+     "projekcija": 0.3,
      "stvarno": 0,
      "p05": 0,
      "p95": 2,
@@ -1808,14 +1808,6 @@
     },
     {
      "lista": "\"OSTAJTE OVDJE - ZAJEDNO ZA NAŠ MOSTAR\"",
-     "projekcija": 0.4,
-     "stvarno": 0,
-     "p05": 0,
-     "p95": 2,
-     "u_rasponu": true
-    },
-    {
-     "lista": "REPUBLIKANSKA STRANKA",
      "projekcija": 0.3,
      "stvarno": 0,
      "p05": 0,
@@ -1832,14 +1824,6 @@
     },
     {
      "lista": "KOALICIJA DRŽAVA-NEZAVISNI BLOK-NB,ZELENI ZA DRŽAVU",
-     "projekcija": 0.2,
-     "stvarno": 0,
-     "p05": 0,
-     "p95": 0,
-     "u_rasponu": true
-    },
-    {
-     "lista": "SDS-SRPSKA DEMOKRATSKA STRANKA",
      "projekcija": 0.1,
      "stvarno": 0,
      "p05": 0,
@@ -1848,14 +1832,14 @@
     },
     {
      "lista": "HDZ BIH,HSSSR,HSS,HSP BIH,HKDUHSPAS,HDU,HSP HB,HRAST,HDZ1990",
-     "projekcija": 0.1,
+     "projekcija": 0.0,
      "stvarno": 0,
      "p05": 0,
      "p95": 0,
      "u_rasponu": true
     },
     {
-     "lista": "DNS-DEMOKRATSKI NARODNI SAVEZ",
+     "lista": "SDS-SRPSKA DEMOKRATSKA STRANKA",
      "projekcija": 0.0,
      "stvarno": 0,
      "p05": 0,
@@ -1863,7 +1847,7 @@
      "u_rasponu": true
     }
    ],
-   "mae_mandata": 1.37,
+   "mae_mandata": 1.38,
    "u_rasponu": 98
   }
  },
@@ -1877,8 +1861,8 @@
   "oi2026-4": {
    "title": "Predstavnički dom Parlamenta FBiH",
    "mjesta": 98,
-   "pogodjeno": 55,
-   "pct": 56
+   "pogodjeno": 56,
+   "pct": 57
   },
   "oi2026-6": {
    "title": "Narodna skupština Republike Srpske",
@@ -1893,7 +1877,7 @@
    "pct": 71
   }
  },
- "mandati_mae": 1.429,
+ "mandati_mae": 1.446,
  "ogranicenje_komp": "Kompenzacijske liste iz 2018. i 2022. nigdje nisu objavljene u čitljivom obliku, pa replay mora pogađati redoslijed koji je stranka izabrala. Za 2026. te liste postoje i model ih čita direktno, pa je ovaj dio testa stroži nego što stvarna projekcija treba biti. Zato uz ukupnu kalibraciju stoji i ona bez kompenzacijskih mandata.",
  "vecinske": {
   "sd": 0.6,

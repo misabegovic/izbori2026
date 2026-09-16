@@ -91,7 +91,7 @@
 <tr{% if lam == bt.params.lam %} class="best"{% endif %}><td>{% if lam == 0 %}nimalo — samo prošli opći izbori{% elif lam == 1.0 %}potpuno — pomak se prenosi cijeli{% else %}{{ (lam * 100) | round | int }}% pomaka{% endif %}</td><td class="num">{{ mae }}{% if lam == bt.params.lam %} <b>← izabrano</b>{% endif %}</td></tr>
 {% endfor %}
 </tbody></table></div>
-<p class="small mut">Ispalo je da lokalni izbori nose oko petinu pomaka između općih. To je malo, ali nije nula, i bolje je nego pretvarati se da se ništa nije desilo od 2022.</p>
+<p class="small mut">Ispalo je da lokalni izbori nose {{ (bt.params.lam * 100) | round | int }} posto pomaka između općih izbora. To je malo, ali nije nula, i bolje je nego pretvarati se da se od 2022. ništa nije desilo.</p>
 </div>
 
 <div class="card" id="ankete">

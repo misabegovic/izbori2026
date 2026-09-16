@@ -499,6 +499,12 @@ def simulate(scn, cells, totals, meta, comp_lists, sims, seed, sg,
     seats_runs = defaultdict(lambda: defaultdict(list))
     unit_runs = defaultdict(lambda: defaultdict(list))
     chamber_runs = defaultdict(list)
+    # A cantonal assembly is its own chamber, so its coalition arithmetic needs the seats of
+    # one whole run together. unit_runs cannot supply that: a list only appends on the runs it
+    # won something in, so its entries do not line up with each other run for run. Reading the
+    # same index out of two of those lists silently pairs seats from different elections, and
+    # the arithmetic then hands a party a majority it never came near in any single run.
+    unit_chamber = defaultdict(list)
     cand = defaultdict(lambda: [0, 0, 0])
     over_thr = defaultdict(int)
     pct_sum, pct_n = defaultdict(float), defaultdict(int)
@@ -529,6 +535,8 @@ def simulate(scn, cells, totals, meta, comp_lists, sims, seed, sg,
                 for l, v in drawn.items():
                     if v >= seatlaw.THRESHOLD:
                         over_thr[(uk, l)] += 1
+                if not cfg["one_house"]:
+                    unit_chamber[uk].append(dict(got))
                 for l, k in got.items():
                     race_seats[l] += k
                     unit_runs[uk][l].append(k)
@@ -596,8 +604,8 @@ def simulate(scn, cells, totals, meta, comp_lists, sims, seed, sg,
     for per in unit_runs.values():
         for xs in per.values():
             xs += [0] * (sims - len(xs))
-    return {"seats": seats_runs, "unit": unit_runs, "chamber": chamber_runs, "cand": cand,
-            "over_thr": over_thr, "sims": sims,
+    return {"seats": seats_runs, "unit": unit_runs, "chamber": chamber_runs,
+            "unit_chamber": unit_chamber, "cand": cand, "over_thr": over_thr, "sims": sims,
             "pct": {k: pct_sum[k] / pct_n[k] for k in pct_n if pct_n[k]}}
 
 
@@ -738,7 +746,13 @@ def sigma_for(share, cont, sg):
     a, b = sg["core"][tag]
     core = min(max(a + b * x, 0.10), 1.30) * k
     ta, tb = (sg.get("tail") or {}).get(tag, (core * 3.0, 0.0))
-    tail = min(max((ta + tb * x) * k, 2.5 * core), 2.60 * k)
+    # The tail is measured, not scaled: the calibration multiplier widens the everyday error,
+    # not the blow-up. Multiplying both let a single draw move a list by a factor of sixty,
+    # and since the shares are renormalised afterwards that one draw swallowed the whole
+    # constituency — which is how a party polling eight percent in Kanton Sarajevo came out
+    # with a two percent chance of an outright majority of the assembly. Capped at 2.0 in log
+    # terms, which is still a list quintupling or collapsing to a fifth in one election.
+    tail = min(max(ta + tb * x, 2.5 * core), 2.0)
     return core, sg["q"], tail
 
 
@@ -1226,9 +1240,9 @@ def build_output(data, scn, sim, info, comp_lists, params, bt, majority, sg):
             houses = []
             for uk in uks:
                 area = uk.rsplit("-", 1)[1]
-                runs = [{l: xs[i] for l, xs in sim["unit"][uk].items() if xs[i]} for i in range(sims)]
                 houses.append({"key": uk, "title": f"Skupština {CANTON.get(area, area)}",
-                               "units": [uk], "seats": scn.units[uk]["seats"], "runs": runs})
+                               "units": [uk], "seats": scn.units[uk]["seats"],
+                               "runs": sim["unit_chamber"].get(uk) or []})
 
         for h in houses:
             runs = h.pop("runs")
@@ -1260,10 +1274,29 @@ def build_output(data, scn, sim, info, comp_lists, params, bt, majority, sg):
             u = scn.units[uk]
             area = u["area"]
             rows = []
+            # Where this list's projected vote comes from, in the words a voter needs: whose
+            # voters were these in 2022. It is the single most useful thing the ancestry step
+            # knows and it was, until now, only visible in a diagnostics blob — even though it
+            # is the reason a ballot can carry a party nobody recognises and a bloc everybody
+            # does.
+            inherits = {}
+            for l in u["share"]:
+                acc = []
+                for pp, spread in (u.get("inherit") or {}).items():
+                    f = spread.get(l)
+                    if f:
+                        acc.append((pp, f * u["prior_votes"][pp]))
+                tot_acc = sum(v for _p, v in acc)
+                if tot_acc > 0:
+                    acc.sort(key=lambda x: -x[1])
+                    inherits[l] = [{"stranka": p, "udio": round(100 * v / tot_acc, 1)}
+                                   for p, v in acc[:4] if v / tot_acc >= 0.04]
+
             for l in u["share"]:
                 xs = sim["unit"][uk].get(l) or [0] * sims
                 rows.append({
                     "lista": l,
+                    "nasljeduje": inherits.get(l) or [],
                     "udio": round(100 * u["share"][l], 2),
                     "udio_bez_pomaka": round(100 * u["base_share"].get(l, 0), 2),
                     "pomak": round(u["trend"].get(l, 1.0), 3),

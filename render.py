@@ -1279,7 +1279,25 @@ for _pk, _pp in party_pages.items():
         _c = (_pp.get("p22") or {}).get("counts") or {}
         _rated = _c.get("ispunjeno", 0) + _c.get("djelimično", 0) + _c.get("nije", 0)
         PINFO[_pp["program"]["name"]] = {"href": _pp["href"], "p22": f"prošli put provjereno {_rated}: {_c.get('ispunjeno', 0)} uradili, {_c.get('djelimično', 0)} pola, {_c.get('nije', 0)} nisu" if _rated else ("nisu bili u vlasti 2022–2026, nema šta provjeriti" if _c else "")}
-write("stranke.html", env.get_template("stranke.html").render(parties=plist, pmatrix={ch: json.dumps(m, ensure_ascii=False) for ch, m in PMATRIX.items()}, heat_text={ch: heat_sentences(m) for ch, m in PMATRIX.items()}, **base_ctx))
+# Lists the projection gives a seat to but whose promises we never found. Naming them is
+# the only way the gap stops being invisible; a reader otherwise reads "nema programa" on one
+# ballot and has no idea it is a pattern.
+bez_programa = []
+if PROJ:
+    seen_bp = set()
+    for _race, _r in PROJ["races"].items():
+        for _h in _r["houses"]:
+            for _x in _h["rows"]:
+                if _x["mandati"] < 1 or _x["lista"] in seen_bp:
+                    continue
+                if program_for(_x["lista"]):
+                    continue
+                seen_bp.add(_x["lista"])
+                bez_programa.append({"lista": _x["lista"], "mandati": _x["mandati"],
+                                     "dom": _h["title"]})
+    bez_programa.sort(key=lambda b: -b["mandati"])
+
+write("stranke.html", env.get_template("stranke.html").render(parties=plist, bez_programa=bez_programa, pmatrix={ch: json.dumps(m, ensure_ascii=False) for ch, m in PMATRIX.items()}, heat_text={ch: heat_sentences(m) for ch, m in PMATRIX.items()}, **base_ctx))
 write("obecanja.html", env.get_template("obecanja.html").render(themes=THEMES, n_parties=len([p for p in programs if p.get("promises")]), pinfo=PINFO, **base_ctx))
 RACE22_NAME = {"32-2": "Predstavnički dom PSBiH", "32-4": "Predstavnički dom Parlamenta FBiH",
                "32-6": "Narodna skupština RS", "32-7": "Skupštine kantona"}

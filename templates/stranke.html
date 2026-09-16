@@ -12,6 +12,18 @@
 <details><summary class="small">Isto, riječima</summary><ul style="margin:.3rem 0 0 1.1rem;padding:0">{% for s in heat_text[ch] %}<li class="small">{{ s }}</li>{% endfor %}</ul></details></div>
 {% endfor %}
 {% endif %}
+{% if bez_programa %}
+<div class="card">
+<h2 style="margin-top:0">Liste koje ulaze u parlament, a nemamo im program</h2>
+<p class="mut small" style="margin-top:0">Ovo je rupa na ovom sajtu, ne na listiću. Za ove liste <a href="projekcije.html">projekcija</a> računa bar jedan mandat, a nismo našli objavljen program ni provjeru ranijih obećanja. Ako ih objave — ili ako znaš gdje su — <a href="https://github.com/misabegovic/izbori2026/issues">javi</a> i dodaćemo ih.</p>
+<ul style="margin:.3rem 0 0 1.1rem;padding:0">
+{% for b in bez_programa %}
+<li><b>{{ b.lista | ptitle }}</b> <span class="mut small">— oko {{ b.mandati | dec }} mandata, {{ b.dom }}</span></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
 <h2>Sve stranke</h2>
 {% set maxn = parties[0].n %}
 {% for p in parties %}
