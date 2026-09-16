@@ -33,7 +33,7 @@
   },
   {
    "step": "Onda, ako hoćeš, do TRI čovjeka s te iste liste.",
-   "detail": "To je „lični glas”. Na listiću su brojevi, imena su na papiru koji dobiješ uz listić. Ako ne zaokružiš nikog, glas ide samo stranci."
+   "detail": "Skener je kutija s prorezom, listić ubaciš kao pismo. Skener čuva sliku listića, bez tvog imena. Poslije se broji i ručno kao kontrola."
   },
   {
    "step": "Kružić popuni cijeli. Listić okreni licem dolje i ubaci u skener.",
@@ -63,7 +63,7 @@
   },
   {
    "t": "Put u EU",
-   "plain": "BiH je kandidat i pregovori su otvoreni, ali zakoni koje EU traži (sudovi, VSTV) stoje. Svi kažu da su za EU, razlika je ko koga krivi."
+   "plain": "BiH je kandidat i pregovori su otvoreni, ali zakoni koje EU traži (sudovi i VSTV, tijelo koje bira sudije) stoje. Svi kažu da su za EU, razlika je ko koga krivi."
   },
   {
    "t": "Plate, penzije, cijene, stanovi",
@@ -199,7 +199,7 @@
    "src": "https://www.danas.rs/svet/region/u-trci-za-predsednika-i-potpredsednike-rs-na-oktobarskim-izborima-12-kandidata/"
   }
  ],
- "rs_president_note": "Predsjednik i dva potpredsjednika biraju se s jedne liste: pobjednik je predsjednik, a potpredsjednici su najbolje plasirani kandidati iz druga dva naroda. 12 kandidata ukupno.",
+ "rs_president_note": "Predsjednik i dva potpredsjednika biraju se s jednog listića. Ko dobije najviše glasova, predsjednik je. Potpredsjednici su najbolji kandidati iz druga dva naroda: ako pobijedi Srbin, potpredsjednici su najbolji Bošnjak i najbolji Hrvat. 12 kandidata ukupno.",
  "events": [
   {
    "date": "2022-12-15",

@@ -16,12 +16,12 @@
     el.innerHTML = '';
     var W = el.clientWidth || 300, h = 30, lab = d.label ? 16 : 0;
     var svg = d3.select(el).append('svg').attr('width', W).attr('height', h + lab);
-    if (d.label) svg.append('text').attr('x', 0).attr('y', 12).attr('font-size', 13).attr('fill', INK).text(d.label);
+    if (d.label) svg.append('text').attr('x', 0).attr('y', 12).attr('font-size', '.68rem').attr('fill', INK).text(d.label);
     var vw = 70, x = d3.scaleLinear().domain([0, d.max || 1]).range([0, W - vw]);
     svg.append('rect').attr('x', 0).attr('y', lab + 8).attr('width', W - vw).attr('height', 14).attr('rx', 4).attr('fill', '#eceae3');
     svg.append('rect').attr('x', 0).attr('y', lab + 8).attr('height', 14).attr('rx', 4).attr('fill', COL[d.cls] || COL['c-blue']).attr('width', 0)
       .transition().duration(600).attr('width', Math.max(2, x(d.v)));
-    svg.append('text').attr('x', W).attr('y', lab + 20).attr('text-anchor', 'end').attr('font-size', 12).attr('fill', MUT).text(d.text);
+    svg.append('text').attr('x', W).attr('y', lab + 20).attr('text-anchor', 'end').attr('font-size', '.63rem').attr('fill', MUT).text(d.text);
   }
   function stack(el, d) {
     el.innerHTML = '';
@@ -49,9 +49,9 @@
     var arc = d3.arc().innerRadius(R - 7).outerRadius(R).startAngle(0);
     g.append('path').attr('d', arc({ endAngle: 2 * Math.PI })).attr('fill', '#eceae3');
     g.append('path').attr('fill', col).transition().duration(700).attrTween('d', function () { var i = d3.interpolate(0, 2 * Math.PI * d.pct / 100); return function (t) { return arc({ endAngle: i(t) }); }; });
-    g.append('text').attr('text-anchor', 'middle').attr('dy', 5).attr('font-size', sm ? 11 : 14).attr('font-weight', 700).attr('fill', INK).text('~' + d.pct + '%');
-    svg.append('text').attr('x', 2 * R + 12).attr('y', R - 4).attr('font-size', sm ? 13 : 15).attr('font-weight', 700).attr('fill', INK).text('Šansa za mandat: ' + d.word);
-    svg.append('text').attr('x', 2 * R + 12).attr('y', R + 14).attr('font-size', 11).attr('fill', MUT).text('iz rezultata 2022, nije prognoza');
+    g.append('text').attr('text-anchor', 'middle').attr('dy', 5).attr('font-size', sm ? '.58rem' : '.74rem').attr('font-weight', 700).attr('fill', INK).text('~' + d.pct + '%');
+    svg.append('text').attr('x', 2 * R + 12).attr('y', R - 4).attr('font-size', sm ? '.68rem' : '.79rem').attr('font-weight', 700).attr('fill', INK).text('Šansa za mandat: ' + d.word);
+    svg.append('text').attr('x', 2 * R + 12).attr('y', R + 14).attr('font-size', '.58rem').attr('fill', MUT).text('iz rezultata 2022, nije prognoza');
     var why = document.createElement('div'); why.className = 'small mut'; why.textContent = 'Zašto: ' + d.why + '.'; el.appendChild(why);
   }
   function years(el, d) {
@@ -65,7 +65,7 @@
       svg.append('circle').attr('cx', x).attr('cy', 16).attr('r', 0).attr('fill', t.now ? '#fff' : (t.won ? COL['c-blue'] : '#fff')).attr('stroke', t.now ? COL['c-sw'] : COL['c-blue']).attr('stroke-width', 2.5).attr('stroke-dasharray', t.now ? '3 2' : null)
         .style('cursor', 'pointer').on('click', function (ev) { ev.stopPropagation(); show('<b>' + t.y + '</b><br>' + (t.now ? 'sada na listiću' : (t.lvl || '') + '<br>' + (t.won ? '<b>izabran/a</b>' : 'nije izabran/a')), ev); })
         .transition().delay(i * 60).attr('r', 8);
-      svg.append('text').attr('x', x).attr('y', 38).attr('text-anchor', 'middle').attr('font-size', 11).attr('fill', MUT).text(t.y);
+      svg.append('text').attr('x', x).attr('y', 38).attr('text-anchor', 'middle').attr('font-size', '.58rem').attr('fill', MUT).text(t.y);
     });
     var leg = document.createElement('div'); leg.className = 'st-l';
     leg.innerHTML = '<span><i class="sw" style="background:' + COL['c-blue'] + '"></i>izabran/a</span><span><i class="sw" style="background:#fff;border:2px solid ' + COL['c-blue'] + '"></i>nije izabran/a</span><span><i class="sw" style="background:#fff;border:2px dashed ' + COL['c-sw'] + '"></i>sada</span>';
@@ -78,7 +78,7 @@
     var show = tipFor(el);
     d.forEach(function (r, i) {
       var y = top + i * rowH, t = r.t || 0, x0 = labW, w = W - labW - 44;
-      svg.append('text').attr('x', 0).attr('y', y + 18).attr('font-size', 13).attr('font-weight', 700).attr('fill', INK).text(r.m);
+      svg.append('text').attr('x', 0).attr('y', y + 18).attr('font-size', '.68rem').attr('font-weight', 700).attr('fill', INK).text(r.m);
       svg.append('rect').attr('x', x0).attr('y', y + 6).attr('width', w).attr('height', 16).attr('rx', 4).attr('fill', '#eceae3');
       if (t) {
         var x = x0;
@@ -89,15 +89,15 @@
             .transition().duration(600).attr('width', Math.max(2, ww - 1));
           x += ww;
         });
-        svg.append('text').attr('x', W).attr('y', y + 19).attr('text-anchor', 'end').attr('font-size', 12).attr('fill', MUT).text(Math.round(100 * r.f / t) + '%');
+        svg.append('text').attr('x', W).attr('y', y + 19).attr('text-anchor', 'end').attr('font-size', '.63rem').attr('fill', MUT).text(Math.round(100 * r.f / t) + '%');
       } else {
-        svg.append('text').attr('x', x0 + 6).attr('y', y + 18).attr('font-size', 12).attr('fill', MUT).text('nema brojki po stranci za ovaj mandat');
+        svg.append('text').attr('x', x0 + 6).attr('y', y + 18).attr('font-size', '.63rem').attr('fill', MUT).text('nema brojki po stranci za ovaj mandat');
       }
-      var pw = svg.append('text').attr('x', x0).attr('y', y + 36).attr('font-size', 10.5).attr('fill', MUT).text(r.power);
+      var pw = svg.append('text').attr('x', x0).attr('y', y + 36).attr('font-size', '.55rem').attr('fill', MUT).text(r.power);
       var n = pw.node(); while (n.getComputedTextLength() > w + 40 && n.textContent.length > 8) n.textContent = n.textContent.slice(0, -4) + '…';
     });
     var leg = document.createElement('div'); leg.className = 'st-l';
-    leg.innerHTML = '<span><i class="sw" style="background:' + COL['c-za'] + '"></i>ispunjeno</span><span><i class="sw" style="background:' + COL['c-uz'] + '"></i>djelimično</span><span><i class="sw" style="background:' + COL['c-protiv'] + '"></i>nije</span><span>% = ispunjeno u potpunosti</span>';
+    leg.innerHTML = '<span><i class="sw" style="background:' + COL['c-za'] + '"></i>ispunjeno</span><span><i class="sw" style="background:' + COL['c-uz'] + '"></i>djelimično</span><span><i class="sw" style="background:' + COL['c-protiv'] + '"></i>nije</span><span><i class="sw" style="background:#eceae3"></i>bez ocjene</span><span>% = ispunjeno u potpunosti</span>';
     el.appendChild(leg);
   }
   var METRICS = [
@@ -116,7 +116,7 @@
     var bar = document.createElement('div'); bar.className = 'viz-bar'; el.appendChild(bar);
     var show = tipFor(el);
     var svg = d3.select(el).append('svg').attr('width', W);
-    var cur = METRICS[0];
+    var cur = METRICS[1];
     METRICS.forEach(function (m) {
       var b = document.createElement('button'); b.textContent = m.label; b.className = 'tog';
       b.onclick = function () { cur = m; draw(); bar.querySelectorAll('button').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on'); };
@@ -165,6 +165,7 @@
     document.querySelectorAll('.d3-mandates').forEach(function (el) { mandates(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-years').forEach(function (el) { years(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.viz').forEach(swarm);
+    if (window.cyrRefresh) window.cyrRefresh();
   }
   if (window.d3) init(); else { var s = document.createElement('script'); s.src = 'https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js'; s.onload = init; document.head.appendChild(s); }
 })();

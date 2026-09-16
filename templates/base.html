@@ -3,7 +3,7 @@
 <div class="d3 d3-bar" data-d3='{{ {"label": label, "v": value, "max": maxv, "text": text, "cls": cls} | tojson }}'><span class="fb">{{ label }}: {{ text }}</span></div>
 {%- endmacro %}
 {% macro stack(parts, total) -%}
-<div class="d3 d3-stack" data-d3='{{ {"parts": parts, "total": total} | tojson }}'><span class="fb">{% for lab, val, cls in parts %}{% if val %}{{ lab }} {{ val }}{% if not loop.last %}, {% endif %}{% endif %}{% endfor %}</span></div>
+<div class="d3 d3-stack" data-d3='{{ {"parts": parts, "total": total} | tojson }}'><span class="fb">{% set ns = namespace(items=[]) %}{% for lab, val, cls in parts %}{% if val %}{% set ns.items = ns.items + [lab ~ " " ~ val] %}{% endif %}{% endfor %}{{ ns.items | join(", ") }}</span></div>
 {%- endmacro %}
 {% macro chance(ch, small=false) -%}
 {% if ch %}<div class="d3 d3-chance{% if small %} sm{% endif %}" data-d3='{{ {"pct": ch[0], "word": ch[1], "why": ch[2]} | tojson }}'><span class="fb">šansa za mandat: {{ ch[1] }}</span></div>{% endif %}
@@ -12,7 +12,7 @@
 <li class="person">
   <span class="pos">{{ c.pos }}.</span>{% if c.img %}<img class="av" src="{{ c.img }}" alt="" width="36" height="36" loading="lazy">{% endif %}
   <span class="pname">{% if c.has_page %}<a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</span>
-  <span class="badges">{% if c.chance %}<span class="b ch-{{ c.chance[1].split(" ")[0] }}" title="{{ c.chance[2] }}">šansa za mandat: {{ c.chance[1] }}</span>{% endif %}{% for b in c.badges %}{{ badge(b) }}{% endfor %}</span>
+  <span class="badges">{% for b in c.badges %}{{ badge(b) }}{% endfor %}{% if c.chance and c.chance[0] >= 15 %}<span class="b ch-{{ c.chance[1] }}" title="{{ c.chance[2] }}">šansa za mjesto: {{ c.chance[1] }} (~{{ c.chance[0] }}%)</span>{% endif %}</span>
 </li>
 {%- endmacro %}
 <!doctype html>
@@ -108,14 +108,13 @@ footer { max-width:660px; margin:2rem auto 0; padding:1rem 16px 2rem; border-top
 .viz { position:relative; margin:.5rem 0; }
 .viz-bar { display:flex; flex-wrap:wrap; gap:.3rem; margin-bottom:.4rem; }
 .viz-bar .tog.on { background:var(--acc); color:#fff; border-color:var(--acc); }
-.viz-axis text { font-size:11px; fill:var(--mut); } .viz-axis path, .viz-axis line { stroke:var(--line); }
+.viz-axis text { font-size:.6rem; fill:var(--mut); } .viz-axis path, .viz-axis line { stroke:var(--line); }
 .viz-grid { stroke:var(--line); }
-.viz-lab { font-size:12px; fill:var(--fg); }
+.viz-lab { font-size:.62rem; fill:var(--fg); }
 .viz-dot { fill:#86b6ef; stroke:#fff; stroke-width:1.5; cursor:pointer; }
 .viz-dot.rec { fill:#2a78d6; }
 .viz-dot.me { fill:#eb6834; stroke:#7a2e0a; stroke-width:2; }
-.viz-me { font-size:11px; font-weight:700; fill:#7a2e0a; paint-order:stroke; stroke:#fff; stroke-width:3px; }
-.viz-lab { font-size:11px; }
+.viz-me { font-size:.6rem; font-weight:700; fill:#7a2e0a; paint-order:stroke; stroke:#fff; stroke-width:3px; }
 .viz-tip { position:absolute; z-index:5; background:#fff; border:1px solid var(--line); border-radius:10px; padding:.5rem .7rem; width:240px; font-size:.85rem; box-shadow:0 4px 14px rgba(0,0,0,.12); }
 .d3 .fb { font-size:.85rem; color:var(--mut); }
 .d3-bar { margin:.15rem 0; } .d3-stack { margin:.3rem 0; } .d3-chance { margin:.4rem 0; }
@@ -151,6 +150,7 @@ function back(n){if(n.nodeType===3){if(n._lat)n.nodeValue=n._lat;}else if(n.node
 window.bigger=function(){var h=document.documentElement;var cur=parseInt(localStorage.getItem("fs")||"0");cur=(cur+1)%3;localStorage.setItem("fs",cur);h.style.fontSize=["","22px","25px"][cur];};
 try{var fs=parseInt(localStorage.getItem("fs")||"0");if(fs)document.documentElement.style.fontSize=["","22px","25px"][fs];}catch(e){}
 window.foldq=function(s){var C={"а":"a","б":"b","в":"v","г":"g","д":"d","ђ":"dj","е":"e","ж":"z","з":"z","и":"i","ј":"j","к":"k","л":"l","љ":"lj","м":"m","н":"n","њ":"nj","о":"o","п":"p","р":"r","с":"s","т":"t","ћ":"c","у":"u","ф":"f","х":"h","ц":"c","ч":"c","џ":"dz","ш":"s","č":"c","ć":"c","ž":"z","š":"s","đ":"dj"};return s.toLowerCase().split("").map(function(c){return C[c]||c;}).join("");};
+window.cyrRefresh=function(){try{if(localStorage.getItem("cyr")==="1")walk(document.body);}catch(e){}};
 window.toggleScript=function(){var on=localStorage.getItem("cyr")==="1";if(on){back(document.body);localStorage.setItem("cyr","0");document.getElementById("tog").textContent="ЋИР";}else{walk(document.body);localStorage.setItem("cyr","1");document.getElementById("tog").textContent="LAT";}};
 var TAG={"novac":"budžet i novac","porezi":"porezi","plate":"plate","sudovi":"sudovi","EU":"put u EU","ustav":"ustav i RS/BiH","sigurnost":"sigurnost","transparentnost":"korupcija i javnost","izbori":"izbori","imovina":"državna imovina","struja":"struja","porodica":"porodica","historija":"historija","privreda":"privreda"};
 document.querySelectorAll(".tagbar").forEach(function(bar){var list=document.getElementById(bar.dataset["for"]);if(!list)return;var items=list.querySelectorAll(".kd");var tags={};items.forEach(function(i){(i.dataset.tags||"").split(" ").forEach(function(t){if(t)tags[t]=(tags[t]||0)+1;});});var all=document.createElement("button");all.className="tog on";all.textContent="sve";bar.appendChild(all);function pick(t,btn){items.forEach(function(i){i.classList.toggle("hid",!!t&&(" "+i.dataset.tags+" ").indexOf(" "+t+" ")<0);});bar.querySelectorAll("button").forEach(function(b){b.classList.remove("on");});btn.classList.add("on");}all.onclick=function(){pick(null,all);};Object.keys(tags).sort(function(a,b){return tags[b]-tags[a];}).forEach(function(t){var b=document.createElement("button");b.className="tog";b.textContent=(TAG[t]||t)+" ("+tags[t]+")";b.onclick=function(){pick(t,b);};bar.appendChild(b);});});

@@ -6,7 +6,7 @@
 {% if p.program %}<p class="lead"><b>Sad su:</b> {{ p.program.power }}.</p><p class="mut">{{ p.program.governing_now }}</p>{% endif %}
 <div class="card">
 <p class="mut small" style="margin:0">{{ p.n }} kandidata 2026 na {{ p.units_in }} listića:</p>
-{{ stack([('već birani', p.won, 'c-blue'), ('prvi put', p.new, 'c-blue2'), ('ostali: kandidovali se, nisu birani', p.n - p.won - p.new, 'c-new')], p.n) }}
+{{ stack([('već birani', p.won, 'c-blue'), ('prvi put', p.new, 'c-blue2'), ('ostali: ranije se kandidovali bez uspjeha, ili nemamo podataka', p.n - p.won - p.new, 'c-new')], p.n) }}
 {% if p.switch %}<p class="small" style="margin:.2rem 0 0"><i class="sw c-sw"></i>{{ p.switch }} mijenjalo stranke</p>{% endif %}
 {% if p.votes18 or p.votes22 %}
 <p class="mut small" style="margin:.8rem 0 0">Glasovi na svim listićima:</p>
@@ -34,10 +34,10 @@
 
 {% if p.hist and p.hist.rows | length > 1 %}
 <h2 id="obrazac">Obrazac: obećanja kroz mandate</h2>
-{% if p.hist.pattern %}<p class="lead">U {{ p.hist.pattern.mandates }} mandata s praćenim obećanjima: <b>{{ p.hist.pattern.pct_full }}%</b> ispunjeno u potpunosti, {{ p.hist.pattern.pct_part }}% djelimično, od {{ p.hist.pattern.tracked | num }} praćenih obećanja.</p>{% endif %}
-<div class="d3 d3-mandates" data-d3='{{ p.hist.chart | safe }}'><span class="fb">{% for r in p.hist.rows %}{{ r.mandate }}: {{ r.fulfilled }}/{{ r.tracked }} ispunjeno; {% endfor %}</span></div>
+{% if p.hist.pattern %}<p class="lead">U {{ p.hist.pattern.mandates }} mandata u vlasti: <b>{{ p.hist.pattern.pct_full }}%</b> obećanja ispunjeno u potpunosti, {{ p.hist.pattern.pct_part }}% djelimično ({{ p.hist.pattern.tracked | num }} praćenih obećanja stranke ili vlade u kojoj je bila, po Istinomjeru).</p>{% endif %}
+<div class="d3 d3-mandates" data-d3='{{ p.hist.chart | safe }}'><span class="fb">{% for r in p.hist.rows %}{{ r.mandate }}: {% if r.tracked %}{{ r.fulfilled or 0 }} od {{ r.tracked }} ispunjeno{% else %}nema brojki{% endif %}; {% endfor %}</span></div>
 {% for r in p.hist.rows if r.mandate != '2022-2026' %}
-<details><summary>{{ r.mandate }} · {{ r.in_power }}</summary>
+<details><summary>{{ r.mandate }} · {{ r.in_power }}{% if r.gov_wide %} (brojke za cijelu vladu){% endif %}</summary>
 <div class="card">
 {% if r.tracked %}<p class="small">Praćeno {{ r.tracked }} obećanja: {{ r.fulfilled }} ispunjeno, {{ r.partial or 0 }} djelimično, {{ r.broken or 0 }} nije.</p>{% endif %}
 {% for x in r.examples %}
