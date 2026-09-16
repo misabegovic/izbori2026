@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}{{ u.title }} {{ u.area }} — Izbori 2026{% endblock %}
+{% block content %}
+<p><a href="opcine.html">← općine</a></p>
+<h1>{{ u.title }} <span class="mut">— jedinica {{ u.area }}</span></h1>
+
+<div class="stats">
+<div class="stat"><b>{{ u.stats.candidates }}</b>kandidata</div>
+<div class="stat"><b>{{ u.stats.ever_won }}</b>ikad osvojili mandat</div>
+<div class="stat"><b>{{ u.stats.debut }}</b>debitanata</div>
+<div class="stat"><b>{{ u.stats.fillers3 }}</b>3+ puta bez mandata</div>
+</div>
+
+{% if u.churn.m22 %}
+<h2>Promjena u ovoj jedinici</h2>
+<div class="card">
+2022: {{ u.churn.m22 }} mandata · zadržano od 2018: <b>{{ u.churn.kept_18_22 }}</b> · pobjednici 2022 ponovo na ovom listiću: <b>{{ u.churn.running_again }}</b>
+{% if u.churn.gone %}<br><span class="mut">Više se ne kandiduju ovdje: {{ u.churn.gone | join(', ') | title }}</span>{% endif %}
+</div>
+{% endif %}
+
+{% if hist22 %}
+<h2>Historija: glasovi po subjektima</h2>
+<table>
+<tr><th>Subjekt</th><th>2018</th><th>2022</th><th>trend</th></tr>
+{% for h in hist22[:12] %}
+{% set h18 = hist18 | selectattr('party', 'equalto', h.party) | first %}
+<tr>
+<td>{{ h.party | title }}</td>
+<td class="mut">{{ '{:,}'.format(h18.votes) if h18 else '—' }}</td>
+<td>{{ '{:,}'.format(h.votes) }}</td>
+<td>{% if h18 and h18.votes %}{{ '+%.0f%%' | format(100 * (h.votes - h18.votes) / h18.votes) if h.votes >= h18.votes else '%.0f%%' | format(100 * (h.votes - h18.votes) / h18.votes) }}{% else %}novo{% endif %}</td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
+
+<h2>Liste (redom s listića)</h2>
+{% for l in lists %}
+<h3 style="margin:1.2rem 0 .3rem">{{ l.name | title }} <span class="mut">({{ l.candidates | length }})</span></h3>
+<table>
+{% for c in l.candidates %}
+<tr>
+<td style="width:2rem">{{ c.pos }}.</td>
+<td>
+{% if c.timeline %}
+<details><summary>{{ c.name | title }}{{ badge(c) }}</summary>
+<div class="tl">
+{% for t in c.timeline %}
+{{ t.y }} — {{ t.lvl }}{% if t.area %}, {{ t.area | title }}{% endif %}{% if t.party %}, {{ t.party | title }}{% endif %}{% if t.pos %}, mjesto {{ t.pos }}{% endif %}{% if t.votes %}, {{ '{:,}'.format(t.votes) }} glasova{% endif %}{% if t.elected %} — <b>izabran/a</b>{% endif %}<br>
+{% endfor %}
+</div>
+</details>
+{% else %}
+{{ c.name | title }}{{ badge(c) }}
+{% endif %}
+</td>
+</tr>
+{% endfor %}
+</table>
+{% endfor %}
+{% endblock %}

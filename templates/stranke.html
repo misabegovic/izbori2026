@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Stranke — nacionalno poredjenje — Izbori 2026{% endblock %}
+{% block content %}
+<h1>Stranke — nacionalno poredjenje</h1>
+<p class="mut">Glasovi 2018/2022 su zbir svih jedinica svih nivoa; 2026 kolone opisuju ovogodišnje liste. Top 30 po broju kandidata.</p>
+<table>
+<tr><th>Subjekt</th><th>glasovi 2018</th><th>glasovi 2022</th><th>kandidata 2026</th><th>ikad osvojili</th><th>debitanti</th></tr>
+{% for name, p in parties %}
+<tr>
+<td>{{ name | title }}</td>
+<td class="mut">{{ '{:,}'.format(p.votes18) if p.votes18 else '—' }}</td>
+<td>{{ '{:,}'.format(p.votes22) if p.votes22 else '—' }}</td>
+<td>{{ p.cands26 }}</td>
+<td>{{ p.won_ever }} ({{ (100 * p.won_ever / p.cands26) | round | int }}%)</td>
+<td>{{ p.debut }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

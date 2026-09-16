@@ -1,0 +1,554 @@
+{
+ "race": "oi2026-5",
+ "area": "5",
+ "title": "Predsjednik i potpredsjednici RS",
+ "stats": {
+  "candidates": 12,
+  "persons": 12,
+  "ever_won": 1,
+  "debut": 8,
+  "fillers3": 1
+ },
+ "lists": [
+  {
+   "code": "03045",
+   "name": "STRANKA ŽIVOT",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "БОГДАН ЈОВАНОВИЋ",
+     "pid": "p.oi2026-5.0",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "00018",
+   "name": "SDS-SRPSKA DEMOKRATSKA STRANKA",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "БРАНКО БЛАНУША",
+     "pid": "p.39-5.0",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    }
+   ]
+  },
+  {
+   "code": "03514",
+   "name": "MARKO JORGIĆ - NEOVISNI KANDIDAT",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "MARKO JORGIĆ - NEOVISNI KANDIDAT",
+     "pid": "p.oi2026-5.10",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "01290",
+   "name": "HRVATSKA SELJAČKA STRANKA - HSS",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "IVO KAMENJAŠEVIĆ",
+     "pid": "p.oi2026-5.11",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "01239",
+   "name": "ĆAMIL DURAKOVIĆ - NEZAVISNI KANDIDAT",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "ĆAMIL DURAKOVIĆ - NEZAVISNI KANDIDAT",
+     "pid": "p.oi2026-5.2",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "00008",
+   "name": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "IVAN BEGIĆ",
+     "pid": "p.32-5.21",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    }
+   ]
+  },
+  {
+   "code": "00515",
+   "name": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "САВО МИНИЋ",
+     "pid": "p.oi2026-5.4",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "00769",
+   "name": "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "IGOR BALUKČIĆ",
+     "pid": "p.oi2026-5.5",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "03542",
+   "name": "HDZ BIH, HSP BIH, HKDU, HSP AS, HDU, HSP HB, HRAST",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "FRANJO JUKIĆ",
+     "pid": "p.oi2026-5.6",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "00004",
+   "name": "STRANKA ZA BOSNU I HERCEGOVINU",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "BEGIJA SMAJIĆ",
+     "pid": "p.oi2026-5.7",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "02317",
+   "name": "NAROD I PRAVDA",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "JUSUF ARIFAGIĆ",
+     "pid": "p.25-5.13",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    }
+   ]
+  },
+  {
+   "code": "00090",
+   "name": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "RAMIZ SALKIĆ",
+     "pid": "p.25-5.36",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    }
+   ]
+  }
+ ],
+ "churn": {
+  "m18": 3,
+  "m22": 3,
+  "kept_18_22": 0,
+  "running_again": 0,
+  "gone": [
+   "DAVOR PRANJIĆ",
+   "DODIK MILORAD",
+   "DURAKOVIĆ ĆAMIL"
+  ]
+ },
+ "party_history": [
+  {
+   "year": 2018,
+   "party": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
+   "votes": 319699
+  },
+  {
+   "year": 2022,
+   "party": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
+   "votes": 300180
+  },
+  {
+   "year": 2018,
+   "party": "02370",
+   "votes": 284195
+  },
+  {
+   "year": 2022,
+   "party": "PDP- PARTIJA DEMOKRATSKOG PROGRESA",
+   "votes": 273245
+  },
+  {
+   "year": 2018,
+   "party": "ZAJEDNO ZA BIH",
+   "votes": 21292
+  },
+  {
+   "year": 2022,
+   "party": "ĆAMIL DURAKOVIĆ - NEZAVISNI KANDIDAT",
+   "votes": 13760
+  },
+  {
+   "year": 2022,
+   "party": "03094",
+   "votes": 13680
+  },
+  {
+   "year": 2022,
+   "party": "ZA DRŽAVU BIH",
+   "votes": 10467
+  },
+  {
+   "year": 2018,
+   "party": "ĆAMIL DURAKOVIĆ - NEZAVISNI KANDIDAT",
+   "votes": 10299
+  },
+  {
+   "year": 2018,
+   "party": "PRVA SRPSKA DEMOKRATSKA STRANKA PRVA SDS",
+   "votes": 6021
+  },
+  {
+   "year": 2018,
+   "party": "HDZ BIH,HSS,HKDU BIH,HSP-HNS",
+   "votes": 5881
+  },
+  {
+   "year": 2022,
+   "party": "DNS-DEMOKRATSKI NARODNI SAVEZ",
+   "votes": 5678
+  },
+  {
+   "year": 2018,
+   "party": "SRPSKA NAPREDNA STRANKA",
+   "votes": 4346
+  },
+  {
+   "year": 2018,
+   "party": "02344",
+   "votes": 3273
+  },
+  {
+   "year": 2018,
+   "party": "NEZAVISNI BLOK",
+   "votes": 3221
+  },
+  {
+   "year": 2018,
+   "party": "NEZAVISNA BOSANSKOHERCEGOVAČKA LISTA",
+   "votes": 2550
+  },
+  {
+   "year": 2018,
+   "party": "HRVATSKI NARODNI SAVEZ BIH",
+   "votes": 2379
+  },
+  {
+   "year": 2022,
+   "party": "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH",
+   "votes": 2206
+  },
+  {
+   "year": 2022,
+   "party": "SPS-SOCIJALISTIČKA PARTIJA SRPSKE- \"BUDUĆNOST SRPSKE\"",
+   "votes": 2118
+  },
+  {
+   "year": 2022,
+   "party": "03103",
+   "votes": 1966
+  },
+  {
+   "year": 2018,
+   "party": "SBB - FAHRUDIN RADONČIĆ",
+   "votes": 1941
+  },
+  {
+   "year": 2022,
+   "party": "03052",
+   "votes": 1854
+  },
+  {
+   "year": 2022,
+   "party": "NAŠA PRIČA REPUBLIKA SRPSKA",
+   "votes": 1269
+  },
+  {
+   "year": 2022,
+   "party": "03057",
+   "votes": 1261
+  },
+  {
+   "year": 2022,
+   "party": "STRANKA ŽIVOT",
+   "votes": 1193
+  },
+  {
+   "year": 2018,
+   "party": "SEKULIĆ SLAVKO - NEZAVISNI KANDIDAT",
+   "votes": 1120
+  },
+  {
+   "year": 2018,
+   "party": "KRŠIĆ GORDANA - NEZAVISNI KANDIDAT",
+   "votes": 1111
+  },
+  {
+   "year": 2018,
+   "party": "02336",
+   "votes": 1109
+  },
+  {
+   "year": 2022,
+   "party": "03059",
+   "votes": 1099
+  },
+  {
+   "year": 2018,
+   "party": "02345",
+   "votes": 1021
+  },
+  {
+   "year": 2018,
+   "party": "MIĆIĆ ŽELJKA - NEZAVISNI KANDIDAT",
+   "votes": 1012
+  },
+  {
+   "year": 2018,
+   "party": "DEMOKRATSKA STRANKA INVALIDA BOSNE I HERCEGOVINE",
+   "votes": 896
+  },
+  {
+   "year": 2018,
+   "party": "02346",
+   "votes": 887
+  },
+  {
+   "year": 2018,
+   "party": "02331",
+   "votes": 818
+  },
+  {
+   "year": 2022,
+   "party": "03060",
+   "votes": 807
+  },
+  {
+   "year": 2018,
+   "party": "02334",
+   "votes": 761
+  },
+  {
+   "year": 2022,
+   "party": "02362",
+   "votes": 758
+  },
+  {
+   "year": 2018,
+   "party": "02337",
+   "votes": 733
+  },
+  {
+   "year": 2022,
+   "party": "03039",
+   "votes": 696
+  },
+  {
+   "year": 2018,
+   "party": "02362",
+   "votes": 659
+  },
+  {
+   "year": 2022,
+   "party": "SEKULIĆ SLAVKO - NEZAVISNI KANDIDAT",
+   "votes": 623
+  },
+  {
+   "year": 2022,
+   "party": "03041",
+   "votes": 560
+  },
+  {
+   "year": 2018,
+   "party": "USD BH UNIJA SOCIJALDEMOKRATA BH USD BH",
+   "votes": 555
+  },
+  {
+   "year": 2018,
+   "party": "STEVANOVIĆ JOVAN - NEZAVISNI KANDIDAT",
+   "votes": 525
+  },
+  {
+   "year": 2022,
+   "party": "03049",
+   "votes": 510
+  },
+  {
+   "year": 2022,
+   "party": "03053",
+   "votes": 502
+  },
+  {
+   "year": 2022,
+   "party": "DRAGIČEVIĆ DUŠAN - NEZAVISNI KANDIDAT",
+   "votes": 497
+  },
+  {
+   "year": 2022,
+   "party": "EKOLOŠKA PARTIJA REPUBLIKE SRPSKE",
+   "votes": 482
+  },
+  {
+   "year": 2018,
+   "party": "02365",
+   "votes": 464
+  },
+  {
+   "year": 2022,
+   "party": "SRPSKA NAPREDNA STRANKA RS-FBIH-ZA PROMJENE",
+   "votes": 409
+  },
+  {
+   "year": 2018,
+   "party": "JOVANOVIĆ IGOR - NEZAVISNI KANDIDAT",
+   "votes": 405
+  },
+  {
+   "year": 2022,
+   "party": "NOVO DOBA",
+   "votes": 396
+  },
+  {
+   "year": 2018,
+   "party": "02333",
+   "votes": 377
+  },
+  {
+   "year": 2018,
+   "party": "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH",
+   "votes": 349
+  },
+  {
+   "year": 2022,
+   "party": "03064",
+   "votes": 337
+  },
+  {
+   "year": 2018,
+   "party": "02351",
+   "votes": 332
+  },
+  {
+   "year": 2018,
+   "party": "02338",
+   "votes": 322
+  },
+  {
+   "year": 2022,
+   "party": "03042",
+   "votes": 313
+  },
+  {
+   "year": 2022,
+   "party": "NS",
+   "votes": 260
+  },
+  {
+   "year": 2022,
+   "party": "02337",
+   "votes": 251
+  },
+  {
+   "year": 2018,
+   "party": "NS",
+   "votes": 244
+  },
+  {
+   "year": 2018,
+   "party": "02342",
+   "votes": 240
+  },
+  {
+   "year": 2022,
+   "party": "03040",
+   "votes": 232
+  },
+  {
+   "year": 2018,
+   "party": "02350",
+   "votes": 230
+  },
+  {
+   "year": 2018,
+   "party": "SAVEZ ZA STARI GRAD",
+   "votes": 220
+  },
+  {
+   "year": 2022,
+   "party": "03062",
+   "votes": 214
+  },
+  {
+   "year": 2018,
+   "party": "02335",
+   "votes": 114
+  }
+ ]
+}

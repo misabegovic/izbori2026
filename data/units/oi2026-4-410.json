@@ -1,0 +1,315 @@
+{
+ "race": "oi2026-4",
+ "area": "410",
+ "title": "Predstavnički dom Parlamenta FBiH",
+ "stats": {
+  "candidates": 21,
+  "persons": 21,
+  "ever_won": 5,
+  "debut": 11,
+  "fillers3": 1
+ },
+ "lists": [
+  {
+   "code": "03544",
+   "name": "HDZ BIH, HSS SR, HSP BIH, HKDU, HSP AS, HDU, HSP HB, HRAST",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "TONI KRALJEVIĆ",
+     "pid": "p.oi2026-4.996",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 2,
+     "name": "FRANKA LEKO",
+     "pid": "p.32-4.1050",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 3,
+     "name": "PETAR PIŠKOVIĆ",
+     "pid": "p.oi2026-4.998",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 4,
+     "name": "TOMISLAV MANDIĆ",
+     "pid": "p.oi2026-4.999",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 5,
+     "name": "MARIJA KIKAŠ",
+     "pid": "p.32-4.1053",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": true,
+     "confidence": "probable"
+    },
+    {
+     "pos": 6,
+     "name": "KATARINA LASIĆ",
+     "pid": "p.oi2026-4.1001",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 7,
+     "name": "MATE LONČAR",
+     "pid": "p.32-4.1051",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 8,
+     "name": "ZORAN POLUNIĆ",
+     "pid": "p.oi2026-4.1003",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "03556",
+   "name": "KOALICIJA HDZ 1990, HRS, HDS I HSS",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "RADOSLAV RADIŠIĆ",
+     "pid": "p.2121-9.27565",
+     "stood": 6,
+     "won": 3,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 2,
+     "name": "DANA MARIJANOVIĆ",
+     "pid": "p.oi2026-4.1005",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 3,
+     "name": "ANTE PAVKOVIĆ",
+     "pid": "p.oi2026-4.1006",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "proved"
+    },
+    {
+     "pos": 4,
+     "name": "DARKO BOŠNJAK",
+     "pid": "p.oi2026-4.1007",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 5,
+     "name": "MARTINA MIJATOVIĆ",
+     "pid": "p.oi2026-4.1008",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 6,
+     "name": "GORDAN JELIĆ",
+     "pid": "p.oi2026-4.1009",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 7,
+     "name": "PETAR CRNOGORAC",
+     "pid": "p.oi2026-4.1010",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 8,
+     "name": "MAJA ČEPO",
+     "pid": "p.oi2026-4.1011",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "00008",
+   "name": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "IVAN BOBAN",
+     "pid": "p.2081-9.21435",
+     "stood": 7,
+     "won": 4,
+     "office": true,
+     "bio": true,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 2,
+     "name": "NIKOLINA HERCEG",
+     "pid": "p.36-9.21820",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 3,
+     "name": "ANTE PRALAS",
+     "pid": "p.36-9.21821",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 4,
+     "name": "KRISTINA BOŠNJAK",
+     "pid": "p.13-9.25812",
+     "stood": 4,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 5,
+     "name": "VLADO RAŠIĆ",
+     "pid": "p.2121-9.25663",
+     "stood": 7,
+     "won": 2,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    }
+   ]
+  }
+ ],
+ "churn": {
+  "m18": 4,
+  "m22": 5,
+  "kept_18_22": 3,
+  "running_again": 2,
+  "gone": [
+   "DARIO KNEZOVIĆ",
+   "KARAMATIĆ MARIO",
+   "MUSA STANKO"
+  ]
+ },
+ "party_history": [
+  {
+   "year": 2022,
+   "party": "HDZ BIH,HSSSR,HSS,HSP BIH,HKDU,HSPAS,HDU,HSPHB,HRAST,HNL",
+   "votes": 62504
+  },
+  {
+   "year": 2018,
+   "party": "HDZ BIH,HSS,HKDU BIH,HSP-HNS,HSP DR AS BIH,HDU BIH,HSS SR",
+   "votes": 50744
+  },
+  {
+   "year": 2022,
+   "party": "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990",
+   "votes": 7044
+  },
+  {
+   "year": 2018,
+   "party": "HRVATSKO ZAJEDNIŠTVO HDZ 1990-HSP BIH-HNL",
+   "votes": 6438
+  },
+  {
+   "year": 2018,
+   "party": "HRS-HRVATSKA REPUBLIKANSKA STRANKA",
+   "votes": 3212
+  },
+  {
+   "year": 2022,
+   "party": "HRS-HRVATSKA REPUBLIKANSKA STRANKA",
+   "votes": 1793
+  },
+  {
+   "year": 2018,
+   "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+   "votes": 555
+  },
+  {
+   "year": 2022,
+   "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+   "votes": 471
+  },
+  {
+   "year": 2018,
+   "party": "BPS-SEFER HALILOVIĆ",
+   "votes": 71
+  },
+  {
+   "year": 2022,
+   "party": "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH",
+   "votes": 65
+  },
+  {
+   "year": 2022,
+   "party": "BPS-SEFER HALILOVIĆ",
+   "votes": 16
+  },
+  {
+   "year": 2018,
+   "party": "SAVEZ ZA STARI GRAD",
+   "votes": 14
+  }
+ ]
+}

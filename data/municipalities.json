@@ -1,0 +1,2614 @@
+[
+ {
+  "name": "Foča-Ustikolina",
+  "slug": "ba.fbih.bpk.foca-ustikolina",
+  "group": "Bosansko-podrinjski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "407"
+   ],
+   [
+    "oi2026-2",
+    "513"
+   ],
+   [
+    "oi2026-7",
+    "205"
+   ]
+  ]
+ },
+ {
+  "name": "Goražde",
+  "slug": "ba.fbih.bpk.gorazde",
+  "group": "Bosansko-podrinjski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "407"
+   ],
+   [
+    "oi2026-2",
+    "513"
+   ],
+   [
+    "oi2026-7",
+    "205"
+   ]
+  ]
+ },
+ {
+  "name": "Pale-Prača",
+  "slug": "ba.fbih.bpk.pale-praca",
+  "group": "Bosansko-podrinjski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "407"
+   ],
+   [
+    "oi2026-2",
+    "513"
+   ],
+   [
+    "oi2026-7",
+    "205"
+   ]
+  ]
+ },
+ {
+  "name": "Brčko distrikt BiH",
+  "slug": "ba.bd",
+  "group": "Brčko distrikt BiH",
+  "entity": "brcko",
+  "refs": [
+   [
+    "oi2026-6",
+    "306"
+   ],
+   [
+    "oi2026-4",
+    "402"
+   ],
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Čapljina",
+  "slug": "ba.fbih.hnk.capljina",
+  "group": "Hercegovačko-neretvanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "409"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "207"
+   ]
+  ]
+ },
+ {
+  "name": "Čitluk",
+  "slug": "ba.fbih.hnk.citluk",
+  "group": "Hercegovačko-neretvanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "409"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "207"
+   ]
+  ]
+ },
+ {
+  "name": "Jablanica",
+  "slug": "ba.fbih.hnk.jablanica",
+  "group": "Hercegovačko-neretvanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "409"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "207"
+   ]
+  ]
+ },
+ {
+  "name": "Konjic",
+  "slug": "ba.fbih.hnk.konjic",
+  "group": "Hercegovačko-neretvanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "409"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "207"
+   ]
+  ]
+ },
+ {
+  "name": "Mostar",
+  "slug": "ba.fbih.hnk.mostar",
+  "group": "Hercegovačko-neretvanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "409"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "207"
+   ]
+  ]
+ },
+ {
+  "name": "Neum",
+  "slug": "ba.fbih.hnk.neum",
+  "group": "Hercegovačko-neretvanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "409"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "207"
+   ]
+  ]
+ },
+ {
+  "name": "Prozor-Rama",
+  "slug": "ba.fbih.hnk.prozor-rama",
+  "group": "Hercegovačko-neretvanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "409"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "207"
+   ]
+  ]
+ },
+ {
+  "name": "Ravno",
+  "slug": "ba.fbih.hnk.ravno",
+  "group": "Hercegovačko-neretvanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "409"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "207"
+   ]
+  ]
+ },
+ {
+  "name": "Stolac",
+  "slug": "ba.fbih.hnk.stolac",
+  "group": "Hercegovačko-neretvanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "409"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "207"
+   ]
+  ]
+ },
+ {
+  "name": "Istočna Ilidža",
+  "slug": "ba.rs.istocno-sarajevo.istocna-ilidza",
+  "group": "Istočno Sarajevo",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "308"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Istočni Stari Grad",
+  "slug": "ba.rs.istocno-sarajevo.istocni-stari-grad",
+  "group": "Istočno Sarajevo",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "308"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Istočno Novo Sarajevo",
+  "slug": "ba.rs.istocno-sarajevo.istocno-novo-sarajevo",
+  "group": "Istočno Sarajevo",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "308"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Pale",
+  "slug": "ba.rs.istocno-sarajevo.pale",
+  "group": "Istočno Sarajevo",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "308"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Sokolac",
+  "slug": "ba.rs.istocno-sarajevo.sokolac",
+  "group": "Istočno Sarajevo",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "308"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Trnovo (RS)",
+  "slug": "ba.rs.istocno-sarajevo.trnovo",
+  "group": "Istočno Sarajevo",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "308"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Bosansko Grahovo",
+  "slug": "ba.fbih.k10.bosansko-grahovo",
+  "group": "Kanton 10",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "412"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "210"
+   ]
+  ]
+ },
+ {
+  "name": "Drvar",
+  "slug": "ba.fbih.k10.drvar",
+  "group": "Kanton 10",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "412"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "210"
+   ]
+  ]
+ },
+ {
+  "name": "Glamoč",
+  "slug": "ba.fbih.k10.glamoc",
+  "group": "Kanton 10",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "412"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "210"
+   ]
+  ]
+ },
+ {
+  "name": "Kupres (FBiH)",
+  "slug": "ba.fbih.k10.kupres",
+  "group": "Kanton 10",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "412"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "210"
+   ]
+  ]
+ },
+ {
+  "name": "Livno",
+  "slug": "ba.fbih.k10.livno",
+  "group": "Kanton 10",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "412"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "210"
+   ]
+  ]
+ },
+ {
+  "name": "Tomislavgrad",
+  "slug": "ba.fbih.k10.tomislavgrad",
+  "group": "Kanton 10",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "412"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "210"
+   ]
+  ]
+ },
+ {
+  "name": "Centar Sarajevo",
+  "slug": "ba.fbih.ks.centar-sarajevo",
+  "group": "Kanton Sarajevo",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "513"
+   ],
+   [
+    "oi2026-7",
+    "209"
+   ],
+   [
+    "oi2026-4",
+    "411"
+   ]
+  ]
+ },
+ {
+  "name": "Hadžići",
+  "slug": "ba.fbih.ks.hadzici",
+  "group": "Kanton Sarajevo",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "513"
+   ],
+   [
+    "oi2026-7",
+    "209"
+   ],
+   [
+    "oi2026-4",
+    "407"
+   ]
+  ]
+ },
+ {
+  "name": "Ilidža",
+  "slug": "ba.fbih.ks.ilidza",
+  "group": "Kanton Sarajevo",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "513"
+   ],
+   [
+    "oi2026-7",
+    "209"
+   ],
+   [
+    "oi2026-4",
+    "407"
+   ]
+  ]
+ },
+ {
+  "name": "Ilijaš",
+  "slug": "ba.fbih.ks.ilijas",
+  "group": "Kanton Sarajevo",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "513"
+   ],
+   [
+    "oi2026-7",
+    "209"
+   ],
+   [
+    "oi2026-4",
+    "411"
+   ]
+  ]
+ },
+ {
+  "name": "Novi Grad Sarajevo",
+  "slug": "ba.fbih.ks.novi-grad-sarajevo",
+  "group": "Kanton Sarajevo",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "513"
+   ],
+   [
+    "oi2026-7",
+    "209"
+   ],
+   [
+    "oi2026-4",
+    "407"
+   ]
+  ]
+ },
+ {
+  "name": "Novo Sarajevo",
+  "slug": "ba.fbih.ks.novo-sarajevo",
+  "group": "Kanton Sarajevo",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "513"
+   ],
+   [
+    "oi2026-7",
+    "209"
+   ],
+   [
+    "oi2026-4",
+    "411"
+   ]
+  ]
+ },
+ {
+  "name": "Stari Grad Sarajevo",
+  "slug": "ba.fbih.ks.stari-grad-sarajevo",
+  "group": "Kanton Sarajevo",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "513"
+   ],
+   [
+    "oi2026-7",
+    "209"
+   ],
+   [
+    "oi2026-4",
+    "411"
+   ]
+  ]
+ },
+ {
+  "name": "Trnovo (FBiH)",
+  "slug": "ba.fbih.ks.trnovo",
+  "group": "Kanton Sarajevo",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "513"
+   ],
+   [
+    "oi2026-7",
+    "209"
+   ],
+   [
+    "oi2026-4",
+    "407"
+   ]
+  ]
+ },
+ {
+  "name": "Vogošća",
+  "slug": "ba.fbih.ks.vogosca",
+  "group": "Kanton Sarajevo",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "513"
+   ],
+   [
+    "oi2026-7",
+    "209"
+   ],
+   [
+    "oi2026-4",
+    "411"
+   ]
+  ]
+ },
+ {
+  "name": "Domaljevac-Šamac",
+  "slug": "ba.fbih.posavski.domaljevac-samac",
+  "group": "Posavski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "402"
+   ],
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "202"
+   ]
+  ]
+ },
+ {
+  "name": "Odžak",
+  "slug": "ba.fbih.posavski.odzak",
+  "group": "Posavski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "402"
+   ],
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "202"
+   ]
+  ]
+ },
+ {
+  "name": "Orašje",
+  "slug": "ba.fbih.posavski.orasje",
+  "group": "Posavski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "402"
+   ],
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "202"
+   ]
+  ]
+ },
+ {
+  "name": "Banja Luka",
+  "slug": "ba.rs.banja-luka",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "303"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Berkovići",
+  "slug": "ba.rs.berkovici",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Bijeljina",
+  "slug": "ba.rs.bijeljina",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "306"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Bileća",
+  "slug": "ba.rs.bileca",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Bratunac",
+  "slug": "ba.rs.bratunac",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "307"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Brod",
+  "slug": "ba.rs.brod",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "304"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Čajniče",
+  "slug": "ba.rs.cajnice",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Čelinac",
+  "slug": "ba.rs.celinac",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "303"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Derventa",
+  "slug": "ba.rs.derventa",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "304"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Doboj",
+  "slug": "ba.rs.doboj",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "305"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Donji Žabar",
+  "slug": "ba.rs.donji-zabar",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "306"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Foča",
+  "slug": "ba.rs.foca",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Gacko",
+  "slug": "ba.rs.gacko",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Gradiška",
+  "slug": "ba.rs.gradiska",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "302"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Han Pijesak",
+  "slug": "ba.rs.han-pijesak",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "308"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Istočni Drvar",
+  "slug": "ba.rs.istocni-drvar",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "303"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Istočni Mostar",
+  "slug": "ba.rs.istocni-mostar",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Jezero",
+  "slug": "ba.rs.jezero",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "303"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Kalinovik",
+  "slug": "ba.rs.kalinovik",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Kneževo",
+  "slug": "ba.rs.knezevo",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "303"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Kostajnica",
+  "slug": "ba.rs.kostajnica",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "301"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Kotor Varoš",
+  "slug": "ba.rs.kotor-varos",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "303"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Kozarska Dubica",
+  "slug": "ba.rs.kozarska-dubica",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "301"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Krupa na Uni",
+  "slug": "ba.rs.krupa-na-uni",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "301"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Kupres (RS)",
+  "slug": "ba.rs.kupres",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "303"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Laktaši",
+  "slug": "ba.rs.laktasi",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "302"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Lopare",
+  "slug": "ba.rs.lopare",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "306"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Ljubinje",
+  "slug": "ba.rs.ljubinje",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Milići",
+  "slug": "ba.rs.milici",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "307"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Modriča",
+  "slug": "ba.rs.modrica",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "304"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Mrkonjić Grad",
+  "slug": "ba.rs.mrkonjic-grad",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "303"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Nevesinje",
+  "slug": "ba.rs.nevesinje",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Novi Grad",
+  "slug": "ba.rs.novi-grad",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "301"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Novo Goražde",
+  "slug": "ba.rs.novo-gorazde",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Osmaci",
+  "slug": "ba.rs.osmaci",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "307"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Oštra Luka",
+  "slug": "ba.rs.ostra-luka",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "301"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Pelagićevo",
+  "slug": "ba.rs.pelagicevo",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "306"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Petrovac",
+  "slug": "ba.rs.petrovac",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "303"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Petrovo",
+  "slug": "ba.rs.petrovo",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "305"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Prijedor",
+  "slug": "ba.rs.prijedor",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "301"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Prnjavor",
+  "slug": "ba.rs.prnjavor",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "302"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Ribnik",
+  "slug": "ba.rs.ribnik",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "303"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Rogatica",
+  "slug": "ba.rs.rogatica",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "308"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Rudo",
+  "slug": "ba.rs.rudo",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Srbac",
+  "slug": "ba.rs.srbac",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "302"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Srebrenica",
+  "slug": "ba.rs.srebrenica",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "307"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Stanari",
+  "slug": "ba.rs.stanari",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "305"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Šamac",
+  "slug": "ba.rs.samac",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "306"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Šekovići",
+  "slug": "ba.rs.sekovici",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "307"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Šipovo",
+  "slug": "ba.rs.sipovo",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "303"
+   ],
+   [
+    "oi2026-2",
+    "521"
+   ]
+  ]
+ },
+ {
+  "name": "Teslić",
+  "slug": "ba.rs.teslic",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "305"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Trebinje",
+  "slug": "ba.rs.trebinje",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Ugljevik",
+  "slug": "ba.rs.ugljevik",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "306"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Višegrad",
+  "slug": "ba.rs.visegrad",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "309"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Vlasenica",
+  "slug": "ba.rs.vlasenica",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "307"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Vukosavlje",
+  "slug": "ba.rs.vukosavlje",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "304"
+   ],
+   [
+    "oi2026-2",
+    "522"
+   ]
+  ]
+ },
+ {
+  "name": "Zvornik",
+  "slug": "ba.rs.zvornik",
+  "group": "Republika Srpska",
+  "entity": "rs",
+  "refs": [
+   [
+    "oi2026-6",
+    "307"
+   ],
+   [
+    "oi2026-2",
+    "523"
+   ]
+  ]
+ },
+ {
+  "name": "Bugojno",
+  "slug": "ba.fbih.sbk.bugojno",
+  "group": "Srednjobosanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "408"
+   ],
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "206"
+   ]
+  ]
+ },
+ {
+  "name": "Busovača",
+  "slug": "ba.fbih.sbk.busovaca",
+  "group": "Srednjobosanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "408"
+   ],
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "206"
+   ]
+  ]
+ },
+ {
+  "name": "Dobretići",
+  "slug": "ba.fbih.sbk.dobretici",
+  "group": "Srednjobosanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "408"
+   ],
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "206"
+   ]
+  ]
+ },
+ {
+  "name": "Donji Vakuf",
+  "slug": "ba.fbih.sbk.donji-vakuf",
+  "group": "Srednjobosanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "408"
+   ],
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "206"
+   ]
+  ]
+ },
+ {
+  "name": "Fojnica",
+  "slug": "ba.fbih.sbk.fojnica",
+  "group": "Srednjobosanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "408"
+   ],
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "206"
+   ]
+  ]
+ },
+ {
+  "name": "Gornji Vakuf-Uskoplje",
+  "slug": "ba.fbih.sbk.gornji-vakuf-uskoplje",
+  "group": "Srednjobosanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "408"
+   ],
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "206"
+   ]
+  ]
+ },
+ {
+  "name": "Jajce",
+  "slug": "ba.fbih.sbk.jajce",
+  "group": "Srednjobosanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "408"
+   ],
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "206"
+   ]
+  ]
+ },
+ {
+  "name": "Kiseljak",
+  "slug": "ba.fbih.sbk.kiseljak",
+  "group": "Srednjobosanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "408"
+   ],
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "206"
+   ]
+  ]
+ },
+ {
+  "name": "Kreševo",
+  "slug": "ba.fbih.sbk.kresevo",
+  "group": "Srednjobosanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "408"
+   ],
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "206"
+   ]
+  ]
+ },
+ {
+  "name": "Novi Travnik",
+  "slug": "ba.fbih.sbk.novi-travnik",
+  "group": "Srednjobosanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "408"
+   ],
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "206"
+   ]
+  ]
+ },
+ {
+  "name": "Travnik",
+  "slug": "ba.fbih.sbk.travnik",
+  "group": "Srednjobosanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "408"
+   ],
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "206"
+   ]
+  ]
+ },
+ {
+  "name": "Vitez",
+  "slug": "ba.fbih.sbk.vitez",
+  "group": "Srednjobosanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "408"
+   ],
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "206"
+   ]
+  ]
+ },
+ {
+  "name": "Banovići",
+  "slug": "ba.fbih.tk.banovici",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "404"
+   ]
+  ]
+ },
+ {
+  "name": "Čelić",
+  "slug": "ba.fbih.tk.celic",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "403"
+   ]
+  ]
+ },
+ {
+  "name": "Doboj-Istok",
+  "slug": "ba.fbih.tk.doboj-istok",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "402"
+   ]
+  ]
+ },
+ {
+  "name": "Gračanica",
+  "slug": "ba.fbih.tk.gracanica",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "402"
+   ]
+  ]
+ },
+ {
+  "name": "Gradačac",
+  "slug": "ba.fbih.tk.gradacac",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "402"
+   ]
+  ]
+ },
+ {
+  "name": "Kalesija",
+  "slug": "ba.fbih.tk.kalesija",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "404"
+   ]
+  ]
+ },
+ {
+  "name": "Kladanj",
+  "slug": "ba.fbih.tk.kladanj",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "404"
+   ]
+  ]
+ },
+ {
+  "name": "Lukavac",
+  "slug": "ba.fbih.tk.lukavac",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "403"
+   ]
+  ]
+ },
+ {
+  "name": "Sapna",
+  "slug": "ba.fbih.tk.sapna",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "404"
+   ]
+  ]
+ },
+ {
+  "name": "Srebrenik",
+  "slug": "ba.fbih.tk.srebrenik",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "403"
+   ]
+  ]
+ },
+ {
+  "name": "Teočak",
+  "slug": "ba.fbih.tk.teocak",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "404"
+   ]
+  ]
+ },
+ {
+  "name": "Tuzla",
+  "slug": "ba.fbih.tk.tuzla",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "403"
+   ]
+  ]
+ },
+ {
+  "name": "Živinice",
+  "slug": "ba.fbih.tk.zivinice",
+  "group": "Tuzlanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "515"
+   ],
+   [
+    "oi2026-7",
+    "203"
+   ],
+   [
+    "oi2026-4",
+    "404"
+   ]
+  ]
+ },
+ {
+  "name": "Bihać",
+  "slug": "ba.fbih.usk.bihac",
+  "group": "Unsko-sanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "401"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "201"
+   ]
+  ]
+ },
+ {
+  "name": "Bosanska Krupa",
+  "slug": "ba.fbih.usk.bosanska-krupa",
+  "group": "Unsko-sanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "401"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "201"
+   ]
+  ]
+ },
+ {
+  "name": "Bosanski Petrovac",
+  "slug": "ba.fbih.usk.bosanski-petrovac",
+  "group": "Unsko-sanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "401"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "201"
+   ]
+  ]
+ },
+ {
+  "name": "Bužim",
+  "slug": "ba.fbih.usk.buzim",
+  "group": "Unsko-sanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "401"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "201"
+   ]
+  ]
+ },
+ {
+  "name": "Cazin",
+  "slug": "ba.fbih.usk.cazin",
+  "group": "Unsko-sanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "401"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "201"
+   ]
+  ]
+ },
+ {
+  "name": "Ključ",
+  "slug": "ba.fbih.usk.kljuc",
+  "group": "Unsko-sanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "401"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "201"
+   ]
+  ]
+ },
+ {
+  "name": "Sanski Most",
+  "slug": "ba.fbih.usk.sanski-most",
+  "group": "Unsko-sanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "401"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "201"
+   ]
+  ]
+ },
+ {
+  "name": "Velika Kladuša",
+  "slug": "ba.fbih.usk.velika-kladusa",
+  "group": "Unsko-sanski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "401"
+   ],
+   [
+    "oi2026-2",
+    "511"
+   ],
+   [
+    "oi2026-7",
+    "201"
+   ]
+  ]
+ },
+ {
+  "name": "Grude",
+  "slug": "ba.fbih.zhk.grude",
+  "group": "Zapadnohercegovački kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "410"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "208"
+   ]
+  ]
+ },
+ {
+  "name": "Ljubuški",
+  "slug": "ba.fbih.zhk.ljubuski",
+  "group": "Zapadnohercegovački kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "410"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "208"
+   ]
+  ]
+ },
+ {
+  "name": "Posušje",
+  "slug": "ba.fbih.zhk.posusje",
+  "group": "Zapadnohercegovački kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "410"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "208"
+   ]
+  ]
+ },
+ {
+  "name": "Široki Brijeg",
+  "slug": "ba.fbih.zhk.siroki-brijeg",
+  "group": "Zapadnohercegovački kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-4",
+    "410"
+   ],
+   [
+    "oi2026-2",
+    "512"
+   ],
+   [
+    "oi2026-7",
+    "208"
+   ]
+  ]
+ },
+ {
+  "name": "Breza",
+  "slug": "ba.fbih.zdk.breza",
+  "group": "Zeničko-dobojski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "204"
+   ],
+   [
+    "oi2026-4",
+    "406"
+   ]
+  ]
+ },
+ {
+  "name": "Doboj-Jug",
+  "slug": "ba.fbih.zdk.doboj-jug",
+  "group": "Zeničko-dobojski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "204"
+   ],
+   [
+    "oi2026-4",
+    "405"
+   ]
+  ]
+ },
+ {
+  "name": "Kakanj",
+  "slug": "ba.fbih.zdk.kakanj",
+  "group": "Zeničko-dobojski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "204"
+   ],
+   [
+    "oi2026-4",
+    "406"
+   ]
+  ]
+ },
+ {
+  "name": "Maglaj",
+  "slug": "ba.fbih.zdk.maglaj",
+  "group": "Zeničko-dobojski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "204"
+   ],
+   [
+    "oi2026-4",
+    "405"
+   ]
+  ]
+ },
+ {
+  "name": "Olovo",
+  "slug": "ba.fbih.zdk.olovo",
+  "group": "Zeničko-dobojski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "204"
+   ],
+   [
+    "oi2026-4",
+    "406"
+   ]
+  ]
+ },
+ {
+  "name": "Tešanj",
+  "slug": "ba.fbih.zdk.tesanj",
+  "group": "Zeničko-dobojski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "204"
+   ],
+   [
+    "oi2026-4",
+    "405"
+   ]
+  ]
+ },
+ {
+  "name": "Usora",
+  "slug": "ba.fbih.zdk.usora",
+  "group": "Zeničko-dobojski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "204"
+   ],
+   [
+    "oi2026-4",
+    "405"
+   ]
+  ]
+ },
+ {
+  "name": "Vareš",
+  "slug": "ba.fbih.zdk.vares",
+  "group": "Zeničko-dobojski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "204"
+   ],
+   [
+    "oi2026-4",
+    "406"
+   ]
+  ]
+ },
+ {
+  "name": "Visoko",
+  "slug": "ba.fbih.zdk.visoko",
+  "group": "Zeničko-dobojski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "204"
+   ],
+   [
+    "oi2026-4",
+    "406"
+   ]
+  ]
+ },
+ {
+  "name": "Zavidovići",
+  "slug": "ba.fbih.zdk.zavidovici",
+  "group": "Zeničko-dobojski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "204"
+   ],
+   [
+    "oi2026-4",
+    "405"
+   ]
+  ]
+ },
+ {
+  "name": "Zenica",
+  "slug": "ba.fbih.zdk.zenica",
+  "group": "Zeničko-dobojski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "204"
+   ],
+   [
+    "oi2026-4",
+    "405"
+   ]
+  ]
+ },
+ {
+  "name": "Žepče",
+  "slug": "ba.fbih.zdk.zepce",
+  "group": "Zeničko-dobojski kanton",
+  "entity": "fbih",
+  "refs": [
+   [
+    "oi2026-2",
+    "514"
+   ],
+   [
+    "oi2026-7",
+    "204"
+   ],
+   [
+    "oi2026-4",
+    "405"
+   ]
+  ]
+ }
+]

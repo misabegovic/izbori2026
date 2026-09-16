@@ -1,0 +1,118 @@
+{
+ "race": "oi2026-1",
+ "area": "703",
+ "title": "Predsjedništvo BiH",
+ "stats": {
+  "candidates": 3,
+  "persons": 3,
+  "ever_won": 1,
+  "debut": 2,
+  "fillers3": 0
+ },
+ "lists": [
+  {
+   "code": "00018",
+   "name": "SDS-SRPSKA DEMOKRATSKA STRANKA",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "МАРИНКО БОЖОВИЋ",
+     "pid": "p.oi2026-1.7",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "00515",
+   "name": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "ЖЕЉКА ЦВИЈАНОВИЋ",
+     "pid": "p.32-1.7",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": true,
+     "confidence": "probable"
+    }
+   ]
+  },
+  {
+   "code": "01702",
+   "name": "ZA PRAVDU I RED LISTA NEBOJŠE VUKANOVIĆA",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "НЕБОЈША ВУКАНОВИЋ",
+     "pid": "p.oi2026-1.9",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  }
+ ],
+ "churn": {
+  "m18": 1,
+  "m22": 1,
+  "kept_18_22": 0,
+  "running_again": 0,
+  "gone": [
+   "CVIJANOVIĆ ŽELJKA"
+  ]
+ },
+ "party_history": [
+  {
+   "year": 2018,
+   "party": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
+   "votes": 368210
+  },
+  {
+   "year": 2022,
+   "party": "SAVEZ NEZAVISNIH SOCIJALDEMOKRATA - SNSD",
+   "votes": 327720
+  },
+  {
+   "year": 2018,
+   "party": "02370",
+   "votes": 292065
+  },
+  {
+   "year": 2022,
+   "party": "SDS-SRPSKA DEMOKRATSKA STRANKA",
+   "votes": 224912
+  },
+  {
+   "year": 2022,
+   "party": "03077",
+   "votes": 38655
+  },
+  {
+   "year": 2022,
+   "party": "DNS-DEMOKRATSKI NARODNI SAVEZ",
+   "votes": 34955
+  },
+  {
+   "year": 2018,
+   "party": "SRPSKA NAPREDNA STRANKA",
+   "votes": 12731
+  },
+  {
+   "year": 2018,
+   "party": "PRVA SRPSKA DEMOKRATSKA STRANKA PRVA SDS",
+   "votes": 10355
+  },
+  {
+   "year": 2022,
+   "party": "STRANKA ŽIVOT",
+   "votes": 8278
+  }
+ ]
+}

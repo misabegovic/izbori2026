@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Poslanici — zapis glasanja — Izbori 2026{% endblock %}
+{% block content %}
+<h1>Kako su glasali: državni poslanici koji se ponovo kandiduju</h1>
+<p class="note">Poimenična glasanja u Predstavničkom domu PSBiH, saziv 2022–2026. Prikazani su samo poslanici koji su 2022. osvojili mandat i ponovo su na listićima 2026. „Lični glasovi 2022” = preferencijalni glasovi koje je kandidat sam dobio.</p>
+<table>
+<tr><th>Poslanik</th><th>Za</th><th>Protiv</th><th>Suzdržan</th><th>% za</th><th>govori</th><th>lični glasovi 2022</th></tr>
+{% for m in mps %}
+<tr>
+<td>{{ m.name | title }}</td>
+<td>{{ m.za }}</td>
+<td>{{ m.protiv }}</td>
+<td>{{ m.suzdrzan }}</td>
+<td><span class="bar" style="width:{{ (m.za_pct * 0.6) | int }}px"></span> {{ m.za_pct }}%</td>
+<td>{{ m.speeches }}</td>
+<td>{{ '{:,}'.format(m.personal22) if m.personal22 else '—' }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,132 @@
+{
+ "race": "oi2026-1",
+ "area": "701",
+ "title": "Predsjedništvo BiH",
+ "stats": {
+  "candidates": 4,
+  "persons": 4,
+  "ever_won": 1,
+  "debut": 1,
+  "fillers3": 0
+ },
+ "lists": [
+  {
+   "code": "01182",
+   "name": "SBB - FAHRUDIN RADONČIĆ",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "FAHRUDIN RADONČIĆ",
+     "pid": "p.25-1.3",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    }
+   ]
+  },
+  {
+   "code": "00004",
+   "name": "STRANKA ZA BOSNU I HERCEGOVINU",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "SEMIR EFENDIĆ",
+     "pid": "p.oi2026-1.1",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "00090",
+   "name": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "BAKIR IZETBEGOVIĆ",
+     "pid": "p.32-1.0",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    }
+   ]
+  },
+  {
+   "code": "03533",
+   "name": "UJEDINJENI ZA DRŽAVU BOSNU I HERCEGOVINU",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "DENIS BEĆIROVIĆ",
+     "pid": "p.25-1.1",
+     "stood": 3,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    }
+   ]
+  }
+ ],
+ "churn": {
+  "m18": 1,
+  "m22": 1,
+  "kept_18_22": 0,
+  "running_again": 1,
+  "gone": []
+ },
+ "party_history": [
+  {
+   "year": 2022,
+   "party": "03077",
+   "votes": 330238
+  },
+  {
+   "year": 2022,
+   "party": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+   "votes": 214412
+  },
+  {
+   "year": 2018,
+   "party": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+   "votes": 212581
+  },
+  {
+   "year": 2018,
+   "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+   "votes": 194688
+  },
+  {
+   "year": 2018,
+   "party": "SBB - FAHRUDIN RADONČIĆ",
+   "votes": 75210
+  },
+  {
+   "year": 2018,
+   "party": "PLATFORMA ZA PROGRES",
+   "votes": 58555
+  },
+  {
+   "year": 2022,
+   "party": "PLATFORMA ZA PROGRES",
+   "votes": 30968
+  },
+  {
+   "year": 2018,
+   "party": "NEZAVISNI BLOK",
+   "votes": 29922
+  },
+  {
+   "year": 2018,
+   "party": "STRANKA ZA BOSNU I HERCEGOVINU",
+   "votes": 9655
+  }
+ ]
+}

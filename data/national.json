@@ -1,0 +1,53 @@
+{
+ "generated": "2026-09-16T07:36:39.671041+00:00",
+ "candidacies": 7801,
+ "persons": 7028,
+ "ever_won": 1151,
+ "debut": 3812,
+ "fillers3": 803,
+ "fillers5": 170,
+ "races": [
+  {
+   "race": "oi2026-1",
+   "title": "Predsjedništvo BiH",
+   "scope": "država",
+   "candidates": 10,
+   "units": 3
+  },
+  {
+   "race": "oi2026-2",
+   "title": "Predstavnički dom PSBiH",
+   "scope": "država",
+   "candidates": 967,
+   "units": 10
+  },
+  {
+   "race": "oi2026-4",
+   "title": "Predstavnički dom Parlamenta FBiH",
+   "scope": "fbih",
+   "candidates": 1343,
+   "units": 13
+  },
+  {
+   "race": "oi2026-5",
+   "title": "Predsjednik i potpredsjednici RS",
+   "scope": "rs",
+   "candidates": 12,
+   "units": 1
+  },
+  {
+   "race": "oi2026-6",
+   "title": "Narodna skupština RS",
+   "scope": "rs",
+   "candidates": 1642,
+   "units": 10
+  },
+  {
+   "race": "oi2026-7",
+   "title": "Skupštine kantona",
+   "scope": "fbih",
+   "candidates": 3827,
+   "units": 10
+  }
+ ]
+}

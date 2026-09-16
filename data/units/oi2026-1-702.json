@@ -1,0 +1,108 @@
+{
+ "race": "oi2026-1",
+ "area": "702",
+ "title": "Predsjedništvo BiH",
+ "stats": {
+  "candidates": 3,
+  "persons": 3,
+  "ever_won": 0,
+  "debut": 3,
+  "fillers3": 0
+ },
+ "lists": [
+  {
+   "code": "00027",
+   "name": "HDZ BIH - HRVATSKA DEMOKRATSKA ZAJEDNICA BIH",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "DARIJANA FILIPOVIĆ",
+     "pid": "p.oi2026-1.4",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "03512",
+   "name": "ZDENKO LUČIĆ - NEOVISNI KANDIDAT",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "ZDENKO LUČIĆ - NEOVISNI KANDIDAT- NEOVISNI KANDIDAT",
+     "pid": "p.oi2026-1.5",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "01698",
+   "name": "DEMOKRATSKA FRONTA",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "SLAVEN KOVAČEVIĆ",
+     "pid": "p.oi2026-1.6",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  }
+ ],
+ "churn": {
+  "m18": 1,
+  "m22": 1,
+  "kept_18_22": 1,
+  "running_again": 0,
+  "gone": [
+   "KOMŠIĆ ŽELJKO"
+  ]
+ },
+ "party_history": [
+  {
+   "year": 2022,
+   "party": "DEMOKRATSKA FRONTA",
+   "votes": 227540
+  },
+  {
+   "year": 2018,
+   "party": "DEMOKRATSKA FRONTA",
+   "votes": 225500
+  },
+  {
+   "year": 2022,
+   "party": "HDZ BIH - HRVATSKA DEMOKRATSKA ZAJEDNICA BIH",
+   "votes": 180255
+  },
+  {
+   "year": 2018,
+   "party": "HDZ BIH - HRVATSKA DEMOKRATSKA ZAJEDNICA BIH",
+   "votes": 154819
+  },
+  {
+   "year": 2018,
+   "party": "HRVATSKA DEMOKRATSKA ZAJEDNICA 1990",
+   "votes": 25890
+  },
+  {
+   "year": 2018,
+   "party": "NAŠA STRANKA",
+   "votes": 16036
+  },
+  {
+   "year": 2018,
+   "party": "NARODNA STRANKA RADOM ZA BOLJITAK",
+   "votes": 6099
+  }
+ ]
+}

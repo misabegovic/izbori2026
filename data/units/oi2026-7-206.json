@@ -1,0 +1,3520 @@
+{
+ "race": "oi2026-7",
+ "area": "206",
+ "title": "Skupštine kantona",
+ "stats": {
+  "candidates": 323,
+  "persons": 323,
+  "ever_won": 50,
+  "debut": 184,
+  "fillers3": 38
+ },
+ "lists": [
+  {
+   "code": "00877",
+   "name": "NAŠA STRANKA",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "AJDIN KERO",
+     "pid": "p.13-9.19000",
+     "stood": 4,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 2,
+     "name": "ALDINA SELMAN",
+     "pid": "p.oi2026-7.2206",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 3,
+     "name": "ANEL TOPALOVIĆ",
+     "pid": "p.2121-9.19306",
+     "stood": 6,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 4,
+     "name": "SLOBODAN BRKIĆ",
+     "pid": "p.27-9.18822",
+     "stood": 4,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 5,
+     "name": "LAMIJA DURIĆ",
+     "pid": "p.36-9.16922",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 6,
+     "name": "HUSMIR SMAJIĆ",
+     "pid": "p.2081-9.13017",
+     "stood": 8,
+     "won": 3,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 7,
+     "name": "SELMA ĐUGUMOVIĆ-GRIZIĆ",
+     "pid": "p.oi2026-7.2211",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 8,
+     "name": "VINKO VUKELJA",
+     "pid": "p.32-7.2397",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 9,
+     "name": "HADŽIJA KULAŠ",
+     "pid": "p.oi2026-7.2213",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 10,
+     "name": "HARIS BALIĆ",
+     "pid": "p.2121-9.19095",
+     "stood": 6,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 11,
+     "name": "MAJDA DAUTBEGOVIĆ",
+     "pid": "p.2121-9.17958",
+     "stood": 7,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 12,
+     "name": "EMIR ŠEHIĆ",
+     "pid": "p.36-9.13596",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 13,
+     "name": "AMNA HASKIĆ",
+     "pid": "p.oi2026-7.2217",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 14,
+     "name": "ERMIN HODŽIĆ",
+     "pid": "p.oi2026-7.2218",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 15,
+     "name": "FIKRET MILANOVIĆ",
+     "pid": "p.32-7.2352",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 16,
+     "name": "AMNA KARALIJA",
+     "pid": "p.36-9.16932",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 17,
+     "name": "MALIK ROSIĆ",
+     "pid": "p.oi2026-7.2221",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 18,
+     "name": "EDITA ZEC",
+     "pid": "p.oi2026-7.2222",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 19,
+     "name": "SENAD HALILOVIĆ",
+     "pid": "p.13-9.16163",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 20,
+     "name": "NEDŽAD KAPIDŽIĆ",
+     "pid": "p.32-7.2230",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 21,
+     "name": "ALDINA MUJIĆ",
+     "pid": "p.oi2026-7.2225",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 22,
+     "name": "SENAD HRVAČIĆ",
+     "pid": "p.2081-9.16258",
+     "stood": 5,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 23,
+     "name": "MERIJEMA DUHARKIĆ",
+     "pid": "p.27-9.19214",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 24,
+     "name": "MARKO TADIĆ",
+     "pid": "p.32-7.2233",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 25,
+     "name": "GORAN DRAŽIĆ",
+     "pid": "p.oi2026-7.2229",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 26,
+     "name": "MEDINA HAČIMIĆ",
+     "pid": "p.oi2026-7.2230",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 27,
+     "name": "ADIS ALIBEGOVIĆ",
+     "pid": "p.2121-9.18023",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 28,
+     "name": "SAUDINA BEVRNJA",
+     "pid": "p.oi2026-7.2232",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 29,
+     "name": "ELVEDIN SMAJIĆ",
+     "pid": "p.oi2026-7.2233",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 30,
+     "name": "JUSUF KRŠIĆ",
+     "pid": "p.25-4.890",
+     "stood": 5,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    }
+   ]
+  },
+  {
+   "code": "oi2026-7206-Xde02c80a",
+   "name": "HDZ BIH, HSS SR, HSP BIH, HDU, HSP AS, HKDU, HRAST",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "DRAŽEN MATIŠIĆ",
+     "pid": "p.25-7.2264",
+     "stood": 3,
+     "won": 2,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 2,
+     "name": "MIRJANA PLAVČIĆ",
+     "pid": "p.2061-7.2050",
+     "stood": 5,
+     "won": 2,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 3,
+     "name": "ANTO MATIĆ",
+     "pid": "p.32-7.2446",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 4,
+     "name": "BORIS MRNJAVAC",
+     "pid": "p.32-7.2449",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 5,
+     "name": "ANA ŠINDRIĆ",
+     "pid": "p.32-7.2447",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 6,
+     "name": "IVAN SAJEVIĆ",
+     "pid": "p.25-7.2292",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 7,
+     "name": "IVO ŠIMUNOVIĆ",
+     "pid": "p.32-7.2450",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 8,
+     "name": "JOSIPA LOZANČIĆ",
+     "pid": "p.oi2026-7.2242",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 9,
+     "name": "IVANA IVIČEVIĆ",
+     "pid": "p.oi2026-7.2243",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 10,
+     "name": "LUCIJA PAVLOVIĆ",
+     "pid": "p.32-7.2452",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 11,
+     "name": "ANTONIJA MILIČEVIĆ",
+     "pid": "p.25-7.2266",
+     "stood": 3,
+     "won": 2,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 12,
+     "name": "DARIO PLAVČIĆ",
+     "pid": "p.oi2026-7.2246",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 13,
+     "name": "NEVENKA BUBNJIĆ",
+     "pid": "p.oi2026-7.2247",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 14,
+     "name": "ZDENKO DOMINOVIĆ",
+     "pid": "p.2061-7.2137",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 15,
+     "name": "DARKO TUSUN",
+     "pid": "p.oi2026-7.2249",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 16,
+     "name": "ANA TOLO IVIČEVIĆ",
+     "pid": "p.32-7.2456",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 17,
+     "name": "DAJANA FRLJIĆ",
+     "pid": "p.oi2026-7.2251",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 18,
+     "name": "JANJA MIKETA",
+     "pid": "p.oi2026-7.2252",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 19,
+     "name": "FILIP BARBIĆ",
+     "pid": "p.oi2026-7.2253",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 20,
+     "name": "IVO ČAKARIĆ",
+     "pid": "p.25-7.2281",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 21,
+     "name": "MAGDALENA ŠEKERIJA",
+     "pid": "p.oi2026-7.2255",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 22,
+     "name": "SINIŠA KNEŽEVIĆ",
+     "pid": "p.oi2026-7.2256",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 23,
+     "name": "ILIJANA BUDIMIR TRUPINA",
+     "pid": "p.32-7.2474",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 24,
+     "name": "BORO RADELJIĆ",
+     "pid": "p.oi2026-7.2258",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 25,
+     "name": "JOSIPA ĆORIĆ",
+     "pid": "p.oi2026-7.2259",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 26,
+     "name": "SANDRA GALIĆ",
+     "pid": "p.oi2026-7.2260",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 27,
+     "name": "DARIO MARUŠIĆ",
+     "pid": "p.oi2026-7.2261",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 28,
+     "name": "MAJA RADMAN",
+     "pid": "p.oi2026-7.2262",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 29,
+     "name": "LJUBAN BILANDŽIJA",
+     "pid": "p.oi2026-7.2263",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 30,
+     "name": "MIROSLAV INJIĆ",
+     "pid": "p.25-7.2287",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 31,
+     "name": "MARTA LEPAN",
+     "pid": "p.oi2026-7.2265",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 32,
+     "name": "RANKO KRIŽANOVIĆ",
+     "pid": "p.oi2026-7.2266",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 33,
+     "name": "MONIKA POCRNJA",
+     "pid": "p.oi2026-7.2267",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 34,
+     "name": "ANTONIO BARNJAK",
+     "pid": "p.oi2026-7.2268",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 35,
+     "name": "MARIN NOVAKOVIĆ",
+     "pid": "p.oi2026-7.2269",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "00008",
+   "name": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "EDIN GEKIĆ",
+     "pid": "p.2121-8.315",
+     "stood": 7,
+     "won": 2,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 2,
+     "name": "SELMA HRVAČIĆ",
+     "pid": "p.32-2.273",
+     "stood": 3,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 3,
+     "name": "ARMIN KUKIĆ",
+     "pid": "p.27-9.18201",
+     "stood": 4,
+     "won": 2,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 4,
+     "name": "SIFET MRKONJA",
+     "pid": "p.2061-7.1978",
+     "stood": 7,
+     "won": 4,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 5,
+     "name": "ZORANA KUNOVAC",
+     "pid": "p.13-9.18866",
+     "stood": 4,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 6,
+     "name": "ANITA MARKANOVIĆ",
+     "pid": "p.2121-9.18972",
+     "stood": 6,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 7,
+     "name": "ASMIR BRLJAK",
+     "pid": "p.32-7.2180",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 8,
+     "name": "FAHRUDIN JOLDIĆ",
+     "pid": "p.2081-9.9824",
+     "stood": 3,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 9,
+     "name": "ŽELJKA BOŠNJAK",
+     "pid": "p.2061-7.2069",
+     "stood": 4,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 10,
+     "name": "PETAR SAMARDŽIĆ",
+     "pid": "p.2121-9.19147",
+     "stood": 6,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 11,
+     "name": "ANTONIJA ČALAGA",
+     "pid": "p.oi2026-7.2280",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 12,
+     "name": "EKREM SARAJLIĆ",
+     "pid": "p.27-9.18751",
+     "stood": 3,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 13,
+     "name": "AJLA HASKIĆ",
+     "pid": "p.36-9.16083",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 14,
+     "name": "AMER ČOLAK",
+     "pid": "p.2081-9.13162",
+     "stood": 7,
+     "won": 3,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 15,
+     "name": "HAŠIM BUKVIĆ",
+     "pid": "p.13-9.19742",
+     "stood": 3,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 16,
+     "name": "ĐEMILA SKOPLJAK",
+     "pid": "p.36-9.16396",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 17,
+     "name": "EDIN MAŠIĆ",
+     "pid": "p.25-7.2182",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 18,
+     "name": "AMELA LOLIĆ",
+     "pid": "p.13-9.16005",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 19,
+     "name": "DŽANAN BRKIĆ",
+     "pid": "p.36-9.16702",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 20,
+     "name": "SEMIN HRUSTANOVIĆ",
+     "pid": "p.oi2026-7.2289",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 21,
+     "name": "ALISA MUJKIĆ",
+     "pid": "p.oi2026-7.2290",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 22,
+     "name": "NEDŽAD GUDIĆ",
+     "pid": "p.36-9.16242",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 23,
+     "name": "MELIHA ŠARAC",
+     "pid": "p.36-9.16859",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 24,
+     "name": "DŽENAN KARALIĆ",
+     "pid": "p.2121-9.19144",
+     "stood": 5,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 25,
+     "name": "ĐULAGA KARIĆ",
+     "pid": "p.2121-9.15225",
+     "stood": 5,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 26,
+     "name": "ANESA HODŽIĆ",
+     "pid": "p.32-7.2169",
+     "stood": 3,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 27,
+     "name": "MUHAMED HODŽIĆ",
+     "pid": "p.25-7.2218",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 28,
+     "name": "DŽELILA HASKIĆ",
+     "pid": "p.oi2026-7.2297",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 29,
+     "name": "MIRKO LJUBEZ",
+     "pid": "p.oi2026-7.2298",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 30,
+     "name": "MERSAD MEŠAN",
+     "pid": "p.36-9.16080",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 31,
+     "name": "LEJLA PETROVIĆ",
+     "pid": "p.36-9.16250",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 32,
+     "name": "HARIS LENDO",
+     "pid": "p.oi2026-7.2301",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 33,
+     "name": "JASMINA HASKIĆ",
+     "pid": "p.13-9.19204",
+     "stood": 3,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 34,
+     "name": "AMEL MUJIĆ",
+     "pid": "p.2121-9.18087",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 35,
+     "name": "ILHAN BUŠATLIĆ",
+     "pid": "p.2061-7.2010",
+     "stood": 4,
+     "won": 2,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    }
+   ]
+  },
+  {
+   "code": "03191",
+   "name": "SNAGA NARODA",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "HAMDIJA DUZAN",
+     "pid": "p.36-9.16484",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 2,
+     "name": "ZEJNEBA RIBIĆ",
+     "pid": "p.oi2026-7.2306",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 3,
+     "name": "SAMIR KOZAR",
+     "pid": "p.27-9.15739",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 4,
+     "name": "NERMINA HOZIĆ",
+     "pid": "p.oi2026-7.2308",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "02495",
+   "name": "NEZAVISNA LISTA DOBOJ-SEVLID HURTIĆ",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "HIDAJET KARASALIHOVIĆ",
+     "pid": "p.oi2026-7.2309",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 2,
+     "name": "IZETA HRUSTIĆ",
+     "pid": "p.oi2026-7.2310",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 3,
+     "name": "MUJO NEŠUST",
+     "pid": "p.13-9.12349",
+     "stood": 6,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 4,
+     "name": "NERMANA ALETIĆ",
+     "pid": "p.oi2026-7.2312",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 5,
+     "name": "JASMIN BRKIĆ",
+     "pid": "p.oi2026-7.2313",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 6,
+     "name": "NAMIRA NIŠIĆ",
+     "pid": "p.oi2026-7.2314",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 7,
+     "name": "MIRSAD FAFULOVIĆ",
+     "pid": "p.oi2026-7.2315",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 8,
+     "name": "SENADA SELMAN",
+     "pid": "p.oi2026-7.2316",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 9,
+     "name": "VEDAD SLOBODA",
+     "pid": "p.oi2026-7.2317",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 10,
+     "name": "ENISA NESLANOVIĆ",
+     "pid": "p.oi2026-7.2318",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 11,
+     "name": "MIRNES ALIBEGOVIĆ",
+     "pid": "p.oi2026-7.2319",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 12,
+     "name": "ADNA BEGANOVIĆ",
+     "pid": "p.oi2026-7.2320",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 13,
+     "name": "ALIJA VUKOVIĆ",
+     "pid": "p.oi2026-7.2321",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 14,
+     "name": "NUSRET JOVANOVIĆ",
+     "pid": "p.oi2026-7.2322",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 15,
+     "name": "AMINA BEGANOVIĆ",
+     "pid": "p.oi2026-7.2323",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 16,
+     "name": "MIRZET HANDŽIĆ",
+     "pid": "p.oi2026-7.2324",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 17,
+     "name": "BEHARA SEJDIĆ",
+     "pid": "p.oi2026-7.2325",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 18,
+     "name": "ENES ČANO",
+     "pid": "p.oi2026-7.2326",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 19,
+     "name": "ENES BRLJAK",
+     "pid": "p.oi2026-7.2327",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 20,
+     "name": "ELMA VRBIĆ",
+     "pid": "p.oi2026-7.2328",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 21,
+     "name": "HRUSTAN LUŠIJA",
+     "pid": "p.oi2026-7.2329",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 22,
+     "name": "ŠEHERZADA GRABUS",
+     "pid": "p.oi2026-7.2330",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 23,
+     "name": "BESIM JAHIĆ",
+     "pid": "p.oi2026-7.2331",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 24,
+     "name": "BEKIR ORUČ",
+     "pid": "p.oi2026-7.2332",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 25,
+     "name": "AMANDA BEGANOVIĆ",
+     "pid": "p.oi2026-7.2333",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 26,
+     "name": "ELVIR PONDRO",
+     "pid": "p.oi2026-7.2334",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 27,
+     "name": "AMIRA NESLANOVIĆ",
+     "pid": "p.oi2026-7.2335",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 28,
+     "name": "MEMZUDIN LUŠIJA",
+     "pid": "p.oi2026-7.2336",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 29,
+     "name": "ADIS ĆOSIĆ",
+     "pid": "p.oi2026-7.2337",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 30,
+     "name": "SARA VRBIĆ",
+     "pid": "p.oi2026-7.2338",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 31,
+     "name": "RAMIZ ČILAŠ",
+     "pid": "p.oi2026-7.2339",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "01182",
+   "name": "SBB - FAHRUDIN RADONČIĆ",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "ALMASA BRKIĆ",
+     "pid": "p.13-9.16141",
+     "stood": 5,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 2,
+     "name": "EMIR TODOROVAC",
+     "pid": "p.2121-9.18456",
+     "stood": 5,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 3,
+     "name": "ALADIN LANJGIĆ",
+     "pid": "p.oi2026-7.2342",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 4,
+     "name": "SANELA HALILOVIĆ",
+     "pid": "p.oi2026-7.2343",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 5,
+     "name": "SAUDIN HALILOVIĆ",
+     "pid": "p.oi2026-7.2344",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 6,
+     "name": "ALDIN ČAKIĆ",
+     "pid": "p.oi2026-7.2345",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 7,
+     "name": "EMINA DURAKOVIĆ",
+     "pid": "p.oi2026-7.2346",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 8,
+     "name": "EMIN TAHIROVIĆ",
+     "pid": "p.oi2026-7.2347",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "oi2026-7206-X33c2b888",
+   "name": "HDZ 1990, HRS, HSS - HRVATSKA KOALICIJA ZA SREDIŠNJU BOSNU",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "ANTO BILIĆ",
+     "pid": "p.2061-7.2101",
+     "stood": 4,
+     "won": 3,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 2,
+     "name": "BILJANA MLAKIĆ",
+     "pid": "p.oi2026-7.2349",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 3,
+     "name": "SANJAN MARTINOVIĆ",
+     "pid": "p.32-7.2278",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 4,
+     "name": "IVAN KRIŽANOVIĆ",
+     "pid": "p.32-7.2412",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 5,
+     "name": "TANJA FRANIĆ",
+     "pid": "p.oi2026-7.2352",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 6,
+     "name": "FILIP BILIĆ",
+     "pid": "p.32-7.2433",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 7,
+     "name": "BOGOMIR BARBIĆ",
+     "pid": "p.oi2026-7.2354",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 8,
+     "name": "KRISTINA VRANJEŠ",
+     "pid": "p.32-7.2279",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 9,
+     "name": "VIOLETA VUJČIĆ",
+     "pid": "p.32-7.2427",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 10,
+     "name": "BORIS JERKOVIĆ",
+     "pid": "p.oi2026-7.2357",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 11,
+     "name": "KATICA RIBIĆ",
+     "pid": "p.oi2026-7.2358",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 12,
+     "name": "VLATKO BEŠLIĆ",
+     "pid": "p.oi2026-7.2359",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 13,
+     "name": "ANA BAŠKARAD",
+     "pid": "p.oi2026-7.2360",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 14,
+     "name": "SANDRO SLIPAC",
+     "pid": "p.oi2026-7.2361",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 15,
+     "name": "ŽARKO GUGIĆ",
+     "pid": "p.oi2026-7.2362",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 16,
+     "name": "EVA RAJKOVIĆ",
+     "pid": "p.oi2026-7.2363",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 17,
+     "name": "MARIN PILIĆ",
+     "pid": "p.oi2026-7.2364",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 18,
+     "name": "MIRJANA JEZILDŽIĆ",
+     "pid": "p.oi2026-7.2365",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 19,
+     "name": "ZDRAVKO HRGOTA",
+     "pid": "p.oi2026-7.2366",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 20,
+     "name": "FRANE ĐIKIĆ",
+     "pid": "p.oi2026-7.2367",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 21,
+     "name": "MARIJA PELUŠIĆ",
+     "pid": "p.oi2026-7.2368",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 22,
+     "name": "DANIJEL PILIĆ",
+     "pid": "p.oi2026-7.2369",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 23,
+     "name": "MARICA KATAVIĆ",
+     "pid": "p.32-7.2420",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 24,
+     "name": "ANTO STRUKAR",
+     "pid": "p.32-7.2429",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 25,
+     "name": "MIRO STANIĆ",
+     "pid": "p.2061-7.2143",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 26,
+     "name": "SANJA KRIŽANAC",
+     "pid": "p.oi2026-7.2373",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 27,
+     "name": "ŽARKO PUŠIĆ",
+     "pid": "p.oi2026-7.2374",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 28,
+     "name": "MARINA ČAVAR",
+     "pid": "p.oi2026-7.2375",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 29,
+     "name": "ANTO MARJANOVIĆ",
+     "pid": "p.oi2026-7.2376",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 30,
+     "name": "IVAN JANDRIĆ",
+     "pid": "p.oi2026-7.2377",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 31,
+     "name": "DANIJELA BILIĆ",
+     "pid": "p.oi2026-7.2378",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 32,
+     "name": "ILIJA MAJIĆ",
+     "pid": "p.oi2026-7.2379",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 33,
+     "name": "IVANA ČAVKA",
+     "pid": "p.32-7.2422",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 34,
+     "name": "MIROSLAV MATOŠEVIĆ",
+     "pid": "p.2061-7.2108",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    }
+   ]
+  },
+  {
+   "code": "02317",
+   "name": "NAROD I PRAVDA",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "TARIK ŠEČIĆ",
+     "pid": "p.13-9.16140",
+     "stood": 6,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 2,
+     "name": "ALMA BEGANOVIĆ",
+     "pid": "p.oi2026-7.2383",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 3,
+     "name": "EMIR MUFTIĆ",
+     "pid": "p.oi2026-7.2384",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 4,
+     "name": "KASIM SMAJIĆ",
+     "pid": "p.oi2026-7.2385",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 5,
+     "name": "AJLA FUŠKO",
+     "pid": "p.32-7.2315",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 6,
+     "name": "MALIK TURANOVIĆ",
+     "pid": "p.27-9.11753",
+     "stood": 3,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 7,
+     "name": "ENISA STRUKAR",
+     "pid": "p.oi2026-7.2388",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 8,
+     "name": "ARMIN ČUSTO",
+     "pid": "p.2081-9.15626",
+     "stood": 5,
+     "won": 2,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 9,
+     "name": "AZRA SREBRENICA",
+     "pid": "p.oi2026-7.2390",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 10,
+     "name": "BAKIR GANIĆ",
+     "pid": "p.oi2026-7.2391",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 11,
+     "name": "AMIRA ČEJVAN",
+     "pid": "p.32-2.305",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 12,
+     "name": "OMER RUSTEMPAŠIĆ",
+     "pid": "p.36-9.16203",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 13,
+     "name": "ELMA OMERČEVIĆ",
+     "pid": "p.36-9.16946",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 14,
+     "name": "NEDŽAD MANOVIĆ",
+     "pid": "p.27-9.18424",
+     "stood": 4,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 15,
+     "name": "EMIR MEŠANOVIĆ",
+     "pid": "p.oi2026-7.2396",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 16,
+     "name": "EDINA KOKIĆ ČEHAJA",
+     "pid": "p.36-9.16186",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 17,
+     "name": "MEHRID PILAV",
+     "pid": "p.oi2026-7.2398",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 18,
+     "name": "SELMA SMAJIĆ-FAZLIBEGOVIĆ",
+     "pid": "p.36-9.13653",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 19,
+     "name": "AMEL NOVALIĆ",
+     "pid": "p.27-9.18337",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 20,
+     "name": "ISMET AGAČEVIĆ",
+     "pid": "p.36-9.13664",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 21,
+     "name": "ZEMIRA ŠLJIVO",
+     "pid": "p.36-9.10437",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 22,
+     "name": "BESIM AJANOVIĆ",
+     "pid": "p.2061-7.1983",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 23,
+     "name": "MERSIHA ČUSTO",
+     "pid": "p.36-9.16195",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 24,
+     "name": "JASMIN ČURIĆ",
+     "pid": "p.36-9.16308",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 25,
+     "name": "EMIN KAHRIĆ",
+     "pid": "p.oi2026-7.2406",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 26,
+     "name": "HALISA PALALIĆ",
+     "pid": "p.36-9.13665",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 27,
+     "name": "SMAJIL TURIĆ",
+     "pid": "p.27-9.18711",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 28,
+     "name": "SENADA NOVALIĆ",
+     "pid": "p.oi2026-7.2409",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 29,
+     "name": "DENI SEFER",
+     "pid": "p.36-9.13652",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 30,
+     "name": "SENADA RIBIĆ",
+     "pid": "p.oi2026-7.2411",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 31,
+     "name": "ARNES TAHIROVIĆ",
+     "pid": "p.36-9.13645",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 32,
+     "name": "ADMIR KULAŠ",
+     "pid": "p.oi2026-7.2413",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "00090",
+   "name": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "TAHIR LENDO",
+     "pid": "p.2081-8.275",
+     "stood": 4,
+     "won": 3,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 2,
+     "name": "ELMA SALKANOVIĆ",
+     "pid": "p.32-7.2212",
+     "stood": 3,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 3,
+     "name": "AMIR ŠEČIBOVIĆ",
+     "pid": "p.2121-9.17879",
+     "stood": 4,
+     "won": 3,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 4,
+     "name": "SEAD ČAUŠEVIĆ",
+     "pid": "p.oi2026-7.2417",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 5,
+     "name": "MELISA KAJMAK",
+     "pid": "p.32-7.2193",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 6,
+     "name": "AHMED MEŠTROVAC",
+     "pid": "p.36-9.10368",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 7,
+     "name": "SALKAN MERDŽANIĆ",
+     "pid": "p.2081-8.352",
+     "stood": 4,
+     "won": 3,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 8,
+     "name": "IRMA ČORBIĆ",
+     "pid": "p.13-9.16046",
+     "stood": 4,
+     "won": 2,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 9,
+     "name": "SELMA AGIĆ",
+     "pid": "p.oi2026-7.2422",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 10,
+     "name": "NEDŽAD ORMAN",
+     "pid": "p.2081-9.16309",
+     "stood": 6,
+     "won": 4,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 11,
+     "name": "AMELA HARAČIĆ",
+     "pid": "p.32-7.2204",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 12,
+     "name": "JASMINKO RATKUŠIĆ",
+     "pid": "p.2121-9.14895",
+     "stood": 5,
+     "won": 3,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 13,
+     "name": "MEDIHA RIĐIĆ",
+     "pid": "p.2081-9.13344",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 14,
+     "name": "ELVEDIN MUŠANOVIĆ",
+     "pid": "p.2121-8.337",
+     "stood": 4,
+     "won": 2,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 15,
+     "name": "NURUDIN ALIHODŽA",
+     "pid": "p.oi2026-7.2428",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 16,
+     "name": "ASIMA AGIĆ",
+     "pid": "p.oi2026-7.2429",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 17,
+     "name": "JASMINKA ĆEMER",
+     "pid": "p.oi2026-7.2430",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 18,
+     "name": "SAMIRA MUJIĆ",
+     "pid": "p.oi2026-7.2431",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 19,
+     "name": "FARUK DUZAN",
+     "pid": "p.36-9.16431",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 20,
+     "name": "ADVAN AKELJIĆ",
+     "pid": "p.2121-8.325",
+     "stood": 6,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 21,
+     "name": "EMINA ČAKIĆ",
+     "pid": "p.oi2026-7.2434",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 22,
+     "name": "AJDIN MEHIĆ",
+     "pid": "p.36-9.13555",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 23,
+     "name": "AIDA FAZLIHODŽIĆ",
+     "pid": "p.36-9.16980",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 24,
+     "name": "IRFAN ZEC",
+     "pid": "p.36-9.16154",
+     "stood": 2,
+     "won": 1,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 25,
+     "name": "SEDŽAD MILANOVIĆ",
+     "pid": "p.2061-7.1969",
+     "stood": 4,
+     "won": 3,
+     "office": true,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 26,
+     "name": "MAHIRA IBRELJIĆ",
+     "pid": "p.oi2026-7.2439",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 27,
+     "name": "MIRZAD KEŠKO",
+     "pid": "p.oi2026-7.2440",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 28,
+     "name": "ĐENITA SALČINOVIĆ",
+     "pid": "p.2121-9.19024",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 29,
+     "name": "SEMIR KRNJIĆ",
+     "pid": "p.27-9.18587",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 30,
+     "name": "HIDAJET SIVRO",
+     "pid": "p.2081-9.16156",
+     "stood": 7,
+     "won": 5,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 31,
+     "name": "ZERKA OMERAGIĆ",
+     "pid": "p.36-9.13575",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 32,
+     "name": "DŽENETA BUŠATLIĆ",
+     "pid": "p.oi2026-7.2445",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 33,
+     "name": "ALEMA RATKUŠIĆ",
+     "pid": "p.13-9.16007",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 34,
+     "name": "ELVEDIN IMAMOVIĆ",
+     "pid": "p.36-9.10371",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 35,
+     "name": "VILDAN HAJIĆ",
+     "pid": "p.2121-8.309",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    }
+   ]
+  },
+  {
+   "code": "03068",
+   "name": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "MIRZA HODŽIĆ",
+     "pid": "p.oi2026-7.2449",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 2,
+     "name": "MAJA SALKIĆ SMAILKADIĆ",
+     "pid": "p.oi2026-7.2450",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 3,
+     "name": "EMIR PESKIĆ",
+     "pid": "p.13-9.19507",
+     "stood": 5,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 4,
+     "name": "HASAN KRKIĆ",
+     "pid": "p.oi2026-7.2452",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 5,
+     "name": "JASMINKA HOĐIĆ",
+     "pid": "p.oi2026-7.2453",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 6,
+     "name": "SABAHUDIN KLIKO",
+     "pid": "p.oi2026-7.2454",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 7,
+     "name": "MESUD KADIĆ",
+     "pid": "p.32-7.2368",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 8,
+     "name": "MIHRETA JUSUFIJA-BEHREM",
+     "pid": "p.32-7.2341",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 9,
+     "name": "ALISA BAŠIĆ",
+     "pid": "p.32-7.2152",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 10,
+     "name": "SENAD DRINIĆ",
+     "pid": "p.oi2026-7.2458",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 11,
+     "name": "MERSIHA LJUBUNČIĆ",
+     "pid": "p.oi2026-7.2459",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 12,
+     "name": "SEFIR KALBIĆ",
+     "pid": "p.13-9.19208",
+     "stood": 5,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 13,
+     "name": "SABINA SKOPLJAK",
+     "pid": "p.oi2026-7.2461",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 14,
+     "name": "BEHAIJA RAMIĆ",
+     "pid": "p.13-9.19800",
+     "stood": 6,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 15,
+     "name": "RASIM ŽULJKO",
+     "pid": "p.2061-7.2002",
+     "stood": 7,
+     "won": 3,
+     "office": true,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 16,
+     "name": "SEMINA RAHMANOVIĆ",
+     "pid": "p.oi2026-7.2464",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 17,
+     "name": "AMER HABIBIĆ",
+     "pid": "p.32-7.2330",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 18,
+     "name": "NINA ČIZMO",
+     "pid": "p.oi2026-7.2466",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 19,
+     "name": "SELVEDIN KONJALIĆ",
+     "pid": "p.oi2026-7.2467",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 20,
+     "name": "VELDIN PAČAVAR",
+     "pid": "p.oi2026-7.2468",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 21,
+     "name": "MERSIHA MEMIĆ",
+     "pid": "p.oi2026-7.2469",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 22,
+     "name": "ADI ZAHIRAGIĆ",
+     "pid": "p.oi2026-7.2470",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 23,
+     "name": "ZERINA BARUČIJA",
+     "pid": "p.oi2026-7.2471",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 24,
+     "name": "DENIS RIZVIĆ",
+     "pid": "p.32-7.2391",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 25,
+     "name": "IBRAHIM HASKIĆ",
+     "pid": "p.32-7.2340",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 26,
+     "name": "SEADA KOVAČ",
+     "pid": "p.oi2026-7.2474",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 27,
+     "name": "MUHIDIN BALIHODŽIĆ",
+     "pid": "p.oi2026-7.2475",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 28,
+     "name": "MEDINA ŠLJIVAR",
+     "pid": "p.oi2026-7.2476",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 29,
+     "name": "ISLAM KARAMANLIĆ",
+     "pid": "p.oi2026-7.2477",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 30,
+     "name": "HAMDO DAUTOVIĆ",
+     "pid": "p.oi2026-7.2478",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 31,
+     "name": "SANELA ĐOGIĆ",
+     "pid": "p.oi2026-7.2479",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 32,
+     "name": "HARUN SALIHOVIĆ",
+     "pid": "p.oi2026-7.2480",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 33,
+     "name": "MEVLIDA INDŽIĆ",
+     "pid": "p.oi2026-7.2481",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 34,
+     "name": "ASMIR PRUŠČANOVIĆ",
+     "pid": "p.oi2026-7.2482",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 35,
+     "name": "ENVER KONJALIĆ",
+     "pid": "p.32-7.2381",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    }
+   ]
+  },
+  {
+   "code": "oi2026-7206-X86e76239",
+   "name": "SEMIR EFENDIĆ-ZA BOSNU I HERCEGOVINU-SBIH-BESA NL",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "ADMIR MEŠTROVAC",
+     "pid": "p.oi2026-7.2484",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 2,
+     "name": "AJDINA SMREKA",
+     "pid": "p.oi2026-7.2485",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 3,
+     "name": "HALIL DEDIĆ",
+     "pid": "p.oi2026-7.2486",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 4,
+     "name": "NAMIR PAŠIĆ",
+     "pid": "p.oi2026-7.2487",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 5,
+     "name": "BELMA GANIĆ",
+     "pid": "p.oi2026-7.2488",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 6,
+     "name": "SABINA HAJRIĆ DURANOVIĆ",
+     "pid": "p.oi2026-7.2489",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 7,
+     "name": "MIHNET PATKOVIĆ",
+     "pid": "p.oi2026-7.2490",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 8,
+     "name": "OMER DOGAN",
+     "pid": "p.oi2026-7.2491",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 9,
+     "name": "DŽENISA LUŠIJA",
+     "pid": "p.oi2026-7.2492",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 10,
+     "name": "ARIF BRKIĆ",
+     "pid": "p.2061-7.1989",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 11,
+     "name": "NUDŽEJMA KUTIĆ",
+     "pid": "p.oi2026-7.2494",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 12,
+     "name": "AMEL GLAVAŠ",
+     "pid": "p.oi2026-7.2495",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 13,
+     "name": "ADNA PAMIĆ",
+     "pid": "p.oi2026-7.2496",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 14,
+     "name": "OMER KOVAČ",
+     "pid": "p.32-7.2138",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 15,
+     "name": "VEDAD KEŠKO",
+     "pid": "p.oi2026-7.2498",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 16,
+     "name": "AIDA HODŽIĆ",
+     "pid": "p.oi2026-7.2499",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 17,
+     "name": "MAHIR LUŠIJA",
+     "pid": "p.oi2026-7.2500",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 18,
+     "name": "ALMIRA DURAKOVIĆ-SMAJIĆ",
+     "pid": "p.32-7.2148",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 19,
+     "name": "FIKRET DEDIĆ",
+     "pid": "p.32-7.2142",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 20,
+     "name": "VEDIN KARIĆ",
+     "pid": "p.oi2026-7.2503",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 21,
+     "name": "NERMINA ŠABIĆ-ŠIŠIĆ",
+     "pid": "p.oi2026-7.2504",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 22,
+     "name": "ALMIR SUBAŠIĆ",
+     "pid": "p.oi2026-7.2505",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 23,
+     "name": "FATIMA KADRIĆ",
+     "pid": "p.oi2026-7.2506",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 24,
+     "name": "MUMIN MEŠA",
+     "pid": "p.oi2026-7.2507",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 25,
+     "name": "SAMED GLAMOČIĆ",
+     "pid": "p.oi2026-7.2508",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 26,
+     "name": "DŽENADA AHMETOVIĆ",
+     "pid": "p.oi2026-7.2509",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 27,
+     "name": "MAHMUT MUHIĆ",
+     "pid": "p.oi2026-7.2510",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 28,
+     "name": "SABIHA BRKIĆ",
+     "pid": "p.oi2026-7.2511",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 29,
+     "name": "SENAD TURANOVIĆ",
+     "pid": "p.oi2026-7.2512",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 30,
+     "name": "MERSUDIN HADŽIĆ",
+     "pid": "p.oi2026-7.2513",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  },
+  {
+   "code": "oi2026-7206-Xb2f7e315",
+   "name": "NES, PDA - ZA EVROPSKU BIH",
+   "candidates": [
+    {
+     "pos": 1,
+     "name": "ALEN SALKIĆ",
+     "pid": "p.2061-7.2016",
+     "stood": 2,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "probable"
+    },
+    {
+     "pos": 2,
+     "name": "AJLA MAKIĆ",
+     "pid": "p.oi2026-7.2515",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 3,
+     "name": "ESAD HODŽIĆ",
+     "pid": "p.oi2026-7.2516",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 4,
+     "name": "SAFET HIDIĆ",
+     "pid": "p.2061-7.2224",
+     "stood": 3,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "unverified"
+    },
+    {
+     "pos": 5,
+     "name": "ALMA GRAHIĆ",
+     "pid": "p.oi2026-7.2518",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 6,
+     "name": "NERMANA ŽILIĆ",
+     "pid": "p.oi2026-7.2519",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 7,
+     "name": "ISMET IMAMOVIĆ",
+     "pid": "p.oi2026-7.2520",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 8,
+     "name": "MEHINA TURANOVIĆ",
+     "pid": "p.oi2026-7.2521",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 9,
+     "name": "BESIM AJKUNIĆ",
+     "pid": "p.oi2026-7.2522",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 10,
+     "name": "IBRAHIM RIBO",
+     "pid": "p.oi2026-7.2523",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 11,
+     "name": "ENISA LOVRIĆ",
+     "pid": "p.oi2026-7.2524",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 12,
+     "name": "AHMET KOVAČ",
+     "pid": "p.oi2026-7.2525",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 13,
+     "name": "EDINA VELAGIĆ",
+     "pid": "p.oi2026-7.2526",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    },
+    {
+     "pos": 14,
+     "name": "AMIR VUKOVIĆ",
+     "pid": "p.oi2026-7.2527",
+     "stood": 1,
+     "won": 0,
+     "office": false,
+     "bio": false,
+     "confidence": "single"
+    }
+   ]
+  }
+ ],
+ "churn": {
+  "m18": 30,
+  "m22": 30,
+  "kept_18_22": 13,
+  "running_again": 16,
+  "gone": [
+   "ADMIR ŠKANDRO",
+   "AMIR ORLOVIĆ",
+   "AMRA HUSELJIĆ",
+   "ATANASIJEVIĆ LJUBINKA",
+   "BELMINA FATIĆ",
+   "DELIĆ ELDIN",
+   "HARIS KANIŽA",
+   "ILIJA NAKIĆ",
+   "KARIĆ MENSURA",
+   "KRIŠTO SUZANA",
+   "MATKOVIĆ ŽELJKA",
+   "MATOŠEVIĆ TANJA",
+   "MUKIĆ SEMINA",
+   "SELIMOVIĆ SENAD"
+  ]
+ },
+ "party_history": [
+  {
+   "year": 2018,
+   "party": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+   "votes": 121707
+  },
+  {
+   "year": 2022,
+   "party": "SDA-STRANKA DEMOKRATSKE AKCIJE",
+   "votes": 115676
+  },
+  {
+   "year": 2018,
+   "party": "HDZ BIH,HSS,HKDU BIH,HSP-HNS,HSP DR AS BIH,HDU BIH,HSS SR",
+   "votes": 69773
+  },
+  {
+   "year": 2022,
+   "party": "HDZ BIH,HSS SR,HSS,HSP BIH,HKDU,HSP AS,HDU,HRAST",
+   "votes": 60567
+  },
+  {
+   "year": 2018,
+   "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+   "votes": 31750
+  },
+  {
+   "year": 2022,
+   "party": "SDP-SOCIJALDEMOKRATSKA PARTIJA BIH",
+   "votes": 24457
+  },
+  {
+   "year": 2022,
+   "party": "NAROD I PRAVDA",
+   "votes": 18853
+  },
+  {
+   "year": 2018,
+   "party": "SBB - FAHRUDIN RADONČIĆ",
+   "votes": 13715
+  },
+  {
+   "year": 2022,
+   "party": "ŽELJKO KOMŠIĆ - ZA GRAĐANSKU DRŽAVU - DF/GS",
+   "votes": 9853
+  },
+  {
+   "year": 2018,
+   "party": "DEMOKRATSKA FRONTA",
+   "votes": 9079
+  },
+  {
+   "year": 2022,
+   "party": "HDZ 1990 - HSP HB I BIH",
+   "votes": 8360
+  },
+  {
+   "year": 2018,
+   "party": "HRVATSKI POKRET ZA SREDIŠNJU BOSNU HDZ1990-HSPBIH-HSBIH",
+   "votes": 8092
+  },
+  {
+   "year": 2018,
+   "party": "STRANKA ZA BOSNU I HERCEGOVINU",
+   "votes": 6369
+  },
+  {
+   "year": 2018,
+   "party": "NEZAVISNI BLOK",
+   "votes": 4693
+  },
+  {
+   "year": 2022,
+   "party": "SBB - FAHRUDIN RADONČIĆ",
+   "votes": 4236
+  },
+  {
+   "year": 2022,
+   "party": "STRANKA ZA BOSNU I HERCEGOVINU",
+   "votes": 2767
+  },
+  {
+   "year": 2022,
+   "party": "NAŠA STRANKA",
+   "votes": 2173
+  },
+  {
+   "year": 2018,
+   "party": "A-SDA ZA EVROPSKU BIH",
+   "votes": 1450
+  },
+  {
+   "year": 2018,
+   "party": "POKRET DEMOKRATSKE AKCIJE PDA",
+   "votes": 1261
+  },
+  {
+   "year": 2022,
+   "party": "NES",
+   "votes": 995
+  },
+  {
+   "year": 2022,
+   "party": "KOALICIJA DRŽAVA-MIRSAD HADŽIKADIĆ-PZP,NB,ZELENI ZA DRŽAVU",
+   "votes": 966
+  },
+  {
+   "year": 2022,
+   "party": "HRS-HRVATSKA REPUBLIKANSKA STRANKA",
+   "votes": 900
+  },
+  {
+   "year": 2018,
+   "party": "STRANKA PENZIONERA / UMIROVLJENIKA BOSNE I HERCEGOVINE",
+   "votes": 824
+  },
+  {
+   "year": 2022,
+   "party": "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ",
+   "votes": 441
+  },
+  {
+   "year": 2018,
+   "party": "LDS ZA BOLJITAK",
+   "votes": 440
+  },
+  {
+   "year": 2022,
+   "party": "BOSANSKOHERCEGOVAČKA INICIJATIVA - KASUMOVIĆ FUAD - ZA BIH",
+   "votes": 381
+  },
+  {
+   "year": 2022,
+   "party": "SDBIH SOCIJALDEMOKRATE BOSNE I HERCEGOVINE ZELENI POKRET",
+   "votes": 336
+  },
+  {
+   "year": 2018,
+   "party": "BOSS - BOSANSKA STRANKA-MIRNES AJANOVIĆ",
+   "votes": 108
+  },
+  {
+   "year": 2018,
+   "party": "SRPSKA LISTA",
+   "votes": 101
+  },
+  {
+   "year": 2018,
+   "party": "SMS - SAVEZ MLADIH SNAGA",
+   "votes": 62
+  },
+  {
+   "year": 2018,
+   "party": "KOMUNISTIČKA PARTIJA",
+   "votes": 53
+  },
+  {
+   "year": 2018,
+   "party": "NEZAVISNA BOSANSKOHERCEGOVAČKA LISTA",
+   "votes": 38
+  },
+  {
+   "year": 2018,
+   "party": "PRVA STRANKA",
+   "votes": 36
+  },
+  {
+   "year": 2018,
+   "party": "LIBERALNA STRANKA BOSNE I HERCEGOVINE-LS BIH",
+   "votes": 16
+  },
+  {
+   "year": 2022,
+   "party": "HRVATSKI NACIONALNI POMAK",
+   "votes": 12
+  },
+  {
+   "year": 2018,
+   "party": "NARODNI DEMOKRATSKI POKRET",
+   "votes": 11
+  }
+ ]
+}

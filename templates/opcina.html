@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ m.name }} — Izbori 2026{% endblock %}
+{% block content %}
+<p><a href="opcine.html">← sve općine</a></p>
+<h1>{{ m.name }}</h1>
+<p class="mut">{{ m.group }} · Birači ovdje glasaju u {{ ballots | length }} trki/trke:</p>
+{% for b in ballots %}
+<div class="card">
+{% if b.href %}<a href="{{ b.href }}">{{ b.name }}</a>{% else %}{{ b.name }}{% endif %}
+</div>
+{% endfor %}
+<p class="note">Na svim proporcionalnim listićima: obavezno zaokruži <b>jedan subjekt</b>, uz to smiješ do <b>3 kandidata</b> s njegove liste. Na Predsjedništvu: tačno <b>jedan</b> kandidat.</p>
+{% endblock %}
