@@ -71,6 +71,35 @@
     leg.innerHTML = '<span><i class="sw" style="background:' + COL['c-blue'] + '"></i>izabran/a</span><span><i class="sw" style="background:#fff;border:2px solid ' + COL['c-blue'] + '"></i>nije izabran/a</span><span><i class="sw" style="background:#fff;border:2px dashed ' + COL['c-sw'] + '"></i>sada</span>';
     el.appendChild(leg);
   }
+  function mandates(el, d) {
+    el.innerHTML = '';
+    var W = el.clientWidth || 300, rowH = 44, top = 6, labW = 82;
+    var svg = d3.select(el).append('svg').attr('width', W).attr('height', top + d.length * rowH + 4);
+    var show = tipFor(el);
+    d.forEach(function (r, i) {
+      var y = top + i * rowH, t = r.t || 0, x0 = labW, w = W - labW - 44;
+      svg.append('text').attr('x', 0).attr('y', y + 18).attr('font-size', 13).attr('font-weight', 700).attr('fill', INK).text(r.m);
+      svg.append('rect').attr('x', x0).attr('y', y + 6).attr('width', w).attr('height', 16).attr('rx', 4).attr('fill', '#eceae3');
+      if (t) {
+        var x = x0;
+        [['ispunjeno', r.f, COL['c-za']], ['djelimično', r.p, COL['c-uz']], ['nije', r.b, COL['c-protiv']]].forEach(function (s) {
+          if (!s[1]) return; var ww = w * s[1] / t;
+          svg.append('rect').attr('x', x).attr('y', y + 6).attr('width', 0).attr('height', 16).attr('fill', s[2]).style('cursor', 'pointer')
+            .on('click', function (ev) { ev.stopPropagation(); show('<b>' + r.m + '</b><br>' + s[0] + ': ' + s[1] + ' od ' + t + ' (' + Math.round(100 * s[1] / t) + '%)<br><span class="small mut">' + r.power + '</span>', ev); })
+            .transition().duration(600).attr('width', Math.max(2, ww - 1));
+          x += ww;
+        });
+        svg.append('text').attr('x', W).attr('y', y + 19).attr('text-anchor', 'end').attr('font-size', 12).attr('fill', MUT).text(Math.round(100 * r.f / t) + '%');
+      } else {
+        svg.append('text').attr('x', x0 + 6).attr('y', y + 18).attr('font-size', 12).attr('fill', MUT).text('nema praćenih obećanja (opozicija ili nema podataka)');
+      }
+      var pw = svg.append('text').attr('x', x0).attr('y', y + 36).attr('font-size', 10.5).attr('fill', MUT).text(r.power);
+      var n = pw.node(); while (n.getComputedTextLength() > w + 40 && n.textContent.length > 8) n.textContent = n.textContent.slice(0, -4) + '…';
+    });
+    var leg = document.createElement('div'); leg.className = 'st-l';
+    leg.innerHTML = '<span><i class="sw" style="background:' + COL['c-za'] + '"></i>ispunjeno</span><span><i class="sw" style="background:' + COL['c-uz'] + '"></i>djelimično</span><span><i class="sw" style="background:' + COL['c-protiv'] + '"></i>nije</span><span>% = ispunjeno u potpunosti</span>';
+    el.appendChild(leg);
+  }
   var METRICS = [
     { k: 'ch', label: 'šansa za mandat', fmt: function (v) { return '~' + v + '%'; }, only: true },
     { k: 'w', label: 'koliko puta biran', fmt: function (v) { return v + '×'; } },
@@ -133,6 +162,7 @@
     document.querySelectorAll('.d3-bar').forEach(function (el) { bar(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-stack').forEach(function (el) { stack(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-chance').forEach(function (el) { chance(el, JSON.parse(el.dataset.d3)); });
+    document.querySelectorAll('.d3-mandates').forEach(function (el) { mandates(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.d3-years').forEach(function (el) { years(el, JSON.parse(el.dataset.d3)); });
     document.querySelectorAll('.viz').forEach(swarm);
   }

@@ -106,6 +106,36 @@ for _f in ("promises2022_fbih.json", "promises2022_rs.json"):
 OUTCOME_CLS = {"ispunjeno": "c-za", "djelimično": "c-uz", "nije": "c-protiv", "ne može se ocijeniti": "c-od"}
 
 
+promises_hist = []
+for _f in ("promises_history_fbih.json", "promises_history_rs.json"):
+    if os.path.exists(D + _f):
+        promises_hist += json.load(open(D + _f))
+
+
+def history_for(prog):
+    """Per-mandate promise record: earlier mandates from promises_history_*.json + 2022-26 from promises2022_*.json."""
+    if not prog:
+        return None
+    rows = [dict(h) for h in promises_hist if h.get("program") == prog["name"]]
+    p = promises22.get(prog["name"])
+    if p:
+        cnt = Counter(x["outcome"] for x in p["promises_2022"])
+        rows.append({"mandate": "2022-2026", "in_power": p.get("in_power_2022_2026"), "tracked": len(p["promises_2022"]),
+                     "fulfilled": cnt.get("ispunjeno", 0), "partial": cnt.get("djelimično", 0), "broken": cnt.get("nije", 0),
+                     "examples": [], "sources": [], "confidence": p.get("confidence"), "note": "uzorak provjerenih obećanja, ne cijeli Istinomjerov skup"})
+    rows.sort(key=lambda r: r["mandate"])
+    if not rows:
+        return None
+    rated = [r for r in rows if r.get("tracked") and r.get("fulfilled") is not None]
+    pattern = None
+    if rated:
+        tot = sum(r["tracked"] for r in rated); ful = sum(r["fulfilled"] or 0 for r in rated); part = sum(r.get("partial") or 0 for r in rated)
+        pattern = {"mandates": len(rated), "tracked": tot, "pct_full": round(100 * ful / tot), "pct_part": round(100 * part / tot)}
+    chart = [{"m": r["mandate"], "f": r.get("fulfilled") or 0, "p": r.get("partial") or 0, "b": r.get("broken") or 0,
+              "t": r.get("tracked") or 0, "power": r.get("in_power") or ""} for r in rows]
+    return {"rows": rows, "pattern": pattern, "chart": json.dumps(chart, ensure_ascii=False)}
+
+
 def p22_for(prog):
     if not prog:
         return None
@@ -367,7 +397,7 @@ def party_summary(pk):
             funding = {"year": 2024, "paid": paid, "rows": sorted(p["funding"], key=lambda f: -(f.get("paid") or 0))[:6]}
     return {"key": pk, "name": list_display.get(pk, pk), "n": n, "won": won, "switch": switch, "new": new, "office": office,
             "mps": mps_u, "votes22": votes22, "votes18": votes18, "seats22": seats22, "units_in": units_in, "funding": funding,
-            "program": program_for(list_display.get(pk, "")), "p22": p22_for(program_for(list_display.get(pk, ""))), "key_votes": party_key_votes(pk),
+            "program": program_for(list_display.get(pk, "")), "p22": p22_for(program_for(list_display.get(pk, ""))), "hist": history_for(program_for(list_display.get(pk, ""))), "key_votes": party_key_votes(pk),
             "href": f"stranka-{re.sub(r'[^a-z0-9]+', '-', fold(pk.replace('prog:', ''))).strip('-')}.html"}
 
 

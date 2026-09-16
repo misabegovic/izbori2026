@@ -32,6 +32,22 @@
 <p class="mut">Za ovu listu nismo našli objavljen program ili obećanja za 2026.</p>
 {% endif %}
 
+{% if p.hist and p.hist.rows | length > 1 %}
+<h2 id="obrazac">Obrazac: obećanja kroz mandate</h2>
+{% if p.hist.pattern %}<p class="lead">U {{ p.hist.pattern.mandates }} mandata s praćenim obećanjima: <b>{{ p.hist.pattern.pct_full }}%</b> ispunjeno u potpunosti, {{ p.hist.pattern.pct_part }}% djelimično, od {{ p.hist.pattern.tracked | num }} praćenih obećanja.</p>{% endif %}
+<div class="d3 d3-mandates" data-d3='{{ p.hist.chart | safe }}'><span class="fb">{% for r in p.hist.rows %}{{ r.mandate }}: {{ r.fulfilled }}/{{ r.tracked }} ispunjeno; {% endfor %}</span></div>
+{% for r in p.hist.rows if r.mandate != '2022-2026' %}
+<details><summary>{{ r.mandate }} · {{ r.in_power }}</summary>
+<div class="card">
+{% if r.tracked %}<p class="small">Praćeno {{ r.tracked }} obećanja: {{ r.fulfilled }} ispunjeno, {{ r.partial or 0 }} djelimično, {{ r.broken or 0 }} nije.</p>{% endif %}
+{% for x in r.examples %}
+<div class="kd"><span class="vote {{ {'ispunjeno':'v-za','djelimično':'v-uz','nije':'v-protiv','ne može se ocijeniti':'v-odsutan'}[x.outcome] }}">{{ x.outcome }}</span> <span class="t">{{ x.promise }}</span><br><span class="small">{{ x.what_happened }}</span> <span class="src">{% for s in x.sources %}<a href="{{ s }}">izvor</a>{% if not loop.last %} · {% endif %}{% endfor %}</span></div>
+{% endfor %}
+{% if r.note %}<p class="small mut">{{ r.note }}</p>{% endif %}
+<p class="src">{% for s in r.sources %}<a href="{{ s }}">{{ s | replace('https://','') | truncate(45) }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+</div></details>
+{% endfor %}
+{% endif %}
 {% if p.p22 %}
 <h2 id="p22">Prošli put obećali, i šta se desilo</h2>
 <p class="mut small">Obećanja iz kampanje 2022 i ishod do septembra 2026, po Istinomjeru i medijima (izvor uz svako). {{ p.p22.in_power_2022_2026 }}</p>
