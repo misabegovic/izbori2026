@@ -158,7 +158,19 @@ def main():
     profiles = {}
     if os.path.exists("data/profiles.json"):
         profiles = json.load(open("data/profiles.json"))
-    notable = [pid for pid, p in people.items() if (p.get("won") or 0) > 0 or p.get("isOfficeHolder") or p.get("hasBiography")]
+    # "Notable" has to be judged on the merged record, and the fetch has to cover every
+    # person record inside a merged identity — the biography, portrait and asset filing
+    # for Bakir Izetbegović hang off his 2006 record, which is not itself on a ballot.
+    pstats = json.load(open("data/person_stats.json")) if os.path.exists("data/person_stats.json") else {}
+    merged = json.load(open("data/merges.json")) if os.path.exists("data/merges.json") else {}
+    members = {root: set(v) for root, v in (merged.get("groups") or {}).items()}
+    assign = {pid: root for root, v in members.items() for pid in v}
+    notable = set()
+    for pid, p in people.items():
+        st = pstats.get(pid) or {}
+        if (st.get("won") or p.get("won") or 0) > 0 or p.get("isOfficeHolder") or p.get("hasBiography"):
+            notable.add(pid)
+            notable |= members.get(assign.get(pid, pid), set())
     todo = [pid for pid in notable if pid not in profiles]
 
     def detail(pid):
@@ -180,7 +192,22 @@ def main():
                                  "pageUrl": d.get("pageUrl")}
     print()
     json.dump(profiles, open("data/profiles.json", "w"), ensure_ascii=False)
-    pub_to_pid_all = {v["publicId"]: k for k, v in profiles.items() if v.get("publicId")}
+    # A publicId belonging to a merged-away record resolves to the ballot profile, so a
+    # biography filed under the older record still reaches the page a reader opens.
+    ballot = set(json.load(open("data/timelines.json"))) if os.path.exists("data/timelines.json") else set()
+    pub_to_pid_all = {}
+    for pid, v in profiles.items():
+        if not v.get("publicId"):
+            continue
+        target = pid
+        if pid not in ballot:
+            for sibling in members.get(assign.get(pid, pid), ()):
+                if sibling in ballot:
+                    target = sibling
+                    break
+        pub_to_pid_all.setdefault(v["publicId"], target)
+    for pid in set(pub_to_pid_all.values()):
+        profiles.setdefault(pid, {})
 
     bios = paged("/biographies", log="biographies")
     nb = 0

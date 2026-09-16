@@ -15,7 +15,7 @@
 <div class="card">
 <h2>Odakle su brojke</h2>
 <ul style="margin:.3rem 0 0 1.1rem;padding:0">
-<li><b>Ko se kandiduje, ko je ranije bio izabran, za koju stranku:</b> službene liste Centralne izborne komisije od 2006 do 2026, sređene na <a href="https://gianniravioli.com/mashinerija/">gianniravioli.com „Mashinerija”</a> (otvoreni podaci, CC BY 4.0). Osobe su spojene po imenu kroz izbore, pa kod dva čovjeka istog imena u istoj općini može doći do greške; tamo gdje je to moguće, sajt to i kaže.</li>
+<li><b>Ko se kandiduje, ko je ranije bio izabran, za koju stranku:</b> službene liste Centralne izborne komisije od 2006 do 2026, sređene na <a href="https://gianniravioli.com/mashinerija/">gianniravioli.com „Mashinerija”</a> (otvoreni podaci, CC BY 4.0). Osobe su spojene kroz izbore po pravilima koja su <a href="#spajanje">ispisana niže</a>, jer identifikator osobe ne objavljuje nijedan izvor u BiH. Opći izbori <a href="#rupe">2010. i 2014. ne postoje ni u jednom čitljivom izvoru</a>.</li>
 <li><b>Kako je ko glasao:</b> {{ n_div | num }} poimeničnih glasanja u državnom parlamentu (PSBiH) i Narodnoj skupštini RS, 2022–2026, za {{ n_records }} kandidata koji su bili poslanici. Parlament Federacije i kantoni ne objavljuju ko je kako glasao, pa za te ljude zapisa nema.</li>
 <li><b>Obećanja 2026:</b> iz programa, saopštenja i intervjua {{ n_programs }} stranaka, uz link na izvor. To su tvrdnje stranaka, ne naša provjera. Uz svaku stranku piše koliko je izvor pouzdan.</li>
 <li><b>Šta je bilo s ranijim obećanjima:</b> uglavnom <a href="https://istinomjer.ba">Istinomjer</a> (provjerava obećanja od 2010) i mediji, uz link. Gdje Istinomjer prati cijelu vladu, a ne jednu stranku, red je tako i označen.</li>
@@ -59,6 +59,38 @@
 <p class="small mut">Ne zna šta se promijenilo od 2022: ko je u međuvremenu postao poznat, koja stranka je pukla, ko se s kim udružio. Ne zna ništa o kampanji. Mjeren je na jednim izborima, 2022, jer su to zadnji opći izbori za koje imamo i rezultat i stanje prije njih. Zato piše „nije prognoza”, a ne „prognoza”.</p>
 </div>
 
+<div class="card" id="spajanje">
+<h2>Kada kažemo da su dvije kandidature isti čovjek</h2>
+<p>Nijedan izvor u BiH ne objavljuje identifikator osobe. CIK štampa ime na listiću i ništa više, a ime se kroz godine piše različito: 2006. je pisalo <i>IZETBEGOVIĆ BAKIR</i>, od 2016. <i>BAKIR IZETBEGOVIĆ</i>. Zato sve iznad pojedinačne kandidature — da dvije pripadaju istom čovjeku — jeste <b>zaključak</b>, ne podatak.</p>
+<p>Mashinerija spaja samo kad je čovjek ostao u istoj izbornoj jedinici, a sve ostale mogućnosti objavljuje odvojeno, kao {{ bridges_seen | num }} <b>otvorenih mostova</b> s razlozima uz svaki. Mi smo te mostove pregledali i primijenili {{ bridges_applied | num }}, po tri pravila:</p>
+<ul style="margin:.3rem 0 .5rem 1.1rem;padding:0">
+<li><b>Ime se u cijeloj bazi od {{ candidacies_seen | num }} kandidatura javlja samo u ta dva zapisa.</b> Tad je malo vjerovatno da su to dva čovjeka. ({{ merge_tiers[0] | num }} mostova)</li>
+<li><b>Ista stranka na obje kandidature</b>, a ime je rijetko (najviše tri zapisa). ({{ merge_tiers[1] | num }})</li>
+<li><b>Jedno područje sadrži drugo</b> (općina unutar kantona, na primjer), zapisi dijele stranku, a ime je rijetko. ({{ merge_tiers[2] | num }})</li>
+</ul>
+<p class="small mut">Ime se prvo prevede u jedno pismo. CIK kandidate u RS štampa ćirilicom, a ostale latinicom, i ista osoba kroz godine zna biti u oba pisma — bez prevođenja „БРАНКО БЛАНУША” i „BLANUŠA BRANKO” nisu isto ime, pa ni test rijetkosti ne valja. Takvih spojeva preko dva pisma ima 473.</p>
+<p><b>Ručno, kad podaci ne mogu.</b> Neke ljude nijedno pravilo ne može dohvatiti, a to su baš oni koje birač traži. Semir Efendić je tri puta biran za načelnika Novog Grada Sarajevo i sjedio u Skupštini Kantona Sarajevo, pa 2026. izlazi za Predsjedništvo pod drugom strankom: druga stranka, drugi nivo, drugo područje, ime nije rijetko — registar o njemu ne kaže ništa. Takvi spojevi stoje u <a href="https://github.com/misabegovic/izbori2026/blob/main/data/manual_merges.json"><code>data/manual_merges.json</code></a>, {{ merge_tiers[-1] | num }} ih je, i svaki nosi obrazloženje i izvor koji se otvara s profila. Isti fajl radi i obrnuto: prijedlog koji smo pogledali i odbacili se skida s profila, da tuđi zapis ne visi uz ime.</p>
+<p>Uz to jedno tvrdo pravilo koje poništava sve ostalo: <b>niko ne stoji na dva listića istih izbora</b> (osim redovne i kompenzacijske liste iste trke), i ono nadjačava i ručni unos. Zbog toga se, na primjer, <b>Denis Bećirović</b> član Predsjedništva i <b>Denis Bećirović</b> kandidat u Tuzli nisu spojili iako dijele ime, stranku iz 2006. i regiju — jedan je 2026. na listiću za Predsjedništvo, drugi za Predstavnički dom.</p>
+<p>Spojeni red na profilu nosi oznaku <span class="tagspoj">spojeno</span>. Zbog spajanja {{ merged_people | num }} ljudi s listića 2026 ima historiju koju ranije nisu imali. Mostovi koje nismo prihvatili nisu obrisani: {{ maybe_rows | num }} redova kod {{ maybe_people | num }} ljudi stoji na profilu pod „Možda je ista osoba” i <b>ne ulazi ni u jednu brojku</b> — ni u šansu, ni u značke, ni u broj kandidatura. Ako griješimo, griješimo tako da se vidi.</p>
+</div>
+
+<div class="card" id="funkcije">
+<h2>Funkcije koje izborni zapis ne pokriva</h2>
+<p>Izborni zapis zna samo ono što se bira na listiću. Ministra, delegata u domu naroda, entitetskog premijera ili predsjedavajućeg Predsjedništva niko ne bira direktno, pa ih CIK nikad nije ni objavio. Za {{ offices_people }} {{ 'osobu' if offices_people == 1 else 'osoba' }} s listića 2026 te funkcije stoje na <a href="https://www.wikidata.org/">Wikidati</a>, s datumima i stavkom koju možeš otvoriti, pod licencom CC0.</p>
+<p>To je <b>drugi izvor</b> i na stranici je tako i označen: u zasebnom bloku, s linkom na stavku, i <b>ne ulazi ni u jednu brojku</b> koju pravi izborni zapis. Osoba se veže uz stavku na tri načina: preko Mashinerijinog zapisa o osobi ({{ offices_link['mashinerija'] }}), što je najjača veza jer je napravljena prema zapisu a ne prema imenu; po imenu kad to ime na listićima 2026 pripada tačno jednom čovjeku ({{ offices_link['ime'] }}); i po funkciji koju osoba drži sada, kad ime dijele dvoje ({{ offices_link['funkcija'] }}). Kad ni to ne razriješi ime, stavku <b>ne koristimo</b>{% if offices_dropped %} — tako je odbačeno {{ offices_dropped }}{% endif %}.</p>
+</div>
+
+<div class="card" id="rupe">
+<h2>Opći izbori 2010. i 2014. ne postoje nigdje</h2>
+<p>Ovo nije naš propust i ne može se popraviti skrejperom. Provjereno je na sva tri mjesta gdje bi ti rezultati trebali biti:</p>
+<ul style="margin:.3rem 0 .5rem 1.1rem;padding:0">
+<li><b>2010:</b> CIK-ova statična arhiva je na mreži, ali se ne može pročitati — njen ASP.NET <i>ViewState</i> pada na provjeri potpisa protiv CIK-ovog vlastitog balansera. Ne može je pročitati niko, ni mi ni bilo ko drugi.</li>
+<li><b>2014:</b> u CIK-ovom API-ju postoji tačno jedan skup rezultata, zove se <i>FinalniTest</i> i sam sebe proglašava konačnim. Krajnja tačka za trke radi; sloj ispod nje ne radi, a baza iza njega nikad nije objavljena. Aplikacija s potvrđenim rezultatima je živa, ali svaka stranica izborne jedinice piše „Још нема резултата”.</li>
+</ul>
+<p>Praktično: Bakir Izetbegović je bio u Predsjedništvu osam godina, 2010–2018, i <b>izborni zapis o tome ne zna ništa</b> — ni da se kandidovao, ni s koliko glasova. Zato ta dva mandata na njegovoj stranici stoje pod „Funkcije”, iz Wikidate, a ne među kandidaturama. Isto vrijedi za sve koji su birani 2010. i 2014.</p>
+<p class="small mut">Ovo nije rupa koju zatvara program nego zahtjev za pristup informacijama upućen CIK-u.</p>
+</div>
+
 <div class="card">
 <h2>Šta ne znamo</h2>
 <ul style="margin:.3rem 0 0 1.1rem;padding:0">
@@ -68,6 +100,8 @@
 <li>Šta stranke rade u kantonalnim i općinskim vladama (nema sređenog izvora).</li>
 <li>Da li je obećanje iz programa ozbiljno. Mi ga samo prepišemo i pokažemo šta je bilo s prošlim.</li>
 <li>Ko je iza koga: ne pratimo vlasnike medija, donatore ni porodične veze.</li>
+<li>Šta je bilo na općim izborima <a href="#rupe">2010. i 2014.</a> — te dvije godine nisu objavljene na čitljiv način nigdje, pa ih nema ni ovdje.</li>
+<li>Da li smo negdje spojili dva čovjeka u jednog. <a href="#spajanje">Pravila su ispisana</a>, ali nijedno nije dokaz.</li>
 </ul>
 <p>Greška, dopuna, zamjerka: otvori <a href="https://github.com/misabegovic/izbori2026/issues">prijavu na GitHubu</a>.</p>
 </div>

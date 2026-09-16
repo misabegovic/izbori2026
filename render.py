@@ -179,6 +179,18 @@ def p22_for(prog):
 speeches = json.load(open(D + "speeches.json")) if os.path.exists(D + "speeches.json") else {}
 ecitizen = json.load(open(D + "ecitizen.json")) if os.path.exists(D + "ecitizen.json") else {"cities": {}}
 appointed = json.load(open(D + "appointed.json")) if os.path.exists(D + "appointed.json") else {}
+# What the election record could not say on its own. person_stats counts the merged
+# record; merges says which links were made and why; maybe_same holds the links we
+# would not make; offices holds terms CIK never published at all.
+pstats = json.load(open(D + "person_stats.json")) if os.path.exists(D + "person_stats.json") else {}
+merges = json.load(open(D + "merges.json")) if os.path.exists(D + "merges.json") else {}
+merge_tiers = Counter(a["tier"] for a in merges.get("applied", []))
+# hand-checked identities carry a reason and a source, and the profile has to print both
+manual_merge = {pid: a for a in merges.get("applied", []) if a["tier"] == -1 for pid in a["pids"]}
+maybe_same = json.load(open(D + "maybe_same.json")) if os.path.exists(D + "maybe_same.json") else {}
+offices = json.load(open(D + "offices.json")) if os.path.exists(D + "offices.json") else {}
+offices_meta = json.load(open(D + "offices_meta.json")) if os.path.exists(D + "offices_meta.json") else {}
+history_meta = json.load(open(D + "history_meta.json")) if os.path.exists(D + "history_meta.json") else {}
 unit_spend = json.load(open(D + "unit_spend.json")) if os.path.exists(D + "unit_spend.json") else {}
 seat_bar = json.load(open(D + "seat_bar.json")) if os.path.exists(D + "seat_bar.json") else {}
 list_strength = json.load(open(D + "list_strength.json")) if os.path.exists(D + "list_strength.json") else {}
@@ -202,6 +214,7 @@ env.filters["km"] = km
 SRC_NAME = {"cin": "CIN, imovinapoliticara.cin.ba", "pd.fbih.karton": "Parlament FBiH", "psbih.detail": "parlament.ba", "cik": "CIK", "nsrs": "NSRS"}
 env.filters["srcname"] = lambda s: SRC_NAME.get(s or "", s or "")
 env.filters["area"] = lambda a: nice_area(a)
+env.filters["godina"] = lambda s: (s or "")[:4]
 env.filters["datum"] = lambda s: (lambda m: f"{int(m.group(3))}. {int(m.group(2))}. {m.group(1)}." if m else s)(re.match(r"^(\d{4})-(\d{2})-(\d{2})", s or ""))
 
 
@@ -428,13 +441,68 @@ def popularity(pid):
     }
 
 
+def office_terms(rows):
+    """Group repeats of the same office into one line with its terms.
+
+    The chair of the Presidency rotates every eight months, so a two-term member
+    collects four identical entries; printed raw they read like four different jobs."""
+    out, order = {}, []
+    for o in rows or ():
+        key = (o["title"], o.get("of"), o.get("district"))
+        if key not in out:
+            out[key] = {"title": o["title"], "of": o.get("of"), "district": o.get("district"),
+                        "party": o.get("party"), "terms": []}
+            order.append(key)
+        a, b = (o.get("start") or "")[:4], (o.get("end") or "")[:4]
+        if not a:
+            span = None
+        elif not b:
+            span = f"od {a}."
+        elif a == b:
+            span = a
+        else:
+            span = f"{a}–{b}"
+        if span and span not in out[key]["terms"]:
+            out[key]["terms"].append(span)
+    return [out[k] for k in order]
+
+
+def office_line(rows):
+    """The single office worth putting in a one-sentence summary: the one held
+    longest. Bakir Izetbegović stood twice by the election record and won nothing;
+    he also sat in the Presidency for eight years, and that is the sentence."""
+    if not rows:
+        return None
+    def span(o):
+        a, b = (o.get("start") or "")[:4], (o.get("end") or "")[:4]
+        if not a:
+            return 0
+        return (int(b) if b else 2026) - int(a)
+    best = max(rows, key=span)
+    if span(best) < 1:
+        return None
+    a, b = (best.get("start") or "")[:4], (best.get("end") or "")[:4]
+    when = f"{a}–{b}" if b else f"od {a}."
+    title = best["title"]
+    if title[:1].isupper() and title[1:2].islower():
+        title = title[0].lower() + title[1:]
+    return f"Bio/la je {title}, {when}"
+
+
 def person_view(c):
     """Everything a page needs to say about one candidate, in plain words."""
     pid = c.get("pid") or ""
     rec = people.get(pid, {})
     tl = timelines.get(pid, [])
     prof = profiles.get(pid, {})
-    stood, won = rec.get("stood") or c.get("stood") or 0, rec.get("won") or c.get("won") or 0
+    # The API counts only the candidacies it was willing to put under one person id.
+    # data/person_stats.json counts the merged record the profile below actually shows,
+    # so the badge on a ballot card and the history on this page cannot disagree.
+    st = pstats.get(pid)
+    if st:
+        stood, won = st.get("stood") or 0, st.get("won") or 0
+    else:
+        stood, won = rec.get("stood") or c.get("stood") or 0, rec.get("won") or c.get("won") or 0
     parties = unique_parties(tl)
     won_rows = [t for t in tl if t.get("elected")]
     home = None
@@ -445,6 +513,10 @@ def person_view(c):
          "pos": c.get("pos"), "stood": stood, "won": won, "office": rec.get("isOfficeHolder") or c.get("office"),
          "parties": parties, "n_parties": len(parties), "confidence": rec.get("confidence") or c.get("confidence"),
          "has_record": pid in records, "has_page": bool(pid),
+         "merged": st.get("merged") or 0, "manual": manual_merge.get(pid),
+         "office_rows": offices.get(pid),
+         "office_terms": office_terms((offices.get(pid) or {}).get("offices")),
+         "maybe": maybe_same.get(pid) or [],
          "won_rows": won_rows,
          "img": f"lica/{prof['publicId']}.webp" if prof.get("portrait") and prof.get("publicId") and os.path.exists(f"static/lica/{prof['publicId']}.webp") else None,
          "img_credit": (prof.get("portrait") or {}).get("credit"),
@@ -469,6 +541,13 @@ def person_view(c):
         badges.append(("filler", f"{stood}. put na listi, još neizabran", "Kandidovao se više puta, do sada nije osvojio mandat."))
     if v["has_record"]:
         badges.append(("record", "ima zapis glasanja", "Bio poslanik 2022–2026, vidi kako je glasao."))
+    if v["office_rows"]:
+        _o = v["office_rows"]["offices"]
+        badges.append(("funkcija", "držao/la javnu funkciju",
+                       "Funkcije koje CIK ne objavljuje, po Wikidati: "
+                       + "; ".join(f"{x['title']} ({(x.get('start') or '')[:4]}"
+                                   + (f"–{x['end'][:4]}" if x.get("end") else "–")
+                                   + ")" for x in _o[:6]) + "."))
     # personal votes, the thing an open list actually decides. Same badge on the ballot
     # card and on the profile, so the two pages never tell a different story.
     best = (v["pop"] or {}).get("best")
@@ -498,6 +577,9 @@ def person_view(c):
             s.append(f"Uvijek za istu stranku, koja je na listiću pisala kao: {' → '.join(printed)} (promjena imena ili koalicija, ne stranke).")
         else:
             s.append(f"Uvijek za: {party_title(parties[0][1])}.")
+    _line = office_line((v["office_rows"] or {}).get("offices"))
+    if _line:
+        s.insert(1, _line + ".")
     v["story"] = " ".join(s)
     return v
 
@@ -1102,7 +1184,16 @@ for _uk, _u in units.items():
         total_cands += len(_l["candidates"])
         if not _v:
             unmatched_lists += len(_l["candidates"])
-write("metoda.html", env.get_template("metoda.html").render(cal=CAL, RACE22_NAME=RACE22_NAME, unmatched_lists=unmatched_lists, total_cands=total_cands, kd=key_decisions, n_records=len(records), n_div=len(divisions), n_programs=len(programs), **base_ctx))
+write("metoda.html", env.get_template("metoda.html").render(
+    cal=CAL, RACE22_NAME=RACE22_NAME, unmatched_lists=unmatched_lists, total_cands=total_cands,
+    kd=key_decisions, n_records=len(records), n_div=len(divisions), n_programs=len(programs),
+    bridges_seen=history_meta.get("bridges_seen", 0), bridges_applied=history_meta.get("bridges_applied", 0),
+    candidacies_seen=history_meta.get("candidacies_seen", 0),
+    merged_people=history_meta.get("people_gained_by_merge", 0),
+    merge_tiers=merge_tiers, maybe_people=len(maybe_same),
+    maybe_rows=sum(len(v) for v in maybe_same.values()),
+    offices_people=len(offices), offices_link=Counter(v["link"] for v in offices.values()),
+    offices_dropped=len(offices_meta.get("ambiguous", [])), **base_ctx))
 
 # --- presidency page
 def pres_cands(area):

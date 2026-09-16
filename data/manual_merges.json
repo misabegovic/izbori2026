@@ -1,0 +1,129 @@
+{
+ "_": "Ručno provjereni identiteti. Svaki red je tvrdnja koju je čovjek provjerio protiv objavljenog izvora, a ne rezultat pravila iz fetch_history.py. Ovdje se stavlja samo ono što automatika ne može znati: čovjek koji je promijenio stranku, nivo i područje, pa nijedan signal iz registra o njemu ne govori ništa. 'merges' spaja zapise u jednu osobu, 'not_same' skida prijedlog koji smo pogledali i odbacili. Tvrdo pravilo iz fetch_history.py vrijedi i ovdje: spoj koji bi istu osobu stavio na dva listića istih izbora se odbija bez obzira na ovaj fajl.",
+ "merges": [
+  {
+   "name": "SEMIR EFENDIĆ",
+   "pids": ["p.oi2026-1.1", "p.2121-8.398", "p.25-7.3112"],
+   "why": "Načelnik Općine Novi Grad Sarajevo od 2012, tri uzastopna mandata; zastupnik u Skupštini Kantona Sarajevo 2018. za SDA i 2022. za SBiH. Napustio SDA u aprilu 2021. i u novembru 2021. izabran za predsjednika SBiH, pod kojom je 2026. kandidat za Predsjedništvo. Automatika ga ne može spojiti: druga stranka, drugi nivo, drugo područje, ime nije rijetko.",
+   "sources": [
+    "https://radiosarajevo.ba/vijesti/bosna-i-hercegovina/semir-efendic-potvrdio-bit-cu-kandidat-za-clana-predsjednistva-bih-na-predstojecim-izborima/621154",
+    "https://en.wikipedia.org/wiki/Semir_Efendi%C4%87"
+   ],
+   "checked": "2026-09-16"
+  },
+  {
+   "name": "ELMEDIN KONAKOVIĆ",
+   "pids": ["p.oi2026-2.175", "p.25-7.3497", "p.32-4.1172"],
+   "why": "Osnivač i predsjednik Naroda i pravde: Skupština Kantona Sarajevo 2018. za NiP, Predstavnički dom Parlamenta FBiH 2022. na listi Povjerenje! (NiP i partneri), ministar vanjskih poslova BiH od januara 2023. Wikidata stavka Q102101678 nosi isti niz funkcija.",
+   "sources": ["https://www.wikidata.org/wiki/Q102101678"],
+   "checked": "2026-09-16"
+  },
+  {
+   "name": "JASMIN IMAMOVIĆ",
+   "pids": ["p.32-2.388", "p.2081-8.155"],
+   "why": "Gradonačelnik Tuzle od 2001. do 2022, izabran i 2008, 2012, 2016. i 2020, uvijek za SDP. Mandat gradonačelnika napustio usred šestog saziva da preuzme mjesto u Predstavničkom domu PSBiH, osvojeno 2022. u istoj izbornoj jedinici (5A, Tuzla).",
+   "sources": [
+    "https://www.sdp.ba/jasmin-imamovic-nakon-22-godine-odlazi-sa-cela-tuzle-kaze-da-zeli-napraviti-velike-stvari-za-bih/",
+    "https://en.wikipedia.org/wiki/Jasmin_Imamovi%C4%87"
+   ],
+   "checked": "2026-09-16"
+  },
+  {
+   "name": "RAMIZ SALKIĆ",
+   "pids": ["p.25-5.36", "p.32-6.1158", "p.2061-6.913"],
+   "why": "Potpredsjednik Republike Srpske iz reda bošnjačkog naroda od 2014. do 2022, poslanik u Narodnoj skupštini RS od 2007. i ponovo izabran 2022. Član Predsjedništva i Glavnog odbora SDA, pod kojom je 2026. kandidat. Kandidature idu kroz tri različite liste (SDA, Zajedno za BiH, Pokret za državu), pa signal o stranci ne postoji.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ramiz_Salki%C4%87",
+    "https://www.narodnaskupstinars.net/en/sastav/narodni-poslanici/ramiz-salkic"
+   ],
+   "checked": "2026-09-16"
+  },
+  {
+   "name": "BRANKO BLANUŠA",
+   "pids": ["p.39-5.0", "p.32-6.325", "p.25-2.564", "p.2121-9.6935"],
+   "why": "Profesor i bivši dekan Elektrotehničkog fakulteta u Banjoj Luci, predsjednik SDS-a od decembra 2025. i kandidat stranke za predsjednika RS. U SDS je prešao 2013. iz Srpske napredne stranke, gdje je bio predsjednik gradskog odbora — to je kandidatura iz 2012. u Banjoj Luci. Kandidat SDS-a za Parlamentarnu skupštinu BiH 2018.",
+   "sources": [
+    "https://www.slobodnaevropa.org/a/sds-bih-kandidat-rs-predsjednik/33543151.html",
+    "https://en.wikipedia.org/wiki/Branko_Blanu%C5%A1a"
+   ],
+   "checked": "2026-09-16"
+  },
+  {
+   "name": "SAVO MINIĆ",
+   "pids": ["p.oi2026-5.4", "p.2081-8.70"],
+   "why": "Rođen 1974. u Bosanskom Šamcu, načelnik Šamca prije ulaska u republičku vlast; ministar poljoprivrede, šumarstva i vodoprivrede RS, predsjednik Vlade RS od septembra 2025, kandidat SNSD-a za predsjednika RS 2026.",
+   "sources": ["https://en.wikipedia.org/wiki/Savo_Mini%C4%87"],
+   "checked": "2026-09-16"
+  },
+  {
+   "name": "BEGIJA SMAJIĆ",
+   "pids": ["p.oi2026-5.7", "p.25-6.1192", "p.2121-9.17331"],
+   "why": "Vijećnica u Srebrenici i poslanica u Narodnoj skupštini RS 2018–2022, jedina Bošnjakinja i prva žena s hidžabom u tom sazivu. Potpredsjednica SBiH i kandidatkinja stranke za predsjednicu RS 2026.",
+   "sources": [
+    "http://ba.n1info.com/Vijesti/a299075/Begija-Smajic-prva-zena-s-hidzabom-u-NSRS-Cvijet-Srebrenice-nosit-cu-i-dalje.html",
+    "https://www.hayat.ba/news/article/sbih-begija-smajic-ce-biti-nas-kandidat-za-predsjednicu-rsa/69fdf256c085392ec933dd99"
+   ],
+   "checked": "2026-09-16"
+  },
+  {
+   "name": "NEBOJŠA VUKANOVIĆ",
+   "pids": ["p.oi2026-1.9", "p.2121-8.539"],
+   "why": "Osnivač i predsjednik pokreta Za pravdu i red, sjedište u Trebinju; poslanik u Narodnoj skupštini RS od novembra 2018. Lista na kojoj je 2026. kandidat za srpskog člana Predsjedništva nosi njegovo ime, kao i kandidature u Trebinju 2020. i 2024.",
+   "sources": [
+    "https://www.federalna.ba/nebojsa-vukanovic-kandidat-za-clana-predsjednistva-bih-aajre",
+    "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Vukanovi%C4%87"
+   ],
+   "checked": "2026-09-16"
+  },
+  {
+   "name": "EDIN DELIĆ",
+   "pids": ["p.32-2.464", "p.13-8.117"],
+   "why": "Načelnik, kasnije gradonačelnik Lukavca od 2016, izabran i 2020. i 2024; predsjednik Glavnog odbora Socijaldemokrata BiH, pod kojima se 2022. kandidovao za Predstavnički dom PSBiH u istoj izbornoj jedinici (5A).",
+   "sources": [
+    "https://istinomjer.ba/akter/edin-delic/",
+    "https://faktor.ba/bosna-i-hercegovina/aktuelno/edin-delic-predsjednik-glavnog-odbora-socijaldemokrata-bih-izabrani-i-clanovi-predsjednistva-stranke/168125"
+   ],
+   "checked": "2026-09-16"
+  },
+  {
+   "name": "MARIO KARAMATIĆ",
+   "pids": ["p.25-2.139", "p.32-4.1056", "p.2121-9.25605"],
+   "why": "Predsjednik Hrvatske seljačke stranke BiH od 2012, iz Posušja, zastupnik u Predstavničkom domu Parlamenta FBiH. Kandidature idu pod imenom HSS-a (Posušje 2012) i pod imenima hrvatskih koalicija (2018, 2022, 2026), pa se ime liste kroz godine ne poklapa.",
+   "sources": [
+    "https://www.hss.ba/",
+    "https://hr.wikipedia.org/wiki/Hrvatska_selja%C4%8Dka_stranka_Bosne_i_Hercegovine"
+   ],
+   "checked": "2026-09-16"
+  },
+  {
+   "name": "MIRO LAZOVIĆ",
+   "pids": ["p.oi2026-2.217", "p.2061-7.3239", "p.2121-9.23126"],
+   "why": "Predsjednik Skupštine RBiH 1992–1996. i član delegacije na pregovorima u Daytonu. Član SDU BiH — otud kandidatura na listi Patriotski blok BOSS–SDU u Kantonu Sarajevo 2006; vijećnik u Centru Sarajevo 2012. za SDU, 2016. za SDP (potpredsjednik SDP-a od 2015) i 2020. za DF–Građanski savez; zamjenik predsjedavajućeg Gradskog vijeća Sarajeva od 2012, što traži vijećnički mandat.",
+   "sources": [
+    "https://bs.wikipedia.org/wiki/Miro_Lazovi%C4%87",
+    "https://istinomjer.ba/akter/miro-lazovic/"
+   ],
+   "checked": "2026-09-16"
+  }
+ ],
+ "not_same": [
+  {
+   "pid": "p.oi2026-1.1",
+   "name": "SEMIR EFENDIĆ",
+   "others": ["p.2121-9.12645"],
+   "why": "Vijećnička kandidatura u Žepču 2012. za SBB. Na istim izborima 2012. Semir Efendić je izabran za načelnika Novog Grada Sarajevo, pa je to drugi čovjek."
+  },
+  {
+   "pid": "p.32-2.388",
+   "name": "JASMIN IMAMOVIĆ",
+   "others": ["p.2081-9.13566", "p.27-9.13297", "p.27-9.18213", "p.27-9.22157", "p.36-9.8105", "p.32-2.201"],
+   "why": "Jasmin Imamović je bio gradonačelnik Tuzle bez prekida od 2001. do 2022. Vijećnik izabran u Zenici 2008, kandidature u Zavidovićima, Bugojnu, Novom Gradu Sarajevo i Lukavcu, te kandidatura Naše stranke u izbornoj jedinici 3A 2022. pripadaju drugim ljudima istog imena."
+  },
+  {
+   "pid": "p.32-2.464",
+   "name": "EDIN DELIĆ",
+   "others": ["p.13-9.10275", "p.13-9.14438", "p.13-9.5493"],
+   "why": "Tri vijećničke kandidature iz 2016. u Srebreniku, Živinicama i Gradačcu. Na istim izborima Edin Delić je izabran za načelnika Lukavca, pa su to drugi ljudi."
+  }
+ ]
+}

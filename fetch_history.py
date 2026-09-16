@@ -18,6 +18,7 @@ import json
 import os
 import re
 import time
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -96,19 +97,313 @@ def rank_within_contest(rows):
     return out
 
 
-def build_timelines(rows, wanted):
-    """{pid: [candidacy row]} for everyone on a 2026 ballot, newest election last."""
-    ranks = rank_within_contest(rows)
-    pubids, out = {}, defaultdict(list)
+def pull_bridges():
+    """Mashinerija's own proposed identity links — published, ranked, never applied.
+
+    The compiler splits a person whenever it cannot prove two candidacies are one
+    human, and says so: "pogrešan most izmišlja osobu, pa red smije ostati dug".
+    It then publishes 28k candidate links with the signals behind each one, and
+    leaves the judgement to whoever needs it. This is that judgement, made here and
+    written down, because a voter guide that tells you Bakir Izetbegović has never
+    won anything is worse than one that says "probably the same man, here is why".
+    """
+    rows, off = [], 0
+    while True:
+        d = get(f"{BASE}/bridges?limit={PAGE}&offset={off}")
+        rows += d["data"]
+        if off + PAGE >= d["meta"]["total"]:
+            return rows
+        off += PAGE
+
+
+# CIK prints RS candidates in Cyrillic and everyone else in Latin, and the same person
+# can appear in either script across years. Without this, "БРАНКО БЛАНУША" and "BRANKO
+# BLANUŠA" are two different names, which quietly breaks the rarity test below: a name
+# held by five people looks like two in each script, and tier 0 fires when it must not.
+CYRILLIC = {
+    "А": "A", "Б": "B", "В": "V", "Г": "G", "Д": "D", "Ђ": "DJ", "Е": "E", "Ж": "Z",
+    "З": "Z", "И": "I", "Ј": "J", "К": "K", "Л": "L", "Љ": "LJ", "М": "M", "Н": "N",
+    "Њ": "NJ", "О": "O", "П": "P", "Р": "R", "С": "S", "Т": "T", "Ћ": "C", "У": "U",
+    "Ф": "F", "Х": "H", "Ц": "C", "Ч": "C", "Џ": "DZ", "Ш": "S",
+}
+
+
+def fold_name(row):
+    """(SURNAME, GIVEN), one script, diacritics stripped. CIK printed 'IZETBEGOVIĆ BAKIR'
+    in 2006 and 'BAKIR IZETBEGOVIĆ' from 2016, which is one reason the two never met."""
+    sn, gn = (row.get("surname") or "").strip(), (row.get("given") or "").strip()
+    if not sn or not gn:
+        parts = (row.get("name") or "").split()
+        if len(parts) < 2:
+            return None
+        sn, gn = parts[0], parts[1]
+    def f(s):
+        s = "".join(CYRILLIC.get(c, c) for c in s.upper())
+        s = s.replace("Đ", "DJ")
+        s = unicodedata.normalize("NFD", s)
+        return "".join(c for c in s if unicodedata.category(c) != "Mn")
+    return (" ".join(f(sn).split()), " ".join(f(gn).split()))
+
+
+# 2026 areas that are a second, entity-wide list of the same race. Standing on the
+# regular list and on this one is the only way one person legitimately appears twice
+# in a single election, so it is the only exception the conflict guard allows.
+COMPENSATORY = {"501", "502", "400", "300"}
+
+TIERS = {
+    -1: "ručno provjereno",
+    0: "ime se u cijeloj bazi javlja samo u ta dva zapisa",
+    1: "ista stranka na obje kandidature, ime rijetko",
+    2: "jedno područje sadrži drugo, a zapisi dijele stranku",
+}
+
+MANUAL = D + "manual_merges.json"
+
+
+def read_manual():
+    """Hand-checked identities, from data/manual_merges.json.
+
+    Some people the automatic rules can never reach, and they are exactly the people a
+    voter looks up. Semir Efendić was mayor of Novi Grad Sarajevo three times and sat in
+    the Sarajevo canton assembly, then stood for the Presidency in 2026 for a different
+    party — no shared party, no shared area, no rare name, so every signal the register
+    publishes says nothing. The file is the place to say "we checked this one", with the
+    reason and a source per row, and `not_same` for the reverse: suggestions we looked at
+    and rejected, so a namesake's record stops being offered as a maybe.
+    """
+    if not os.path.exists(MANUAL):
+        return [], []
+    d = json.load(open(MANUAL))
+    return d.get("merges") or [], d.get("not_same") or []
+
+
+def build_merges(rows, bridges):
+    """Apply the bridges we are willing to stand behind; keep the rest as a suggestion.
+
+    Applied across the whole register, not only the 2026 ballots, because backtest.py
+    measures the seat-chance rule on the 2022 field and render.py applies it to merged
+    profiles: if the two counted identity differently the same person would get one
+    answer on the page and another in the calibration behind it.
+
+    A wrong merge invents a person, so every rule here needs a reason a reader can
+    check, and one hard guard catches the case that burned the first draft: two
+    people named Denis Bećirović, one the sitting member of the Presidency and one a
+    Tuzla councillor, share a party and a region and would otherwise have been fused.
+    Nobody stands for two different offices at the same election, so a union that
+    would produce that is refused whatever the other signals say.
+    """
+    by_pid = defaultdict(list)
     for r in rows:
         pid = (r.get("person") or {}).get("id")
-        if pid not in wanted:
+        if pid:
+            by_pid[pid].append(r)
+    by_name = defaultdict(set)
+    for r in rows:
+        k = fold_name(r)
+        pid = (r.get("person") or {}).get("id")
+        if k and pid:
+            by_name[k].add(pid)
+    rows_by_id = {r["id"]: r for r in rows}
+
+    def parties(pid):
+        return {(r.get("party") or {}).get("id") for r in by_pid.get(pid, ())
+                if (r.get("party") or {}).get("id")}
+
+    def conflicted(pids):
+        per = defaultdict(list)
+        for p in pids:
+            for r in by_pid.get(p, ()):
+                per[r.get("electionId")].append(r)
+        for group in per.values():
+            if len(group) < 2:
+                continue
+            if len({(r.get("level") or {}).get("id") for r in group}) > 1:
+                return True
+            if len(group) > 2:
+                return True
+            if not {str(r.get("areaCode")) for r in group} & COMPENSATORY:
+                return True
+        return False
+
+    def tier(b, pa, pb):
+        a = rows_by_id.get(b["a"]["candidacyId"])
+        sig = b.get("signals") or {}
+        n = len(by_name.get(fold_name(a), ())) if a else 99
+        if n == 2:
+            return 0
+        if sig.get("sameParty") and n <= 3:
+            return 1
+        if sig.get("areaContains") and n <= 3 and (parties(pa) & parties(pb)):
+            return 2
+        return None
+
+    parent, group = {}, defaultdict(set)
+
+    def find(x):
+        parent.setdefault(x, x)
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    def seed(p):
+        r = find(p)
+        if not group[r]:
+            group[r].add(p)
+
+    manual, _ = read_manual()
+    applied, maybe, refused = [], [], defaultdict(int)
+    manual_conflicts = []
+    for entry in manual:
+        pids = [p for p in entry.get("pids", []) if p in by_pid]
+        missing = [p for p in entry.get("pids", []) if p not in by_pid]
+        if missing:
+            print(f"   upozorenje: {entry.get('name')} — nepoznat zapis {missing}")
+        if len(pids) < 2:
+            continue
+        for p in pids:
+            seed(p)
+        roots = {find(p) for p in pids}
+        union = set().union(*(group[r] for r in roots))
+        if conflicted(union):
+            # The guard outranks a hand-written line: a person on two ballots of one
+            # election is a mistake in the file, not a fact about the person.
+            manual_conflicts.append(entry.get("name"))
+            continue
+        keep = find(pids[0])
+        for r in roots:
+            if r != keep:
+                parent[r] = keep
+                group.pop(r, None)
+        group[keep] = union
+        applied.append({"tier": -1, "pids": sorted(union), "name": entry.get("name"),
+                        "why": entry.get("why"), "sources": entry.get("sources") or []})
+    if manual_conflicts:
+        print(f"   ODBIJENO iz manual_merges.json (dva listića istih izbora): {manual_conflicts}")
+
+    ranked = []
+    for b in bridges:
+        pa = (rows_by_id.get(b["a"]["candidacyId"]) or {}).get("person", {}).get("id")
+        pb = (rows_by_id.get(b["b"]["candidacyId"]) or {}).get("person", {}).get("id")
+        if not pa or not pb or pa == pb:
+            continue
+        ranked.append((tier(b, pa, pb), b["id"], pa, pb, b))
+
+    for t, bid, pa, pb, b in sorted(ranked, key=lambda x: (99 if x[0] is None else x[0], x[1])):
+        if t is None:
+            maybe.append((b, "signali nisu dovoljni"))
+            continue
+        seed(pa); seed(pb)
+        ra, rb = find(pa), find(pb)
+        if ra == rb:
+            continue
+        union = group[ra] | group[rb]
+        if len(union) > 6:
+            refused["grupa prevelika"] += 1
+            maybe.append((b, "grupa bi postala prevelika"))
+            continue
+        if conflicted(union):
+            refused["dvije kandidature na istim izborima"] += 1
+            maybe.append((b, "spoj bi istu osobu stavio na dva listića istih izbora"))
+            continue
+        parent[rb] = ra
+        group[ra] = union
+        group.pop(rb, None)
+        # `why` is TIERS[tier] and `pids` is the group this bridge landed in; neither is
+        # worth repeating nine thousand times in a committed file.
+        applied.append({"bridge": bid, "tier": t, "a": b["a"]["candidacyId"],
+                        "b": b["b"]["candidacyId"]})
+
+    groups = {r: sorted(v) for r, v in group.items() if len(v) > 1}
+    # assign is derivable from groups (anything not in one is its own identity), so only
+    # groups is written out; identity_map() in backtest.py and render.py rebuild it.
+    assign = {p: root for root, members in groups.items() for p in members}
+    n_manual = sum(1 for a in applied if a["tier"] == -1)
+    print(f"   {len(bridges)} mostova: {len(applied) - n_manual} primijenjeno + {n_manual} ručnih, "
+          f"{len(maybe)} ostaje kao prijedlog (većina van listića 2026); "
+          f"odbijeno: {dict(refused)}")
+    return assign, groups, applied, maybe
+
+
+def maybe_records(maybe, rows, wanted, assign):
+    """'Might be the same person' — shown on the profile, counted nowhere.
+
+    Attached to the merged identity, not the raw record, or a suggestion about Bakir
+    Izetbegović's 2006 record would never reach the page his 2026 candidacy renders.
+    A suggestion pointing back inside the same merged identity is dropped: it is not a
+    suggestion any more, it is already on the timeline above."""
+    by_id = {r["id"]: r for r in rows}
+    ballot_of = defaultdict(set)
+    for pid in wanted:
+        ballot_of[assign.get(pid, pid)].add(pid)
+    # suggestions we looked at by hand and rejected: a namesake, not this person
+    rejected = defaultdict(set)
+    for entry in read_manual()[1]:
+        rejected[entry.get("pid")] |= set(entry.get("others") or [])
+    out = defaultdict(list)
+    seen = set()
+    for b, why in maybe:
+        a, c = by_id.get(b["a"]["candidacyId"]), by_id.get(b["b"]["candidacyId"])
+        if not a or not c:
+            continue
+        for mine, other in ((a, c), (c, a)):
+            mine_pid = (mine.get("person") or {}).get("id")
+            other_pid = (other.get("person") or {}).get("id")
+            root = assign.get(mine_pid, mine_pid)
+            if assign.get(other_pid, other_pid) == root:
+                continue
+            for pid in ballot_of.get(root, ()):
+                if other_pid in rejected.get(pid, ()):
+                    continue
+                key = (pid, other["id"])
+                if key in seen:
+                    continue
+                seen.add(key)
+                out[pid].append({
+                    "y": other.get("year"),
+                    "lvl": (other.get("level") or {}).get("label"),
+                    "area": (other.get("area") or {}).get("label"),
+                    "party": (other.get("party") or {}).get("label"),
+                    "votes": other.get("votes"),
+                    "elected": other.get("elected"),
+                    "pid": other_pid,
+                    "url": other.get("pageUrl"),
+                    "signals": b.get("signals"),
+                    "why": why,
+                })
+    for pid in out:
+        out[pid].sort(key=lambda r: (r.get("y") or 0))
+    return dict(out)
+
+
+def build_timelines(rows, wanted, assign=None):
+    """{pid: [candidacy row]} for everyone on a 2026 ballot, newest election last.
+
+    `assign` maps a person id onto the merged identity it belongs to, so a candidacy
+    filed under a record the API kept separate lands on the ballot profile it belongs
+    to. Rows that arrived that way carry `via_merge`, because the page has to say so.
+    """
+    assign = assign or {}
+    ranks = rank_within_contest(rows)
+    # every ballot identity, and the person records that resolve onto it
+    members = defaultdict(set)
+    for pid in wanted:
+        members[assign.get(pid, pid)].add(pid)
+    reaches = defaultdict(set)
+    for pid in set(assign) | set(wanted):
+        root = assign.get(pid, pid)
+        for ballot_pid in members.get(root, ()):
+            reaches[pid].add(ballot_pid)
+
+    pubids, pubids_all, out = {}, {}, defaultdict(list)
+    for r in rows:
+        pid = (r.get("person") or {}).get("id")
+        targets = reaches.get(pid)
+        if not targets:
             continue
         m = re.search(r"/(o-\d+)/", r.get("pageUrl") or "")
-        if m:
-            pubids[pid] = m.group(1)
         rank, size = ranks.get(r["id"], (None, None))
-        out[pid].append({
+        row = {
             "y": r.get("year"),
             "lvl": (r.get("level") or {}).get("label"),
             "area": (r.get("area") or {}).get("label"),
@@ -123,10 +418,35 @@ def build_timelines(rows, wanted):
             "of": size,
             "elected": r.get("elected"),
             "via": r.get("electedVia"),
-        })
+        }
+        for ballot_pid in targets:
+            if m:
+                pubids_all[m.group(1)] = ballot_pid
+                if ballot_pid == pid:
+                    pubids[ballot_pid] = m.group(1)
+            entry = dict(row)
+            if pid != ballot_pid:
+                entry["via_merge"] = pid
+            out[ballot_pid].append(entry)
     for pid in out:
         out[pid].sort(key=lambda t: (t.get("y") or 0, t.get("lvl") or ""))
-    return dict(out), pubids
+    return dict(out), pubids, pubids_all
+
+
+def person_stats(timelines):
+    """stood/won recomputed on the merged record, so the badge on a list agrees with
+    the profile behind it. data/people_cache.json still holds the API's own count."""
+    out = {}
+    for pid, tl in timelines.items():
+        years = [t["y"] for t in tl if t.get("y")]
+        out[pid] = {
+            "stood": len(tl),
+            "won": sum(1 for t in tl if t.get("elected")),
+            "firstYear": min(years) if years else None,
+            "lastYear": max(years) if years else None,
+            "merged": sum(1 for t in tl if t.get("via_merge")),
+        }
+    return out
 
 
 # 2026 race -> the same race in 2022. Area codes are identical across the two years;
@@ -224,14 +544,13 @@ def list_strength(rows):
     return out
 
 
-def pull_appointed(pubids):
+def pull_appointed(by_public):
     """Seats people were appointed to rather than elected, keyed back to our pids.
 
     Mashinerija keeps these deliberately separate from elected persons: the record
     is a name on an institution's own page, with no identity resolution behind it.
     We only keep rows the API itself already linked to a person.
     """
-    by_public = {v: k for k, v in pubids.items()}
     rows, off = [], 0
     while True:
         d = get(f"{BASE}/appointed?limit={PAGE}&offset={off}")
@@ -297,40 +616,57 @@ def main():
     os.makedirs(D, exist_ok=True)
     started = time.time()
 
-    print("1/6 sve kandidature")
+    print("1/8 sve kandidature")
     rows = pull_all_candidacies()
 
-    print("2/6 historije kandidata 2026")
+    print("2/8 mostovi identiteta")
+    bridges = pull_bridges()
     wanted = ballot_pids()
-    timelines, pubids = build_timelines(rows, wanted)
+    assign, groups, applied, maybe = build_merges(rows, bridges)
+
+    print("3/8 historije kandidata 2026")
+    timelines, pubids, pubids_all = build_timelines(rows, wanted, assign)
     prior = sum(1 for t in timelines.values() if any(r["y"] != 2026 for r in t))
+    gained = sum(1 for t in timelines.values() if any(r.get("via_merge") for r in t))
     print(f"   {len(wanted)} ljudi na listama, {prior} s ranijim kandidaturama, "
-          f"{len(wanted) - prior} prvi put")
+          f"{len(wanted) - prior} prvi put; {gained} ih je historiju dobilo spajanjem")
     json.dump(timelines, open(D + "timelines.json", "w"), ensure_ascii=False)
     json.dump(pubids, open(D + "pubids.json", "w"), ensure_ascii=False)
+    json.dump(pubids_all, open(D + "pubids_all.json", "w"), ensure_ascii=False)
+    json.dump(person_stats(timelines), open(D + "person_stats.json", "w"), ensure_ascii=False)
+    json.dump({"generated": datetime.now(timezone.utc).isoformat(),
+               "bridges_seen": len(bridges), "applied": applied,
+               "groups": groups, "tiers": TIERS},
+              open(D + "merges.json", "w"), ensure_ascii=False)
+    json.dump(maybe_records(maybe, rows, wanted, assign),
+              open(D + "maybe_same.json", "w"), ensure_ascii=False)
 
-    print("3/6 koliko je ličnih glasova trebalo za mandat 2022")
+    print("4/8 koliko je ličnih glasova trebalo za mandat 2022")
     bars = seat_bar(rows)
     json.dump(bars, open(D + "seat_bar.json", "w"), ensure_ascii=False, indent=1)
     print(f"   {len(bars)} izbornih jedinica")
 
-    print("4/6 da li je glas za listu bio bačen 2022")
+    print("5/8 da li je glas za listu bio bačen 2022")
     strength = list_strength(rows)
     json.dump(strength, open(D + "list_strength.json", "w"), ensure_ascii=False, indent=1)
     worst = max(strength.values(), key=lambda v: v["wasted_share"], default=None)
     print(f"   {len(strength)} jedinica; najviše bačenih glasova {worst['wasted_share']}%" if worst else "   0")
 
-    print("5/6 imenovanja")
-    json.dump(pull_appointed(pubids), open(D + "appointed.json", "w"), ensure_ascii=False, indent=1)
+    print("6/8 imenovanja")
+    json.dump(pull_appointed(pubids_all), open(D + "appointed.json", "w"), ensure_ascii=False, indent=1)
 
-    print("6/6 potrošnja jedinica u kojima su sjedili")
+    print("7/8 potrošnja jedinica u kojima su sjedili")
     units = {r["unit"] for t in timelines.values() for r in t if r.get("unit") and r.get("elected")}
     json.dump(pull_unit_spend(units), open(D + "unit_spend.json", "w"), ensure_ascii=False, indent=1)
 
+    print("8/8 sažetak")
     json.dump({"generated": datetime.now(timezone.utc).isoformat(),
                "candidacies_seen": len(rows),
+               "bridges_seen": len(bridges),
+               "bridges_applied": len(applied),
                "people_on_ballots": len(wanted),
-               "people_with_history": prior},
+               "people_with_history": prior,
+               "people_gained_by_merge": gained},
               open(D + "history_meta.json", "w"), ensure_ascii=False, indent=1)
     print(f"gotovo za {time.time() - started:.0f}s")
 

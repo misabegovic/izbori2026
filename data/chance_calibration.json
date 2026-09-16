@@ -1,7 +1,8 @@
 {
- "generated": "2026-09-16T12:29:37.932271+00:00",
+ "generated": "2026-09-16T16:36:32.400837+00:00",
  "measured_on": "opći izbori 2022, trke 32-2, 32-4, 32-6, 32-7",
  "seats_from": "mandati 2018",
+ "identities": "spojene po data/merges.json",
  "shrink_k": 25,
  "position": {
   "within": {
@@ -37,174 +38,174 @@
  },
  "crossed": {
   "within|top1": {
-   "n": 111,
-   "won": 74,
-   "raw_pct": 67,
-   "pct": 66
+   "n": 122,
+   "won": 80,
+   "raw_pct": 66,
+   "pct": 65
   },
   "within|strong": {
-   "n": 134,
-   "won": 98,
+   "n": 147,
+   "won": 108,
    "raw_pct": 73,
    "pct": 72
   },
   "within|ran": {
-   "n": 43,
-   "won": 22,
-   "raw_pct": 51,
-   "pct": 56
+   "n": 51,
+   "won": 21,
+   "raw_pct": 41,
+   "pct": 48
   },
   "within|none": {
-   "n": 104,
-   "won": 53,
-   "raw_pct": 51,
-   "pct": 53
+   "n": 72,
+   "won": 38,
+   "raw_pct": 53,
+   "pct": 55
   },
   "plus1|top1": {
-   "n": 34,
-   "won": 10,
-   "raw_pct": 29,
-   "pct": 25
+   "n": 39,
+   "won": 12,
+   "raw_pct": 31,
+   "pct": 26
   },
   "plus1|strong": {
-   "n": 33,
+   "n": 38,
    "won": 10,
-   "raw_pct": 30,
-   "pct": 25
+   "raw_pct": 26,
+   "pct": 23
   },
   "plus1|ran": {
-   "n": 28,
+   "n": 33,
    "won": 2,
-   "raw_pct": 7,
-   "pct": 13
+   "raw_pct": 6,
+   "pct": 12
   },
   "plus1|none": {
-   "n": 49,
-   "won": 5,
-   "raw_pct": 10,
+   "n": 34,
+   "won": 3,
+   "raw_pct": 9,
    "pct": 13
   },
   "plus2|top1": {
-   "n": 42,
+   "n": 48,
    "won": 5,
-   "raw_pct": 12,
-   "pct": 10
+   "raw_pct": 10,
+   "pct": 9
   },
   "plus2|strong": {
-   "n": 32,
+   "n": 38,
    "won": 2,
-   "raw_pct": 6,
+   "raw_pct": 5,
    "pct": 6
   },
   "plus2|ran": {
-   "n": 21,
-   "won": 0,
-   "raw_pct": 0,
-   "pct": 3
-  },
-  "plus2|none": {
-   "n": 49,
-   "won": 2,
+   "n": 24,
+   "won": 1,
    "raw_pct": 4,
    "pct": 5
   },
+  "plus2|none": {
+   "n": 34,
+   "won": 1,
+   "raw_pct": 3,
+   "pct": 4
+  },
   "beyond|top1": {
-   "n": 122,
-   "won": 12,
-   "raw_pct": 10,
+   "n": 166,
+   "won": 14,
+   "raw_pct": 8,
    "pct": 8
   },
   "beyond|strong": {
-   "n": 244,
-   "won": 12,
-   "raw_pct": 5,
-   "pct": 5
+   "n": 298,
+   "won": 11,
+   "raw_pct": 4,
+   "pct": 4
   },
   "beyond|ran": {
-   "n": 527,
+   "n": 657,
    "won": 2,
    "raw_pct": 0,
    "pct": 1
   },
   "beyond|none": {
-   "n": 1040,
-   "won": 10,
+   "n": 812,
+   "won": 9,
    "raw_pct": 1,
    "pct": 1
   },
   "no_seats_pos1|top1": {
-   "n": 142,
-   "won": 50,
-   "raw_pct": 35,
-   "pct": 32
+   "n": 195,
+   "won": 55,
+   "raw_pct": 28,
+   "pct": 27
   },
   "no_seats_pos1|strong": {
-   "n": 54,
-   "won": 15,
-   "raw_pct": 28,
+   "n": 67,
+   "won": 18,
+   "raw_pct": 27,
    "pct": 24
   },
   "no_seats_pos1|ran": {
-   "n": 23,
-   "won": 2,
-   "raw_pct": 9,
-   "pct": 12
+   "n": 85,
+   "won": 5,
+   "raw_pct": 6,
+   "pct": 8
   },
   "no_seats_pos1|none": {
-   "n": 418,
-   "won": 29,
-   "raw_pct": 7,
+   "n": 290,
+   "won": 18,
+   "raw_pct": 6,
    "pct": 7
   },
   "no_seats_rest|top1": {
-   "n": 211,
-   "won": 22,
-   "raw_pct": 10,
-   "pct": 10
-  },
-  "no_seats_rest|strong": {
-   "n": 312,
-   "won": 25,
-   "raw_pct": 8,
+   "n": 384,
+   "won": 34,
+   "raw_pct": 9,
    "pct": 8
   },
+  "no_seats_rest|strong": {
+   "n": 485,
+   "won": 26,
+   "raw_pct": 5,
+   "pct": 5
+  },
   "no_seats_rest|ran": {
-   "n": 605,
-   "won": 10,
-   "raw_pct": 2,
-   "pct": 2
+   "n": 1145,
+   "won": 14,
+   "raw_pct": 1,
+   "pct": 1
   },
   "no_seats_rest|none": {
-   "n": 2839,
-   "won": 40,
+   "n": 1953,
+   "won": 23,
    "raw_pct": 1,
    "pct": 1
   }
  },
  "stability_by_race": {
   "32-2": {
-   "top1": 32.9,
-   "strong": 8.5,
-   "ran": 1.0,
+   "top1": 23.8,
+   "strong": 7.2,
+   "ran": 1.1,
    "none": 2.2
   },
   "32-4": {
-   "top1": 28.8,
-   "strong": 16.8,
-   "ran": 1.3,
-   "none": 4.6
+   "top1": 22.2,
+   "strong": 14.7,
+   "ran": 2.6,
+   "none": 3.7
   },
   "32-6": {
-   "top1": 18.4,
-   "strong": 13.4,
-   "ran": 1.8,
-   "none": 2.6
+   "top1": 13.9,
+   "strong": 12.6,
+   "ran": 1.1,
+   "none": 2.5
   },
   "32-7": {
-   "top1": 28.8,
-   "strong": 25.9,
-   "ran": 4.0,
-   "none": 3.0
+   "top1": 24.7,
+   "strong": 20.1,
+   "ran": 2.7,
+   "none": 2.9
   }
  }
 }

@@ -2,7 +2,7 @@
 
 Vodič za birače koji ne prate politiku. Opći izbori u BiH, 4. oktobar 2026. Bez preporuka: javni zapis (ko se kandiduje, ko je već bio izabran, ko je mijenjao stranke, kako su glasali kao poslanici) pored obećanja stranaka za 2026, s izvorom uz svaku tvrdnju.
 
-**Izvori:** [gianniravioli.com — Mashinerija](https://gianniravioli.com/mashinerija/) (CIK liste 2006–2026, mandati, poimenična glasanja PSBiH i NSRS, biografije, prijave imovine; CC BY 4.0), eCitizen.ba (sjednice vijeća), mediji i stranačke stranice (obećanja; URL uz svako).
+**Izvori:** [gianniravioli.com — Mashinerija](https://gianniravioli.com/mashinerija/) (CIK liste 2006–2026, mandati, poimenična glasanja PSBiH i NSRS, biografije, prijave imovine; CC BY 4.0), [Wikidata](https://www.wikidata.org/) (funkcije koje se ne biraju na listiću; CC0), eCitizen.ba (sjednice vijeća), mediji i stranačke stranice (obećanja; URL uz svako).
 
 ## Stranice
 
@@ -21,7 +21,12 @@ Vodič za birače koji ne prate politiku. Opći izbori u BiH, 4. oktobar 2026. B
 
 ```
 fetch.py          Mashinerija → data/units, people_cache, municipalities (kandidature, mandati, rezultati)
-fetch_history.py  Mashinerija → data/timelines (svih 7.028), pubids, appointed, unit_spend, seat_bar, list_strength
+fetch_history.py  Mashinerija → data/timelines (svih 7.028), merges, maybe_same, person_stats,
+                  pubids, appointed, unit_spend, seat_bar, list_strength
+data/manual_merges.json   ručno provjereni identiteti (obrazloženje + izvor po redu) i
+                  odbačeni prijedlozi; čita ga fetch_history.py
+fetch_wikidata.py Wikidata → data/offices (funkcije koje CIK ne objavljuje: ministri, delegati,
+                  entitetski premijeri, Predsjedništvo 2010–2018)
 fetch_ecitizen.py eCitizen → data/ecitizen.json
 fetch_votes.py    Mashinerija → data/divisions, outcomes, records, votes, profiles, parties, speeches
 data/key_decisions.json   ručno odabrane ključne odluke saziva (25 PSBiH + 24 NSRS) s prostim opisom
@@ -38,6 +43,8 @@ static/viz.js     D3 grafovi (trake, složene trake, karijera, gauge šanse, li�
 static/style.css  zajednički stil; ranije je bio uvučen u svaku stranicu
 static/app.js     ЋИР/LAT, veličina slova, filteri; isto tako izdvojen
 ```
+
+Redoslijed kad se osvježava sve: `fetch.py` → `fetch_history.py` (pravi `merges.json`, o koji se oslanja ostalo) → `fetch_wikidata.py` → `fetch_votes.py` → `backtest.py` → `render.py`.
 
 Podaci su commitani, deploy ne zavisi od API-ja.
 
@@ -83,9 +90,39 @@ Zato uz svaki listić i profil stoji koliko je glasova 2022 na tom istom područ
 
 Udio se računa po **glasačima liste**, ne po zbiru ličnih glasova: jedan listić zaokružuje do tri imena, a liste se razlikuju koliko to koriste (2022: od 0,45 do 6,24 imena po listiću). Broj glasača liste vadi se iz `percentage` koji API daje uz svakog kandidata; nazivnik je isti za sve na listi u svih 496 provjerenih lista, pa je broj listića tačan, a ne procijenjen.
 
+## Ko je isti čovjek
+
+Nijedan izvor u BiH ne objavljuje identifikator osobe, a ime se kroz godine piše različito: 2006. je na listiću pisalo `IZETBEGOVIĆ BAKIR`, od 2016. `BAKIR IZETBEGOVIĆ`. Zato Mashinerija spaja kandidature samo kad je čovjek ostao u istoj izbornoj jedinici, a sve ostalo objavljuje kao **28.034 otvorena mosta** s razlozima uz svaki i nikad ih ne primjenjuje.
+
+Bez njih Bakir Izetbegović na ovom sajtu ima dvije kandidature i nula mandata. `fetch_history.py` primjenjuje **9.640** mosta, po pravilima koja stoje na `metoda.html`:
+
+| tier | pravilo | primijenjeno |
+|---|---|---|
+| 0 | ime se u cijeloj bazi od 173.752 kandidature javlja samo u ta dva zapisa | 9.172 |
+| 1 | ista stranka na obje kandidature, ime rijetko (≤3 zapisa) | 400 |
+| 2 | jedno područje sadrži drugo, zapisi dijele stranku, ime rijetko | 57 |
+| ručno | `data/manual_merges.json`, uz obrazloženje i izvor po redu | 11 |
+
+Ime se prvo prevede u jedno pismo. CIK kandidate u RS štampa ćirilicom a ostale latinicom, i ista osoba kroz godine zna biti u oba — bez prevođenja „БРАНКО БЛАНУША” i „BLANUŠA BRANKO” nisu isto ime, pa ni test rijetkosti ne valja (105 imena je izgledalo jedinstveno a nije). Takvih spojeva preko dva pisma ima 473; bez njih bi svaki kandidat iz RS bio odsječen od vlastite historije, jer su listići za 2026. tamo ćirilični.
+
+Iznad svega jedno tvrdo pravilo: **niko ne stoji na dva listića istih izbora** (osim redovne i kompenzacijske liste iste trke), i ono nadjačava i ručni unos. Ono je jedino što razdvaja Denisa Bećirovića člana Predsjedništva od kandidata istog imena u Tuzli — dijele ime, stranku iz 2006. i regiju, a 2026. su na različitim listićima.
+
+**Ručni spojevi** su za ljude koje nijedan signal ne može dohvatiti, a to su baš oni koje birač traži. Semir Efendić je tri puta biran za načelnika Novog Grada Sarajevo i sjedio u Skupštini KS, pa 2026. izlazi za Predsjedništvo pod drugom strankom — druga stranka, drugi nivo, drugo područje, ime nije rijetko. Svaki red u `data/manual_merges.json` nosi obrazloženje i izvor, koji se otvaraju s profila; `not_same` radi obrnuto i skida prijedlog koji smo pogledali i odbacili, da tuđi zapis ne visi uz ime.
+
+Rezultat: ljudi s ranijim kandidaturama idu s **2.882 na 4.346**, a **2.110** ih je historiju dobilo spajanjem. Mostovi koje nismo prihvatili nisu obrisani — stoje na profilu pod „Možda je ista osoba” (2.903 reda za 972 osobe) i **ne ulaze ni u jednu brojku**. `backtest.py` mjeri kalibraciju na istom spajanju, da procenat na stranici i tabela iza njega ne govore o različitim ljudima.
+
+## Funkcije koje se ne biraju na listiću
+
+Izborni zapis zna samo ono što je na listiću. Ministra, delegata u domu naroda, entitetskog premijera ni predsjedavajućeg Predsjedništva niko ne bira direktno. **Opći izbori 2010. i 2014. ne postoje ni u jednom čitljivom izvoru**: arhiva iz 2010. ne može se pročitati jer joj ASP.NET ViewState pada na provjeri potpisa protiv CIK-ovog vlastitog balansera, a 2014. ima tačno jedan skup rezultata koji se zove `FinalniTest` i čija baza nikad nije objavljena (provjereno i u `/v1/coverage` Mashinerije i direktno na `izbori.ba/api_2018`).
+
+Praktično: Bakir Izetbegović je bio u Predsjedništvu 2010–2018 i izborni zapis o tome ne zna ništa. `fetch_wikidata.py` to donosi s Wikidate (CC0) za **41 osobu** s listića 2026, u zaseban blok s datumima i linkom na stavku. Nije CIK i **ne ulazi ni u jednu brojku**. Osoba se veže uz stavku preko Mashinerijinog zapisa, po imenu kad to ime na listićima 2026 pripada tačno jednom čovjeku, ili po funkciji koju drži sada.
+
+Spajanje je otvorilo i biografije, portrete i prijave imovine koje vise o starijem zapisu iste osobe: profila s podacima ima **2.360** umjesto 1.151.
+
 ## Ograničenja
 
-- Karijere osoba su spojene po imenu kroz izbore (Mashinerija pravila); kod ⚠ moguća je greška.
+- Karijere osoba su spojene po pravilima iznad. Nijedno nije dokaz: kod ⚠ i kod reda označenog „spojeno” moguća je greška.
+- Opći izbori 2010. i 2014. nedostaju kod svih, ne samo kod Bakira Izetbegovića. To se ne zatvara skrejperom nego zahtjevom za pristup informacijama CIK-u.
 - Poimenična glasanja postoje samo za PSBiH i NSRS. Parlament FBiH i kantoni ih ne objavljuju.
 - eCitizen objavljuje dnevni red i zbir „za/protiv/uzdržan” po tački, ali nijedno ime: 38 gradova, 142 sjednice, nula imenovanih vijećnika. Zato se rad u vijeću prikazuje kao rad tijela, nikad kao lični glas.
 - Listu iz 2026 spajamo s listom iz 2022 po imenu, a imena koalicija se mijenjaju. Za 2.634 od 7.779 kandidata ne nađemo nijedan glas njihove liste iz 2022, pa ih računica tretira kao novu listu.

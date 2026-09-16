@@ -1,0 +1,1360 @@
+{
+ "p.oi2026-2.175": {
+  "qid": "Q102101678",
+  "name": "Elmedin Konaković",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q102101678",
+  "wiki": "https://bs.wikipedia.org/wiki/Elmedin_Konakovi%C4%87",
+  "parties": [
+   "Stranka demokratske akcije",
+   "Narod i pravda"
+  ],
+  "offices": [
+   {
+    "qid": "Q110951456",
+    "title": "delegat u Domu naroda Parlamenta FBiH",
+    "start": "2019-07-01",
+    "end": "2022-12-01",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q28866410",
+    "title": "ministar vanjskih poslova BiH",
+    "start": "2023-01-25",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.32-7.3003": {
+  "qid": "Q106421203",
+  "name": "Benjamina Karić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q106421203",
+  "wiki": "https://bs.wikipedia.org/wiki/Benjamina_Kari%C4%87",
+  "parties": [
+   "Socijaldemokratska partija Bosne i Hercegovine"
+  ],
+  "offices": [
+   {
+    "qid": "Q55903038",
+    "title": "Gradonačelnik Sarajeva",
+    "start": "2021-04-08",
+    "end": "2024-11-18",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.25-2.211": {
+  "qid": "Q120489796",
+  "name": "Kemal Ademović",
+  "link": "mashinerija",
+  "url": "https://www.wikidata.org/wiki/Q120489796",
+  "wiki": "https://bs.wikipedia.org/wiki/Kemal_Ademovi%C4%87",
+  "parties": [
+   "Stranka demokratske akcije",
+   "Narod i pravda"
+  ],
+  "offices": [
+   {
+    "qid": "Q21328613",
+    "title": "Delegat u Domu naroda Parlamentarne skupštine Bosne i Hercegovine",
+    "start": "2023-02-16",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.2061-7.1251": {
+  "qid": "Q121623851",
+  "name": "Ramo Isak",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q121623851",
+  "wiki": "https://bs.wikipedia.org/wiki/Ramo_Isak",
+  "parties": [
+   "Snaga naroda"
+  ],
+  "offices": [
+   {
+    "qid": "Q3500488",
+    "title": "ministar unutrašnjih poslova FBiH",
+    "start": "2023-04-28",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.25-2.649": {
+  "qid": "Q12756416",
+  "name": "Obren Petrović",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q12756416",
+  "wiki": "https://sr.wikipedia.org/wiki/%D0%9E%D0%B1%D1%80%D0%B5%D0%BD_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D1%9B",
+  "parties": [
+   "Srpska demokratska stranka"
+  ],
+  "offices": [
+   {
+    "qid": "Q47501825",
+    "title": "gradonačelnik Doboja",
+    "start": "2002-01-01",
+    "end": "2004-01-01",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q47501825",
+    "title": "gradonačelnik Doboja",
+    "start": "2004-01-01",
+    "end": "2008-01-01",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q47501825",
+    "title": "gradonačelnik Doboja",
+    "start": "2008-01-01",
+    "end": "2012-01-01",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q47501825",
+    "title": "gradonačelnik Doboja",
+    "start": "2012-01-01",
+    "end": "2016-01-01",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q47501825",
+    "title": "gradonačelnik Doboja",
+    "start": "2016-01-01",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.oi2026-2.217": {
+  "qid": "Q12958494",
+  "name": "Miro Lazović",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q12958494",
+  "wiki": "https://bs.wikipedia.org/wiki/Miro_Lazovi%C4%87",
+  "parties": [],
+  "offices": [
+   {
+    "qid": "Q65494735",
+    "title": "specijalni gost Parlamentarne skupštine Vijeća Evrope",
+    "start": "1994-04-11",
+    "end": "1997-01-27",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.25-1.1": {
+  "qid": "Q13081568",
+  "name": "Denis Bećirović",
+  "link": "funkcija",
+  "url": "https://www.wikidata.org/wiki/Q13081568",
+  "wiki": "https://bs.wikipedia.org/wiki/Denis_Be%C4%87irovi%C4%87",
+  "parties": [
+   "Socijaldemokratska partija Bosne i Hercegovine"
+  ],
+  "offices": [
+   {
+    "qid": "Q109646833",
+    "title": "član Predsjedništva Bosne i Hercegovine iz reda bošnjačkog naroda",
+    "start": "2022-11-16",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2024-03-16",
+    "end": "2024-11-16",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2026-03-16",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.oi2026-5.4": {
+  "qid": "Q135934976",
+  "name": "Savo Minić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q135934976",
+  "wiki": "https://bs.wikipedia.org/wiki/Savo_Mini%C4%87",
+  "parties": [
+   "Savez nezavisnih socijaldemokrata"
+  ],
+  "offices": [
+   {
+    "qid": "Q108822438",
+    "title": "predsjednik Vlade Republike Srpske",
+    "start": "2025-09-02",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.25-1.3": {
+  "qid": "Q1392741",
+  "name": "Fahrudin Radončić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q1392741",
+  "wiki": "https://bs.wikipedia.org/wiki/Fahrudin_Radon%C4%8Di%C4%87",
+  "parties": [
+   "Savez za bolju budućnost Bosne i Hercegovine",
+   "Savez komunista Jugoslavije"
+  ],
+  "offices": [
+   {
+    "qid": "Q109645247",
+    "title": "ministar sigurnosti BiH",
+    "start": "2012-11-22",
+    "end": "2014-04-29",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q21328613",
+    "title": "Delegat u Domu naroda Parlamentarne skupštine Bosne i Hercegovine",
+    "start": "2015-01-15",
+    "end": "2019-12-23",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q109645247",
+    "title": "ministar sigurnosti BiH",
+    "start": "2019-12-23",
+    "end": "2020-06-02",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.25-2.142": {
+  "qid": "Q140249118",
+  "name": "Ilija Cvitanović",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q140249118",
+  "wiki": null,
+  "parties": [
+   "Hrvatska demokratska zajednica 1990"
+  ],
+  "offices": [
+   {
+    "qid": "Q21328613",
+    "title": "Delegat u Domu naroda Parlamentarne skupštine Bosne i Hercegovine",
+    "start": "2023-02-16",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.32-4.985": {
+  "qid": "Q140779243",
+  "name": "Sanel Kajan",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q140779243",
+  "wiki": "https://bs.wikipedia.org/wiki/Sanel_Kajan",
+  "parties": [
+   "Demokratska fronta"
+  ],
+  "offices": [
+   {
+    "qid": "Q109374396",
+    "title": "Zastupnik u Zastupničkom domu Parlamenta Federacije Bosne i Hercegovine",
+    "start": null,
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.2061-7.3202": {
+  "qid": "Q1564498",
+  "name": "Mirko Pejanović",
+  "link": "mashinerija",
+  "url": "https://www.wikidata.org/wiki/Q1564498",
+  "wiki": "https://bs.wikipedia.org/wiki/Mirko_Pejanovi%C4%87",
+  "parties": [],
+  "offices": [
+   {
+    "qid": "Q19973243",
+    "title": "član Predsjedništva Bosne i Hercegovine",
+    "start": null,
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.oi2026-4.903": {
+  "qid": "Q18088727",
+  "name": "Kenan Bajramovic",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q18088727",
+  "wiki": null,
+  "parties": [],
+  "offices": [
+   {
+    "qid": "Q20994440",
+    "title": "FIFA referee",
+    "start": null,
+    "end": "2011-08-10",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.2061-7.3162": {
+  "qid": "Q19501831",
+  "name": "Denis Zvizdić",
+  "link": "mashinerija",
+  "url": "https://www.wikidata.org/wiki/Q19501831",
+  "wiki": "https://bs.wikipedia.org/wiki/Denis_Zvizdi%C4%87",
+  "parties": [
+   "Stranka demokratske akcije",
+   "Narod i pravda"
+  ],
+  "offices": [
+   {
+    "qid": "Q21290855",
+    "title": "Zastupnik u Zastupničkom domu Parlamentarne skupštine Bosne i Hercegovine",
+    "start": null,
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q16020744",
+    "title": "Predsjedavajući Vijeća ministara Bosne i Hercegovine",
+    "start": "2015-03-31",
+    "end": "2019-12-23",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.25-6.504": {
+  "qid": "Q19959221",
+  "name": "Igor Crnadak",
+  "link": "mashinerija",
+  "url": "https://www.wikidata.org/wiki/Q19959221",
+  "wiki": "https://bs.wikipedia.org/wiki/Igor_Crnadak",
+  "parties": [
+   "Partija demokratskog progresa"
+  ],
+  "offices": [
+   {
+    "qid": "Q28866410",
+    "title": "ministar vanjskih poslova BiH",
+    "start": "2015-03-31",
+    "end": "2019-12-23",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.2061-2.262": {
+  "qid": "Q22671805",
+  "name": "Marina Pendeš",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q22671805",
+  "wiki": "https://bs.wikipedia.org/wiki/Marina_Pende%C5%A1",
+  "parties": [
+   "Hrvatska demokratska zajednica Bosne i Hercegovine"
+  ],
+  "offices": [
+   {
+    "qid": "Q109645226",
+    "title": "Ministar odbrane Bosne i Hercegovine",
+    "start": "2015-03-31",
+    "end": "2019-12-23",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q21328613",
+    "title": "Delegat u Domu naroda Parlamentarne skupštine Bosne i Hercegovine",
+    "start": "2019-12-23",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.25-2.45": {
+  "qid": "Q23418890",
+  "name": "Jasmin Emrić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q23418890",
+  "wiki": "https://en.wikipedia.org/wiki/Jasmin_Emri%C4%87",
+  "parties": [
+   "Stranka demokratske aktivnosti"
+  ],
+  "offices": [
+   {
+    "qid": "Q21290855",
+    "title": "Zastupnik u Zastupničkom domu Parlamentarne skupštine Bosne i Hercegovine",
+    "start": null,
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.2061-6.265": {
+  "qid": "Q25462277",
+  "name": "Бранислав Бореновић",
+  "link": "mashinerija",
+  "url": "https://www.wikidata.org/wiki/Q25462277",
+  "wiki": "https://sr.wikipedia.org/wiki/%D0%91%D1%80%D0%B0%D0%BD%D0%B8%D1%81%D0%BB%D0%B0%D0%B2_%D0%91%D0%BE%D1%80%D0%B5%D0%BD%D0%BE%D0%B2%D0%B8%D1%9B",
+  "parties": [],
+  "offices": [
+   {
+    "qid": "Q21290855",
+    "title": "Zastupnik u Zastupničkom domu Parlamentarne skupštine Bosne i Hercegovine",
+    "start": null,
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.oi2026-2.214": {
+  "qid": "Q297825",
+  "name": "Željko Komšić",
+  "link": "mashinerija",
+  "url": "https://www.wikidata.org/wiki/Q297825",
+  "wiki": "https://bs.wikipedia.org/wiki/%C5%BDeljko_Kom%C5%A1i%C4%87",
+  "parties": [
+   "Socijaldemokratska partija Bosne i Hercegovine",
+   "Demokratska fronta"
+  ],
+  "offices": [
+   {
+    "qid": "Q39664576",
+    "title": "ambasador Bosne i Hercegovine u Srbiji i Crnoj Gori",
+    "start": null,
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q109646836",
+    "title": "član Predsjedništva Bosne i Hercegovine iz reda hrvatskog naroda",
+    "start": "2006-11-06",
+    "end": "2014-11-17",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2007-07-06",
+    "end": "2008-03-06",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2009-07-06",
+    "end": "2010-03-06",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2011-07-10",
+    "end": "2012-03-10",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2013-07-10",
+    "end": "2014-03-10",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q21290855",
+    "title": "Zastupnik u Zastupničkom domu Parlamentarne skupštine Bosne i Hercegovine",
+    "start": "2014-12-09",
+    "end": "2018-11-20",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q65494714",
+    "title": "član Parlamentarne skupštine Vijeća Evrope",
+    "start": "2015-04-20",
+    "end": "2016-06-19",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q65494724",
+    "title": "zamjenski član Parlamentarne skupštine Vijeća Evrope",
+    "start": "2016-06-20",
+    "end": "2019-01-20",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q109646836",
+    "title": "član Predsjedništva Bosne i Hercegovine iz reda hrvatskog naroda",
+    "start": "2018-11-20",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2019-07-20",
+    "end": "2020-03-20",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2021-07-20",
+    "end": "2022-03-20",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2023-07-16",
+    "end": "2024-03-16",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2025-07-16",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.oi2026-4.1127": {
+  "qid": "Q3044216",
+  "name": "Stjepan Kljujić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q3044216",
+  "wiki": "https://bs.wikipedia.org/wiki/Stjepan_Kljui%C4%87",
+  "parties": [],
+  "offices": [
+   {
+    "qid": "Q19973243",
+    "title": "član Predsjedništva Bosne i Hercegovine",
+    "start": null,
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.32-1.0": {
+  "qid": "Q312355",
+  "name": "Bakir Izetbegović",
+  "link": "mashinerija",
+  "url": "https://www.wikidata.org/wiki/Q312355",
+  "wiki": "https://bs.wikipedia.org/wiki/Bakir_Izetbegovi%C4%87",
+  "parties": [
+   "Stranka demokratske akcije"
+  ],
+  "offices": [
+   {
+    "qid": "Q109374396",
+    "title": "Zastupnik u Zastupničkom domu Parlamenta Federacije Bosne i Hercegovine",
+    "start": "2002-10-28",
+    "end": "2006-11-06",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q21290855",
+    "title": "Zastupnik u Zastupničkom domu Parlamentarne skupštine Bosne i Hercegovine",
+    "start": "2006-11-06",
+    "end": "2010-11-10",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q65494714",
+    "title": "član Parlamentarne skupštine Vijeća Evrope",
+    "start": "2007-04-16",
+    "end": "2011-01-24",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q109646833",
+    "title": "član Predsjedništva Bosne i Hercegovine iz reda bošnjačkog naroda",
+    "start": "2010-11-10",
+    "end": "2018-11-20",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2012-03-10",
+    "end": "2012-11-10",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2014-03-10",
+    "end": "2014-11-17",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2016-03-17",
+    "end": "2016-11-17",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2018-03-17",
+    "end": "2018-11-20",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q21328613",
+    "title": "Delegat u Domu naroda Parlamentarne skupštine Bosne i Hercegovine",
+    "start": "2019-02-25",
+    "end": "2023-02-16",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.2061-2.44": {
+  "qid": "Q387491",
+  "name": "Borjana Krišto",
+  "link": "mashinerija",
+  "url": "https://www.wikidata.org/wiki/Q387491",
+  "wiki": "https://bs.wikipedia.org/wiki/Borjana_Kri%C5%A1to",
+  "parties": [
+   "Hrvatska demokratska zajednica Bosne i Hercegovine"
+  ],
+  "offices": [
+   {
+    "qid": "Q65494714",
+    "title": "član Parlamentarne skupštine Vijeća Evrope",
+    "start": "2007-01-22",
+    "end": "2007-04-16",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q3273002",
+    "title": "Predsjednik Federacije Bosne i Hercegovine",
+    "start": "2007-02-22",
+    "end": "2011-03-17",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q21328613",
+    "title": "Delegat u Domu naroda Parlamentarne skupštine Bosne i Hercegovine",
+    "start": "2011-05-20",
+    "end": "2014-09-20",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q65494714",
+    "title": "član Parlamentarne skupštine Vijeća Evrope",
+    "start": "2011-10-03",
+    "end": "2019-01-20",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q21290855",
+    "title": "Zastupnik u Zastupničkom domu Parlamentarne skupštine Bosne i Hercegovine",
+    "start": "2014-12-09",
+    "end": "2022-12-01",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q16020744",
+    "title": "Predsjedavajući Vijeća ministara Bosne i Hercegovine",
+    "start": "2023-01-25",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.2081-9.5909": {
+  "qid": "Q391171",
+  "name": "Nedeljko Čubrilović",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q391171",
+  "wiki": "https://bs.wikipedia.org/wiki/Nedeljko_%C4%8Cubrilovi%C4%87",
+  "parties": [
+   "Demokratski narodni savez"
+  ],
+  "offices": [
+   {
+    "qid": "Q12755498",
+    "title": "ministar saobraćaja i veza Republike Srpske",
+    "start": "2006-02-28",
+    "end": "2014-11-24",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q12757792",
+    "title": "Predsjednik Narodne skupštine Republike Srpske",
+    "start": "2014-11-24",
+    "end": "2022-11-15",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.2121-8.82": {
+  "qid": "Q4293619",
+  "name": "Miroslav Milovanović",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q4293619",
+  "wiki": "https://sr.wikipedia.org/wiki/%D0%9C%D0%B8%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2_%D0%9C%D0%B8%D0%BB%D0%BE%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%9B",
+  "parties": [
+   "Savez nezavisnih socijaldemokrata"
+  ],
+  "offices": [
+   {
+    "qid": "Q21290855",
+    "title": "Zastupnik u Zastupničkom domu Parlamentarne skupštine Bosne i Hercegovine",
+    "start": null,
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.13-8.1": {
+  "qid": "Q466040",
+  "name": "Fikret Abdić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q466040",
+  "wiki": "https://bs.wikipedia.org/wiki/Fikret_Abdi%C4%87",
+  "parties": [
+   "Demokratska narodna zajednica",
+   "Savez komunista Jugoslavije",
+   "Stranka demokratske akcije"
+  ],
+  "offices": [
+   {
+    "qid": "Q19973243",
+    "title": "član Predsjedništva Bosne i Hercegovine",
+    "start": null,
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.13-9.7335": {
+  "qid": "Q47504756",
+  "name": "Draško Stanivuković",
+  "link": "mashinerija",
+  "url": "https://www.wikidata.org/wiki/Q47504756",
+  "wiki": "https://bs.wikipedia.org/wiki/Dra%C5%A1ko_Stanivukovi%C4%87",
+  "parties": [
+   "Partija demokratskog progresa"
+  ],
+  "offices": [
+   {
+    "qid": "Q110270077",
+    "title": "gradonačelnik Banje Luke",
+    "start": "2020-12-24",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.32-1.7": {
+  "qid": "Q5528031",
+  "name": "Željka Cvijanović",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q5528031",
+  "wiki": "https://bs.wikipedia.org/wiki/%C5%BDeljka_Cvijanovi%C4%87",
+  "parties": [
+   "Savez nezavisnih socijaldemokrata"
+  ],
+  "offices": [
+   {
+    "qid": "Q108822438",
+    "title": "predsjednik Vlade Republike Srpske",
+    "start": "2013-03-12",
+    "end": "2018-11-19",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q6594693",
+    "title": "Predsjednik Republike Srpske",
+    "start": "2018-11-19",
+    "end": "2022-11-15",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2022-11-16",
+    "end": "2023-07-16",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q109646831",
+    "title": "član Predsjedništva Bosne i Hercegovine iz reda srpskog naroda",
+    "start": "2022-11-16",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2024-11-16",
+    "end": "2025-07-16",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.oi2026-7.3334": {
+  "qid": "Q57381",
+  "name": "Haris Silajdžić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q57381",
+  "wiki": "https://bs.wikipedia.org/wiki/Haris_Silajd%C5%BEi%C4%87",
+  "parties": [
+   "Stranka za Bosnu i Hercegovinu"
+  ],
+  "offices": [
+   {
+    "qid": "Q28866410",
+    "title": "ministar vanjskih poslova BiH",
+    "start": "1990-12-20",
+    "end": "1993-10-30",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q16020744",
+    "title": "Predsjedavajući Vijeća ministara Bosne i Hercegovine",
+    "start": "1993-10-25",
+    "end": "1996-01-30",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q109374382",
+    "title": "premijer Federacije BiH",
+    "start": "1994-05-31",
+    "end": "1996-01-31",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q109646833",
+    "title": "član Predsjedništva Bosne i Hercegovine iz reda bošnjačkog naroda",
+    "start": "2006-11-06",
+    "end": "2010-11-10",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2008-03-06",
+    "end": "2008-11-06",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q848335",
+    "title": "Predsjedavajući Predsjedništva Bosne i Hercegovine",
+    "start": "2010-03-06",
+    "end": "2010-11-10",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.25-6.1074": {
+  "qid": "Q58416549",
+  "name": "Radovan Višković",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q58416549",
+  "wiki": "https://bs.wikipedia.org/wiki/Radovan_Vi%C5%A1kovi%C4%87",
+  "parties": [
+   "Savez nezavisnih socijaldemokrata"
+  ],
+  "offices": [
+   {
+    "qid": "Q108822438",
+    "title": "predsjednik Vlade Republike Srpske",
+    "start": "2018-12-18",
+    "end": "2025-08-22",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.oi2026-2.509": {
+  "qid": "Q609400",
+  "name": "Igor Radojičić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q609400",
+  "wiki": "https://bs.wikipedia.org/wiki/Igor_Radoji%C4%8Di%C4%87",
+  "parties": [
+   "Savez nezavisnih socijaldemokrata"
+  ],
+  "offices": [
+   {
+    "qid": "Q6594693",
+    "title": "Predsjednik Republike Srpske",
+    "start": "2007-10-01",
+    "end": "2007-12-09",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.2121-8.100": {
+  "qid": "Q61133942",
+  "name": "Nenad Stevandić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q61133942",
+  "wiki": "https://bs.wikipedia.org/wiki/Nenad_Stevandi%C4%87",
+  "parties": [
+   "Ujedinjena Srpska",
+   "Srpska demokratska stranka",
+   "Savez nezavisnih socijaldemokrata"
+  ],
+  "offices": [
+   {
+    "qid": "Q12757792",
+    "title": "Predsjednik Narodne skupštine Republike Srpske",
+    "start": "2022-11-15",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.32-4.1171": {
+  "qid": "Q65497990",
+  "name": "Sejfudin Tokić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q65497990",
+  "wiki": null,
+  "parties": [],
+  "offices": [
+   {
+    "qid": "Q65494735",
+    "title": "specijalni gost Parlamentarne skupštine Vijeća Evrope",
+    "start": "2001-06-25",
+    "end": "2002-04-22",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q65494714",
+    "title": "član Parlamentarne skupštine Vijeća Evrope",
+    "start": "2002-04-22",
+    "end": "2003-01-27",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.2061-7.3207": {
+  "qid": "Q65499239",
+  "name": "Saša Magazinović",
+  "link": "mashinerija",
+  "url": "https://www.wikidata.org/wiki/Q65499239",
+  "wiki": "https://en.wikipedia.org/wiki/Sa%C5%A1a_Magazinovi%C4%87",
+  "parties": [],
+  "offices": [
+   {
+    "qid": "Q21290855",
+    "title": "Zastupnik u Zastupničkom domu Parlamentarne skupštine Bosne i Hercegovine",
+    "start": null,
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q65494714",
+    "title": "član Parlamentarne skupštine Vijeća Evrope",
+    "start": "2011-06-20",
+    "end": "2015-04-20",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q65494724",
+    "title": "zamjenski član Parlamentarne skupštine Vijeća Evrope",
+    "start": "2015-04-20",
+    "end": "2019-01-20",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.2081-9.18599": {
+  "qid": "Q65499539",
+  "name": "Darko Babalj",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q65499539",
+  "wiki": "https://en.wikipedia.org/wiki/Darko_Babalj",
+  "parties": [
+   "Srpska demokratska stranka"
+  ],
+  "offices": [
+   {
+    "qid": "Q21290855",
+    "title": "Zastupnik u Zastupničkom domu Parlamentarne skupštine Bosne i Hercegovine",
+    "start": "2010-11-30",
+    "end": "2014-12-09",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q65494724",
+    "title": "zamjenski član Parlamentarne skupštine Vijeća Evrope",
+    "start": "2015-04-20",
+    "end": "2019-01-20",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q21290855",
+    "title": "Zastupnik u Zastupničkom domu Parlamentarne skupštine Bosne i Hercegovine",
+    "start": "2022-12-01",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.32-2.367": {
+  "qid": "Q6764419",
+  "name": "Marinko Čavara",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q6764419",
+  "wiki": "https://bs.wikipedia.org/wiki/Marinko_%C4%8Cavara",
+  "parties": [
+   "Hrvatska demokratska zajednica Bosne i Hercegovine"
+  ],
+  "offices": [
+   {
+    "qid": "Q21290855",
+    "title": "Zastupnik u Zastupničkom domu Parlamentarne skupštine Bosne i Hercegovine",
+    "start": null,
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q109374396",
+    "title": "Zastupnik u Zastupničkom domu Parlamenta Federacije Bosne i Hercegovine",
+    "start": "2006-11-06",
+    "end": "2014-12-02",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q3273002",
+    "title": "Predsjednik Federacije Bosne i Hercegovine",
+    "start": "2015-02-09",
+    "end": "2023-02-28",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.25-2.614": {
+  "qid": "Q95099155",
+  "name": "Siniša Milić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q95099155",
+  "wiki": "https://bs.wikipedia.org/wiki/Sini%C5%A1a_Mili%C4%87",
+  "parties": [
+   "Savez nezavisnih socijaldemokrata"
+  ],
+  "offices": [
+   {
+    "qid": "Q17003837",
+    "title": "gradonačelnik Brčko distrikta",
+    "start": "2016-11-16",
+    "end": "2020-12-23",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q17003837",
+    "title": "gradonačelnik Brčko distrikta",
+    "start": "2024-11-29",
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.25-4.119": {
+  "qid": "Q127271608",
+  "name": "Zijad Nišić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q127271608",
+  "wiki": null,
+  "parties": [
+   "Stranka za Bosnu i Hercegovinu"
+  ],
+  "offices": [
+   {
+    "qid": "Q17003837",
+    "title": "gradonačelnik Brčko distrikta",
+    "start": "2023-03-15",
+    "end": "2024-11-29",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.oi2026-7.3110": {
+  "qid": "Q131360961",
+  "name": "Predrag Puharić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q131360961",
+  "wiki": "https://bs.wikipedia.org/wiki/Predrag_Puhari%C4%87",
+  "parties": [
+   "Socijaldemokratska partija Bosne i Hercegovine"
+  ],
+  "offices": [
+   {
+    "qid": "Q55903038",
+    "title": "Gradonačelnik Sarajeva",
+    "start": "2024-11-29",
+    "end": "2025-07-16",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.2061-4.57": {
+  "qid": "Q16221530",
+  "name": "Nermin Purić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q16221530",
+  "wiki": "https://en.wikipedia.org/wiki/Nermin_Puri%C4%87",
+  "parties": [
+   "Demokratska narodna zajednica"
+  ],
+  "offices": [
+   {
+    "qid": "Q21290855",
+    "title": "Zastupnik u Zastupničkom domu Parlamentarne skupštine Bosne i Hercegovine",
+    "start": null,
+    "end": null,
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.25-6.869": {
+  "qid": "Q3608404",
+  "name": "Petar Đokić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q3608404",
+  "wiki": "https://bs.wikipedia.org/wiki/Petar_%C4%90oki%C4%87",
+  "parties": [
+   "Socijalistička partija"
+  ],
+  "offices": [
+   {
+    "qid": "Q6594693",
+    "title": "Predsjednik Republike Srpske",
+    "start": "1999-09-02",
+    "end": "2000-01-26",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ },
+ "p.32-2.246": {
+  "qid": "Q7511838",
+  "name": "Sifet Podžić",
+  "link": "ime",
+  "url": "https://www.wikidata.org/wiki/Q7511838",
+  "wiki": "https://bs.wikipedia.org/wiki/Sifet_Pod%C5%BEi%C4%87",
+  "parties": [],
+  "offices": [
+   {
+    "qid": "Q21328613",
+    "title": "Delegat u Domu naroda Parlamentarne skupštine Bosne i Hercegovine",
+    "start": "2015-01-15",
+    "end": "2019-12-23",
+    "of": null,
+    "district": null,
+    "party": null
+   },
+   {
+    "qid": "Q109645226",
+    "title": "Ministar odbrane Bosne i Hercegovine",
+    "start": "2019-12-23",
+    "end": "2023-01-25",
+    "of": null,
+    "district": null,
+    "party": null
+   }
+  ]
+ }
+}

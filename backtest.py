@@ -15,6 +15,7 @@ position-only rate so a cell of twenty people cannot produce a confident number.
 Writes data/chance_calibration.json; render.py consumes it. Estimate, not forecast.
 """
 import json
+import os
 import re
 import time
 import unicodedata
@@ -52,6 +53,20 @@ def pull(path):
     return out
 
 
+def identity_map():
+    """The merged identity of every person record, as fetch_history.py decided it.
+
+    The chance rule is measured here and applied in render.py. If this script counted
+    a person's past on the API's split records while the profile shows the merged one,
+    the two would answer the same question differently — so it reads the same file."""
+    path = "data/merges.json"
+    if not os.path.exists(path):
+        print("   upozorenje: nema data/merges.json, mjerim na nespojenim zapisima")
+        return {}
+    groups = json.load(open(path)).get("groups") or {}
+    return {pid: root for root, members in groups.items() for pid in members}
+
+
 def fold(s):
     s = unicodedata.normalize("NFKD", (s or "").lower()).encode("ascii", "ignore").decode()
     return " ".join(re.sub(r"[^a-z0-9]+", " ", s).split()[:2])
@@ -76,7 +91,7 @@ def vote_ranks(rows):
     return out
 
 
-def personal_bucket_factory(rows, ranks, before_year):
+def personal_bucket_factory(rows, ranks, before_year, assign=None):
     """How the public record looked before `before_year`, per person.
 
     top1   — already came first by personal votes on one of their own lists
@@ -84,13 +99,15 @@ def personal_bucket_factory(rows, ranks, before_year):
     ran    — has run before and did neither
     none   — never on a ballot before
     """
+    assign = assign or {}
     prior = defaultdict(list)
     for r in rows:
         if (r.get("year") or 0) < before_year:
-            prior[(r.get("person") or {}).get("id")].append(r)
+            pid = (r.get("person") or {}).get("id")
+            prior[assign.get(pid, pid)].append(r)
 
     def bucket(pid):
-        past = prior.get(pid) or []
+        past = prior.get(assign.get(pid, pid)) or []
         if not past:
             return "none"
         best, won = None, False
@@ -133,8 +150,11 @@ def main():
                  fold((m.get("party") or {}).get("label")))] += 1
 
     print("3/3 mjerenje na rezultatu 2022")
+    assign = identity_map()
     ranks = vote_ranks(rows)
-    personal = personal_bucket_factory(rows, ranks, 2022)
+    personal = personal_bucket_factory(rows, ranks, 2022, assign)
+    if assign:
+        print(f"   {len(set(assign.values()))} spojenih identiteta ulazi u mjerenje")
 
     lists = defaultdict(list)
     for r in rows:
@@ -186,6 +206,7 @@ def main():
         "generated": datetime.now(timezone.utc).isoformat(),
         "measured_on": "opći izbori 2022, trke 32-2, 32-4, 32-6, 32-7",
         "seats_from": "mandati 2018",
+        "identities": "spojene po data/merges.json" if assign else "zapisi kakve API vraća",
         "shrink_k": SHRINK,
         "position": out_pos,
         "crossed": out_cross,
