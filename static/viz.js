@@ -43,7 +43,7 @@
   function chance(el, d) {
     el.innerHTML = '';
     var sm = el.classList.contains('sm'), R = sm ? 22 : 34, W = el.clientWidth || 300;
-    var col = d.pct >= 75 ? COL['c-za'] : d.pct >= 45 ? COL['c-uz'] : '#a9a9a9';
+    var col = d.pct >= 50 ? COL['c-za'] : d.pct >= 15 ? COL['c-uz'] : '#a9a9a9';
     var svg = d3.select(el).append('svg').attr('width', W).attr('height', 2 * R + 4);
     var g = svg.append('g').attr('transform', 'translate(' + (R + 2) + ',' + (R + 2) + ')');
     var arc = d3.arc().innerRadius(R - 7).outerRadius(R).startAngle(0);
@@ -51,7 +51,7 @@
     g.append('path').attr('fill', col).transition().duration(700).attrTween('d', function () { var i = d3.interpolate(0, 2 * Math.PI * d.pct / 100); return function (t) { return arc({ endAngle: i(t) }); }; });
     g.append('text').attr('text-anchor', 'middle').attr('dy', 5).attr('font-size', sm ? 11 : 14).attr('font-weight', 700).attr('fill', INK).text('~' + d.pct + '%');
     svg.append('text').attr('x', 2 * R + 12).attr('y', R - 4).attr('font-size', sm ? 13 : 15).attr('font-weight', 700).attr('fill', INK).text('Šansa za mandat: ' + d.word);
-    svg.append('text').attr('x', 2 * R + 12).attr('y', R + 14).attr('font-size', 11).attr('fill', MUT).text('gruba procjena, ne prognoza');
+    svg.append('text').attr('x', 2 * R + 12).attr('y', R + 14).attr('font-size', 11).attr('fill', MUT).text('iz rezultata 2022, nije prognoza');
     var why = document.createElement('div'); why.className = 'small mut'; why.textContent = 'Zašto: ' + d.why + '.'; el.appendChild(why);
   }
   function years(el, d) {

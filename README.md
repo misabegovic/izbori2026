@@ -27,6 +27,8 @@ data/party_aliases.json   CIK ime liste → stranka iz programs_*.json
 render.py         Jinja2 → dist/ (≈1.400 statičkih stranica)
 serve.py          statički server za Railway
 review.py         persona-review preko Claude API-ja (persone u phone-brain/personas/users)
+backtest.py       kalibracija „šanse za mandat”: isto pravilo primijenjeno na liste 2022 vs. stvarni pobjednici → data/chance_calibration.json
+static/viz.js     D3 grafovi (trake, složene trake, karijera, gauge šanse, swarm svih kandidata na listiću)
 ```
 
 Podaci su commitani, deploy ne zavisi od API-ja.

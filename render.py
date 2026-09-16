@@ -393,24 +393,21 @@ base_ctx = {"generated": gen, "RACE": RACE, "PRES_CTX": PRES_CTX, "COMP": COMP}
 RACE_LVL = {"oi2026-2": "Predstavnički dom PSBiH", "oi2026-4": "Predstavnički dom Parlamenta FBiH", "oi2026-6": "Narodna skupština Republike Srpske", "oi2026-7": "Skupštine kantona"}
 
 # --- chance of winning a seat: rough estimate from 2022 seats here, list position, prior wins
-CHANCE_WORD = {75: "velika", 45: "srednja", 20: "mala", 8: "vrlo mala", 5: "vrlo mala", 3: "vrlo mala"}
+CAL = json.load(open(D + "chance_calibration.json")) if os.path.exists(D + "chance_calibration.json") else {}
+def cal_pct(bucket, default):
+    return (CAL.get(bucket) or {}).get("pct", default)
+def chance_word(pct):
+    return "velika" if pct >= 50 else "srednja" if pct >= 15 else "mala" if pct >= 5 else "vrlo mala"
 
 
 def list_chances(u, l):
-    """Returns {pid: (pct, word, why)} for one list on one ballot. Estimate, not a forecast."""
+    """{pid: (pct, word, why)} for one list on one ballot. pct = share of candidates in the same
+    situation who actually won in 2022 (data/chance_calibration.json, backtest.py). Estimate, not a forecast."""
     pi = party_identity(l["name"])
     seats = 0
     for nm, cnt in u.get("seats22", {}).items():
         if party_identity(nm) == pi:
             seats += cnt
-    total22 = sum((h.get("votes") or 0) for h in u.get("party_history", []) if h["year"] == 2022) or 1
-    v22 = sum((h.get("votes") or 0) for h in u.get("party_history", []) if h["year"] == 2022 and party_identity(h["party"]) == pi)
-    share = v22 / total22
-    m22 = u.get("churn", {}).get("m22") or 0
-    if seats == 0 and share >= 0.03 and m22:
-        seats_exp = share * m22  # got votes but no seat: fractional expectation
-    else:
-        seats_exp = seats
     cands = l["candidates"]
     lvl = RACE_LVL.get(u["race"], "")
     def strength(c):
@@ -422,20 +419,22 @@ def list_chances(u, l):
     ranked = sorted(cands, key=strength, reverse=True)
     out = {}
     for rank, c in enumerate(ranked, 1):
-        if seats_exp <= 0:
-            pct = 8 if rank == 1 else 3
-            why = "stranka 2022 ovdje nije imala mandat"
-        elif rank <= int(seats_exp):
-            pct = 75; why = f"stranka je 2022 ovdje imala {seats} mandata, ovaj je među prvih {int(seats_exp)} na listi po snazi"
-        elif rank <= seats_exp + 1:
-            pct = 45; why = "na granici: prvi iza mjesta koja je stranka imala 2022"
-        elif rank <= seats_exp + 2:
-            pct = 20; why = "dva mjesta iza onoga što je stranka imala 2022"
+        if seats <= 0:
+            if rank == 1:
+                pct = cal_pct("no_seats_pos1", 15); why = f"stranka 2022 ovdje nije imala mandat, ovaj je prvi na listi; 2022 je od takvih prošlo {pct}%"
+            else:
+                pct = cal_pct("no_seats_rest", 2); why = f"stranka 2022 ovdje nije imala mandat i nije prvi na listi; 2022 je od takvih prošlo {pct}%"
+        elif rank <= seats:
+            pct = cal_pct("within", 63); why = f"stranka je 2022 ovdje imala {seats} mandat(a), ovaj je među prvih {seats} na listi; 2022 je od takvih prošlo {pct}%"
+        elif rank == seats + 1:
+            pct = cal_pct("plus1", 19); why = f"prvi iza {seats} mjesta koja je stranka imala 2022; 2022 je od takvih prošlo {pct}%"
+        elif rank == seats + 2:
+            pct = cal_pct("plus2", 6); why = f"drugi iza mjesta koja je stranka imala 2022; 2022 je od takvih prošlo {pct}%"
         else:
-            pct = 5; why = "daleko iza mjesta koja je stranka imala 2022"
+            pct = cal_pct("beyond", 2); why = f"daleko iza mjesta koja je stranka imala 2022; 2022 je od takvih prošlo {pct}%"
         if u["area"] in COMP:
-            pct = min(pct, 45); why = "dodatna lista: mjesta dijeli stranka po svom redu"
-        out[c.get("pid") or c["name"]] = (pct, CHANCE_WORD[pct], why)
+            pct = min(pct, 19); why = "dodatna lista: mjesta dijeli stranka po svom redu, pa je procjena nesigurna"
+        out[c.get("pid") or c["name"]] = (pct, chance_word(pct), why)
     return out
 
 

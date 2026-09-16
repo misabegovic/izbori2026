@@ -12,7 +12,7 @@
 <li class="person">
   <span class="pos">{{ c.pos }}.</span>
   <span class="pname">{% if c.has_page %}<a href="kandidat-{{ c.slug }}.html">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</span>
-  <span class="badges">{% if c.chance %}<span class="b ch-{{ c.chance[0] }}" title="{{ c.chance[2] }}">šansa za mandat: {{ c.chance[1] }}</span>{% endif %}{% for b in c.badges %}{{ badge(b) }}{% endfor %}</span>
+  <span class="badges">{% if c.chance %}<span class="b ch-{{ c.chance[1].split(" ")[0] }}" title="{{ c.chance[2] }}">šansa za mandat: {{ c.chance[1] }}</span>{% endif %}{% for b in c.badges %}{{ badge(b) }}{% endfor %}</span>
 </li>
 {%- endmacro %}
 <!doctype html>
@@ -120,7 +120,7 @@ footer { max-width:660px; margin:2rem auto 0; padding:1rem 16px 2rem; border-top
 .d3 .fb { font-size:.85rem; color:var(--mut); }
 .d3-bar { margin:.15rem 0; } .d3-stack { margin:.3rem 0; } .d3-chance { margin:.4rem 0; }
 .d3 svg text { font-family:inherit; }
-.b.ch-75 { background:#dff5e6; color:#0f5e2a; } .b.ch-45 { background:#fff1c2; color:#6b5300; } .b.ch-20, .b.ch-8, .b.ch-5, .b.ch-3 { background:#eeeeee; color:#555; }
+.b.ch-velika { background:#dff5e6; color:#0f5e2a; } .b.ch-srednja { background:#fff1c2; color:#6b5300; } .b.ch-mala, .b.ch-vrlo { background:#eeeeee; color:#555; }
 .tog { font-size:.9rem; background:#fff; border:1px solid var(--line); border-radius:8px; padding:.35rem .6rem; cursor:pointer; }
 .kd.hid { display:none; }
 @media (max-width:420px){ html{font-size:18px} .facts{grid-template-columns:1fr 1fr} }
