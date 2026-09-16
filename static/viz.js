@@ -134,6 +134,7 @@
       var rowH = Math.max(34, Math.min(110, Math.round(2.2 * rad * Math.sqrt(maxB) + 14)));
       var H = top + rows.length * rowH + 10;
       svg.attr('height', H);
+      var cnt = el.querySelector('.viz-cnt'); if (!cnt) { cnt = document.createElement('div'); cnt.className = 'small mut viz-cnt'; el.insertBefore(cnt, svg.node()); } cnt.textContent = pts.length < cands.length ? 'Prikazano ' + pts.length + ' od ' + cands.length + ' ljudi (ostali nemaju ovaj podatak).' : 'Svih ' + cands.length + ' ljudi.';
       var max = d3.max(pts, function (c) { return c[cur.k]; }) || 1;
       var labelW = Math.round(W * 0.42);
       var x = d3.scaleLinear().domain([0, cur.k === 'ch' ? 100 : max]).range([left + labelW, W - right]).nice();

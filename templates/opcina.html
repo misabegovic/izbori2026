@@ -16,7 +16,7 @@
 <p>{{ b.r.plain }}</p>
 <p class="mut">{% if b.r.kind == 'one' %}{{ b.n_cands }} kandidata, biraš jednog.{% else %}{{ b.n_lists }} lista, ukupno {{ b.n_cands }} ljudi. Prvo zaokružiš jednu listu, pa do 3 čovjeka s nje.{% endif %}</p>
 {% if b.top22 and b.r.kind == 'list' %}<p class="mut small" style="margin:.2rem 0 0">Prošli put (2022) ovdje najviše glasova:</p>{% for h in b.top22 %}{{ hbar(h.party | ptitle, h.votes or 0, b.max22, h.votes | num) }}{% endfor %}{% endif %}
-<a class="btn" href="{{ b.href }}?o={{ m.name | lower | urlencode }}">Otvori listić →</a>
+<a class="btn" href="{{ b.href }}?o={{ m.name | urlencode }}">Otvori listić →</a>
 {% endif %}
 </div>
 {% endfor %}

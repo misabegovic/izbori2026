@@ -139,11 +139,15 @@ def history_for(prog):
     rows.sort(key=lambda r: r["mandate"])
     if not rows:
         return None
-    rated = [r for r in rows if r.get("tracked") and r.get("fulfilled") is not None]
+    rated = [r for r in rows if r.get("tracked") and r.get("fulfilled") is not None and not r.get("gov_wide")]
+    gov_only = False
+    if not rated:
+        rated = [r for r in rows if r.get("tracked") and r.get("fulfilled") is not None]
+        gov_only = True
     pattern = None
     if rated:
         tot = sum(r["tracked"] for r in rated); ful = sum(r["fulfilled"] or 0 for r in rated); part = sum(r.get("partial") or 0 for r in rated)
-        pattern = {"mandates": len(rated), "tracked": tot, "pct_full": round(100 * ful / tot), "pct_part": round(100 * part / tot)}
+        pattern = {"mandates": len(rated), "tracked": tot, "pct_full": round(100 * ful / tot), "pct_part": round(100 * part / tot), "gov_only": gov_only}
     chart = [{"m": r["mandate"], "f": r.get("fulfilled") or 0, "p": r.get("partial") or 0, "b": r.get("broken") or 0,
               "t": r.get("tracked") or 0, "power": (("[brojke za cijelu vladu] " if r.get("gov_wide") else "") + (r.get("in_power") or ""))} for r in rows]
     return {"rows": rows, "pattern": pattern, "chart": json.dumps(chart, ensure_ascii=False)}
@@ -651,7 +655,15 @@ for m in municipalities:
         if not u:
             continue
         sub = {"701": "bošnjački član", "702": "hrvatski član", "703": "srpski član"}.get(area) if race == "oi2026-1" else None
-        top = sorted([h for h in u.get("party_history", []) if h["year"] == 2022], key=lambda h: -(h.get("votes") or 0))[:3]
+        agg = {}
+        for h in u.get("party_history", []):
+            if h["year"] != 2022:
+                continue
+            k_ = party_identity(h["party"])
+            if k_ not in agg:
+                agg[k_] = {"party": h["party"], "votes": 0}
+            agg[k_]["votes"] += h.get("votes") or 0
+        top = sorted(agg.values(), key=lambda h: -(h.get("votes") or 0))[:3]
         ballots.append({"race": race, "r": RACE[race], "sub": sub, "href": unit_href(race, area), "n_lists": len(u["lists"]),
                         "n_cands": u["stats"]["candidates"], "area": area, "top22": top, "max22": (top[0].get("votes") or 1) if top else 1})
     # FBiH: bošnjački + hrvatski član su jedan papir s dvije kolone
