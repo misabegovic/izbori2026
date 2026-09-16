@@ -39,7 +39,7 @@
 {% for r in p.hist.rows if r.mandate != '2022-2026' %}
 <details><summary>{{ r.mandate }} · {{ r.in_power }}{% if r.gov_wide %} (brojke za cijelu vladu){% endif %}</summary>
 <div class="card">
-{% if r.tracked %}<p class="small">Praćeno {{ r.tracked }} obećanja: {{ r.fulfilled }} ispunjeno, {{ r.partial or 0 }} djelimično, {{ r.broken or 0 }} nije.</p>{% endif %}
+{% if r.tracked %}<p class="small">{% if r.fulfilled is none and not r.partial and not r.broken %}Praćeno {{ r.tracked }} obećanja, ali nemamo razvrstane brojke za ovaj mandat.{% else %}Praćeno {{ r.tracked }} obećanja: {{ r.fulfilled or 0 }} ispunjeno, {{ r.partial or 0 }} djelimično, {{ r.broken or 0 }} nije.{% endif %}</p>{% endif %}
 {% for x in r.examples %}
 <div class="kd"><span class="vote {{ {'ispunjeno':'v-za','djelimično':'v-uz','nije':'v-protiv','ne može se ocijeniti':'v-odsutan'}[x.outcome] }}">{{ x.outcome }}</span> <span class="t">{{ x.promise }}</span><br><span class="small">{{ x.what_happened }}</span> <span class="src">{% for s in x.sources %}<a href="{{ s }}">izvor</a>{% if not loop.last %} · {% endif %}{% endfor %}</span></div>
 {% endfor %}
